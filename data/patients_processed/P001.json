@@ -1,0 +1,211 @@
+{
+  "patient_id": "P001",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-06-15",
+      "note": "The patient presents with a history of hypertension and hyperlipidemia. She reports experiencing shortness of breath on exertion and occasional chest pain. Physical examination reveals a blood pressure of 140/90 mmHg and a pulse of 72 bpm. Plan is to initiate atorvastatin 20mg daily and continue lisinopril 10mg daily.",
+      "labs": {
+        "HbA1c": 7.0,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 80,
+        "LDL": 150
+      },
+      "medications": [
+        "Lisinopril 10mg daily",
+        "Atorvastatin 20mg daily"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Shortness of breath on exertion",
+        "Occasional chest pain"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [
+          "atorvastatin",
+          "lisinopril",
+          "20mg",
+          "10mg"
+        ],
+        "lab_values": {},
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-12-20",
+      "note": "The patient returns with worsening symptoms of shortness of breath and chest pain. Blood pressure is now 160/100 mmHg. I initiate metoprolol 50mg daily and increase lisinopril to 20mg daily. I also refer the patient to cardiology for further evaluation.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP_systolic": 160,
+        "BP_diastolic": 100,
+        "eGFR": 70,
+        "LDL": 140
+      },
+      "medications": [
+        "Lisinopril 20mg daily",
+        "Atorvastatin 20mg daily",
+        "Metoprolol 50mg daily"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath on exertion",
+        "Occasional chest pain",
+        "Palpitations"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [
+          "lisinopril",
+          "50mg",
+          "20mg"
+        ],
+        "lab_values": {},
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-06-15",
+      "note": "The patient presents with worsening renal function indicated by a decreased eGFR. Blood pressure remains elevated at 150/90 mmHg. I initiate losartan 100mg daily and increase metoprolol to 100mg daily.",
+      "labs": {
+        "HbA1c": 8.0,
+        "BP_systolic": 150,
+        "BP_diastolic": 90,
+        "eGFR": 60,
+        "LDL": 130
+      },
+      "medications": [
+        "Lisinopril 20mg daily",
+        "Atorvastatin 20mg daily",
+        "Metoprolol 100mg daily",
+        "Losartan 100mg daily"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath on exertion",
+        "Occasional chest pain",
+        "Palpitations",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [
+          "losartan",
+          "100mg"
+        ],
+        "lab_values": {},
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-12-20",
+      "note": "The patient's blood pressure remains elevated at 155/95 mmHg, and the eGFR has decreased further to 50. I refer the patient to nephrology for further evaluation and initiate amlodipine 10mg daily.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 155,
+        "BP_diastolic": 95,
+        "eGFR": 50,
+        "LDL": 120
+      },
+      "medications": [
+        "Lisinopril 20mg daily",
+        "Atorvastatin 20mg daily",
+        "Metoprolol 100mg daily",
+        "Losartan 100mg daily",
+        "Amlodipine 10mg daily"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease",
+        "End-Stage Renal Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath on exertion",
+        "Occasional chest pain",
+        "Palpitations",
+        "Fatigue",
+        "Nausea"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [
+          "amlodipine",
+          "10mg"
+        ],
+        "lab_values": {},
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V5",
+      "date": "2024-06-15",
+      "note": "The patient is now on dialysis and has been experiencing worsening symptoms of anemia and shortness of breath. Blood pressure is now 145/85 mmHg. I adjust the medications to include erythropoietin and increase the dose of metoprolol to 150mg daily.",
+      "labs": {
+        "HbA1c": 9.0,
+        "BP_systolic": 145,
+        "BP_diastolic": 85,
+        "eGFR": 40,
+        "LDL": 110
+      },
+      "medications": [
+        "Lisinopril 20mg daily",
+        "Atorvastatin 20mg daily",
+        "Metoprolol 150mg daily",
+        "Losartan 100mg daily",
+        "Amlodipine 10mg daily",
+        "Erythropoietin"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease",
+        "End-Stage Renal Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath on exertion",
+        "Occasional chest pain",
+        "Palpitations",
+        "Fatigue",
+        "Nausea",
+        "Anemia"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [
+          "150mg"
+        ],
+        "lab_values": {},
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

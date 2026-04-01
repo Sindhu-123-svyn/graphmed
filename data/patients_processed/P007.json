@@ -1,0 +1,147 @@
+{
+  "patient_id": "P007",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-06-15",
+      "note": "Patient is a 60-year-old male with a 10-year history of Type 2 Diabetes, Hypertension, and Hyperlipidemia. He presents with fatigue, weight loss, and increased thirst. Blood pressure is 140/90 mmHg, HbA1c is 7.2%, and LDL is 130 mg/dL. The patient is prescribed metformin 500mg BID, lisinopril 10mg QD, and atorvastatin 20mg QD.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg QD",
+        "Atorvastatin 20mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Weight loss",
+        "Increased thirst"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "atorvastatin",
+          "500mg",
+          "10mg",
+          "20mg",
+          "bid",
+          "qd"
+        ],
+        "lab_values": {},
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2023-02-20",
+      "note": "Patient returns with worsening fatigue and decreased urine output. Blood pressure is 150/95 mmHg, HbA1c is 8.1%, and LDL is 145 mg/dL. The patient is prescribed amlodipine 5mg QD and simvastatin 40mg QD. The patient is also started on furosemide 20mg QD for possible fluid overload.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 65,
+        "LDL": 145
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Amlodipine 5mg QD",
+        "Atorvastatin 20mg QD",
+        "Simvastatin 40mg QD",
+        "Furosemide 20mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Weight loss",
+        "Increased thirst",
+        "Decreased urine output"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [
+          "amlodipine",
+          "5mg",
+          "40mg",
+          "20mg",
+          "qd"
+        ],
+        "lab_values": {},
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-11-15",
+      "note": "Patient returns with persistent fatigue, weight loss, and shortness of breath. Blood pressure is 160/100 mmHg, HbA1c is 9.0%, and LDL is 155 mg/dL. The patient is prescribed losartan 50mg QD and aspirin 81mg QD. The patient is also started on enalapril 10mg QD for possible fluid overload and metoprolol 50mg BID for possible CAD.",
+      "labs": {
+        "HbA1c": 9.0,
+        "BP_systolic": 160,
+        "BP_diastolic": 100,
+        "eGFR": 55,
+        "LDL": 155
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg QD",
+        "Amlodipine 5mg QD",
+        "Atorvastatin 20mg QD",
+        "Simvastatin 40mg QD",
+        "Furosemide 20mg QD",
+        "Losartan 50mg QD",
+        "Aspirin 81mg QD",
+        "Enalapril 10mg QD",
+        "Metoprolol 50mg BID"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Weight loss",
+        "Increased thirst",
+        "Decreased urine output",
+        "Shortness of breath"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [
+          "losartan",
+          "50mg",
+          "81mg",
+          "10mg",
+          "qd",
+          "bid"
+        ],
+        "lab_values": {},
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

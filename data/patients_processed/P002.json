@@ -1,0 +1,150 @@
+{
+  "patient_id": "P002",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-01-15",
+      "note": "Patient presented with new-onset hypertension, HbA1c 8.2, BP 150/90, and symptoms of fatigue and shortness of breath. Diagnoses: Type 2 Diabetes, Hypertension. Plan: Initiate antihypertensive medication, intensify glycemic control.",
+      "labs": {
+        "HbA1c": 8.2,
+        "BP_systolic": 150,
+        "BP_diastolic": 90,
+        "eGFR": 75,
+        "LDL": 140
+      },
+      "medications": [
+        "Metformin 500mg BD",
+        "Losartan 50mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Shortness of breath"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [],
+        "lab_values": {
+          "HbA1c": 8.2,
+          "BP": "150/90"
+        },
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-07-22",
+      "note": "Patient's BP remains elevated, HbA1c improved to 7.8, but LDL increased to 160. Diagnoses updated: Type 2 Diabetes, Hypertension, Hyperlipidemia. Plan: Adjust antihypertensive medication, add statin.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP_systolic": 155,
+        "BP_diastolic": 95,
+        "eGFR": 70,
+        "LDL": 160
+      },
+      "medications": [
+        "Metformin 1000mg BD",
+        "Losartan 50mg QD",
+        "Atorvastatin 20mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Shortness of breath",
+        "Leg cramps"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [],
+        "lab_values": {},
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-01-20",
+      "note": "Patient's HbA1c worsened to 8.5, BP remains elevated, and eGFR decreased to 60. Diagnoses updated: Type 2 Diabetes, Hypertension, Hyperlipidemia, Chronic Kidney Disease. Plan: Adjust antihypertensive medication, intensify glycemic control.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 160,
+        "BP_diastolic": 100,
+        "eGFR": 60,
+        "LDL": 140
+      },
+      "medications": [
+        "Metformin 1500mg BD",
+        "Losartan 100mg QD",
+        "Atorvastatin 40mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Shortness of breath",
+        "Leg cramps",
+        "Swelling in lower extremities"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [],
+        "lab_values": {},
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-08-25",
+      "note": "Patient's HbA1c improved to 7.5, BP improved to 140/80, but eGFR remains low. Diagnoses remain: Type 2 Diabetes, Hypertension, Hyperlipidemia, Chronic Kidney Disease. Plan: Continue current medication regimen, schedule nephrology consult.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP_systolic": 140,
+        "BP_diastolic": 80,
+        "eGFR": 55,
+        "LDL": 120
+      },
+      "medications": [
+        "Metformin 1500mg BD",
+        "Losartan 100mg QD",
+        "Atorvastatin 40mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Shortness of breath",
+        "Leg cramps",
+        "Swelling in lower extremities",
+        "Confusion"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [],
+        "lab_values": {},
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}
