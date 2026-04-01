@@ -1,0 +1,11 @@
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+data/mimic_raw/
+models/conflict_classifier/
+*.db
+chroma_db/
+.vscode/
+.ipynb_checkpoints/
