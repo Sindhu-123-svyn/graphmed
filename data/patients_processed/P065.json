@@ -1,0 +1,176 @@
+{
+  "patient_id": "P065",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-06-15",
+      "note": "Patient presents with new onset polyuria and polydipsia. Initial diagnosis of Type 2 Diabetes is made based on physical examination findings and laboratory results. HbA1c is slightly elevated at 7.7, and blood pressure is within normal limits. Start Metformin 500mg PO BID for diabetes management.",
+      "labs": {
+        "HbA1c": 7.7,
+        "BP_systolic": 130,
+        "BP_diastolic": 80,
+        "eGFR": 78,
+        "LDL": 110
+      },
+      "medications": [
+        "metformin",
+        "500mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polydipsia",
+        "Polyuria"
+      ],
+      "extracted": {
+        "conditions": [
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "500mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Polydipsia",
+          "Polyuria"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2023-01-10",
+      "note": "Follow-up visit for Type 2 Diabetes management. Patient reports improved symptoms, but HbA1c has worsened to 8.2. Blood pressure has increased to 150/90. Start Amlodipine 5mg PO daily for hypertension management. Increase Metformin to 1000mg PO BID.",
+      "labs": {
+        "HbA1c": 8.2,
+        "BP_systolic": 150,
+        "BP_diastolic": 90,
+        "eGFR": 75,
+        "LDL": 120
+      },
+      "medications": [
+        "amlodipine",
+        "metformin",
+        "5mg",
+        "1000mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Dyspnea on exertion"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "amlodipine",
+          "metformin",
+          "5mg",
+          "1000mg"
+        ],
+        "lab_values": {},
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-07-25",
+      "note": "Follow-up visit for Type 2 Diabetes and hypertension management. Patient reports worsening symptoms. HbA1c has worsened to 9.0, and blood pressure is now 160/100. Start Atorvastatin 20mg PO daily for hyperlipidemia management. Increase Amlodipine to 10mg PO daily.",
+      "labs": {
+        "HbA1c": 9.0,
+        "BP_systolic": 160,
+        "BP_diastolic": 100,
+        "eGFR": 65,
+        "LDL": 140
+      },
+      "medications": [
+        "amlodipine",
+        "atorvastatin",
+        "20mg",
+        "10mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Dyspnea on exertion",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "amlodipine",
+          "atorvastatin",
+          "20mg",
+          "10mg"
+        ],
+        "lab_values": {},
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2024-01-22",
+      "note": "Follow-up visit for chronic kidney disease management. Patient reports decreased eGFR to 55. Start Lisinopril 10mg PO daily for CKD management. Adjust Metformin to 500mg PO BID due to kidney function decline.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 155,
+        "BP_diastolic": 95,
+        "eGFR": 55,
+        "LDL": 130
+      },
+      "medications": [
+        "lisinopril",
+        "metformin",
+        "10mg",
+        "500mg"
+      ],
+      "diagnoses": [
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Dyspnea on exertion",
+        "Fatigue",
+        "Nausea"
+      ],
+      "extracted": {
+        "conditions": [
+          "Chronic Kidney Disease"
+        ],
+        "medications": [
+          "lisinopril",
+          "metformin",
+          "10mg",
+          "500mg"
+        ],
+        "lab_values": {},
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

@@ -7,31 +7,34 @@
       "note": "Patient presented with new-onset hypertension, HbA1c 8.2, BP 150/90, and symptoms of fatigue and shortness of breath. Diagnoses: Type 2 Diabetes, Hypertension. Plan: Initiate antihypertensive medication, intensify glycemic control.",
       "labs": {
         "HbA1c": 8.2,
-        "BP_systolic": 150,
-        "BP_diastolic": 90,
-        "eGFR": 75,
-        "LDL": 140
+        "BP": "150/90"
       },
       "medications": [
         "Metformin 500mg BD",
         "Losartan 50mg QD"
       ],
       "diagnoses": [
-        "Type 2 Diabetes",
-        "Hypertension"
+        "Hypertension",
+        "Type 2 Diabetes"
       ],
       "symptoms": [
-        "Fatigue",
-        "Shortness of breath"
+        "Shortness of breath",
+        "Fatigue"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Hypertension",
+          "Type 2 Diabetes"
+        ],
         "medications": [],
         "lab_values": {
           "HbA1c": 8.2,
           "BP": "150/90"
         },
-        "symptoms": [],
+        "symptoms": [
+          "Shortness of breath",
+          "Fatigue"
+        ],
         "procedures": [],
         "relationships": []
       }
@@ -53,9 +56,9 @@
         "Atorvastatin 20mg QD"
       ],
       "diagnoses": [
-        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia"
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
       ],
       "symptoms": [
         "Fatigue",
@@ -63,7 +66,11 @@
         "Leg cramps"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
         "medications": [],
         "lab_values": {},
         "symptoms": [],
@@ -88,10 +95,10 @@
         "Atorvastatin 40mg QD"
       ],
       "diagnoses": [
-        "Type 2 Diabetes",
         "Hypertension",
+        "Chronic Kidney Disease",
         "Hyperlipidemia",
-        "Chronic Kidney Disease"
+        "Type 2 Diabetes"
       ],
       "symptoms": [
         "Fatigue",
@@ -100,7 +107,12 @@
         "Swelling in lower extremities"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Hypertension",
+          "Chronic Kidney Disease",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
         "medications": [],
         "lab_values": {},
         "symptoms": [],
@@ -125,10 +137,10 @@
         "Atorvastatin 40mg QD"
       ],
       "diagnoses": [
-        "Type 2 Diabetes",
         "Hypertension",
+        "Chronic Kidney Disease",
         "Hyperlipidemia",
-        "Chronic Kidney Disease"
+        "Type 2 Diabetes"
       ],
       "symptoms": [
         "Fatigue",
@@ -138,7 +150,12 @@
         "Confusion"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Hypertension",
+          "Chronic Kidney Disease",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
         "medications": [],
         "lab_values": {},
         "symptoms": [],

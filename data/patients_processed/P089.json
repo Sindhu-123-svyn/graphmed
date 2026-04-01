@@ -1,0 +1,215 @@
+{
+  "patient_id": "P089",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-06-01",
+      "note": "Patient presents with new onset of hypertension and hyperlipidemia. BP 140/90, HbA1c 7.2, LDL 130. Prescribe lisinopril 10mg daily and atorvastatin 20mg daily. Diagnoses include hypertension, hyperlipidemia, and type 2 diabetes. Symptoms include fatigue, polyuria, and polydipsia.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP": "140/90",
+        "LDL": 130.0
+      },
+      "medications": [
+        "lisinopril",
+        "atorvastatin",
+        "10mg",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polydipsia",
+        "Polyuria",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "lisinopril",
+          "atorvastatin",
+          "10mg",
+          "20mg"
+        ],
+        "lab_values": {
+          "HbA1c": 7.2,
+          "BP": "140/90",
+          "LDL": 130.0
+        },
+        "symptoms": [
+          "Polydipsia",
+          "Polyuria",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2023-02-01",
+      "note": "Follow-up visit 8 months after initial diagnosis. BP 150/95, HbA1c 8.0, LDL 140. Note worsening hypertension and hyperlipidemia. Increase lisinopril to 20mg daily and atorvastatin to 40mg daily. Diagnoses now include coronary artery disease. Symptoms include chest pain, fatigue, and shortness of breath.",
+      "labs": {
+        "HbA1c": 8.0,
+        "BP": "150/95",
+        "LDL": 140.0
+      },
+      "medications": [
+        "lisinopril",
+        "atorvastatin",
+        "20mg",
+        "40mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Chest pain",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia",
+          "Coronary Artery Disease"
+        ],
+        "medications": [
+          "lisinopril",
+          "atorvastatin",
+          "20mg",
+          "40mg"
+        ],
+        "lab_values": {
+          "HbA1c": 8.0,
+          "BP": "150/95",
+          "LDL": 140.0
+        },
+        "symptoms": [
+          "Shortness of breath",
+          "Chest pain",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-08-01",
+      "note": "Follow-up visit 14 months after initial diagnosis. BP 160/100, HbA1c 8.5, LDL 160. Note worsening hypertension, hyperlipidemia, and kidney function. Increase lisinopril to 30mg daily and atorvastatin to 80mg daily. Diagnoses now include chronic kidney disease. Symptoms include fatigue, polyuria, polydipsia, chest pain, shortness of breath, and edema.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP": "160/100",
+        "LDL": 160.0
+      },
+      "medications": [
+        "lisinopril",
+        "atorvastatin",
+        "30mg",
+        "80mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Chronic Kidney Disease",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Polydipsia",
+        "Fatigue",
+        "Polyuria",
+        "Shortness of breath",
+        "Edema",
+        "Chest pain"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Chronic Kidney Disease",
+          "Hyperlipidemia"
+        ],
+        "medications": [
+          "lisinopril",
+          "atorvastatin",
+          "30mg",
+          "80mg"
+        ],
+        "lab_values": {
+          "HbA1c": 8.5,
+          "BP": "160/100",
+          "LDL": 160.0
+        },
+        "symptoms": [
+          "Polydipsia",
+          "Fatigue",
+          "Polyuria",
+          "Shortness of breath",
+          "Edema",
+          "Chest pain"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2024-02-01",
+      "note": "Follow-up visit 18 months after initial diagnosis. BP 140/90, HbA1c 7.5, LDL 120. Note some improvement in hypertension, hyperlipidemia, and kidney function. Reduce lisinopril to 20mg daily and atorvastatin to 40mg daily. Diagnoses remain the same. Symptoms include fatigue, polyuria, polydipsia, and edema.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP": "140/90",
+        "LDL": 120.0
+      },
+      "medications": [
+        "lisinopril",
+        "atorvastatin",
+        "20mg",
+        "40mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Polydipsia",
+        "Polyuria",
+        "Edema",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia"
+        ],
+        "medications": [
+          "lisinopril",
+          "atorvastatin",
+          "20mg",
+          "40mg"
+        ],
+        "lab_values": {
+          "HbA1c": 7.5,
+          "BP": "140/90",
+          "LDL": 120.0
+        },
+        "symptoms": [
+          "Polydipsia",
+          "Polyuria",
+          "Edema",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

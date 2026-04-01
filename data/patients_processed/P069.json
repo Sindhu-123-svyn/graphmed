@@ -1,0 +1,211 @@
+{
+  "patient_id": "P069",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-06-15",
+      "note": "Patient with history of Type 2 Diabetes, Hypertension, and Hyperlipidemia presents with new-onset chest pain. ECG shows signs of coronary artery disease. Blood pressure is 140/90 mmHg and HbA1c is 7.5. Medications include metformin 500mg daily, lisinopril 10mg daily, and atorvastatin 20mg daily. Diagnoses include Type 2 Diabetes, Hypertension, Hyperlipidemia, and suspected Coronary Artery Disease. Symptoms include chest pain and shortness of breath.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 78,
+        "LDL": 145
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "500mg",
+        "10mg",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Coronary Artery Disease",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Chest pain"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Coronary Artery Disease",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "atorvastatin",
+          "500mg",
+          "10mg",
+          "20mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Shortness of breath",
+          "Chest pain"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-12-20",
+      "note": "Follow-up visit with patient. Blood pressure is 130/80 mmHg and HbA1c is 7.2. Medications remain the same. However, LDL levels are still elevated at 150. Diagnoses remain the same, but new symptoms of fatigue and weakness have developed.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 130,
+        "BP_diastolic": 80,
+        "eGFR": 75,
+        "LDL": 150
+      },
+      "medications": [
+        "Metformin 500mg daily",
+        "Lisinopril 10mg daily",
+        "Atorvastatin 20mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [],
+        "lab_values": {},
+        "symptoms": [
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-04-25",
+      "note": "Patient presents with worsening symptoms of fatigue and weakness. Blood pressure is 120/70 mmHg and HbA1c is 7.8. Diagnoses remain the same. Medications have been adjusted to include amlodipine 5mg daily for blood pressure control. LDL levels remain elevated at 155.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP_systolic": 120,
+        "BP_diastolic": 70,
+        "eGFR": 70,
+        "LDL": 155
+      },
+      "medications": [
+        "amlodipine",
+        "5mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [
+          "amlodipine",
+          "5mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-09-01",
+      "note": "Patient presents with worsening kidney function, with eGFR at 55. Blood pressure is 125/80 mmHg and HbA1c is 7.5. Medications have been adjusted to include lisinopril 20mg daily for blood pressure control and fenofibrate 54mg daily for cholesterol management. LDL levels have decreased to 120.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP_systolic": 125,
+        "BP_diastolic": 80,
+        "eGFR": 55,
+        "LDL": 120
+      },
+      "medications": [
+        "lisinopril",
+        "20mg",
+        "54mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Chest pain",
+        "Shortness of breath",
+        "Fatigue",
+        "Weakness"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [
+          "lisinopril",
+          "20mg",
+          "54mg"
+        ],
+        "lab_values": {},
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V5",
+      "date": "2024-02-15",
+      "note": "Patient presents with worsening symptoms of fatigue and weakness. Blood pressure is 115/65 mmHg and HbA1c is 8.0. Diagnoses remain the same. Medications have been adjusted to include erythropoietin 20,000 units weekly for anemia management. LDL levels remain at 115.",
+      "labs": {
+        "HbA1c": 8.0,
+        "BP_systolic": 115,
+        "BP_diastolic": 65,
+        "eGFR": 45,
+        "LDL": 115
+      },
+      "medications": [
+        "Metformin 500mg daily",
+        "Lisinopril 20mg daily",
+        "Fenofibrate 54mg daily",
+        "Atorvastatin 20mg daily",
+        "Erythropoietin 20,000 units weekly"
+      ],
+      "diagnoses": [
+        "Anemia"
+      ],
+      "symptoms": [
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Anemia"
+        ],
+        "medications": [],
+        "lab_values": {},
+        "symptoms": [
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "patient_id": "P044",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-02-15",
+      "note": "Patient presents with complaints of fatigue and polyuria. Physical examination reveals obesity and hypertension. HbA1c is 7.2, BP 140/90, eGFR 72. Diagnoses include Type 2 Diabetes, Hypertension, and Hyperlipidemia. Medications include Metformin 500mg bid and Lisinopril 10mg daily.",
+      "labs": {
+        "BP": "140/90",
+        "eGFR": 72.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "500mg",
+        "10mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "500mg",
+          "10mg"
+        ],
+        "lab_values": {
+          "BP": "140/90",
+          "eGFR": 72.0
+        },
+        "symptoms": [
+          "Polyuria",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-08-20",
+      "note": "Patient returns with complaint of worsening edema and shortness of breath. Physical examination reveals weight gain and decreased eGFR. HbA1c is 7.5, BP 150/95, eGFR 60. Diagnoses include Type 2 Diabetes, Hypertension, Hyperlipidemia, and Chronic Kidney Disease. Medications include Metformin 500mg bid, Lisinopril 20mg daily, and Simvastatin 20mg daily.",
+      "labs": {
+        "BP": "150/95",
+        "eGFR": 60.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "simvastatin",
+        "500mg",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Chronic Kidney Disease",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Edema"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Chronic Kidney Disease",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "simvastatin",
+          "500mg",
+          "20mg"
+        ],
+        "lab_values": {
+          "BP": "150/95",
+          "eGFR": 60.0
+        },
+        "symptoms": [
+          "Shortness of breath",
+          "Edema"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-02-22",
+      "note": "Patient returns with complaint of worsening chest pain and palpitations. Physical examination reveals new-onset atrial fibrillation. HbA1c is 8.0, BP 155/100, eGFR 50. Diagnoses include Type 2 Diabetes, Hypertension, Hyperlipidemia, Chronic Kidney Disease, and Coronary Artery Disease. Medications include Metformin 1000mg bid, Lisinopril 30mg daily, Simvastatin 40mg daily, and Apixaban 5mg bid.",
+      "labs": {
+        "BP": "155/100",
+        "eGFR": 50.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "simvastatin",
+        "1000mg",
+        "30mg",
+        "40mg",
+        "5mg"
+      ],
+      "diagnoses": [
+        "Hyperlipidemia",
+        "Hypertension",
+        "Coronary Artery Disease",
+        "Type 2 Diabetes",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Chest pain"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hyperlipidemia",
+          "Hypertension",
+          "Coronary Artery Disease",
+          "Type 2 Diabetes",
+          "Chronic Kidney Disease"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "simvastatin",
+          "1000mg",
+          "30mg",
+          "40mg",
+          "5mg"
+        ],
+        "lab_values": {
+          "BP": "155/100",
+          "eGFR": 50.0
+        },
+        "symptoms": [
+          "Chest pain"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-10-25",
+      "note": "Patient returns with complaint of worsening weakness and anemia. Physical examination reveals anemia and decreased eGFR. HbA1c is 8.5, BP 160/105, eGFR 45. Diagnoses include Type 2 Diabetes, Hypertension, Hyperlipidemia, Chronic Kidney Disease, Coronary Artery Disease, and Anemia. Medications include Metformin 1500mg bid, Lisinopril 40mg daily, Simvastatin 60mg daily, Apixaban 10mg bid, and Epoietin alfa 5000 units qw.",
+      "labs": {
+        "BP": "160/105",
+        "eGFR": 45.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "simvastatin",
+        "1500mg",
+        "40mg",
+        "60mg",
+        "10mg"
+      ],
+      "diagnoses": [
+        "Hyperlipidemia",
+        "Anemia",
+        "Hypertension",
+        "Coronary Artery Disease",
+        "Type 2 Diabetes",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Edema",
+        "Shortness of breath",
+        "Chest pain",
+        "Palpitations",
+        "Weakness"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hyperlipidemia",
+          "Anemia",
+          "Hypertension",
+          "Coronary Artery Disease",
+          "Type 2 Diabetes",
+          "Chronic Kidney Disease"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "simvastatin",
+          "1500mg",
+          "40mg",
+          "60mg",
+          "10mg"
+        ],
+        "lab_values": {
+          "BP": "160/105",
+          "eGFR": 45.0
+        },
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

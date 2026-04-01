@@ -1,0 +1,168 @@
+{
+  "patient_id": "P078",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-03-15",
+      "note": "Patient P078 presents with new-onset fatigue, weight gain, and polyuria. Physical exam reveals obesity (BMI 35), BP 140/90, and 1+ pitting edema in both lower extremities. HbA1c is elevated at 8.1. Diagnosis: Type 2 Diabetes, Hypertension. Initiate metformin 500mg BID and lisinopril 10mg daily.",
+      "labs": {
+        "BP": "140/90"
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "500mg",
+        "10mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Edema",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "500mg",
+          "10mg"
+        ],
+        "lab_values": {
+          "BP": "140/90"
+        },
+        "symptoms": [
+          "Polyuria",
+          "Edema",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-09-20",
+      "note": "Patient P078 returns with worsening fatigue, decreased exercise tolerance, and increased pitting edema. HbA1c has improved to 7.3 but BP remains elevated at 150/95. eGFR has decreased to 65. Diagnosis: Hyperlipidemia. Initiate atorvastatin 20mg daily.",
+      "labs": {
+        "HbA1c": 7.3,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 65,
+        "LDL": 120
+      },
+      "medications": [
+        "atorvastatin",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Edema",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hyperlipidemia"
+        ],
+        "medications": [
+          "atorvastatin",
+          "20mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Edema",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-03-15",
+      "note": "Patient P078 returns with worsening shortness of breath and orthopnea. HbA1c has worsened to 8.5. BP remains elevated at 155/100. eGFR has decreased to 55. Diagnosis: Coronary Artery Disease. Initiate aspirin 81mg daily and clopidogrel 75mg daily.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 155,
+        "BP_diastolic": 100,
+        "eGFR": 55,
+        "LDL": 110
+      },
+      "medications": [
+        "clopidogrel",
+        "81mg",
+        "75mg"
+      ],
+      "diagnoses": [
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath"
+      ],
+      "extracted": {
+        "conditions": [
+          "Coronary Artery Disease"
+        ],
+        "medications": [
+          "clopidogrel",
+          "81mg",
+          "75mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Shortness of breath"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-09-20",
+      "note": "Patient P078 returns with worsening fatigue, decreased exercise tolerance, and increased pitting edema. HbA1c has worsened to 9.0. BP remains elevated at 160/105. eGFR has decreased to 45. Diagnosis: Chronic Kidney Disease. Initiate erythropoietin 5000 IU weekly.",
+      "labs": {
+        "HbA1c": 9.0,
+        "BP_systolic": 160,
+        "BP_diastolic": 105,
+        "eGFR": 45,
+        "LDL": 100
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg daily",
+        "Atorvastatin 20mg daily",
+        "Aspirin 81mg daily",
+        "Clopidogrel 75mg daily",
+        "Erythropoietin 5000 IU weekly"
+      ],
+      "diagnoses": [
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Edema",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Chronic Kidney Disease"
+        ],
+        "medications": [],
+        "lab_values": {},
+        "symptoms": [
+          "Edema",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

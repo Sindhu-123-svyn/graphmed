@@ -1,0 +1,163 @@
+{
+  "patient_id": "P037",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-06-15",
+      "note": "Patient presents with new diagnosis of Type 2 Diabetes (HbA1c 7.2), hypertension (BP 140/90), and hyperlipidemia (LDL 130). Plan to initiate Metformin 500mg twice daily and Lisinopril 10mg daily.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP": "140/90",
+        "LDL": 130.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "500mg",
+        "10mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "500mg",
+          "10mg"
+        ],
+        "lab_values": {
+          "HbA1c": 7.2,
+          "BP": "140/90",
+          "LDL": 130.0
+        },
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-12-20",
+      "note": "Follow-up visit for diabetic control. Patient's HbA1c has worsened to 8.1. Initiate Sitagliptin 100mg daily for additional glycemic control. Also, patient reports worsening fatigue and shortness of breath.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP_systolic": 145,
+        "BP_diastolic": 92,
+        "eGFR": 68,
+        "LDL": 140
+      },
+      "medications": [
+        "100mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease (suspected)"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [
+          "100mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Shortness of breath",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-06-15",
+      "note": "Patient presents with worsening kidney function (eGFR 52). Renal ultrasound reveals mild renal impairment. Continue Sitagliptin, but initiate Amlodipine 5mg daily for blood pressure control. Also, patient reports swelling in lower extremities.",
+      "labs": {
+        "eGFR": 52.0
+      },
+      "medications": [
+        "amlodipine",
+        "5mg"
+      ],
+      "diagnoses": [
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Edema"
+      ],
+      "extracted": {
+        "conditions": [
+          "Chronic Kidney Disease"
+        ],
+        "medications": [
+          "amlodipine",
+          "5mg"
+        ],
+        "lab_values": {
+          "eGFR": 52.0
+        },
+        "symptoms": [
+          "Edema"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-12-20",
+      "note": "Patient presents with worsening glycemic control (HbA1c 9.1) and increasing creatinine levels. Initiate Insulin Glargine 100 units daily for basal insulin coverage. Continue all current medications.",
+      "labs": {
+        "HbA1c": 9.1
+      },
+      "medications": [
+        "insulin"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Fatigue",
+        "Shortness of breath",
+        "Swelling in lower extremities",
+        "Increased thirst"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [
+          "insulin"
+        ],
+        "lab_values": {
+          "HbA1c": 9.1
+        },
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "patient_id": "P096",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-02-15",
+      "note": "Patient P096 is a 55-year-old male presenting with a 5-year history of hypertension and hyperlipidemia. His blood pressure is elevated at 140/90 mmHg and HbA1c is 7.2%. He is prescribed Metoprolol 50mg daily and Simvastatin 20mg daily. Diagnoses include Hypertension, Hyperlipidemia, and Type 2 Diabetes. Symptoms include fatigue and polyuria.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
+      },
+      "medications": [
+        "metoprolol",
+        "simvastatin",
+        "50mg",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metoprolol",
+          "simvastatin",
+          "50mg",
+          "20mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Polyuria",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-08-25",
+      "note": "Patient P096 returns with worsening hypertension at 150/95 mmHg and increasing fatigue. His HbA1c has improved slightly to 6.8%. He is added to Lisinopril 10mg daily for hypertension control. New symptoms include dyspnea. Diagnoses now include Chronic Kidney Disease due to worsening eGFR.",
+      "labs": {
+        "HbA1c": 6.8,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 68,
+        "LDL": 120
+      },
+      "medications": [
+        "lisinopril",
+        "10mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Chronic Kidney Disease"
+        ],
+        "medications": [
+          "lisinopril",
+          "10mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Shortness of breath",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-02-20",
+      "note": "Patient P096's hypertension remains uncontrolled at 160/100 mmHg. His HbA1c has worsened to 7.5%. Due to worsening kidney function, he is started on Furosemide 40mg daily for edema management. New symptoms include orthopnea.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP_systolic": 160,
+        "BP_diastolic": 100,
+        "eGFR": 58,
+        "LDL": 110
+      },
+      "medications": [
+        "40mg"
+      ],
+      "diagnoses": [
+        "Hypertension"
+      ],
+      "symptoms": [
+        "Edema"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension"
+        ],
+        "medications": [
+          "40mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Edema"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-10-12",
+      "note": "Patient P096's kidney function has continued to decline, with an eGFR of 45. His hypertension remains uncontrolled at 155/105 mmHg. Due to worsening cardiovascular risk, he is started on Aspirin 81mg daily for antiplatelet therapy. New symptoms include paroxysmal nocturnal dyspnea.",
+      "labs": {
+        "HbA1c": 7.0,
+        "BP_systolic": 155,
+        "BP_diastolic": 105,
+        "eGFR": 45,
+        "LDL": 100
+      },
+      "medications": [
+        "81mg"
+      ],
+      "diagnoses": [
+        "Hypertension"
+      ],
+      "symptoms": [
+        "Shortness of breath"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension"
+        ],
+        "medications": [
+          "81mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Shortness of breath"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

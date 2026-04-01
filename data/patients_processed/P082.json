@@ -1,0 +1,213 @@
+{
+  "patient_id": "P082",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-01-15",
+      "note": "Initial presentation with complaints of polyuria, polydipsia, and fatigue. Physical exam reveals a blood pressure of 140/90. Patient is diagnosed with Type 2 Diabetes (HbA1c: 8.5), Hypertension, and Hyperlipidemia. Starting Metformin 500mg twice daily and Lisinopril 10mg daily.",
+      "labs": {
+        "HbA1c": 8.5
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "500mg",
+        "10mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polydipsia",
+        "Polyuria",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "500mg",
+          "10mg"
+        ],
+        "lab_values": {
+          "HbA1c": 8.5
+        },
+        "symptoms": [
+          "Polydipsia",
+          "Polyuria",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-07-20",
+      "note": "Follow-up visit with improved glycemic control (HbA1c: 7.2). However, blood pressure remains elevated (140/90). Patient reports intermittent chest pain. ECG reveals nonspecific changes. Patient is started on Simvastatin 20mg daily for hyperlipidemia.",
+      "labs": {
+        "HbA1c": 7.2
+      },
+      "medications": [
+        "simvastatin",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Chest pain"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hyperlipidemia"
+        ],
+        "medications": [
+          "simvastatin",
+          "20mg"
+        ],
+        "lab_values": {
+          "HbA1c": 7.2
+        },
+        "symptoms": [
+          "Chest pain"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-02-22",
+      "note": "Patient reports worsening fatigue and shortness of breath. Physical exam reveals bilateral pitting edema. ECG shows signs of left ventricular hypertrophy. Patient is diagnosed with Coronary Artery Disease and started on Aspirin 81mg daily.",
+      "labs": {
+        "HbA1c": 8.0,
+        "BP_systolic": 150,
+        "BP_diastolic": 100,
+        "eGFR": 60,
+        "LDL": 180
+      },
+      "medications": [
+        "81mg"
+      ],
+      "diagnoses": [
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Edema",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Coronary Artery Disease"
+        ],
+        "medications": [
+          "81mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Shortness of breath",
+          "Edema",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-09-13",
+      "note": "Patient reports worsening renal function (eGFR: 45). Patient is started on Losartan 50mg daily for hypertension. Patient is also started on amlodipine 5mg daily for blood pressure control.",
+      "labs": {
+        "eGFR": 45.0
+      },
+      "medications": [
+        "losartan",
+        "amlodipine",
+        "50mg",
+        "5mg"
+      ],
+      "diagnoses": [
+        "Hypertension"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Fatigue",
+        "Intermittent chest pain",
+        "Shortness of breath",
+        "Dyspnea"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension"
+        ],
+        "medications": [
+          "losartan",
+          "amlodipine",
+          "50mg",
+          "5mg"
+        ],
+        "lab_values": {
+          "eGFR": 45.0
+        },
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V5",
+      "date": "2024-03-18",
+      "note": "Patient reports improved glycemic control (HbA1c: 6.8) but worsening renal function (eGFR: 30). Patient is started on erythropoietin for anemia. Patient is also started on a dialysis referral for chronic kidney disease.",
+      "labs": {
+        "HbA1c": 6.8,
+        "eGFR": 30.0
+      },
+      "medications": [
+        "Metformin 500mg twice daily",
+        "Lisinopril 10mg daily",
+        "Simvastatin 20mg daily",
+        "Aspirin 81mg daily",
+        "Losartan 50mg daily",
+        "Amlodipine 5mg daily",
+        "Erythropoietin"
+      ],
+      "diagnoses": [
+        "Chronic Kidney Disease",
+        "Anemia"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Fatigue",
+        "Intermittent chest pain",
+        "Shortness of breath",
+        "Dyspnea",
+        "Anemia"
+      ],
+      "extracted": {
+        "conditions": [
+          "Chronic Kidney Disease",
+          "Anemia"
+        ],
+        "medications": [],
+        "lab_values": {
+          "HbA1c": 6.8,
+          "eGFR": 30.0
+        },
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

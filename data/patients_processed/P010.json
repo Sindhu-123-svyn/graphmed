@@ -13,30 +13,39 @@
         "LDL": 130
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Amlodipine 5mg daily"
+        "metformin",
+        "amlodipine",
+        "500mg",
+        "5mg"
       ],
       "diagnoses": [
-        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia"
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
       ],
       "symptoms": [
-        "Polyuria",
         "Polydipsia",
+        "Polyuria",
         "Fatigue"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
         "medications": [
           "metformin",
           "amlodipine",
           "500mg",
-          "5mg",
-          "bid"
+          "5mg"
         ],
         "lab_values": {},
-        "symptoms": [],
+        "symptoms": [
+          "Polydipsia",
+          "Polyuria",
+          "Fatigue"
+        ],
         "procedures": [],
         "relationships": []
       }
@@ -53,30 +62,29 @@
         "LDL": 140
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Amlodipine 5mg daily",
-        "Lisinopril 10mg daily"
+        "lisinopril",
+        "10mg"
       ],
       "diagnoses": [
-        "Type 2 Diabetes",
-        "Hypertension",
-        "Hyperlipidemia",
-        "Chronic Kidney Disease"
+        "Hypertension"
       ],
       "symptoms": [
-        "Polyuria",
-        "Polydipsia",
-        "Fatigue",
-        "Shortness of breath"
+        "Shortness of breath",
+        "Fatigue"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Hypertension"
+        ],
         "medications": [
           "lisinopril",
           "10mg"
         ],
         "lab_values": {},
-        "symptoms": [],
+        "symptoms": [
+          "Shortness of breath",
+          "Fatigue"
+        ],
         "procedures": [],
         "relationships": []
       }
@@ -93,32 +101,33 @@
         "LDL": 145
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg daily",
-        "Amlodipine 10mg daily",
-        "Simvastatin 40mg daily"
+        "amlodipine",
+        "simvastatin",
+        "40mg",
+        "10mg"
       ],
       "diagnoses": [
-        "Type 2 Diabetes",
-        "Hypertension",
-        "Hyperlipidemia",
-        "Chronic Kidney Disease"
+        "Hyperlipidemia"
       ],
       "symptoms": [
-        "Polyuria",
-        "Polydipsia",
-        "Fatigue",
-        "Shortness of breath"
+        "Shortness of breath",
+        "Fatigue"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Hyperlipidemia"
+        ],
         "medications": [
           "amlodipine",
+          "simvastatin",
           "40mg",
           "10mg"
         ],
         "lab_values": {},
-        "symptoms": [],
+        "symptoms": [
+          "Shortness of breath",
+          "Fatigue"
+        ],
         "procedures": [],
         "relationships": []
       }
@@ -135,28 +144,23 @@
         "LDL": 150
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg daily",
-        "Amlodipine 15mg daily",
-        "Simvastatin 40mg daily",
-        "Losartan 50mg daily"
+        "losartan",
+        "amlodipine",
+        "50mg",
+        "15mg"
       ],
       "diagnoses": [
-        "Type 2 Diabetes",
-        "Hypertension",
-        "Hyperlipidemia",
-        "Chronic Kidney Disease",
-        "Heart Failure"
+        "Hypertension"
       ],
       "symptoms": [
-        "Polyuria",
-        "Polydipsia",
-        "Fatigue",
         "Shortness of breath",
-        "Swelling in legs"
+        "Edema",
+        "Fatigue"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Hypertension"
+        ],
         "medications": [
           "losartan",
           "amlodipine",
@@ -164,7 +168,11 @@
           "15mg"
         ],
         "lab_values": {},
-        "symptoms": [],
+        "symptoms": [
+          "Shortness of breath",
+          "Edema",
+          "Fatigue"
+        ],
         "procedures": [],
         "relationships": []
       }

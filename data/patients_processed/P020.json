@@ -1,0 +1,151 @@
+{
+  "patient_id": "P020",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-03-15",
+      "note": "Patient P020 presents with a 2-year history of Type 2 Diabetes. Patient is compliant with diet and exercise. BP 140/90, HbA1c 7.2, LDL 130. Diagnoses include Type 2 Diabetes, Hypertension, and Hyperlipidemia. Medications include Metformin 500mg twice daily and Lisinopril 5mg daily.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP": "140/90",
+        "LDL": 130.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "500mg",
+        "5mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polydipsia",
+        "Polyuria"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "500mg",
+          "5mg"
+        ],
+        "lab_values": {
+          "HbA1c": 7.2,
+          "BP": "140/90",
+          "LDL": 130.0
+        },
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2023-06-20",
+      "note": "Patient P020 returns with worsening symptoms of polydipsia and polyuria. Patient reports increased fatigue. BP 160/100, HbA1c 8.5, LDL 150. eGFR has worsened to 60. Diagnoses include Chronic Kidney Disease in addition to previous diagnoses. Medications include Metformin 1000mg twice daily, Lisinopril 10mg daily, and Simvastatin 20mg daily.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP": "160/100",
+        "LDL": 150.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "simvastatin",
+        "1000mg",
+        "10mg",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Polydipsia",
+        "Polyuria",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Chronic Kidney Disease"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "simvastatin",
+          "1000mg",
+          "10mg",
+          "20mg"
+        ],
+        "lab_values": {
+          "HbA1c": 8.5,
+          "BP": "160/100",
+          "LDL": 150.0
+        },
+        "symptoms": [
+          "Polydipsia",
+          "Polyuria",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2024-01-03",
+      "note": "Patient P020 returns with worsening fatigue and weight loss. BP 145/95, HbA1c 9.0, LDL 140. eGFR has worsened to 55. Diagnoses include worsening Chronic Kidney Disease and possible anemia. Medications include Metformin 1500mg twice daily, Lisinopril 15mg daily, Simvastatin 40mg daily, and Epoetin alfa 50,000 units weekly.",
+      "labs": {
+        "HbA1c": 9.0,
+        "BP": "145/95",
+        "LDL": 140.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "simvastatin",
+        "1500mg",
+        "15mg",
+        "40mg"
+      ],
+      "diagnoses": [
+        "Chronic Kidney Disease",
+        "Anemia"
+      ],
+      "symptoms": [
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Chronic Kidney Disease",
+          "Anemia"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "simvastatin",
+          "1500mg",
+          "15mg",
+          "40mg"
+        ],
+        "lab_values": {
+          "HbA1c": 9.0,
+          "BP": "145/95",
+          "LDL": 140.0
+        },
+        "symptoms": [
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

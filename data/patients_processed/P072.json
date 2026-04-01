@@ -1,0 +1,145 @@
+{
+  "patient_id": "P072",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-06-15",
+      "note": "Initial visit for patient with hypertension and hyperlipidemia. Patient reports headaches and fatigue. BP 140/90, HbA1c 7.2, LDL 130. Started on Amlodipine 5mg and Atorvastatin 20mg.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP": "140/90",
+        "LDL": 130.0
+      },
+      "medications": [
+        "amlodipine",
+        "atorvastatin",
+        "5mg",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia"
+        ],
+        "medications": [
+          "amlodipine",
+          "atorvastatin",
+          "5mg",
+          "20mg"
+        ],
+        "lab_values": {
+          "HbA1c": 7.2,
+          "BP": "140/90",
+          "LDL": 130.0
+        },
+        "symptoms": [
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2023-01-20",
+      "note": "Follow-up visit 6 months after initial visit. Patient reports decreased headaches, but increased fatigue. BP 145/95, HbA1c 7.8, LDL 120. BP is elevated, so increased Amlodipine to 10mg. Started on Metformin 500mg for new diagnosis of Type 2 Diabetes.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP": "145/95",
+        "LDL": 120.0
+      },
+      "medications": [
+        "amlodipine",
+        "metformin",
+        "10mg",
+        "500mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "amlodipine",
+          "metformin",
+          "10mg",
+          "500mg"
+        ],
+        "lab_values": {
+          "HbA1c": 7.8,
+          "BP": "145/95",
+          "LDL": 120.0
+        },
+        "symptoms": [
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-07-25",
+      "note": "Follow-up visit 6 months after V2. Patient reports increased fatigue and swelling in legs. BP 150/100, HbA1c 8.2, LDL 110, eGFR 58. BP and eGFR are concerning for worsening kidney function. Started on Lisinopril 2.5mg to protect kidneys. Increased Metformin to 1000mg and Atorvastatin to 40mg.",
+      "labs": {
+        "HbA1c": 8.2,
+        "BP": "150/100",
+        "eGFR": 58.0,
+        "LDL": 110.0
+      },
+      "medications": [
+        "lisinopril",
+        "metformin",
+        "atorvastatin",
+        "2.5mg",
+        "1000mg",
+        "40mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Type 2 Diabetes",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Edema",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [
+          "lisinopril",
+          "metformin",
+          "atorvastatin",
+          "2.5mg",
+          "1000mg",
+          "40mg"
+        ],
+        "lab_values": {
+          "HbA1c": 8.2,
+          "BP": "150/100",
+          "eGFR": 58.0,
+          "LDL": 110.0
+        },
+        "symptoms": [
+          "Edema",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,268 @@
+{
+  "patient_id": "P032",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-08-15",
+      "note": "Patient presents with 2-year history of Type 2 Diabetes, Hypertension, and Hyperlipidemia. Initial HbA1c 7.2, BP 140/90, eGFR 72. Medications: Metformin 500mg daily, Lisinopril 5mg daily, Atorvastatin 20mg daily. Diagnoses: Type 2 Diabetes, Hypertension, Hyperlipidemia. Symptoms: Fatigue, Polyphagia, Polyuria.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP": "140/90",
+        "eGFR": 72.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "500mg",
+        "5mg",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "atorvastatin",
+          "500mg",
+          "5mg",
+          "20mg"
+        ],
+        "lab_values": {
+          "HbA1c": 7.2,
+          "BP": "140/90",
+          "eGFR": 72.0
+        },
+        "symptoms": [
+          "Polyuria",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2023-02-20",
+      "note": "Follow-up visit 6 months after initial visit. Patient reports improved symptoms but HbA1c 7.8 and BP 145/95. eGFR 68. Medications adjusted: Metformin to 1000mg daily, Lisinopril to 10mg daily. Diagnoses: Type 2 Diabetes, Hypertension, Hyperlipidemia. New diagnoses: Nephropathy. Symptoms: Fatigue, Polyphagia, Polyuria, Edema.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP": "145/95",
+        "eGFR": 68.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "1000mg",
+        "10mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Edema",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "1000mg",
+          "10mg"
+        ],
+        "lab_values": {
+          "HbA1c": 7.8,
+          "BP": "145/95",
+          "eGFR": 68.0
+        },
+        "symptoms": [
+          "Polyuria",
+          "Edema",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-08-22",
+      "note": "Patient presents with worsening symptoms and lab values. HbA1c 8.2, BP 155/100, eGFR 60. Medications adjusted: Metformin to 1500mg daily, Lisinopril to 20mg daily, Atorvastatin to 40mg daily. New diagnoses: Coronary Artery Disease. Symptoms: Fatigue, Polyphagia, Polyuria, Edema, Chest pain.",
+      "labs": {
+        "HbA1c": 8.2,
+        "BP": "155/100",
+        "eGFR": 60.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "1500mg",
+        "20mg",
+        "40mg"
+      ],
+      "diagnoses": [
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Chest pain",
+        "Polyuria",
+        "Edema",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Coronary Artery Disease"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "atorvastatin",
+          "1500mg",
+          "20mg",
+          "40mg"
+        ],
+        "lab_values": {
+          "HbA1c": 8.2,
+          "BP": "155/100",
+          "eGFR": 60.0
+        },
+        "symptoms": [
+          "Chest pain",
+          "Polyuria",
+          "Edema",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2024-02-26",
+      "note": "Patient reports improved symptoms after medication adjustments. HbA1c 7.5, BP 130/85, eGFR 65. Medications adjusted: Metformin to 2000mg daily, Lisinopril to 30mg daily. New diagnoses: Chronic Kidney Disease stage 3. Symptoms: Fatigue, Polyphagia, Polyuria, Edema, Chest pain.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP": "130/85",
+        "eGFR": 65.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "2000mg",
+        "30mg"
+      ],
+      "diagnoses": [
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Chest pain",
+        "Polyuria",
+        "Edema",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Chronic Kidney Disease"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "2000mg",
+          "30mg"
+        ],
+        "lab_values": {
+          "HbA1c": 7.5,
+          "BP": "130/85",
+          "eGFR": 65.0
+        },
+        "symptoms": [
+          "Chest pain",
+          "Polyuria",
+          "Edema",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V5",
+      "date": "2024-08-31",
+      "note": "Patient presents with stable lab values and symptoms. HbA1c 6.8, BP 125/80, eGFR 70. Medications adjusted: Metformin to 2500mg daily, Lisinopril to 40mg daily. Diagnoses: Type 2 Diabetes, Hypertension, Hyperlipidemia, Nephropathy, Coronary Artery Disease, Chronic Kidney Disease. Symptoms: Fatigue, Polyphagia, Polyuria, Edema, Chest pain.",
+      "labs": {
+        "HbA1c": 6.8,
+        "BP": "125/80",
+        "eGFR": 70.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "2500mg",
+        "40mg"
+      ],
+      "diagnoses": [
+        "Hyperlipidemia",
+        "Hypertension",
+        "Coronary Artery Disease",
+        "Type 2 Diabetes",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Chest pain",
+        "Polyuria",
+        "Edema",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hyperlipidemia",
+          "Hypertension",
+          "Coronary Artery Disease",
+          "Type 2 Diabetes",
+          "Chronic Kidney Disease"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "2500mg",
+          "40mg"
+        ],
+        "lab_values": {
+          "HbA1c": 6.8,
+          "BP": "125/80",
+          "eGFR": 70.0
+        },
+        "symptoms": [
+          "Chest pain",
+          "Polyuria",
+          "Edema",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

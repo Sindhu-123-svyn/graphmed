@@ -1,0 +1,180 @@
+{
+  "patient_id": "P031",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-02-15",
+      "note": "Patient presents with new onset diabetes. BP 140/90, HbA1c 7.2. Diagnoses include Type 2 Diabetes, Hypertension. Medications: Metformin 500mg bid, Lisinopril 10mg daily.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP": "140/90"
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "500mg",
+        "10mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "500mg",
+          "10mg"
+        ],
+        "lab_values": {
+          "HbA1c": 7.2,
+          "BP": "140/90"
+        },
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-08-19",
+      "note": "BP 150/95, HbA1c 7.8. Medications adjusted to Metformin 1000mg bid, Lisinopril 20mg daily. Diagnoses updated to include Hyperlipidemia.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP": "150/95"
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "1000mg",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hyperlipidemia"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "1000mg",
+          "20mg"
+        ],
+        "lab_values": {
+          "HbA1c": 7.8,
+          "BP": "150/95"
+        },
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-02-22",
+      "note": "BP 160/100, HbA1c 8.2. Patient reports new onset edema. Medications adjusted to Metformin 1500mg bid, Lisinopril 30mg daily, Atorvastatin 20mg daily.",
+      "labs": {
+        "HbA1c": 8.2,
+        "BP": "160/100"
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "1500mg",
+        "30mg",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Edema"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "atorvastatin",
+          "1500mg",
+          "30mg",
+          "20mg"
+        ],
+        "lab_values": {
+          "HbA1c": 8.2,
+          "BP": "160/100"
+        },
+        "symptoms": [
+          "Edema"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-08-25",
+      "note": "BP 155/90, HbA1c 7.5. Patient's kidney function has stabilized. Medications adjusted to Metformin 1000mg bid, Lisinopril 20mg daily, Atorvastatin 40mg daily.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP": "155/90"
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "1000mg",
+        "20mg",
+        "40mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "atorvastatin",
+          "1000mg",
+          "20mg",
+          "40mg"
+        ],
+        "lab_values": {
+          "HbA1c": 7.5,
+          "BP": "155/90"
+        },
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,315 @@
+{
+  "patient_id": "P001",
+  "created_at": "2026-04-01T19:13:51.526516",
+  "nodes": [
+    {
+      "id": "P001",
+      "type": "PATIENT",
+      "added": "2026-04-01T19:13:51.526516",
+      "last_confirmed": "2026-04-01T19:13:51.526516",
+      "confidence": 1.0
+    },
+    {
+      "id": "CONDITION_Hypertension_2022-06-15",
+      "name": "hypertension",
+      "type": "CONDITION",
+      "added": "2022-06-15",
+      "last_confirmed": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "id": "CONDITION_Hyperlipidemia_2022-06-15",
+      "name": "hyperlipidemia",
+      "type": "CONDITION",
+      "added": "2022-06-15",
+      "last_confirmed": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "id": "MEDICATION_lisinopril_2022-06-15",
+      "name": "lisinopril",
+      "type": "MEDICATION",
+      "added": "2022-06-15",
+      "last_confirmed": "2022-12-20",
+      "confidence": 1.0,
+      "history": [
+        {
+          "date": "2022-12-20",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "MEDICATION_atorvastatin_2022-06-15",
+      "name": "atorvastatin",
+      "type": "MEDICATION",
+      "added": "2022-06-15",
+      "last_confirmed": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "id": "MEDICATION_20mg_2022-06-15",
+      "name": "20mg",
+      "type": "MEDICATION",
+      "added": "2022-06-15",
+      "last_confirmed": "2022-12-20",
+      "confidence": 1.0,
+      "history": [
+        {
+          "date": "2022-12-20",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "MEDICATION_10mg_2022-06-15",
+      "name": "10mg",
+      "type": "MEDICATION",
+      "added": "2022-06-15",
+      "last_confirmed": "2023-12-20",
+      "confidence": 1.0,
+      "history": [
+        {
+          "date": "2023-12-20",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "SYMPTOM_Shortness of breath_2022-06-15",
+      "name": "shortness of breath",
+      "type": "SYMPTOM",
+      "added": "2022-06-15",
+      "last_confirmed": "2024-06-15",
+      "confidence": 1.0,
+      "history": [
+        {
+          "date": "2022-12-20",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2024-06-15",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "SYMPTOM_Chest pain_2022-06-15",
+      "name": "chest pain",
+      "type": "SYMPTOM",
+      "added": "2022-06-15",
+      "last_confirmed": "2022-12-20",
+      "confidence": 1.0,
+      "history": [
+        {
+          "date": "2022-12-20",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "MEDICATION_metoprolol_2022-12-20",
+      "name": "metoprolol",
+      "type": "MEDICATION",
+      "added": "2022-12-20",
+      "last_confirmed": "2024-06-15",
+      "confidence": 1.0,
+      "history": [
+        {
+          "date": "2023-06-15",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2024-06-15",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "MEDICATION_50mg_2022-12-20",
+      "name": "50mg",
+      "type": "MEDICATION",
+      "added": "2022-12-20",
+      "last_confirmed": "2022-12-20",
+      "confidence": 1.0
+    },
+    {
+      "id": "MEDICATION_losartan_2023-06-15",
+      "name": "losartan",
+      "type": "MEDICATION",
+      "added": "2023-06-15",
+      "last_confirmed": "2023-06-15",
+      "confidence": 1.0
+    },
+    {
+      "id": "MEDICATION_100mg_2023-06-15",
+      "name": "100mg",
+      "type": "MEDICATION",
+      "added": "2023-06-15",
+      "last_confirmed": "2023-06-15",
+      "confidence": 1.0
+    },
+    {
+      "id": "MEDICATION_amlodipine_2023-12-20",
+      "name": "amlodipine",
+      "type": "MEDICATION",
+      "added": "2023-12-20",
+      "last_confirmed": "2023-12-20",
+      "confidence": 1.0
+    },
+    {
+      "id": "CONDITION_Anemia_2024-06-15",
+      "name": "anemia",
+      "type": "CONDITION",
+      "added": "2024-06-15",
+      "last_confirmed": "2024-06-15",
+      "confidence": 1.0
+    },
+    {
+      "id": "MEDICATION_150mg_2024-06-15",
+      "name": "150mg",
+      "type": "MEDICATION",
+      "added": "2024-06-15",
+      "last_confirmed": "2024-06-15",
+      "confidence": 1.0
+    }
+  ],
+  "edges": [
+    {
+      "source": "P001",
+      "target": "CONDITION_Hypertension_2022-06-15",
+      "relation": "has",
+      "established": "2022-06-15"
+    },
+    {
+      "source": "P001",
+      "target": "CONDITION_Hyperlipidemia_2022-06-15",
+      "relation": "has",
+      "established": "2022-06-15"
+    },
+    {
+      "source": "P001",
+      "target": "MEDICATION_lisinopril_2022-06-15",
+      "relation": "has",
+      "established": "2022-06-15"
+    },
+    {
+      "source": "P001",
+      "target": "MEDICATION_atorvastatin_2022-06-15",
+      "relation": "has",
+      "established": "2022-06-15"
+    },
+    {
+      "source": "P001",
+      "target": "MEDICATION_20mg_2022-06-15",
+      "relation": "has",
+      "established": "2022-06-15"
+    },
+    {
+      "source": "P001",
+      "target": "MEDICATION_10mg_2022-06-15",
+      "relation": "has",
+      "established": "2022-06-15"
+    },
+    {
+      "source": "P001",
+      "target": "SYMPTOM_Shortness of breath_2022-06-15",
+      "relation": "has",
+      "established": "2022-06-15"
+    },
+    {
+      "source": "P001",
+      "target": "SYMPTOM_Chest pain_2022-06-15",
+      "relation": "has",
+      "established": "2022-06-15"
+    },
+    {
+      "source": "P001",
+      "target": "MEDICATION_metoprolol_2022-12-20",
+      "relation": "has",
+      "established": "2022-12-20"
+    },
+    {
+      "source": "P001",
+      "target": "MEDICATION_50mg_2022-12-20",
+      "relation": "has",
+      "established": "2022-12-20"
+    },
+    {
+      "source": "P001",
+      "target": "MEDICATION_losartan_2023-06-15",
+      "relation": "has",
+      "established": "2023-06-15"
+    },
+    {
+      "source": "P001",
+      "target": "MEDICATION_100mg_2023-06-15",
+      "relation": "has",
+      "established": "2023-06-15"
+    },
+    {
+      "source": "P001",
+      "target": "MEDICATION_amlodipine_2023-12-20",
+      "relation": "has",
+      "established": "2023-12-20"
+    },
+    {
+      "source": "P001",
+      "target": "CONDITION_Anemia_2024-06-15",
+      "relation": "has",
+      "established": "2024-06-15"
+    },
+    {
+      "source": "P001",
+      "target": "MEDICATION_150mg_2024-06-15",
+      "relation": "has",
+      "established": "2024-06-15"
+    }
+  ]
+}

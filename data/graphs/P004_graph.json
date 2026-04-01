@@ -1,0 +1,862 @@
+{
+  "patient_id": "P004",
+  "created_at": "2026-04-01T19:13:51.589525",
+  "nodes": [
+    {
+      "id": "P004",
+      "type": "PATIENT",
+      "added": "2026-04-01T19:13:51.589525",
+      "last_confirmed": "2026-04-01T19:13:51.589525",
+      "confidence": 1.0
+    },
+    {
+      "id": "CONDITION_Hypertension_2023-04-15",
+      "name": "hypertension",
+      "type": "CONDITION",
+      "added": "2023-04-15",
+      "last_confirmed": "2025-02-18",
+      "confidence": 1.0,
+      "history": [
+        {
+          "date": "2023-10-20",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2024-03-15",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2024-09-01",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2025-02-18",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "CONDITION_Hyperlipidemia_2023-04-15",
+      "name": "hyperlipidemia",
+      "type": "CONDITION",
+      "added": "2023-04-15",
+      "last_confirmed": "2025-02-18",
+      "confidence": 1.0,
+      "history": [
+        {
+          "date": "2023-10-20",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2024-03-15",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2024-09-01",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2025-02-18",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "CONDITION_Type 2 Diabetes_2023-04-15",
+      "name": "type 2 diabetes",
+      "type": "CONDITION",
+      "added": "2023-04-15",
+      "last_confirmed": "2025-02-18",
+      "confidence": 1.0,
+      "history": [
+        {
+          "date": "2023-10-20",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2024-03-15",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2024-09-01",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2025-02-18",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "MEDICATION_metformin_2023-04-15",
+      "name": "metformin",
+      "type": "MEDICATION",
+      "added": "2023-04-15",
+      "last_confirmed": "2025-02-18",
+      "confidence": 1.0,
+      "history": [
+        {
+          "date": "2023-10-20",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2024-03-15",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2024-09-01",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2025-02-18",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "MEDICATION_lisinopril_2023-04-15",
+      "name": "lisinopril",
+      "type": "MEDICATION",
+      "added": "2023-04-15",
+      "last_confirmed": "2025-02-18",
+      "confidence": 1.0,
+      "history": [
+        {
+          "date": "2023-10-20",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2024-03-15",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2024-09-01",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2025-02-18",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "MEDICATION_500mg_2023-04-15",
+      "name": "500mg",
+      "type": "MEDICATION",
+      "added": "2023-04-15",
+      "last_confirmed": "2025-02-18",
+      "confidence": 1.0,
+      "history": [
+        {
+          "date": "2023-10-20",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2024-03-15",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2024-09-01",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2025-02-18",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "MEDICATION_10mg_2023-04-15",
+      "name": "10mg",
+      "type": "MEDICATION",
+      "added": "2023-04-15",
+      "last_confirmed": "2025-02-18",
+      "confidence": 1.0,
+      "history": [
+        {
+          "date": "2023-10-20",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2024-09-01",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2025-02-18",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "LAB_VALUE_HbA1c_2023-04-15",
+      "name": "hba1c",
+      "type": "LAB_VALUE",
+      "added": "2023-04-15",
+      "last_confirmed": "2025-02-18",
+      "confidence": 1.0,
+      "value": 7.2,
+      "history": [
+        {
+          "date": "2023-10-20",
+          "old": {
+            "value": 8.2,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2024-03-15",
+          "old": {
+            "value": 7.5,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2024-09-01",
+          "old": {
+            "value": 7.8,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2025-02-18",
+          "old": {
+            "value": 8.5,
+            "confidence": 1.0
+          },
+          "new": {}
+        }
+      ]
+    },
+    {
+      "id": "LAB_VALUE_BP_2023-04-15",
+      "name": "bp",
+      "type": "LAB_VALUE",
+      "added": "2023-04-15",
+      "last_confirmed": "2025-02-18",
+      "confidence": 1.0,
+      "value": "130/80",
+      "history": [
+        {
+          "date": "2023-10-20",
+          "old": {
+            "value": "140/90",
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2024-03-15",
+          "old": {
+            "value": "130/80",
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2024-09-01",
+          "old": {
+            "value": "125/75",
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2025-02-18",
+          "old": {
+            "value": "150/90",
+            "confidence": 1.0
+          },
+          "new": {}
+        }
+      ]
+    },
+    {
+      "id": "LAB_VALUE_LDL_2023-04-15",
+      "name": "ldl",
+      "type": "LAB_VALUE",
+      "added": "2023-04-15",
+      "last_confirmed": "2025-02-18",
+      "confidence": 1.0,
+      "value": 140.0,
+      "history": [
+        {
+          "date": "2023-10-20",
+          "old": {
+            "value": 150.0,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2024-03-15",
+          "old": {
+            "value": 140.0,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2024-09-01",
+          "old": {
+            "value": 120.0,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2025-02-18",
+          "old": {
+            "value": 160.0,
+            "confidence": 1.0
+          },
+          "new": {}
+        }
+      ]
+    },
+    {
+      "id": "SYMPTOM_Polydipsia_2023-04-15",
+      "name": "polydipsia",
+      "type": "SYMPTOM",
+      "added": "2023-04-15",
+      "last_confirmed": "2023-04-15",
+      "confidence": 1.0
+    },
+    {
+      "id": "CONDITION_Chronic Kidney Disease_2023-10-20",
+      "name": "chronic kidney disease",
+      "type": "CONDITION",
+      "added": "2023-10-20",
+      "last_confirmed": "2025-02-18",
+      "confidence": 1.0,
+      "history": [
+        {
+          "date": "2024-03-15",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2024-09-01",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2025-02-18",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "MEDICATION_atorvastatin_2023-10-20",
+      "name": "atorvastatin",
+      "type": "MEDICATION",
+      "added": "2023-10-20",
+      "last_confirmed": "2025-02-18",
+      "confidence": 1.0,
+      "history": [
+        {
+          "date": "2024-03-15",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2024-09-01",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2025-02-18",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "MEDICATION_20mg_2023-10-20",
+      "name": "20mg",
+      "type": "MEDICATION",
+      "added": "2023-10-20",
+      "last_confirmed": "2025-02-18",
+      "confidence": 1.0,
+      "history": [
+        {
+          "date": "2024-03-15",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2024-09-01",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2025-02-18",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "SYMPTOM_Shortness of breath_2023-10-20",
+      "name": "shortness of breath",
+      "type": "SYMPTOM",
+      "added": "2023-10-20",
+      "last_confirmed": "2025-02-18",
+      "confidence": 1.0,
+      "history": [
+        {
+          "date": "2024-03-15",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2024-09-01",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2025-02-18",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "SYMPTOM_Fatigue_2023-10-20",
+      "name": "fatigue",
+      "type": "SYMPTOM",
+      "added": "2023-10-20",
+      "last_confirmed": "2024-03-15",
+      "confidence": 1.0,
+      "history": [
+        {
+          "date": "2024-03-15",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "CONDITION_Heart Failure_2024-03-15",
+      "name": "heart failure",
+      "type": "CONDITION",
+      "added": "2024-03-15",
+      "last_confirmed": "2025-02-18",
+      "confidence": 1.0,
+      "history": [
+        {
+          "date": "2024-09-01",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2025-02-18",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "MEDICATION_40mg_2024-03-15",
+      "name": "40mg",
+      "type": "MEDICATION",
+      "added": "2024-03-15",
+      "last_confirmed": "2024-03-15",
+      "confidence": 1.0
+    },
+    {
+      "id": "LAB_VALUE_eGFR_2024-03-15",
+      "name": "egfr",
+      "type": "LAB_VALUE",
+      "added": "2024-03-15",
+      "last_confirmed": "2025-02-18",
+      "confidence": 1.0,
+      "value": 48.0,
+      "history": [
+        {
+          "date": "2024-09-01",
+          "old": {
+            "value": 52.0,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2025-02-18",
+          "old": {
+            "value": 42.0,
+            "confidence": 1.0
+          },
+          "new": {}
+        }
+      ]
+    },
+    {
+      "id": "MEDICATION_80mg_2024-09-01",
+      "name": "80mg",
+      "type": "MEDICATION",
+      "added": "2024-09-01",
+      "last_confirmed": "2025-02-18",
+      "confidence": 1.0,
+      "history": [
+        {
+          "date": "2025-02-18",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "SYMPTOM_Edema_2024-09-01",
+      "name": "edema",
+      "type": "SYMPTOM",
+      "added": "2024-09-01",
+      "last_confirmed": "2024-09-01",
+      "confidence": 1.0
+    }
+  ],
+  "edges": [
+    {
+      "source": "P004",
+      "target": "CONDITION_Hypertension_2023-04-15",
+      "relation": "has",
+      "established": "2023-04-15"
+    },
+    {
+      "source": "P004",
+      "target": "CONDITION_Hyperlipidemia_2023-04-15",
+      "relation": "has",
+      "established": "2023-04-15"
+    },
+    {
+      "source": "P004",
+      "target": "CONDITION_Type 2 Diabetes_2023-04-15",
+      "relation": "has",
+      "established": "2023-04-15"
+    },
+    {
+      "source": "P004",
+      "target": "MEDICATION_metformin_2023-04-15",
+      "relation": "has",
+      "established": "2023-04-15"
+    },
+    {
+      "source": "P004",
+      "target": "MEDICATION_lisinopril_2023-04-15",
+      "relation": "has",
+      "established": "2023-04-15"
+    },
+    {
+      "source": "P004",
+      "target": "MEDICATION_500mg_2023-04-15",
+      "relation": "has",
+      "established": "2023-04-15"
+    },
+    {
+      "source": "P004",
+      "target": "MEDICATION_10mg_2023-04-15",
+      "relation": "has",
+      "established": "2023-04-15"
+    },
+    {
+      "source": "P004",
+      "target": "LAB_VALUE_HbA1c_2023-04-15",
+      "relation": "has",
+      "established": "2023-04-15"
+    },
+    {
+      "source": "P004",
+      "target": "LAB_VALUE_BP_2023-04-15",
+      "relation": "has",
+      "established": "2023-04-15"
+    },
+    {
+      "source": "P004",
+      "target": "LAB_VALUE_LDL_2023-04-15",
+      "relation": "has",
+      "established": "2023-04-15"
+    },
+    {
+      "source": "P004",
+      "target": "SYMPTOM_Polydipsia_2023-04-15",
+      "relation": "has",
+      "established": "2023-04-15"
+    },
+    {
+      "source": "P004",
+      "target": "CONDITION_Chronic Kidney Disease_2023-10-20",
+      "relation": "has",
+      "established": "2023-10-20"
+    },
+    {
+      "source": "P004",
+      "target": "MEDICATION_atorvastatin_2023-10-20",
+      "relation": "has",
+      "established": "2023-10-20"
+    },
+    {
+      "source": "P004",
+      "target": "MEDICATION_20mg_2023-10-20",
+      "relation": "has",
+      "established": "2023-10-20"
+    },
+    {
+      "source": "P004",
+      "target": "SYMPTOM_Shortness of breath_2023-10-20",
+      "relation": "has",
+      "established": "2023-10-20"
+    },
+    {
+      "source": "P004",
+      "target": "SYMPTOM_Fatigue_2023-10-20",
+      "relation": "has",
+      "established": "2023-10-20"
+    },
+    {
+      "source": "P004",
+      "target": "CONDITION_Heart Failure_2024-03-15",
+      "relation": "has",
+      "established": "2024-03-15"
+    },
+    {
+      "source": "P004",
+      "target": "MEDICATION_40mg_2024-03-15",
+      "relation": "has",
+      "established": "2024-03-15"
+    },
+    {
+      "source": "P004",
+      "target": "LAB_VALUE_eGFR_2024-03-15",
+      "relation": "has",
+      "established": "2024-03-15"
+    },
+    {
+      "source": "P004",
+      "target": "MEDICATION_80mg_2024-09-01",
+      "relation": "has",
+      "established": "2024-09-01"
+    },
+    {
+      "source": "P004",
+      "target": "SYMPTOM_Edema_2024-09-01",
+      "relation": "has",
+      "established": "2024-09-01"
+    }
+  ]
+}

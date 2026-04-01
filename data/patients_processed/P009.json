@@ -6,39 +6,44 @@
       "date": "2022-06-15",
       "note": "Patient presents with Type 2 Diabetes, Hypertension, and Hyperlipidemia. HbA1c is 7.2%, BP 140/90, and LDL is 130. Medications include Metformin 500mg BID and Lisinopril 10mg OD. Diagnoses include Type 2 Diabetes, Hypertension, and Hyperlipidemia. Symptoms include polyuria, polydipsia, and fatigue.",
       "labs": {
-        "HbA1c": 7.2,
-        "BP_systolic": 140,
-        "BP_diastolic": 90,
-        "eGFR": 72,
-        "LDL": 130
+        "BP": "140/90"
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg OD"
+        "metformin",
+        "lisinopril",
+        "500mg",
+        "10mg"
       ],
       "diagnoses": [
-        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia"
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
       ],
       "symptoms": [
-        "polyuria",
-        "polydipsia",
-        "fatigue"
+        "Polydipsia",
+        "Polyuria",
+        "Fatigue"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
         "medications": [
           "metformin",
           "lisinopril",
           "500mg",
-          "10mg",
-          "bid"
+          "10mg"
         ],
         "lab_values": {
           "BP": "140/90"
         },
-        "symptoms": [],
+        "symptoms": [
+          "Polydipsia",
+          "Polyuria",
+          "Fatigue"
+        ],
         "procedures": [],
         "relationships": []
       }
@@ -48,31 +53,25 @@
       "date": "2023-02-20",
       "note": "Patient returns with worsening hypertension and hyperlipidemia. HbA1c is 7.8%, BP 150/95, and LDL is 145. Medications are adjusted to include Atorvastatin 20mg OD. Diagnoses remain the same, but symptoms include edema and shortness of breath.",
       "labs": {
-        "HbA1c": 7.8,
-        "BP_systolic": 150,
-        "BP_diastolic": 95,
-        "eGFR": 68,
-        "LDL": 145
+        "BP": "150/95"
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg OD",
-        "Atorvastatin 20mg OD"
+        "atorvastatin",
+        "20mg"
       ],
       "diagnoses": [
-        "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia"
       ],
       "symptoms": [
-        "polyuria",
-        "polydipsia",
-        "fatigue",
-        "edema",
-        "shortness of breath"
+        "Shortness of breath",
+        "Edema"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia"
+        ],
         "medications": [
           "atorvastatin",
           "20mg"
@@ -80,7 +79,10 @@
         "lab_values": {
           "BP": "150/95"
         },
-        "symptoms": [],
+        "symptoms": [
+          "Shortness of breath",
+          "Edema"
+        ],
         "procedures": [],
         "relationships": []
       }
@@ -90,43 +92,38 @@
       "date": "2023-10-15",
       "note": "Patient returns with worsening kidney function and coronary artery disease. HbA1c is 8.2%, BP 160/100, and LDL is 155. Medications are adjusted to include Furosemide 40mg BID and Aspirin 81mg OD. Diagnoses now include Chronic Kidney Disease. Symptoms include fatigue, edema, and shortness of breath.",
       "labs": {
-        "HbA1c": 8.2,
-        "BP_systolic": 160,
-        "BP_diastolic": 100,
-        "eGFR": 45,
-        "LDL": 155
+        "BP": "160/100"
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg OD",
-        "Atorvastatin 20mg OD",
-        "Furosemide 40mg BID",
-        "Aspirin 81mg OD"
+        "40mg",
+        "81mg"
       ],
       "diagnoses": [
-        "Type 2 Diabetes",
-        "Hypertension",
-        "Hyperlipidemia",
-        "Chronic Kidney Disease"
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease"
       ],
       "symptoms": [
-        "polyuria",
-        "polydipsia",
-        "fatigue",
-        "edema",
-        "shortness of breath"
+        "Shortness of breath",
+        "Edema",
+        "Fatigue"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Chronic Kidney Disease",
+          "Coronary Artery Disease"
+        ],
         "medications": [
           "40mg",
-          "81mg",
-          "bid"
+          "81mg"
         ],
         "lab_values": {
           "BP": "160/100"
         },
-        "symptoms": [],
+        "symptoms": [
+          "Shortness of breath",
+          "Edema",
+          "Fatigue"
+        ],
         "procedures": [],
         "relationships": []
       }

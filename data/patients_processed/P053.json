@@ -1,0 +1,241 @@
+{
+  "patient_id": "P053",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-06-15",
+      "note": "Patient presented with new-onset fatigue and palpitations. Physical examination revealed elevated blood pressure (140/90 mmHg) and obesity (BMI 35). Initial diagnoses include Hypertension and Hyperlipidemia. Laboratory results: HbA1c 7.2%, BP 140/90 mmHg, eGFR 72 mL/min, LDL 130 mg/dL. Prescribed Metformin 500mg twice daily for Type 2 Diabetes, Lisinopril 10mg daily for Hypertension, and Simvastatin 20mg nightly for Hyperlipidemia.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP": "140/90",
+        "eGFR": 72.0,
+        "LDL": 130.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "simvastatin",
+        "130 mg",
+        "500mg",
+        "10mg",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "simvastatin",
+          "130 mg",
+          "500mg",
+          "10mg",
+          "20mg"
+        ],
+        "lab_values": {
+          "HbA1c": 7.2,
+          "BP": "140/90",
+          "eGFR": 72.0,
+          "LDL": 130.0
+        },
+        "symptoms": [
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-12-20",
+      "note": "Patient returned for follow-up. Physical examination revealed continued elevated blood pressure (145/95 mmHg) and obesity (BMI 35). Laboratory results: HbA1c 7.5%, BP 145/95 mmHg, eGFR 70 mL/min, LDL 145 mg/dL. The dose of Lisinopril has been increased to 20mg daily to better control blood pressure. Patient now reports experiencing nocturia. New diagnosis: Chronic Kidney Disease.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP": "145/95",
+        "eGFR": 70.0,
+        "LDL": 145.0
+      },
+      "medications": [
+        "lisinopril",
+        "145 mg",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Palpitations",
+        "Nocturia"
+      ],
+      "extracted": {
+        "conditions": [
+          "Chronic Kidney Disease"
+        ],
+        "medications": [
+          "lisinopril",
+          "145 mg",
+          "20mg"
+        ],
+        "lab_values": {
+          "HbA1c": 7.5,
+          "BP": "145/95",
+          "eGFR": 70.0,
+          "LDL": 145.0
+        },
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-04-25",
+      "note": "Patient returned for follow-up. Physical examination revealed elevated blood pressure (150/100 mmHg) and obesity (BMI 35). Laboratory results: HbA1c 8.1%, BP 150/100 mmHg, eGFR 65 mL/min, LDL 155 mg/dL. The patient has developed new symptoms of ankle edema. The dose of Lisinopril has been increased to 40mg daily and the patient has been started on Furosemide 20mg daily to manage edema. New diagnosis: Coronary Artery Disease.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP": "150/100",
+        "eGFR": 65.0,
+        "LDL": 155.0
+      },
+      "medications": [
+        "lisinopril",
+        "155 mg",
+        "40mg",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Edema"
+      ],
+      "extracted": {
+        "conditions": [
+          "Coronary Artery Disease"
+        ],
+        "medications": [
+          "lisinopril",
+          "155 mg",
+          "40mg",
+          "20mg"
+        ],
+        "lab_values": {
+          "HbA1c": 8.1,
+          "BP": "150/100",
+          "eGFR": 65.0,
+          "LDL": 155.0
+        },
+        "symptoms": [
+          "Edema"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-09-19",
+      "note": "Patient returned for follow-up. Physical examination revealed continued elevated blood pressure (155/105 mmHg) and obesity (BMI 35). Laboratory results: HbA1c 8.5%, BP 155/105 mmHg, eGFR 60 mL/min, LDL 165 mg/dL. The patient has developed new symptoms of headaches and dizziness. The dose of Lisinopril has been increased to 60mg daily and the patient has been started on Amlodipine 5mg daily to better control blood pressure. New diagnosis: Retinopathy.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP": "155/105",
+        "eGFR": 60.0,
+        "LDL": 165.0
+      },
+      "medications": [
+        "lisinopril",
+        "amlodipine",
+        "165 mg",
+        "60mg",
+        "5mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease",
+        "Retinopathy"
+      ],
+      "symptoms": [
+        "Dizziness"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [
+          "lisinopril",
+          "amlodipine",
+          "165 mg",
+          "60mg",
+          "5mg"
+        ],
+        "lab_values": {
+          "HbA1c": 8.5,
+          "BP": "155/105",
+          "eGFR": 60.0,
+          "LDL": 165.0
+        },
+        "symptoms": [
+          "Dizziness"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V5",
+      "date": "2024-02-14",
+      "note": "Patient returned for follow-up. Physical examination revealed continued elevated blood pressure (160/110 mmHg) and obesity (BMI 35). Laboratory results: HbA1c 9.0%, BP 160/110 mmHg, eGFR 55 mL/min, LDL 175 mg/dL. The patient has developed new symptoms of shortness of breath. The dose of Furosemide has been increased to 40mg daily to manage edema. New diagnosis: Heart Failure.",
+      "labs": {
+        "HbA1c": 9.0,
+        "BP": "160/110",
+        "eGFR": 55.0,
+        "LDL": 175.0
+      },
+      "medications": [
+        "175 mg",
+        "40mg"
+      ],
+      "diagnoses": [
+        "Heart Failure"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Edema"
+      ],
+      "extracted": {
+        "conditions": [
+          "Heart Failure"
+        ],
+        "medications": [
+          "175 mg",
+          "40mg"
+        ],
+        "lab_values": {
+          "HbA1c": 9.0,
+          "BP": "160/110",
+          "eGFR": 55.0,
+          "LDL": 175.0
+        },
+        "symptoms": [
+          "Shortness of breath",
+          "Edema"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

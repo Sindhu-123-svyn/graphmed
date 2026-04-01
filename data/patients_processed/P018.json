@@ -1,0 +1,294 @@
+{
+  "patient_id": "P018",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-01-15",
+      "note": "Patient presents with new onset of fatigue and increased thirst. Physical examination reveals obesity and hypertension. HbA1c 7.5, BP 150/90, eGFR 80, LDL 140. Diagnoses: Type 2 Diabetes, Hypertension. Medications: Metformin 500mg BID, Lisinopril 10mg QD.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP": "150/90",
+        "eGFR": 80.0,
+        "LDL": 140.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "500mg",
+        "10mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polydipsia",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "500mg",
+          "10mg"
+        ],
+        "lab_values": {
+          "HbA1c": 7.5,
+          "BP": "150/90",
+          "eGFR": 80.0,
+          "LDL": 140.0
+        },
+        "symptoms": [
+          "Polydipsia",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-07-20",
+      "note": "Follow-up visit for worsening fatigue and shortness of breath. Physical examination reveals orthopnea and peripheral edema. HbA1c 8.1, BP 160/95, eGFR 70, LDL 145. Diagnoses: Type 2 Diabetes, Hypertension, Hypertensive Heart Disease. Medications: Metformin 1000mg BID, Lisinopril 20mg QD, Furosemide 40mg QD.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP": "160/95",
+        "eGFR": 70.0,
+        "LDL": 145.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "1000mg",
+        "20mg",
+        "40mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Edema",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "1000mg",
+          "20mg",
+          "40mg"
+        ],
+        "lab_values": {
+          "HbA1c": 8.1,
+          "BP": "160/95",
+          "eGFR": 70.0,
+          "LDL": 145.0
+        },
+        "symptoms": [
+          "Shortness of breath",
+          "Edema",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-01-10",
+      "note": "Follow-up visit for worsening renal function and hyperlipidemia. Physical examination reveals decreased kidney function and increased risk of cardiovascular disease. HbA1c 8.5, BP 155/100, eGFR 60, LDL 160. Diagnoses: Type 2 Diabetes, Hypertension, Hypertensive Heart Disease, Chronic Kidney Disease. Medications: Metformin 2000mg BID, Lisinopril 30mg QD, Furosemide 80mg QD, Rosuvastatin 20mg QD.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP": "155/100",
+        "eGFR": 60.0,
+        "LDL": 160.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "rosuvastatin",
+        "2000mg",
+        "30mg",
+        "80mg",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Chronic Kidney Disease",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Shortness of breath",
+        "Orthopnea",
+        "Peripheral edema",
+        "Decreased kidney function"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Chronic Kidney Disease",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "rosuvastatin",
+          "2000mg",
+          "30mg",
+          "80mg",
+          "20mg"
+        ],
+        "lab_values": {
+          "HbA1c": 8.5,
+          "BP": "155/100",
+          "eGFR": 60.0,
+          "LDL": 160.0
+        },
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-07-15",
+      "note": "Follow-up visit for worsening hyperlipidemia and cardiovascular disease. Physical examination reveals increased risk of cardiovascular disease and decreased kidney function. HbA1c 7.8, BP 140/80, eGFR 55, LDL 180. Diagnoses: Type 2 Diabetes, Hypertension, Hypertensive Heart Disease, Chronic Kidney Disease, Hyperlipidemia. Medications: Metformin 2000mg BID, Lisinopril 30mg QD, Furosemide 80mg QD, Rosuvastatin 40mg QD, Atorvastatin 20mg QD.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP": "140/80",
+        "eGFR": 55.0,
+        "LDL": 180.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "rosuvastatin",
+        "atorvastatin",
+        "2000mg",
+        "30mg",
+        "80mg",
+        "40mg",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Chronic Kidney Disease",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Shortness of breath",
+        "Orthopnea",
+        "Peripheral edema",
+        "Decreased kidney function",
+        "Increased risk of cardiovascular disease"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Chronic Kidney Disease",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "rosuvastatin",
+          "atorvastatin",
+          "2000mg",
+          "30mg",
+          "80mg",
+          "40mg",
+          "20mg"
+        ],
+        "lab_values": {
+          "HbA1c": 7.8,
+          "BP": "140/80",
+          "eGFR": 55.0,
+          "LDL": 180.0
+        },
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V5",
+      "date": "2023-10-20",
+      "note": "Follow-up visit for continued worsening of renal function. Physical examination reveals decreased kidney function and increased risk of cardiovascular disease. HbA1c 9.0, BP 135/75, eGFR 50, LDL 170. Diagnoses: Type 2 Diabetes, Hypertension, Hypertensive Heart Disease, Chronic Kidney Disease, Hyperlipidemia. Medications: Metformin 2500mg BID, Lisinopril 40mg QD, Furosemide 100mg QD, Rosuvastatin 60mg QD, Atorvastatin 30mg QD.",
+      "labs": {
+        "HbA1c": 9.0,
+        "BP": "135/75",
+        "eGFR": 50.0,
+        "LDL": 170.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "rosuvastatin",
+        "atorvastatin",
+        "2500mg",
+        "40mg",
+        "100mg",
+        "60mg",
+        "30mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Chronic Kidney Disease",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Shortness of breath",
+        "Orthopnea",
+        "Peripheral edema",
+        "Decreased kidney function",
+        "Increased risk of cardiovascular disease"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Chronic Kidney Disease",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "rosuvastatin",
+          "atorvastatin",
+          "2500mg",
+          "40mg",
+          "100mg",
+          "60mg",
+          "30mg"
+        ],
+        "lab_values": {
+          "HbA1c": 9.0,
+          "BP": "135/75",
+          "eGFR": 50.0,
+          "LDL": 170.0
+        },
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

@@ -13,27 +13,35 @@
         "LDL": 150
       },
       "medications": [
-        "Lisinopril 10mg daily",
-        "Atorvastatin 20mg daily"
+        "lisinopril",
+        "atorvastatin",
+        "20mg",
+        "10mg"
       ],
       "diagnoses": [
         "Hypertension",
         "Hyperlipidemia"
       ],
       "symptoms": [
-        "Shortness of breath on exertion",
-        "Occasional chest pain"
+        "Shortness of breath",
+        "Chest pain"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia"
+        ],
         "medications": [
-          "atorvastatin",
           "lisinopril",
+          "atorvastatin",
           "20mg",
           "10mg"
         ],
         "lab_values": {},
-        "symptoms": [],
+        "symptoms": [
+          "Shortness of breath",
+          "Chest pain"
+        ],
         "procedures": [],
         "relationships": []
       }
@@ -50,9 +58,10 @@
         "LDL": 140
       },
       "medications": [
-        "Lisinopril 20mg daily",
-        "Atorvastatin 20mg daily",
-        "Metoprolol 50mg daily"
+        "metoprolol",
+        "lisinopril",
+        "50mg",
+        "20mg"
       ],
       "diagnoses": [
         "Hypertension",
@@ -60,19 +69,22 @@
         "Coronary Artery Disease"
       ],
       "symptoms": [
-        "Shortness of breath on exertion",
-        "Occasional chest pain",
-        "Palpitations"
+        "Shortness of breath",
+        "Chest pain"
       ],
       "extracted": {
         "conditions": [],
         "medications": [
+          "metoprolol",
           "lisinopril",
           "50mg",
           "20mg"
         ],
         "lab_values": {},
-        "symptoms": [],
+        "symptoms": [
+          "Shortness of breath",
+          "Chest pain"
+        ],
         "procedures": [],
         "relationships": []
       }
@@ -89,10 +101,9 @@
         "LDL": 130
       },
       "medications": [
-        "Lisinopril 20mg daily",
-        "Atorvastatin 20mg daily",
-        "Metoprolol 100mg daily",
-        "Losartan 100mg daily"
+        "losartan",
+        "metoprolol",
+        "100mg"
       ],
       "diagnoses": [
         "Hypertension",
@@ -110,6 +121,7 @@
         "conditions": [],
         "medications": [
           "losartan",
+          "metoprolol",
           "100mg"
         ],
         "lab_values": {},
@@ -130,11 +142,8 @@
         "LDL": 120
       },
       "medications": [
-        "Lisinopril 20mg daily",
-        "Atorvastatin 20mg daily",
-        "Metoprolol 100mg daily",
-        "Losartan 100mg daily",
-        "Amlodipine 10mg daily"
+        "amlodipine",
+        "10mg"
       ],
       "diagnoses": [
         "Hypertension",
@@ -174,35 +183,27 @@
         "LDL": 110
       },
       "medications": [
-        "Lisinopril 20mg daily",
-        "Atorvastatin 20mg daily",
-        "Metoprolol 150mg daily",
-        "Losartan 100mg daily",
-        "Amlodipine 10mg daily",
-        "Erythropoietin"
+        "metoprolol",
+        "150mg"
       ],
       "diagnoses": [
-        "Hypertension",
-        "Hyperlipidemia",
-        "Coronary Artery Disease",
-        "Chronic Kidney Disease",
-        "End-Stage Renal Disease"
-      ],
-      "symptoms": [
-        "Shortness of breath on exertion",
-        "Occasional chest pain",
-        "Palpitations",
-        "Fatigue",
-        "Nausea",
         "Anemia"
       ],
+      "symptoms": [
+        "Shortness of breath"
+      ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Anemia"
+        ],
         "medications": [
+          "metoprolol",
           "150mg"
         ],
         "lab_values": {},
-        "symptoms": [],
+        "symptoms": [
+          "Shortness of breath"
+        ],
         "procedures": [],
         "relationships": []
       }

@@ -1,0 +1,129 @@
+{
+  "patient_id": "P039",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-08-15",
+      "note": "The patient presents with symptoms of fatigue, polyuria, and polydipsia. The physical examination reveals a non-pitting edema of the lower extremities. The patient has a history of Type 2 Diabetes, Hypertension, and Hyperlipidemia. The plan is to optimize medication adherence and lifestyle modifications.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 20mg daily"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polydipsia",
+        "Polyuria",
+        "Edema",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [],
+        "lab_values": {},
+        "symptoms": [
+          "Polydipsia",
+          "Polyuria",
+          "Edema",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2023-02-22",
+      "note": "The patient returns with symptoms of worsening fatigue, shortness of breath, and increased edema. The physical examination reveals bilateral pitting edema of the lower extremities. An ECG shows evidence of left ventricular hypertrophy. The plan is to initiate a diuretic and adjust medications.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP_systolic": 155,
+        "BP_diastolic": 95,
+        "eGFR": 55,
+        "LDL": 160
+      },
+      "medications": [
+        "Metformin 1000mg BID",
+        "Lisinopril 40mg daily",
+        "Furosemide 20mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Edema",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [],
+        "lab_values": {},
+        "symptoms": [
+          "Shortness of breath",
+          "Edema",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-09-28",
+      "note": "The patient returns with symptoms of worsening shortness of breath and orthopnea. The physical examination reveals bilateral pitting edema of the lower extremities and a 2+ S3 heart sound. The plan is to initiate spironolactone and optimize current medications.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 160,
+        "BP_diastolic": 100,
+        "eGFR": 45,
+        "LDL": 180
+      },
+      "medications": [
+        "Metformin 1500mg BID",
+        "Lisinopril 80mg daily",
+        "Furosemide 40mg daily",
+        "Spironolactone 25mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Edema"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [],
+        "lab_values": {},
+        "symptoms": [
+          "Shortness of breath",
+          "Edema"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

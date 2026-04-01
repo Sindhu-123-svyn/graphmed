@@ -1,0 +1,148 @@
+{
+  "patient_id": "P014",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-06-15",
+      "note": "Initial evaluation for new patient with hypertension and hyperlipidemia. Patient reports fatigue and shortness of breath. BP 140/90, HbA1c 7.2, eGFR 72, LDL 130. Patient started on lisinopril 10mg and simvastatin 20mg.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP": "140/90",
+        "eGFR": 72.0,
+        "LDL": 130.0
+      },
+      "medications": [
+        "lisinopril",
+        "simvastatin",
+        "10mg",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia"
+        ],
+        "medications": [
+          "lisinopril",
+          "simvastatin",
+          "10mg",
+          "20mg"
+        ],
+        "lab_values": {
+          "HbA1c": 7.2,
+          "BP": "140/90",
+          "eGFR": 72.0,
+          "LDL": 130.0
+        },
+        "symptoms": [
+          "Shortness of breath",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2023-01-10",
+      "note": "Follow-up visit to assess lab trends. Patient reports worsening fatigue and recent onset of leg swelling. BP 145/95, HbA1c 8.1, eGFR 65, LDL 145. Due to elevated HbA1c, patient's simvastatin dose increased to 40mg. Lisinopril increased to 20mg.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP": "145/95",
+        "eGFR": 65.0,
+        "LDL": 145.0
+      },
+      "medications": [
+        "lisinopril",
+        "simvastatin",
+        "40mg",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease (Stage 3)"
+      ],
+      "symptoms": [
+        "Edema",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [
+          "lisinopril",
+          "simvastatin",
+          "40mg",
+          "20mg"
+        ],
+        "lab_values": {
+          "HbA1c": 8.1,
+          "BP": "145/95",
+          "eGFR": 65.0,
+          "LDL": 145.0
+        },
+        "symptoms": [
+          "Edema",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-09-12",
+      "note": "Follow-up visit to reassess lab trends and manage chronic kidney disease. Patient reports continued fatigue, shortness of breath, and leg swelling. BP 150/100, HbA1c 9.0, eGFR 55, LDL 160. Due to declining eGFR, patient started on erythropoietin for anemia management. Lisinopril and simvastatin doses remain the same.",
+      "labs": {
+        "HbA1c": 9.0,
+        "BP": "150/100",
+        "eGFR": 55.0,
+        "LDL": 160.0
+      },
+      "medications": [
+        "lisinopril",
+        "simvastatin"
+      ],
+      "diagnoses": [
+        "Chronic Kidney Disease",
+        "Anemia"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Edema",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Chronic Kidney Disease",
+          "Anemia"
+        ],
+        "medications": [
+          "lisinopril",
+          "simvastatin"
+        ],
+        "lab_values": {
+          "HbA1c": 9.0,
+          "BP": "150/100",
+          "eGFR": 55.0,
+          "LDL": 160.0
+        },
+        "symptoms": [
+          "Shortness of breath",
+          "Edema",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

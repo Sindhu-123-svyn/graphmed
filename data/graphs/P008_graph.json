@@ -1,0 +1,292 @@
+{
+  "patient_id": "P008",
+  "created_at": "2026-04-01T19:13:51.678657",
+  "nodes": [
+    {
+      "id": "P008",
+      "type": "PATIENT",
+      "added": "2026-04-01T19:13:51.678657",
+      "last_confirmed": "2026-04-01T19:13:51.678657",
+      "confidence": 1.0
+    },
+    {
+      "id": "CONDITION_Hypertension_2022-09-01",
+      "name": "hypertension",
+      "type": "CONDITION",
+      "added": "2022-09-01",
+      "last_confirmed": "2022-09-01",
+      "confidence": 1.0
+    },
+    {
+      "id": "CONDITION_Hyperlipidemia_2022-09-01",
+      "name": "hyperlipidemia",
+      "type": "CONDITION",
+      "added": "2022-09-01",
+      "last_confirmed": "2022-09-01",
+      "confidence": 1.0
+    },
+    {
+      "id": "CONDITION_Type 2 Diabetes_2022-09-01",
+      "name": "type 2 diabetes",
+      "type": "CONDITION",
+      "added": "2022-09-01",
+      "last_confirmed": "2022-09-01",
+      "confidence": 1.0
+    },
+    {
+      "id": "LAB_VALUE_HbA1c_2022-09-01",
+      "name": "hba1c",
+      "type": "LAB_VALUE",
+      "added": "2022-09-01",
+      "last_confirmed": "2022-09-01",
+      "confidence": 1.0,
+      "value": 7.8
+    },
+    {
+      "id": "LAB_VALUE_BP_2022-09-01",
+      "name": "bp",
+      "type": "LAB_VALUE",
+      "added": "2022-09-01",
+      "last_confirmed": "2024-09-01",
+      "confidence": 1.0,
+      "value": "158/102",
+      "history": [
+        {
+          "date": "2023-03-01",
+          "old": {
+            "value": "140/90",
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2023-09-01",
+          "old": {
+            "value": "148/92",
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2024-03-01",
+          "old": {
+            "value": "152/96",
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2024-09-01",
+          "old": {
+            "value": "154/98",
+            "confidence": 1.0
+          },
+          "new": {}
+        }
+      ]
+    },
+    {
+      "id": "LAB_VALUE_LDL_2022-09-01",
+      "name": "ldl",
+      "type": "LAB_VALUE",
+      "added": "2022-09-01",
+      "last_confirmed": "2024-09-01",
+      "confidence": 1.0,
+      "value": 165.0,
+      "history": [
+        {
+          "date": "2023-03-01",
+          "old": {
+            "value": 150.0,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2023-09-01",
+          "old": {
+            "value": 170.0,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2024-03-01",
+          "old": {
+            "value": 160.0,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2024-09-01",
+          "old": {
+            "value": 180.0,
+            "confidence": 1.0
+          },
+          "new": {}
+        }
+      ]
+    },
+    {
+      "id": "SYMPTOM_Polyuria_2022-09-01",
+      "name": "polyuria",
+      "type": "SYMPTOM",
+      "added": "2022-09-01",
+      "last_confirmed": "2022-09-01",
+      "confidence": 1.0
+    },
+    {
+      "id": "SYMPTOM_Fatigue_2022-09-01",
+      "name": "fatigue",
+      "type": "SYMPTOM",
+      "added": "2022-09-01",
+      "last_confirmed": "2022-09-01",
+      "confidence": 1.0
+    },
+    {
+      "id": "CONDITION_Chronic Kidney Disease_2023-09-01",
+      "name": "chronic kidney disease",
+      "type": "CONDITION",
+      "added": "2023-09-01",
+      "last_confirmed": "2024-03-01",
+      "confidence": 1.0,
+      "history": [
+        {
+          "date": "2024-03-01",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "SYMPTOM_Edema_2023-09-01",
+      "name": "edema",
+      "type": "SYMPTOM",
+      "added": "2023-09-01",
+      "last_confirmed": "2024-03-01",
+      "confidence": 1.0,
+      "history": [
+        {
+          "date": "2024-03-01",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "SYMPTOM_Shortness of breath_2024-03-01",
+      "name": "shortness of breath",
+      "type": "SYMPTOM",
+      "added": "2024-03-01",
+      "last_confirmed": "2024-03-01",
+      "confidence": 1.0
+    },
+    {
+      "id": "CONDITION_Heart Failure_2024-09-01",
+      "name": "heart failure",
+      "type": "CONDITION",
+      "added": "2024-09-01",
+      "last_confirmed": "2024-09-01",
+      "confidence": 1.0
+    },
+    {
+      "id": "CONDITION_Coronary Artery Disease_2024-09-01",
+      "name": "coronary artery disease",
+      "type": "CONDITION",
+      "added": "2024-09-01",
+      "last_confirmed": "2024-09-01",
+      "confidence": 1.0
+    }
+  ],
+  "edges": [
+    {
+      "source": "P008",
+      "target": "CONDITION_Hypertension_2022-09-01",
+      "relation": "has",
+      "established": "2022-09-01"
+    },
+    {
+      "source": "P008",
+      "target": "CONDITION_Hyperlipidemia_2022-09-01",
+      "relation": "has",
+      "established": "2022-09-01"
+    },
+    {
+      "source": "P008",
+      "target": "CONDITION_Type 2 Diabetes_2022-09-01",
+      "relation": "has",
+      "established": "2022-09-01"
+    },
+    {
+      "source": "P008",
+      "target": "LAB_VALUE_HbA1c_2022-09-01",
+      "relation": "has",
+      "established": "2022-09-01"
+    },
+    {
+      "source": "P008",
+      "target": "LAB_VALUE_BP_2022-09-01",
+      "relation": "has",
+      "established": "2022-09-01"
+    },
+    {
+      "source": "P008",
+      "target": "LAB_VALUE_LDL_2022-09-01",
+      "relation": "has",
+      "established": "2022-09-01"
+    },
+    {
+      "source": "P008",
+      "target": "SYMPTOM_Polyuria_2022-09-01",
+      "relation": "has",
+      "established": "2022-09-01"
+    },
+    {
+      "source": "P008",
+      "target": "SYMPTOM_Fatigue_2022-09-01",
+      "relation": "has",
+      "established": "2022-09-01"
+    },
+    {
+      "source": "P008",
+      "target": "CONDITION_Chronic Kidney Disease_2023-09-01",
+      "relation": "has",
+      "established": "2023-09-01"
+    },
+    {
+      "source": "P008",
+      "target": "SYMPTOM_Edema_2023-09-01",
+      "relation": "has",
+      "established": "2023-09-01"
+    },
+    {
+      "source": "P008",
+      "target": "SYMPTOM_Shortness of breath_2024-03-01",
+      "relation": "has",
+      "established": "2024-03-01"
+    },
+    {
+      "source": "P008",
+      "target": "CONDITION_Heart Failure_2024-09-01",
+      "relation": "has",
+      "established": "2024-09-01"
+    },
+    {
+      "source": "P008",
+      "target": "CONDITION_Coronary Artery Disease_2024-09-01",
+      "relation": "has",
+      "established": "2024-09-01"
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "patient_id": "P033",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-01-15",
+      "note": "Patient P033 presents with new-onset Type 2 Diabetes. Blood pressure is elevated at 140/90. Patient reports fatigue and polyuria. Plan to initiate Metformin 500mg BID and Lisinopril 10mg daily.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 80,
+        "LDL": 160
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "500mg",
+        "10mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "500mg",
+          "10mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Polyuria",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-05-20",
+      "note": "Patient P033 returns for follow-up. HbA1c has decreased to 7.2 but blood pressure remains elevated at 148/92. Patient reports worsening fatigue and recent onset of lower extremity edema. Plan to adjust Metformin to 850mg BID and increase Lisinopril to 20mg daily.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 148,
+        "BP_diastolic": 92,
+        "eGFR": 76,
+        "LDL": 140
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "850mg",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension"
+      ],
+      "symptoms": [
+        "Edema",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "850mg",
+          "20mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Edema",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2022-11-25",
+      "note": "Patient P033 returns for follow-up. HbA1c has increased to 7.8 and blood pressure has improved to 134/82. Patient reports resolution of lower extremity edema but new onset of dyspnea on exertion. Plan to initiate Atorvastatin 20mg daily for Hyperlipidemia and increase Metformin to 1000mg BID.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP_systolic": 134,
+        "BP_diastolic": 82,
+        "eGFR": 74,
+        "LDL": 120
+      },
+      "medications": [
+        "metformin",
+        "atorvastatin",
+        "20mg",
+        "1000mg"
+      ],
+      "diagnoses": [
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Edema"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hyperlipidemia"
+        ],
+        "medications": [
+          "metformin",
+          "atorvastatin",
+          "20mg",
+          "1000mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Shortness of breath",
+          "Edema"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-06-01",
+      "note": "Patient P033 returns for follow-up. HbA1c has decreased to 7.0 and blood pressure has improved to 128/76. Patient reports worsening dyspnea on exertion and recent onset of orthopnea. Plan to increase Lisinopril to 40mg daily and initiate Furosemide 20mg daily for heart failure.",
+      "labs": {
+        "HbA1c": 7.0,
+        "BP_systolic": 128,
+        "BP_diastolic": 76,
+        "eGFR": 68,
+        "LDL": 100
+      },
+      "medications": [
+        "lisinopril",
+        "40mg",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Heart Failure"
+      ],
+      "symptoms": [
+        "Shortness of breath"
+      ],
+      "extracted": {
+        "conditions": [
+          "Heart Failure"
+        ],
+        "medications": [
+          "lisinopril",
+          "40mg",
+          "20mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Shortness of breath"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V5",
+      "date": "2024-01-15",
+      "note": "Patient P033 returns for follow-up. HbA1c has increased to 7.5 and blood pressure has worsened to 152/94. Patient reports worsening orthopnea and recent onset of chest pain. Plan to adjust medications and consider referral to cardiology.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP_systolic": 152,
+        "BP_diastolic": 94,
+        "eGFR": 62,
+        "LDL": 110
+      },
+      "medications": [
+        "Metformin 1500mg BID",
+        "Lisinopril 60mg daily",
+        "Atorvastatin 40mg daily",
+        "Furosemide 40mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Chest pain"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [],
+        "lab_values": {},
+        "symptoms": [
+          "Chest pain"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

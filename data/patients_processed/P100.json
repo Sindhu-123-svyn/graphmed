@@ -1,0 +1,168 @@
+{
+  "patient_id": "P100",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-06-15",
+      "note": "Patient P100 is a 62-year-old male with a 10-year history of Type 2 Diabetes, Hypertension, and Hyperlipidemia. He presents with symptoms of fatigue, increased thirst, and blurred vision. His HbA1c is 7.2, BP is 140/90, eGFR is 72, and LDL is 130. He is currently taking Metformin 500mg BID and Lisinopril 10mg daily. Diagnoses include Type 2 Diabetes, Hypertension, and Hyperlipidemia. Symptoms include fatigue, increased thirst, and blurred vision.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "500mg",
+        "10mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polydipsia",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "500mg",
+          "10mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Polydipsia",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2023-01-10",
+      "note": "Patient P100 returns with worsening symptoms of fatigue, increased thirst, and blurred vision. His HbA1c has risen to 8.1, BP is 152/92, eGFR is 60, and LDL is 140. He is now experiencing shortness of breath. He is taking Metformin 850mg BID, Lisinopril 20mg daily, and Atorvastatin 40mg daily. Diagnoses now include Type 2 Diabetes, Hypertension, Hyperlipidemia, and Chronic Kidney Disease. Symptoms include fatigue, increased thirst, blurred vision, and shortness of breath.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP_systolic": 152,
+        "BP_diastolic": 92,
+        "eGFR": 60,
+        "LDL": 140
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "850mg",
+        "20mg",
+        "40mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Chronic Kidney Disease",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Polydipsia",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Chronic Kidney Disease",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "atorvastatin",
+          "850mg",
+          "20mg",
+          "40mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Shortness of breath",
+          "Polydipsia",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-08-25",
+      "note": "Patient P100 returns with persistent symptoms of fatigue, increased thirst, and blurred vision, as well as new symptoms of muscle weakness and dizziness. His HbA1c has decreased to 7.5, BP is 148/88, eGFR is 55, and LDL is 120. He is now experiencing chest pain. He is taking Metformin 1000mg BID, Lisinopril 40mg daily, Atorvastatin 80mg daily, and Furosemide 40mg daily. Diagnoses now include Type 2 Diabetes, Hypertension, Hyperlipidemia, Chronic Kidney Disease, and Coronary Artery Disease. Symptoms include fatigue, increased thirst, blurred vision, shortness of breath, muscle weakness, dizziness, and chest pain.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP_systolic": 148,
+        "BP_diastolic": 88,
+        "eGFR": 55,
+        "LDL": 120
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "1000mg",
+        "40mg",
+        "80mg"
+      ],
+      "diagnoses": [
+        "Hyperlipidemia",
+        "Hypertension",
+        "Coronary Artery Disease",
+        "Type 2 Diabetes",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Dizziness",
+        "Polydipsia",
+        "Fatigue",
+        "Shortness of breath",
+        "Chest pain"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hyperlipidemia",
+          "Hypertension",
+          "Coronary Artery Disease",
+          "Type 2 Diabetes",
+          "Chronic Kidney Disease"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "atorvastatin",
+          "1000mg",
+          "40mg",
+          "80mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Dizziness",
+          "Polydipsia",
+          "Fatigue",
+          "Shortness of breath",
+          "Chest pain"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

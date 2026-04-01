@@ -1,0 +1,165 @@
+{
+  "patient_id": "P070",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-06-01",
+      "note": "Patient P070 is a 45-year-old male with a history of Type 2 Diabetes (HbA1c 7.2), Hypertension (BP 140/90), and Hyperlipidemia (LDL 130). He reports shortness of breath and fatigue. His physical examination is unremarkable. Plan: Adjust medications to improve HbA1c and BP. Refer to cardiology for further evaluation of shortness of breath.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP": "140/90",
+        "LDL": 130.0
+      },
+      "medications": [
+        "Metformin 1000mg BID",
+        "Lisinopril 10mg daily",
+        "Atorvastatin 20mg daily"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [],
+        "lab_values": {
+          "HbA1c": 7.2,
+          "BP": "140/90",
+          "LDL": 130.0
+        },
+        "symptoms": [
+          "Shortness of breath",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-11-01",
+      "note": "Patient P070 returns with worsening shortness of breath and fatigue. His HbA1c has increased to 8.1. BP remains elevated at 150/95. His eGFR has decreased to 60. Plan: Adjust medications to improve HbA1c and BP. Refer to nephrology for further evaluation of decreased eGFR.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 60,
+        "LDL": 140
+      },
+      "medications": [
+        "Metformin 1500mg BID",
+        "Lisinopril 20mg daily",
+        "Atorvastatin 20mg daily",
+        "Furosemide 40mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [],
+        "lab_values": {},
+        "symptoms": [
+          "Shortness of breath",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-04-01",
+      "note": "Patient P070 returns with worsening symptoms. His HbA1c has increased to 8.5. BP remains elevated at 160/100. His eGFR has decreased to 45. Plan: Adjust medications to improve HbA1c and BP. Refer to cardiology for further evaluation of worsening symptoms.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 160,
+        "BP_diastolic": 100,
+        "eGFR": 45,
+        "LDL": 150
+      },
+      "medications": [
+        "Metformin 2000mg BID",
+        "Lisinopril 40mg daily",
+        "Atorvastatin 40mg daily",
+        "Furosemide 80mg daily",
+        "Losartan 100mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Fatigue",
+        "Swelling in legs",
+        "Chest pain"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [],
+        "lab_values": {},
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-10-01",
+      "note": "Patient P070 returns with stable symptoms. His HbA1c has decreased to 7.8. BP has improved to 140/85. His eGFR has remained stable at 45. Plan: Continue current medications. Refer to cardiology for further evaluation of coronary artery disease.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP_systolic": 140,
+        "BP_diastolic": 85,
+        "eGFR": 45,
+        "LDL": 120
+      },
+      "medications": [
+        "Metformin 2000mg BID",
+        "Lisinopril 40mg daily",
+        "Atorvastatin 40mg daily",
+        "Furosemide 80mg daily",
+        "Losartan 100mg daily"
+      ],
+      "diagnoses": [
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Fatigue",
+        "Swelling in legs",
+        "Chest pain"
+      ],
+      "extracted": {
+        "conditions": [
+          "Coronary Artery Disease"
+        ],
+        "medications": [],
+        "lab_values": {},
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

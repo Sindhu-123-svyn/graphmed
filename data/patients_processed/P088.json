@@ -1,0 +1,199 @@
+{
+  "patient_id": "P088",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-03-22",
+      "note": "Patient presents with complaint of fatigue and weight gain. Physical examination reveals BP 140/90 and BMI 32. Patient is diagnosed with Type 2 Diabetes, Hypertension, and Hyperlipidemia. Labs show HbA1c 7.5, BP 140/90, eGFR 80, and LDL 145.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP": "140/90",
+        "eGFR": 80.0,
+        "LDL": 145.0
+      },
+      "medications": [
+        "Metformin 500mg",
+        "Lisinopril 10mg",
+        "Atorvastatin 20mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [],
+        "lab_values": {
+          "HbA1c": 7.5,
+          "BP": "140/90",
+          "eGFR": 80.0,
+          "LDL": 145.0
+        },
+        "symptoms": [
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-09-25",
+      "note": "Patient reports worsening fatigue and increased urination. Physical examination reveals BP 150/95 and BMI 33. Labs show HbA1c 9.0, BP 150/95, eGFR 70, and LDL 155. Medications are adjusted to Metformin 1000mg, Lisinopril 20mg, and Atorvastatin 40mg. Patient is diagnosed with Chronic Kidney Disease.",
+      "labs": {
+        "HbA1c": 9.0,
+        "BP": "150/95",
+        "eGFR": 70.0,
+        "LDL": 155.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "1000mg",
+        "20mg",
+        "40mg"
+      ],
+      "diagnoses": [
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Chronic Kidney Disease"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "atorvastatin",
+          "1000mg",
+          "20mg",
+          "40mg"
+        ],
+        "lab_values": {
+          "HbA1c": 9.0,
+          "BP": "150/95",
+          "eGFR": 70.0,
+          "LDL": 155.0
+        },
+        "symptoms": [
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-03-20",
+      "note": "Patient reports chest pain and shortness of breath. Physical examination reveals BP 160/100 and BMI 34. Labs show HbA1c 8.5, BP 160/100, eGFR 65, and LDL 160. Medications are adjusted to Metformin 1500mg, Lisinopril 30mg, and Atorvastatin 60mg. Patient is diagnosed with Coronary Artery Disease.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP": "160/100",
+        "eGFR": 65.0,
+        "LDL": 160.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "1500mg",
+        "30mg",
+        "60mg"
+      ],
+      "diagnoses": [
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Chest pain"
+      ],
+      "extracted": {
+        "conditions": [
+          "Coronary Artery Disease"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "atorvastatin",
+          "1500mg",
+          "30mg",
+          "60mg"
+        ],
+        "lab_values": {
+          "HbA1c": 8.5,
+          "BP": "160/100",
+          "eGFR": 65.0,
+          "LDL": 160.0
+        },
+        "symptoms": [
+          "Shortness of breath",
+          "Chest pain"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-10-23",
+      "note": "Patient reports worsening shortness of breath. Physical examination reveals BP 155/105 and BMI 35. Labs show HbA1c 8.0, BP 155/105, eGFR 60, and LDL 165. Medications are adjusted to Metformin 2000mg, Lisinopril 40mg, and Atorvastatin 80mg. Patient is referred to cardiology for further evaluation.",
+      "labs": {
+        "HbA1c": 8.0,
+        "BP": "155/105",
+        "eGFR": 60.0,
+        "LDL": 165.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "2000mg",
+        "40mg",
+        "80mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "atorvastatin",
+          "2000mg",
+          "40mg",
+          "80mg"
+        ],
+        "lab_values": {
+          "HbA1c": 8.0,
+          "BP": "155/105",
+          "eGFR": 60.0,
+          "LDL": 165.0
+        },
+        "symptoms": [
+          "Shortness of breath"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

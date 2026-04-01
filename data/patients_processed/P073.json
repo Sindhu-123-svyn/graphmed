@@ -1,0 +1,163 @@
+{
+  "patient_id": "P073",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-06-01",
+      "note": "Patient P073 is a 62-year-old male with a 5-year history of Type 2 Diabetes, Hypertension, and Hyperlipidemia. Blood pressure is elevated at 140/90, and HbA1c is slightly high at 7.2. The patient reports mild fatigue and decreased exercise tolerance.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
+      },
+      "medications": [
+        "Metformin 500mg twice daily",
+        "Amlodipine 5mg daily"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [],
+        "lab_values": {},
+        "symptoms": [
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-11-01",
+      "note": "Patient P073 returns with worsening fatigue and shortness of breath. Blood pressure remains elevated at 150/95, and HbA1c has increased to 8.1. The patient reports new symptoms of chest discomfort and swelling in the legs.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 65,
+        "LDL": 150
+      },
+      "medications": [
+        "Metformin 1000mg twice daily",
+        "Losartan 50mg daily",
+        "Simvastatin 20mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Chest pain",
+        "Edema",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [],
+        "lab_values": {},
+        "symptoms": [
+          "Shortness of breath",
+          "Chest pain",
+          "Edema",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-03-01",
+      "note": "Patient P073 has been experiencing worsening kidney function, with eGFR decreasing to 50. Blood pressure has increased to 160/100, and HbA1c remains high at 8.5. The patient reports new symptoms of confusion and difficulty concentrating.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 160,
+        "BP_diastolic": 100,
+        "eGFR": 50,
+        "LDL": 180
+      },
+      "medications": [
+        "Metformin 1500mg twice daily",
+        "Losartan 100mg daily",
+        "Simvastatin 40mg daily",
+        "Enalapril 10mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Shortness of breath",
+        "Chest discomfort",
+        "Swelling in legs",
+        "Confusion",
+        "Difficulty concentrating"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [],
+        "lab_values": {},
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-09-01",
+      "note": "Patient P073 has undergone significant lifestyle changes, including weight loss and increased physical activity. Blood pressure has decreased to 140/90, and HbA1c has improved to 7.5. The patient reports reduced symptoms, but continues to experience mild fatigue.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 55,
+        "LDL": 120
+      },
+      "medications": [
+        "Metformin 1500mg twice daily",
+        "Losartan 100mg daily",
+        "Simvastatin 40mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [],
+        "lab_values": {},
+        "symptoms": [
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

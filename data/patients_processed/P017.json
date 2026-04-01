@@ -1,0 +1,168 @@
+{
+  "patient_id": "P017",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-03-01",
+      "note": "Patient presents with complaints of fatigue and increased thirst. Physical examination reveals no abnormalities. The patient has a history of Type 2 Diabetes and Hypertension. BP 140/90, HbA1c 7.2, eGFR 72, LDL 130. Medications include Metformin 500mg twice daily and Lisinopril 10mg daily. Diagnoses include Type 2 Diabetes and Hypertension. Symptoms include Fatigue and Increased thirst.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP": "140/90",
+        "eGFR": 72.0,
+        "LDL": 130.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "500mg",
+        "10mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polydipsia",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "500mg",
+          "10mg"
+        ],
+        "lab_values": {
+          "HbA1c": 7.2,
+          "BP": "140/90",
+          "eGFR": 72.0,
+          "LDL": 130.0
+        },
+        "symptoms": [
+          "Polydipsia",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-09-01",
+      "note": "Patient returns with complaints of worsening fatigue and shortness of breath. Physical examination reveals bilateral lower extremity edema. BP 150/95, HbA1c 8.5, eGFR 60, LDL 140. Medications include Metformin 850mg twice daily, Lisinopril 20mg daily, and amlodipine 10mg daily. Diagnoses include Type 2 Diabetes, Hypertension, and Chronic Kidney Disease. Symptoms include Fatigue, Shortness of breath, and Bilateral lower extremity edema.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP": "150/95",
+        "eGFR": 60.0,
+        "LDL": 140.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "amlodipine",
+        "850mg",
+        "20mg",
+        "10mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Chronic Kidney Disease",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Edema",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Chronic Kidney Disease",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "amlodipine",
+          "850mg",
+          "20mg",
+          "10mg"
+        ],
+        "lab_values": {
+          "HbA1c": 8.5,
+          "BP": "150/95",
+          "eGFR": 60.0,
+          "LDL": 140.0
+        },
+        "symptoms": [
+          "Shortness of breath",
+          "Edema",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-05-01",
+      "note": "Patient returns with complaints of worsening shortness of breath and orthopnea. Physical examination reveals pulmonary edema. BP 155/100, HbA1c 9.0, eGFR 45, LDL 120. Medications include Metformin 1000mg twice daily, Lisinopril 40mg daily, amlodipine 20mg daily, and furosemide 40mg daily. Diagnoses include Type 2 Diabetes, Hypertension, Chronic Kidney Disease, and Coronary Artery Disease. Symptoms include Shortness of breath, Orthopnea, and Pulmonary edema.",
+      "labs": {
+        "HbA1c": 9.0,
+        "BP": "155/100",
+        "eGFR": 45.0,
+        "LDL": 120.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "amlodipine",
+        "1000mg",
+        "40mg",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Edema"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Coronary Artery Disease",
+          "Chronic Kidney Disease",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "amlodipine",
+          "1000mg",
+          "40mg",
+          "20mg"
+        ],
+        "lab_values": {
+          "HbA1c": 9.0,
+          "BP": "155/100",
+          "eGFR": 45.0,
+          "LDL": 120.0
+        },
+        "symptoms": [
+          "Shortness of breath",
+          "Edema"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

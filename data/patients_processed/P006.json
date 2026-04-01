@@ -6,29 +6,34 @@
       "date": "2022-02-15",
       "note": "Patient presents with new onset of fatigue, polyuria and polydipsia. Initial lab results reveal elevated HbA1c of 8.5, BP 142/92, LDL 150 and eGFR 70. Diagnoses include Type 2 Diabetes, Hypertension and Hyperlipidemia. Medications initiated: Metformin 1000mg daily, Lisinopril 10mg daily and Atorvastatin 20mg daily.",
       "labs": {
-        "HbA1c": 8.5,
-        "BP_systolic": 142,
-        "BP_diastolic": 92,
-        "eGFR": 70,
-        "LDL": 150
+        "BP": "142/92",
+        "eGFR": 70.0,
+        "LDL": 150.0
       },
       "medications": [
-        "Metformin 1000mg daily",
-        "Lisinopril 10mg daily",
-        "Atorvastatin 20mg daily"
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "1000mg",
+        "10mg",
+        "20mg"
       ],
       "diagnoses": [
-        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia"
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
       ],
       "symptoms": [
-        "Fatigue",
+        "Polydipsia",
         "Polyuria",
-        "Polydipsia"
+        "Fatigue"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
         "medications": [
           "metformin",
           "lisinopril",
@@ -42,7 +47,11 @@
           "eGFR": 70.0,
           "LDL": 150.0
         },
-        "symptoms": [],
+        "symptoms": [
+          "Polydipsia",
+          "Polyuria",
+          "Fatigue"
+        ],
         "procedures": [],
         "relationships": []
       }
@@ -52,21 +61,16 @@
       "date": "2022-09-20",
       "note": "Patient reports improvement in symptoms but lab results show worsening HbA1c to 9.1 and elevated BP 148/96. eGFR has decreased to 65. Diagnoses of Chronic Kidney Disease added. Medications adjusted: Metformin increased to 1500mg daily, Lisinopril increased to 20mg daily and Atorvastatin remained unchanged.",
       "labs": {
-        "HbA1c": 9.1,
-        "BP_systolic": 148,
-        "BP_diastolic": 96,
-        "eGFR": 65,
-        "LDL": 140
+        "BP": "148/96"
       },
       "medications": [
-        "Metformin 1500mg daily",
-        "Lisinopril 20mg daily",
-        "Atorvastatin 20mg daily"
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "1500mg",
+        "20mg"
       ],
       "diagnoses": [
-        "Type 2 Diabetes",
-        "Hypertension",
-        "Hyperlipidemia",
         "Chronic Kidney Disease"
       ],
       "symptoms": [
@@ -76,7 +80,9 @@
         "Chest pain"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Chronic Kidney Disease"
+        ],
         "medications": [
           "metformin",
           "lisinopril",
@@ -104,26 +110,24 @@
         "LDL": 120
       },
       "medications": [
-        "Metformin 2000mg daily",
-        "Lisinopril 30mg daily",
-        "Atorvastatin 40mg daily"
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "2000mg",
+        "30mg",
+        "40mg"
       ],
       "diagnoses": [
-        "Type 2 Diabetes",
-        "Hypertension",
-        "Hyperlipidemia",
-        "Chronic Kidney Disease",
         "Coronary Artery Disease"
       ],
       "symptoms": [
-        "Fatigue",
-        "Polyuria",
-        "Polydipsia",
-        "Chest pain",
-        "Shortness of breath"
+        "Shortness of breath",
+        "Chest pain"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Coronary Artery Disease"
+        ],
         "medications": [
           "metformin",
           "lisinopril",
@@ -133,7 +137,10 @@
           "40mg"
         ],
         "lab_values": {},
-        "symptoms": [],
+        "symptoms": [
+          "Shortness of breath",
+          "Chest pain"
+        ],
         "procedures": [],
         "relationships": []
       }
@@ -143,16 +150,12 @@
       "date": "2023-09-19",
       "note": "Patient reports improved symptoms but lab results show worsening eGFR to 45. HbA1c remains stable at 7.5 and BP 150/100. Medications adjusted: Metformin remained unchanged, Lisinopril remained unchanged and Atorvastatin remained unchanged. Nephrology referral initiated.",
       "labs": {
-        "HbA1c": 7.5,
-        "BP_systolic": 150,
-        "BP_diastolic": 100,
-        "eGFR": 45,
-        "LDL": 110
+        "BP": "150/100"
       },
       "medications": [
-        "Metformin 2000mg daily",
-        "Lisinopril 30mg daily",
-        "Atorvastatin 40mg daily"
+        "metformin",
+        "lisinopril",
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",

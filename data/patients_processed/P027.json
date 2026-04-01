@@ -1,0 +1,151 @@
+{
+  "patient_id": "P027",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-03-15",
+      "note": "The patient presents with new-onset type 2 diabetes, hypertension, and hyperlipidemia. HbA1c is elevated at 8.1, BP is 150/95, eGFR is 70. The patient is started on Metformin 500mg twice daily, Lisinopril 10mg daily, and Atorvastatin 20mg daily.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 70,
+        "LDL": 170
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "500mg",
+        "10mg",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "atorvastatin",
+          "500mg",
+          "10mg",
+          "20mg"
+        ],
+        "lab_values": {},
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-09-20",
+      "note": "The patient returns for follow-up. HbA1c has improved to 7.5 but BP remains elevated at 155/100. eGFR has decreased to 65. The patient is now complaining of lower back pain and shortness of breath. The patient's medications are adjusted to Metformin 850mg twice daily, Lisinopril 20mg daily, and Atorvastatin 40mg daily.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP_systolic": 155,
+        "BP_diastolic": 100,
+        "eGFR": 65,
+        "LDL": 140
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "850mg",
+        "20mg",
+        "40mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Possible Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "atorvastatin",
+          "850mg",
+          "20mg",
+          "40mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Shortness of breath"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-03-22",
+      "note": "The patient returns for follow-up. HbA1c has worsened to 8.8 and BP is 160/110. eGFR has further decreased to 55. The patient is now complaining of chest pain and swelling in the legs. The patient's medications are adjusted to Metformin 1000mg twice daily, Lisinopril 40mg daily, and Atorvastatin 80mg daily. The patient is also started on Furosemide 20mg daily for edema.",
+      "labs": {
+        "HbA1c": 8.8,
+        "BP_systolic": 160,
+        "BP_diastolic": 110,
+        "eGFR": 55,
+        "LDL": 120
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "1000mg",
+        "40mg",
+        "80mg",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Possible Chronic Kidney Disease",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Chest pain",
+        "Edema"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "atorvastatin",
+          "1000mg",
+          "40mg",
+          "80mg",
+          "20mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Chest pain",
+          "Edema"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

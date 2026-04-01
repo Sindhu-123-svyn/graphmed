@@ -1,0 +1,198 @@
+{
+  "patient_id": "P097",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-01-15",
+      "note": "Patient P097 presents with new onset of hypertension and hyperlipidemia. Blood work reveals elevated BP and LDL levels. Plan is to initiate lifestyle modifications and prescribe statin.",
+      "labs": {
+        "HbA1c": 6.8,
+        "BP_systolic": 150,
+        "BP_diastolic": 85,
+        "eGFR": 78,
+        "LDL": 180
+      },
+      "medications": [
+        "Atorvastatin 20mg",
+        "Lisinopril 10mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia"
+        ],
+        "medications": [],
+        "lab_values": {},
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-05-20",
+      "note": "Patient P097 returns for follow-up after 4 months on statin therapy. BP and LDL levels have improved, but HbA1c has worsened. Plan is to adjust statin dose and consider sulfonylurea.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP_systolic": 140,
+        "BP_diastolic": 80,
+        "eGFR": 75,
+        "LDL": 140
+      },
+      "medications": [
+        "Atorvastatin 40mg",
+        "Lisinopril 10mg",
+        "Glipizide 5mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease (CKD) stage 3"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Nocturia"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [],
+        "lab_values": {},
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2022-09-01",
+      "note": "Patient P097 returns for follow-up after 3 months on adjusted medication regimen. BP and LDL levels have improved, but HbA1c remains elevated. Plan is to refer to endocrinologist for further management.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP_systolic": 130,
+        "BP_diastolic": 75,
+        "eGFR": 70,
+        "LDL": 120
+      },
+      "medications": [
+        "Atorvastatin 40mg",
+        "Lisinopril 20mg",
+        "Glipizide 10mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "CKD stage 3",
+        "Coronary Artery Disease (CAD)"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Nocturia",
+        "Chest pain"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [],
+        "lab_values": {},
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-01-10",
+      "note": "Patient P097 returns for follow-up after 4 months on adjusted medication regimen. BP and LDL levels have improved, but HbA1c remains elevated. Plan is to consider renal-protective therapy.",
+      "labs": {
+        "HbA1c": 8.2,
+        "BP_systolic": 125,
+        "BP_diastolic": 70,
+        "eGFR": 65,
+        "LDL": 110
+      },
+      "medications": [
+        "Atorvastatin 40mg",
+        "Lisinopril 20mg",
+        "Glipizide 15mg",
+        "Ezetimibe 10mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "CKD stage 3",
+        "CAD",
+        "Nephropathy"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Nocturia",
+        "Chest pain",
+        "Swelling"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [],
+        "lab_values": {},
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V5",
+      "date": "2023-06-15",
+      "note": "Patient P097 returns for follow-up after 5 months on adjusted medication regimen. BP and LDL levels have improved, but HbA1c remains elevated. Plan is to consider bariatric surgery.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 120,
+        "BP_diastolic": 65,
+        "eGFR": 60,
+        "LDL": 100
+      },
+      "medications": [
+        "Atorvastatin 40mg",
+        "Lisinopril 20mg",
+        "Glipizide 20mg",
+        "Ezetimibe 10mg",
+        "Losartan 50mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "CKD stage 4",
+        "CAD",
+        "Nephropathy"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Nocturia",
+        "Chest pain",
+        "Swelling",
+        "Shortness of breath"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [],
+        "lab_values": {},
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

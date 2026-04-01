@@ -1,0 +1,217 @@
+{
+  "patient_id": "P086",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-02-15",
+      "note": "Patient presents with chief complaint of fatigue and increased thirst. Physical exam reveals obesity, BP 140/90, and 1+ pitting edema in bilateral lower extremities. Initial labs show HbA1c 7.8, BP_systolic 140, eGFR 65, and LDL 145. Diagnoses include Type 2 Diabetes, Hypertension, and Hyperlipidemia. Medications initiated: Metformin 500mg BID, Lisinopril 10mg QD, and Atorvastatin 20mg QD. Symptoms include polyuria, polydipsia, and fatigue.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP": "140/90",
+        "eGFR": 65.0,
+        "LDL": 145.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "500mg",
+        "10mg",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polydipsia",
+        "Polyuria",
+        "Edema",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "atorvastatin",
+          "500mg",
+          "10mg",
+          "20mg"
+        ],
+        "lab_values": {
+          "HbA1c": 7.8,
+          "BP": "140/90",
+          "eGFR": 65.0,
+          "LDL": 145.0
+        },
+        "symptoms": [
+          "Polydipsia",
+          "Polyuria",
+          "Edema",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-08-17",
+      "note": "Follow-up visit after 6 months of medication therapy. Patient reports improved energy levels but increased urination at night. BP 130/85, and no new edema noted. Labs show HbA1c 7.2, BP_systolic 130, eGFR 70, and LDL 135. Medications adjusted: Metformin increased to 1000mg BID, Lisinopril to 20mg QD, and Atorvastatin to 40mg QD. Diagnoses remain unchanged, but symptoms now include nocturia.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP": "130/85",
+        "eGFR": 70.0,
+        "LDL": 135.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "1000mg",
+        "20mg",
+        "40mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Edema"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "atorvastatin",
+          "1000mg",
+          "20mg",
+          "40mg"
+        ],
+        "lab_values": {
+          "HbA1c": 7.2,
+          "BP": "130/85",
+          "eGFR": 70.0,
+          "LDL": 135.0
+        },
+        "symptoms": [
+          "Edema"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-02-21",
+      "note": "Patient reports worsening symptoms: increased urination, fatigue, and shortness of breath. BP 150/95, and 2+ pitting edema in bilateral lower extremities. Labs show HbA1c 8.1, BP_systolic 150, eGFR 55, and LDL 155. New diagnoses include Chronic Kidney Disease. Medications adjusted: Metformin increased to 1500mg BID, Lisinopril to 30mg QD, and Atorvastatin to 80mg QD. Symptoms now include orthopnea.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP": "150/95",
+        "eGFR": 55.0,
+        "LDL": 155.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "1500mg",
+        "30mg",
+        "80mg"
+      ],
+      "diagnoses": [
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Edema",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Chronic Kidney Disease"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "atorvastatin",
+          "1500mg",
+          "30mg",
+          "80mg"
+        ],
+        "lab_values": {
+          "HbA1c": 8.1,
+          "BP": "150/95",
+          "eGFR": 55.0,
+          "LDL": 155.0
+        },
+        "symptoms": [
+          "Shortness of breath",
+          "Edema",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-10-24",
+      "note": "Patient reports continued worsening of symptoms: shortness of breath, orthopnea, and decreased urine output. BP 160/100, and 3+ pitting edema in bilateral lower extremities. Labs show HbA1c 8.5, BP_systolic 160, eGFR 45, and LDL 165. Medications adjusted: Metformin increased to 2000mg BID, Lisinopril to 40mg QD, and Atorvastatin to 100mg QD. New diagnoses include Coronary Artery Disease. Symptoms now include decreased urine output.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP": "160/100",
+        "eGFR": 45.0,
+        "LDL": 165.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "2000mg",
+        "40mg",
+        "100mg"
+      ],
+      "diagnoses": [
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Edema"
+      ],
+      "extracted": {
+        "conditions": [
+          "Coronary Artery Disease"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "atorvastatin",
+          "2000mg",
+          "40mg",
+          "100mg"
+        ],
+        "lab_values": {
+          "HbA1c": 8.5,
+          "BP": "160/100",
+          "eGFR": 45.0,
+          "LDL": 165.0
+        },
+        "symptoms": [
+          "Shortness of breath",
+          "Edema"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

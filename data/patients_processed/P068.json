@@ -1,0 +1,218 @@
+{
+  "patient_id": "P068",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-06-15",
+      "note": "Patient presents with 3-month history of fatigue and polyuria. Physical exam reveals BP 140/90 mmHg and BMI 32 kg/m2. HbA1c 8.1%, LDL 160 mg/dL. Diagnoses: Type 2 Diabetes, Hypertension. Medications: Metformin 500mg BID, Lisinopril 10mg daily.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP": "140/90",
+        "LDL": 160.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "160 mg",
+        "500mg",
+        "10mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "160 mg",
+          "500mg",
+          "10mg"
+        ],
+        "lab_values": {
+          "HbA1c": 8.1,
+          "BP": "140/90",
+          "LDL": 160.0
+        },
+        "symptoms": [
+          "Polyuria",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2023-01-10",
+      "note": "Patient reports worsening fatigue and increased urination. BP 150/95 mmHg. HbA1c 7.5%, LDL 140 mg/dL. Diagnoses: Type 2 Diabetes, Hypertension, Dyslipidemia. Medications: Metformin 1000mg BID, Lisinopril 20mg daily, Atorvastatin 20mg daily.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP": "150/95",
+        "LDL": 140.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "140 mg",
+        "1000mg",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "atorvastatin",
+          "140 mg",
+          "1000mg",
+          "20mg"
+        ],
+        "lab_values": {
+          "HbA1c": 7.5,
+          "BP": "150/95",
+          "LDL": 140.0
+        },
+        "symptoms": [
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-08-15",
+      "note": "Patient reports decreased fatigue but increased shortness of breath. BP 130/80 mmHg. HbA1c 6.8%, LDL 110 mg/dL. Diagnoses: Type 2 Diabetes, Hypertension, Dyslipidemia, Heart Failure. Medications: Metformin 1000mg BID, Lisinopril 20mg daily, Atorvastatin 20mg daily, Furosemide 20mg daily.",
+      "labs": {
+        "HbA1c": 6.8,
+        "BP": "130/80",
+        "LDL": 110.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "110 mg",
+        "1000mg",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Heart Failure",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Heart Failure",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "atorvastatin",
+          "110 mg",
+          "1000mg",
+          "20mg"
+        ],
+        "lab_values": {
+          "HbA1c": 6.8,
+          "BP": "130/80",
+          "LDL": 110.0
+        },
+        "symptoms": [
+          "Shortness of breath",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2024-02-20",
+      "note": "Patient reports improved symptoms but elevated creatinine. BP 125/75 mmHg. HbA1c 6.2%, LDL 100 mg/dL. Diagnoses: Type 2 Diabetes, Hypertension, Dyslipidemia, Heart Failure, Chronic Kidney Disease. Medications: Metformin 1000mg BID, Lisinopril 20mg daily, Atorvastatin 20mg daily, Furosemide 40mg daily, Epoetin alfa 10,000 units weekly.",
+      "labs": {
+        "HbA1c": 6.2,
+        "BP": "125/75",
+        "LDL": 100.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "100 mg",
+        "1000mg",
+        "20mg",
+        "40mg"
+      ],
+      "diagnoses": [
+        "Hyperlipidemia",
+        "Hypertension",
+        "Type 2 Diabetes",
+        "Heart Failure",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Dyspnea",
+        "Orthopnea",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hyperlipidemia",
+          "Hypertension",
+          "Type 2 Diabetes",
+          "Heart Failure",
+          "Chronic Kidney Disease"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "atorvastatin",
+          "100 mg",
+          "1000mg",
+          "20mg",
+          "40mg"
+        ],
+        "lab_values": {
+          "HbA1c": 6.2,
+          "BP": "125/75",
+          "LDL": 100.0
+        },
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

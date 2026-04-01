@@ -1,0 +1,176 @@
+{
+  "patient_id": "P091",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-01-15",
+      "note": "Patient P091 is a 45-year-old male with a 5-year history of Type 2 Diabetes, Hypertension, and Hyperlipidemia. His HbA1c is 7.2, BP is 140/90, and LDL is 130. He is on Metformin 1000mg daily and Lisinopril 20mg daily. He reports fatigue and weight loss.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "1000mg",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "1000mg",
+          "20mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-07-20",
+      "note": "Patient P091 returns with worsening symptoms. His HbA1c has increased to 8.1, BP is 150/95, and LDL is 145. He reports shortness of breath and swelling in his legs. His eGFR has decreased to 60. We add Simvastatin 40mg daily and increase Lisinopril to 30mg daily.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 60,
+        "LDL": 145
+      },
+      "medications": [
+        "lisinopril",
+        "simvastatin",
+        "40mg",
+        "30mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Edema"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [
+          "lisinopril",
+          "simvastatin",
+          "40mg",
+          "30mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Shortness of breath",
+          "Edema"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-01-25",
+      "note": "Patient P091 returns with continued worsening symptoms. His HbA1c has increased to 9.0, BP is 160/100, and LDL is 155. He reports vision changes and numbness in his toes. His eGFR has decreased to 45. We add Amlodipine 10mg daily and increase Simvastatin to 80mg daily.",
+      "labs": {
+        "HbA1c": 9.0,
+        "BP_systolic": 160,
+        "BP_diastolic": 100,
+        "eGFR": 45,
+        "LDL": 155
+      },
+      "medications": [
+        "amlodipine",
+        "simvastatin",
+        "10mg",
+        "80mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Tingling"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [
+          "amlodipine",
+          "simvastatin",
+          "10mg",
+          "80mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Tingling"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-09-01",
+      "note": "Patient P091 returns with end-stage renal disease and coronary artery disease complications. His HbA1c has increased to 9.5, BP is 170/105, and LDL is 165. He reports severe shortness of breath and chest pain. His eGFR is 20. We add IV fluids and increase Amlodipine to 20mg daily.",
+      "labs": {
+        "HbA1c": 9.5,
+        "BP_systolic": 170,
+        "BP_diastolic": 105,
+        "eGFR": 20,
+        "LDL": 165
+      },
+      "medications": [
+        "amlodipine",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Chest pain"
+      ],
+      "extracted": {
+        "conditions": [
+          "Coronary Artery Disease"
+        ],
+        "medications": [
+          "amlodipine",
+          "20mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Shortness of breath",
+          "Chest pain"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

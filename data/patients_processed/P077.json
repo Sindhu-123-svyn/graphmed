@@ -1,0 +1,207 @@
+{
+  "patient_id": "P077",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-06-15",
+      "note": "Patient presents with 2-year history of Type 2 Diabetes and hypertension. HbA1c is 7.2, BP is 140/90, and eGFR is 72. Patient is on Metformin 500mg and Lisinopril 5mg. Diagnoses include Type 2 Diabetes, Hypertension, and Hyperlipidemia. Symptoms include polyuria, polydipsia, and fatigue.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "500mg",
+        "5mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polydipsia",
+        "Polyuria",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "500mg",
+          "5mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Polydipsia",
+          "Polyuria",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-12-20",
+      "note": "Patient returns with worsening symptoms and elevated HbA1c of 8.1. BP is 150/95, and eGFR is 70. Patient is started on Rosuvastatin 10mg for Hyperlipidemia. Diagnoses include Type 2 Diabetes, Hypertension, Hyperlipidemia, and Chronic Kidney Disease. Symptoms include polyuria, polydipsia, fatigue, and edema.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 70,
+        "LDL": 120
+      },
+      "medications": [
+        "rosuvastatin",
+        "10mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Chronic Kidney Disease",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polydipsia",
+        "Polyuria",
+        "Edema",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Chronic Kidney Disease",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "rosuvastatin",
+          "10mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Polydipsia",
+          "Polyuria",
+          "Edema",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-06-15",
+      "note": "Patient returns with persistently elevated HbA1c and worsening kidney function. BP is 155/100, and eGFR is 60. Patient is started on Sitagliptin 100mg for Type 2 Diabetes. Diagnoses include Type 2 Diabetes, Hypertension, Hyperlipidemia, Chronic Kidney Disease, and Coronary Artery Disease. Symptoms include polyuria, polydipsia, fatigue, edema, and chest pain.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 155,
+        "BP_diastolic": 100,
+        "eGFR": 60,
+        "LDL": 110
+      },
+      "medications": [
+        "100mg"
+      ],
+      "diagnoses": [
+        "Hyperlipidemia",
+        "Hypertension",
+        "Coronary Artery Disease",
+        "Type 2 Diabetes",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Polydipsia",
+        "Fatigue",
+        "Polyuria",
+        "Chest pain",
+        "Edema"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hyperlipidemia",
+          "Hypertension",
+          "Coronary Artery Disease",
+          "Type 2 Diabetes",
+          "Chronic Kidney Disease"
+        ],
+        "medications": [
+          "100mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Polydipsia",
+          "Fatigue",
+          "Polyuria",
+          "Chest pain",
+          "Edema"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2024-02-20",
+      "note": "Patient returns with stable HbA1c and kidney function. BP is 140/85, and eGFR is 65. Patient is started on Clopidogrel 75mg for Coronary Artery Disease. Diagnoses include Type 2 Diabetes, Hypertension, Hyperlipidemia, Chronic Kidney Disease, and Coronary Artery Disease. Symptoms include polyuria, polydipsia, fatigue, edema, and chest pain.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP_systolic": 140,
+        "BP_diastolic": 85,
+        "eGFR": 65,
+        "LDL": 105
+      },
+      "medications": [
+        "clopidogrel",
+        "75mg"
+      ],
+      "diagnoses": [
+        "Hyperlipidemia",
+        "Hypertension",
+        "Coronary Artery Disease",
+        "Type 2 Diabetes",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Polydipsia",
+        "Fatigue",
+        "Polyuria",
+        "Chest pain",
+        "Edema"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hyperlipidemia",
+          "Hypertension",
+          "Coronary Artery Disease",
+          "Type 2 Diabetes",
+          "Chronic Kidney Disease"
+        ],
+        "medications": [
+          "clopidogrel",
+          "75mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Polydipsia",
+          "Fatigue",
+          "Polyuria",
+          "Chest pain",
+          "Edema"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

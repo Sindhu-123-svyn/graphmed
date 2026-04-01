@@ -1,0 +1,125 @@
+{
+  "patient_id": "P003",
+  "created_at": "2026-04-01T19:13:51.566519",
+  "nodes": [
+    {
+      "id": "P003",
+      "type": "PATIENT",
+      "added": "2026-04-01T19:13:51.566519",
+      "last_confirmed": "2026-04-01T19:13:51.566519",
+      "confidence": 1.0
+    },
+    {
+      "id": "CONDITION_Hypertension_2022-06-15",
+      "name": "hypertension",
+      "type": "CONDITION",
+      "added": "2022-06-15",
+      "last_confirmed": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "id": "CONDITION_Type 2 Diabetes_2022-06-15",
+      "name": "type 2 diabetes",
+      "type": "CONDITION",
+      "added": "2022-06-15",
+      "last_confirmed": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "id": "SYMPTOM_Polydipsia_2022-06-15",
+      "name": "polydipsia",
+      "type": "SYMPTOM",
+      "added": "2022-06-15",
+      "last_confirmed": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "id": "SYMPTOM_Fatigue_2022-06-15",
+      "name": "fatigue",
+      "type": "SYMPTOM",
+      "added": "2022-06-15",
+      "last_confirmed": "2023-01-10",
+      "confidence": 1.0,
+      "history": [
+        {
+          "date": "2023-01-10",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "MEDICATION_metformin_2023-01-10",
+      "name": "metformin",
+      "type": "MEDICATION",
+      "added": "2023-01-10",
+      "last_confirmed": "2023-01-10",
+      "confidence": 1.0
+    },
+    {
+      "id": "MEDICATION_losartan_2023-08-02",
+      "name": "losartan",
+      "type": "MEDICATION",
+      "added": "2023-08-02",
+      "last_confirmed": "2023-08-02",
+      "confidence": 1.0
+    },
+    {
+      "id": "SYMPTOM_Shortness of breath_2023-08-02",
+      "name": "shortness of breath",
+      "type": "SYMPTOM",
+      "added": "2023-08-02",
+      "last_confirmed": "2023-08-02",
+      "confidence": 1.0
+    }
+  ],
+  "edges": [
+    {
+      "source": "P003",
+      "target": "CONDITION_Hypertension_2022-06-15",
+      "relation": "has",
+      "established": "2022-06-15"
+    },
+    {
+      "source": "P003",
+      "target": "CONDITION_Type 2 Diabetes_2022-06-15",
+      "relation": "has",
+      "established": "2022-06-15"
+    },
+    {
+      "source": "P003",
+      "target": "SYMPTOM_Polydipsia_2022-06-15",
+      "relation": "has",
+      "established": "2022-06-15"
+    },
+    {
+      "source": "P003",
+      "target": "SYMPTOM_Fatigue_2022-06-15",
+      "relation": "has",
+      "established": "2022-06-15"
+    },
+    {
+      "source": "P003",
+      "target": "MEDICATION_metformin_2023-01-10",
+      "relation": "has",
+      "established": "2023-01-10"
+    },
+    {
+      "source": "P003",
+      "target": "MEDICATION_losartan_2023-08-02",
+      "relation": "has",
+      "established": "2023-08-02"
+    },
+    {
+      "source": "P003",
+      "target": "SYMPTOM_Shortness of breath_2023-08-02",
+      "relation": "has",
+      "established": "2023-08-02"
+    }
+  ]
+}

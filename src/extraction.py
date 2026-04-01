@@ -1,6 +1,6 @@
 """
 Phase 2: NLP Extraction Pipeline for GraphMed
-Extracts structured entities from clinical notes using SciSpacy + LLM
+Enhanced version with better regex patterns for clinical entities
 """
 
 import json
@@ -16,12 +16,10 @@ load_dotenv()
 
 # Load spaCy models
 try:
-    # Try SciSpacy first (biomedical)
     nlp = spacy.load("en_core_sci_md")
     print("✅ Loaded SciSpacy biomedical model")
 except:
     try:
-        # Fallback to regular spaCy
         nlp = spacy.load("en_core_web_sm")
         print("✅ Loaded spaCy model")
     except:
@@ -34,7 +32,7 @@ client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 class ClinicalExtractor:
     """Extract structured clinical entities from medical notes."""
     
-    def __init__(self, use_llm: bool = True):
+    def __init__(self, use_llm: bool = False):  # Default to False for speed
         """
         Initialize the extractor.
         
@@ -43,30 +41,148 @@ class ClinicalExtractor:
         """
         self.use_llm = use_llm
         
-        # Medical term patterns for rule-based extraction
+        # Condition patterns
+        self.condition_patterns = {
+            'hypertension': r'\b(hypertension|htn|high blood pressure)\b',
+            'diabetes': r'\b(diabetes|type 2 diabetes|t2dm|dm|type ii diabetes)\b',
+            'hyperlipidemia': r'\b(hyperlipidemia|high cholesterol|dyslipidemia)\b',
+            'ckd': r'\b(chronic kidney disease|ckd|renal impairment|kidney disease)\b',
+            'neuropathy': r'\b(neuropathy|diabetic neuropathy)\b',
+            'heart_failure': r'\b(heart failure|hf|congestive heart failure)\b',
+            'cad': r'\b(coronary artery disease|cad)\b',
+            'anemia': r'\b(anemia|low hemoglobin)\b',
+            'copd': r'\b(copd|chronic obstructive pulmonary disease)\b',
+            'asthma': r'\b(asthma)\b'
+        }
+        
+        # Medication patterns
         self.medication_patterns = [
-            r'\b(metformin|lisinopril|gabapentin|insulin|atorvastatin|amlodipine|losartan|hydrochlorothiazide)\b',
-            r'\b(\d+mg|\d+ mcg|\d+ g)\b',
-            r'\b(once daily|twice daily|three times daily|QD|BID|TID)\b'
+            # Common antihypertensives
+            r'\b(metformin|lisinopril|losartan|amlodipine|metoprolol|atenolol|hydrochlorothiazide)\b',
+            # Statins
+            r'\b(atorvastatin|simvastatin|rosuvastatin)\b',
+            # Other
+            r'\b(gabapentin|warfarin|clopidogrel|insulin)\b',
+            # Dosages (capture as separate entities)
+            r'\b(\d+(?:\.\d+)?\s*(?:mg|mcg|g|mg/day|mg daily|mg bid|mg tid))\b'
         ]
         
+        # Symptom patterns
+        self.symptom_patterns = {
+            'fatigue': r'\b(fatigue|tiredness|exhaustion|low energy)\b',
+            'sob': r'\b(shortness of breath|sob|dyspnea|breathlessness)\b',
+            'chest_pain': r'\b(chest pain|angina|chest discomfort)\b',
+            'polyuria': r'\b(polyuria|frequent urination)\b',
+            'polydipsia': r'\b(polydipsia|increased thirst|excessive thirst)\b',
+            'tingling': r'\b(tingling|numbness|paresthesia)\b',
+            'edema': r'\b(edema|swelling|fluid retention)\b',
+            'dizziness': r'\b(dizziness|lightheadedness|vertigo)\b',
+            'headache': r'\b(headache)\b',
+            'nausea': r'\b(nausea|vomiting)\b'
+        }
+        
+        # Lab patterns
         self.lab_patterns = {
-            'HbA1c': r'\b(HbA1c|A1c|hemoglobin A1c)\s*:?\s*(\d+\.?\d*)',
-            'BP': r'\b(blood pressure|BP)\s*:?\s*(\d+)/(\d+)',
-            'eGFR': r'\b(eGFR|GFR)\s*:?\s*(\d+)',
-            'LDL': r'\b(LDL|LDL-C)\s*:?\s*(\d+)',
+            'HbA1c': r'\b(HbA1c|A1c|hemoglobin A1c)\s*:?\s*(\d+\.?\d*)\s*%?',
+            'BP_systolic': r'\b(blood pressure|BP)\s*:?\s*(\d+)/(\d+)',
+            'eGFR': r'\b(eGFR|GFR)\s*:?\s*(\d+)\s*(?:mL/min)?',
+            'LDL': r'\b(LDL|LDL-C)\s*:?\s*(\d+)\s*(?:mg/dL)?',
             'HDL': r'\b(HDL|HDL-C)\s*:?\s*(\d+)',
-            'Glucose': r'\b(glucose|blood sugar|BG)\s*:?\s*(\d+)',
-            'Creatinine': r'\b(creatinine|Cr)\s*:?\s*(\d+\.?\d*)'
+            'Creatinine': r'\b(creatinine|Cr)\s*:?\s*(\d+\.?\d*)\s*(?:mg/dL)?',
+            'Glucose': r'\b(glucose|blood sugar|BG)\s*:?\s*(\d+)\s*(?:mg/dL)?',
+            'Potassium': r'\b(potassium|K\+)\s*:?\s*(\d+\.?\d*)',
+            'Sodium': r'\b(sodium|Na\+)\s*:?\s*(\d+)'
         }
     
-    def extract_with_scispacy(self, text: str) -> Dict[str, List[str]]:
-        """
-        Stage 1: Extract entities using SciSpacy NER.
+    def extract_conditions(self, text: str) -> List[str]:
+        """Extract conditions using regex patterns."""
+        conditions = []
+        text_lower = text.lower()
         
-        Returns:
-            Dictionary with entity types and their mentions
-        """
+        for condition_name, pattern in self.condition_patterns.items():
+            if re.search(pattern, text_lower, re.IGNORECASE):
+                # Format condition name nicely
+                if condition_name == 'hypertension':
+                    conditions.append('Hypertension')
+                elif condition_name == 'diabetes':
+                    conditions.append('Type 2 Diabetes')
+                elif condition_name == 'hyperlipidemia':
+                    conditions.append('Hyperlipidemia')
+                elif condition_name == 'ckd':
+                    conditions.append('Chronic Kidney Disease')
+                elif condition_name == 'neuropathy':
+                    conditions.append('Diabetic Neuropathy')
+                elif condition_name == 'heart_failure':
+                    conditions.append('Heart Failure')
+                elif condition_name == 'cad':
+                    conditions.append('Coronary Artery Disease')
+                elif condition_name == 'anemia':
+                    conditions.append('Anemia')
+                elif condition_name == 'copd':
+                    conditions.append('COPD')
+                elif condition_name == 'asthma':
+                    conditions.append('Asthma')
+        
+        return list(set(conditions))
+    
+    def extract_medications(self, text: str) -> List[str]:
+        """Extract medications using regex patterns."""
+        medications = []
+        text_lower = text.lower()
+        
+        for pattern in self.medication_patterns:
+            matches = re.finditer(pattern, text_lower, re.IGNORECASE)
+            for match in matches:
+                med = match.group(0).lower()
+                if med not in medications:
+                    medications.append(med)
+        
+        return medications
+    
+    def extract_symptoms(self, text: str) -> List[str]:
+        """Extract symptoms using regex patterns."""
+        symptoms = []
+        text_lower = text.lower()
+        
+        for symptom_name, pattern in self.symptom_patterns.items():
+            if re.search(pattern, text_lower, re.IGNORECASE):
+                # Format symptom name nicely
+                if symptom_name == 'sob':
+                    symptoms.append('Shortness of breath')
+                elif symptom_name == 'chest_pain':
+                    symptoms.append('Chest pain')
+                else:
+                    symptoms.append(symptom_name.capitalize())
+        
+        return list(set(symptoms))
+    
+    def extract_lab_values(self, text: str) -> Dict[str, Any]:
+        """Extract lab values using regex patterns."""
+        labs = {}
+        
+        for lab_name, pattern in self.lab_patterns.items():
+            matches = re.finditer(pattern, text, re.IGNORECASE)
+            for match in matches:
+                if lab_name == 'BP_systolic':
+                    # Handle blood pressure specially
+                    if len(match.groups()) >= 2:
+                        labs['BP'] = f"{match.group(2)}/{match.group(3)}"
+                else:
+                    # Extract the numeric value
+                    value_str = match.group(2) if len(match.groups()) > 1 else match.group(1)
+                    try:
+                        # Try to convert to float if numeric
+                        if value_str and value_str.replace('.', '').replace('-', '').isdigit():
+                            labs[lab_name] = float(value_str)
+                        else:
+                            labs[lab_name] = value_str
+                    except:
+                        labs[lab_name] = value_str
+        
+        return labs
+    
+    def extract_with_scispacy(self, text: str) -> Dict[str, List[str]]:
+        """Extract entities using SciSpacy NER (backup)."""
         if not nlp:
             return {"conditions": [], "medications": [], "symptoms": []}
         
@@ -75,18 +191,16 @@ class ClinicalExtractor:
         entities = {
             "conditions": [],
             "medications": [],
-            "symptoms": [],
-            "procedures": []
+            "symptoms": []
         }
         
-        # Map spaCy entity labels to our categories
+        # Map spaCy entity labels
         label_map = {
             "DISEASE": "conditions",
             "CONDITION": "conditions",
             "MEDICATION": "medications",
             "DRUG": "medications",
-            "SYMPTOM": "symptoms",
-            "PROCEDURE": "procedures"
+            "SYMPTOM": "symptoms"
         }
         
         for ent in doc.ents:
@@ -96,178 +210,46 @@ class ClinicalExtractor:
         
         return entities
     
-    def extract_lab_values(self, text: str) -> Dict[str, Any]:
+    def extract(self, text: str, use_llm: bool = False) -> Dict[str, Any]:
         """
-        Extract lab values using regex patterns.
-        """
-        labs = {}
-        
-        for lab_name, pattern in self.lab_patterns.items():
-            match = re.search(pattern, text, re.IGNORECASE)
-            if match:
-                if lab_name == 'BP':
-                    labs[lab_name] = f"{match.group(2)}/{match.group(3)}"
-                else:
-                    value = match.group(2) if len(match.groups()) > 1 else match.group(1)
-                    labs[lab_name] = float(value) if value.replace('.', '').isdigit() else value
-        
-        return labs
-    
-    def extract_medications_regex(self, text: str) -> List[str]:
-        """
-        Extract medications using regex patterns.
-        """
-        medications = []
-        
-        for pattern in self.medication_patterns:
-            matches = re.finditer(pattern, text, re.IGNORECASE)
-            for match in matches:
-                med = match.group(0).lower()
-                if med not in medications:
-                    medications.append(med)
-        
-        return medications
-    
-    def extract_with_llm(self, text: str, context_entities: List[str] = None) -> Dict[str, Any]:
-        """
-        Stage 2: Use LLM for structured extraction with relationships.
+        Complete extraction pipeline using regex patterns (fast and reliable).
         
         Args:
             text: Clinical note text
-            context_entities: Entities already detected by SciSpacy (for context)
+            use_llm: Whether to use LLM (default False for speed)
         
         Returns:
-            Structured JSON with extracted entities
+            Dictionary with extracted entities
         """
-        context_str = f"Previously detected terms: {context_entities}" if context_entities else ""
+        # Extract using regex patterns
+        conditions = self.extract_conditions(text)
+        medications = self.extract_medications(text)
+        symptoms = self.extract_symptoms(text)
+        lab_values = self.extract_lab_values(text)
         
-        prompt = f"""Extract medical entities from this clinical note and return ONLY valid JSON.
-
-Clinical note: {text}
-
-{context_str}
-
-Return JSON with exactly these keys:
-{{
-    "conditions": ["list of medical conditions/diseases"],
-    "medications": ["list of medications with dosages"],
-    "lab_values": {{"lab_name": value}},
-    "symptoms": ["list of symptoms"],
-    "procedures": ["list of procedures/tests"],
-    "relationships": [
-        {{"subject": "condition/med", "predicate": "managed_by/causes", "object": "medication/condition"}}
-    ]
-}}
-
-Extract only what's explicitly mentioned. Use null for missing values.
-"""
+        # Use SciSpacy as backup if regex didn't find anything
+        if not conditions and not medications and not symptoms:
+            spacy_results = self.extract_with_scispacy(text)
+            conditions = conditions or spacy_results.get('conditions', [])
+            medications = medications or spacy_results.get('medications', [])
+            symptoms = symptoms or spacy_results.get('symptoms', [])
         
-        try:
-            response = client.chat.completions.create(
-                model="llama-3.1-8b-instant",
-                messages=[{"role": "user", "content": prompt}],
-                temperature=0.1,
-                max_tokens=500
-            )
-            
-            result = response.choices[0].message.content
-            
-            # Extract JSON from response
-            start_idx = result.find('{')
-            end_idx = result.rfind('}') + 1
-            
-            if start_idx != -1 and end_idx > start_idx:
-                json_str = result[start_idx:end_idx]
-                return json.loads(json_str)
-            else:
-                return self.get_empty_extraction()
-                
-        except Exception as e:
-            print(f"LLM extraction error: {e}")
-            return self.get_empty_extraction()
-    
-    def get_empty_extraction(self) -> Dict[str, Any]:
-        """Return empty extraction structure."""
         return {
-            "conditions": [],
-            "medications": [],
-            "lab_values": {},
-            "symptoms": [],
+            "conditions": conditions,
+            "medications": medications,
+            "lab_values": lab_values,
+            "symptoms": symptoms,
             "procedures": [],
             "relationships": []
         }
-    
-    def extract(self, note: str, use_llm: bool = True) -> Dict[str, Any]:
-        """
-        Complete extraction pipeline.
-        
-        Args:
-            note: Clinical note text
-            use_llm: Whether to use LLM for extraction
-        
-        Returns:
-            Combined extraction results
-        """
-        # Stage 1: SciSpacy extraction
-        spacy_results = self.extract_with_scispacy(note)
-        
-        # Extract lab values with regex
-        lab_values = self.extract_lab_values(note)
-        
-        # Extract medications with regex
-        medications_regex = self.extract_medications_regex(note)
-        
-        # Stage 2: LLM extraction (optional)
-        if use_llm and self.use_llm:
-            llm_results = self.extract_with_llm(note, spacy_results["conditions"])
-            
-            # Merge results (LLM takes precedence for complex entities)
-            merged = {
-                "conditions": list(set(spacy_results["conditions"] + llm_results.get("conditions", []))),
-                "medications": list(set(medications_regex + llm_results.get("medications", []))),
-                "lab_values": {**lab_values, **llm_results.get("lab_values", {})},
-                "symptoms": list(set(spacy_results["symptoms"] + llm_results.get("symptoms", []))),
-                "procedures": list(set(spacy_results["procedures"] + llm_results.get("procedures", []))),
-                "relationships": llm_results.get("relationships", [])
-            }
-        else:
-            # Use only rule-based extraction
-            merged = {
-                "conditions": spacy_results["conditions"],
-                "medications": medications_regex,
-                "lab_values": lab_values,
-                "symptoms": spacy_results["symptoms"],
-                "procedures": spacy_results["procedures"],
-                "relationships": []
-            }
-        
-        return merged
 
-def extract_entities(note_text: str, use_llm: bool = True) -> Dict[str, Any]:
-    """
-    Convenience function to extract entities from a clinical note.
-    
-    Args:
-        note_text: The clinical note text
-        use_llm: Whether to use LLM for extraction
-    
-    Returns:
-        Dictionary with extracted entities
-    """
+def extract_entities(note_text: str, use_llm: bool = False) -> Dict[str, Any]:
+    """Convenience function to extract entities from a clinical note."""
     extractor = ClinicalExtractor(use_llm=use_llm)
     return extractor.extract(note_text, use_llm)
 
-def process_patient_visits(patient_data: Dict[str, Any], use_llm: bool = True) -> Dict[str, Any]:
-    """
-    Process all visits for a patient and add extracted entities.
-    
-    Args:
-        patient_data: Patient JSON data with visits
-        use_llm: Whether to use LLM for extraction
-    
-    Returns:
-        Patient data with extraction results added
-    """
+def process_patient_visits(patient_data: Dict[str, Any], use_llm: bool = False) -> Dict[str, Any]:
+    """Process all visits for a patient and add extracted entities."""
     extractor = ClinicalExtractor(use_llm=use_llm)
     
     for visit in patient_data.get('visits', []):
@@ -279,42 +261,27 @@ def process_patient_visits(patient_data: Dict[str, Any], use_llm: bool = True) -
         # Add extracted data to visit
         visit['extracted'] = extracted
         
-        # Also update top-level fields if they're empty (helpful for graph construction)
-        if not visit.get('symptoms'):
-            visit['symptoms'] = extracted.get('symptoms', [])
-        if not visit.get('medications'):
-            visit['medications'] = extracted.get('medications', [])
-        if not visit.get('diagnoses'):
-            visit['diagnoses'] = extracted.get('conditions', [])
-        if not visit.get('labs'):
-            visit['labs'] = extracted.get('lab_values', {})
+        # Update top-level fields
+        if extracted.get('conditions'):
+            visit['diagnoses'] = extracted['conditions']
+        if extracted.get('medications'):
+            visit['medications'] = extracted['medications']
+        if extracted.get('symptoms'):
+            visit['symptoms'] = extracted['symptoms']
+        if extracted.get('lab_values'):
+            visit['labs'] = extracted['lab_values']
     
     return patient_data
 
-# Test function
-def test_extraction():
-    """Test the extraction pipeline on sample notes."""
-    
-    test_notes = [
-        "Patient diagnosed with Type 2 Diabetes. Started on Metformin 500mg. HbA1c: 7.2",
-        "Blood pressure 140/90. Patient reports fatigue and polyuria. Continue Metformin.",
-        "eGFR 68. Added Lisinopril 10mg for hypertension. Neuropathy symptoms improving."
-    ]
-    
-    print("\n" + "="*60)
-    print("Testing Extraction Pipeline")
-    print("="*60)
-    
-    for i, note in enumerate(test_notes, 1):
-        print(f"\nTest {i}:")
-        print(f"Note: {note[:80]}...")
-        
-        result = extract_entities(note, use_llm=False)
-        
-        print(f"  Conditions: {result['conditions']}")
-        print(f"  Medications: {result['medications']}")
-        print(f"  Lab values: {result['lab_values']}")
-        print(f"  Symptoms: {result['symptoms']}")
-
 if __name__ == "__main__":
-    test_extraction()
+    # Test the enhanced extractor
+    test_note = "Patient has hypertension and diabetes. BP 140/90, HbA1c 7.2. Reports fatigue and shortness of breath."
+    
+    extractor = ClinicalExtractor()
+    result = extractor.extract(test_note)
+    
+    print("Test extraction:")
+    print(f"  Conditions: {result['conditions']}")
+    print(f"  Medications: {result['medications']}")
+    print(f"  Lab values: {result['lab_values']}")
+    print(f"  Symptoms: {result['symptoms']}")

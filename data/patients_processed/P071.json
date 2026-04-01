@@ -1,0 +1,166 @@
+{
+  "patient_id": "P071",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-06-01",
+      "note": "New patient with complaints of fatigue and polyuria. On physical exam, patient has a blood pressure of 140/90 and weight of 95kg. Initial HbA1c is 7.2. Diagnoses include Type 2 Diabetes and Hypertension. Meds include Metformin 500mg qd. Follow-up in 3 months.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP": "140/90",
+        "eGFR": 72
+      },
+      "medications": [
+        "metformin",
+        "500mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "500mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Polyuria",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2023-02-01",
+      "note": "Patient returns for follow-up. BP is 130/80, HbA1c is 6.8. Adding Lisinopril 10mg qd for hypertension. Patient reports improved energy, but new symptoms of nocturia and edema. Meds now Metformin 500mg, Lisinopril 10mg.",
+      "labs": {
+        "HbA1c": 6.8,
+        "BP": "130/80",
+        "eGFR": 68
+      },
+      "medications": [
+        "lisinopril",
+        "metformin",
+        "10mg",
+        "500mg"
+      ],
+      "diagnoses": [
+        "Hypertension"
+      ],
+      "symptoms": [
+        "Edema"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension"
+        ],
+        "medications": [
+          "lisinopril",
+          "metformin",
+          "10mg",
+          "500mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Edema"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-10-01",
+      "note": "Patient returns for follow-up. BP is 125/75, HbA1c is 6.5. Patient reports improvement in nocturia and edema. Adding Sitagliptin 100mg qd for glycemic control. Meds now Metformin 500mg, Lisinopril 10mg, Sitagliptin 100mg.",
+      "labs": {
+        "HbA1c": 6.5,
+        "BP": "125/75",
+        "eGFR": 65
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "100mg",
+        "500mg",
+        "10mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension"
+      ],
+      "symptoms": [
+        "Edema"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "100mg",
+          "500mg",
+          "10mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Edema"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2024-04-01",
+      "note": "Patient returns for follow-up. BP is 120/70, HbA1c is 6.2. Patient reports new symptom of tingling in hands and feet. Meds now Metformin 500mg, Lisinopril 10mg, Sitagliptin 100mg, and Gabapentin 100mg for neuropathy. Discussing need for referral to endocrinology for further management.",
+      "labs": {
+        "HbA1c": 6.2,
+        "BP": "120/70",
+        "eGFR": 62
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "gabapentin",
+        "500mg",
+        "10mg",
+        "100mg"
+      ],
+      "diagnoses": [
+        "Diabetic Neuropathy"
+      ],
+      "symptoms": [
+        "Tingling"
+      ],
+      "extracted": {
+        "conditions": [
+          "Diabetic Neuropathy"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "gabapentin",
+          "500mg",
+          "10mg",
+          "100mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Tingling"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

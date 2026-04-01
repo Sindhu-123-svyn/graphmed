@@ -1,0 +1,208 @@
+{
+  "patient_id": "P061",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-03-15",
+      "note": "Initial presentation with complaints of fatigue, polyuria, and polydipsia. Diagnosis of Type 2 Diabetes confirmed with HbA1c of 8.5. Starting Metformin 500mg BID and Lisinopril 2.5mg daily.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 160
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "500mg",
+        "2.5mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polydipsia",
+        "Polyuria",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "500mg",
+          "2.5mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Polydipsia",
+          "Polyuria",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-10-18",
+      "note": "Follow-up visit with improvement in HbA1c to 7.8 but worsening eGFR to 60. Added Atorvastatin 20mg daily for hyperlipidemia. Also diagnosed with hyperuricemia.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP_systolic": 145,
+        "BP_diastolic": 92,
+        "eGFR": 60,
+        "LDL": 140
+      },
+      "medications": [
+        "atorvastatin",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Polydipsia",
+        "Joint pain"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hyperlipidemia"
+        ],
+        "medications": [
+          "atorvastatin",
+          "20mg"
+        ],
+        "lab_values": {},
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-05-02",
+      "note": "Worsening eGFR to 50 with increasing creatinine levels. Added losartan 50mg daily for further blood pressure control. Also diagnosed with chronic kidney disease stage 3.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 50,
+        "LDL": 120
+      },
+      "medications": [
+        "losartan",
+        "50mg"
+      ],
+      "diagnoses": [
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Polydipsia",
+        "Joint pain",
+        "Swelling in legs"
+      ],
+      "extracted": {
+        "conditions": [
+          "Chronic Kidney Disease"
+        ],
+        "medications": [
+          "losartan",
+          "50mg"
+        ],
+        "lab_values": {},
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-11-28",
+      "note": "Increasing shortness of breath. Worsening eGFR to 45 with further decline in HbA1c to 7.0. Consideration for referral to nephrology for further management of CKD.",
+      "labs": {
+        "HbA1c": 7.0,
+        "BP_systolic": 155,
+        "BP_diastolic": 98,
+        "eGFR": 45,
+        "LDL": 110
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 2.5mg daily",
+        "Atorvastatin 20mg daily",
+        "Losartan 50mg daily",
+        "Furosemide 40mg daily"
+      ],
+      "diagnoses": [
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath"
+      ],
+      "extracted": {
+        "conditions": [
+          "Chronic Kidney Disease"
+        ],
+        "medications": [],
+        "lab_values": {},
+        "symptoms": [
+          "Shortness of breath"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V5",
+      "date": "2024-02-20",
+      "note": "Further decline in HbA1c to 6.8 and worsening eGFR to 38. Referred to nephrology for further management of CKD. Started on erythropoietin for anemia.",
+      "labs": {
+        "HbA1c": 6.8,
+        "BP_systolic": 160,
+        "BP_diastolic": 100,
+        "eGFR": 38,
+        "LDL": 100
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 2.5mg daily",
+        "Atorvastatin 20mg daily",
+        "Losartan 50mg daily",
+        "Furosemide 40mg daily",
+        "Erythropoietin 2000 U weekly"
+      ],
+      "diagnoses": [
+        "Chronic Kidney Disease",
+        "Anemia"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Polydipsia",
+        "Joint pain",
+        "Swelling in legs",
+        "Shortness of breath",
+        "Anemia"
+      ],
+      "extracted": {
+        "conditions": [
+          "Chronic Kidney Disease",
+          "Anemia"
+        ],
+        "medications": [],
+        "lab_values": {},
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

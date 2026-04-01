@@ -1,0 +1,209 @@
+{
+  "patient_id": "P051",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-06-15",
+      "note": "Patient presents with new onset of fatigue and increased thirst. Initial lab results reveal HbA1c of 8.5, BP 140/90, and eGFR 80. Diagnoses include Type 2 Diabetes and Hypertension. Meds include Metformin 500mg BID and Lisinopril 10mg daily.",
+      "labs": {
+        "BP": "140/90",
+        "eGFR": 80.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "500mg",
+        "10mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polydipsia",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "500mg",
+          "10mg"
+        ],
+        "lab_values": {
+          "BP": "140/90",
+          "eGFR": 80.0
+        },
+        "symptoms": [
+          "Polydipsia",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-11-10",
+      "note": "Patient returns with worsening fatigue and increased urination. Lab results show HbA1c of 9.2, BP 150/95, and eGFR 70. Meds are adjusted to include Sitagliptin 100mg daily and increased Lisinopril to 20mg daily. Diagnoses are updated to include Hyperlipidemia. New symptoms include polyuria and weight loss.",
+      "labs": {
+        "BP": "150/95",
+        "eGFR": 70.0
+      },
+      "medications": [
+        "lisinopril",
+        "100mg",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hyperlipidemia"
+        ],
+        "medications": [
+          "lisinopril",
+          "100mg",
+          "20mg"
+        ],
+        "lab_values": {
+          "BP": "150/95",
+          "eGFR": 70.0
+        },
+        "symptoms": [
+          "Polyuria",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-03-17",
+      "note": "Patient returns with worsening symptoms. Lab results show HbA1c of 8.8, BP 155/100, and eGFR 65. Meds are adjusted to include Atorvastatin 20mg daily. Diagnoses are updated to include Chronic Kidney Disease. New symptoms include edema and shortness of breath.",
+      "labs": {
+        "BP": "155/100",
+        "eGFR": 65.0
+      },
+      "medications": [
+        "atorvastatin",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Edema"
+      ],
+      "extracted": {
+        "conditions": [
+          "Chronic Kidney Disease"
+        ],
+        "medications": [
+          "atorvastatin",
+          "20mg"
+        ],
+        "lab_values": {
+          "BP": "155/100",
+          "eGFR": 65.0
+        },
+        "symptoms": [
+          "Shortness of breath",
+          "Edema"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-09-14",
+      "note": "Patient returns with stable symptoms. Lab results show HbA1c of 8.0, BP 140/90, and eGFR 75. Meds are adjusted to include Furosemide 40mg daily for edema. Diagnoses remain the same. New symptoms include chest pain.",
+      "labs": {
+        "BP": "140/90",
+        "eGFR": 75.0
+      },
+      "medications": [
+        "40mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Chest pain",
+        "Edema"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [
+          "40mg"
+        ],
+        "lab_values": {
+          "BP": "140/90",
+          "eGFR": 75.0
+        },
+        "symptoms": [
+          "Chest pain",
+          "Edema"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V5",
+      "date": "2024-01-12",
+      "note": "Patient returns with worsening chest pain and shortness of breath. Lab results show HbA1c of 7.8, BP 130/80, and eGFR 85. Meds are adjusted to include Aspirin 81mg daily and increased Atorvastatin to 40mg daily. Diagnoses are updated to include Coronary Artery Disease. New symptoms include angina.",
+      "labs": {
+        "BP": "130/80",
+        "eGFR": 85.0
+      },
+      "medications": [
+        "atorvastatin",
+        "81mg",
+        "40mg"
+      ],
+      "diagnoses": [
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Chest pain"
+      ],
+      "extracted": {
+        "conditions": [
+          "Coronary Artery Disease"
+        ],
+        "medications": [
+          "atorvastatin",
+          "81mg",
+          "40mg"
+        ],
+        "lab_values": {
+          "BP": "130/80",
+          "eGFR": 85.0
+        },
+        "symptoms": [
+          "Shortness of breath",
+          "Chest pain"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

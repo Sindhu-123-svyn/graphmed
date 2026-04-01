@@ -13,34 +13,43 @@
         "LDL": 130
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg QD",
-        "Atorvastatin 20mg QD"
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "130 mg",
+        "500mg",
+        "10mg",
+        "20mg"
       ],
       "diagnoses": [
-        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia"
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
       ],
       "symptoms": [
-        "Fatigue",
-        "Weight loss",
-        "Increased thirst"
+        "Polydipsia",
+        "Fatigue"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
         "medications": [
           "metformin",
           "lisinopril",
           "atorvastatin",
+          "130 mg",
           "500mg",
           "10mg",
-          "20mg",
-          "bid",
-          "qd"
+          "20mg"
         ],
         "lab_values": {},
-        "symptoms": [],
+        "symptoms": [
+          "Polydipsia",
+          "Fatigue"
+        ],
         "procedures": [],
         "relationships": []
       }
@@ -57,11 +66,12 @@
         "LDL": 145
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Amlodipine 5mg QD",
-        "Atorvastatin 20mg QD",
-        "Simvastatin 40mg QD",
-        "Furosemide 20mg QD"
+        "amlodipine",
+        "simvastatin",
+        "145 mg",
+        "5mg",
+        "40mg",
+        "20mg"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -70,22 +80,22 @@
         "Chronic Kidney Disease"
       ],
       "symptoms": [
-        "Fatigue",
-        "Weight loss",
-        "Increased thirst",
-        "Decreased urine output"
+        "Fatigue"
       ],
       "extracted": {
         "conditions": [],
         "medications": [
           "amlodipine",
+          "simvastatin",
+          "145 mg",
           "5mg",
           "40mg",
-          "20mg",
-          "qd"
+          "20mg"
         ],
         "lab_values": {},
-        "symptoms": [],
+        "symptoms": [
+          "Fatigue"
+        ],
         "procedures": [],
         "relationships": []
       }
@@ -102,43 +112,37 @@
         "LDL": 155
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg QD",
-        "Amlodipine 5mg QD",
-        "Atorvastatin 20mg QD",
-        "Simvastatin 40mg QD",
-        "Furosemide 20mg QD",
-        "Losartan 50mg QD",
-        "Aspirin 81mg QD",
-        "Enalapril 10mg QD",
-        "Metoprolol 50mg BID"
+        "losartan",
+        "metoprolol",
+        "155 mg",
+        "50mg",
+        "81mg",
+        "10mg"
       ],
       "diagnoses": [
-        "Type 2 Diabetes",
-        "Hypertension",
-        "Hyperlipidemia",
-        "Chronic Kidney Disease",
         "Coronary Artery Disease"
       ],
       "symptoms": [
-        "Fatigue",
-        "Weight loss",
-        "Increased thirst",
-        "Decreased urine output",
-        "Shortness of breath"
+        "Shortness of breath",
+        "Fatigue"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Coronary Artery Disease"
+        ],
         "medications": [
           "losartan",
+          "metoprolol",
+          "155 mg",
           "50mg",
           "81mg",
-          "10mg",
-          "qd",
-          "bid"
+          "10mg"
         ],
         "lab_values": {},
-        "symptoms": [],
+        "symptoms": [
+          "Shortness of breath",
+          "Fatigue"
+        ],
         "procedures": [],
         "relationships": []
       }

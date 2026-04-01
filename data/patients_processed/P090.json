@@ -1,0 +1,116 @@
+{
+  "patient_id": "P090",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-04-15",
+      "note": "Patient P090 is a 55-year-old male presenting with a 5-year history of Type 2 Diabetes, Hypertension, and Hyperlipidemia. He reports worsening fatigue and increased urination. Physical examination reveals a blood pressure of 140/90 mmHg and a BMI of 32 kg/m^2. Laboratory values show HbA1c of 7.2%, eGFR of 72 mL/min, and LDL of 130 mg/dL.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
+      },
+      "medications": [
+        "130 mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "130 mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2023-08-22",
+      "note": "Patient P090 returns for follow-up with worsening diabetic control and hypertension. He reports increased shortness of breath and swelling in his legs. Physical examination reveals a blood pressure of 150/95 mmHg and a BMI of 33 kg/m^2. Laboratory values show HbA1c of 8.5%, eGFR of 60 mL/min, and LDL of 160 mg/dL.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 60,
+        "LDL": 160
+      },
+      "medications": [
+        "160 mg"
+      ],
+      "diagnoses": [
+        "Hypertension"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Edema"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension"
+        ],
+        "medications": [
+          "160 mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Shortness of breath",
+          "Edema"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2024-02-10",
+      "note": "Patient P090 returns for follow-up with continued worsening diabetic control and hypertension. He reports increased chest pain and palpitations. Physical examination reveals a blood pressure of 160/100 mmHg and a BMI of 34 kg/m^2. Laboratory values show HbA1c of 9.0%, eGFR of 45 mL/min, and LDL of 180 mg/dL.",
+      "labs": {
+        "HbA1c": 9.0,
+        "BP_systolic": 160,
+        "BP_diastolic": 100,
+        "eGFR": 45,
+        "LDL": 180
+      },
+      "medications": [
+        "180 mg"
+      ],
+      "diagnoses": [
+        "Hypertension"
+      ],
+      "symptoms": [
+        "Chest pain"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension"
+        ],
+        "medications": [
+          "180 mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Chest pain"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

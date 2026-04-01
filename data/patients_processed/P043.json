@@ -1,0 +1,194 @@
+{
+  "patient_id": "P043",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2021-06-15",
+      "note": "Patient P043 is a 55-year-old man presenting with new onset of fatigue and polyuria. Physical examination reveals obesity (BMI 32). Initial lab results show HbA1c of 7.2, BP 140/90, eGFR 72, and LDL 130. The patient is diagnosed with Type 2 Diabetes, Hypertension, and Hyperlipidemia. Medications include Metformin 500mg twice daily, Lisinopril 10mg daily, and Atorvastatin 20mg daily.",
+      "labs": {
+        "BP": "140/90",
+        "eGFR": 72.0,
+        "LDL": 130.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "500mg",
+        "10mg",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "atorvastatin",
+          "500mg",
+          "10mg",
+          "20mg"
+        ],
+        "lab_values": {
+          "BP": "140/90",
+          "eGFR": 72.0,
+          "LDL": 130.0
+        },
+        "symptoms": [
+          "Polyuria",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2021-12-20",
+      "note": "Patient P043 returns with worsening fatigue and shortness of breath. Physical examination reveals no new findings. Lab results show HbA1c of 8.1, BP 150/95, eGFR 68, and LDL 145. The patient's medications are adjusted to Metformin 850mg twice daily, Lisinopril 20mg daily, and Atorvastatin 40mg daily. A diagnosis of Coronary Artery Disease is added due to new symptoms.",
+      "labs": {
+        "BP": "150/95",
+        "eGFR": 68.0,
+        "LDL": 145.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "850mg",
+        "20mg",
+        "40mg"
+      ],
+      "diagnoses": [
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Coronary Artery Disease"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "atorvastatin",
+          "850mg",
+          "20mg",
+          "40mg"
+        ],
+        "lab_values": {
+          "BP": "150/95",
+          "eGFR": 68.0,
+          "LDL": 145.0
+        },
+        "symptoms": [
+          "Shortness of breath",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2022-06-15",
+      "note": "Patient P043 returns with worsening kidney function and new onset of edema. Physical examination reveals pitting edema bilaterally. Lab results show HbA1c of 7.5, BP 148/98, eGFR 58, and LDL 155. The patient's medications are adjusted to Metformin 1000mg twice daily, Lisinopril 30mg daily, and Atorvastatin 80mg daily. A diagnosis of Chronic Kidney Disease is added due to worsening eGFR.",
+      "labs": {
+        "BP": "148/98",
+        "eGFR": 58.0,
+        "LDL": 155.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "1000mg",
+        "30mg",
+        "80mg"
+      ],
+      "diagnoses": [
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Edema"
+      ],
+      "extracted": {
+        "conditions": [
+          "Chronic Kidney Disease"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "atorvastatin",
+          "1000mg",
+          "30mg",
+          "80mg"
+        ],
+        "lab_values": {
+          "BP": "148/98",
+          "eGFR": 58.0,
+          "LDL": 155.0
+        },
+        "symptoms": [
+          "Edema"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-02-20",
+      "note": "Patient P043 returns with stable lab values and improved symptoms. Physical examination reveals no new findings. Lab results show HbA1c of 7.0, BP 140/80, eGFR 65, and LDL 120. The patient's medications remain unchanged.",
+      "labs": {
+        "BP": "140/80",
+        "eGFR": 65.0,
+        "LDL": 120.0
+      },
+      "medications": [
+        "Metformin 1000mg twice daily",
+        "Lisinopril 30mg daily",
+        "Atorvastatin 80mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Shortness of breath",
+        "Edema"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [],
+        "lab_values": {
+          "BP": "140/80",
+          "eGFR": 65.0,
+          "LDL": 120.0
+        },
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

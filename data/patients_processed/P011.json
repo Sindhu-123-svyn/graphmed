@@ -1,0 +1,163 @@
+{
+  "patient_id": "P011",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-06-15",
+      "note": "New patient with complaints of fatigue and increased thirst. Blood work reveals HbA1c of 8.4 and BP of 148/92. Diagnosed with Type 2 Diabetes and Hypertension. Initiated Metformin 500mg BID and Lisinopril 10mg daily.",
+      "labs": {
+        "HbA1c": 8.4,
+        "BP_systolic": 148,
+        "BP_diastolic": 92,
+        "eGFR": 80,
+        "LDL": 160
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "500mg",
+        "10mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polydipsia",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "500mg",
+          "10mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Polydipsia",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-12-20",
+      "note": "Patient reports worsening fatigue and increased shortness of breath. Blood work reveals HbA1c of 7.8 and BP of 150/94. Diagnosed with Hyperlipidemia. Initiated Simvastatin 20mg daily.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP_systolic": 150,
+        "BP_diastolic": 94,
+        "eGFR": 78,
+        "LDL": 140
+      },
+      "medications": [
+        "simvastatin",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hyperlipidemia"
+        ],
+        "medications": [
+          "simvastatin",
+          "20mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Shortness of breath",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-06-15",
+      "note": "Patient reports worsening edema and decreased eGFR. Blood work reveals HbA1c of 7.2 and BP of 140/90. Diagnosed with Chronic Kidney Disease. Initiated Furosemide 40mg daily.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
+      },
+      "medications": [
+        "40mg"
+      ],
+      "diagnoses": [
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Edema"
+      ],
+      "extracted": {
+        "conditions": [
+          "Chronic Kidney Disease"
+        ],
+        "medications": [
+          "40mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Edema"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2024-02-20",
+      "note": "Patient reports worsening chest pain. Blood work reveals HbA1c of 6.8 and BP of 138/88. Diagnosed with Coronary Artery Disease. Initiated Aspirin 81mg daily and Clopidogrel 75mg daily.",
+      "labs": {
+        "HbA1c": 6.8,
+        "BP_systolic": 138,
+        "BP_diastolic": 88,
+        "eGFR": 68,
+        "LDL": 120
+      },
+      "medications": [
+        "clopidogrel",
+        "81mg",
+        "75mg"
+      ],
+      "diagnoses": [
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Chest pain"
+      ],
+      "extracted": {
+        "conditions": [
+          "Coronary Artery Disease"
+        ],
+        "medications": [
+          "clopidogrel",
+          "81mg",
+          "75mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Chest pain"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "patient_id": "P059",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-02-15",
+      "note": "Initial evaluation reveals Type 2 Diabetes, Hypertension, and Hyperlipidemia. HbA1c is elevated at 8.5, BP is 150/90, eGFR is 78, and LDL is 140. Patient is started on Metformin 500mg twice daily and Lisinopril 10mg daily.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 150,
+        "BP_diastolic": 90,
+        "eGFR": 78,
+        "LDL": 140
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "500mg",
+        "10mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Dyspnea"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "500mg",
+          "10mg"
+        ],
+        "lab_values": {},
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-08-22",
+      "note": "BP has worsened to 160/95, HbA1c has decreased to 7.8, but LDL remains elevated at 145. Patient's eGFR has decreased to 74. Blood pressure is now treated with Lisinopril 20mg daily and Amlodipine 5mg daily. Atorvastatin 20mg daily is added for lipid control.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP_systolic": 160,
+        "BP_diastolic": 95,
+        "eGFR": 74,
+        "LDL": 145
+      },
+      "medications": [
+        "lisinopril",
+        "amlodipine",
+        "atorvastatin",
+        "20mg",
+        "5mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes Mellitus",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Dyspnea",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [
+          "lisinopril",
+          "amlodipine",
+          "atorvastatin",
+          "20mg",
+          "5mg"
+        ],
+        "lab_values": {},
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-02-28",
+      "note": "Patient's HbA1c has continued to improve, now at 7.2. However, eGFR has worsened to 68, indicating further kidney damage. BP has decreased to 140/90, but LDL remains elevated at 150. Amlodipine is stopped due to side effects, and Lisinopril is increased to 30mg daily.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 68,
+        "LDL": 150
+      },
+      "medications": [
+        "amlodipine",
+        "lisinopril",
+        "30mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes Mellitus",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Dyspnea",
+        "Fatigue",
+        "Edema"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [
+          "amlodipine",
+          "lisinopril",
+          "30mg"
+        ],
+        "lab_values": {},
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-10-17",
+      "note": "Patient's HbA1c has further improved to 6.8. eGFR has stabilized at 70, but LDL remains elevated at 155. Simvastatin 40mg daily is added for lipid control. Patient's symptoms have improved, but edema persists.",
+      "labs": {
+        "HbA1c": 6.8,
+        "BP_systolic": 130,
+        "BP_diastolic": 80,
+        "eGFR": 70,
+        "LDL": 155
+      },
+      "medications": [
+        "simvastatin",
+        "40mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes Mellitus",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Edema"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [
+          "simvastatin",
+          "40mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Edema"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

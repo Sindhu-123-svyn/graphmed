@@ -7,36 +7,40 @@
       "note": "Patient presents with new onset of fatigue and increased thirst. Physical exam reveals hypertension and hyperlipidemia. HbA1c 7.2, BP 140/90, eGFR 80, LDL 130. Diagnoses: Type 2 Diabetes, Hypertension, Hyperlipidemia. Symptoms: Fatigue, Increased thirst. Medications: Metformin 500mg bid, Lisinopril 10mg qd, Atorvastatin 20mg qd.",
       "labs": {
         "HbA1c": 7.2,
-        "BP_systolic": 140,
-        "BP_diastolic": 90,
-        "eGFR": 80,
-        "LDL": 130
+        "BP": "140/90",
+        "eGFR": 80.0,
+        "LDL": 130.0
       },
       "medications": [
-        "Metformin 500mg bid",
-        "Lisinopril 10mg qd",
-        "Atorvastatin 20mg qd"
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "500mg",
+        "10mg",
+        "20mg"
       ],
       "diagnoses": [
-        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia"
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
       ],
       "symptoms": [
-        "Fatigue",
-        "Increased thirst"
+        "Polydipsia",
+        "Fatigue"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
         "medications": [
           "metformin",
           "lisinopril",
           "atorvastatin",
           "500mg",
           "10mg",
-          "20mg",
-          "bid",
-          "qd"
+          "20mg"
         ],
         "lab_values": {
           "HbA1c": 7.2,
@@ -44,7 +48,10 @@
           "eGFR": 80.0,
           "LDL": 130.0
         },
-        "symptoms": [],
+        "symptoms": [
+          "Polydipsia",
+          "Fatigue"
+        ],
         "procedures": [],
         "relationships": []
       }
@@ -55,39 +62,42 @@
       "note": "Patient returns with worsening fatigue and weight gain. Physical exam reveals worsening hypertension and hyperlipidemia. HbA1c 8.5, BP 150/95, eGFR 70, LDL 160. Diagnoses: Type 2 Diabetes, Hypertension, Hyperlipidemia, Chronic Kidney Disease (mild). Symptoms: Fatigue, Increased thirst, Weight gain. Medications: Metformin 1000mg bid, Lisinopril 20mg qd, Atorvastatin 40mg qd, Furosemide 20mg qd.",
       "labs": {
         "HbA1c": 8.5,
-        "BP_systolic": 150,
-        "BP_diastolic": 95,
-        "eGFR": 70,
-        "LDL": 160
+        "BP": "150/95",
+        "eGFR": 70.0,
+        "LDL": 160.0
       },
       "medications": [
-        "Metformin 1000mg bid",
-        "Lisinopril 20mg qd",
-        "Atorvastatin 40mg qd",
-        "Furosemide 20mg qd"
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "1000mg",
+        "20mg",
+        "40mg"
       ],
       "diagnoses": [
-        "Type 2 Diabetes",
         "Hypertension",
+        "Chronic Kidney Disease",
         "Hyperlipidemia",
-        "Chronic Kidney Disease"
+        "Type 2 Diabetes"
       ],
       "symptoms": [
-        "Fatigue",
-        "Increased thirst",
-        "Weight gain"
+        "Polydipsia",
+        "Fatigue"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Hypertension",
+          "Chronic Kidney Disease",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
         "medications": [
           "metformin",
           "lisinopril",
           "atorvastatin",
           "1000mg",
           "20mg",
-          "40mg",
-          "bid",
-          "qd"
+          "40mg"
         ],
         "lab_values": {
           "HbA1c": 8.5,
@@ -95,7 +105,10 @@
           "eGFR": 70.0,
           "LDL": 160.0
         },
-        "symptoms": [],
+        "symptoms": [
+          "Polydipsia",
+          "Fatigue"
+        ],
         "procedures": [],
         "relationships": []
       }
@@ -106,41 +119,43 @@
       "note": "Patient returns with worsening symptoms. Physical exam reveals worsening hypertension and hyperlipidemia. HbA1c 9.0, BP 155/100, eGFR 65, LDL 180. Diagnoses: Type 2 Diabetes, Hypertension, Hyperlipidemia, Chronic Kidney Disease (moderate). Symptoms: Fatigue, Increased thirst, Weight gain, Shortness of breath. Medications: Metformin 1500mg bid, Lisinopril 40mg qd, Atorvastatin 80mg qd, Furosemide 40mg qd, Albuterol 2 puffs q4h.",
       "labs": {
         "HbA1c": 9.0,
-        "BP_systolic": 155,
-        "BP_diastolic": 100,
-        "eGFR": 65,
-        "LDL": 180
+        "BP": "155/100",
+        "eGFR": 65.0,
+        "LDL": 180.0
       },
       "medications": [
-        "Metformin 1500mg bid",
-        "Lisinopril 40mg qd",
-        "Atorvastatin 80mg qd",
-        "Furosemide 40mg qd",
-        "Albuterol 2 puffs q4h"
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "1500mg",
+        "40mg",
+        "80mg"
       ],
       "diagnoses": [
-        "Type 2 Diabetes",
         "Hypertension",
+        "Chronic Kidney Disease",
         "Hyperlipidemia",
-        "Chronic Kidney Disease"
+        "Type 2 Diabetes"
       ],
       "symptoms": [
-        "Fatigue",
-        "Increased thirst",
-        "Weight gain",
-        "Shortness of breath"
+        "Shortness of breath",
+        "Polydipsia",
+        "Fatigue"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Hypertension",
+          "Chronic Kidney Disease",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
         "medications": [
           "metformin",
           "lisinopril",
           "atorvastatin",
           "1500mg",
           "40mg",
-          "80mg",
-          "bid",
-          "qd"
+          "80mg"
         ],
         "lab_values": {
           "HbA1c": 9.0,
@@ -148,7 +163,11 @@
           "eGFR": 65.0,
           "LDL": 180.0
         },
-        "symptoms": [],
+        "symptoms": [
+          "Shortness of breath",
+          "Polydipsia",
+          "Fatigue"
+        ],
         "procedures": [],
         "relationships": []
       }
@@ -159,34 +178,38 @@
       "note": "Patient returns with worsening symptoms and worsening kidney function. Physical exam reveals worsening hypertension and hyperlipidemia. HbA1c 9.5, BP 160/105, eGFR 55, LDL 200. Diagnoses: Type 2 Diabetes, Hypertension, Hyperlipidemia, Chronic Kidney Disease (severe). Symptoms: Fatigue, Increased thirst, Weight gain, Shortness of breath, Edema. Medications: Metformin 2000mg bid, Lisinopril 60mg qd, Atorvastatin 120mg qd, Furosemide 80mg qd, Albuterol 2 puffs q4h, Epoetin alfa 6000 units qw.",
       "labs": {
         "HbA1c": 9.5,
-        "BP_systolic": 160,
-        "BP_diastolic": 105,
-        "eGFR": 55,
-        "LDL": 200
+        "BP": "160/105",
+        "eGFR": 55.0,
+        "LDL": 200.0
       },
       "medications": [
-        "Metformin 2000mg bid",
-        "Lisinopril 60mg qd",
-        "Atorvastatin 120mg qd",
-        "Furosemide 80mg qd",
-        "Albuterol 2 puffs q4h",
-        "Epoetin alfa 6000 units qw"
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "2000mg",
+        "60mg",
+        "120mg",
+        "80mg"
       ],
       "diagnoses": [
-        "Type 2 Diabetes",
         "Hypertension",
+        "Chronic Kidney Disease",
         "Hyperlipidemia",
-        "Chronic Kidney Disease"
+        "Type 2 Diabetes"
       ],
       "symptoms": [
-        "Fatigue",
-        "Increased thirst",
-        "Weight gain",
         "Shortness of breath",
-        "Edema"
+        "Edema",
+        "Polydipsia",
+        "Fatigue"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Hypertension",
+          "Chronic Kidney Disease",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
         "medications": [
           "metformin",
           "lisinopril",
@@ -194,9 +217,7 @@
           "2000mg",
           "60mg",
           "120mg",
-          "80mg",
-          "bid",
-          "qd"
+          "80mg"
         ],
         "lab_values": {
           "HbA1c": 9.5,
@@ -204,7 +225,12 @@
           "eGFR": 55.0,
           "LDL": 200.0
         },
-        "symptoms": [],
+        "symptoms": [
+          "Shortness of breath",
+          "Edema",
+          "Polydipsia",
+          "Fatigue"
+        ],
         "procedures": [],
         "relationships": []
       }
@@ -215,36 +241,39 @@
       "note": "Patient returns with worsening symptoms and worsening kidney function. Physical exam reveals worsening hypertension and hyperlipidemia. HbA1c 9.8, BP 165/110, eGFR 40, LDL 220. Diagnoses: Type 2 Diabetes, Hypertension, Hyperlipidemia, Chronic Kidney Disease (end-stage). Symptoms: Fatigue, Increased thirst, Weight gain, Shortness of breath, Edema, Nausea. Medications: Metformin 2500mg bid, Lisinopril 80mg qd, Atorvastatin 160mg qd, Furosemide 120mg qd, Albuterol 2 puffs q4h, Epoetin alfa 12000 units qw, Hemodialysis 3x/week.",
       "labs": {
         "HbA1c": 9.8,
-        "BP_systolic": 165,
-        "BP_diastolic": 110,
-        "eGFR": 40,
-        "LDL": 220
+        "BP": "165/110",
+        "eGFR": 40.0,
+        "LDL": 220.0
       },
       "medications": [
-        "Metformin 2500mg bid",
-        "Lisinopril 80mg qd",
-        "Atorvastatin 160mg qd",
-        "Furosemide 120mg qd",
-        "Albuterol 2 puffs q4h",
-        "Epoetin alfa 12000 units qw",
-        "Hemodialysis 3x/week"
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "2500mg",
+        "80mg",
+        "160mg",
+        "120mg"
       ],
       "diagnoses": [
-        "Type 2 Diabetes",
         "Hypertension",
+        "Chronic Kidney Disease",
         "Hyperlipidemia",
-        "Chronic Kidney Disease"
+        "Type 2 Diabetes"
       ],
       "symptoms": [
+        "Polydipsia",
+        "Nausea",
         "Fatigue",
-        "Increased thirst",
-        "Weight gain",
         "Shortness of breath",
-        "Edema",
-        "Nausea"
+        "Edema"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Hypertension",
+          "Chronic Kidney Disease",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
         "medications": [
           "metformin",
           "lisinopril",
@@ -252,9 +281,7 @@
           "2500mg",
           "80mg",
           "160mg",
-          "120mg",
-          "bid",
-          "qd"
+          "120mg"
         ],
         "lab_values": {
           "HbA1c": 9.8,
@@ -262,7 +289,13 @@
           "eGFR": 40.0,
           "LDL": 220.0
         },
-        "symptoms": [],
+        "symptoms": [
+          "Polydipsia",
+          "Nausea",
+          "Fatigue",
+          "Shortness of breath",
+          "Edema"
+        ],
         "procedures": [],
         "relationships": []
       }

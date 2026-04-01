@@ -1,0 +1,154 @@
+{
+  "patient_id": "P047",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-03-15",
+      "note": "Patient P047 presents with Type 2 Diabetes, Hypertension, and Hyperlipidemia. Patient reports experiencing fatigue, polyuria, and polydipsia. HbA1c is 8.1, BP is 150/95, and LDL is 140. Patient's eGFR is 80. Medications include Metformin 500mg, Lisinopril 10mg, and Atorvastatin 20mg.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 80,
+        "LDL": 140
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "500mg",
+        "10mg",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polydipsia",
+        "Polyuria",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "atorvastatin",
+          "500mg",
+          "10mg",
+          "20mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Polydipsia",
+          "Polyuria",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-12-12",
+      "note": "Patient P047 returns with worsening symptoms. Patient reports increased fatigue, weight gain, and edema. HbA1c is 9.2, BP is 160/100, and LDL is 170. Patient's eGFR has dropped to 60. Medications have been adjusted to Metformin 1000mg, Lisinopril 20mg, and Atorvastatin 40mg. New diagnoses include Mild Chronic Kidney Disease.",
+      "labs": {
+        "HbA1c": 9.2,
+        "BP_systolic": 160,
+        "BP_diastolic": 100,
+        "eGFR": 60,
+        "LDL": 170
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "1000mg",
+        "20mg",
+        "40mg"
+      ],
+      "diagnoses": [
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Edema",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Chronic Kidney Disease"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "atorvastatin",
+          "1000mg",
+          "20mg",
+          "40mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Edema",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-08-14",
+      "note": "Patient P047 returns with worsening kidney function. Patient reports shortness of breath, decreased urine output, and swelling in legs. HbA1c is 8.5, BP is 140/90, and LDL is 120. Patient's eGFR has dropped to 40. Medications have been adjusted to Metformin 1500mg, Lisinopril 30mg, and Atorvastatin 60mg.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 40,
+        "LDL": 120
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "1500mg",
+        "30mg",
+        "60mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Mild Chronic Kidney Disease",
+        "Moderate Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Edema"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "atorvastatin",
+          "1500mg",
+          "30mg",
+          "60mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Shortness of breath",
+          "Edema"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

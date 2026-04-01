@@ -1,0 +1,140 @@
+{
+  "patient_id": "P046",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-01-15",
+      "note": "Patient P046 presented with 6 months history of fatigue and polyuria, diagnosed with Type 2 Diabetes with HbA1c 7.2, Hypertension with BP 140/90, and Hyperlipidemia with LDL 130. Started on Metformin 500mg BID and Lisinopril 10mg OD.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP": "140/90",
+        "LDL": 130.0
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "500mg",
+        "10mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "500mg",
+          "10mg"
+        ],
+        "lab_values": {
+          "HbA1c": 7.2,
+          "BP": "140/90",
+          "LDL": 130.0
+        },
+        "symptoms": [
+          "Polyuria",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-07-20",
+      "note": "Patient P046 returned 6 months post-diagnosis with worsening fatigue and new onset of nocturia. HbA1c increased to 8.1, BP 150/95, and LDL 140. Increased Metformin dose to 1000mg BID and added Simvastatin 20mg OD. Diagnosed with worsening Type 2 Diabetes and Hypertension.",
+      "labs": {
+        "BP": "150/95",
+        "LDL": 140.0
+      },
+      "medications": [
+        "metformin",
+        "simvastatin",
+        "1000mg",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "simvastatin",
+          "1000mg",
+          "20mg"
+        ],
+        "lab_values": {
+          "BP": "150/95",
+          "LDL": 140.0
+        },
+        "symptoms": [
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-03-15",
+      "note": "Patient P046 returned 8 months post-last visit with worsening fatigue, polyuria, and new onset of pedal edema. HbA1c decreased to 7.5, BP 145/90, and eGFR 50. Diagnosed with worsening Type 2 Diabetes, Hypertension, and worsening Chronic Kidney Disease. Started on Furosemide 20mg BID.",
+      "labs": {
+        "BP": "145/90",
+        "eGFR": 50.0
+      },
+      "medications": [
+        "20mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Chronic Kidney Disease",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Edema",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Chronic Kidney Disease",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "20mg"
+        ],
+        "lab_values": {
+          "BP": "145/90",
+          "eGFR": 50.0
+        },
+        "symptoms": [
+          "Polyuria",
+          "Edema",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

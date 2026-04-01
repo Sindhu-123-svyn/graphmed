@@ -1,0 +1,183 @@
+{
+  "patient_id": "P045",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-06-15",
+      "note": "Patient presents with a 2-month history of fatigue and increased thirst. Initial HbA1c of 7.2, suggesting a need for closer monitoring. BP is elevated at 140/90. eGFR is within normal limits at 72. Hyperlipidemia is noted with a LDL of 130. Diagnoses: Type 2 Diabetes, Hypertension, Hyperlipidemia. Symptoms: Fatigue, Increased thirst.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg daily"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polydipsia",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [],
+        "lab_values": {},
+        "symptoms": [
+          "Polydipsia",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2023-01-17",
+      "note": "Patient returns with worsening fatigue and increased frequency of urination. HbA1c has risen to 7.8, indicating a need for medication adjustment. BP remains elevated at 150/95. eGFR has decreased to 60, indicating a potential decline in renal function. LDL remains elevated at 140. Diagnoses: Type 2 Diabetes, Hypertension, Hyperlipidemia, Chronic Kidney Disease. Symptoms: Fatigue, Increased thirst, Increased frequency of urination.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 60,
+        "LDL": 140
+      },
+      "medications": [
+        "Metformin 1000mg BID",
+        "Lisinopril 20mg daily",
+        "Atorvastatin 20mg daily"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Chronic Kidney Disease",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polydipsia",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Chronic Kidney Disease",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [],
+        "lab_values": {},
+        "symptoms": [
+          "Polydipsia",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-08-22",
+      "note": "Patient returns with persistent fatigue and shortness of breath. HbA1c has improved to 7.0, suggesting a positive response to medication adjustment. BP has decreased to 130/80, indicating improved hypertension control. eGFR has increased to 70, indicating stabilization of renal function. LDL remains elevated at 130. Diagnoses: Type 2 Diabetes, Hypertension, Hyperlipidemia, Chronic Kidney Disease. Symptoms: Fatigue, Shortness of breath, Increased thirst.",
+      "labs": {
+        "HbA1c": 7.0,
+        "BP_systolic": 130,
+        "BP_diastolic": 80,
+        "eGFR": 70,
+        "LDL": 130
+      },
+      "medications": [
+        "Metformin 1000mg BID",
+        "Lisinopril 20mg daily",
+        "Atorvastatin 20mg daily",
+        "Aspirin 81mg daily"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Chronic Kidney Disease",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Polydipsia",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Chronic Kidney Disease",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [],
+        "lab_values": {},
+        "symptoms": [
+          "Shortness of breath",
+          "Polydipsia",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2024-06-18",
+      "note": "Patient returns with stable symptoms and improved HbA1c to 6.8, indicating continued positive response to medication. BP remains controlled at 125/75. eGFR has decreased to 65, indicating potential ongoing renal decline. LDL remains elevated at 120. Diagnoses: Type 2 Diabetes, Hypertension, Hyperlipidemia, Chronic Kidney Disease, Coronary Artery Disease (new diagnosis). Symptoms: Fatigue, Shortness of breath, Increased thirst.",
+      "labs": {
+        "HbA1c": 6.8,
+        "BP_systolic": 125,
+        "BP_diastolic": 75,
+        "eGFR": 65,
+        "LDL": 120
+      },
+      "medications": [
+        "Metformin 1000mg BID",
+        "Lisinopril 20mg daily",
+        "Atorvastatin 20mg daily",
+        "Aspirin 81mg daily",
+        "Clopidogrel 75mg daily"
+      ],
+      "diagnoses": [
+        "Hyperlipidemia",
+        "Hypertension",
+        "Coronary Artery Disease",
+        "Type 2 Diabetes",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Polydipsia",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hyperlipidemia",
+          "Hypertension",
+          "Coronary Artery Disease",
+          "Type 2 Diabetes",
+          "Chronic Kidney Disease"
+        ],
+        "medications": [],
+        "lab_values": {},
+        "symptoms": [
+          "Shortness of breath",
+          "Polydipsia",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

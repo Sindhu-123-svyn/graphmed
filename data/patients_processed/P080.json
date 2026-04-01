@@ -1,0 +1,133 @@
+{
+  "patient_id": "P080",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-06-15",
+      "note": "Patient P080 presents with 2 weeks of worsening fatigue and increased thirst. Physical examination reveals a blood pressure of 140/90. HbA1c is elevated at 8.1. The patient has a history of hypertension and hyperlipidemia. Plan: Initiate metformin 500mg BID and atorvastatin 20mg daily.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 75,
+        "LDL": 140
+      },
+      "medications": [
+        "metformin",
+        "atorvastatin",
+        "500mg",
+        "20mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Polydipsia",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia"
+        ],
+        "medications": [
+          "metformin",
+          "atorvastatin",
+          "500mg",
+          "20mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Polydipsia",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2023-02-10",
+      "note": "Patient P080 returns 8 months after initial visit with worsening blood pressure and decreased eGFR. Physical examination reveals a blood pressure of 152/98. HbA1c has decreased to 7.2. The patient reports new onset of lower extremity edema. Plan: Increase metformin to 1000mg BID and initiate losartan 50mg daily.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 152,
+        "BP_diastolic": 98,
+        "eGFR": 60,
+        "LDL": 120
+      },
+      "medications": [
+        "metformin",
+        "losartan",
+        "1000mg",
+        "50mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Edema"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [
+          "metformin",
+          "losartan",
+          "1000mg",
+          "50mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Edema"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-10-05",
+      "note": "Patient P080 returns 8 months after previous visit with continued worsening renal function. Physical examination reveals a blood pressure of 158/102. HbA1c has decreased to 6.8. The patient reports new onset of shortness of breath. Plan: Increase losartan to 100mg daily and initiate furosemide 40mg daily.",
+      "labs": {
+        "HbA1c": 6.8,
+        "BP_systolic": 158,
+        "BP_diastolic": 102,
+        "eGFR": 45,
+        "LDL": 110
+      },
+      "medications": [
+        "losartan",
+        "100mg",
+        "40mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [
+          "losartan",
+          "100mg",
+          "40mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Shortness of breath"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

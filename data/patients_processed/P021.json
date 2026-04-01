@@ -1,0 +1,165 @@
+{
+  "patient_id": "P021",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-06-15",
+      "note": "Patient presents with symptoms of fatigue and increased thirst. HbA1c of 7.2% indicates well-controlled Type 2 Diabetes. Patient is on Metformin 500mg twice daily and Lisinopril for Hypertension. No new diagnoses at this time.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
+      },
+      "medications": [
+        "metformin",
+        "lisinopril",
+        "500mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polydipsia",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "500mg"
+        ],
+        "lab_values": {},
+        "symptoms": [
+          "Polydipsia",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-11-18",
+      "note": "Patient reports worsening fatigue and shortness of breath. New diagnosis of Coronary Artery Disease based on ECG results. HbA1c of 8.1% indicates worsening glycemic control.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP_systolic": 148,
+        "BP_diastolic": 92,
+        "eGFR": 60,
+        "LDL": 140
+      },
+      "medications": [
+        "Metformin 1000mg BID",
+        "Lisinopril 20mg daily",
+        "Atorvastatin 20mg daily"
+      ],
+      "diagnoses": [
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Coronary Artery Disease"
+        ],
+        "medications": [],
+        "lab_values": {},
+        "symptoms": [
+          "Shortness of breath",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-03-15",
+      "note": "Patient reports worsening fatigue and muscle weakness. HbA1c of 7.5% indicates slight improvement in glycemic control. eGFR of 50 indicates worsening kidney function.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP_systolic": 152,
+        "BP_diastolic": 96,
+        "eGFR": 50,
+        "LDL": 120
+      },
+      "medications": [
+        "Metformin 1000mg BID",
+        "Lisinopril 20mg daily",
+        "Atorvastatin 20mg daily",
+        "Furosemide 20mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [],
+        "lab_values": {},
+        "symptoms": [
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-09-01",
+      "note": "Patient reports worsening shortness of breath and swelling in legs. HbA1c of 8.5% indicates worsening glycemic control. eGFR of 40 indicates severe kidney dysfunction.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 158,
+        "BP_diastolic": 100,
+        "eGFR": 40,
+        "LDL": 150
+      },
+      "medications": [
+        "Metformin 1500mg BID",
+        "Lisinopril 40mg daily",
+        "Atorvastatin 40mg daily",
+        "Furosemide 40mg daily",
+        "Erythropoietin 5000 units weekly"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease",
+        "Anemia"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Edema"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [],
+        "lab_values": {},
+        "symptoms": [
+          "Shortness of breath",
+          "Edema"
+        ],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

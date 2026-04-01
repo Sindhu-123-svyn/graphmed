@@ -1,0 +1,176 @@
+{
+  "patient_id": "P013",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-02-15",
+      "note": "Patient presented with a 2-year history of type 2 diabetes, hypertension, and hyperlipidemia. BP is 140/90, HbA1c is 7.2, and LDL is 130. Plan includes starting atorvastatin 20mg and adjusting metformin to 1000mg BID.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
+      },
+      "medications": [
+        "metformin",
+        "atorvastatin",
+        "20mg",
+        "1000mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Fatigue"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "metformin",
+          "atorvastatin",
+          "20mg",
+          "1000mg"
+        ],
+        "lab_values": {},
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-08-15",
+      "note": "Patient returns with worsening hypertension (BP 160/100) and hyperlipidemia (LDL 150). HbA1c has improved slightly to 6.8. Plan includes increasing atorvastatin to 40mg and adding lisinopril 10mg.",
+      "labs": {
+        "BP": "160/100",
+        "LDL": 150.0
+      },
+      "medications": [
+        "lisinopril",
+        "atorvastatin",
+        "40mg",
+        "10mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Fatigue",
+        "Chest pain"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia"
+        ],
+        "medications": [
+          "lisinopril",
+          "atorvastatin",
+          "40mg",
+          "10mg"
+        ],
+        "lab_values": {
+          "BP": "160/100",
+          "LDL": 150.0
+        },
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-02-15",
+      "note": "Patient returns with worsening kidney function (eGFR 52) and hypertension (BP 150/95). HbA1c remains stable at 6.8. Plan includes increasing lisinopril to 20mg and starting furosemide 40mg.",
+      "labs": {
+        "BP": "150/95",
+        "eGFR": 52.0
+      },
+      "medications": [
+        "lisinopril",
+        "20mg",
+        "40mg"
+      ],
+      "diagnoses": [
+        "Hypertension"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Fatigue",
+        "Chest pain",
+        "Swelling"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension"
+        ],
+        "medications": [
+          "lisinopril",
+          "20mg",
+          "40mg"
+        ],
+        "lab_values": {
+          "BP": "150/95",
+          "eGFR": 52.0
+        },
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-10-15",
+      "note": "Patient returns with improving kidney function (eGFR 60) and stable blood pressure. HbA1c has worsened to 7.2. Plan includes increasing metformin to 1500mg BID and adjusting furosemide to 80mg.",
+      "labs": {
+        "eGFR": 60.0
+      },
+      "medications": [
+        "metformin",
+        "1500mg",
+        "80mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes Mellitus",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Fatigue",
+        "Chest pain",
+        "Swelling"
+      ],
+      "extracted": {
+        "conditions": [],
+        "medications": [
+          "metformin",
+          "1500mg",
+          "80mg"
+        ],
+        "lab_values": {
+          "eGFR": 60.0
+        },
+        "symptoms": [],
+        "procedures": [],
+        "relationships": []
+      }
+    }
+  ]
+}

@@ -17,18 +17,24 @@
         "Losartan 50mg daily"
       ],
       "diagnoses": [
-        "Type 2 Diabetes",
-        "Hypertension"
+        "Hypertension",
+        "Type 2 Diabetes"
       ],
       "symptoms": [
-        "Fatigue",
-        "Increased thirst"
+        "Polydipsia",
+        "Fatigue"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Hypertension",
+          "Type 2 Diabetes"
+        ],
         "medications": [],
         "lab_values": {},
-        "symptoms": [],
+        "symptoms": [
+          "Polydipsia",
+          "Fatigue"
+        ],
         "procedures": [],
         "relationships": []
       }
@@ -45,9 +51,7 @@
         "LDL": 160
       },
       "medications": [
-        "Metformin 2000mg daily",
-        "Losartan 100mg daily",
-        "Atorvastatin 20mg daily"
+        "metformin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -55,9 +59,7 @@
         "Hyperlipidemia"
       ],
       "symptoms": [
-        "Fatigue",
-        "Increased thirst",
-        "Increased urination"
+        "Fatigue"
       ],
       "extracted": {
         "conditions": [],
@@ -65,7 +67,9 @@
           "metformin"
         ],
         "lab_values": {},
-        "symptoms": [],
+        "symptoms": [
+          "Fatigue"
+        ],
         "procedures": [],
         "relationships": []
       }
@@ -82,10 +86,7 @@
         "LDL": 140
       },
       "medications": [
-        "Metformin 2000mg daily",
-        "Losartan 150mg daily",
-        "Atorvastatin 20mg daily",
-        "Enalapril 10mg daily"
+        "losartan"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -94,10 +95,7 @@
         "Chronic Kidney Disease"
       ],
       "symptoms": [
-        "Fatigue",
-        "Increased thirst",
-        "Increased urination",
-        "Shortness of breath on exertion"
+        "Shortness of breath"
       ],
       "extracted": {
         "conditions": [],
@@ -105,7 +103,9 @@
           "losartan"
         ],
         "lab_values": {},
-        "symptoms": [],
+        "symptoms": [
+          "Shortness of breath"
+        ],
         "procedures": [],
         "relationships": []
       }
