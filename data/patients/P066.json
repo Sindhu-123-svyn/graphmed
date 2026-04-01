@@ -1,0 +1,89 @@
+{
+  "patient_id": "P066",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-06-15",
+      "note": "Patient presents with new-onset fatigue and weight gain over the past 6 months. Physical examination reveals a BP of 140/90 mmHg and a BMI of 28. Initial lab results show an HbA1c of 7.2%, LDL of 130 mg/dL, and eGFR of 72 mL/min. The patient is diagnosed with Type 2 Diabetes, Hypertension, and Hyperlipidemia. Medications initiated: Metformin 500mg BID, Lisinopril 5mg daily, and Atorvastatin 20mg daily.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 5mg daily",
+        "Atorvastatin 20mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Weight gain"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2023-02-16",
+      "note": "Patient returns with worsening fatigue and shortness of breath over the past 2 months. Physical examination reveals a BP of 150/95 mmHg and a BMI of 29. Lab results show an HbA1c of 8.1%, LDL of 160 mg/dL, and eGFR of 60 mL/min. The patient's eGFR has decreased, indicating worsening kidney function. Medications adjusted: Metformin 1000mg BID, Lisinopril 10mg daily, and Atorvastatin 40mg daily. A new diagnosis of Chronic Kidney Disease is made, and the patient is referred to nephrology.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 60,
+        "LDL": 160
+      },
+      "medications": [
+        "Metformin 1000mg BID",
+        "Lisinopril 10mg daily",
+        "Atorvastatin 40mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Shortness of breath",
+        "Weight gain"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-10-13",
+      "note": "Patient returns with a recent hospitalization for heart failure exacerbation. Physical examination reveals a BP of 160/100 mmHg and a BMI of 30. Lab results show an HbA1c of 9.0%, LDL of 180 mg/dL, and eGFR of 45 mL/min. The patient's kidney function has further declined. Medications adjusted: Metformin 1500mg BID, Lisinopril 20mg daily, and Atorvastatin 80mg daily. A new diagnosis of Coronary Artery Disease is made, and the patient is referred to cardiology for further evaluation.",
+      "labs": {
+        "HbA1c": 9.0,
+        "BP_systolic": 160,
+        "BP_diastolic": 100,
+        "eGFR": 45,
+        "LDL": 180
+      },
+      "medications": [
+        "Metformin 1500mg BID",
+        "Lisinopril 20mg daily",
+        "Atorvastatin 80mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Shortness of breath",
+        "Weight gain",
+        "Chest pain"
+      ]
+    }
+  ]
+}

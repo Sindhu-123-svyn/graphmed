@@ -1,0 +1,113 @@
+{
+  "patient_id": "P026",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-02-15",
+      "note": "New patient with 3-month history of polyuria and polydipsia. Physical examination reveals obesity and hypertension. Plan to initiate metformin and lisinopril.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
+      },
+      "medications": [
+        "Metformin 500mg, Lisinopril 10mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-08-10",
+      "note": "Patient has experienced weight gain and worsening hypertension. Physical examination reveals edema and bilateral wheezing. Plan to adjust lisinopril to 20mg and initiate amlodipine.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 62,
+        "LDL": 150
+      },
+      "medications": [
+        "Metformin 500mg, Lisinopril 20mg, Amlodipine 5mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Edema",
+        "Wheezing"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-02-22",
+      "note": "Patient has experienced worsening kidney function and coronary artery disease symptoms. Plan to initiate simvastatin and enalapril.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 160,
+        "BP_diastolic": 100,
+        "eGFR": 48,
+        "LDL": 180
+      },
+      "medications": [
+        "Metformin 500mg, Lisinopril 20mg, Amlodipine 10mg, Simvastatin 20mg, Enalapril 5mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Edema",
+        "Wheezing",
+        "Angina"
+      ]
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-10-18",
+      "note": "Patient has experienced worsening kidney function and cardiovascular symptoms. Plan to initiate spironolactone and consider dialysis referral.",
+      "labs": {
+        "HbA1c": 9.0,
+        "BP_systolic": 170,
+        "BP_diastolic": 105,
+        "eGFR": 36,
+        "LDL": 200
+      },
+      "medications": [
+        "Metformin 500mg, Lisinopril 20mg, Amlodipine 15mg, Simvastatin 40mg, Enalapril 10mg, Spironolactone 25mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Edema",
+        "Wheezing",
+        "Angina",
+        "Shortness of breath"
+      ]
+    }
+  ]
+}

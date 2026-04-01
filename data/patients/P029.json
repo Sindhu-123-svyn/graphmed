@@ -1,0 +1,152 @@
+{
+  "patient_id": "P029",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-06-15",
+      "note": "Patient presents with new onset hypertension and hyperlipidemia. Initial HbA1c is 7.2, BP is 140/90, LDL is 130, and eGFR is 72. Patient is started on amlodipine for hypertension and simvastatin for hyperlipidemia.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
+      },
+      "medications": [
+        "Amlodipine 10mg",
+        "Simvastatin 20mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Headache",
+        "Fatigue"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-12-20",
+      "note": "Patient reports worsening fatigue and shortness of breath. HbA1c has increased to 8.1, BP is 150/95, LDL is 145, and eGFR is 65. Patient is started on metformin for type 2 diabetes, which was newly diagnosed based on lab results. Amlodipine dose is increased to 10mg twice daily.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 65,
+        "LDL": 145
+      },
+      "medications": [
+        "Amlodipine 10mg twice daily",
+        "Simvastatin 20mg",
+        "Metformin 500mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Headache",
+        "Fatigue",
+        "Shortness of breath"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-06-15",
+      "note": "Patient reports increased shortness of breath and swelling in legs. HbA1c has decreased to 7.5, BP is 155/100, LDL is 140, and eGFR is 55. Patient is started on aspirin for coronary artery disease, which was newly diagnosed based on lab results and patient's medical history. Simvastatin dose is increased to 40mg.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP_systolic": 155,
+        "BP_diastolic": 100,
+        "eGFR": 55,
+        "LDL": 140
+      },
+      "medications": [
+        "Amlodipine 10mg twice daily",
+        "Simvastatin 40mg",
+        "Metformin 1000mg",
+        "Aspirin 81mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Type 2 Diabetes",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Headache",
+        "Fatigue",
+        "Shortness of breath",
+        "Swelling in legs"
+      ]
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-12-20",
+      "note": "Patient reports worsening shortness of breath and chest pain. HbA1c has increased to 8.5, BP is 160/105, LDL is 150, and eGFR is 45. Patient is hospitalized for acute coronary syndrome. Amlodipine dose is increased to 20mg twice daily. Simvastatin dose is increased to 80mg.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 160,
+        "BP_diastolic": 105,
+        "eGFR": 45,
+        "LDL": 150
+      },
+      "medications": [
+        "Amlodipine 20mg twice daily",
+        "Simvastatin 80mg",
+        "Metformin 2000mg",
+        "Aspirin 325mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Type 2 Diabetes",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Headache",
+        "Fatigue",
+        "Shortness of breath",
+        "Chest pain",
+        "Swelling in legs"
+      ]
+    },
+    {
+      "visit_id": "V5",
+      "date": "2024-06-15",
+      "note": "Patient reports stable symptoms. HbA1c has decreased to 7.8, BP is 145/90, LDL is 135, and eGFR is 50. Patient is started on erythropoietin for anemia, which was newly diagnosed based on lab results. Amlodipine dose is decreased to 10mg twice daily.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP_systolic": 145,
+        "BP_diastolic": 90,
+        "eGFR": 50,
+        "LDL": 135
+      },
+      "medications": [
+        "Amlodipine 10mg twice daily",
+        "Simvastatin 40mg",
+        "Metformin 1500mg",
+        "Aspirin 81mg",
+        "Erythropoietin 10,000 units"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Type 2 Diabetes",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease",
+        "Anemia"
+      ],
+      "symptoms": [
+        "Headache",
+        "Fatigue",
+        "Shortness of breath",
+        "Chest pain",
+        "Swelling in legs"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "patient_id": "P036",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-06-15",
+      "note": "Patient presented with symptoms of fatigue and increased thirst. Blood work revealed elevated HbA1c (7.2) and BP (140/90). Diagnoses of Type 2 Diabetes and Hypertension were made. Medications were initiated for HbA1c control (Metformin 500mg BID) and BP control (Lisinopril 10mg QD).",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Increased thirst"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2023-02-20",
+      "note": "Patient reported worsening fatigue and decreased mobility. Blood work revealed increased HbA1c (8.1) and decreased eGFR (60). Medications were adjusted to include Statin (Atorvastatin 20mg QD) for lipid management and ACE inhibitor (Enalapril 5mg BID) for kidney protection. Diagnoses of Chronic Kidney Disease were made.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 60,
+        "LDL": 120
+      },
+      "medications": [
+        "Metformin 1000mg BID",
+        "Lisinopril 20mg QD",
+        "Atorvastatin 20mg QD",
+        "Enalapril 5mg BID"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Decreased mobility",
+        "Swelling in legs"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-10-10",
+      "note": "Patient reported increased shortness of breath and chest pain. Blood work revealed increased HbA1c (9.0) and decreased eGFR (45). Coronary Artery Disease was diagnosed due to the presence of chest pain. Medications were adjusted to include Beta blocker (Metoprolol 50mg BID) and Nitrate (Isosorbide mononitrate 30mg BID) for cardiovascular management.",
+      "labs": {
+        "HbA1c": 9.0,
+        "BP_systolic": 160,
+        "BP_diastolic": 100,
+        "eGFR": 45,
+        "LDL": 110
+      },
+      "medications": [
+        "Metformin 1500mg BID",
+        "Lisinopril 40mg QD",
+        "Atorvastatin 40mg QD",
+        "Enalapril 10mg BID",
+        "Metoprolol 50mg BID",
+        "Isosorbide mononitrate 30mg BID"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Decreased mobility",
+        "Swelling in legs",
+        "Shortness of breath",
+        "Chest pain"
+      ]
+    }
+  ]
+}

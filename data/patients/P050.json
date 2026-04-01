@@ -1,0 +1,119 @@
+{
+  "patient_id": "P050",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-06-15",
+      "note": "Patient presents with new onset of fatigue and increased thirst. Physical examination reveals a blood pressure of 140/90 and a BMI of 30. Labs: HbA1c 7.2, BP_systolic 140, BP_diastolic 90, eGFR 72, LDL 130. Diagnoses: Type 2 Diabetes, Hypertension, Hyperlipidemia. Medications: Metformin 500mg BID, Lisinopril 10mg daily.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Increased thirst"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-11-17",
+      "note": "Patient reports worsening fatigue and increased blood pressure. Labs: HbA1c 8.1, BP_systolic 150, BP_diastolic 95, eGFR 68, LDL 140. Diagnoses: Type 2 Diabetes, Hypertension, Hyperlipidemia, Chronic Kidney Disease. Medications: Metformin 500mg BID, Lisinopril 20mg daily, Atorvastatin 20mg daily.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 68,
+        "LDL": 140
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 20mg daily",
+        "Atorvastatin 20mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Increased thirst",
+        "Shortness of breath"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-05-16",
+      "note": "Patient reports improved energy levels, but increased edema. Labs: HbA1c 7.5, BP_systolic 145, BP_diastolic 90, eGFR 60, LDL 120. Diagnoses: Type 2 Diabetes, Hypertension, Hyperlipidemia, Chronic Kidney Disease. Medications: Metformin 1000mg BID, Lisinopril 20mg daily, Atorvastatin 20mg daily, Furosemide 40mg daily.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP_systolic": 145,
+        "BP_diastolic": 90,
+        "eGFR": 60,
+        "LDL": 120
+      },
+      "medications": [
+        "Metformin 1000mg BID",
+        "Lisinopril 20mg daily",
+        "Atorvastatin 20mg daily",
+        "Furosemide 40mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Increased thirst",
+        "Shortness of breath",
+        "Edema"
+      ]
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-11-21",
+      "note": "Patient reports stable energy levels and decreased edema. Labs: HbA1c 7.8, BP_systolic 140, BP_diastolic 80, eGFR 55, LDL 110. Diagnoses: Type 2 Diabetes, Hypertension, Hyperlipidemia, Chronic Kidney Disease. Medications: Metformin 1000mg BID, Lisinopril 20mg daily, Atorvastatin 20mg daily, Furosemide 40mg daily, Eplerenone 50mg daily.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP_systolic": 140,
+        "BP_diastolic": 80,
+        "eGFR": 55,
+        "LDL": 110
+      },
+      "medications": [
+        "Metformin 1000mg BID",
+        "Lisinopril 20mg daily",
+        "Atorvastatin 20mg daily",
+        "Furosemide 40mg daily",
+        "Eplerenone 50mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Increased thirst",
+        "Shortness of breath",
+        "Edema"
+      ]
+    }
+  ]
+}

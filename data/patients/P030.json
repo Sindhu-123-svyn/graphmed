@@ -1,0 +1,123 @@
+{
+  "patient_id": "P030",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-02-15",
+      "note": "Patient P030 is a 58-year-old male with a history of Type 2 Diabetes, Hypertension, and Hyperlipidemia. He presents with shortness of breath, fatigue, and a 10-pound weight gain over the past 3 months. Physical examination reveals a blood pressure of 140/90 mmHg and a BMI of 29.9. Plan is to start him on a new medication for his diabetes.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 80,
+        "LDL": 150
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Losartan 50mg Daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Fatigue",
+        "Weight gain"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-08-22",
+      "note": "Patient P030 returns 6 months later with worsening shortness of breath and a recent episode of dizziness. His blood pressure is 152/95 mmHg. We refer him to a cardiologist for further evaluation.",
+      "labs": {
+        "HbA1c": 8.2,
+        "BP_systolic": 152,
+        "BP_diastolic": 95,
+        "eGFR": 70,
+        "LDL": 160
+      },
+      "medications": [
+        "Metformin 1000mg BID",
+        "Losartan 100mg Daily",
+        "Atorvastatin 20mg Daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Possible Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Dizziness",
+        "Fatigue"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-02-28",
+      "note": "Patient P030 returns 6 months later with a diagnosis of Coronary Artery Disease confirmed by a cardiac catheterization. His blood pressure is 140/85 mmHg. We initiate a beta-blocker and adjust his medications for his diabetes and hyperlipidemia.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP_systolic": 140,
+        "BP_diastolic": 85,
+        "eGFR": 65,
+        "LDL": 120
+      },
+      "medications": [
+        "Metformin 1500mg BID",
+        "Losartan 100mg Daily",
+        "Atorvastatin 40mg Daily",
+        "Metoprolol 50mg Daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Dizziness",
+        "Fatigue",
+        "Chest pain"
+      ]
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-08-15",
+      "note": "Patient P030 returns 6 months later with a worsening of his kidney function. His blood pressure is 146/92 mmHg. We refer him to a nephrologist for further evaluation and adjust his medications for his diabetes and hypertension.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 146,
+        "BP_diastolic": 92,
+        "eGFR": 55,
+        "LDL": 140
+      },
+      "medications": [
+        "Metformin 2000mg BID",
+        "Losartan 150mg Daily",
+        "Atorvastatin 40mg Daily",
+        "Metoprolol 50mg Daily",
+        "Erythropoietin 10,000 units weekly"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Dizziness",
+        "Fatigue",
+        "Chest pain",
+        "Nausea and vomiting"
+      ]
+    }
+  ]
+}

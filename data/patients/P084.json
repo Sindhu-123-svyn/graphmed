@@ -1,0 +1,164 @@
+{
+  "patient_id": "P084",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-03-15",
+      "note": "Patient presents with complaints of fatigue and increased thirst. Physical examination reveals a blood pressure of 150/95. HbA1c is 8.5. Diagnoses include Type 2 Diabetes, Hypertension, and Hyperlipidemia. Medications include Metformin 500mg BID and Lisinopril 2.5mg daily. Symptoms include polydipsia and polyuria.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 65,
+        "LDL": 160
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 2.5mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Polydipsia",
+        "Polyuria"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-07-25",
+      "note": "Patient returns with complaints of worsening fatigue and shortness of breath. Physical examination reveals a blood pressure of 140/80. HbA1c has improved to 7.8. eGFR has decreased to 58. Diagnoses include Type 2 Diabetes, Hypertension, Hyperlipidemia, and Chronic Kidney Disease. Medications include Metformin 1000mg BID, Lisinopril 5mg daily, and Simvastatin 40mg daily. Symptoms include dyspnea and orthopnea.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP_systolic": 140,
+        "BP_diastolic": 80,
+        "eGFR": 58,
+        "LDL": 140
+      },
+      "medications": [
+        "Metformin 1000mg BID",
+        "Lisinopril 5mg daily",
+        "Simvastatin 40mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Polydipsia",
+        "Polyuria",
+        "Dyspnea",
+        "Orthopnea"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-01-10",
+      "note": "Patient returns with complaints of worsening shortness of breath and fatigue. Physical examination reveals a blood pressure of 130/70. HbA1c has worsened to 8.2. eGFR has further decreased to 52. Diagnoses include Type 2 Diabetes, Hypertension, Hyperlipidemia, Chronic Kidney Disease, and Coronary Artery Disease. Medications include Metformin 1500mg BID, Lisinopril 10mg daily, Simvastatin 80mg daily, and Aspirin 81mg daily. Symptoms include dyspnea, orthopnea, and chest pain.",
+      "labs": {
+        "HbA1c": 8.2,
+        "BP_systolic": 130,
+        "BP_diastolic": 70,
+        "eGFR": 52,
+        "LDL": 120
+      },
+      "medications": [
+        "Metformin 1500mg BID",
+        "Lisinopril 10mg daily",
+        "Simvastatin 80mg daily",
+        "Aspirin 81mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Polydipsia",
+        "Polyuria",
+        "Dyspnea",
+        "Orthopnea",
+        "Chest pain"
+      ]
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-07-05",
+      "note": "Patient returns with complaints of worsening fatigue and shortness of breath. Physical examination reveals a blood pressure of 125/65. HbA1c has improved to 7.5. eGFR has slightly improved to 60. Diagnoses include Type 2 Diabetes, Hypertension, Hyperlipidemia, Chronic Kidney Disease, Coronary Artery Disease, and congestive heart failure. Medications include Metformin 2000mg BID, Lisinopril 20mg daily, Simvastatin 100mg daily, Aspirin 81mg daily, and Furosemide 40mg daily. Symptoms include dyspnea, orthopnea, and peripheral edema.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP_systolic": 125,
+        "BP_diastolic": 65,
+        "eGFR": 60,
+        "LDL": 100
+      },
+      "medications": [
+        "Metformin 2000mg BID",
+        "Lisinopril 20mg daily",
+        "Simvastatin 100mg daily",
+        "Aspirin 81mg daily",
+        "Furosemide 40mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease",
+        "Congestive Heart Failure"
+      ],
+      "symptoms": [
+        "Polydipsia",
+        "Polyuria",
+        "Dyspnea",
+        "Orthopnea",
+        "Chest pain",
+        "Peripheral edema"
+      ]
+    },
+    {
+      "visit_id": "V5",
+      "date": "2024-01-25",
+      "note": "Patient returns with complaints of worsening fatigue and shortness of breath. Physical examination reveals a blood pressure of 120/70. HbA1c has worsened to 8.5. eGFR has further decreased to 48. Diagnoses include Type 2 Diabetes, Hypertension, Hyperlipidemia, Chronic Kidney Disease, Coronary Artery Disease, Congestive Heart Failure, and end-stage renal disease. Medications include Metformin 3000mg BID, Lisinopril 30mg daily, Simvastatin 120mg daily, Aspirin 81mg daily, Furosemide 60mg daily, and Epogen 10,000 units weekly. Symptoms include dyspnea, orthopnea, chest pain, and anemia.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 120,
+        "BP_diastolic": 70,
+        "eGFR": 48,
+        "LDL": 110
+      },
+      "medications": [
+        "Metformin 3000mg BID",
+        "Lisinopril 30mg daily",
+        "Simvastatin 120mg daily",
+        "Aspirin 81mg daily",
+        "Furosemide 60mg daily",
+        "Epogen 10,000 units weekly"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease",
+        "Congestive Heart Failure",
+        "End-Stage Renal Disease"
+      ],
+      "symptoms": [
+        "Polydipsia",
+        "Polyuria",
+        "Dyspnea",
+        "Orthopnea",
+        "Chest pain",
+        "Peripheral edema",
+        "Anemia"
+      ]
+    }
+  ]
+}

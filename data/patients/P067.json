@@ -1,0 +1,155 @@
+{
+  "patient_id": "P067",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-03-01",
+      "note": "Patient P067 presented with a 6-month history of fatigue and polyuria, diagnosed with Type 2 Diabetes and Hypertension. Started on Metformin 500mg BID and Lisinopril 10mg daily.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 140
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-08-01",
+      "note": "Patient P067 returned with a worsening of symptoms, with increased fatigue and pedal edema. HbA1c has increased to 8.2, and BP remains elevated at 150/95. ECG shows left ventricular hypertrophy.",
+      "labs": {
+        "HbA1c": 8.2,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 68,
+        "LDL": 160
+      },
+      "medications": [
+        "Metformin 1000mg BID",
+        "Lisinopril 20mg daily",
+        "Atorvastatin 20mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Pedal edema"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-01-01",
+      "note": "Patient P067's HbA1c has improved to 7.5 with increased doses of Metformin, but BP remains elevated at 155/100. New symptom of chest pain.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP_systolic": 155,
+        "BP_diastolic": 100,
+        "eGFR": 60,
+        "LDL": 140
+      },
+      "medications": [
+        "Metformin 1500mg BID",
+        "Lisinopril 30mg daily",
+        "Atorvastatin 20mg daily",
+        "Aspirin 81mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Pedal edema",
+        "Chest pain"
+      ]
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-07-01",
+      "note": "Patient P067's eGFR has worsened to 45, indicating Chronic Kidney Disease. BP remains elevated at 160/105. New symptom of shortness of breath.",
+      "labs": {
+        "HbA1c": 8.0,
+        "BP_systolic": 160,
+        "BP_diastolic": 105,
+        "eGFR": 45,
+        "LDL": 120
+      },
+      "medications": [
+        "Metformin 1500mg BID",
+        "Lisinopril 40mg daily",
+        "Atorvastatin 20mg daily",
+        "Aspirin 81mg daily",
+        "Furosemide 20mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Pedal edema",
+        "Chest pain",
+        "Shortness of breath"
+      ]
+    },
+    {
+      "visit_id": "V5",
+      "date": "2024-01-01",
+      "note": "Patient P067's HbA1c has worsened to 8.5, indicating poor glycemic control. BP remains elevated at 165/110. New symptom of numbness in fingers.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 165,
+        "BP_diastolic": 110,
+        "eGFR": 38,
+        "LDL": 180
+      },
+      "medications": [
+        "Metformin 2000mg BID",
+        "Lisinopril 60mg daily",
+        "Atorvastatin 40mg daily",
+        "Aspirin 81mg daily",
+        "Furosemide 40mg daily",
+        "Lisinopril/valsartan 320/25mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease",
+        "Peripheral neuropathy"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Pedal edema",
+        "Chest pain",
+        "Shortness of breath",
+        "Numbness in fingers"
+      ]
+    }
+  ]
+}

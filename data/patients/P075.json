@@ -1,0 +1,98 @@
+{
+  "patient_id": "P075",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-09-15",
+      "note": "Patient presents with new onset Type 2 Diabetes, Hypertension and Hyperlipidemia. HbA1c is slightly elevated, BP is elevated but well-controlled, and LDL is high. The patient is started on Metformin, Lisinopril, and Atorvastatin.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP_systolic": 145,
+        "BP_diastolic": 85,
+        "eGFR": 80,
+        "LDL": 150
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg OD",
+        "Atorvastatin 20mg OD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Fatigue"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2023-03-14",
+      "note": "Patient returns with worsening symptoms and elevated lab values. HbA1c has increased, BP remains elevated, and LDL is slightly higher. The patient is started on Empagliflozin and Simvastatin.",
+      "labs": {
+        "HbA1c": 8.2,
+        "BP_systolic": 155,
+        "BP_diastolic": 90,
+        "eGFR": 65,
+        "LDL": 160
+      },
+      "medications": [
+        "Metformin 1000mg BID",
+        "Lisinopril 20mg OD",
+        "Atorvastatin 20mg OD",
+        "Empagliflozin 10mg OD",
+        "Simvastatin 40mg OD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Fatigue",
+        "Swelling in legs"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-09-12",
+      "note": "Patient returns with elevated creatinine and worsening kidney function. HbA1c has decreased slightly, BP remains elevated, and LDL is slightly lower. The patient is started on Losartan and amlodipine.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 55,
+        "LDL": 140
+      },
+      "medications": [
+        "Metformin 1000mg BID",
+        "Lisinopril 20mg OD",
+        "Atorvastatin 20mg OD",
+        "Empagliflozin 10mg OD",
+        "Simvastatin 40mg OD",
+        "Losartan 50mg OD",
+        "Amlodipine 10mg OD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Fatigue",
+        "Swelling in legs",
+        "Chest pain"
+      ]
+    }
+  ]
+}

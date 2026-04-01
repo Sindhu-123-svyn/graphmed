@@ -1,0 +1,158 @@
+{
+  "patient_id": "P054",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-06-15",
+      "note": "Patient presents with hypertension, type 2 diabetes, and hyperlipidemia. Blood pressure is 145/90 mmHg, HbA1c is 7.5, and LDL is 135 mg/dL. The patient is started on metformin 500mg twice daily, lisinopril 10mg daily, and atorvastatin 20mg daily.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP_systolic": 145,
+        "BP_diastolic": 90,
+        "eGFR": 80,
+        "LDL": 135
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg daily",
+        "Atorvastatin 20mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-12-20",
+      "note": "Follow-up visit to assess glycemic control and blood pressure. HbA1c has decreased to 7.0, but blood pressure has increased to 150/95 mmHg. LDL has decreased to 120 mg/dL. The patient is started on sitagliptin 100mg daily for diabetes.",
+      "labs": {
+        "HbA1c": 7.0,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 80,
+        "LDL": 120
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg daily",
+        "Atorvastatin 20mg daily",
+        "Sitagliptin 100mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease (new diagnosis based on increased blood pressure)"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Chest pain"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-06-15",
+      "note": "Follow-up visit to assess glycemic control, blood pressure, and lipid profile. HbA1c has increased to 7.8, but blood pressure has decreased to 140/90 mmHg. LDL has increased to 145 mg/dL. The patient is started on ramipril 10mg daily for hypertension.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 70,
+        "LDL": 145
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Ramipril 10mg daily",
+        "Atorvastatin 40mg daily",
+        "Sitagliptin 100mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Chest pain",
+        "Edema"
+      ]
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-12-20",
+      "note": "Follow-up visit to assess glycemic control, blood pressure, and kidney function. HbA1c has decreased to 7.2, but eGFR has decreased to 60. The patient is started on sacubitril/valsartan 200/12.5mg daily for heart failure.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 135,
+        "BP_diastolic": 85,
+        "eGFR": 60,
+        "LDL": 130
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Ramipril 10mg daily",
+        "Atorvastatin 40mg daily",
+        "Sitagliptin 100mg daily",
+        "Sacubitril/valsartan 200/12.5mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease (new diagnosis based on decreased eGFR)"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Chest pain",
+        "Edema",
+        "Shortness of breath"
+      ]
+    },
+    {
+      "visit_id": "V5",
+      "date": "2024-06-15",
+      "note": "Follow-up visit to assess glycemic control, blood pressure, and kidney function. HbA1c has increased to 7.9, but eGFR has stabilized at 65. The patient is started on sodium-glucose cotransporter 2 (SGLT2) inhibitor, dapagliflozin 10mg daily, for diabetes.",
+      "labs": {
+        "HbA1c": 7.9,
+        "BP_systolic": 130,
+        "BP_diastolic": 80,
+        "eGFR": 65,
+        "LDL": 140
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Ramipril 10mg daily",
+        "Atorvastatin 40mg daily",
+        "Sitagliptin 100mg daily",
+        "Sacubitril/valsartan 200/12.5mg daily",
+        "Dapagliflozin 10mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Chest pain",
+        "Edema",
+        "Shortness of breath",
+        "Weight loss"
+      ]
+    }
+  ]
+}

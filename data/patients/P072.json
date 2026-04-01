@@ -1,0 +1,84 @@
+{
+  "patient_id": "P072",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-06-15",
+      "note": "Initial visit for patient with hypertension and hyperlipidemia. Patient reports headaches and fatigue. BP 140/90, HbA1c 7.2, LDL 130. Started on Amlodipine 5mg and Atorvastatin 20mg.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
+      },
+      "medications": [
+        "Amlodipine 5mg",
+        "Atorvastatin 20mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Headaches",
+        "Fatigue"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2023-01-20",
+      "note": "Follow-up visit 6 months after initial visit. Patient reports decreased headaches, but increased fatigue. BP 145/95, HbA1c 7.8, LDL 120. BP is elevated, so increased Amlodipine to 10mg. Started on Metformin 500mg for new diagnosis of Type 2 Diabetes.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP_systolic": 145,
+        "BP_diastolic": 95,
+        "eGFR": 68,
+        "LDL": 120
+      },
+      "medications": [
+        "Amlodipine 10mg",
+        "Atorvastatin 20mg",
+        "Metformin 500mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Nausea"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-07-25",
+      "note": "Follow-up visit 6 months after V2. Patient reports increased fatigue and swelling in legs. BP 150/100, HbA1c 8.2, LDL 110, eGFR 58. BP and eGFR are concerning for worsening kidney function. Started on Lisinopril 2.5mg to protect kidneys. Increased Metformin to 1000mg and Atorvastatin to 40mg.",
+      "labs": {
+        "HbA1c": 8.2,
+        "BP_systolic": 150,
+        "BP_diastolic": 100,
+        "eGFR": 58,
+        "LDL": 110
+      },
+      "medications": [
+        "Amlodipine 10mg",
+        "Lisinopril 2.5mg",
+        "Atorvastatin 40mg",
+        "Metformin 1000mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Type 2 Diabetes",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Swelling in legs",
+        "Shortness of breath"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "patient_id": "P019",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-06-15",
+      "note": "Patient presents with symptoms of fatigue, polyuria, and polydipsia. BP 140/90, HbA1c 7.5. Diagnoses: Type 2 Diabetes, Hypertension. Medications: Metformin 500mg, Lisinopril 2.5mg. Symptoms: fatigue, polyuria, polydipsia.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 78,
+        "LDL": 140
+      },
+      "medications": [
+        "Metformin 500mg",
+        "Lisinopril 2.5mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension"
+      ],
+      "symptoms": [
+        "fatigue",
+        "polyuria",
+        "polydipsia"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2023-02-20",
+      "note": "Patient reports worsening fatigue and shortness of breath. BP 150/95, HbA1c 8.1. Diagnoses: Type 2 Diabetes, Hypertension, Hyperlipidemia. Medications: Metformin 1000mg, Lisinopril 5mg, Atorvastatin 20mg. Symptoms: fatigue, shortness of breath, polyuria, polydipsia.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 75,
+        "LDL": 160
+      },
+      "medications": [
+        "Metformin 1000mg",
+        "Lisinopril 5mg",
+        "Atorvastatin 20mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "fatigue",
+        "shortness of breath",
+        "polyuria",
+        "polydipsia"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-08-24",
+      "note": "Patient's HbA1c improves with diet and exercise. BP 130/80, HbA1c 6.8. Diagnoses: Type 2 Diabetes, Hypertension, Hyperlipidemia. Medications: Metformin 500mg, Lisinopril 2.5mg, Atorvastatin 10mg. Symptoms: fatigue, polyuria, polydipsia.",
+      "labs": {
+        "HbA1c": 6.8,
+        "BP_systolic": 130,
+        "BP_diastolic": 80,
+        "eGFR": 80,
+        "LDL": 120
+      },
+      "medications": [
+        "Metformin 500mg",
+        "Lisinopril 2.5mg",
+        "Atorvastatin 10mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "fatigue",
+        "polyuria",
+        "polydipsia"
+      ]
+    },
+    {
+      "visit_id": "V4",
+      "date": "2024-02-01",
+      "note": "Patient experiences acute kidney injury and develops edema. BP 160/100, HbA1c 7.3. Diagnoses: Type 2 Diabetes, Hypertension, Hyperlipidemia, Chronic Kidney Disease. Medications: Metformin 1000mg, Lisinopril 10mg, Atorvastatin 20mg, Furosemide 40mg. Symptoms: fatigue, shortness of breath, polyuria, polydipsia, edema.",
+      "labs": {
+        "HbA1c": 7.3,
+        "BP_systolic": 160,
+        "BP_diastolic": 100,
+        "eGFR": 60,
+        "LDL": 150
+      },
+      "medications": [
+        "Metformin 1000mg",
+        "Lisinopril 10mg",
+        "Atorvastatin 20mg",
+        "Furosemide 40mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "fatigue",
+        "shortness of breath",
+        "polyuria",
+        "polydipsia",
+        "edema"
+      ]
+    }
+  ]
+}

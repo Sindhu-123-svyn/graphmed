@@ -1,0 +1,86 @@
+{
+  "patient_id": "P025",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-03-01",
+      "note": "Patient P025 initially presented with hypertension and hyperlipidemia. The patient's blood pressure is slightly elevated, and the LDL level is high. The patient is advised to start with a statin and to monitor blood pressure closely. The patient is also advised to follow a strict diet and exercise regimen to improve blood sugar control.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP_systolic": 150,
+        "BP_diastolic": 90,
+        "eGFR": 75,
+        "LDL": 140
+      },
+      "medications": [
+        "Atorvastatin 20mg daily",
+        "Metoprolol 25mg twice daily"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Headache",
+        "Fatigue"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2023-09-01",
+      "note": "Patient P025 presented with worsening hypertension and hyperlipidemia. The patient's blood pressure is significantly elevated, and the LDL level is high despite being on statin therapy. The patient's eGFR is also slightly decreased. The patient is advised to start with a diuretic and to intensify the diet and exercise regimen. The patient is also advised to monitor blood sugar levels closely.",
+      "labs": {
+        "HbA1c": 8.2,
+        "BP_systolic": 160,
+        "BP_diastolic": 95,
+        "eGFR": 68,
+        "LDL": 160
+      },
+      "medications": [
+        "Atorvastatin 40mg daily",
+        "Metoprolol 50mg twice daily",
+        "Hydrochlorothiazide 25mg daily"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Headache",
+        "Fatigue",
+        "Chest pain"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2024-05-01",
+      "note": "Patient P025 presented with worsening hypertension and hyperlipidemia. The patient's blood pressure is significantly elevated, and the LDL level is still high despite being on statin therapy. The patient's eGFR is also decreased. The patient is advised to start with an ACE inhibitor and to intensify the diet and exercise regimen. The patient is also advised to monitor blood sugar levels closely and to consider coronary artery disease.",
+      "labs": {
+        "HbA1c": 9.0,
+        "BP_systolic": 165,
+        "BP_diastolic": 100,
+        "eGFR": 62,
+        "LDL": 170
+      },
+      "medications": [
+        "Atorvastatin 80mg daily",
+        "Metoprolol 50mg twice daily",
+        "Hydrochlorothiazide 25mg daily",
+        "Lisinopril 10mg daily"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Headache",
+        "Fatigue",
+        "Chest pain",
+        "Shortness of breath"
+      ]
+    }
+  ]
+}

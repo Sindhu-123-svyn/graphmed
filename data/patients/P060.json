@@ -1,0 +1,96 @@
+{
+  "patient_id": "P060",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2023-03-01",
+      "note": "Patient P060 presented with a 2-year history of Type 2 Diabetes, Hypertension, and Hyperlipidemia. Current HbA1c is 7.2, BP is 140/90, and LDL is 130. The patient is on Metformin 500mg twice daily, Lisinopril 10mg once daily, and Atorvastatin 20mg once daily. The patient reports fatigue and occasional chest pain. Diagnoses include Type 2 Diabetes, Hypertension, Hyperlipidemia, and possible Coronary Artery Disease. Symptoms include fatigue, occasional chest pain, and weight gain.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
+      },
+      "medications": [
+        "Metformin 500mg twice daily",
+        "Lisinopril 10mg once daily",
+        "Atorvastatin 20mg once daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Possible Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Occasional chest pain",
+        "Weight gain"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2024-01-15",
+      "note": "Patient P060 returned with worsening symptoms of fatigue, chest pain, and weight gain. Current HbA1c is 8.1, BP is 150/95, and LDL is 160. The patient's eGFR has decreased to 60 due to progressive CKD. The patient is being started on SGLT2 inhibitor Dapagliflozin 10mg once daily to improve glycemic control. The patient's lisinopril dose has been increased to 20mg once daily to control blood pressure. Diagnoses include Type 2 Diabetes, Hypertension, Hyperlipidemia, Coronary Artery Disease, and Chronic Kidney Disease. Symptoms include fatigue, chest pain, weight gain, and decreased urine output.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 60,
+        "LDL": 160
+      },
+      "medications": [
+        "Metformin 500mg twice daily",
+        "Dapagliflozin 10mg once daily",
+        "Lisinopril 20mg once daily",
+        "Atorvastatin 20mg once daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Chest pain",
+        "Weight gain",
+        "Decreased urine output"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2024-09-01",
+      "note": "Patient P060 returned with worsening symptoms of fatigue, chest pain, and decreased urine output. Current HbA1c is 8.5, BP is 155/100, and LDL is 180. The patient's eGFR has decreased to 50 due to progressive CKD. The patient's lisinopril dose has been increased to 40mg once daily to control blood pressure. The patient's atorvastatin dose has been adjusted to 40mg once daily to control LDL. The patient's Dapagliflozin dose has been increased to 20mg once daily to improve glycemic control. Diagnoses include Type 2 Diabetes, Hypertension, Hyperlipidemia, Coronary Artery Disease, and End-stage Renal Disease. Symptoms include fatigue, chest pain, weight gain, decreased urine output, and shortness of breath.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 155,
+        "BP_diastolic": 100,
+        "eGFR": 50,
+        "LDL": 180
+      },
+      "medications": [
+        "Metformin 500mg twice daily",
+        "Dapagliflozin 20mg once daily",
+        "Lisinopril 40mg once daily",
+        "Atorvastatin 40mg once daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "End-stage Renal Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Chest pain",
+        "Weight gain",
+        "Decreased urine output",
+        "Shortness of breath"
+      ]
+    }
+  ]
+}

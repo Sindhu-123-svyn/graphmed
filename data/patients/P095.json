@@ -1,0 +1,86 @@
+{
+  "patient_id": "P095",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-07-15",
+      "note": "Patient presents with hypertension and hyperlipidemia. BP 140/90 mmHg, LDL 130 mg/dL. Prescribed Lisinopril 20mg and Atorvastatin 40mg. Diagnoses: Hypertension, Hyperlipidemia.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
+      },
+      "medications": [
+        "Lisinopril 20mg",
+        "Atorvastatin 40mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Headache",
+        "Palpitations"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2023-01-12",
+      "note": "Patient returns with worsening hypertension. BP 160/100 mmHg, LDL 140 mg/dL. eGFR decreased to 60. Prescribed Lisinopril 40mg due to lab values. Diagnoses: Hypertension, Hyperlipidemia, Stage 1 CKD. New symptoms: Fatigue, Shortness of breath.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP_systolic": 160,
+        "BP_diastolic": 100,
+        "eGFR": 60,
+        "LDL": 140
+      },
+      "medications": [
+        "Lisinopril 40mg",
+        "Atorvastatin 40mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Stage 1 CKD"
+      ],
+      "symptoms": [
+        "Headache",
+        "Palpitations",
+        "Fatigue",
+        "Shortness of breath"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-07-11",
+      "note": "Patient returns with improved BP and LDL, but worsening eGFR to 45. HbA1c decreased to 6.8. Prescribed Losartan 50mg to add coverage for CKD. Diagnoses: Hypertension, Hyperlipidemia, Stage 2 CKD. New symptoms: Swelling in legs, Nocturia.",
+      "labs": {
+        "HbA1c": 6.8,
+        "BP_systolic": 140,
+        "BP_diastolic": 80,
+        "eGFR": 45,
+        "LDL": 120
+      },
+      "medications": [
+        "Lisinopril 40mg",
+        "Atorvastatin 40mg",
+        "Losartan 50mg"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
+        "Stage 2 CKD"
+      ],
+      "symptoms": [
+        "Headache",
+        "Palpitations",
+        "Fatigue",
+        "Shortness of breath",
+        "Swelling in legs",
+        "Nocturia"
+      ]
+    }
+  ]
+}

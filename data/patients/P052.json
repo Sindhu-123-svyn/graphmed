@@ -1,0 +1,87 @@
+{
+  "patient_id": "P052",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-04-20",
+      "note": "The patient is a 65-year-old male with a history of Type 2 Diabetes, Hypertension, and Hyperlipidemia. He presents with symptoms of fatigue and decreased exercise tolerance. Physical examination reveals a blood pressure of 140/90 mmHg and a pulse of 80 bpm. The patient's HbA1c is elevated at 7.8%, and his LDL is 145 mg/dL. We will start him on a statin and adjust his metformin dose to improve glycemic control.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 80,
+        "LDL": 145
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Atorvastatin 20mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Decreased exercise tolerance"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2023-02-01",
+      "note": "The patient returns for follow-up, and his symptoms have worsened with increased fatigue and shortness of breath. His blood pressure remains elevated at 155/95 mmHg, and his HbA1c has increased to 9.2%. His LDL has also worsened to 160 mg/dL. We will start him on an ACE inhibitor and consider a referral to cardiology for further evaluation of his symptoms.",
+      "labs": {
+        "HbA1c": 9.2,
+        "BP_systolic": 155,
+        "BP_diastolic": 95,
+        "eGFR": 60,
+        "LDL": 160
+      },
+      "medications": [
+        "Metformin 1000mg BID",
+        "Atorvastatin 40mg daily",
+        "Lisinopril 10mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Shortness of breath",
+        "Decreased exercise tolerance"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-10-10",
+      "note": "The patient returns for follow-up, and his symptoms have improved with decreased fatigue and shortness of breath. His blood pressure has improved to 130/80 mmHg, and his HbA1c has decreased to 7.5%. His LDL has also decreased to 120 mg/dL. We will continue to monitor his kidney function closely, as his eGFR has decreased to 50.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP_systolic": 130,
+        "BP_diastolic": 80,
+        "eGFR": 50,
+        "LDL": 120
+      },
+      "medications": [
+        "Metformin 1000mg BID",
+        "Atorvastatin 40mg daily",
+        "Lisinopril 20mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Decreased fatigue",
+        "Shortness of breath",
+        "Decreased exercise tolerance"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "patient_id": "P009",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-06-15",
+      "note": "Patient presents with Type 2 Diabetes, Hypertension, and Hyperlipidemia. HbA1c is 7.2%, BP 140/90, and LDL is 130. Medications include Metformin 500mg BID and Lisinopril 10mg OD. Diagnoses include Type 2 Diabetes, Hypertension, and Hyperlipidemia. Symptoms include polyuria, polydipsia, and fatigue.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg OD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "polyuria",
+        "polydipsia",
+        "fatigue"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2023-02-20",
+      "note": "Patient returns with worsening hypertension and hyperlipidemia. HbA1c is 7.8%, BP 150/95, and LDL is 145. Medications are adjusted to include Atorvastatin 20mg OD. Diagnoses remain the same, but symptoms include edema and shortness of breath.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 68,
+        "LDL": 145
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg OD",
+        "Atorvastatin 20mg OD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "polyuria",
+        "polydipsia",
+        "fatigue",
+        "edema",
+        "shortness of breath"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-10-15",
+      "note": "Patient returns with worsening kidney function and coronary artery disease. HbA1c is 8.2%, BP 160/100, and LDL is 155. Medications are adjusted to include Furosemide 40mg BID and Aspirin 81mg OD. Diagnoses now include Chronic Kidney Disease. Symptoms include fatigue, edema, and shortness of breath.",
+      "labs": {
+        "HbA1c": 8.2,
+        "BP_systolic": 160,
+        "BP_diastolic": 100,
+        "eGFR": 45,
+        "LDL": 155
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg OD",
+        "Atorvastatin 20mg OD",
+        "Furosemide 40mg BID",
+        "Aspirin 81mg OD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "polyuria",
+        "polydipsia",
+        "fatigue",
+        "edema",
+        "shortness of breath"
+      ]
+    }
+  ]
+}

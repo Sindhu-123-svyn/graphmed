@@ -1,0 +1,139 @@
+{
+  "patient_id": "P016",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2023-01-15",
+      "note": "Initial visit for new patient with complaints of fatigue and weight loss. Physical examination reveals a BP of 140/90 and a BMI of 28. Diagnosis of Type 2 Diabetes and Hyperlipidemia. Start medications Metformin 500mg BID and Atorvastatin 20mg QD.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Atorvastatin 20mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Weight loss"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2023-05-20",
+      "note": "Follow-up visit 4 months after initial diagnosis. Patient reports improvement in fatigue but still experiencing weight loss. Physical examination reveals a BP of 138/92. Lab results show worsening HbA1c to 8.1. Diagnosis of Hypertension added. Increase Metformin dose to 1000mg BID and start Lisinopril 10mg QD.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP_systolic": 138,
+        "BP_diastolic": 92,
+        "eGFR": 68,
+        "LDL": 125
+      },
+      "medications": [
+        "Metformin 1000mg BID",
+        "Atorvastatin 20mg QD",
+        "Lisinopril 10mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hyperlipidemia",
+        "Hypertension"
+      ],
+      "symptoms": [
+        "Weight loss",
+        "Edema"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-11-22",
+      "note": "Follow-up visit 6 months after V2. Patient reports continued weight loss and edema. Physical examination reveals a BP of 145/98 and a BMI of 30. Lab results show worsening eGFR to 58. Diagnosis of Chronic Kidney Disease added. Increase Lisinopril dose to 20mg QD and start Furosemide 40mg BID.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 145,
+        "BP_diastolic": 98,
+        "eGFR": 58,
+        "LDL": 120
+      },
+      "medications": [
+        "Metformin 1000mg BID",
+        "Atorvastatin 20mg QD",
+        "Lisinopril 20mg QD",
+        "Furosemide 40mg BID"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hyperlipidemia",
+        "Hypertension",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Weight loss",
+        "Edema",
+        "Shortness of breath"
+      ]
+    },
+    {
+      "visit_id": "V4",
+      "date": "2024-02-24",
+      "note": "Follow-up visit 3 months after V3. Patient reports improvement in edema and shortness of breath. Physical examination reveals a BP of 142/95. Lab results show improvement in eGFR to 62. Dose adjustment of Furosemide to 20mg BID.",
+      "labs": {
+        "HbA1c": 8.2,
+        "BP_systolic": 142,
+        "BP_diastolic": 95,
+        "eGFR": 62,
+        "LDL": 115
+      },
+      "medications": [
+        "Metformin 1000mg BID",
+        "Atorvastatin 20mg QD",
+        "Lisinopril 20mg QD",
+        "Furosemide 20mg BID"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hyperlipidemia",
+        "Hypertension",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Weight loss",
+        "Shortness of breath"
+      ]
+    },
+    {
+      "visit_id": "V5",
+      "date": "2024-08-26",
+      "note": "Follow-up visit 6 months after V4. Patient reports continued weight loss but no shortness of breath. Physical examination reveals a BP of 135/80. Lab results show improvement in HbA1c to 7.8 and LDL to 100. Consideration of statin intensification.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP_systolic": 135,
+        "BP_diastolic": 80,
+        "eGFR": 65,
+        "LDL": 100
+      },
+      "medications": [
+        "Metformin 1000mg BID",
+        "Atorvastatin 40mg QD",
+        "Lisinopril 20mg QD",
+        "Furosemide 20mg BID"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hyperlipidemia",
+        "Hypertension",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Weight loss"
+      ]
+    }
+  ]
+}

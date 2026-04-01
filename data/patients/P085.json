@@ -1,0 +1,91 @@
+{
+  "patient_id": "P085",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-02-15",
+      "note": "Patient presents with symptoms of fatigue, polyuria, and polydipsia. Initial HbA1c of 7.2 indicates poorly controlled Type 2 Diabetes. BP is elevated at 140/90. Started on Metformin 500mg BID and Lisinopril 10mg QD for hypertension.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes Mellitus",
+        "Hypertension"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Polydipsia"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-09-20",
+      "note": "Patient returns with worsening symptoms of fatigue and shortness of breath. HbA1c has increased to 8.1, indicating worsening glycemic control. BP remains elevated. eGFR has decreased to 60, suggesting mild kidney dysfunction. Started on Sitagliptin 100mg QD to improve glycemic control and Simvastatin 20mg QD for hyperlipidemia.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 60,
+        "LDL": 160
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg QD",
+        "Sitagliptin 100mg QD",
+        "Simvastatin 20mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes Mellitus",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Shortness of breath",
+        "Polyuria",
+        "Polydipsia"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-05-10",
+      "note": "Patient returns with worsening kidney function, with eGFR decreased to 45. HbA1c has improved to 7.5 with initiation of Sitagliptin. BP remains elevated. Started on Aliskiren 300mg QD to further reduce BP and ACE inhibitors.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP_systolic": 155,
+        "BP_diastolic": 100,
+        "eGFR": 45,
+        "LDL": 140
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Sitagliptin 100mg QD",
+        "Simvastatin 20mg QD",
+        "Lisinopril 10mg QD",
+        "Aliskiren 300mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes Mellitus",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Shortness of breath",
+        "Polyuria",
+        "Polydipsia",
+        "Edema"
+      ]
+    }
+  ]
+}

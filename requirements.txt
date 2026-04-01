@@ -1,0 +1,48 @@
+# Core ML/AI
+langchain==0.2.0
+langgraph==0.0.20
+langchain-groq==0.1.0
+chromadb==0.4.22
+sentence-transformers==2.2.2
+transformers==4.40.0
+peft==0.10.0
+datasets==2.18.0
+accelerate==0.29.0
+bitsandbytes==0.43.0
+
+# NLP
+spacy==3.7.2
+scispacy==0.5.4
+nltk==3.8.1
+
+# Data processing
+pandas==2.2.0
+numpy==1.26.3
+scikit-learn==1.4.0
+
+# Graph & Visualization
+networkx==3.2.1
+pyvis==0.3.2
+matplotlib==3.8.2
+seaborn==0.13.2
+
+# API Clients
+groq==0.5.0
+huggingface-hub==0.22.0
+google-generativeai==0.5.0
+together==1.2.0
+cohere==5.5.0
+
+# Evaluation
+evaluate==0.4.1
+bert-score==0.3.13
+rouge-score==0.1.2
+
+# Web & Demo
+streamlit==1.31.0
+
+# Utilities
+python-dotenv==1.0.0
+tqdm==4.66.1
+pyyaml==6.0.1
+requests==2.31.0

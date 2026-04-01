@@ -1,0 +1,147 @@
+{
+  "patient_id": "P099",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-01-15",
+      "note": "Patient presents with new onset of fatigue, polyuria, and polydipsia. Initial diagnosis of Type 2 Diabetes is made. Medications initiated include Metformin 500mg BID.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 150,
+        "BP_diastolic": 80,
+        "eGFR": 80,
+        "LDL": 180
+      },
+      "medications": [
+        "Metformin 500mg BID"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Polydipsia"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-07-22",
+      "note": "Patient returns with complaint of worsening fatigue and recent onset of lower extremity edema. Medications adjusted to include Lisinopril 2.5mg QD for Hypertension. BP now within goal range.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP_systolic": 130,
+        "BP_diastolic": 70,
+        "eGFR": 72,
+        "LDL": 160
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 2.5mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Polydipsia",
+        "Lower extremity edema"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-01-20",
+      "note": "Patient reports recent onset of chest discomfort. ECG and stress test reveal no evidence of coronary artery disease. Medications adjusted to include Simvastatin 20mg QD for Hyperlipidemia.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 68,
+        "LDL": 130
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 2.5mg QD",
+        "Simvastatin 20mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Polydipsia",
+        "Lower extremity edema",
+        "Chest discomfort"
+      ]
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-08-25",
+      "note": "Patient returns with complaint of worsening lower extremity edema. Medications adjusted to include Furosemide 40mg QD for exacerbation of Chronic Kidney Disease.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP_systolic": 145,
+        "BP_diastolic": 85,
+        "eGFR": 55,
+        "LDL": 140
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 2.5mg QD",
+        "Simvastatin 20mg QD",
+        "Furosemide 40mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Polydipsia",
+        "Lower extremity edema",
+        "Chest discomfort"
+      ]
+    },
+    {
+      "visit_id": "V5",
+      "date": "2024-02-10",
+      "note": "Patient reports recent onset of shortness of breath. Oxygen saturation is 88% on room air. Medications adjusted to include amlodipine 5mg QD for further blood pressure control.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP_systolic": 135,
+        "BP_diastolic": 80,
+        "eGFR": 50,
+        "LDL": 120
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 2.5mg QD",
+        "Simvastatin 20mg QD",
+        "Furosemide 40mg QD",
+        "Amlodipine 5mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Polydipsia",
+        "Lower extremity edema",
+        "Chest discomfort",
+        "Shortness of breath"
+      ]
+    }
+  ]
+}

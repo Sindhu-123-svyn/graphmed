@@ -1,0 +1,153 @@
+{
+  "patient_id": "P076",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-03-01",
+      "note": "Initial presentation with fatigue, weight loss, and polyuria. Physical exam reveals a BP of 140/90 and a BMI of 30. The patient has a history of hypertension and hyperlipidemia. The plan is to start her on a statin and an ACE inhibitor.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 80,
+        "LDL": 160
+      },
+      "medications": [
+        "Atorvastatin 20mg",
+        "Lisinopril 10mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Weight loss",
+        "Polyuria"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-09-01",
+      "note": "Follow-up visit 6 months after initial presentation. The patient reports improved fatigue but persistent polyuria. Her BP is now 130/80 and her HbA1c has decreased to 7.8. However, her LDL has increased to 180. The plan is to increase her statin dose and refer her to a dietician.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP_systolic": 130,
+        "BP_diastolic": 80,
+        "eGFR": 75,
+        "LDL": 180
+      },
+      "medications": [
+        "Atorvastatin 40mg",
+        "Lisinopril 10mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Increased thirst"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-03-01",
+      "note": "Visit 1 year after initial presentation. The patient reports worsening polyuria and noturia. Her BP is now 125/75 and her HbA1c has increased to 8.2. However, her eGFR has decreased to 60. The plan is to refer her to a nephrologist and consider renal-protective medications.",
+      "labs": {
+        "HbA1c": 8.2,
+        "BP_systolic": 125,
+        "BP_diastolic": 75,
+        "eGFR": 60,
+        "LDL": 170
+      },
+      "medications": [
+        "Atorvastatin 40mg",
+        "Lisinopril 20mg",
+        "Losartan 50mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Nocuria",
+        "Edema"
+      ]
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-09-01",
+      "note": "Follow-up visit with nephrologist. The patient reports worsening edema and shortness of breath. Her BP is now 120/70 and her HbA1c has decreased to 7.5. However, her eGFR has decreased further to 45. The plan is to start her on a diuretic and consider dialysis.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP_systolic": 120,
+        "BP_diastolic": 70,
+        "eGFR": 45,
+        "LDL": 150
+      },
+      "medications": [
+        "Atorvastatin 40mg",
+        "Lisinopril 20mg",
+        "Losartan 50mg",
+        "Furosemide 40mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Nocuria",
+        "Edema",
+        "Shortness of breath"
+      ]
+    },
+    {
+      "visit_id": "V5",
+      "date": "2024-03-01",
+      "note": "Follow-up visit with dialysis team. The patient is now on in-center hemodialysis 3 times a week. Her BP is now 110/60 and her HbA1c has decreased to 6.8. However, she is experiencing some dialysis-induced complications such as muscle cramps and fatigue. The plan is to adjust her medications and fluid balance.",
+      "labs": {
+        "HbA1c": 6.8,
+        "BP_systolic": 110,
+        "BP_diastolic": 60,
+        "eGFR": 20,
+        "LDL": 120
+      },
+      "medications": [
+        "Atorvastatin 40mg",
+        "Lisinopril 20mg",
+        "Losartan 50mg",
+        "Furosemide 40mg",
+        "Calcium channel blocker for dialysis-induced muscle cramps"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease",
+        "Dialysis-induced muscle cramps"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Nocuria",
+        "Edema",
+        "Shortness of breath",
+        "Muscle cramps"
+      ]
+    }
+  ]
+}

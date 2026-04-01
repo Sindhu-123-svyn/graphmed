@@ -1,0 +1,123 @@
+{
+  "patient_id": "P078",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-03-15",
+      "note": "Patient P078 presents with new-onset fatigue, weight gain, and polyuria. Physical exam reveals obesity (BMI 35), BP 140/90, and 1+ pitting edema in both lower extremities. HbA1c is elevated at 8.1. Diagnosis: Type 2 Diabetes, Hypertension. Initiate metformin 500mg BID and lisinopril 10mg daily.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 78,
+        "LDL": 140
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Weight gain",
+        "Polyuria"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-09-20",
+      "note": "Patient P078 returns with worsening fatigue, decreased exercise tolerance, and increased pitting edema. HbA1c has improved to 7.3 but BP remains elevated at 150/95. eGFR has decreased to 65. Diagnosis: Hyperlipidemia. Initiate atorvastatin 20mg daily.",
+      "labs": {
+        "HbA1c": 7.3,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 65,
+        "LDL": 120
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg daily",
+        "Atorvastatin 20mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Decreased exercise tolerance",
+        "Increased pitting edema"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-03-15",
+      "note": "Patient P078 returns with worsening shortness of breath and orthopnea. HbA1c has worsened to 8.5. BP remains elevated at 155/100. eGFR has decreased to 55. Diagnosis: Coronary Artery Disease. Initiate aspirin 81mg daily and clopidogrel 75mg daily.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 155,
+        "BP_diastolic": 100,
+        "eGFR": 55,
+        "LDL": 110
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg daily",
+        "Atorvastatin 20mg daily",
+        "Aspirin 81mg daily",
+        "Clopidogrel 75mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Decreased exercise tolerance",
+        "Increased pitting edema",
+        "Shortness of breath",
+        "Orthopnea"
+      ]
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-09-20",
+      "note": "Patient P078 returns with worsening fatigue, decreased exercise tolerance, and increased pitting edema. HbA1c has worsened to 9.0. BP remains elevated at 160/105. eGFR has decreased to 45. Diagnosis: Chronic Kidney Disease. Initiate erythropoietin 5000 IU weekly.",
+      "labs": {
+        "HbA1c": 9.0,
+        "BP_systolic": 160,
+        "BP_diastolic": 105,
+        "eGFR": 45,
+        "LDL": 100
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg daily",
+        "Atorvastatin 20mg daily",
+        "Aspirin 81mg daily",
+        "Clopidogrel 75mg daily",
+        "Erythropoietin 5000 IU weekly"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Decreased exercise tolerance",
+        "Increased pitting edema",
+        "Shortness of breath",
+        "Orthopnea"
+      ]
+    }
+  ]
+}

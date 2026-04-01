@@ -1,0 +1,91 @@
+{
+  "patient_id": "P074",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-02-15",
+      "note": "Patient P074 is a 55-year-old male with newly diagnosed Type 2 Diabetes, Hypertension, and Hyperlipidemia. His HbA1c is 7.2, BP_systolic is 140, and BP_diastolic is 90. He is prescribed Metformin 500mg BID, Lisinopril 10mg QD, and Simvastatin 20mg QD. He reports symptoms of fatigue and polyuria.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg QD",
+        "Simvastatin 20mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-08-15",
+      "note": "Patient P074 returns 6 months after initial diagnosis with improved HbA1c to 6.8, but worsening BP_systolic to 150. He has also developed new symptoms of dyspnea. His eGFR has decreased to 60. His medication regimen is adjusted to include Amlodipine 5mg QD and increased Simvastatin to 40mg QD. A new diagnosis of Chronic Kidney Disease is added.",
+      "labs": {
+        "HbA1c": 6.8,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 60,
+        "LDL": 120
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg QD",
+        "Amlodipine 5mg QD",
+        "Simvastatin 40mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Dyspnea"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-04-15",
+      "note": "Patient P074 returns 8 months after his second visit with worsening HbA1c to 8.2 and BP_systolic to 160. His eGFR has further decreased to 45. He reports worsening dyspnea and new symptoms of edema. His medication regimen is adjusted to include Enalapril 10mg QD, Furosemide 20mg BID, and increased Simvastatin to 80mg QD. A new diagnosis of Coronary Artery Disease is added.",
+      "labs": {
+        "HbA1c": 8.2,
+        "BP_systolic": 160,
+        "BP_diastolic": 100,
+        "eGFR": 45,
+        "LDL": 140
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Enalapril 10mg QD",
+        "Furosemide 20mg BID",
+        "Simvastatin 80mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Dyspnea",
+        "Edema"
+      ]
+    }
+  ]
+}

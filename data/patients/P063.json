@@ -1,0 +1,152 @@
+{
+  "patient_id": "P063",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-01-15",
+      "note": "Patient presents with new-onset Type 2 Diabetes and Hypertension. HbA1c is elevated at 8.5 and BP is 150/95. Start Metformin 1000mg daily and Lisinopril 10mg daily.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 80,
+        "LDL": 180
+      },
+      "medications": [
+        "Metformin 1000mg daily",
+        "Lisinopril 10mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-06-20",
+      "note": "Patient returns with worsening BP (160/100) and elevated HbA1c (9.2). BP meds increased to Lisinopril 20mg daily. Add Amlodipine 5mg daily for BP control.",
+      "labs": {
+        "HbA1c": 9.2,
+        "BP_systolic": 160,
+        "BP_diastolic": 100,
+        "eGFR": 75,
+        "LDL": 200
+      },
+      "medications": [
+        "Metformin 1000mg daily",
+        "Lisinopril 20mg daily",
+        "Amlodipine 5mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Dyslipidemia"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-03-15",
+      "note": "Patient's BP has improved (140/90) but HbA1c remains elevated (8.8). Add Sitagliptin 100mg daily for glucose control.",
+      "labs": {
+        "HbA1c": 8.8,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 65,
+        "LDL": 220
+      },
+      "medications": [
+        "Metformin 1000mg daily",
+        "Lisinopril 20mg daily",
+        "Amlodipine 5mg daily",
+        "Sitagliptin 100mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Dyslipidemia",
+        "Fatigue"
+      ]
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-09-20",
+      "note": "Patient's eGFR has worsened (55) and HbA1c remains elevated (9.0). Increase Lisinopril to 40mg daily and add Atorvastatin 20mg daily for dyslipidemia.",
+      "labs": {
+        "HbA1c": 9.0,
+        "BP_systolic": 130,
+        "BP_diastolic": 80,
+        "eGFR": 55,
+        "LDL": 250
+      },
+      "medications": [
+        "Metformin 1000mg daily",
+        "Lisinopril 40mg daily",
+        "Amlodipine 5mg daily",
+        "Sitagliptin 100mg daily",
+        "Atorvastatin 20mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Dyslipidemia",
+        "Fatigue",
+        "Angina"
+      ]
+    },
+    {
+      "visit_id": "V5",
+      "date": "2024-02-15",
+      "note": "Patient's HbA1c has improved (7.8) and eGFR has stabilized (60). Adjust medications as needed. Recommend lifestyle modifications for continued glucose control.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP_systolic": 120,
+        "BP_diastolic": 70,
+        "eGFR": 60,
+        "LDL": 280
+      },
+      "medications": [
+        "Metformin 1000mg daily",
+        "Lisinopril 40mg daily",
+        "Amlodipine 5mg daily",
+        "Sitagliptin 100mg daily",
+        "Atorvastatin 40mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Dyslipidemia",
+        "Fatigue",
+        "Angina"
+      ]
+    }
+  ]
+}

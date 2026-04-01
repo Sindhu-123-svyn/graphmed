@@ -1,0 +1,125 @@
+{
+  "patient_id": "P042",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-05-15",
+      "note": "Patient presents with new onset of fatigue and weight gain. On examination, patient is found to have elevated BP (140/90) and a BP_systolic of 140. Lab values show HbA1c of 7.2 and eGFR of 72. Patient is diagnosed with Type 2 Diabetes, Hypertension, and Hyperlipidemia.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Amlodipine 5mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Weight gain"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-11-20",
+      "note": "Patient returns for follow-up. BP has improved to 130/80, but HbA1c has worsened to 8.2. Patient reports new symptoms of chest pain and shortness of breath. Coronary Artery Disease is diagnosed. Statin therapy is added.",
+      "labs": {
+        "HbA1c": 8.2,
+        "BP_systolic": 130,
+        "BP_diastolic": 80,
+        "eGFR": 68,
+        "LDL": 160
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Amlodipine 5mg QD",
+        "Atorvastatin 20mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Weight gain",
+        "Chest pain",
+        "Shortness of breath"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-05-22",
+      "note": "Patient returns for follow-up. BP has worsened to 150/95 and HbA1c has improved to 7.5. Patient reports new symptom of edema. eGFR has decreased to 58. Chronic Kidney Disease is diagnosed. ACE-inhibitor therapy is added.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 58,
+        "LDL": 140
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Amlodipine 5mg QD",
+        "Atorvastatin 20mg QD",
+        "Lisinopril 5mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Weight gain",
+        "Chest pain",
+        "Shortness of breath",
+        "Edema"
+      ]
+    },
+    {
+      "visit_id": "V4",
+      "date": "2024-01-10",
+      "note": "Patient returns for follow-up. BP has improved to 140/90 and HbA1c has worsened to 8.5. Patient reports new symptoms of dizziness and confusion. BP medication is adjusted.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 52,
+        "LDL": 150
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Losartan 50mg QD",
+        "Atorvastatin 20mg QD",
+        "Lisinopril 5mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Weight gain",
+        "Chest pain",
+        "Shortness of breath",
+        "Edema",
+        "Dizziness",
+        "Confusion"
+      ]
+    }
+  ]
+}

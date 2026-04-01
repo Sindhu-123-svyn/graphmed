@@ -1,0 +1,134 @@
+{
+  "patient_id": "P083",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-09-01",
+      "note": "Patient presents with 2-year history of Type 2 Diabetes, Hypertension, and Hyperlipidemia. HbA1c is 8.1, BP is 140/90, and LDL is 160. Patient is on Metformin 500mg BID and Lisinopril 10mg QD. Patient reports fatigue and difficulty walking.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 160
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Difficulty walking"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2023-03-01",
+      "note": "Patient returns 6 months later with worsening fatigue and shortness of breath. HbA1c has improved to 7.5, but BP has worsened to 150/95 and LDL has increased to 180. Patient is now on Empagliflozin 10mg QD and Simvastatin 20mg QD. Diagnoses of Coronary Artery Disease and Chronic Kidney Disease are added.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 68,
+        "LDL": 180
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Empagliflozin 10mg QD",
+        "Simvastatin 20mg QD",
+        "Lisinopril 10mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Difficulty walking",
+        "Shortness of breath"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2024-01-01",
+      "note": "Patient returns 10 months later with worsening shortness of breath and swelling in the legs. HbA1c has worsened to 8.5, BP has worsened to 160/100, and LDL has decreased to 140. Patient is now on Sacubitril/Valsartan 24mg/26mg QD and Allopurinol 100mg QD. Diagnoses of Heart Failure and Gout are added.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 160,
+        "BP_diastolic": 100,
+        "eGFR": 60,
+        "LDL": 140
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Empagliflozin 10mg QD",
+        "Simvastatin 20mg QD",
+        "Lisinopril 10mg QD",
+        "Sacubitril/Valsartan 24mg/26mg QD",
+        "Allopurinol 100mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease",
+        "Heart Failure",
+        "Gout"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Difficulty walking",
+        "Shortness of breath",
+        "Swelling in the legs"
+      ]
+    },
+    {
+      "visit_id": "V4",
+      "date": "2024-08-01",
+      "note": "Patient returns 7 months later with worsening fatigue and difficulty breathing. HbA1c has worsened to 9.0, BP has worsened to 165/105, and LDL has increased to 150. Patient is now on Tolvaptan 15mg QD and Pioglitazone 30mg QD. Diagnoses of Diabetic Nephropathy are added.",
+      "labs": {
+        "HbA1c": 9.0,
+        "BP_systolic": 165,
+        "BP_diastolic": 105,
+        "eGFR": 55,
+        "LDL": 150
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Empagliflozin 10mg QD",
+        "Simvastatin 20mg QD",
+        "Lisinopril 10mg QD",
+        "Sacubitril/Valsartan 24mg/26mg QD",
+        "Allopurinol 100mg QD",
+        "Tolvaptan 15mg QD",
+        "Pioglitazone 30mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease",
+        "Heart Failure",
+        "Gout",
+        "Diabetic Nephropathy"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Difficulty walking",
+        "Shortness of breath",
+        "Swelling in the legs",
+        "Difficulty breathing"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "patient_id": "P098",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2021-02-15",
+      "note": "Patient presents with complaints of fatigue and polyuria. Blood pressure is elevated at 150/95 mmHg. Physical exam is notable for 1+ edema bilaterally. Diagnosis of hypertension and likely type 2 diabetes are made. The patient is started on metformin 500mg twice daily and lisinopril 10mg once daily. The patient is also advised to lose weight and improve diet.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 80,
+        "LDL": 150
+      },
+      "medications": [
+        "Metformin 500mg BD",
+        "Lisinopril 10mg OD"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Type 2 Diabetes"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2021-09-20",
+      "note": "Patient returns with complaints of worsening edema and shortness of breath. Blood pressure is elevated at 160/100 mmHg. Physical exam is notable for 2+ edema bilaterally and a new murmur. Diagnosis of coronary artery disease is made. The patient is started on atorvastatin 20mg once daily and aspirin 81mg once daily. The patient is advised to follow a strict diet and increase exercise. Lisinopril is increased to 20mg daily.",
+      "labs": {
+        "HbA1c": 8.2,
+        "BP_systolic": 160,
+        "BP_diastolic": 100,
+        "eGFR": 70,
+        "LDL": 120
+      },
+      "medications": [
+        "Metformin 500mg BD",
+        "Lisinopril 20mg OD",
+        "Atorvastatin 20mg OD",
+        "Aspirin 81mg OD"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Type 2 Diabetes",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Worsening edema",
+        "Shortness of breath"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2022-03-25",
+      "note": "Patient returns with complaints of worsening shortness of breath. Blood pressure is elevated at 155/105 mmHg. Physical exam is notable for 3+ edema bilaterally and a new diastolic murmur. The patient is started on furosemide 40mg daily for edema. The patient is advised to limit fluid intake. Lisinopril is increased to 30mg daily.",
+      "labs": {
+        "HbA1c": 9.0,
+        "BP_systolic": 155,
+        "BP_diastolic": 105,
+        "eGFR": 60,
+        "LDL": 140
+      },
+      "medications": [
+        "Metformin 500mg BD",
+        "Lisinopril 30mg OD",
+        "Atorvastatin 20mg OD",
+        "Aspirin 81mg OD",
+        "Furosemide 40mg OD"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Type 2 Diabetes",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Worsening edema",
+        "Shortness of breath",
+        "Worsening diastolic murmur"
+      ]
+    },
+    {
+      "visit_id": "V4",
+      "date": "2022-11-16",
+      "note": "Patient returns with complaints of worsening fatigue and shortness of breath. Blood pressure is elevated at 165/110 mmHg. Physical exam is notable for 4+ edema bilaterally and a new S3 heart sound. The patient is started on spironolactone 25mg daily for heart failure. The patient is advised to limit salt intake and increase diuretic use.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 165,
+        "BP_diastolic": 110,
+        "eGFR": 50,
+        "LDL": 130
+      },
+      "medications": [
+        "Metformin 500mg BD",
+        "Lisinopril 35mg OD",
+        "Atorvastatin 20mg OD",
+        "Aspirin 81mg OD",
+        "Furosemide 80mg OD",
+        "Spironolactone 25mg OD"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Type 2 Diabetes",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease",
+        "Heart Failure"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Worsening edema",
+        "Shortness of breath",
+        "Worsening diastolic murmur",
+        "Worsening S3 heart sound"
+      ]
+    },
+    {
+      "visit_id": "V5",
+      "date": "2023-05-30",
+      "note": "Patient returns with complaints of worsening shortness of breath and orthopnea. Blood pressure is elevated at 170/115 mmHg. Physical exam is notable for 5+ edema bilaterally and a new gallop rhythm. The patient is started on torsemide 40mg daily for edema. The patient is advised to limit fluid intake and increase diuretic use.",
+      "labs": {
+        "HbA1c": 8.8,
+        "BP_systolic": 170,
+        "BP_diastolic": 115,
+        "eGFR": 40,
+        "LDL": 140
+      },
+      "medications": [
+        "Metformin 500mg BD",
+        "Lisinopril 40mg OD",
+        "Atorvastatin 20mg OD",
+        "Aspirin 81mg OD",
+        "Furosemide 120mg OD",
+        "Spironolactone 25mg OD",
+        "Torsemide 40mg OD"
+      ],
+      "diagnoses": [
+        "Hypertension",
+        "Type 2 Diabetes",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease",
+        "Heart Failure",
+        "Fluid Overload"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Worsening edema",
+        "Shortness of breath",
+        "Worsening diastolic murmur",
+        "Worsening S3 heart sound",
+        "Worsening orthopnea"
+      ]
+    }
+  ]
+}

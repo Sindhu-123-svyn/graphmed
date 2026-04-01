@@ -1,0 +1,98 @@
+{
+  "patient_id": "P028",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-06-15",
+      "note": "Patient P028 is a 55-year-old male with a history of Type 2 Diabetes, Hypertension, and Hyperlipidemia. He presents with symptoms of fatigue and shortness of breath. Physical examination reveals bilateral pedal edema and a blood pressure of 140/90 mmHg. Labs show HbA1c of 7.2%, BP_systolic of 140, BP_diastolic of 90, eGFR of 72, and LDL of 130. Medications include Metformin 500mg BID, Amlodipine 5mg QD, and Atorvastatin 20mg QD. Diagnoses include Type 2 Diabetes, Hypertension, Hyperlipidemia, and Chronic Kidney Disease. Symptoms include fatigue, shortness of breath, and bilateral pedal edema.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Amlodipine 5mg QD",
+        "Atorvastatin 20mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "fatigue",
+        "shortness of breath",
+        "bilateral pedal edema"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-11-30",
+      "note": "Patient P028 returns with worsening symptoms of fatigue, shortness of breath, and bilateral pedal edema. Labs show worsening HbA1c of 8.1%, BP_systolic of 150, BP_diastolic of 95, eGFR of 60, and LDL of 140. Medications are adjusted to include Lisinopril 10mg QD for hypertension and Simvastatin 40mg QD for hyperlipidemia. Diagnoses are updated to include Coronary Artery Disease. Symptoms include fatigue, shortness of breath, bilateral pedal edema, and chest pain.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 60,
+        "LDL": 140
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Amlodipine 5mg QD",
+        "Atorvastatin 20mg QD",
+        "Lisinopril 10mg QD",
+        "Simvastatin 40mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "fatigue",
+        "shortness of breath",
+        "bilateral pedal edema",
+        "chest pain"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-04-18",
+      "note": "Patient P028 presents with worsening symptoms of fatigue, shortness of breath, and bilateral pedal edema. Labs show worsening HbA1c of 9.0%, BP_systolic of 160, BP_diastolic of 100, eGFR of 45, and LDL of 150. Medications are adjusted to include IV insulin therapy for Type 2 Diabetes. Diagnoses are updated to include End-Stage Renal Disease. Symptoms include fatigue, shortness of breath, bilateral pedal edema, chest pain, and confusion.",
+      "labs": {
+        "HbA1c": 9.0,
+        "BP_systolic": 160,
+        "BP_diastolic": 100,
+        "eGFR": 45,
+        "LDL": 150
+      },
+      "medications": [
+        "IV insulin therapy",
+        "Lisinopril 10mg QD",
+        "Simvastatin 40mg QD",
+        "Atorvastatin 20mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease",
+        "End-Stage Renal Disease"
+      ],
+      "symptoms": [
+        "fatigue",
+        "shortness of breath",
+        "bilateral pedal edema",
+        "chest pain",
+        "confusion"
+      ]
+    }
+  ]
+}

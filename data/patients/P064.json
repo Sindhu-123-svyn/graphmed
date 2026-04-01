@@ -1,0 +1,118 @@
+{
+  "patient_id": "P064",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-02-15",
+      "note": "Patient presents with new onset of fatigue and polyuria. Physical examination reveals normal blood pressure and weight. Blood work is significant for HbA1c 7.2%, LDL 130, and eGFR 80. Diagnoses include Type 2 Diabetes, Hyperlipidemia, and Chronic Kidney Disease. Plan includes initiation of metformin 500mg twice daily and atorvastatin 20mg daily.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 128,
+        "BP_diastolic": 80,
+        "eGFR": 80,
+        "LDL": 130
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Atorvastatin 20mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-08-22",
+      "note": "Follow-up visit for patient with Type 2 Diabetes. Patient reports improved energy levels but continues to experience polyuria. Blood work is significant for HbA1c 6.8%, LDL 120, and eGFR 72. Physical examination reveals increased blood pressure at 150/90. Plan includes adjustment of metformin to 500mg TID and lisinopril 5mg daily.",
+      "labs": {
+        "HbA1c": 6.8,
+        "BP_systolic": 150,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 120
+      },
+      "medications": [
+        "Metformin 500mg TID",
+        "Atorvastatin 20mg daily",
+        "Lisinopril 5mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Hypertension"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Headache"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-02-20",
+      "note": "Patient returns for 6-month follow-up. Patient reports worsening fatigue and increased frequency of urination. Blood work is significant for HbA1c 7.5%, LDL 140, and eGFR 68. Physical examination reveals increased blood pressure at 160/95 and new onset of edema. Plan includes adjustment of metformin to 1000mg BID, atorvastatin to 40mg daily, and addition of furosemide 20mg daily.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP_systolic": 160,
+        "BP_diastolic": 95,
+        "eGFR": 68,
+        "LDL": 140
+      },
+      "medications": [
+        "Metformin 1000mg BID",
+        "Atorvastatin 40mg daily",
+        "Lisinopril 10mg daily",
+        "Furosemide 20mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Hypertension"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Headache",
+        "Edema"
+      ]
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-10-16",
+      "note": "Patient returns for follow-up after 8 months. Patient reports stable energy levels but continues to experience polyuria and edema. Blood work is significant for HbA1c 7.0%, LDL 110, and eGFR 60. Physical examination reveals stable blood pressure at 140/80. Plan includes adjustment of metformin to 1000mg BID and addition of aspirin 81mg daily.",
+      "labs": {
+        "HbA1c": 7.0,
+        "BP_systolic": 140,
+        "BP_diastolic": 80,
+        "eGFR": 60,
+        "LDL": 110
+      },
+      "medications": [
+        "Metformin 1000mg BID",
+        "Atorvastatin 40mg daily",
+        "Lisinopril 10mg daily",
+        "Furosemide 20mg daily",
+        "Aspirin 81mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Hypertension"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Edema"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "patient_id": "P086",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-02-15",
+      "note": "Patient presents with chief complaint of fatigue and increased thirst. Physical exam reveals obesity, BP 140/90, and 1+ pitting edema in bilateral lower extremities. Initial labs show HbA1c 7.8, BP_systolic 140, eGFR 65, and LDL 145. Diagnoses include Type 2 Diabetes, Hypertension, and Hyperlipidemia. Medications initiated: Metformin 500mg BID, Lisinopril 10mg QD, and Atorvastatin 20mg QD. Symptoms include polyuria, polydipsia, and fatigue.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 65,
+        "LDL": 145
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg QD",
+        "Atorvastatin 20mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "polyuria",
+        "polydipsia",
+        "fatigue"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-08-17",
+      "note": "Follow-up visit after 6 months of medication therapy. Patient reports improved energy levels but increased urination at night. BP 130/85, and no new edema noted. Labs show HbA1c 7.2, BP_systolic 130, eGFR 70, and LDL 135. Medications adjusted: Metformin increased to 1000mg BID, Lisinopril to 20mg QD, and Atorvastatin to 40mg QD. Diagnoses remain unchanged, but symptoms now include nocturia.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 130,
+        "BP_diastolic": 85,
+        "eGFR": 70,
+        "LDL": 135
+      },
+      "medications": [
+        "Metformin 1000mg BID",
+        "Lisinopril 20mg QD",
+        "Atorvastatin 40mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "polyuria",
+        "polydipsia",
+        "fatigue",
+        "nocturia"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-02-21",
+      "note": "Patient reports worsening symptoms: increased urination, fatigue, and shortness of breath. BP 150/95, and 2+ pitting edema in bilateral lower extremities. Labs show HbA1c 8.1, BP_systolic 150, eGFR 55, and LDL 155. New diagnoses include Chronic Kidney Disease. Medications adjusted: Metformin increased to 1500mg BID, Lisinopril to 30mg QD, and Atorvastatin to 80mg QD. Symptoms now include orthopnea.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 55,
+        "LDL": 155
+      },
+      "medications": [
+        "Metformin 1500mg BID",
+        "Lisinopril 30mg QD",
+        "Atorvastatin 80mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "polyuria",
+        "polydipsia",
+        "fatigue",
+        "nocturia",
+        "orthopnea"
+      ]
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-10-24",
+      "note": "Patient reports continued worsening of symptoms: shortness of breath, orthopnea, and decreased urine output. BP 160/100, and 3+ pitting edema in bilateral lower extremities. Labs show HbA1c 8.5, BP_systolic 160, eGFR 45, and LDL 165. Medications adjusted: Metformin increased to 2000mg BID, Lisinopril to 40mg QD, and Atorvastatin to 100mg QD. New diagnoses include Coronary Artery Disease. Symptoms now include decreased urine output.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 160,
+        "BP_diastolic": 100,
+        "eGFR": 45,
+        "LDL": 165
+      },
+      "medications": [
+        "Metformin 2000mg BID",
+        "Lisinopril 40mg QD",
+        "Atorvastatin 100mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "polyuria",
+        "polydipsia",
+        "fatigue",
+        "nocturia",
+        "orthopnea",
+        "decreased urine output"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "patient_id": "P055",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-06-15",
+      "note": "Patient P055 is a 65-year-old male with a history of Type 2 Diabetes, Hypertension, and Hyperlipidemia. He presents with symptoms of fatigue and edema. Physical examination reveals 1+ pitting edema bilaterally. Labs show HbA1c 7.5, BP 150/95, eGFR 75, and LDL 140. Medications include Metformin 500mg BID, Lisinopril 10mg QD, and Atorvastatin 20mg QD. Diagnoses include Type 2 Diabetes, Hypertension, and Hyperlipidemia. Symptoms include fatigue and edema.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 75,
+        "LDL": 140
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg QD",
+        "Atorvastatin 20mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Edema"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2023-02-20",
+      "note": "Patient P055 returns with worsening symptoms of fatigue and shortness of breath. Physical examination reveals 2+ pitting edema bilaterally and a new murmur. Labs show HbA1c 8.2, BP 160/100, eGFR 60, and LDL 180. Medications are adjusted to Metformin 1000mg BID, Lisinopril 20mg QD, and Atorvastatin 40mg QD. Diagnoses include Type 2 Diabetes, Hypertension, Hyperlipidemia, and new diagnosis of Coronary Artery Disease. Symptoms include fatigue, edema, and shortness of breath.",
+      "labs": {
+        "HbA1c": 8.2,
+        "BP_systolic": 160,
+        "BP_diastolic": 100,
+        "eGFR": 60,
+        "LDL": 180
+      },
+      "medications": [
+        "Metformin 1000mg BID",
+        "Lisinopril 20mg QD",
+        "Atorvastatin 40mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Edema",
+        "Shortness of breath"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-10-15",
+      "note": "Patient P055 returns with worsening symptoms of shortness of breath and increasing fatigue. Physical examination reveals 3+ pitting edema bilaterally and a new orthopnea. Labs show HbA1c 9.0, BP 170/110, eGFR 45, and LDL 200. Medications are adjusted to Metformin 2000mg BID, Lisinopril 40mg QD, and Atorvastatin 80mg QD. Diagnoses include Type 2 Diabetes, Hypertension, Hyperlipidemia, Coronary Artery Disease, and new diagnosis of Chronic Kidney Disease. Symptoms include fatigue, edema, shortness of breath, and orthopnea.",
+      "labs": {
+        "HbA1c": 9.0,
+        "BP_systolic": 170,
+        "BP_diastolic": 110,
+        "eGFR": 45,
+        "LDL": 200
+      },
+      "medications": [
+        "Metformin 2000mg BID",
+        "Lisinopril 40mg QD",
+        "Atorvastatin 80mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Edema",
+        "Shortness of breath",
+        "Orthopnea"
+      ]
+    }
+  ]
+}

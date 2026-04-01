@@ -1,0 +1,87 @@
+{
+  "patient_id": "P046",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-01-15",
+      "note": "Patient P046 presented with 6 months history of fatigue and polyuria, diagnosed with Type 2 Diabetes with HbA1c 7.2, Hypertension with BP 140/90, and Hyperlipidemia with LDL 130. Started on Metformin 500mg BID and Lisinopril 10mg OD.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg OD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-07-20",
+      "note": "Patient P046 returned 6 months post-diagnosis with worsening fatigue and new onset of nocturia. HbA1c increased to 8.1, BP 150/95, and LDL 140. Increased Metformin dose to 1000mg BID and added Simvastatin 20mg OD. Diagnosed with worsening Type 2 Diabetes and Hypertension.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 65,
+        "LDL": 140
+      },
+      "medications": [
+        "Metformin 1000mg BID",
+        "Lisinopril 20mg OD",
+        "Simvastatin 20mg OD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Nocturia"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-03-15",
+      "note": "Patient P046 returned 8 months post-last visit with worsening fatigue, polyuria, and new onset of pedal edema. HbA1c decreased to 7.5, BP 145/90, and eGFR 50. Diagnosed with worsening Type 2 Diabetes, Hypertension, and worsening Chronic Kidney Disease. Started on Furosemide 20mg BID.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP_systolic": 145,
+        "BP_diastolic": 90,
+        "eGFR": 50,
+        "LDL": 120
+      },
+      "medications": [
+        "Metformin 1000mg BID",
+        "Lisinopril 20mg OD",
+        "Simvastatin 20mg OD",
+        "Furosemide 20mg BID"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Nocturia",
+        "Pedal edema"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "patient_id": "P012",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-06-01",
+      "note": "Patient P012 is a 55-year-old male with history of Type 2 Diabetes, Hypertension, and Hyperlipidemia. He presents with symptoms of fatigue, weight loss, and increased thirst. On examination, his BP is 140/90, HbA1c is 7.2, and eGFR is 72. He is started on Metformin 500mg twice daily and Lisinopril 10mg daily.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
+      },
+      "medications": [
+        "Metformin 500mg twice daily",
+        "Lisinopril 10mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Weight loss",
+        "Increased thirst"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2023-02-01",
+      "note": "Patient P012 returns 8 months later with worsening symptoms of fatigue and weight loss. His BP is 150/95, HbA1c is 8.1, and eGFR is 60. He is started on Atorvastatin 40mg daily to control his cholesterol. His Lisinopril is also increased to 20mg daily.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 60,
+        "LDL": 160
+      },
+      "medications": [
+        "Metformin 500mg twice daily",
+        "Lisinopril 20mg daily",
+        "Atorvastatin 40mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Weight loss",
+        "Increased thirst",
+        "Swelling in legs"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-10-01",
+      "note": "Patient P012 returns 6 months later with worsening symptoms of fatigue, weight loss, and swelling in legs. His BP is 160/100, HbA1c is 9.0, and eGFR is 45. He is started on SGLT2 inhibitor, Empagliflozin 25mg daily, to improve his kidney function. His Lisinopril is increased to 30mg daily.",
+      "labs": {
+        "HbA1c": 9.0,
+        "BP_systolic": 160,
+        "BP_diastolic": 100,
+        "eGFR": 45,
+        "LDL": 180
+      },
+      "medications": [
+        "Metformin 500mg twice daily",
+        "Lisinopril 30mg daily",
+        "Atorvastatin 40mg daily",
+        "Empagliflozin 25mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Weight loss",
+        "Increased thirst",
+        "Swelling in legs",
+        "Chest pain"
+      ]
+    }
+  ]
+}

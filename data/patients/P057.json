@@ -1,0 +1,160 @@
+{
+  "patient_id": "P057",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-03-14",
+      "note": "Patient presents with new-onset shortness of breath and fatigue. Physical examination reveals bilateral edema. Diagnosis of Type 2 Diabetes and Hypertension is made. Plan includes dietary counseling and initiation of Metformin 500mg BID and Lisinopril 10mg QD.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP_systolic": 150,
+        "BP_diastolic": 90,
+        "eGFR": 78,
+        "LDL": 160
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Fatigue",
+        "Bilateral edema"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-09-12",
+      "note": "Patient reports worsening fatigue and decreased exercise tolerance. Physical examination reveals increased bilateral edema. HbA1c and BP are elevated. Plan includes adjustment of Metformin to 750mg BID and initiation of Amlodipine 5mg QD.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP_systolic": 158,
+        "BP_diastolic": 92,
+        "eGFR": 65,
+        "LDL": 170
+      },
+      "medications": [
+        "Metformin 750mg BID",
+        "Lisinopril 10mg QD",
+        "Amlodipine 5mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Fatigue",
+        "Bilateral edema",
+        "Decreased exercise tolerance"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-02-21",
+      "note": "Patient reports chest pain and palpitations. Physical examination reveals new-onset jugular venous distension. HbA1c and BP are still elevated. Ejection fraction is 45%. Plan includes initiation of Metoprolol 25mg BID and adjustment of Amlodipine to 10mg QD.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 162,
+        "BP_diastolic": 94,
+        "eGFR": 58,
+        "LDL": 180
+      },
+      "medications": [
+        "Metformin 750mg BID",
+        "Lisinopril 10mg QD",
+        "Amlodipine 10mg QD",
+        "Metoprolol 25mg BID"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Fatigue",
+        "Bilateral edema",
+        "Decreased exercise tolerance",
+        "Chest pain",
+        "Palpitations"
+      ]
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-08-01",
+      "note": "Patient reports worsening shortness of breath and fatigue. Physical examination reveals increased bilateral edema. HbA1c and BP are still elevated. eGFR has decreased to 45. Plan includes initiation of Eplerenone 25mg QD and adjustment of Lisinopril to 20mg QD.",
+      "labs": {
+        "HbA1c": 9.0,
+        "BP_systolic": 164,
+        "BP_diastolic": 96,
+        "eGFR": 45,
+        "LDL": 190
+      },
+      "medications": [
+        "Metformin 750mg BID",
+        "Lisinopril 20mg QD",
+        "Amlodipine 10mg QD",
+        "Metoprolol 25mg BID",
+        "Eplerenone 25mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Fatigue",
+        "Bilateral edema",
+        "Decreased exercise tolerance",
+        "Chest pain",
+        "Palpitations"
+      ]
+    },
+    {
+      "visit_id": "V5",
+      "date": "2024-02-06",
+      "note": "Patient reports worsening fatigue and decreased exercise tolerance. Physical examination reveals increased bilateral edema. HbA1c and BP are still elevated. eGFR has decreased to 38. Plan includes adjustment of Eplerenone to 50mg QD and initiation of Hemodialysis.",
+      "labs": {
+        "HbA1c": 9.2,
+        "BP_systolic": 166,
+        "BP_diastolic": 98,
+        "eGFR": 38,
+        "LDL": 200
+      },
+      "medications": [
+        "Metformin 750mg BID",
+        "Lisinopril 20mg QD",
+        "Amlodipine 10mg QD",
+        "Metoprolol 25mg BID",
+        "Eplerenone 50mg QD",
+        "Hemodialysis"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease",
+        "End-Stage Renal Disease"
+      ],
+      "symptoms": [
+        "Shortness of breath",
+        "Fatigue",
+        "Bilateral edema",
+        "Decreased exercise tolerance",
+        "Chest pain",
+        "Palpitations"
+      ]
+    }
+  ]
+}

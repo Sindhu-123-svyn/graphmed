@@ -1,0 +1,95 @@
+{
+  "patient_id": "P093",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-01-15",
+      "note": "The patient presents with Type 2 Diabetes, Hypertension, and Hyperlipidemia. HbA1c is 8.1, BP is elevated at 150/95, and LDL is 160. The patient reports symptoms of fatigue and polyuria. The plan is to optimize medications and schedule a follow-up in 4 months.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 70,
+        "LDL": 160
+      },
+      "medications": [
+        "Metformin 1000mg PO BID",
+        "Amlodipine 10mg PO QD",
+        "Atorvastatin 20mg PO QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-05-20",
+      "note": "The patient returns with worsening symptoms of fatigue and polyuria. HbA1c has improved to 7.5, but BP remains elevated at 155/98. LDL has decreased to 140. The patient reports new symptoms of nocturia and erectile dysfunction. The plan is to adjust medications and schedule a follow-up in 4 months.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP_systolic": 155,
+        "BP_diastolic": 98,
+        "eGFR": 68,
+        "LDL": 140
+      },
+      "medications": [
+        "Metformin 1500mg PO BID",
+        "Amlodipine 5mg PO BID",
+        "Atorvastatin 40mg PO QD",
+        "Tadalafil 20mg PO QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Erectile Dysfunction"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Nocturia",
+        "Erectile Dysfunction"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-01-10",
+      "note": "The patient returns with a 2-month history of worsening fatigue and polyuria. HbA1c has increased to 8.5, and BP is now 160/105. LDL remains elevated at 150. The patient reports new symptoms of paresthesia and numbness in the feet. The plan is to adjust medications and refer to a nephrologist for further evaluation of worsening kidney function.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 160,
+        "BP_diastolic": 105,
+        "eGFR": 60,
+        "LDL": 150
+      },
+      "medications": [
+        "Metformin 2000mg PO BID",
+        "Amlodipine 10mg PO QD",
+        "Atorvastatin 80mg PO QD",
+        "Tadalafil 20mg PO QD",
+        "Gabapentin 300mg PO QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Erectile Dysfunction",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Nocturia",
+        "Erectile Dysfunction",
+        "Paresthesia",
+        "Numbness"
+      ]
+    }
+  ]
+}

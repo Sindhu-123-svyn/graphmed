@@ -1,0 +1,126 @@
+{
+  "patient_id": "P081",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-02-15",
+      "note": "Patient P081 is a 45-year-old male with a history of Type 2 Diabetes, Hypertension, and Hyperlipidemia. He presents with symptoms of worsening fatigue and occasional chest pain. Physical examination reveals elevated BP and HbA1c levels. Plan includes initiation of statin therapy, adjustment of antihypertensive regimen, and intensification of diabetes management.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 80,
+        "LDL": 160
+      },
+      "medications": [
+        "Metformin 850mg BID",
+        "Lisinopril 20mg OD",
+        "Simvastatin 20mg OD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Chest pain"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-08-20",
+      "note": "Patient P081 returns with worsening symptoms of chest pain and shortness of breath. Physical examination reveals elevated BP and HbA1c levels. Labs show a decline in eGFR and worsening dyslipidemia. Plan includes referral to cardiology for further evaluation, intensification of antihypertensive therapy, and adjustment of diabetes management.",
+      "labs": {
+        "HbA1c": 8.2,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 60,
+        "LDL": 180
+      },
+      "medications": [
+        "Metformin 850mg BID",
+        "Lisinopril 40mg OD",
+        "Atorvastatin 80mg OD",
+        "Aspirin 81mg OD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease"
+      ],
+      "symptoms": [
+        "Chest pain",
+        "Shortness of breath",
+        "Fatigue"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-02-25",
+      "note": "Patient P081 returns with worsening symptoms of fatigue and swelling in his legs. Physical examination reveals elevated BP and HbA1c levels. Labs show a decline in eGFR and worsening dyslipidemia. Plan includes intensification of antihypertensive therapy, adjustment of diabetes management, and referral to nephrology for further evaluation.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 155,
+        "BP_diastolic": 100,
+        "eGFR": 50,
+        "LDL": 190
+      },
+      "medications": [
+        "Metformin 850mg BID",
+        "Lisinopril 60mg OD",
+        "Atorvastatin 120mg OD",
+        "Aspirin 81mg OD",
+        "Furosemide 40mg OD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Swelling in legs",
+        "Chest pain",
+        "Shortness of breath"
+      ]
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-10-01",
+      "note": "Patient P081 returns with worsening symptoms of fatigue and shortness of breath. Physical examination reveals elevated BP and HbA1c levels. Labs show a decline in eGFR and worsening dyslipidemia. Plan includes intensification of antihypertensive therapy, adjustment of diabetes management, and initiation of erythropoietin therapy for anemia.",
+      "labs": {
+        "HbA1c": 9.0,
+        "BP_systolic": 160,
+        "BP_diastolic": 105,
+        "eGFR": 45,
+        "LDL": 200
+      },
+      "medications": [
+        "Metformin 850mg BID",
+        "Lisinopril 80mg OD",
+        "Atorvastatin 160mg OD",
+        "Aspirin 81mg OD",
+        "Furosemide 40mg OD",
+        "Erythropoietin 40,000 units/week"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease",
+        "Anemia"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Shortness of breath",
+        "Chest pain",
+        "Swelling in legs"
+      ]
+    }
+  ]
+}

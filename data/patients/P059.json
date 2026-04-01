@@ -1,0 +1,121 @@
+{
+  "patient_id": "P059",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-02-15",
+      "note": "Initial evaluation reveals Type 2 Diabetes, Hypertension, and Hyperlipidemia. HbA1c is elevated at 8.5, BP is 150/90, eGFR is 78, and LDL is 140. Patient is started on Metformin 500mg twice daily and Lisinopril 10mg daily.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 150,
+        "BP_diastolic": 90,
+        "eGFR": 78,
+        "LDL": 140
+      },
+      "medications": [
+        "Metformin 500mg twice daily",
+        "Lisinopril 10mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes Mellitus",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Dyspnea"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-08-22",
+      "note": "BP has worsened to 160/95, HbA1c has decreased to 7.8, but LDL remains elevated at 145. Patient's eGFR has decreased to 74. Blood pressure is now treated with Lisinopril 20mg daily and Amlodipine 5mg daily. Atorvastatin 20mg daily is added for lipid control.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP_systolic": 160,
+        "BP_diastolic": 95,
+        "eGFR": 74,
+        "LDL": 145
+      },
+      "medications": [
+        "Metformin 500mg twice daily",
+        "Lisinopril 20mg daily",
+        "Amlodipine 5mg daily",
+        "Atorvastatin 20mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes Mellitus",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Dyspnea",
+        "Fatigue"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-02-28",
+      "note": "Patient's HbA1c has continued to improve, now at 7.2. However, eGFR has worsened to 68, indicating further kidney damage. BP has decreased to 140/90, but LDL remains elevated at 150. Amlodipine is stopped due to side effects, and Lisinopril is increased to 30mg daily.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 68,
+        "LDL": 150
+      },
+      "medications": [
+        "Metformin 500mg twice daily",
+        "Lisinopril 30mg daily",
+        "Atorvastatin 20mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes Mellitus",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Dyspnea",
+        "Fatigue",
+        "Edema"
+      ]
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-10-17",
+      "note": "Patient's HbA1c has further improved to 6.8. eGFR has stabilized at 70, but LDL remains elevated at 155. Simvastatin 40mg daily is added for lipid control. Patient's symptoms have improved, but edema persists.",
+      "labs": {
+        "HbA1c": 6.8,
+        "BP_systolic": 130,
+        "BP_diastolic": 80,
+        "eGFR": 70,
+        "LDL": 155
+      },
+      "medications": [
+        "Metformin 500mg twice daily",
+        "Lisinopril 30mg daily",
+        "Simvastatin 40mg daily"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes Mellitus",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Dyspnea",
+        "Fatigue",
+        "Edema"
+      ]
+    }
+  ]
+}

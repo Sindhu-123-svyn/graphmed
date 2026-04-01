@@ -1,0 +1,124 @@
+{
+  "patient_id": "P015",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-02-15",
+      "note": "Patient presents with symptoms of fatigue, polyuria, and polydipsia for 2 months. Physical examination reveals normal vitals, no palpable masses, and normal neurological examination. Diagnoses include Type 2 Diabetes and Hypertension. Plan includes initiation of metformin and lisinopril.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 80,
+        "eGFR": 72,
+        "LDL": 130
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg OD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Polydipsia"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2022-08-22",
+      "note": "Patient returns with worsening symptoms of fatigue and increased urination. Physical examination reveals normal vitals, no palpable masses, and normal neurological examination. BP is now 150/90. Plan includes adjustment of metformin to 1000mg BID and initiation of atorvastatin for Hyperlipidemia.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP_systolic": 150,
+        "BP_diastolic": 90,
+        "eGFR": 65,
+        "LDL": 160
+      },
+      "medications": [
+        "Metformin 1000mg BID",
+        "Lisinopril 10mg OD",
+        "Atorvastatin 20mg OD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Polydipsia",
+        "Dyspnea"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-02-01",
+      "note": "Patient returns with worsening symptoms of dyspnea and fatigue. Physical examination reveals normal vitals, but with bilateral rales. BP is now 160/95. eGFR has decreased to 55. Plan includes initiation of spironolactone for CKD and adjustment of lisinopril to 20mg OD.",
+      "labs": {
+        "HbA1c": 8.5,
+        "BP_systolic": 160,
+        "BP_diastolic": 95,
+        "eGFR": 55,
+        "LDL": 140
+      },
+      "medications": [
+        "Metformin 1000mg BID",
+        "Lisinopril 20mg OD",
+        "Atorvastatin 20mg OD",
+        "Spironolactone 25mg OD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Polydipsia",
+        "Dyspnea",
+        "Orthopnea"
+      ]
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-08-25",
+      "note": "Patient returns with worsening symptoms of orthopnea and fatigue. Physical examination reveals normal vitals, but with bilateral rales. BP is now 165/100. eGFR has decreased to 45. Plan includes adjustment of metformin to 500mg BID and initiation of enalapril for CHF.",
+      "labs": {
+        "HbA1c": 9.0,
+        "BP_systolic": 165,
+        "BP_diastolic": 100,
+        "eGFR": 45,
+        "LDL": 120
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 20mg OD",
+        "Atorvastatin 20mg OD",
+        "Spironolactone 25mg OD",
+        "Enalapril 10mg OD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease",
+        "Congestive Heart Failure"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Polydipsia",
+        "Dyspnea",
+        "Orthopnea",
+        "Chest pain"
+      ]
+    }
+  ]
+}

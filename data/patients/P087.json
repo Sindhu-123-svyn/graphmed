@@ -1,0 +1,93 @@
+{
+  "patient_id": "P087",
+  "visits": [
+    {
+      "visit_id": "V1",
+      "date": "2022-08-15",
+      "note": "Patient P087 is a 55-year-old male presenting with Type 2 Diabetes, Hypertension, and Hyperlipidemia. He reports fatigue, polyuria, and polydipsia. BP is 140/90 mmHg and HbA1c is 7.2%. LDL is 130 mg/dL. He is prescribed Metformin 500mg BD and Simvastatin 20mg QHS.",
+      "labs": {
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
+      },
+      "medications": [
+        "Metformin 500mg BD",
+        "Simvastatin 20mg QHS"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Polydipsia"
+      ]
+    },
+    {
+      "visit_id": "V2",
+      "date": "2023-02-22",
+      "note": "Patient P087 returns with worsening symptoms of fatigue and increased urination. BP is now 150/95 mmHg and HbA1c has risen to 8.1%. LDL remains elevated at 140 mg/dL. He is prescribed Lisinopril 2.5mg QD for hypertension and Atorvastatin 40mg QHS for hyperlipidemia.",
+      "labs": {
+        "HbA1c": 8.1,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 60,
+        "LDL": 140
+      },
+      "medications": [
+        "Metformin 500mg BD",
+        "Simvastatin 20mg QHS",
+        "Lisinopril 2.5mg QD",
+        "Atorvastatin 40mg QHS"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Polydipsia",
+        "Edema"
+      ]
+    },
+    {
+      "visit_id": "V3",
+      "date": "2023-11-28",
+      "note": "Patient P087 has made little progress with his chronic conditions. HbA1c has risen to 8.8% and BP remains elevated at 160/100 mmHg. LDL has decreased to 120 mg/dL. He is prescribed Sitagliptin 100mg QD for Type 2 Diabetes and Furosemide 40mg QD for edema.",
+      "labs": {
+        "HbA1c": 8.8,
+        "BP_systolic": 160,
+        "BP_diastolic": 100,
+        "eGFR": 55,
+        "LDL": 120
+      },
+      "medications": [
+        "Metformin 500mg BD",
+        "Lisinopril 2.5mg QD",
+        "Atorvastatin 40mg QHS",
+        "Sitagliptin 100mg QD",
+        "Furosemide 40mg QD"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Polydipsia",
+        "Edema",
+        "Shortness of breath"
+      ]
+    }
+  ]
+}
