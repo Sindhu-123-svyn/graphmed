@@ -3,19 +3,44 @@ Phase 4: Vector Memory Store for GraphMed
 Stores patient visit summaries as embeddings for semantic search
 """
 
+import os
+import warnings
+import logging
+import re
+import json
+import uuid
+from pathlib import Path
+from typing import List, Dict, Any, Optional
+
+
+def _disable_chroma_telemetry_noise() -> None:
+    """Disable telemetry calls that can fail with incompatible PostHog versions."""
+    os.environ["ANONYMIZED_TELEMETRY"] = "False"
+    os.environ["CHROMA_TELEMETRY"] = "False"
+
+    # Chroma 0.4.x may call posthog.capture(distinct_id, event, properties).
+    # Newer PostHog clients changed signatures, causing noisy non-fatal errors.
+    try:
+        import posthog  # type: ignore
+
+        def _capture_noop(*args, **kwargs):
+            return None
+
+        posthog.capture = _capture_noop
+    except Exception:
+        pass
+
+
+_disable_chroma_telemetry_noise()
+
 import chromadb
 from chromadb.config import Settings
 from sentence_transformers import SentenceTransformer
-from typing import List, Dict, Any, Optional
-import json
-from pathlib import Path
-import uuid
-import warnings
-import logging
-import os
 
 # Suppress ChromaDB telemetry warnings
 logging.getLogger("chromadb").setLevel(logging.ERROR)
+logging.getLogger("chromadb.telemetry").setLevel(logging.ERROR)
+logging.getLogger("chromadb.telemetry.product").setLevel(logging.ERROR)
 warnings.filterwarnings("ignore", category=UserWarning)
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
@@ -25,6 +50,22 @@ CHROMA_SETTINGS = Settings(
     allow_reset=True,
     is_persistent=True
 )
+
+EMOTION_TERMS = {
+    "anxiety", "anxious", "worry", "worried", "fear", "afraid",
+    "frustrated", "depressed", "overwhelmed", "distressed", "stress"
+}
+
+UNCERTAINTY_TERMS = {
+    "possible", "possibly", "probable", "probably", "unclear",
+    "suggests", "suggesting", "cannot rule out", "concern for",
+    "suspect", "suspected", "question of"
+}
+
+CLINICIAN_INTENT_TERMS = {
+    "plan", "monitor", "follow-up", "follow up", "refer", "referral",
+    "counseled", "advised", "discussed", "consider", "observe"
+}
 
 
 class PatientMemoryStore:
@@ -88,38 +129,133 @@ class PatientMemoryStore:
         Returns:
             Text summary for embedding
         """
-        summary_parts = []
-        
-        # Add date
-        summary_parts.append(f"Visit Date: {visit.get('date', 'Unknown')}")
-        
-        # Add clinical note (most important)
-        note = visit.get('note', '')
+        extracted = visit.get("extracted", {}) or {}
+        note = (visit.get("note") or "").strip()
+
+        diagnoses = self._merge_unique(
+            visit.get("diagnoses", []),
+            extracted.get("conditions", [])
+        )
+        medications = self._merge_unique(
+            visit.get("medications", []),
+            extracted.get("medications", [])
+        )
+        symptoms = self._merge_unique(
+            visit.get("symptoms", []),
+            extracted.get("symptoms", [])
+        )
+
+        dosages = self._merge_unique(
+            visit.get("dosages", []),
+            extracted.get("dosages", [])
+        )
+        procedures = self._to_clean_list(extracted.get("procedures", []))
+        relationships = extracted.get("relationships", [])
+        labs = visit.get("labs", {}) or extracted.get("lab_values", {})
+
+        signal_info = self._extract_narrative_signals(note)
+
+        summary_parts = [
+            f"Patient ID: {self.patient_id}",
+            f"Visit ID: {visit.get('visit_id', 'Unknown')}",
+            f"Visit Date: {visit.get('date', 'Unknown')}",
+        ]
+
         if note:
-            summary_parts.append(f"Clinical Note: {note}")
-        
-        # Add diagnoses/conditions
-        diagnoses = visit.get('diagnoses', []) or visit.get('extracted', {}).get('conditions', [])
+            summary_parts.append("Narrative Note:")
+            summary_parts.append(note)
+
+        summary_parts.append("Clinical Snapshot:")
+
         if diagnoses:
-            summary_parts.append(f"Diagnoses: {', '.join(diagnoses)}")
-        
-        # Add medications
-        medications = visit.get('medications', []) or visit.get('extracted', {}).get('medications', [])
-        if medications:
-            summary_parts.append(f"Medications: {', '.join(medications)}")
-        
-        # Add symptoms
-        symptoms = visit.get('symptoms', []) or visit.get('extracted', {}).get('symptoms', [])
+            summary_parts.append(f"- Diagnoses/Conditions: {', '.join(diagnoses)}")
         if symptoms:
-            summary_parts.append(f"Symptoms: {', '.join(symptoms)}")
-        
-        # Add lab values
-        labs = visit.get('labs', {}) or visit.get('extracted', {}).get('lab_values', {})
-        if labs:
-            lab_str = ', '.join([f"{k}: {v}" for k, v in labs.items()])
-            summary_parts.append(f"Lab Values: {lab_str}")
-        
+            summary_parts.append(f"- Symptoms: {', '.join(symptoms)}")
+        if medications:
+            summary_parts.append(f"- Medications: {', '.join(medications)}")
+        if dosages:
+            summary_parts.append(f"- Dosages: {', '.join(dosages)}")
+        if procedures:
+            summary_parts.append(f"- Procedures/Referrals: {', '.join(procedures)}")
+
+        if isinstance(labs, dict) and labs:
+            lab_items = [f"{k}: {v}" for k, v in labs.items()]
+            summary_parts.append(f"- Labs: {', '.join(lab_items)}")
+
+        if relationships:
+            relationship_lines = []
+            for rel in relationships[:8]:
+                if not isinstance(rel, dict):
+                    continue
+                subj = rel.get("subject", "?")
+                pred = rel.get("predicate", "related_to")
+                obj = rel.get("object", "?")
+                relationship_lines.append(f"{subj} {pred} {obj}")
+            if relationship_lines:
+                summary_parts.append(f"- Extracted Relationships: {'; '.join(relationship_lines)}")
+
+        summary_parts.append("Context Signals:")
+        summary_parts.append(
+            f"- Emotional cues: {', '.join(signal_info['emotions']) if signal_info['emotions'] else 'none explicitly stated'}"
+        )
+        summary_parts.append(
+            f"- Ambiguity/uncertainty cues: {', '.join(signal_info['uncertainty']) if signal_info['uncertainty'] else 'none explicitly stated'}"
+        )
+        summary_parts.append(
+            f"- Clinician intent/action cues: {', '.join(signal_info['clinician_intent']) if signal_info['clinician_intent'] else 'none explicitly stated'}"
+        )
+
         return "\n".join(summary_parts)
+
+    def _to_clean_list(self, value: Any) -> List[str]:
+        if value is None:
+            return []
+
+        if isinstance(value, (str, int, float, bool)):
+            value = [value]
+        elif not isinstance(value, list):
+            return []
+
+        cleaned: List[str] = []
+        seen = set()
+        for item in value:
+            text = str(item).strip()
+            if not text:
+                continue
+            key = text.lower()
+            if key in seen:
+                continue
+            seen.add(key)
+            cleaned.append(text)
+        return cleaned
+
+    def _merge_unique(self, *values: Any) -> List[str]:
+        merged: List[str] = []
+        seen = set()
+        for value in values:
+            for item in self._to_clean_list(value):
+                key = item.lower()
+                if key in seen:
+                    continue
+                seen.add(key)
+                merged.append(item)
+        return merged
+
+    def _extract_narrative_signals(self, note: str) -> Dict[str, List[str]]:
+        note_lower = note.lower()
+
+        def find_terms(term_set: set) -> List[str]:
+            found = []
+            for term in sorted(term_set):
+                if re.search(r"\\b" + re.escape(term) + r"\\b", note_lower):
+                    found.append(term)
+            return found
+
+        return {
+            "emotions": find_terms(EMOTION_TERMS),
+            "uncertainty": find_terms(UNCERTAINTY_TERMS),
+            "clinician_intent": find_terms(CLINICIAN_INTENT_TERMS),
+        }
     
     def store_visit(self, visit: Dict[str, Any], visit_id: Optional[str] = None) -> str:
         """
@@ -141,33 +277,31 @@ class PatientMemoryStore:
         # Use provided ID or from visit data or generate
         doc_id = visit_id or visit.get('visit_id', str(uuid.uuid4()))
         
+        signal_info = self._extract_narrative_signals(visit.get("note", "") or "")
+
         # Prepare metadata
         metadata = {
             "visit_id": doc_id,
             "date": visit.get('date', ''),
-            "patient_id": self.patient_id
+            "patient_id": self.patient_id,
+            "has_emotion_signal": len(signal_info["emotions"]) > 0,
+            "has_uncertainty_signal": len(signal_info["uncertainty"]) > 0,
+            "has_clinician_intent": len(signal_info["clinician_intent"]) > 0,
+            "emotion_terms": ", ".join(signal_info["emotions"]),
+            "uncertainty_terms": ", ".join(signal_info["uncertainty"]),
+            "intent_terms": ", ".join(signal_info["clinician_intent"]),
         }
-        
-        # Add to collection (with error handling)
+
+        # Upsert to make repeated builds idempotent.
         try:
-            self.collection.add(
+            self.collection.upsert(
                 ids=[doc_id],
                 embeddings=[embedding],
                 documents=[summary],
                 metadatas=[metadata]
             )
-        except Exception as e:
-            # If document already exists, update it
-            if "already exists" in str(e):
-                self.collection.update(
-                    ids=[doc_id],
-                    embeddings=[embedding],
-                    documents=[summary],
-                    metadatas=[metadata]
-                )
-            else:
-                # Silently ignore other errors during build
-                pass
+        except Exception:
+            pass
         
         return doc_id
     
@@ -356,7 +490,7 @@ def build_memory_for_all_patients(input_dir: str = "data/patients_processed",
     Path(persist_dir).mkdir(parents=True, exist_ok=True)
     
     # Get all patient files
-    patient_files = list(Path(input_dir).glob("*.json"))
+    patient_files = sorted(Path(input_dir).glob("*.json"))
     
     if limit:
         patient_files = patient_files[:limit]

@@ -8,6 +8,7 @@ langgraph-prebuilt==0.0.1
 
 # Vector and Embeddings
 chromadb==0.4.22
+posthog<6
 sentence-transformers==2.2.2
 
 # Data Processing

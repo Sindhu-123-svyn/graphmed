@@ -3,6 +3,7 @@ langchain==0.2.0
 langgraph==0.0.20
 langchain-groq==0.1.0
 chromadb==0.4.22
+posthog<6
 sentence-transformers==2.2.2
 transformers==4.40.0
 peft==0.10.0

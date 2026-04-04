@@ -7,11 +7,40 @@ import json
 from pathlib import Path
 from typing import List, Dict, Any
 from sentence_transformers import SentenceTransformer
+import os
+import warnings
+import logging
+
+
+def _disable_chroma_telemetry_noise() -> None:
+    """Disable telemetry calls that can fail with incompatible PostHog versions."""
+    os.environ["ANONYMIZED_TELEMETRY"] = "False"
+    os.environ["CHROMA_TELEMETRY"] = "False"
+
+    try:
+        import posthog  # type: ignore
+
+        def _capture_noop(*args, **kwargs):
+            return None
+
+        posthog.capture = _capture_noop
+    except Exception:
+        pass
+
+
+_disable_chroma_telemetry_noise()
+
 import chromadb
 from chromadb.config import Settings
 from groq import Groq
-import os
 from dotenv import load_dotenv
+
+# Suppress telemetry warning logs.
+warnings.filterwarnings("ignore", category=UserWarning)
+warnings.filterwarnings("ignore", category=DeprecationWarning)
+logging.getLogger("chromadb").setLevel(logging.ERROR)
+logging.getLogger("chromadb.telemetry").setLevel(logging.ERROR)
+logging.getLogger("chromadb.telemetry.product").setLevel(logging.ERROR)
 
 load_dotenv()
 
@@ -41,7 +70,7 @@ class BaselineRAG:
         self.patient_data = {}
         self._load_patient_data()
         
-        print("✅ Baseline RAG initialized (no graph, no memory evolution)")
+        print("[OK] Baseline RAG initialized (no graph, no memory evolution)")
     
     def _load_patient_data(self):
         """Load all patient data."""

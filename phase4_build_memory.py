@@ -9,9 +9,28 @@ import warnings
 import logging
 
 
+def _disable_chroma_telemetry_noise() -> None:
+    """Disable telemetry calls that may fail due to PostHog API mismatch."""
+    os.environ["ANONYMIZED_TELEMETRY"] = "False"
+    os.environ["CHROMA_TELEMETRY"] = "False"
+
+    try:
+        import posthog  # type: ignore
+
+        def _capture_noop(*args, **kwargs):
+            return None
+
+        posthog.capture = _capture_noop
+    except Exception:
+        pass
+
+
 # Suppress ALL ChromaDB telemetry warnings
 os.environ["CHROMA_TELEMETRY"] = "False"
 os.environ["CHROMA_OTEL_EXPORTER_ENDPOINT"] = ""
+os.environ["ANONYMIZED_TELEMETRY"] = "False"
+
+_disable_chroma_telemetry_noise()
 
 # Disable all logging from chromadb
 logging.getLogger("chromadb").setLevel(logging.ERROR)
@@ -37,12 +56,13 @@ def test_retrieval(patient_id: str = "P001"):
     try:
         store = PatientMemoryStore(patient_id, "data/chroma_db")
         
-        # Test different queries
+        # Test different query styles including narrative context.
         test_queries = [
             ("fatigue", "Search for fatigue"),
             ("shortness of breath", "Search for breathing issues"),
             ("chest pain", "Search for cardiac symptoms"),
-            ("medications", "Search for medication mentions")
+            ("patient seems worried and symptoms are getting worse", "Search for emotional progression"),
+            ("doctor plans referral and close monitoring", "Search for clinician intent")
         ]
         
         for query, description in test_queries:
@@ -53,7 +73,14 @@ def test_retrieval(patient_id: str = "P001"):
                 for i, result in enumerate(results, 1):
                     visit_id = result['metadata'].get('visit_id', 'Unknown')
                     date = result['metadata'].get('date', 'Unknown')
+                    has_uncertainty = result['metadata'].get('has_uncertainty_signal', False)
+                    has_emotion = result['metadata'].get('has_emotion_signal', False)
+                    has_intent = result['metadata'].get('has_clinician_intent', False)
                     print(f"   {i}. Visit {visit_id} ({date})")
+                    print(
+                        f"      Signals -> emotion: {has_emotion}, "
+                        f"uncertainty: {has_uncertainty}, intent: {has_intent}"
+                    )
                     print(f"      Preview: {result['document'][:100]}...")
             else:
                 print(f"   No results found")
@@ -89,11 +116,11 @@ def main():
     print("\n" + "="*60)
     print("🏥 GRAPHMED - PHASE 4: VECTOR MEMORY STORE")
     print("="*60)
-    print("Building semantic memory for patient visits")
+    print("Building semantic memory from full patient visit narratives")
     print("="*60)
     
     print("\nOptions:")
-    print("  1. Build memory for all 10 patients")
+    print("  1. Build memory for all available patients")
     print("  2. Build memory for first 5 patients (test)")
     print("  3. Test retrieval for P001")
     print("  4. Show memory store summary")
@@ -103,9 +130,9 @@ def main():
     choice = input("\nEnter choice (1-6): ").strip()
     
     if choice == "1":
-        confirm = input("\nBuild memory for all 10 patients? (y/n): ")
+        confirm = input("\nBuild memory for all available patients? (y/n): ")
         if confirm.lower() == 'y':
-            results = build_memory_for_all_patients(limit=10)
+            results = build_memory_for_all_patients(verbose=True)
             print(f"\n✅ Built memory for {len(results)} patients")
             show_memory_summary()
             test_retrieval("P001")
@@ -114,7 +141,7 @@ def main():
             
     elif choice == "2":
         print("\nBuilding memory for first 5 patients...")
-        results = build_memory_for_all_patients(limit=5)
+        results = build_memory_for_all_patients(limit=5, verbose=True)
         show_memory_summary()
         test_retrieval("P001")
         
@@ -153,7 +180,7 @@ def main():
         
     else:
         print("Invalid choice. Building memory for first 5 patients...")
-        build_memory_for_all_patients(limit=5)
+        build_memory_for_all_patients(limit=5, verbose=True)
 
 if __name__ == "__main__":
     main()

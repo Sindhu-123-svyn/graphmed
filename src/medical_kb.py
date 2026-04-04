@@ -6,9 +6,30 @@ External medical knowledge base for drug interactions, guidelines, and disease i
 import json
 import csv
 import re
+import os
 from pathlib import Path
 from typing import List, Dict, Any, Optional, Tuple
 from sentence_transformers import SentenceTransformer
+
+
+def _disable_chroma_telemetry_noise() -> None:
+    """Disable telemetry calls that can fail with incompatible PostHog versions."""
+    os.environ["ANONYMIZED_TELEMETRY"] = "False"
+    os.environ["CHROMA_TELEMETRY"] = "False"
+
+    try:
+        import posthog  # type: ignore
+
+        def _capture_noop(*args, **kwargs):
+            return None
+
+        posthog.capture = _capture_noop
+    except Exception:
+        pass
+
+
+_disable_chroma_telemetry_noise()
+
 import chromadb
 from chromadb.config import Settings
 import warnings
@@ -17,6 +38,8 @@ import logging
 # Suppress warnings
 warnings.filterwarnings("ignore")
 logging.getLogger("chromadb").setLevel(logging.ERROR)
+logging.getLogger("chromadb.telemetry").setLevel(logging.ERROR)
+logging.getLogger("chromadb.telemetry.product").setLevel(logging.ERROR)
 
 # Medical knowledge categories
 MEDICAL_CATEGORIES = {
@@ -62,7 +85,7 @@ class MedicalKnowledgeBase:
         # Initialize embedding model
         self.embedder = SentenceTransformer('all-MiniLM-L6-v2')
         
-        print(f"✅ Medical Knowledge Base initialized")
+        print("[OK] Medical Knowledge Base initialized")
         print(f"   Existing entries: {self.collection.count()}")
     
     def add_drug_interaction(self, drug1: str, drug2: str, 
