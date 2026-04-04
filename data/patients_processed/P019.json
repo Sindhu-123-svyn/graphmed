@@ -7,27 +7,32 @@
       "note": "Patient presents with symptoms of fatigue, polyuria, and polydipsia. BP 140/90, HbA1c 7.5. Diagnoses: Type 2 Diabetes, Hypertension. Medications: Metformin 500mg, Lisinopril 2.5mg. Symptoms: fatigue, polyuria, polydipsia.",
       "labs": {
         "HbA1c": 7.5,
-        "BP": "140/90"
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 78,
+        "LDL": 140
       },
       "medications": [
+        "Metformin 500mg",
+        "Lisinopril 2.5mg",
         "metformin",
         "lisinopril",
         "500mg",
         "2.5mg"
       ],
       "diagnoses": [
-        "Hypertension",
-        "Type 2 Diabetes"
+        "Type 2 Diabetes",
+        "Hypertension"
       ],
       "symptoms": [
-        "Polydipsia",
-        "Polyuria",
-        "Fatigue"
+        "fatigue",
+        "polyuria",
+        "polydipsia"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Type 2 Diabetes"
+          "Type 2 Diabetes",
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -35,17 +40,55 @@
           "500mg",
           "2.5mg"
         ],
-        "lab_values": {
-          "HbA1c": 7.5,
-          "BP": "140/90"
-        },
         "symptoms": [
           "Polydipsia",
           "Polyuria",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Polyuria",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Polydipsia",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.5,
+          "BP_systolic": 140,
+          "BP_diastolic": 90
+        }
       }
     },
     {
@@ -54,9 +97,15 @@
       "note": "Patient reports worsening fatigue and shortness of breath. BP 150/95, HbA1c 8.1. Diagnoses: Type 2 Diabetes, Hypertension, Hyperlipidemia. Medications: Metformin 1000mg, Lisinopril 5mg, Atorvastatin 20mg. Symptoms: fatigue, shortness of breath, polyuria, polydipsia.",
       "labs": {
         "HbA1c": 8.1,
-        "BP": "150/95"
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 75,
+        "LDL": 160
       },
       "medications": [
+        "Metformin 1000mg",
+        "Lisinopril 5mg",
+        "Atorvastatin 20mg",
         "metformin",
         "lisinopril",
         "atorvastatin",
@@ -65,21 +114,21 @@
         "20mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
-        "Shortness of breath",
-        "Polyuria",
-        "Polydipsia",
-        "Fatigue"
+        "fatigue",
+        "shortness of breath",
+        "polyuria",
+        "polydipsia"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -89,18 +138,68 @@
           "5mg",
           "20mg"
         ],
-        "lab_values": {
-          "HbA1c": 8.1,
-          "BP": "150/95"
-        },
         "symptoms": [
+          "Polydipsia",
           "Shortness of breath",
           "Polyuria",
-          "Polydipsia",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Atorvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Shortness of breath",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Metformin",
+            "predicate": "contraindicated_with",
+            "object": "Polyuria",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "contraindicated_with",
+            "object": "Polydipsia",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.1,
+          "BP_systolic": 150,
+          "BP_diastolic": 95
+        }
       }
     },
     {
@@ -109,9 +208,15 @@
       "note": "Patient's HbA1c improves with diet and exercise. BP 130/80, HbA1c 6.8. Diagnoses: Type 2 Diabetes, Hypertension, Hyperlipidemia. Medications: Metformin 500mg, Lisinopril 2.5mg, Atorvastatin 10mg. Symptoms: fatigue, polyuria, polydipsia.",
       "labs": {
         "HbA1c": 6.8,
-        "BP": "130/80"
+        "BP_systolic": 130,
+        "BP_diastolic": 80,
+        "eGFR": 80,
+        "LDL": 120
       },
       "medications": [
+        "Metformin 500mg",
+        "Lisinopril 2.5mg",
+        "Atorvastatin 10mg",
         "metformin",
         "lisinopril",
         "atorvastatin",
@@ -120,20 +225,20 @@
         "10mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
-        "Polydipsia",
-        "Polyuria",
-        "Fatigue"
+        "fatigue",
+        "polyuria",
+        "polydipsia"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -143,17 +248,55 @@
           "2.5mg",
           "10mg"
         ],
-        "lab_values": {
-          "HbA1c": 6.8,
-          "BP": "130/80"
-        },
         "symptoms": [
           "Polydipsia",
           "Polyuria",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "improves",
+            "object": "diet and exercise",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "BP 130/80",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "BP 130/80",
+            "confidence": 0.8
+          },
+          {
+            "subject": "metformin",
+            "predicate": "managed_by",
+            "object": "diet and exercise",
+            "confidence": 0.7
+          },
+          {
+            "subject": "lisinopril",
+            "predicate": "managed_by",
+            "object": "diet and exercise",
+            "confidence": 0.7
+          },
+          {
+            "subject": "atorvastatin",
+            "predicate": "managed_by",
+            "object": "diet and exercise",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 6.8,
+          "BP_systolic": 130,
+          "BP_diastolic": 80
+        }
       }
     },
     {
@@ -162,36 +305,44 @@
       "note": "Patient experiences acute kidney injury and develops edema. BP 160/100, HbA1c 7.3. Diagnoses: Type 2 Diabetes, Hypertension, Hyperlipidemia, Chronic Kidney Disease. Medications: Metformin 1000mg, Lisinopril 10mg, Atorvastatin 20mg, Furosemide 40mg. Symptoms: fatigue, shortness of breath, polyuria, polydipsia, edema.",
       "labs": {
         "HbA1c": 7.3,
-        "BP": "160/100"
+        "BP_systolic": 160,
+        "BP_diastolic": 100,
+        "eGFR": 60,
+        "LDL": 150
       },
       "medications": [
+        "Metformin 1000mg",
+        "Lisinopril 10mg",
+        "Atorvastatin 20mg",
+        "Furosemide 40mg",
         "metformin",
         "lisinopril",
         "atorvastatin",
         "1000mg",
         "10mg",
         "20mg",
-        "40mg"
+        "40mg",
+        "Furosemide"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Chronic Kidney Disease",
         "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Chronic Kidney Disease"
       ],
       "symptoms": [
-        "Polydipsia",
-        "Fatigue",
-        "Polyuria",
-        "Shortness of breath",
-        "Edema"
+        "fatigue",
+        "shortness of breath",
+        "polyuria",
+        "polydipsia",
+        "edema"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Chronic Kidney Disease",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension",
+          "Chronic Kidney Disease"
         ],
         "medications": [
           "metformin",
@@ -200,21 +351,96 @@
           "1000mg",
           "10mg",
           "20mg",
-          "40mg"
+          "40mg",
+          "Furosemide"
+        ],
+        "symptoms": [
+          "Edema",
+          "Polydipsia",
+          "Fatigue",
+          "Shortness of breath",
+          "Polyuria"
+        ],
+        "procedures": [],
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Atorvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Furosemide",
+            "predicate": "managed_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Furosemide",
+            "predicate": "contraindicated_with",
+            "object": "Edema",
+            "confidence": 0.7
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Edema",
+            "predicate": "has_symptom",
+            "object": "Shortness of breath",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Edema",
+            "predicate": "has_symptom",
+            "object": "Fatigue",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Edema",
+            "predicate": "has_symptom",
+            "object": "Polyuria",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Edema",
+            "predicate": "has_symptom",
+            "object": "Polydipsia",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.5
+          }
         ],
         "lab_values": {
           "HbA1c": 7.3,
-          "BP": "160/100"
-        },
-        "symptoms": [
-          "Polydipsia",
-          "Fatigue",
-          "Polyuria",
-          "Shortness of breath",
-          "Edema"
-        ],
-        "procedures": [],
-        "relationships": []
+          "BP_systolic": 160,
+          "BP_diastolic": 100
+        }
       }
     }
   ]

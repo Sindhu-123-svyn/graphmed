@@ -13,15 +13,17 @@
         "LDL": 130
       },
       "medications": [
+        "Metformin 500mg, Lisinopril 10mg",
         "metformin",
         "lisinopril"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension"
       ],
       "symptoms": [
-        "Polydipsia",
-        "Polyuria"
+        "Polyuria",
+        "Polydipsia"
       ],
       "extracted": {
         "conditions": [
@@ -31,13 +33,44 @@
           "metformin",
           "lisinopril"
         ],
-        "lab_values": {},
         "symptoms": [
           "Polydipsia",
           "Polyuria"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "metformin",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Polyuria",
+            "predicate": "has_symptom",
+            "object": "Polydipsia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "metformin",
+            "predicate": "measured_by",
+            "object": "lab_values",
+            "confidence": 0.7
+          },
+          {
+            "subject": "lisinopril",
+            "predicate": "measured_by",
+            "object": "lab_values",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {}
       }
     },
     {
@@ -52,15 +85,23 @@
         "LDL": 150
       },
       "medications": [
+        "Metformin 500mg, Lisinopril 20mg, Amlodipine 5mg",
         "lisinopril",
         "amlodipine",
         "20mg"
       ],
       "diagnoses": [
-        "Hypertension"
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia"
       ],
       "symptoms": [
-        "Edema"
+        "Polyuria",
+        "Polydipsia",
+        "Edema",
+        "Wheezing",
+        "Weight gain",
+        "Bilateral wheezing"
       ],
       "extracted": {
         "conditions": [
@@ -71,12 +112,39 @@
           "amlodipine",
           "20mg"
         ],
-        "lab_values": {},
         "symptoms": [
-          "Edema"
+          "Edema",
+          "Weight gain",
+          "Bilateral wheezing"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "amlodipine",
+            "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.9
+          },
+          {
+            "subject": "amlodipine",
+            "predicate": "measured_by",
+            "object": "20mg",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Edema",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Bilateral wheezing",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {}
       }
     },
     {
@@ -88,32 +156,78 @@
         "BP_systolic": 160,
         "BP_diastolic": 100,
         "eGFR": 48,
-        "LDL": 180
+        "LDL": 180,
+        "name": "kidney function"
       },
       "medications": [
-        "simvastatin"
+        "Metformin 500mg, Lisinopril 20mg, Amlodipine 10mg, Simvastatin 20mg, Enalapril 5mg",
+        "simvastatin",
+        "enalapril"
       ],
       "diagnoses": [
-        "Coronary Artery Disease"
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease",
+        "Kidney Function"
       ],
       "symptoms": [
         "Polyuria",
         "Polydipsia",
         "Edema",
         "Wheezing",
-        "Angina"
+        "Angina",
+        "coronary artery disease symptoms"
       ],
       "extracted": {
         "conditions": [
-          "Coronary Artery Disease"
+          "Coronary Artery Disease",
+          "Kidney Function"
         ],
         "medications": [
-          "simvastatin"
+          "simvastatin",
+          "enalapril"
         ],
-        "lab_values": {},
-        "symptoms": [],
+        "symptoms": [
+          "coronary artery disease symptoms"
+        ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "simvastatin",
+            "predicate": "managed_by",
+            "object": "doctor",
+            "confidence": 0.8
+          },
+          {
+            "subject": "simvastatin",
+            "predicate": "improves",
+            "object": "coronary artery disease symptoms",
+            "confidence": 0.7
+          },
+          {
+            "subject": "enalapril",
+            "predicate": "managed_by",
+            "object": "doctor",
+            "confidence": 0.8
+          },
+          {
+            "subject": "enalapril",
+            "predicate": "improves",
+            "object": "kidney function",
+            "confidence": 0.6
+          },
+          {
+            "subject": "coronary artery disease symptoms",
+            "predicate": "worsens",
+            "object": "kidney function",
+            "confidence": 0.9
+          }
+        ],
+        "lab_values": {
+          "name": "kidney function"
+        }
       }
     },
     {
@@ -125,17 +239,21 @@
         "BP_systolic": 170,
         "BP_diastolic": 105,
         "eGFR": 36,
-        "LDL": 200
+        "LDL": 200,
+        "kidney function": "worsening"
       },
       "medications": [
-        "Metformin 500mg, Lisinopril 20mg, Amlodipine 15mg, Simvastatin 40mg, Enalapril 10mg, Spironolactone 25mg"
+        "Metformin 500mg, Lisinopril 20mg, Amlodipine 15mg, Simvastatin 40mg, Enalapril 10mg, Spironolactone 25mg",
+        "spironolactone"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
         "Chronic Kidney Disease",
-        "Coronary Artery Disease"
+        "Coronary Artery Disease",
+        "kidney dysfunction",
+        "cardiovascular disease"
       ],
       "symptoms": [
         "Polyuria",
@@ -143,15 +261,54 @@
         "Edema",
         "Wheezing",
         "Angina",
-        "Shortness of breath"
+        "Shortness of breath",
+        "kidney function worsening",
+        "cardiovascular symptoms"
       ],
       "extracted": {
-        "conditions": [],
-        "medications": [],
-        "lab_values": {},
-        "symptoms": [],
-        "procedures": [],
-        "relationships": []
+        "conditions": [
+          "kidney dysfunction",
+          "cardiovascular disease"
+        ],
+        "medications": [
+          "spironolactone"
+        ],
+        "symptoms": [
+          "kidney function worsening",
+          "cardiovascular symptoms"
+        ],
+        "procedures": [
+          "dialysis referral"
+        ],
+        "relationships": [
+          {
+            "subject": "spironolactone",
+            "predicate": "managed_by",
+            "object": "kidney dysfunction",
+            "confidence": 0.8
+          },
+          {
+            "subject": "spironolactone",
+            "predicate": "managed_by",
+            "object": "cardiovascular disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "dialysis referral",
+            "predicate": "measured_by",
+            "object": "kidney function worsening",
+            "confidence": 0.7
+          },
+          {
+            "subject": "kidney function worsening",
+            "predicate": "worsens",
+            "object": "kidney dysfunction",
+            "confidence": 0.9
+          }
+        ],
+        "lab_values": {
+          "kidney function": "worsening"
+        }
       }
     }
   ]

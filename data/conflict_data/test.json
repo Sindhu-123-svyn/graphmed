@@ -1,0 +1,142 @@
+[
+  {
+    "id": "conflict_16",
+    "statement_a": "Denies chest pain",
+    "statement_b": "Reports chest pressure on exertion",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_var_98",
+    "statement_a": "BP well controlled",
+    "statement_b": "Blood pressure 165/95, uncontrolled",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_var_119",
+    "statement_a": "No history of hypertension",
+    "statement_b": "BP 150/90 on admission",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_20",
+    "statement_a": "Labs normal",
+    "statement_b": "Creatinine 2.8, elevated",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "consist_var_58",
+    "statement_a": "No fever",
+    "statement_b": "Afebrile",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "conflict_var_79",
+    "statement_a": "Not diabetic",
+    "statement_b": "Diagnosed with Type 2 diabetes",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "consist_var_41",
+    "statement_a": "Patient has diabetes",
+    "statement_b": "Type 2 diabetes mellitus",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "conflict_13",
+    "statement_a": "Not diabetic",
+    "statement_b": "Diagnosed with Type 2 diabetes",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "consist_var_35",
+    "statement_a": "Patient has diabetes",
+    "statement_b": "Type 2 diabetes mellitus",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "consist_8",
+    "statement_a": "No known allergies",
+    "statement_b": "No allergies documented",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "consist_var_57",
+    "statement_a": "Diabetes well-controlled",
+    "statement_b": "Good glycemic control",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "conflict_var_110",
+    "statement_a": "Never smoked",
+    "statement_b": "Current heavy smoker",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_var_122",
+    "statement_a": "Not taking warfarin",
+    "statement_b": "INR 3.5 on warfarin therapy",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_var_120",
+    "statement_a": "Not diabetic",
+    "statement_b": "Diagnosed with Type 2 diabetes",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "consist_var_45",
+    "statement_a": "Hypertension diagnosed",
+    "statement_b": "High blood pressure history",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "consist_var_42",
+    "statement_a": "On lisinopril",
+    "statement_b": "Taking lisinopril 10mg daily",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "consist_var_49",
+    "statement_a": "HbA1c 7.2%",
+    "statement_b": "A1C 7.2, slightly elevated",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "conflict_25",
+    "statement_a": "Never smoked",
+    "statement_b": "Current heavy smoker",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_var_121",
+    "statement_a": "Not diabetic",
+    "statement_b": "Diagnosed with Type 2 diabetes",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "consist_var_50",
+    "statement_a": "Discontinued statin",
+    "statement_b": "Stopped taking atorvastatin",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  }
+]

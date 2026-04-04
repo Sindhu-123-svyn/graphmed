@@ -7,30 +7,34 @@
       "note": "Initial visit. Patient presents with complaints of fatigue and increased thirst. HbA1c 7.5, BP 140/90, eGFR 78, LDL 120. Diagnoses include Type 2 Diabetes, Hypertension, and Hyperlipidemia. Medications include Metformin 500mg BID and Lisinopril 10mg daily.",
       "labs": {
         "HbA1c": 7.5,
-        "BP": "140/90",
-        "eGFR": 78.0,
-        "LDL": 120.0
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 78,
+        "LDL": 120
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg daily",
         "metformin",
         "lisinopril",
         "500mg",
         "10mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
-        "Polydipsia",
-        "Fatigue"
+        "Fatigue",
+        "Increased thirst",
+        "Polydipsia"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -38,18 +42,19 @@
           "500mg",
           "10mg"
         ],
-        "lab_values": {
-          "HbA1c": 7.5,
-          "BP": "140/90",
-          "eGFR": 78.0,
-          "LDL": 120.0
-        },
         "symptoms": [
           "Polydipsia",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [],
+        "lab_values": {
+          "HbA1c": 7.5,
+          "BP_systolic": 140,
+          "BP_diastolic": 90,
+          "eGFR": 78.0,
+          "LDL": 120.0
+        }
       }
     },
     {
@@ -58,11 +63,15 @@
       "note": "Follow-up visit. Patient reports worsening fatigue and increased urination. HbA1c 9.1, BP 150/95, eGFR 65, LDL 140. Diagnoses include Type 2 Diabetes, Hypertension, Hyperlipidemia, and early signs of Chronic Kidney Disease. Medications include Metformin 1000mg BID, Lisinopril 20mg daily, and Atorvastatin 20mg daily.",
       "labs": {
         "HbA1c": 9.1,
-        "BP": "150/95",
-        "eGFR": 65.0,
-        "LDL": 140.0
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 65,
+        "LDL": 140
       },
       "medications": [
+        "Metformin 1000mg BID",
+        "Lisinopril 20mg daily",
+        "Atorvastatin 20mg daily",
         "metformin",
         "lisinopril",
         "atorvastatin",
@@ -70,20 +79,22 @@
         "20mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Chronic Kidney Disease",
         "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Chronic Kidney Disease"
       ],
       "symptoms": [
-        "Fatigue"
+        "Fatigue",
+        "Increased thirst",
+        "Increased urination"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Chronic Kidney Disease",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension",
+          "Chronic Kidney Disease"
         ],
         "medications": [
           "metformin",
@@ -92,17 +103,18 @@
           "1000mg",
           "20mg"
         ],
-        "lab_values": {
-          "HbA1c": 9.1,
-          "BP": "150/95",
-          "eGFR": 65.0,
-          "LDL": 140.0
-        },
         "symptoms": [
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [],
+        "lab_values": {
+          "HbA1c": 9.1,
+          "BP_systolic": 150,
+          "BP_diastolic": 95,
+          "eGFR": 65.0,
+          "LDL": 140.0
+        }
       }
     },
     {
@@ -111,37 +123,47 @@
       "note": "Follow-up visit. Patient reports worsening fatigue, increased urination, and swelling in the legs. HbA1c 8.5, BP 160/100, eGFR 50, LDL 160. Diagnoses include Type 2 Diabetes, Hypertension, Hyperlipidemia, Chronic Kidney Disease, and potential Coronary Artery Disease due to high LDL. Medications include Metformin 1500mg BID, Lisinopril 30mg daily, Atorvastatin 40mg daily, and Aspirin 81mg daily.",
       "labs": {
         "HbA1c": 8.5,
-        "BP": "160/100",
-        "eGFR": 50.0,
-        "LDL": 160.0
+        "BP_systolic": 160,
+        "BP_diastolic": 100,
+        "eGFR": 50,
+        "LDL": 160
       },
       "medications": [
+        "Metformin 1500mg BID",
+        "Lisinopril 30mg daily",
+        "Atorvastatin 40mg daily",
+        "Aspirin 81mg daily",
         "metformin",
         "lisinopril",
         "atorvastatin",
         "1500mg",
         "30mg",
         "40mg",
-        "81mg"
+        "81mg",
+        "aspirin"
       ],
       "diagnoses": [
-        "Hyperlipidemia",
-        "Hypertension",
-        "Coronary Artery Disease",
         "Type 2 Diabetes",
-        "Chronic Kidney Disease"
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Potential Coronary Artery Disease",
+        "Coronary Artery Disease"
       ],
       "symptoms": [
-        "Edema",
-        "Fatigue"
+        "Fatigue",
+        "Increased thirst",
+        "Increased urination",
+        "Swelling in the legs",
+        "Edema"
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia",
-          "Hypertension",
-          "Coronary Artery Disease",
+          "Chronic Kidney Disease",
           "Type 2 Diabetes",
-          "Chronic Kidney Disease"
+          "Coronary Artery Disease",
+          "Hyperlipidemia",
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -150,20 +172,61 @@
           "1500mg",
           "30mg",
           "40mg",
-          "81mg"
+          "81mg",
+          "aspirin"
+        ],
+        "symptoms": [
+          "Edema",
+          "Fatigue",
+          "Increased urination",
+          "Swelling in the legs"
+        ],
+        "procedures": [],
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Atorvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Aspirin",
+            "predicate": "contraindicated_with",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.7
+          },
+          {
+            "subject": "High LDL",
+            "predicate": "improves",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.6
+          }
         ],
         "lab_values": {
           "HbA1c": 8.5,
-          "BP": "160/100",
+          "BP_systolic": 160,
+          "BP_diastolic": 100,
           "eGFR": 50.0,
           "LDL": 160.0
-        },
-        "symptoms": [
-          "Edema",
-          "Fatigue"
-        ],
-        "procedures": [],
-        "relationships": []
+        }
       }
     },
     {
@@ -172,40 +235,99 @@
       "note": "Follow-up visit. Patient reports improvement in symptoms, but still experiences fatigue and increased urination. HbA1c 8.0, BP 145/90, eGFR 62, LDL 140. Diagnoses remain the same. Medications remain the same.",
       "labs": {
         "HbA1c": 8.0,
-        "BP": "145/90",
-        "eGFR": 62.0,
-        "LDL": 140.0
+        "BP_systolic": 145,
+        "BP_diastolic": 90,
+        "eGFR": 62,
+        "LDL": 140
       },
       "medications": [
         "Metformin 1500mg BID",
         "Lisinopril 30mg daily",
         "Atorvastatin 40mg daily",
-        "Aspirin 81mg daily"
+        "Aspirin 81mg daily",
+        "Medication (unspecified)"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
         "Chronic Kidney Disease",
-        "Potential Coronary Artery Disease"
+        "Potential Coronary Artery Disease",
+        "Diabetes"
       ],
       "symptoms": [
-        "Fatigue"
+        "Fatigue",
+        "Increased urination"
       ],
       "extracted": {
-        "conditions": [],
-        "medications": [],
-        "lab_values": {
-          "HbA1c": 8.0,
-          "BP": "145/90",
-          "eGFR": 62.0,
-          "LDL": 140.0
-        },
+        "conditions": [
+          "Diabetes"
+        ],
+        "medications": [
+          "Medication (unspecified)"
+        ],
         "symptoms": [
-          "Fatigue"
+          "Fatigue",
+          "Increased urination"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Medication (unspecified)",
+            "predicate": "managed_by",
+            "object": "Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Increased urination",
+            "confidence": 0.7
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Chronic kidney disease",
+            "confidence": 0.7
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Medication (unspecified)",
+            "predicate": "contraindicated_with",
+            "object": "eGFR",
+            "confidence": 0.5
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "worsens",
+            "object": "Diabetes",
+            "confidence": 0.4
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.0,
+          "BP_systolic": 145,
+          "BP_diastolic": 90,
+          "eGFR": 62.0,
+          "LDL": 140.0
+        }
       }
     },
     {
@@ -214,37 +336,83 @@
       "note": "Follow-up visit. Patient reports continued improvement in symptoms. HbA1c 7.8, BP 130/80, eGFR 70, LDL 120. Diagnoses remain the same, but with a decrease in severity of Chronic Kidney Disease. Medications remain the same.",
       "labs": {
         "HbA1c": 7.8,
-        "BP": "130/80",
-        "eGFR": 70.0,
-        "LDL": 120.0
+        "BP_systolic": 130,
+        "BP_diastolic": 80,
+        "eGFR": 70,
+        "LDL": 120
       },
       "medications": [
         "Metformin 1500mg BID",
         "Lisinopril 30mg daily",
         "Atorvastatin 40mg daily",
-        "Aspirin 81mg daily"
+        "Aspirin 81mg daily",
+        "Metformin",
+        "Atorvastatin"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Mild Chronic Kidney Disease",
+        "Potential Coronary Artery Disease",
         "Chronic Kidney Disease"
       ],
       "symptoms": [
         "Fatigue",
-        "Increased urination"
+        "Increased urination",
+        "improvement in symptoms"
       ],
       "extracted": {
         "conditions": [
           "Chronic Kidney Disease"
         ],
-        "medications": [],
+        "medications": [
+          "Metformin",
+          "Atorvastatin"
+        ],
+        "symptoms": [
+          "improvement in symptoms"
+        ],
+        "procedures": [],
+        "relationships": [
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "HbA1c",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "managed_by",
+            "object": "Metformin",
+            "confidence": 0.9
+          },
+          {
+            "subject": "LDL",
+            "predicate": "managed_by",
+            "object": "Atorvastatin",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "managed_by",
+            "object": "Metformin",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "improves",
+            "object": "improvement in symptoms",
+            "confidence": 0.7
+          }
+        ],
         "lab_values": {
           "HbA1c": 7.8,
-          "BP": "130/80",
+          "BP_systolic": 130,
+          "BP_diastolic": 80,
           "eGFR": 70.0,
           "LDL": 120.0
-        },
-        "symptoms": [],
-        "procedures": [],
-        "relationships": []
+        }
       }
     }
   ]

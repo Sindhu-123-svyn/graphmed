@@ -7,10 +7,14 @@
       "note": "Patient presents with 3-month history of fatigue and polyuria. Physical exam reveals BP 140/90 mmHg and BMI 32 kg/m2. HbA1c 8.1%, LDL 160 mg/dL. Diagnoses: Type 2 Diabetes, Hypertension. Medications: Metformin 500mg BID, Lisinopril 10mg daily.",
       "labs": {
         "HbA1c": 8.1,
-        "BP": "140/90",
-        "LDL": 160.0
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 160
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg daily",
         "metformin",
         "lisinopril",
         "160 mg",
@@ -18,17 +22,17 @@
         "10mg"
       ],
       "diagnoses": [
-        "Hypertension",
-        "Type 2 Diabetes"
+        "Type 2 Diabetes",
+        "Hypertension"
       ],
       "symptoms": [
-        "Polyuria",
-        "Fatigue"
+        "Fatigue",
+        "Polyuria"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Type 2 Diabetes"
+          "Type 2 Diabetes",
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -37,17 +41,55 @@
           "500mg",
           "10mg"
         ],
-        "lab_values": {
-          "HbA1c": 8.1,
-          "BP": "140/90",
-          "LDL": 160.0
-        },
         "symptoms": [
           "Polyuria",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Polyuria",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.1,
+          "BP_systolic": 140,
+          "BP_diastolic": 90,
+          "LDL": 160.0
+        }
       }
     },
     {
@@ -56,10 +98,15 @@
       "note": "Patient reports worsening fatigue and increased urination. BP 150/95 mmHg. HbA1c 7.5%, LDL 140 mg/dL. Diagnoses: Type 2 Diabetes, Hypertension, Dyslipidemia. Medications: Metformin 1000mg BID, Lisinopril 20mg daily, Atorvastatin 20mg daily.",
       "labs": {
         "HbA1c": 7.5,
-        "BP": "150/95",
-        "LDL": 140.0
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 68,
+        "LDL": 140
       },
       "medications": [
+        "Metformin 1000mg BID",
+        "Lisinopril 20mg daily",
+        "Atorvastatin 20mg daily",
         "metformin",
         "lisinopril",
         "atorvastatin",
@@ -68,18 +115,23 @@
         "20mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Dyslipidemia",
+        "Hyperlipidemia"
       ],
       "symptoms": [
-        "Fatigue"
+        "Fatigue",
+        "Polyuria",
+        "Dyspnea",
+        "Increased urination"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension",
+          "Dyslipidemia"
         ],
         "medications": [
           "metformin",
@@ -89,16 +141,61 @@
           "1000mg",
           "20mg"
         ],
-        "lab_values": {
-          "HbA1c": 7.5,
-          "BP": "150/95",
-          "LDL": 140.0
-        },
         "symptoms": [
-          "Fatigue"
+          "Fatigue",
+          "Increased urination"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Atorvastatin",
+            "predicate": "managed_by",
+            "object": "Dyslipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "Dyslipidemia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Increased urination",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.5,
+          "BP_systolic": 150,
+          "BP_diastolic": 95,
+          "LDL": 140.0
+        }
       }
     },
     {
@@ -107,33 +204,44 @@
       "note": "Patient reports decreased fatigue but increased shortness of breath. BP 130/80 mmHg. HbA1c 6.8%, LDL 110 mg/dL. Diagnoses: Type 2 Diabetes, Hypertension, Dyslipidemia, Heart Failure. Medications: Metformin 1000mg BID, Lisinopril 20mg daily, Atorvastatin 20mg daily, Furosemide 20mg daily.",
       "labs": {
         "HbA1c": 6.8,
-        "BP": "130/80",
-        "LDL": 110.0
+        "BP_systolic": 130,
+        "BP_diastolic": 80,
+        "eGFR": 60,
+        "LDL": 110
       },
       "medications": [
+        "Metformin 1000mg BID",
+        "Lisinopril 20mg daily",
+        "Atorvastatin 20mg daily",
+        "Furosemide 20mg daily",
         "metformin",
         "lisinopril",
         "atorvastatin",
         "110 mg",
         "1000mg",
-        "20mg"
+        "20mg",
+        "furosemide"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
+        "Dyslipidemia",
         "Heart Failure",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
+        "Polyuria",
+        "Dyspnea",
+        "Orthopnea",
         "Shortness of breath",
         "Fatigue"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
           "Heart Failure",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -141,19 +249,106 @@
           "atorvastatin",
           "110 mg",
           "1000mg",
-          "20mg"
+          "20mg",
+          "furosemide"
         ],
-        "lab_values": {
-          "HbA1c": 6.8,
-          "BP": "130/80",
-          "LDL": 110.0
-        },
         "symptoms": [
           "Shortness of breath",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "atorvastatin",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "furosemide",
+            "predicate": "managed_by",
+            "object": "Heart Failure",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Shortness of breath",
+            "predicate": "has_symptom",
+            "object": "Heart Failure",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP 130/80 mmHg",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.7
+          },
+          {
+            "subject": "HbA1c 6.8%",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          },
+          {
+            "subject": "LDL 110 mg/dL",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.7
+          },
+          {
+            "subject": "metformin",
+            "predicate": "contraindicated_with",
+            "object": "furosemide",
+            "confidence": 0.6
+          },
+          {
+            "subject": "lisinopril",
+            "predicate": "contraindicated_with",
+            "object": "atorvastatin",
+            "confidence": 0.6
+          },
+          {
+            "subject": "atorvastatin",
+            "predicate": "contraindicated_with",
+            "object": "furosemide",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Heart Failure",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
+            "confidence": 0.5
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.5
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 6.8,
+          "BP_systolic": 130,
+          "BP_diastolic": 80,
+          "LDL": 110.0
+        }
       }
     },
     {
@@ -162,10 +357,17 @@
       "note": "Patient reports improved symptoms but elevated creatinine. BP 125/75 mmHg. HbA1c 6.2%, LDL 100 mg/dL. Diagnoses: Type 2 Diabetes, Hypertension, Dyslipidemia, Heart Failure, Chronic Kidney Disease. Medications: Metformin 1000mg BID, Lisinopril 20mg daily, Atorvastatin 20mg daily, Furosemide 40mg daily, Epoetin alfa 10,000 units weekly.",
       "labs": {
         "HbA1c": 6.2,
-        "BP": "125/75",
-        "LDL": 100.0
+        "BP_systolic": 125,
+        "BP_diastolic": 75,
+        "eGFR": 45,
+        "LDL": 100
       },
       "medications": [
+        "Metformin 1000mg BID",
+        "Lisinopril 20mg daily",
+        "Atorvastatin 20mg daily",
+        "Furosemide 40mg daily",
+        "Epoetin alfa 10,000 units weekly",
         "metformin",
         "lisinopril",
         "atorvastatin",
@@ -175,11 +377,12 @@
         "40mg"
       ],
       "diagnoses": [
-        "Hyperlipidemia",
-        "Hypertension",
         "Type 2 Diabetes",
+        "Hypertension",
+        "Dyslipidemia",
         "Heart Failure",
-        "Chronic Kidney Disease"
+        "Chronic Kidney Disease",
+        "Hyperlipidemia"
       ],
       "symptoms": [
         "Polyuria",
@@ -189,11 +392,11 @@
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia",
-          "Hypertension",
-          "Type 2 Diabetes",
+          "Chronic Kidney Disease",
           "Heart Failure",
-          "Chronic Kidney Disease"
+          "Type 2 Diabetes",
+          "Hyperlipidemia",
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -204,14 +407,15 @@
           "20mg",
           "40mg"
         ],
-        "lab_values": {
-          "HbA1c": 6.2,
-          "BP": "125/75",
-          "LDL": 100.0
-        },
         "symptoms": [],
         "procedures": [],
-        "relationships": []
+        "relationships": [],
+        "lab_values": {
+          "HbA1c": 6.2,
+          "BP_systolic": 125,
+          "BP_diastolic": 75,
+          "LDL": 100.0
+        }
       }
     }
   ]

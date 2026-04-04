@@ -7,40 +7,92 @@
       "note": "Patient P008 is a 55-year-old male presenting with chronic Type 2 Diabetes (HbA1c 7.8), Hypertension (BP 140/90), and Hyperlipidemia (LDL 150). He reports fatigue and polyuria.",
       "labs": {
         "HbA1c": 7.8,
-        "BP": "140/90",
-        "LDL": 150.0
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 80,
+        "LDL": 150
       },
       "medications": [
         "Metformin 500mg BID",
         "Lisinopril 20mg OD"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
-        "Polyuria",
-        "Fatigue"
+        "Fatigue",
+        "Polyuria"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
         "medications": [],
-        "lab_values": {
-          "HbA1c": 7.8,
-          "BP": "140/90",
-          "LDL": 150.0
-        },
         "symptoms": [
           "Polyuria",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "measured_by",
+            "object": "HbA1c",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "measured_by",
+            "object": "BP_systolic",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "measured_by",
+            "object": "BP_diastolic",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "measured_by",
+            "object": "LDL",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Polyuria",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.8,
+          "BP_systolic": 140,
+          "BP_diastolic": 90,
+          "LDL": 150.0
+        }
       }
     },
     {
@@ -48,8 +100,11 @@
       "date": "2023-03-01",
       "note": "Patient P008 returns with worsening symptoms. His HbA1c has increased to 8.2, BP 148/92, and LDL 170. He now reports nocturia and increased urination during the day.",
       "labs": {
-        "BP": "148/92",
-        "LDL": 170.0
+        "HbA1c": 8.2,
+        "BP_systolic": 148,
+        "BP_diastolic": 92,
+        "eGFR": 75,
+        "LDL": 170
       },
       "medications": [
         "Metformin 1000mg BID",
@@ -60,24 +115,64 @@
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
-        "Chronic Kidney Disease (CKD) stage 1"
+        "Chronic Kidney Disease (CKD) stage 1",
+        "Diabetes"
       ],
       "symptoms": [
         "Fatigue",
         "Polyuria",
         "Nocturia",
-        "Increased urination during the day"
+        "Increased urination during the day",
+        "Increased urination"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Diabetes"
+        ],
         "medications": [],
-        "lab_values": {
-          "BP": "148/92",
-          "LDL": 170.0
-        },
-        "symptoms": [],
+        "symptoms": [
+          "Nocturia",
+          "Increased urination"
+        ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Diabetes",
+            "predicate": "worsens",
+            "object": "Nocturia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Diabetes",
+            "predicate": "worsens",
+            "object": "Increased urination",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "Diabetes",
+            "confidence": 0.9
+          }
+        ],
+        "lab_values": {
+          "BP_systolic": 148,
+          "BP_diastolic": 92,
+          "LDL": 170.0,
+          "HbA1c": 8.2
+        }
       }
     },
     {
@@ -85,8 +180,11 @@
       "date": "2023-09-01",
       "note": "Patient P008's CKD has progressed to stage 2. His HbA1c has slightly decreased to 8.0, BP 152/96, and LDL 160. He now reports edema in his lower extremities.",
       "labs": {
-        "BP": "152/96",
-        "LDL": 160.0
+        "HbA1c": 8.0,
+        "BP_systolic": 152,
+        "BP_diastolic": 96,
+        "eGFR": 65,
+        "LDL": 160
       },
       "medications": [
         "Metformin 1000mg BID",
@@ -95,9 +193,18 @@
         "Furosemide 20mg OD"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease (CKD) stage 2",
         "Chronic Kidney Disease"
       ],
       "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Nocturia",
+        "Increased urination during the day",
+        "Edema in lower extremities",
         "Edema"
       ],
       "extracted": {
@@ -105,15 +212,16 @@
           "Chronic Kidney Disease"
         ],
         "medications": [],
-        "lab_values": {
-          "BP": "152/96",
-          "LDL": 160.0
-        },
         "symptoms": [
           "Edema"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [],
+        "lab_values": {
+          "BP_systolic": 152,
+          "BP_diastolic": 96,
+          "LDL": 160.0
+        }
       }
     },
     {
@@ -121,8 +229,11 @@
       "date": "2024-03-01",
       "note": "Patient P008's CKD has stabilized, but his HbA1c has worsened to 8.5. BP 154/98, and LDL 180. He now reports worsening edema and shortness of breath.",
       "labs": {
-        "BP": "154/98",
-        "LDL": 180.0
+        "HbA1c": 8.5,
+        "BP_systolic": 154,
+        "BP_diastolic": 98,
+        "eGFR": 60,
+        "LDL": 180
       },
       "medications": [
         "Metformin 1500mg BID",
@@ -132,9 +243,19 @@
         "Losartan 50mg OD"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease (CKD) stage 2",
+        "Coronary Artery Disease (CAD)",
         "Chronic Kidney Disease"
       ],
       "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Nocturia",
+        "Increased urination during the day",
+        "Edema in lower extremities",
         "Shortness of breath",
         "Edema"
       ],
@@ -143,16 +264,55 @@
           "Chronic Kidney Disease"
         ],
         "medications": [],
-        "lab_values": {
-          "BP": "154/98",
-          "LDL": 180.0
-        },
         "symptoms": [
-          "Shortness of breath",
-          "Edema"
+          "Edema",
+          "Shortness of breath"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "HbA1c",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "worsens",
+            "object": "BP_systolic",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "worsens",
+            "object": "BP_diastolic",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "worsens",
+            "object": "LDL",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "worsens",
+            "object": "Edema",
+            "confidence": 0.7
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "BP_systolic": 154,
+          "BP_diastolic": 98,
+          "LDL": 180.0,
+          "HbA1c": 8.5
+        }
       }
     },
     {
@@ -160,8 +320,11 @@
       "date": "2024-09-01",
       "note": "Patient P008's CAD has progressed, and he now requires hospitalization for heart failure. His HbA1c has decreased slightly to 8.2, BP 158/102, and LDL 165. He requires adjustment to his medications.",
       "labs": {
-        "BP": "158/102",
-        "LDL": 165.0
+        "HbA1c": 8.2,
+        "BP_systolic": 158,
+        "BP_diastolic": 102,
+        "eGFR": 55,
+        "LDL": 165
       },
       "medications": [
         "Metformin 2000mg BID",
@@ -169,9 +332,15 @@
         "Atorvastatin 80mg OD",
         "Furosemide 80mg OD",
         "Losartan 100mg OD",
-        "Eplerenone 50mg OD"
+        "Eplerenone 50mg OD",
+        "statin"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease (CKD) stage 2",
+        "Coronary Artery Disease (CAD)",
         "Heart Failure",
         "Coronary Artery Disease"
       ],
@@ -188,14 +357,39 @@
           "Heart Failure",
           "Coronary Artery Disease"
         ],
-        "medications": [],
-        "lab_values": {
-          "BP": "158/102",
-          "LDL": 165.0
-        },
+        "medications": [
+          "statin"
+        ],
         "symptoms": [],
-        "procedures": [],
-        "relationships": []
+        "procedures": [
+          "hospitalization"
+        ],
+        "relationships": [
+          {
+            "subject": "statin",
+            "predicate": "managed_by",
+            "object": "LDL",
+            "confidence": 0.9
+          },
+          {
+            "subject": "statin",
+            "predicate": "contraindicated_with",
+            "object": "HbA1c",
+            "confidence": 0.8
+          },
+          {
+            "subject": "heart failure",
+            "predicate": "worsens",
+            "object": "CAD",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "BP_systolic": 158,
+          "BP_diastolic": 102,
+          "LDL": 165.0,
+          "HbA1c": 8.2
+        }
       }
     }
   ]

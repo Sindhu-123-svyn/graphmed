@@ -7,36 +7,68 @@
       "note": "Patient presented with new-onset hypertension, HbA1c 8.2, BP 150/90, and symptoms of fatigue and shortness of breath. Diagnoses: Type 2 Diabetes, Hypertension. Plan: Initiate antihypertensive medication, intensify glycemic control.",
       "labs": {
         "HbA1c": 8.2,
-        "BP": "150/90"
+        "BP_systolic": 150,
+        "BP_diastolic": 90,
+        "eGFR": 75,
+        "LDL": 140
       },
       "medications": [
         "Metformin 500mg BD",
-        "Losartan 50mg QD"
+        "Losartan 50mg QD",
+        "Antihypertensive medication"
       ],
       "diagnoses": [
-        "Hypertension",
-        "Type 2 Diabetes"
+        "Type 2 Diabetes",
+        "Hypertension"
       ],
       "symptoms": [
-        "Shortness of breath",
-        "Fatigue"
+        "Fatigue",
+        "Shortness of breath"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Type 2 Diabetes"
+          "Type 2 Diabetes",
+          "Hypertension"
         ],
-        "medications": [],
-        "lab_values": {
-          "HbA1c": 8.2,
-          "BP": "150/90"
-        },
+        "medications": [
+          "Antihypertensive medication"
+        ],
         "symptoms": [
           "Shortness of breath",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "Antihypertensive medication",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "Glycemic control",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Shortness of breath",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Fatigue",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.2,
+          "BP_systolic": 150,
+          "BP_diastolic": 90
+        }
       }
     },
     {
@@ -53,29 +85,71 @@
       "medications": [
         "Metformin 1000mg BD",
         "Losartan 50mg QD",
-        "Atorvastatin 20mg QD"
+        "Atorvastatin 20mg QD",
+        "antihypertensive medication",
+        "statin"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
         "Fatigue",
         "Shortness of breath",
-        "Leg cramps"
+        "Leg cramps",
+        "elevated BP"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
-        "medications": [],
-        "lab_values": {},
-        "symptoms": [],
+        "medications": [
+          "antihypertensive medication",
+          "statin"
+        ],
+        "symptoms": [
+          "elevated BP"
+        ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "HbA1c",
+            "predicate": "improves",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "LDL",
+            "predicate": "worsens",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "managed_by",
+            "object": "antihypertensive medication",
+            "confidence": 0.7
+          },
+          {
+            "subject": "BP",
+            "predicate": "managed_by",
+            "object": "statin",
+            "confidence": 0.7
+          },
+          {
+            "subject": "BP",
+            "predicate": "has_symptom",
+            "object": "elevated BP",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.8,
+          "LDL": 160
+        }
       }
     },
     {
@@ -92,32 +166,72 @@
       "medications": [
         "Metformin 1500mg BD",
         "Losartan 100mg QD",
-        "Atorvastatin 40mg QD"
+        "Atorvastatin 40mg QD",
+        "antihypertensive medication"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Chronic Kidney Disease",
         "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Chronic Kidney Disease"
       ],
       "symptoms": [
         "Fatigue",
         "Shortness of breath",
         "Leg cramps",
-        "Swelling in lower extremities"
+        "Swelling in lower extremities",
+        "elevated BP"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Chronic Kidney Disease",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension",
+          "Chronic Kidney Disease"
         ],
-        "medications": [],
-        "lab_values": {},
-        "symptoms": [],
+        "medications": [
+          "antihypertensive medication"
+        ],
+        "symptoms": [
+          "elevated BP"
+        ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "HbA1c",
+            "predicate": "worsens",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "remains",
+            "object": "elevated",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "decreased",
+            "object": "60",
+            "confidence": 0.7
+          },
+          {
+            "subject": "BP",
+            "predicate": "managed_by",
+            "object": "antihypertensive medication",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "improves",
+            "object": "intensify glycemic control",
+            "confidence": 0.5
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.5,
+          "eGFR": 60
+        }
       }
     },
     {
@@ -134,13 +248,14 @@
       "medications": [
         "Metformin 1500mg BD",
         "Losartan 100mg QD",
-        "Atorvastatin 40mg QD"
+        "Atorvastatin 40mg QD",
+        "medication regimen"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Chronic Kidney Disease",
         "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Chronic Kidney Disease"
       ],
       "symptoms": [
         "Fatigue",
@@ -151,16 +266,56 @@
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Chronic Kidney Disease",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension",
+          "Chronic Kidney Disease"
         ],
-        "medications": [],
-        "lab_values": {},
+        "medications": [
+          "medication regimen"
+        ],
         "symptoms": [],
-        "procedures": [],
-        "relationships": []
+        "procedures": [
+          "nephrology consult"
+        ],
+        "relationships": [
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "medication regimen",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "improved_by",
+            "object": "medication regimen",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "worsened_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "BP",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "HbA1c",
+            "confidence": 0.9
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.5,
+          "BP_systolic": 140,
+          "BP_diastolic": 80,
+          "eGFR": "low"
+        }
       }
     }
   ]

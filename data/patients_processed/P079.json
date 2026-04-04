@@ -6,35 +6,85 @@
       "date": "2022-01-15",
       "note": "Patient presents with new-onset fatigue and weight loss. On examination, BP 140/80 mmHg, BMI 30.0 kg/m^2. Diagnoses: Type 2 Diabetes, Hypertension, Hyperlipidemia.",
       "labs": {
-        "BP": "140/80"
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 80,
+        "eGFR": 72,
+        "LDL": 130
       },
       "medications": [
         "Metformin 500mg PO BID",
         "Lisinopril 10mg PO daily"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
-        "Fatigue"
+        "Fatigue",
+        "Weight loss"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
         "medications": [],
-        "lab_values": {
-          "BP": "140/80"
-        },
         "symptoms": [
-          "Fatigue"
+          "Fatigue",
+          "Weight loss"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Weight loss",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP_systolic",
+            "predicate": "measured_by",
+            "object": "BP_diastolic",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "contraindicated_with",
+            "object": "Weight loss",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "worsens",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.5
+          }
+        ],
+        "lab_values": {
+          "BP_systolic": 140,
+          "BP_diastolic": 80
+        }
       }
     },
     {
@@ -42,18 +92,28 @@
       "date": "2022-07-20",
       "note": "Patient returns with worsening fatigue and new-onset shortness of breath. BP 150/90 mmHg on examination. Labs reveal worsening eGFR. Diagnoses: Chronic Kidney Disease. Medication adjustment: Lisinopril dose increased to 20mg PO daily.",
       "labs": {
-        "BP": "150/90"
+        "HbA1c": 8.1,
+        "BP_systolic": 150,
+        "BP_diastolic": 85,
+        "eGFR": 60,
+        "LDL": 120
       },
       "medications": [
+        "Metformin 500mg PO BID",
+        "Lisinopril 20mg PO daily",
         "lisinopril",
         "20mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
         "Chronic Kidney Disease"
       ],
       "symptoms": [
+        "Fatigue",
         "Shortness of breath",
-        "Fatigue"
+        "Weight loss"
       ],
       "extracted": {
         "conditions": [
@@ -63,15 +123,53 @@
           "lisinopril",
           "20mg"
         ],
-        "lab_values": {
-          "BP": "150/90"
-        },
         "symptoms": [
           "Shortness of breath",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "examination",
+            "confidence": 0.9
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "labs",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "increased",
+            "object": "20mg",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Shortness of breath",
+            "predicate": "has_symptom",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.5
+          }
+        ],
+        "lab_values": {
+          "BP_systolic": 150,
+          "BP_diastolic": 90
+        }
       }
     },
     {
@@ -79,9 +177,16 @@
       "date": "2023-02-14",
       "note": "Patient experiences worsening edema and dyspnea. BP 160/95 mmHg on examination. Labs show increased creatinine levels. Medication adjustment: Metformin dose increased to 1000mg PO BID.",
       "labs": {
-        "BP": "160/95"
+        "HbA1c": 8.8,
+        "BP_systolic": 160,
+        "BP_diastolic": 95,
+        "eGFR": 45,
+        "LDL": 110,
+        "creatinine": "increased"
       },
       "medications": [
+        "Metformin 1000mg PO BID",
+        "Lisinopril 20mg PO daily",
         "metformin",
         "1000mg"
       ],
@@ -90,27 +195,74 @@
         "Hypertension",
         "Hyperlipidemia",
         "Chronic Kidney Disease",
-        "Coronary Artery Disease suspected"
+        "Coronary Artery Disease suspected",
+        "renal failure"
       ],
       "symptoms": [
+        "Fatigue",
         "Shortness of breath",
-        "Edema"
+        "Weight loss",
+        "Edema",
+        "Dyspnea"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "hypertension",
+          "renal failure"
+        ],
         "medications": [
           "metformin",
           "1000mg"
         ],
-        "lab_values": {
-          "BP": "160/95"
-        },
         "symptoms": [
+          "Edema",
           "Shortness of breath",
-          "Edema"
+          "dyspnea"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "metformin",
+            "predicate": "managed_by",
+            "object": "renal failure",
+            "confidence": 0.8
+          },
+          {
+            "subject": "metformin",
+            "predicate": "contraindicated_with",
+            "object": "renal failure",
+            "confidence": 0.7
+          },
+          {
+            "subject": "BP_systolic",
+            "predicate": "measured_by",
+            "object": "examination",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP_diastolic",
+            "predicate": "measured_by",
+            "object": "examination",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP_systolic",
+            "predicate": "worsens",
+            "object": "renal failure",
+            "confidence": 0.6
+          },
+          {
+            "subject": "BP_diastolic",
+            "predicate": "worsens",
+            "object": "renal failure",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "BP_systolic": 160,
+          "BP_diastolic": 95,
+          "creatinine": "increased"
+        }
       }
     },
     {
@@ -118,9 +270,16 @@
       "date": "2023-08-22",
       "note": "Patient returns with worsening chest pain and decreased exercise tolerance. BP 155/100 mmHg on examination. Labs show increased LDL levels. Medication adjustment: Atorvastatin 40mg PO daily added.",
       "labs": {
-        "BP": "155/100"
+        "HbA1c": 8.5,
+        "BP_systolic": 155,
+        "BP_diastolic": 100,
+        "eGFR": 40,
+        "LDL": 140
       },
       "medications": [
+        "Metformin 1000mg PO BID",
+        "Lisinopril 20mg PO daily",
+        "Atorvastatin 40mg PO daily",
         "atorvastatin",
         "40mg"
       ],
@@ -132,7 +291,13 @@
         "Coronary Artery Disease"
       ],
       "symptoms": [
-        "Chest pain"
+        "Fatigue",
+        "Shortness of breath",
+        "Weight loss",
+        "Edema",
+        "Dyspnea",
+        "Chest pain",
+        "Decreased exercise tolerance"
       ],
       "extracted": {
         "conditions": [],
@@ -140,14 +305,15 @@
           "atorvastatin",
           "40mg"
         ],
-        "lab_values": {
-          "BP": "155/100"
-        },
         "symptoms": [
           "Chest pain"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [],
+        "lab_values": {
+          "BP_systolic": 155,
+          "BP_diastolic": 100
+        }
       }
     },
     {
@@ -155,9 +321,16 @@
       "date": "2024-02-15",
       "note": "Patient experiences worsening renal function and electrolyte imbalance. BP 165/105 mmHg on examination. Labs show decreased eGFR. Medication adjustment: Lisinopril dose decreased to 10mg PO daily.",
       "labs": {
-        "BP": "165/105"
+        "HbA1c": 9.0,
+        "BP_systolic": 165,
+        "BP_diastolic": 105,
+        "eGFR": 30,
+        "LDL": 130
       },
       "medications": [
+        "Metformin 1000mg PO BID",
+        "Lisinopril 10mg PO daily",
+        "Atorvastatin 40mg PO daily",
         "lisinopril",
         "10mg"
       ],
@@ -167,7 +340,8 @@
         "Hyperlipidemia",
         "Chronic Kidney Disease",
         "Coronary Artery Disease",
-        "Electrolyte imbalance"
+        "Electrolyte imbalance",
+        "renal failure"
       ],
       "symptoms": [
         "Fatigue",
@@ -177,20 +351,59 @@
         "Dyspnea",
         "Chest pain",
         "Decreased exercise tolerance",
-        "Electrolyte imbalance"
+        "Electrolyte imbalance",
+        "worsening renal function"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "renal failure",
+          "electrolyte imbalance"
+        ],
         "medications": [
           "lisinopril",
           "10mg"
         ],
-        "lab_values": {
-          "BP": "165/105"
-        },
-        "symptoms": [],
+        "symptoms": [
+          "worsening renal function"
+        ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "lisinopril",
+            "predicate": "contraindicated_with",
+            "object": "renal failure",
+            "confidence": 0.8
+          },
+          {
+            "subject": "lisinopril",
+            "predicate": "managed_by",
+            "object": "medication adjustment",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "examination",
+            "confidence": 0.7
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "labs",
+            "confidence": 0.6
+          },
+          {
+            "subject": "renal function",
+            "predicate": "worsens",
+            "object": "electrolyte imbalance",
+            "confidence": 0.5
+          }
+        ],
+        "lab_values": {
+          "BP_systolic": 165,
+          "BP_diastolic": 105,
+          "eGFR": "decreased"
+        }
       }
     }
   ]

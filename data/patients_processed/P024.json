@@ -10,9 +10,12 @@
         "BP_systolic": 140,
         "BP_diastolic": 90,
         "eGFR": 72,
-        "LDL": 130
+        "LDL": 130,
+        "Blood Pressure": "140/90 mmHg"
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg daily",
         "metformin",
         "lisinopril",
         "130 mg",
@@ -20,8 +23,8 @@
         "10mg"
       ],
       "diagnoses": [
-        "Hypertension",
-        "Type 2 Diabetes"
+        "Type 2 Diabetes",
+        "Hypertension"
       ],
       "symptoms": [
         "Fatigue",
@@ -29,8 +32,8 @@
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Type 2 Diabetes"
+          "Type 2 Diabetes",
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -39,10 +42,57 @@
           "500mg",
           "10mg"
         ],
-        "lab_values": {},
         "symptoms": [],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Blood Pressure",
+            "predicate": "measured_by",
+            "object": "HbA1c",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Blood Pressure",
+            "predicate": "measured_by",
+            "object": "LDL",
+            "confidence": 0.8
+          },
+          {
+            "subject": "140/90 mmHg",
+            "predicate": "has_symptom",
+            "object": "Hypertension",
+            "confidence": 0.7
+          },
+          {
+            "subject": "7.2%",
+            "predicate": "has_symptom",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          },
+          {
+            "subject": "130 mg/dL",
+            "predicate": "has_symptom",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "Blood Pressure": "140/90 mmHg",
+          "HbA1c": 7.2,
+          "LDL": "130 mg/dL"
+        }
       }
     },
     {
@@ -57,15 +107,21 @@
         "LDL": 150
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg daily",
+        "Simvastatin 20mg daily",
         "simvastatin",
         "20mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
         "Hyperlipidemia"
       ],
       "symptoms": [
+        "Fatigue",
         "Polyuria",
-        "Fatigue"
+        "Dyspnea on exertion"
       ],
       "extracted": {
         "conditions": [
@@ -75,13 +131,13 @@
           "simvastatin",
           "20mg"
         ],
-        "lab_values": {},
         "symptoms": [
           "Polyuria",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [],
+        "lab_values": {}
       }
     },
     {
@@ -96,29 +152,77 @@
         "LDL": 120
       },
       "medications": [
-        "40mg"
+        "Metformin 500mg BID",
+        "Lisinopril 10mg daily",
+        "Simvastatin 20mg daily",
+        "Furosemide 40mg daily",
+        "40mg",
+        "Furosemide 40mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
         "Chronic Kidney Disease"
       ],
       "symptoms": [
-        "Shortness of breath",
-        "Edema"
+        "Fatigue",
+        "Polyuria",
+        "Dyspnea on exertion",
+        "Edema",
+        "Shortness of breath"
       ],
       "extracted": {
         "conditions": [
           "Chronic Kidney Disease"
         ],
         "medications": [
-          "40mg"
+          "40mg",
+          "Furosemide 40mg"
         ],
-        "lab_values": {},
         "symptoms": [
+          "Edema",
           "Shortness of breath",
-          "Edema"
+          "Dyspnea on exertion"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Furosemide",
+            "predicate": "managed_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Lab",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Lab",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Dyspnea on exertion",
+            "predicate": "has_symptom",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.5,
+          "BP_systolic": 150,
+          "BP_diastolic": 95
+        }
       }
     },
     {
@@ -133,35 +237,90 @@
         "LDL": 110
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg daily",
+        "Simvastatin 20mg daily",
+        "Furosemide 40mg daily",
+        "Insulin glargine 10units daily",
+        "Enalapril 10mg daily",
         "insulin",
-        "10mg"
+        "10mg",
+        "insulin glargine",
+        "enalapril"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Type 2 Diabetes"
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
       ],
       "symptoms": [
+        "Fatigue",
         "Polyuria",
+        "Dyspnea on exertion",
         "Edema",
-        "Fatigue"
+        "Weight gain"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Type 2 Diabetes"
+          "Type 2 Diabetes",
+          "Hypertension"
         ],
         "medications": [
           "insulin",
-          "10mg"
+          "10mg",
+          "insulin glargine",
+          "enalapril"
         ],
-        "lab_values": {},
         "symptoms": [
-          "Polyuria",
           "Edema",
+          "Polyuria",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "insulin glargine",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "enalapril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "HbA1c",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "worsens",
+            "object": "Edema",
+            "confidence": 0.7
+          },
+          {
+            "subject": "BP",
+            "predicate": "worsens",
+            "object": "Polyuria",
+            "confidence": 0.7
+          },
+          {
+            "subject": "BP",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.5,
+          "BP_systolic": 160,
+          "BP_diastolic": 100
+        }
       }
     }
   ]

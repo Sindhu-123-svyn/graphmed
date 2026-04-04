@@ -13,6 +13,9 @@
         "LDL": 130
       },
       "medications": [
+        "Metformin 500mg twice daily",
+        "Lisinopril 10mg once daily",
+        "Atorvastatin 20mg once daily",
         "metformin",
         "lisinopril",
         "atorvastatin",
@@ -21,21 +24,24 @@
         "20mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Coronary Artery Disease",
         "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Possible Coronary Artery Disease",
+        "Coronary Artery Disease"
       ],
       "symptoms": [
-        "Chest pain",
-        "Fatigue"
+        "Fatigue",
+        "Occasional chest pain",
+        "Weight gain",
+        "Chest pain"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
           "Coronary Artery Disease",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -45,13 +51,128 @@
           "10mg",
           "20mg"
         ],
-        "lab_values": {},
         "symptoms": [
           "Chest pain",
-          "Fatigue"
+          "Fatigue",
+          "Weight gain"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Atorvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Chest pain",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Weight gain",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Chest pain",
+            "predicate": "has_symptom",
+            "object": "Weight gain",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Metformin",
+            "predicate": "contraindicated_with",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "contraindicated_with",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Atorvastatin",
+            "predicate": "contraindicated_with",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "improves",
+            "object": "Metformin",
+            "confidence": 0.5
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "improves",
+            "object": "Lisinopril",
+            "confidence": 0.5
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "improves",
+            "object": "Atorvastatin",
+            "confidence": 0.5
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Chest pain",
+            "confidence": 0.4
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Chest pain",
+            "confidence": 0.4
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "worsens",
+            "object": "Chest pain",
+            "confidence": 0.4
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.2,
+          "BP_systolic": 140,
+          "BP_diastolic": 90,
+          "LDL": 130
+        }
       }
     },
     {
@@ -66,41 +187,88 @@
         "LDL": 160
       },
       "medications": [
+        "Metformin 500mg twice daily",
+        "Dapagliflozin 10mg once daily",
+        "Lisinopril 20mg once daily",
+        "Atorvastatin 20mg once daily",
         "lisinopril",
         "10mg",
-        "20mg"
+        "20mg",
+        "Dapagliflozin"
       ],
       "diagnoses": [
-        "Hyperlipidemia",
-        "Hypertension",
-        "Coronary Artery Disease",
         "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
         "Chronic Kidney Disease"
       ],
       "symptoms": [
+        "Fatigue",
         "Chest pain",
-        "Fatigue"
+        "Weight gain",
+        "Decreased urine output"
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia",
-          "Hypertension",
-          "Coronary Artery Disease",
+          "Chronic Kidney Disease",
           "Type 2 Diabetes",
-          "Chronic Kidney Disease"
+          "Coronary Artery Disease",
+          "Hyperlipidemia",
+          "Hypertension"
         ],
         "medications": [
           "lisinopril",
           "10mg",
-          "20mg"
+          "20mg",
+          "Dapagliflozin"
         ],
-        "lab_values": {},
         "symptoms": [
           "Chest pain",
-          "Fatigue"
+          "Fatigue",
+          "Weight gain",
+          "Decreased urine output"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Dapagliflozin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "CKD",
+            "predicate": "worsens",
+            "object": "eGFR",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Dapagliflozin",
+            "predicate": "improves",
+            "object": "glycemic control",
+            "confidence": 0.8
+          },
+          {
+            "subject": "lisinopril",
+            "predicate": "improves",
+            "object": "blood pressure",
+            "confidence": 0.8
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.1,
+          "BP_systolic": 150,
+          "BP_diastolic": 95,
+          "LDL": 160,
+          "eGFR": 60
+        }
       }
     },
     {
@@ -115,45 +283,123 @@
         "LDL": 180
       },
       "medications": [
+        "Metformin 500mg twice daily",
+        "Dapagliflozin 20mg once daily",
+        "Lisinopril 40mg once daily",
+        "Atorvastatin 40mg once daily",
         "lisinopril",
         "atorvastatin",
         "40mg",
-        "20mg"
+        "20mg",
+        "Dapagliflozin"
       ],
       "diagnoses": [
-        "Hyperlipidemia",
-        "Hypertension",
-        "Coronary Artery Disease",
         "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "End-stage Renal Disease",
         "Chronic Kidney Disease"
       ],
       "symptoms": [
-        "Shortness of breath",
+        "Fatigue",
         "Chest pain",
-        "Fatigue"
+        "Weight gain",
+        "Decreased urine output",
+        "Shortness of breath"
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia",
-          "Hypertension",
-          "Coronary Artery Disease",
+          "Chronic Kidney Disease",
           "Type 2 Diabetes",
-          "Chronic Kidney Disease"
+          "Coronary Artery Disease",
+          "Hyperlipidemia",
+          "Hypertension"
         ],
         "medications": [
           "lisinopril",
           "atorvastatin",
           "40mg",
-          "20mg"
+          "20mg",
+          "Dapagliflozin"
         ],
-        "lab_values": {},
         "symptoms": [
-          "Shortness of breath",
           "Chest pain",
-          "Fatigue"
+          "Shortness of breath",
+          "Fatigue",
+          "Weight gain",
+          "Decreased urine output"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "lisinopril",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "atorvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Dapagliflozin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "CKD",
+            "predicate": "worsens",
+            "object": "eGFR",
+            "confidence": 0.9
+          },
+          {
+            "subject": "CKD",
+            "predicate": "causes",
+            "object": "Decreased urine output",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "BP",
+            "confidence": 0.7
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "LDL",
+            "confidence": 0.7
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "HbA1c",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Dapagliflozin",
+            "predicate": "improves",
+            "object": "glycemic control",
+            "confidence": 0.8
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.5,
+          "BP_systolic": 155,
+          "BP_diastolic": 100,
+          "LDL": 180,
+          "eGFR": 50
+        }
       }
     }
   ]

@@ -15,12 +15,15 @@
       "medications": [
         "Metformin 500mg BD",
         "Amlodipine 5mg OD",
-        "Atorvastatin 20mg OD"
+        "Atorvastatin 20mg OD",
+        "Lifestyle modifications",
+        "Medication for hypertension",
+        "Medication for hyperlipidemia"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
         "Polyuria",
@@ -29,15 +32,46 @@
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
-        "medications": [],
-        "lab_values": {},
+        "medications": [
+          "Lifestyle modifications",
+          "Medication for hypertension",
+          "Medication for hyperlipidemia"
+        ],
         "symptoms": [],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Medication for hypertension",
+            "predicate": "managed_by",
+            "object": "Lifestyle modifications",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Medication for hypertension",
+            "predicate": "measured_by",
+            "object": "BP",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Medication for hyperlipidemia",
+            "predicate": "measured_by",
+            "object": "BP",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "HbA1c",
+            "confidence": 0.9
+          }
+        ],
+        "lab_values": {
+          "HbA1c": "above target"
+        }
       }
     },
     {
@@ -55,11 +89,15 @@
         "Metformin 750mg BD",
         "Amlodipine 5mg OD",
         "Atorvastatin 20mg OD",
-        "Furosemide 20mg OD"
+        "Furosemide 20mg OD",
+        "Metformin",
+        "Diuretic"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Type 2 Diabetes"
+        "Hyperlipidemia",
+        "Volume Depletion"
       ],
       "symptoms": [
         "Polyuria",
@@ -69,14 +107,50 @@
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Type 2 Diabetes"
+          "Type 2 Diabetes",
+          "Hypertension"
         ],
-        "medications": [],
-        "lab_values": {},
+        "medications": [
+          "Metformin",
+          "Diuretic"
+        ],
         "symptoms": [],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Diuretic",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Diuretic",
+            "confidence": 0.7
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "contraindicated_with",
+            "object": "HbA1c worsened",
+            "confidence": 0.5
+          }
+        ],
+        "lab_values": {
+          "HbA1c": "worsened"
+        }
       }
     },
     {
@@ -94,11 +168,16 @@
         "Metformin 1000mg BD",
         "Amlodipine 10mg OD",
         "Atorvastatin 20mg OD",
-        "Furosemide 20mg OD"
+        "Furosemide 20mg OD",
+        "Metformin",
+        "Lisinopril"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Type 2 Diabetes"
+        "Hyperlipidemia",
+        "Volume Depletion",
+        "Kidney Disease"
       ],
       "symptoms": [
         "Polyuria",
@@ -109,14 +188,44 @@
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Type 2 Diabetes"
+          "Type 2 Diabetes",
+          "Hypertension"
         ],
-        "medications": [],
-        "lab_values": {},
+        "medications": [
+          "Metformin",
+          "Lisinopril"
+        ],
         "symptoms": [],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "BP",
+            "predicate": "worsens",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "improves",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          }
+        ],
+        "lab_values": {
+          "HbA1c": "improved slightly"
+        }
       }
     },
     {
@@ -135,11 +244,16 @@
         "Amlodipine 10mg OD",
         "Atorvastatin 20mg OD",
         "Furosemide 20mg OD",
-        "Sitagliptin 100mg OD"
+        "Sitagliptin 100mg OD",
+        "metformin"
       ],
       "diagnoses": [
-        "Chronic Kidney Disease",
-        "Type 2 Diabetes"
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Volume Depletion",
+        "Kidney Disease",
+        "Chronic Kidney Disease"
       ],
       "symptoms": [
         "Polyuria",
@@ -151,14 +265,49 @@
       ],
       "extracted": {
         "conditions": [
-          "Chronic Kidney Disease",
-          "Type 2 Diabetes"
+          "Type 2 Diabetes",
+          "Chronic Kidney Disease"
         ],
-        "medications": [],
-        "lab_values": {},
+        "medications": [
+          "metformin"
+        ],
         "symptoms": [],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "contraindicated_with",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.7
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": "worsened"
+        }
       }
     }
   ]

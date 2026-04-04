@@ -13,6 +13,7 @@
         "LDL": 180
       },
       "medications": [
+        "Metformin 500mg BID",
         "metformin",
         "500mg"
       ],
@@ -20,9 +21,9 @@
         "Type 2 Diabetes"
       ],
       "symptoms": [
-        "Polydipsia",
+        "Fatigue",
         "Polyuria",
-        "Fatigue"
+        "Polydipsia"
       ],
       "extracted": {
         "conditions": [
@@ -30,16 +31,42 @@
         ],
         "medications": [
           "metformin",
-          "500mg"
+          "500mg",
+          "Metformin 500mg BID"
         ],
-        "lab_values": {},
         "symptoms": [
           "Polydipsia",
           "Polyuria",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin 500mg BID",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Polyuria",
+            "predicate": "has_symptom",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Polydipsia",
+            "predicate": "has_symptom",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          }
+        ],
+        "lab_values": {}
       }
     },
     {
@@ -54,15 +81,22 @@
         "LDL": 160
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 2.5mg QD",
         "lisinopril",
-        "2.5mg"
+        "2.5mg",
+        "Lisinopril 2.5mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension"
       ],
       "symptoms": [
-        "Edema",
-        "Fatigue"
+        "Fatigue",
+        "Polyuria",
+        "Polydipsia",
+        "Lower extremity edema",
+        "Edema"
       ],
       "extracted": {
         "conditions": [
@@ -70,15 +104,35 @@
         ],
         "medications": [
           "lisinopril",
-          "2.5mg"
+          "2.5mg",
+          "Lisinopril 2.5mg"
         ],
-        "lab_values": {},
         "symptoms": [
           "Edema",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Lisinopril",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "improves",
+            "object": "Hypertension",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {}
       }
     },
     {
@@ -93,14 +147,25 @@
         "LDL": 130
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 2.5mg QD",
+        "Simvastatin 20mg QD",
         "simvastatin",
-        "20mg"
+        "20mg",
+        "Simvastatin 20mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
         "Hyperlipidemia",
         "Coronary Artery Disease"
       ],
       "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Polydipsia",
+        "Lower extremity edema",
+        "Chest discomfort",
         "Chest pain"
       ],
       "extracted": {
@@ -110,14 +175,38 @@
         ],
         "medications": [
           "simvastatin",
-          "20mg"
+          "20mg",
+          "Simvastatin 20mg"
         ],
-        "lab_values": {},
         "symptoms": [
-          "Chest pain"
+          "Chest pain",
+          "Chest discomfort"
         ],
-        "procedures": [],
-        "relationships": []
+        "procedures": [
+          "ECG",
+          "Stress test"
+        ],
+        "relationships": [
+          {
+            "subject": "Simvastatin 20mg",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "ECG",
+            "predicate": "measured_by",
+            "object": "Chest discomfort",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Stress test",
+            "predicate": "measured_by",
+            "object": "Chest discomfort",
+            "confidence": 0.8
+          }
+        ],
+        "lab_values": {}
       }
     },
     {
@@ -132,12 +221,25 @@
         "LDL": 140
       },
       "medications": [
-        "40mg"
+        "Metformin 500mg BID",
+        "Lisinopril 2.5mg QD",
+        "Simvastatin 20mg QD",
+        "Furosemide 40mg QD",
+        "40mg",
+        "Furosemide 40mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
         "Chronic Kidney Disease"
       ],
       "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Polydipsia",
+        "Lower extremity edema",
+        "Chest discomfort",
         "Edema"
       ],
       "extracted": {
@@ -145,14 +247,34 @@
           "Chronic Kidney Disease"
         ],
         "medications": [
-          "40mg"
+          "40mg",
+          "Furosemide 40mg"
         ],
-        "lab_values": {},
         "symptoms": [
           "Edema"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Furosemide 40mg",
+            "predicate": "managed_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Furosemide 40mg",
+            "predicate": "treats",
+            "object": "Edema",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "Edema",
+            "confidence": 0.9
+          }
+        ],
+        "lab_values": {}
       }
     },
     {
@@ -164,9 +286,15 @@
         "BP_systolic": 135,
         "BP_diastolic": 80,
         "eGFR": 50,
-        "LDL": 120
+        "LDL": 120,
+        "oxygen_saturation": 88
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 2.5mg QD",
+        "Simvastatin 20mg QD",
+        "Furosemide 40mg QD",
+        "Amlodipine 5mg QD",
         "amlodipine",
         "5mg"
       ],
@@ -174,23 +302,58 @@
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
-        "Chronic Kidney Disease"
+        "Chronic Kidney Disease",
+        "hypoxemia"
       ],
       "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Polydipsia",
+        "Lower extremity edema",
+        "Chest discomfort",
         "Shortness of breath"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "hypoxemia"
+        ],
         "medications": [
           "amlodipine",
           "5mg"
         ],
-        "lab_values": {},
         "symptoms": [
           "Shortness of breath"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "amlodipine",
+            "predicate": "managed_by",
+            "object": "blood pressure control",
+            "confidence": 0.8
+          },
+          {
+            "subject": "amlodipine",
+            "predicate": "measured_by",
+            "object": "5mg",
+            "confidence": 0.9
+          },
+          {
+            "subject": "oxygen saturation",
+            "predicate": "measured_by",
+            "object": "88%",
+            "confidence": 0.9
+          },
+          {
+            "subject": "shortness of breath",
+            "predicate": "has_symptom",
+            "object": "hypoxemia",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "oxygen_saturation": 88
+        }
       }
     }
   ]

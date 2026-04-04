@@ -13,24 +13,27 @@
         "LDL": 130
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg QD",
         "metformin",
         "lisinopril",
         "500mg",
         "10mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes Mellitus",
         "Hypertension",
         "Type 2 Diabetes"
       ],
       "symptoms": [
-        "Polydipsia",
+        "Fatigue",
         "Polyuria",
-        "Fatigue"
+        "Polydipsia"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Type 2 Diabetes"
+          "Type 2 Diabetes",
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -38,14 +41,77 @@
           "500mg",
           "10mg"
         ],
-        "lab_values": {},
         "symptoms": [
           "Polydipsia",
           "Polyuria",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Metformin",
+            "predicate": "contraindicated_with",
+            "object": "Lisinopril",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Metformin",
+            "predicate": "improves",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "improves",
+            "object": "Hypertension",
+            "confidence": 0.7
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Polydipsia",
+            "confidence": 0.5
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Polyuria",
+            "confidence": 0.5
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.4
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.2
+        }
       }
     },
     {
@@ -60,33 +126,105 @@
         "LDL": 160
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg QD",
+        "Sitagliptin 100mg QD",
+        "Simvastatin 20mg QD",
         "simvastatin",
         "100mg",
-        "20mg"
+        "20mg",
+        "Sitagliptin"
       ],
       "diagnoses": [
-        "Hyperlipidemia"
+        "Type 2 Diabetes Mellitus",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Glycemic control",
+        "Kidney dysfunction"
       ],
       "symptoms": [
+        "Fatigue",
         "Shortness of breath",
-        "Fatigue"
+        "Polyuria",
+        "Polydipsia"
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia"
+          "Hyperlipidemia",
+          "Glycemic control",
+          "Kidney dysfunction"
         ],
         "medications": [
           "simvastatin",
           "100mg",
-          "20mg"
+          "20mg",
+          "Sitagliptin"
         ],
-        "lab_values": {},
         "symptoms": [
           "Shortness of breath",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Sitagliptin",
+            "predicate": "managed_by",
+            "object": "Glycemic control",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Sitagliptin",
+            "predicate": "improves",
+            "object": "Glycemic control",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Simvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Simvastatin",
+            "predicate": "improves",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Sitagliptin",
+            "predicate": "contraindicated_with",
+            "object": "Kidney dysfunction",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Sitagliptin",
+            "predicate": "worsens",
+            "object": "Kidney dysfunction",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Glycemic control",
+            "confidence": 0.7
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Kidney dysfunction",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Shortness of breath",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.1,
+          "eGFR": 60
+        }
       }
     },
     {
@@ -101,30 +239,73 @@
         "LDL": 140
       },
       "medications": [
-        "300mg"
+        "Metformin 500mg BID",
+        "Sitagliptin 100mg QD",
+        "Simvastatin 20mg QD",
+        "Lisinopril 10mg QD",
+        "Aliskiren 300mg QD",
+        "300mg",
+        "Sitagliptin",
+        "Aliskiren"
       ],
       "diagnoses": [
         "Type 2 Diabetes Mellitus",
         "Hypertension",
         "Hyperlipidemia",
-        "Chronic Kidney Disease"
+        "Chronic Kidney Disease",
+        "kidney dysfunction"
       ],
       "symptoms": [
         "Fatigue",
         "Shortness of breath",
         "Polyuria",
         "Polydipsia",
-        "Edema"
+        "Edema",
+        "elevated BP"
       ],
       "extracted": {
-        "conditions": [],
-        "medications": [
-          "300mg"
+        "conditions": [
+          "kidney dysfunction"
         ],
-        "lab_values": {},
-        "symptoms": [],
+        "medications": [
+          "300mg",
+          "Sitagliptin",
+          "Aliskiren"
+        ],
+        "symptoms": [
+          "elevated BP"
+        ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Sitagliptin",
+            "predicate": "improves",
+            "object": "HbA1c",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Aliskiren",
+            "predicate": "managed_by",
+            "object": "ACE inhibitors",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Aliskiren",
+            "predicate": "measured_by",
+            "object": "BP",
+            "confidence": 0.7
+          },
+          {
+            "subject": "kidney dysfunction",
+            "predicate": "worsens",
+            "object": "BP",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "eGFR": 45,
+          "HbA1c": 7.5
+        }
       }
     }
   ]

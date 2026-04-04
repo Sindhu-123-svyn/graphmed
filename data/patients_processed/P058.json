@@ -13,6 +13,9 @@
         "LDL": 145
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Atorvastatin 20mg daily",
+        "Losartan 50mg daily",
         "metformin",
         "losartan",
         "atorvastatin",
@@ -21,9 +24,9 @@
         "50mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
         "Polyuria",
@@ -32,9 +35,9 @@
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -44,10 +47,52 @@
           "20mg",
           "50mg"
         ],
-        "lab_values": {},
         "symptoms": [],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "losartan",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "atorvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.8
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.8,
+          "BP_systolic": 145,
+          "BP_diastolic": 95,
+          "LDL": 145
+        }
       }
     },
     {
@@ -62,6 +107,10 @@
         "LDL": 115
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Atorvastatin 40mg daily",
+        "Losartan 50mg daily + Hydrochlorothiazide 25mg daily",
+        "Glipizide 5mg daily",
         "hydrochlorothiazide",
         "losartan",
         "atorvastatin",
@@ -70,8 +119,9 @@
         "5mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
         "Polyuria",
@@ -81,8 +131,8 @@
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Type 2 Diabetes"
+          "Type 2 Diabetes",
+          "Hypertension"
         ],
         "medications": [
           "hydrochlorothiazide",
@@ -92,10 +142,10 @@
           "40mg",
           "5mg"
         ],
-        "lab_values": {},
         "symptoms": [],
         "procedures": [],
-        "relationships": []
+        "relationships": [],
+        "lab_values": {}
       }
     },
     {
@@ -110,35 +160,84 @@
         "LDL": 110
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Atorvastatin 40mg daily",
+        "Losartan 50mg daily + Hydrochlorothiazide 25mg daily + Telmisartan 40mg daily",
+        "Glipizide 10mg daily",
         "losartan",
         "40mg",
-        "10mg"
+        "10mg",
+        "telmisartan",
+        "glipizide"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Type 2 Diabetes"
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
       ],
       "symptoms": [
         "Polyuria",
         "Polydipsia",
         "Fatigue",
         "Dyspnea",
-        "Cough"
+        "Cough",
+        "worsening BP"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Type 2 Diabetes"
+          "Type 2 Diabetes",
+          "Hypertension"
         ],
         "medications": [
           "losartan",
           "40mg",
-          "10mg"
+          "10mg",
+          "telmisartan",
+          "glipizide"
         ],
-        "lab_values": {},
-        "symptoms": [],
+        "symptoms": [
+          "worsening BP"
+        ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "telmisartan",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "glipizide",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "eGFR",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "worsens",
+            "object": "Hypertension",
+            "confidence": 0.7
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "worsens",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "BP_systolic": 160,
+          "BP_diastolic": 105,
+          "HbA1c": 7.2,
+          "eGFR": 68
+        }
       }
     },
     {
@@ -153,12 +252,19 @@
         "LDL": 100
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Atorvastatin 40mg daily",
+        "Losartan 50mg daily + Hydrochlorothiazide 25mg daily + Telmisartan 40mg daily + Spironolactone 25mg daily",
+        "Glipizide 15mg daily",
         "25mg",
         "15mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Type 2 Diabetes"
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease"
       ],
       "symptoms": [
         "Polyuria",
@@ -170,17 +276,17 @@
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Type 2 Diabetes"
+          "Type 2 Diabetes",
+          "Hypertension"
         ],
         "medications": [
           "25mg",
           "15mg"
         ],
-        "lab_values": {},
         "symptoms": [],
         "procedures": [],
-        "relationships": []
+        "relationships": [],
+        "lab_values": {}
       }
     }
   ]

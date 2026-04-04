@@ -13,18 +13,21 @@
         "LDL": 160
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 2.5mg daily",
         "metformin",
         "lisinopril",
         "500mg",
         "2.5mg"
       ],
       "diagnoses": [
-        "Type 2 Diabetes"
+        "Type 2 Diabetes",
+        "Hypertension"
       ],
       "symptoms": [
-        "Polydipsia",
+        "Fatigue",
         "Polyuria",
-        "Fatigue"
+        "Polydipsia"
       ],
       "extracted": {
         "conditions": [
@@ -36,14 +39,53 @@
           "500mg",
           "2.5mg"
         ],
-        "lab_values": {},
         "symptoms": [
           "Polydipsia",
           "Polyuria",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Polyuria",
+            "predicate": "has_symptom",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Polydipsia",
+            "predicate": "has_symptom",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.5
+        }
       }
     },
     {
@@ -58,11 +100,17 @@
         "LDL": 140
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 2.5mg daily",
+        "Atorvastatin 20mg daily",
         "atorvastatin",
         "20mg"
       ],
       "diagnoses": [
-        "Hyperlipidemia"
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Hyperuricemia"
       ],
       "symptoms": [
         "Fatigue",
@@ -72,16 +120,51 @@
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia"
+          "Hyperlipidemia",
+          "Hyperuricemia"
         ],
         "medications": [
           "atorvastatin",
           "20mg"
         ],
-        "lab_values": {},
         "symptoms": [],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Atorvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Follow-up visit",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Follow-up visit",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "improves",
+            "object": "Hyperlipidemia",
+            "confidence": 0.7
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "worsens",
+            "object": "Hyperlipidemia",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.8,
+          "eGFR": 60
+        }
       }
     },
     {
@@ -93,13 +176,22 @@
         "BP_systolic": 150,
         "BP_diastolic": 95,
         "eGFR": 50,
-        "LDL": 120
+        "LDL": 120,
+        "creatinine": "increasing"
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 2.5mg daily",
+        "Atorvastatin 20mg daily",
+        "Losartan 50mg daily",
         "losartan",
         "50mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Hyperuricemia",
         "Chronic Kidney Disease"
       ],
       "symptoms": [
@@ -117,10 +209,32 @@
           "losartan",
           "50mg"
         ],
-        "lab_values": {},
         "symptoms": [],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "losartan",
+            "predicate": "managed_by",
+            "object": "blood pressure control",
+            "confidence": 0.8
+          },
+          {
+            "subject": "losartan",
+            "predicate": "measured_by",
+            "object": "creatinine levels",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "eGFR",
+            "confidence": 0.9
+          }
+        ],
+        "lab_values": {
+          "eGFR": 50,
+          "creatinine": "increasing"
+        }
       }
     },
     {
@@ -142,9 +256,19 @@
         "Furosemide 40mg daily"
       ],
       "diagnoses": [
-        "Chronic Kidney Disease"
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Hyperuricemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease"
       ],
       "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Polydipsia",
+        "Joint pain",
+        "Swelling in legs",
         "Shortness of breath"
       ],
       "extracted": {
@@ -152,12 +276,40 @@
           "Chronic Kidney Disease"
         ],
         "medications": [],
-        "lab_values": {},
         "symptoms": [
           "Shortness of breath"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "managed_by",
+            "object": "nephrology",
+            "confidence": 0.9
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "nephrology",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "nephrology",
+            "confidence": 0.8
+          }
+        ],
+        "lab_values": {
+          "eGFR": 45,
+          "HbA1c": 7.0
+        }
       }
     },
     {
@@ -177,10 +329,16 @@
         "Atorvastatin 20mg daily",
         "Losartan 50mg daily",
         "Furosemide 40mg daily",
-        "Erythropoietin 2000 U weekly"
+        "Erythropoietin 2000 U weekly",
+        "Erythropoietin"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Hyperuricemia",
         "Chronic Kidney Disease",
+        "Coronary Artery Disease",
         "Anemia"
       ],
       "symptoms": [
@@ -194,14 +352,50 @@
       ],
       "extracted": {
         "conditions": [
-          "Chronic Kidney Disease",
-          "Anemia"
+          "Anemia",
+          "Chronic Kidney Disease"
         ],
-        "medications": [],
-        "lab_values": {},
+        "medications": [
+          "Erythropoietin"
+        ],
         "symptoms": [],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Erythropoietin",
+            "predicate": "managed_by",
+            "object": "Nephrology",
+            "confidence": 0.9
+          },
+          {
+            "subject": "CKD",
+            "predicate": "worsens",
+            "object": "eGFR",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "lab_values",
+            "confidence": 0.7
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "lab_values",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Anemia",
+            "predicate": "treated_with",
+            "object": "Erythropoietin",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 6.8,
+          "eGFR": 38
+        }
       }
     }
   ]

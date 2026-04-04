@@ -7,30 +7,34 @@
       "note": "Patient presents with complaints of fatigue and increased thirst. Physical examination reveals a BMI of 32 kg/m^2. Initial lab results show HbA1c 7.2, BP 140/90, eGFR 72, and LDL 130. Diagnoses include Type 2 Diabetes, Hypertension, and Hyperlipidemia. Medications include Metformin 500mg BID and Lisinopril 10mg daily.",
       "labs": {
         "HbA1c": 7.2,
-        "BP": "140/90",
-        "eGFR": 72.0,
-        "LDL": 130.0
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg daily",
         "metformin",
         "lisinopril",
         "500mg",
         "10mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
-        "Polydipsia",
-        "Fatigue"
+        "Fatigue",
+        "Increased thirst",
+        "Polydipsia"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -38,18 +42,19 @@
           "500mg",
           "10mg"
         ],
-        "lab_values": {
-          "HbA1c": 7.2,
-          "BP": "140/90",
-          "eGFR": 72.0,
-          "LDL": 130.0
-        },
         "symptoms": [
           "Polydipsia",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [],
+        "lab_values": {
+          "HbA1c": 7.2,
+          "BP_systolic": 140,
+          "BP_diastolic": 90,
+          "eGFR": 72.0,
+          "LDL": 130.0
+        }
       }
     },
     {
@@ -58,11 +63,15 @@
       "note": "Patient returns with worsening BP and LDL levels. Lab results show HbA1c 8.1, BP 160/100, eGFR 68, and LDL 145. Medications are adjusted to include Atorvastatin 40mg daily. New symptoms include edema and shortness of breath.",
       "labs": {
         "HbA1c": 8.1,
-        "BP": "160/100",
-        "eGFR": 68.0,
-        "LDL": 145.0
+        "BP_systolic": 160,
+        "BP_diastolic": 100,
+        "eGFR": 68,
+        "LDL": 145
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg daily",
+        "Atorvastatin 40mg daily",
         "atorvastatin",
         "40mg"
       ],
@@ -73,27 +82,64 @@
         "Coronary Artery Disease"
       ],
       "symptoms": [
-        "Shortness of breath",
-        "Edema"
+        "Fatigue",
+        "Increased thirst",
+        "Edema",
+        "Shortness of breath"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Hypertension",
+          "Hyperlipidemia"
+        ],
         "medications": [
           "atorvastatin",
           "40mg"
         ],
-        "lab_values": {
-          "HbA1c": 8.1,
-          "BP": "160/100",
-          "eGFR": 68.0,
-          "LDL": 145.0
-        },
         "symptoms": [
-          "Shortness of breath",
-          "Edema"
+          "Edema",
+          "Shortness of breath"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Atorvastatin",
+            "predicate": "managed_by",
+            "object": "40mg",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "worsens",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "LDL",
+            "predicate": "worsens",
+            "object": "Hyperlipidemia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Lab results",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Atorvastatin",
+            "predicate": "improves",
+            "object": "Hyperlipidemia",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.1,
+          "BP_systolic": 160,
+          "BP_diastolic": 100,
+          "eGFR": 68.0,
+          "LDL": 145.0
+        }
       }
     },
     {
@@ -102,51 +148,18 @@
       "note": "Patient's BP and LDL levels continue to worsen. Lab results show HbA1c 8.5, BP 165/105, eGFR 60, and LDL 155. Medications are adjusted to include Furosemide 40mg daily for edema. New diagnoses include Chronic Kidney Disease and new symptoms include headaches.",
       "labs": {
         "HbA1c": 8.5,
-        "BP": "165/105",
-        "eGFR": 60.0,
-        "LDL": 155.0
+        "BP_systolic": 165,
+        "BP_diastolic": 105,
+        "eGFR": 60,
+        "LDL": 155
       },
       "medications": [
-        "40mg"
-      ],
-      "diagnoses": [
-        "Chronic Kidney Disease"
-      ],
-      "symptoms": [
-        "Edema"
-      ],
-      "extracted": {
-        "conditions": [
-          "Chronic Kidney Disease"
-        ],
-        "medications": [
-          "40mg"
-        ],
-        "lab_values": {
-          "HbA1c": 8.5,
-          "BP": "165/105",
-          "eGFR": 60.0,
-          "LDL": 155.0
-        },
-        "symptoms": [
-          "Edema"
-        ],
-        "procedures": [],
-        "relationships": []
-      }
-    },
-    {
-      "visit_id": "V4",
-      "date": "2023-08-23",
-      "note": "Patient's eGFR continues to decline. Lab results show HbA1c 8.8, BP 170/110, eGFR 55, and LDL 160. Medications are adjusted to include Enalapril 5mg daily for kidney protection. New symptoms include dizziness and palpitations.",
-      "labs": {
-        "HbA1c": 8.8,
-        "BP": "170/110",
-        "eGFR": 55.0,
-        "LDL": 160.0
-      },
-      "medications": [
-        "5mg"
+        "Metformin 500mg BID",
+        "Lisinopril 10mg daily",
+        "Atorvastatin 40mg daily",
+        "Furosemide 40mg daily",
+        "40mg",
+        "Furosemide 40mg"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -156,24 +169,172 @@
         "Chronic Kidney Disease"
       ],
       "symptoms": [
-        "Dizziness"
+        "Fatigue",
+        "Increased thirst",
+        "Edema",
+        "Shortness of breath",
+        "Headaches"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Chronic Kidney Disease"
+        ],
         "medications": [
-          "5mg"
+          "40mg",
+          "Furosemide 40mg"
+        ],
+        "symptoms": [
+          "Edema",
+          "headaches"
+        ],
+        "procedures": [],
+        "relationships": [
+          {
+            "subject": "Furosemide",
+            "predicate": "managed_by",
+            "object": "edema",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "BP_systolic",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "BP_diastolic",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "LDL",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "eGFR",
+            "confidence": 0.8
+          },
+          {
+            "subject": "headaches",
+            "predicate": "has_symptom",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.5,
+          "BP_systolic": 165,
+          "BP_diastolic": 105,
+          "eGFR": 60.0,
+          "LDL": 155.0
+        }
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-08-23",
+      "note": "Patient's eGFR continues to decline. Lab results show HbA1c 8.8, BP 170/110, eGFR 55, and LDL 160. Medications are adjusted to include Enalapril 5mg daily for kidney protection. New symptoms include dizziness and palpitations.",
+      "labs": {
+        "HbA1c": 8.8,
+        "BP_systolic": 170,
+        "BP_diastolic": 110,
+        "eGFR": 55,
+        "LDL": 160
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg daily",
+        "Atorvastatin 40mg daily",
+        "Furosemide 40mg daily",
+        "Enalapril 5mg daily",
+        "5mg",
+        "Enalapril 5mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Increased thirst",
+        "Edema",
+        "Shortness of breath",
+        "Headaches",
+        "Dizziness",
+        "Palpitations"
+      ],
+      "extracted": {
+        "conditions": [
+          "Chronic Kidney Disease"
+        ],
+        "medications": [
+          "5mg",
+          "Enalapril 5mg"
+        ],
+        "symptoms": [
+          "Dizziness",
+          "Palpitations"
+        ],
+        "procedures": [],
+        "relationships": [
+          {
+            "subject": "Enalapril 5mg",
+            "predicate": "managed_by",
+            "object": "kidney protection",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c 8.8",
+            "predicate": "measured_by",
+            "object": "lab results",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP 170/110",
+            "predicate": "measured_by",
+            "object": "lab results",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR 55",
+            "predicate": "measured_by",
+            "object": "lab results",
+            "confidence": 0.8
+          },
+          {
+            "subject": "LDL 160",
+            "predicate": "measured_by",
+            "object": "lab results",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Dizziness",
+            "predicate": "has_symptom",
+            "object": "Palpitations",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "eGFR 55",
+            "confidence": 0.6
+          }
         ],
         "lab_values": {
           "HbA1c": 8.8,
-          "BP": "170/110",
+          "BP_systolic": 170,
+          "BP_diastolic": 110,
           "eGFR": 55.0,
           "LDL": 160.0
-        },
-        "symptoms": [
-          "Dizziness"
-        ],
-        "procedures": [],
-        "relationships": []
+        }
       }
     },
     {
@@ -182,9 +343,10 @@
       "note": "Patient's kidney function continues to decline. Lab results show HbA1c 9.0, BP 180/120, eGFR 45, and LDL 165. Medications are adjusted to include Hemodialysis 3 times a week for end-stage renal disease. New diagnoses include End-Stage Renal Disease.",
       "labs": {
         "HbA1c": 9.0,
-        "BP": "180/120",
-        "eGFR": 45.0,
-        "LDL": 165.0
+        "BP_systolic": 180,
+        "BP_diastolic": 120,
+        "eGFR": 45,
+        "LDL": 165
       },
       "medications": [
         "Metformin 500mg BID",
@@ -192,7 +354,8 @@
         "Atorvastatin 40mg daily",
         "Furosemide 40mg daily",
         "Enalapril 5mg daily",
-        "Hemodialysis 3 times a week"
+        "Hemodialysis 3 times a week",
+        "Hemodialysis"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -212,17 +375,59 @@
         "Palpitations"
       ],
       "extracted": {
-        "conditions": [],
-        "medications": [],
-        "lab_values": {
-          "HbA1c": 9.0,
-          "BP": "180/120",
-          "eGFR": 45.0,
-          "LDL": 165.0
-        },
+        "conditions": [
+          "End-Stage Renal Disease"
+        ],
+        "medications": [
+          "Hemodialysis"
+        ],
         "symptoms": [],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Hemodialysis",
+            "predicate": "managed_by",
+            "object": "End-Stage Renal Disease",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Lab results",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Lab results",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Lab results",
+            "confidence": 0.8
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "Lab results",
+            "confidence": 0.8
+          },
+          {
+            "subject": "End-Stage Renal Disease",
+            "predicate": "worsens",
+            "object": "kidney function",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 9.0,
+          "BP_systolic": 180,
+          "BP_diastolic": 120,
+          "eGFR": 45.0,
+          "LDL": 165.0
+        }
       }
     }
   ]

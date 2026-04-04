@@ -13,6 +13,9 @@
         "LDL": 140
       },
       "medications": [
+        "Metformin 500mg",
+        "Lisinopril 10mg",
+        "Atorvastatin 20mg",
         "metformin",
         "lisinopril",
         "atorvastatin",
@@ -21,20 +24,20 @@
         "20mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
-        "Polydipsia",
+        "Fatigue",
         "Polyuria",
-        "Fatigue"
+        "Polydipsia"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -44,14 +47,81 @@
           "10mg",
           "20mg"
         ],
-        "lab_values": {},
         "symptoms": [
           "Polydipsia",
           "Polyuria",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Atorvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Polyuria",
+            "predicate": "has_symptom",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Polydipsia",
+            "predicate": "has_symptom",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.1,
+          "BP_systolic": 150,
+          "BP_diastolic": 95,
+          "LDL": 140,
+          "eGFR": 80
+        }
       }
     },
     {
@@ -66,6 +136,9 @@
         "LDL": 170
       },
       "medications": [
+        "Metformin 1000mg",
+        "Lisinopril 20mg",
+        "Atorvastatin 40mg",
         "metformin",
         "lisinopril",
         "atorvastatin",
@@ -74,15 +147,22 @@
         "40mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Mild Chronic Kidney Disease",
         "Chronic Kidney Disease"
       ],
       "symptoms": [
+        "Increased fatigue",
+        "Weight gain",
         "Edema",
         "Fatigue"
       ],
       "extracted": {
         "conditions": [
-          "Chronic Kidney Disease"
+          "Chronic Kidney Disease",
+          "Mild Chronic Kidney Disease"
         ],
         "medications": [
           "metformin",
@@ -92,13 +172,99 @@
           "20mg",
           "40mg"
         ],
-        "lab_values": {},
         "symptoms": [
           "Edema",
-          "Fatigue"
+          "Fatigue",
+          "Weight Gain"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Patient P047",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Patient P047",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Atorvastatin",
+            "predicate": "managed_by",
+            "object": "Patient P047",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Patient P047",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Patient P047",
+            "confidence": 0.9
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "Patient P047",
+            "confidence": 0.9
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Patient P047",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Patient P047",
+            "predicate": "has_symptom",
+            "object": "Edema",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Patient P047",
+            "predicate": "has_symptom",
+            "object": "Fatigue",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Patient P047",
+            "predicate": "has_symptom",
+            "object": "Weight Gain",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Mild Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "Edema",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Mild Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Mild Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "Weight Gain",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 9.2,
+          "BP_systolic": 160,
+          "BP_diastolic": 100,
+          "LDL": 170,
+          "eGFR": 60
+        }
       }
     },
     {
@@ -113,6 +279,9 @@
         "LDL": 120
       },
       "medications": [
+        "Metformin 1500mg",
+        "Lisinopril 30mg",
+        "Atorvastatin 60mg",
         "metformin",
         "lisinopril",
         "atorvastatin",
@@ -125,14 +294,21 @@
         "Hypertension",
         "Hyperlipidemia",
         "Mild Chronic Kidney Disease",
-        "Moderate Chronic Kidney Disease"
+        "Moderate Chronic Kidney Disease",
+        "kidney dysfunction",
+        "diabetes"
       ],
       "symptoms": [
         "Shortness of breath",
+        "Decreased urine output",
+        "Swelling in legs",
         "Edema"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "kidney dysfunction",
+          "diabetes"
+        ],
         "medications": [
           "metformin",
           "lisinopril",
@@ -141,13 +317,94 @@
           "30mg",
           "60mg"
         ],
-        "lab_values": {},
         "symptoms": [
+          "Edema",
           "Shortness of breath",
-          "Edema"
+          "decreased urine output",
+          "swelling in legs"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "kidney dysfunction",
+            "predicate": "worsens",
+            "object": "BP",
+            "confidence": 0.8
+          },
+          {
+            "subject": "kidney dysfunction",
+            "predicate": "worsens",
+            "object": "eGFR",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.7
+          },
+          {
+            "subject": "BP",
+            "predicate": "managed_by",
+            "object": "Atorvastatin",
+            "confidence": 0.6
+          },
+          {
+            "subject": "BP",
+            "predicate": "managed_by",
+            "object": "Metformin",
+            "confidence": 0.5
+          },
+          {
+            "subject": "kidney dysfunction",
+            "predicate": "contraindicated_with",
+            "object": "Atorvastatin",
+            "confidence": 0.4
+          },
+          {
+            "subject": "kidney dysfunction",
+            "predicate": "contraindicated_with",
+            "object": "Metformin",
+            "confidence": 0.3
+          },
+          {
+            "subject": "kidney dysfunction",
+            "predicate": "has_symptom",
+            "object": "shortness of breath",
+            "confidence": 0.9
+          },
+          {
+            "subject": "kidney dysfunction",
+            "predicate": "has_symptom",
+            "object": "decreased urine output",
+            "confidence": 0.8
+          },
+          {
+            "subject": "kidney dysfunction",
+            "predicate": "has_symptom",
+            "object": "swelling in legs",
+            "confidence": 0.7
+          },
+          {
+            "subject": "kidney dysfunction",
+            "predicate": "improves",
+            "object": "BP",
+            "confidence": 0.6
+          },
+          {
+            "subject": "kidney dysfunction",
+            "predicate": "improves",
+            "object": "eGFR",
+            "confidence": 0.5
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.5,
+          "BP_systolic": 140,
+          "BP_diastolic": 90,
+          "LDL": 120,
+          "eGFR": 40
+        }
       }
     }
   ]

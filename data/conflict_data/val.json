@@ -1,0 +1,135 @@
+[
+  {
+    "id": "conflict_26",
+    "statement_a": "No family history",
+    "statement_b": "Father had heart attack at 50",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "consist_var_44",
+    "statement_a": "Diabetes well-controlled",
+    "statement_b": "Good glycemic control",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "consist_3",
+    "statement_a": "No fever",
+    "statement_b": "Afebrile",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "consist_var_76",
+    "statement_a": "Hypertension diagnosed",
+    "statement_b": "High blood pressure history",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "conflict_var_82",
+    "statement_a": "Not diabetic",
+    "statement_b": "Diagnosed with Type 2 diabetes",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_var_123",
+    "statement_a": "Labs normal",
+    "statement_b": "Creatinine 2.8, elevated",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_var_95",
+    "statement_a": "No history of hypertension",
+    "statement_b": "BP 150/90 on admission",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_var_91",
+    "statement_a": "No symptoms reported",
+    "statement_b": "Complains of severe headache",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_22",
+    "statement_a": "Discontinued metformin",
+    "statement_b": "Continue metformin 1000mg daily",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_var_109",
+    "statement_a": "Not taking warfarin",
+    "statement_b": "INR 3.5 on warfarin therapy",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_var_94",
+    "statement_a": "Healthy patient",
+    "statement_b": "Multiple chronic conditions",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_var_117",
+    "statement_a": "Healthy patient",
+    "statement_b": "Multiple chronic conditions",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_var_103",
+    "statement_a": "No history of hypertension",
+    "statement_b": "BP 150/90 on admission",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_23",
+    "statement_a": "No allergies",
+    "statement_b": "Sulfa allergy in record",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_var_101",
+    "statement_a": "No allergies",
+    "statement_b": "Sulfa allergy in record",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_var_106",
+    "statement_a": "Not diabetic",
+    "statement_b": "Diagnosed with Type 2 diabetes",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_12",
+    "statement_a": "No known drug allergies",
+    "statement_b": "Allergy to penicillin documented",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_var_125",
+    "statement_a": "Not diabetic",
+    "statement_b": "Diagnosed with Type 2 diabetes",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_var_90",
+    "statement_a": "No medications",
+    "statement_b": "Currently taking metformin 500mg",
+    "label": 1,
+    "label_name": "CONFLICT"
+  }
+]

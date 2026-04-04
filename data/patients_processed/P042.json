@@ -17,26 +17,81 @@
         "Amlodipine 5mg QD"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
-        "Fatigue"
+        "Fatigue",
+        "Weight gain"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
         "medications": [],
-        "lab_values": {},
         "symptoms": [
-          "Fatigue"
+          "Fatigue",
+          "Weight gain"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "measured_by",
+            "object": "BP_systolic",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "measured_by",
+            "object": "BP",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "measured_by",
+            "object": "HbA1c",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "measured_by",
+            "object": "eGFR",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Weight gain",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.2,
+          "eGFR": 72,
+          "BP_systolic": 140
+        }
       }
     },
     {
@@ -53,27 +108,68 @@
       "medications": [
         "Metformin 500mg BID",
         "Amlodipine 5mg QD",
-        "Atorvastatin 20mg QD"
+        "Atorvastatin 20mg QD",
+        "Statin therapy"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
         "Coronary Artery Disease"
       ],
       "symptoms": [
-        "Shortness of breath",
-        "Chest pain"
+        "Fatigue",
+        "Weight gain",
+        "Chest pain",
+        "Shortness of breath"
       ],
       "extracted": {
         "conditions": [
           "Coronary Artery Disease"
         ],
-        "medications": [],
-        "lab_values": {},
+        "medications": [
+          "Statin therapy"
+        ],
         "symptoms": [
-          "Shortness of breath",
-          "Chest pain"
+          "Chest pain",
+          "Shortness of breath"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Statin therapy",
+            "predicate": "managed_by",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "HbA1c",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "improves",
+            "object": "HbA1c",
+            "confidence": 0.7
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "worsens",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Chest pain",
+            "predicate": "has_symptom",
+            "object": "Shortness of breath",
+            "confidence": 0.5
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.2
+        }
       }
     },
     {
@@ -94,9 +190,17 @@
         "Lisinopril 5mg QD"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
         "Chronic Kidney Disease"
       ],
       "symptoms": [
+        "Fatigue",
+        "Weight gain",
+        "Chest pain",
+        "Shortness of breath",
         "Edema"
       ],
       "extracted": {
@@ -104,12 +208,12 @@
           "Chronic Kidney Disease"
         ],
         "medications": [],
-        "lab_values": {},
         "symptoms": [
           "Edema"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [],
+        "lab_values": {}
       }
     },
     {
@@ -127,27 +231,88 @@
         "Metformin 500mg BID",
         "Losartan 50mg QD",
         "Atorvastatin 20mg QD",
-        "Lisinopril 5mg QD"
+        "Lisinopril 5mg QD",
+        "BP medication"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
         "Coronary Artery Disease",
-        "Chronic Kidney Disease"
+        "Chronic Kidney Disease",
+        "Diabetes"
       ],
       "symptoms": [
-        "Dizziness"
+        "Fatigue",
+        "Weight gain",
+        "Chest pain",
+        "Shortness of breath",
+        "Edema",
+        "Dizziness",
+        "Confusion"
       ],
       "extracted": {
-        "conditions": [],
-        "medications": [],
-        "lab_values": {},
+        "conditions": [
+          "Hypertension",
+          "Diabetes"
+        ],
+        "medications": [
+          "BP medication"
+        ],
         "symptoms": [
-          "Dizziness"
+          "Dizziness",
+          "Confusion"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "BP medication",
+            "predicate": "managed_by",
+            "object": "BP",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "BP medication",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "BP medication",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "improves",
+            "object": "BP medication",
+            "confidence": 0.7
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "worsens",
+            "object": "BP medication",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Dizziness",
+            "predicate": "has_symptom",
+            "object": "BP medication",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Confusion",
+            "predicate": "has_symptom",
+            "object": "BP medication",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "BP_systolic": 140,
+          "BP_diastolic": 90,
+          "HbA1c": 8.5
+        }
       }
     }
   ]

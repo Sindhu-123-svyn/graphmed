@@ -10,33 +10,88 @@
         "BP_systolic": 130,
         "BP_diastolic": 80,
         "eGFR": 78,
-        "LDL": 120
+        "LDL": 120,
+        "blood glucose": "elevated",
+        "blood pressure": "mildly elevated"
       },
       "medications": [
         "Metformin 1000mg daily",
         "Losartan 50mg daily"
       ],
       "diagnoses": [
-        "Hypertension",
-        "Type 2 Diabetes"
+        "Type 2 Diabetes",
+        "Hypertension"
       ],
       "symptoms": [
-        "Polydipsia",
-        "Fatigue"
+        "Fatigue",
+        "Increased thirst",
+        "Polydipsia"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Type 2 Diabetes"
+          "Type 2 Diabetes",
+          "Hypertension"
         ],
         "medications": [],
-        "lab_values": {},
         "symptoms": [
           "Polydipsia",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "Labs",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "Labs",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Polydipsia",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Polydipsia",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Labs",
+            "predicate": "measured_by",
+            "object": "blood glucose",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Labs",
+            "predicate": "measured_by",
+            "object": "blood pressure",
+            "confidence": 0.9
+          }
+        ],
+        "lab_values": {
+          "blood glucose": "elevated",
+          "blood pressure": "mildly elevated"
+        }
       }
     },
     {
@@ -48,30 +103,79 @@
         "BP_systolic": 145,
         "BP_diastolic": 90,
         "eGFR": 70,
-        "LDL": 160
+        "LDL": 160,
+        "blood glucose": "worsening",
+        "blood pressure": "elevated"
       },
       "medications": [
-        "metformin"
+        "Metformin 2000mg daily",
+        "Losartan 100mg daily",
+        "Atorvastatin 20mg daily",
+        "metformin",
+        "statin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia"
+        "Hyperlipidemia",
+        "Diabetes"
       ],
       "symptoms": [
-        "Fatigue"
+        "Fatigue",
+        "Increased thirst",
+        "Increased urination"
       ],
       "extracted": {
-        "conditions": [],
-        "medications": [
-          "metformin"
+        "conditions": [
+          "Diabetes",
+          "Hypertension"
         ],
-        "lab_values": {},
+        "medications": [
+          "metformin",
+          "statin"
+        ],
         "symptoms": [
-          "Fatigue"
+          "Fatigue",
+          "Increased urination"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "metformin",
+            "predicate": "increased",
+            "object": "dose",
+            "confidence": 0.8
+          },
+          {
+            "subject": "statin",
+            "predicate": "prescribed_for",
+            "object": "elevated LDL",
+            "confidence": 0.9
+          },
+          {
+            "subject": "metformin",
+            "predicate": "managed_by",
+            "object": "blood glucose control",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "worsens",
+            "object": "Diabetes",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Increased urination",
+            "predicate": "worsens",
+            "object": "Diabetes",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "blood glucose": "worsening",
+          "blood pressure": "elevated",
+          "LDL": "elevated"
+        }
       }
     },
     {
@@ -83,31 +187,75 @@
         "BP_systolic": 150,
         "BP_diastolic": 95,
         "eGFR": 60,
-        "LDL": 140
+        "LDL": 140,
+        "Kidney function": "worsening",
+        "Blood pressure": "elevated"
       },
       "medications": [
-        "losartan"
+        "Metformin 2000mg daily",
+        "Losartan 150mg daily",
+        "Atorvastatin 20mg daily",
+        "Enalapril 10mg daily",
+        "losartan",
+        "ACE inhibitor"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
-        "Chronic Kidney Disease"
+        "Chronic Kidney Disease",
+        "Kidney dysfunction"
       ],
       "symptoms": [
+        "Fatigue",
+        "Increased thirst",
+        "Increased urination",
+        "Shortness of breath on exertion",
         "Shortness of breath"
       ],
       "extracted": {
-        "conditions": [],
-        "medications": [
-          "losartan"
+        "conditions": [
+          "Kidney dysfunction",
+          "Hypertension"
         ],
-        "lab_values": {},
+        "medications": [
+          "losartan",
+          "ACE inhibitor"
+        ],
         "symptoms": [
           "Shortness of breath"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "losartan",
+            "predicate": "managed_by",
+            "object": "ACE inhibitor",
+            "confidence": 0.9
+          },
+          {
+            "subject": "losartan",
+            "predicate": "increased",
+            "object": "dose",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Shortness of breath",
+            "predicate": "worsens",
+            "object": "Kidney dysfunction",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Shortness of breath",
+            "predicate": "worsens",
+            "object": "Hypertension",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "Kidney function": "worsening",
+          "Blood pressure": "elevated"
+        }
       }
     }
   ]

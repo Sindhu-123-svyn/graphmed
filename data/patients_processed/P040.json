@@ -13,6 +13,9 @@
         "LDL": 160
       },
       "medications": [
+        "Metformin 500mg bid",
+        "Lisinopril 10mg daily",
+        "Atorvastatin 20mg daily",
         "metformin",
         "lisinopril",
         "atorvastatin",
@@ -21,20 +24,21 @@
         "20mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
-        "Polydipsia",
+        "Fatigue",
         "Polyuria",
-        "Fatigue"
+        "Polydipsia",
+        "Weight gain"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -44,14 +48,14 @@
           "10mg",
           "20mg"
         ],
-        "lab_values": {},
         "symptoms": [
           "Polydipsia",
           "Polyuria",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [],
+        "lab_values": {}
       }
     },
     {
@@ -66,35 +70,108 @@
         "LDL": 130
       },
       "medications": [
+        "Metformin 500mg bid",
+        "Lisinopril 10mg daily",
+        "Atorvastatin 40mg daily",
+        "Furosemide 40mg daily",
+        "Aspirin 81mg daily",
         "atorvastatin",
         "40mg",
-        "81mg"
+        "81mg",
+        "Furosemide",
+        "Aspirin"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
         "Chronic Kidney Disease",
         "Coronary Artery Disease"
       ],
       "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Polydipsia",
+        "Weight gain",
         "Shortness of breath",
-        "Chest pain"
+        "Chest pain",
+        "Bilateral wheezing"
       ],
       "extracted": {
         "conditions": [
-          "Chronic Kidney Disease",
-          "Coronary Artery Disease"
+          "Coronary Artery Disease",
+          "Chronic Kidney Disease"
         ],
         "medications": [
           "atorvastatin",
           "40mg",
-          "81mg"
+          "81mg",
+          "Furosemide",
+          "Aspirin"
         ],
-        "lab_values": {},
         "symptoms": [
+          "Chest pain",
           "Shortness of breath",
-          "Chest pain"
+          "Bilateral wheezing"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Furosemide",
+            "predicate": "managed_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Aspirin",
+            "predicate": "managed_by",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Atorvastatin",
+            "predicate": "managed_by",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Atorvastatin",
+            "predicate": "increased",
+            "object": "40mg",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Furosemide",
+            "predicate": "measured_by",
+            "object": "40mg",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Aspirin",
+            "predicate": "measured_by",
+            "object": "81mg",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "worsens",
+            "object": "Chest pain",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "Bilateral wheezing",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {}
       }
     },
     {
@@ -106,34 +183,87 @@
         "BP_systolic": 130,
         "BP_diastolic": 85,
         "eGFR": 50,
-        "LDL": 120
+        "LDL": 120,
+        "Kidney Function": "worsening"
       },
       "medications": [
+        "Metformin 500mg bid",
+        "Lisinopril 10mg daily",
+        "Atorvastatin 40mg daily",
+        "Furosemide 80mg daily",
+        "Aspirin 81mg daily",
+        "Spironolactone 25mg daily",
         "80mg",
-        "25mg"
+        "25mg",
+        "Furosemide 80mg",
+        "Spironolactone 25mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Type 2 Diabetes"
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease",
+        "Kidney Function Disorder"
       ],
       "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Polydipsia",
+        "Weight gain",
+        "Shortness of breath",
+        "Chest pain",
+        "Pedal edema",
+        "Jugular venous distension",
         "Edema"
       ],
       "extracted": {
         "conditions": [
+          "Type 2 Diabetes",
           "Hypertension",
-          "Type 2 Diabetes"
+          "Kidney Function Disorder"
         ],
         "medications": [
           "80mg",
-          "25mg"
+          "25mg",
+          "Furosemide 80mg",
+          "Spironolactone 25mg"
         ],
-        "lab_values": {},
         "symptoms": [
-          "Edema"
+          "Edema",
+          "Pedal Edema",
+          "Jugular Venous Distension"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Furosemide",
+            "predicate": "increased",
+            "object": "80mg",
+            "confidence": 1.0
+          },
+          {
+            "subject": "Spironolactone",
+            "predicate": "started",
+            "object": "25mg",
+            "confidence": 1.0
+          },
+          {
+            "subject": "Kidney Function",
+            "predicate": "worsens",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Kidney Function",
+            "predicate": "worsens",
+            "object": "Hypertension",
+            "confidence": 0.9
+          }
+        ],
+        "lab_values": {
+          "Kidney Function": "worsening"
+        }
       }
     },
     {
@@ -145,15 +275,29 @@
         "BP_systolic": 125,
         "BP_diastolic": 80,
         "eGFR": 55,
-        "LDL": 110
+        "LDL": 110,
+        "name": "kidney function"
       },
       "medications": [
+        "Metformin 500mg bid",
+        "Lisinopril 10mg daily",
+        "Atorvastatin 40mg daily",
+        "Furosemide 80mg daily",
+        "Aspirin 325mg daily",
+        "Spironolactone 25mg daily",
+        "Metoprolol 50mg daily",
         "metoprolol",
         "325mg",
-        "50mg"
+        "50mg",
+        "Aspirin"
       ],
       "diagnoses": [
-        "Coronary Artery Disease"
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease",
+        "Kidney Function"
       ],
       "symptoms": [
         "Fatigue",
@@ -168,17 +312,60 @@
       ],
       "extracted": {
         "conditions": [
-          "Coronary Artery Disease"
+          "Coronary Artery Disease",
+          "Kidney Function"
         ],
         "medications": [
           "metoprolol",
           "325mg",
-          "50mg"
+          "50mg",
+          "Aspirin"
         ],
-        "lab_values": {},
-        "symptoms": [],
+        "symptoms": [
+          "pericardial rub"
+        ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metoprolol",
+            "predicate": "managed_by",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Aspirin",
+            "predicate": "managed_by",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Aspirin",
+            "predicate": "increased",
+            "object": "325mg",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Metoprolol",
+            "predicate": "dosed_at",
+            "object": "50mg",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "worsens",
+            "object": "Kidney Function",
+            "confidence": 0.7
+          },
+          {
+            "subject": "pericardial rub",
+            "predicate": "has_symptom",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "name": "kidney function"
+        }
       }
     }
   ]

@@ -6,29 +6,35 @@
       "date": "2022-01-15",
       "note": "Initial presentation with complaints of polyuria, polydipsia, and fatigue. Physical exam reveals a blood pressure of 140/90. Patient is diagnosed with Type 2 Diabetes (HbA1c: 8.5), Hypertension, and Hyperlipidemia. Starting Metformin 500mg twice daily and Lisinopril 10mg daily.",
       "labs": {
-        "HbA1c": 8.5
+        "HbA1c": 8.5,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 70,
+        "LDL": 160
       },
       "medications": [
+        "Metformin 500mg twice daily",
+        "Lisinopril 10mg daily",
         "metformin",
         "lisinopril",
         "500mg",
         "10mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
-        "Polydipsia",
         "Polyuria",
+        "Polydipsia",
         "Fatigue"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -36,16 +42,53 @@
           "500mg",
           "10mg"
         ],
-        "lab_values": {
-          "HbA1c": 8.5
-        },
         "symptoms": [
           "Polydipsia",
           "Polyuria",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Polyuria",
+            "predicate": "has_symptom",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Polydipsia",
+            "predicate": "has_symptom",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.5
+        }
       }
     },
     {
@@ -53,16 +96,29 @@
       "date": "2022-07-20",
       "note": "Follow-up visit with improved glycemic control (HbA1c: 7.2). However, blood pressure remains elevated (140/90). Patient reports intermittent chest pain. ECG reveals nonspecific changes. Patient is started on Simvastatin 20mg daily for hyperlipidemia.",
       "labs": {
-        "HbA1c": 7.2
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 68,
+        "LDL": 140
       },
       "medications": [
+        "Metformin 500mg twice daily",
+        "Lisinopril 10mg daily",
+        "Simvastatin 20mg daily",
         "simvastatin",
         "20mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
         "Hyperlipidemia"
       ],
       "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Fatigue",
+        "Intermittent chest pain",
         "Chest pain"
       ],
       "extracted": {
@@ -73,14 +129,47 @@
           "simvastatin",
           "20mg"
         ],
-        "lab_values": {
-          "HbA1c": 7.2
-        },
         "symptoms": [
           "Chest pain"
         ],
-        "procedures": [],
-        "relationships": []
+        "procedures": [
+          "ECG"
+        ],
+        "relationships": [
+          {
+            "subject": "Simvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "ECG",
+            "predicate": "measured_by",
+            "object": "Chest pain",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Glycemic control",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Blood pressure",
+            "predicate": "measured_by",
+            "object": "140/90",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Chest pain",
+            "predicate": "has_symptom",
+            "object": "Intermittent",
+            "confidence": 0.5
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.2
+        }
       }
     },
     {
@@ -92,51 +181,22 @@
         "BP_systolic": 150,
         "BP_diastolic": 100,
         "eGFR": 60,
-        "LDL": 180
+        "LDL": 180,
+        "ECG": "left ventricular hypertrophy"
       },
       "medications": [
-        "81mg"
+        "Metformin 500mg twice daily",
+        "Lisinopril 10mg daily",
+        "Simvastatin 20mg daily",
+        "Aspirin 81mg daily",
+        "81mg",
+        "Aspirin"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
         "Coronary Artery Disease"
-      ],
-      "symptoms": [
-        "Shortness of breath",
-        "Edema",
-        "Fatigue"
-      ],
-      "extracted": {
-        "conditions": [
-          "Coronary Artery Disease"
-        ],
-        "medications": [
-          "81mg"
-        ],
-        "lab_values": {},
-        "symptoms": [
-          "Shortness of breath",
-          "Edema",
-          "Fatigue"
-        ],
-        "procedures": [],
-        "relationships": []
-      }
-    },
-    {
-      "visit_id": "V4",
-      "date": "2023-09-13",
-      "note": "Patient reports worsening renal function (eGFR: 45). Patient is started on Losartan 50mg daily for hypertension. Patient is also started on amlodipine 5mg daily for blood pressure control.",
-      "labs": {
-        "eGFR": 45.0
-      },
-      "medications": [
-        "losartan",
-        "amlodipine",
-        "50mg",
-        "5mg"
-      ],
-      "diagnoses": [
-        "Hypertension"
       ],
       "symptoms": [
         "Polyuria",
@@ -144,11 +204,105 @@
         "Fatigue",
         "Intermittent chest pain",
         "Shortness of breath",
-        "Dyspnea"
+        "Edema"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension"
+          "Coronary Artery Disease"
+        ],
+        "medications": [
+          "81mg",
+          "Aspirin"
+        ],
+        "symptoms": [
+          "Edema",
+          "Shortness of breath",
+          "Fatigue"
+        ],
+        "procedures": [
+          "ECG"
+        ],
+        "relationships": [
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "managed_by",
+            "object": "Aspirin",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "worsens",
+            "object": "Edema",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Aspirin",
+            "predicate": "measured_by",
+            "object": "81mg",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "ECG": "left ventricular hypertrophy"
+        }
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-09-13",
+      "note": "Patient reports worsening renal function (eGFR: 45). Patient is started on Losartan 50mg daily for hypertension. Patient is also started on amlodipine 5mg daily for blood pressure control.",
+      "labs": {
+        "HbA1c": 7.5,
+        "BP_systolic": 130,
+        "BP_diastolic": 80,
+        "eGFR": 45,
+        "LDL": 150
+      },
+      "medications": [
+        "Metformin 500mg twice daily",
+        "Lisinopril 10mg daily",
+        "Simvastatin 20mg daily",
+        "Aspirin 81mg daily",
+        "Losartan 50mg daily",
+        "Amlodipine 5mg daily",
+        "losartan",
+        "amlodipine",
+        "50mg",
+        "5mg"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease",
+        "Renal dysfunction"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Fatigue",
+        "Intermittent chest pain",
+        "Shortness of breath",
+        "Dyspnea",
+        "Worsening renal function"
+      ],
+      "extracted": {
+        "conditions": [
+          "Hypertension",
+          "Renal dysfunction"
         ],
         "medications": [
           "losartan",
@@ -156,12 +310,51 @@
           "50mg",
           "5mg"
         ],
+        "symptoms": [
+          "Worsening renal function"
+        ],
+        "procedures": [],
+        "relationships": [
+          {
+            "subject": "Losartan",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Amlodipine",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Losartan",
+            "predicate": "contraindicated_with",
+            "object": "Renal dysfunction",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Amlodipine",
+            "predicate": "contraindicated_with",
+            "object": "Renal dysfunction",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Worsening renal function",
+            "predicate": "has_symptom",
+            "object": "Hypertension",
+            "confidence": 0.7
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Worsening renal function",
+            "confidence": 0.6
+          }
+        ],
         "lab_values": {
           "eGFR": 45.0
-        },
-        "symptoms": [],
-        "procedures": [],
-        "relationships": []
+        }
       }
     },
     {
@@ -170,7 +363,10 @@
       "note": "Patient reports improved glycemic control (HbA1c: 6.8) but worsening renal function (eGFR: 30). Patient is started on erythropoietin for anemia. Patient is also started on a dialysis referral for chronic kidney disease.",
       "labs": {
         "HbA1c": 6.8,
-        "eGFR": 30.0
+        "BP_systolic": 120,
+        "BP_diastolic": 70,
+        "eGFR": 30,
+        "LDL": 120
       },
       "medications": [
         "Metformin 500mg twice daily",
@@ -182,6 +378,10 @@
         "Erythropoietin"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
         "Chronic Kidney Disease",
         "Anemia"
       ],
@@ -196,17 +396,52 @@
       ],
       "extracted": {
         "conditions": [
-          "Chronic Kidney Disease",
-          "Anemia"
+          "Anemia",
+          "Chronic Kidney Disease"
         ],
-        "medications": [],
+        "medications": [
+          "Erythropoietin"
+        ],
+        "symptoms": [],
+        "procedures": [
+          "Dialysis Referral"
+        ],
+        "relationships": [
+          {
+            "subject": "Erythropoietin",
+            "predicate": "managed_by",
+            "object": "Anemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Dialysis Referral",
+            "predicate": "measured_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Glycemic Control",
+            "confidence": 0.7
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Renal Function",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "Renal Function",
+            "confidence": 0.6
+          }
+        ],
         "lab_values": {
           "HbA1c": 6.8,
           "eGFR": 30.0
-        },
-        "symptoms": [],
-        "procedures": [],
-        "relationships": []
+        }
       }
     }
   ]

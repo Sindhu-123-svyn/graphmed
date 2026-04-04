@@ -13,23 +13,26 @@
         "LDL": 160
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg daily",
         "metformin",
         "lisinopril",
         "500mg",
         "10mg"
       ],
       "diagnoses": [
-        "Hypertension",
-        "Type 2 Diabetes"
+        "Type 2 Diabetes",
+        "Hypertension"
       ],
       "symptoms": [
-        "Polydipsia",
-        "Fatigue"
+        "Fatigue",
+        "Increased thirst",
+        "Polydipsia"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Type 2 Diabetes"
+          "Type 2 Diabetes",
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -37,13 +40,66 @@
           "500mg",
           "10mg"
         ],
-        "lab_values": {},
         "symptoms": [
           "Polydipsia",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Blood work",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Blood work",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "contraindicated_with",
+            "object": "Polydipsia",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "contraindicated_with",
+            "object": "Fatigue",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Metformin",
+            "predicate": "improves",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "improves",
+            "object": "Hypertension",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.4,
+          "BP_systolic": 148,
+          "BP_diastolic": 92
+        }
       }
     },
     {
@@ -58,15 +114,21 @@
         "LDL": 140
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg daily",
+        "Simvastatin 20mg daily",
         "simvastatin",
         "20mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
         "Hyperlipidemia"
       ],
       "symptoms": [
-        "Shortness of breath",
-        "Fatigue"
+        "Fatigue",
+        "Increased thirst",
+        "Shortness of breath"
       ],
       "extracted": {
         "conditions": [
@@ -76,13 +138,48 @@
           "simvastatin",
           "20mg"
         ],
-        "lab_values": {},
         "symptoms": [
           "Shortness of breath",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Simvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Blood work",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Blood work",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Shortness of breath",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Simvastatin",
+            "predicate": "contraindicated_with",
+            "object": "BP",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.8,
+          "BP_systolic": 150,
+          "BP_diastolic": 94
+        }
       }
     },
     {
@@ -97,12 +194,23 @@
         "LDL": 130
       },
       "medications": [
-        "40mg"
+        "Metformin 1000mg BID",
+        "Lisinopril 20mg daily",
+        "Simvastatin 20mg daily",
+        "Furosemide 40mg daily",
+        "40mg",
+        "Furosemide"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
         "Chronic Kidney Disease"
       ],
       "symptoms": [
+        "Fatigue",
+        "Increased thirst",
+        "Shortness of breath",
         "Edema"
       ],
       "extracted": {
@@ -110,14 +218,51 @@
           "Chronic Kidney Disease"
         ],
         "medications": [
-          "40mg"
+          "40mg",
+          "Furosemide"
         ],
-        "lab_values": {},
         "symptoms": [
           "Edema"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Furosemide",
+            "predicate": "managed_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Blood work",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Blood work",
+            "confidence": 0.9
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Blood work",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Edema",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.2,
+          "BP_systolic": 140,
+          "BP_diastolic": 90,
+          "eGFR": "decreased"
+        }
       }
     },
     {
@@ -132,14 +277,29 @@
         "LDL": 120
       },
       "medications": [
+        "Metformin 1000mg BID",
+        "Lisinopril 20mg daily",
+        "Simvastatin 40mg daily",
+        "Furosemide 40mg daily",
+        "Aspirin 81mg daily",
+        "Clopidogrel 75mg daily",
         "clopidogrel",
         "81mg",
-        "75mg"
+        "75mg",
+        "Aspirin"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
         "Coronary Artery Disease"
       ],
       "symptoms": [
+        "Fatigue",
+        "Increased thirst",
+        "Shortness of breath",
+        "Edema",
         "Chest pain"
       ],
       "extracted": {
@@ -149,14 +309,50 @@
         "medications": [
           "clopidogrel",
           "81mg",
-          "75mg"
+          "75mg",
+          "Aspirin"
         ],
-        "lab_values": {},
         "symptoms": [
           "Chest pain"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "managed_by",
+            "object": "Aspirin",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "managed_by",
+            "object": "Clopidogrel",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Chest pain",
+            "predicate": "has_symptom",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Blood work",
+            "confidence": 0.7
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Blood work",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 6.8,
+          "BP_systolic": 138,
+          "BP_diastolic": 88
+        }
       }
     }
   ]

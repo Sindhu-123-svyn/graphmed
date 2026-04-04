@@ -10,11 +10,14 @@
         "BP_systolic": 150,
         "BP_diastolic": 90,
         "eGFR": 75,
-        "LDL": 140
+        "LDL": 140,
+        "LDL level": "high",
+        "blood pressure": "elevated"
       },
       "medications": [
         "Atorvastatin 20mg daily",
-        "Metoprolol 25mg twice daily"
+        "Metoprolol 25mg twice daily",
+        "statin"
       ],
       "diagnoses": [
         "Hypertension",
@@ -22,18 +25,65 @@
       ],
       "symptoms": [
         "Headache",
-        "Fatigue"
+        "Fatigue",
+        "high LDL level",
+        "elevated blood pressure"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Hyperlipidemia"
+          "Hyperlipidemia",
+          "Hypertension"
         ],
-        "medications": [],
-        "lab_values": {},
-        "symptoms": [],
+        "medications": [
+          "statin"
+        ],
+        "symptoms": [
+          "high LDL level",
+          "elevated blood pressure"
+        ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "statin",
+            "predicate": "prescribed_for",
+            "object": "Hyperlipidemia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "statin",
+            "predicate": "prescribed_for",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "diet and exercise regimen",
+            "predicate": "improves",
+            "object": "blood sugar control",
+            "confidence": 0.7
+          },
+          {
+            "subject": "blood pressure monitoring",
+            "predicate": "measured_by",
+            "object": "blood pressure",
+            "confidence": 0.9
+          },
+          {
+            "subject": "high LDL level",
+            "predicate": "has_symptom",
+            "object": "Hyperlipidemia",
+            "confidence": 0.6
+          },
+          {
+            "subject": "elevated blood pressure",
+            "predicate": "has_symptom",
+            "object": "Hypertension",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "LDL level": "high",
+          "blood pressure": "elevated"
+        }
       }
     },
     {
@@ -45,32 +95,82 @@
         "BP_systolic": 160,
         "BP_diastolic": 95,
         "eGFR": 68,
-        "LDL": 160
+        "LDL": 160,
+        "Blood Pressure": "elevated",
+        "LDL Level": "high"
       },
       "medications": [
         "Atorvastatin 40mg daily",
         "Metoprolol 50mg twice daily",
-        "Hydrochlorothiazide 25mg daily"
+        "Hydrochlorothiazide 25mg daily",
+        "Statin",
+        "Diuretic"
       ],
       "diagnoses": [
         "Hypertension",
-        "Hyperlipidemia"
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
       ],
       "symptoms": [
         "Headache",
         "Fatigue",
-        "Chest pain"
+        "Chest pain",
+        "Worsening hypertension",
+        "High blood pressure",
+        "High LDL level"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Hyperlipidemia"
+          "Hyperlipidemia",
+          "Hypertension"
         ],
-        "medications": [],
-        "lab_values": {},
-        "symptoms": [],
+        "medications": [
+          "Statin",
+          "Diuretic"
+        ],
+        "symptoms": [
+          "Worsening hypertension",
+          "High blood pressure",
+          "High LDL level"
+        ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Statin",
+            "predicate": "contraindicated_with",
+            "object": "Diuretic",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Diuretic",
+            "predicate": "managed_by",
+            "object": "Diet and exercise regimen",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Blood sugar levels",
+            "predicate": "measured_by",
+            "object": "Patient",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "eGFR",
+            "confidence": 0.6
+          },
+          {
+            "subject": "LDL Level",
+            "predicate": "improves",
+            "object": "Statin",
+            "confidence": 0.5
+          }
+        ],
+        "lab_values": {
+          "Blood Pressure": "elevated",
+          "LDL Level": "high",
+          "eGFR": "slightly decreased"
+        }
       }
     },
     {
@@ -82,36 +182,92 @@
         "BP_systolic": 165,
         "BP_diastolic": 100,
         "eGFR": 62,
-        "LDL": 170
+        "LDL": 170,
+        "Blood Pressure": "elevated",
+        "LDL Level": "high",
+        "Blood Sugar Levels": "closely monitor"
       },
       "medications": [
         "Atorvastatin 80mg daily",
         "Metoprolol 50mg twice daily",
         "Hydrochlorothiazide 25mg daily",
-        "Lisinopril 10mg daily"
+        "Lisinopril 10mg daily",
+        "Statin",
+        "ACE Inhibitor"
       ],
       "diagnoses": [
         "Hypertension",
         "Hyperlipidemia",
+        "Chronic Kidney Disease",
         "Coronary Artery Disease"
       ],
       "symptoms": [
         "Headache",
         "Fatigue",
         "Chest pain",
-        "Shortness of breath"
+        "Shortness of breath",
+        "Worsening hypertension",
+        "High LDL level"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
           "Hyperlipidemia",
-          "Coronary Artery Disease"
+          "Coronary Artery Disease",
+          "Hypertension"
         ],
-        "medications": [],
-        "lab_values": {},
-        "symptoms": [],
+        "medications": [
+          "Statin",
+          "ACE Inhibitor"
+        ],
+        "symptoms": [
+          "Worsening hypertension",
+          "High LDL level"
+        ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Statin",
+            "predicate": "contraindicated_with",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "ACE Inhibitor",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Diet and Exercise Regimen",
+            "predicate": "improves",
+            "object": "Hypertension",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Diet and Exercise Regimen",
+            "predicate": "improves",
+            "object": "Hyperlipidemia",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Blood Sugar Levels",
+            "predicate": "measured_by",
+            "object": "eGFR",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.5
+          }
+        ],
+        "lab_values": {
+          "Blood Pressure": "elevated",
+          "LDL Level": "high",
+          "eGFR": "decreased",
+          "Blood Sugar Levels": "closely monitor"
+        }
       }
     }
   ]

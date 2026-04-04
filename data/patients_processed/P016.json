@@ -10,25 +10,29 @@
         "BP_systolic": 140,
         "BP_diastolic": 90,
         "eGFR": 72,
-        "LDL": 130
+        "LDL": 130,
+        "BMI": 28
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Atorvastatin 20mg QD",
         "metformin",
         "atorvastatin",
         "500mg",
         "20mg"
       ],
       "diagnoses": [
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Type 2 Diabetes",
+        "Hyperlipidemia"
       ],
       "symptoms": [
-        "Fatigue"
+        "Fatigue",
+        "Weight loss"
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Type 2 Diabetes",
+          "Hyperlipidemia"
         ],
         "medications": [
           "metformin",
@@ -36,12 +40,48 @@
           "500mg",
           "20mg"
         ],
-        "lab_values": {},
         "symptoms": [
-          "Fatigue"
+          "Fatigue",
+          "Weight Loss"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Atorvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Physical examination",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BMI",
+            "predicate": "measured_by",
+            "object": "Physical examination",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Weight Loss",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "BP_systolic": 140,
+          "BP_diastolic": 90,
+          "BMI": 28
+        }
       }
     },
     {
@@ -56,15 +96,22 @@
         "LDL": 125
       },
       "medications": [
+        "Metformin 1000mg BID",
+        "Atorvastatin 20mg QD",
+        "Lisinopril 10mg QD",
         "metformin",
         "lisinopril",
         "1000mg",
         "10mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hyperlipidemia",
         "Hypertension"
       ],
       "symptoms": [
+        "Weight loss",
+        "Edema",
         "Fatigue"
       ],
       "extracted": {
@@ -77,12 +124,52 @@
           "1000mg",
           "10mg"
         ],
-        "lab_values": {},
         "symptoms": [
-          "Fatigue"
+          "Fatigue",
+          "weight loss"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "increased",
+            "object": "1000mg",
+            "confidence": 1.0
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "started",
+            "object": "10mg",
+            "confidence": 1.0
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "worsened",
+            "object": "8.1",
+            "confidence": 1.0
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured",
+            "object": "138/92",
+            "confidence": 1.0
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "improved",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "weight loss",
+            "predicate": "experienced",
+            "object": "Hypertension",
+            "confidence": 0.8
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.1
+        }
       }
     },
     {
@@ -94,18 +181,29 @@
         "BP_systolic": 145,
         "BP_diastolic": 98,
         "eGFR": 58,
-        "LDL": 120
+        "LDL": 120,
+        "BMI": 30
       },
       "medications": [
+        "Metformin 1000mg BID",
+        "Atorvastatin 20mg QD",
+        "Lisinopril 20mg QD",
+        "Furosemide 40mg BID",
         "lisinopril",
         "20mg",
-        "40mg"
+        "40mg",
+        "furosemide"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hyperlipidemia",
+        "Hypertension",
         "Chronic Kidney Disease"
       ],
       "symptoms": [
-        "Edema"
+        "Weight loss",
+        "Edema",
+        "Shortness of breath"
       ],
       "extracted": {
         "conditions": [
@@ -114,14 +212,46 @@
         "medications": [
           "lisinopril",
           "20mg",
-          "40mg"
+          "40mg",
+          "furosemide"
         ],
-        "lab_values": {},
         "symptoms": [
-          "Edema"
+          "Edema",
+          "weight loss"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "eGFR",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.8
+          },
+          {
+            "subject": "edema",
+            "predicate": "has_symptom",
+            "object": "weight loss",
+            "confidence": 0.7
+          },
+          {
+            "subject": "lisinopril",
+            "predicate": "contraindicated_with",
+            "object": "furosemide",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "eGFR": 58,
+          "BP_systolic": 145,
+          "BP_diastolic": 98,
+          "BMI": 30
+        }
       }
     },
     {
@@ -136,7 +266,12 @@
         "LDL": 115
       },
       "medications": [
-        "20mg"
+        "Metformin 1000mg BID",
+        "Atorvastatin 20mg QD",
+        "Lisinopril 20mg QD",
+        "Furosemide 20mg BID",
+        "20mg",
+        "Furosemide"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -145,21 +280,76 @@
         "Chronic Kidney Disease"
       ],
       "symptoms": [
+        "Weight loss",
         "Shortness of breath",
         "Edema"
       ],
       "extracted": {
-        "conditions": [],
-        "medications": [
-          "20mg"
+        "conditions": [
+          "Hypertension"
         ],
-        "lab_values": {},
+        "medications": [
+          "20mg",
+          "Furosemide"
+        ],
         "symptoms": [
-          "Shortness of breath",
-          "Edema"
+          "Edema",
+          "Shortness of breath"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Furosemide",
+            "predicate": "managed_by",
+            "object": "Dose adjustment",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Lab results",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Edema",
+            "predicate": "improves",
+            "object": "Furosemide",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Shortness of breath",
+            "predicate": "improves",
+            "object": "Furosemide",
+            "confidence": 0.7
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Physical examination",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "has_value",
+            "object": "142/95",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Edema",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Shortness of breath",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "eGFR": 62
+        }
       }
     },
     {
@@ -186,17 +376,18 @@
         "Chronic Kidney Disease"
       ],
       "symptoms": [
+        "Weight loss",
         "Shortness of breath"
       ],
       "extracted": {
         "conditions": [],
         "medications": [],
-        "lab_values": {},
         "symptoms": [
           "Shortness of breath"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [],
+        "lab_values": {}
       }
     }
   ]

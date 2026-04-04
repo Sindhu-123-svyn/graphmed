@@ -13,6 +13,9 @@
         "LDL": 170
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg daily",
+        "Atorvastatin 20mg daily",
         "metformin",
         "lisinopril",
         "atorvastatin",
@@ -21,9 +24,9 @@
         "20mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
         "Polyuria",
@@ -32,9 +35,9 @@
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -44,10 +47,58 @@
           "10mg",
           "20mg"
         ],
-        "lab_values": {},
         "symptoms": [],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Atorvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "eGFR",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "eGFR",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Hypertension",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Hyperlipidemia",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.1,
+          "BP_systolic": 150,
+          "BP_diastolic": 95,
+          "eGFR": 70
+        }
       }
     },
     {
@@ -62,6 +113,9 @@
         "LDL": 140
       },
       "medications": [
+        "Metformin 850mg BID",
+        "Lisinopril 20mg daily",
+        "Atorvastatin 40mg daily",
         "metformin",
         "lisinopril",
         "atorvastatin",
@@ -73,13 +127,24 @@
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
-        "Possible Chronic Kidney Disease"
+        "Possible Chronic Kidney Disease",
+        "elevated blood pressure",
+        "decreased eGFR",
+        "lower back pain"
       ],
       "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Fatigue",
+        "Lower back pain",
         "Shortness of breath"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "elevated blood pressure",
+          "decreased eGFR",
+          "lower back pain"
+        ],
         "medications": [
           "metformin",
           "lisinopril",
@@ -88,12 +153,73 @@
           "20mg",
           "40mg"
         ],
-        "lab_values": {},
         "symptoms": [
-          "Shortness of breath"
+          "Shortness of breath",
+          "lower back pain"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "patient",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "patient",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Atorvastatin",
+            "predicate": "managed_by",
+            "object": "patient",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Lisinopril",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "worsens",
+            "object": "elevated blood pressure",
+            "confidence": 0.7
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "patient",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "worsens",
+            "object": "decreased eGFR",
+            "confidence": 0.7
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "improves",
+            "object": "lower back pain",
+            "confidence": 0.6
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "improves",
+            "object": "shortness of breath",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.5,
+          "BP_systolic": 155,
+          "BP_diastolic": 100,
+          "eGFR": 65
+        }
       }
     },
     {
@@ -108,27 +234,44 @@
         "LDL": 120
       },
       "medications": [
+        "Metformin 1000mg BID",
+        "Lisinopril 40mg daily",
+        "Atorvastatin 80mg daily",
+        "Furosemide 20mg daily",
         "metformin",
         "lisinopril",
         "atorvastatin",
         "1000mg",
         "40mg",
         "80mg",
-        "20mg"
+        "20mg",
+        "Furosemide"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
         "Possible Chronic Kidney Disease",
-        "Coronary Artery Disease"
+        "Coronary Artery Disease",
+        "Diabetes",
+        "Chronic Kidney Disease"
       ],
       "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Fatigue",
+        "Lower back pain",
+        "Shortness of breath",
         "Chest pain",
+        "Swelling in the legs",
         "Edema"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Diabetes",
+          "Hypertension",
+          "Chronic Kidney Disease"
+        ],
         "medications": [
           "metformin",
           "lisinopril",
@@ -136,15 +279,83 @@
           "1000mg",
           "40mg",
           "80mg",
-          "20mg"
+          "20mg",
+          "Furosemide"
         ],
-        "lab_values": {},
         "symptoms": [
           "Chest pain",
-          "Edema"
+          "Edema",
+          "Swelling in the legs"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Atorvastatin",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Furosemide",
+            "predicate": "managed_by",
+            "object": "Edema",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Chest pain",
+            "predicate": "has_symptom",
+            "object": "Edema",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Swelling in the legs",
+            "predicate": "has_symptom",
+            "object": "Edema",
+            "confidence": 0.7
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "worsens",
+            "object": "Diabetes",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.8,
+          "BP_systolic": 160,
+          "BP_diastolic": 110,
+          "eGFR": 55
+        }
       }
     }
   ]

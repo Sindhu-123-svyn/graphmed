@@ -6,11 +6,16 @@
       "date": "2021-06-15",
       "note": "Patient P043 is a 55-year-old man presenting with new onset of fatigue and polyuria. Physical examination reveals obesity (BMI 32). Initial lab results show HbA1c of 7.2, BP 140/90, eGFR 72, and LDL 130. The patient is diagnosed with Type 2 Diabetes, Hypertension, and Hyperlipidemia. Medications include Metformin 500mg twice daily, Lisinopril 10mg daily, and Atorvastatin 20mg daily.",
       "labs": {
-        "BP": "140/90",
-        "eGFR": 72.0,
-        "LDL": 130.0
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
       },
       "medications": [
+        "Metformin 500mg twice daily",
+        "Lisinopril 10mg daily",
+        "Atorvastatin 20mg daily",
         "metformin",
         "lisinopril",
         "atorvastatin",
@@ -19,19 +24,19 @@
         "20mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
-        "Polyuria",
-        "Fatigue"
+        "Fatigue",
+        "Polyuria"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -41,17 +46,92 @@
           "10mg",
           "20mg"
         ],
-        "lab_values": {
-          "BP": "140/90",
-          "eGFR": 72.0,
-          "LDL": 130.0
-        },
         "symptoms": [
           "Polyuria",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Atorvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "has_symptom",
+            "object": "Polyuria",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "has_symptom",
+            "object": "Fatigue",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Polyuria",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Fatigue",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "has_symptom",
+            "object": "Polyuria",
+            "confidence": 0.5
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "has_symptom",
+            "object": "Fatigue",
+            "confidence": 0.5
+          },
+          {
+            "subject": "Metformin",
+            "predicate": "contraindicated_with",
+            "object": "Lisinopril",
+            "confidence": 0.4
+          },
+          {
+            "subject": "Metformin",
+            "predicate": "contraindicated_with",
+            "object": "Atorvastatin",
+            "confidence": 0.4
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "contraindicated_with",
+            "object": "Atorvastatin",
+            "confidence": 0.4
+          }
+        ],
+        "lab_values": {
+          "BP_systolic": 140,
+          "BP_diastolic": 90,
+          "eGFR": 72.0,
+          "LDL": 130.0,
+          "HbA1c": 7.2
+        }
       }
     },
     {
@@ -59,11 +139,16 @@
       "date": "2021-12-20",
       "note": "Patient P043 returns with worsening fatigue and shortness of breath. Physical examination reveals no new findings. Lab results show HbA1c of 8.1, BP 150/95, eGFR 68, and LDL 145. The patient's medications are adjusted to Metformin 850mg twice daily, Lisinopril 20mg daily, and Atorvastatin 40mg daily. A diagnosis of Coronary Artery Disease is added due to new symptoms.",
       "labs": {
-        "BP": "150/95",
-        "eGFR": 68.0,
-        "LDL": 145.0
+        "HbA1c": 8.1,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 68,
+        "LDL": 145
       },
       "medications": [
+        "Metformin 850mg twice daily",
+        "Lisinopril 20mg daily",
+        "Atorvastatin 40mg daily",
         "metformin",
         "lisinopril",
         "atorvastatin",
@@ -72,11 +157,15 @@
         "40mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
         "Coronary Artery Disease"
       ],
       "symptoms": [
-        "Shortness of breath",
-        "Fatigue"
+        "Fatigue",
+        "Polyuria",
+        "Shortness of breath"
       ],
       "extracted": {
         "conditions": [
@@ -90,17 +179,74 @@
           "20mg",
           "40mg"
         ],
-        "lab_values": {
-          "BP": "150/95",
-          "eGFR": 68.0,
-          "LDL": 145.0
-        },
         "symptoms": [
           "Shortness of breath",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "managed_by",
+            "object": "metformin",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "managed_by",
+            "object": "atorvastatin",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "has_symptom",
+            "object": "Shortness of breath",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "has_symptom",
+            "object": "Fatigue",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "lab results",
+            "confidence": 0.7
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "lab results",
+            "confidence": 0.7
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "lab results",
+            "confidence": 0.7
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "lab results",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "BP_systolic": 150,
+          "BP_diastolic": 95,
+          "eGFR": 68.0,
+          "LDL": 145.0,
+          "HbA1c": 8.1
+        }
       }
     },
     {
@@ -108,61 +254,22 @@
       "date": "2022-06-15",
       "note": "Patient P043 returns with worsening kidney function and new onset of edema. Physical examination reveals pitting edema bilaterally. Lab results show HbA1c of 7.5, BP 148/98, eGFR 58, and LDL 155. The patient's medications are adjusted to Metformin 1000mg twice daily, Lisinopril 30mg daily, and Atorvastatin 80mg daily. A diagnosis of Chronic Kidney Disease is added due to worsening eGFR.",
       "labs": {
-        "BP": "148/98",
-        "eGFR": 58.0,
-        "LDL": 155.0
+        "HbA1c": 7.5,
+        "BP_systolic": 148,
+        "BP_diastolic": 98,
+        "eGFR": 58,
+        "LDL": 155
       },
       "medications": [
+        "Metformin 1000mg twice daily",
+        "Lisinopril 30mg daily",
+        "Atorvastatin 80mg daily",
         "metformin",
         "lisinopril",
         "atorvastatin",
         "1000mg",
         "30mg",
         "80mg"
-      ],
-      "diagnoses": [
-        "Chronic Kidney Disease"
-      ],
-      "symptoms": [
-        "Edema"
-      ],
-      "extracted": {
-        "conditions": [
-          "Chronic Kidney Disease"
-        ],
-        "medications": [
-          "metformin",
-          "lisinopril",
-          "atorvastatin",
-          "1000mg",
-          "30mg",
-          "80mg"
-        ],
-        "lab_values": {
-          "BP": "148/98",
-          "eGFR": 58.0,
-          "LDL": 155.0
-        },
-        "symptoms": [
-          "Edema"
-        ],
-        "procedures": [],
-        "relationships": []
-      }
-    },
-    {
-      "visit_id": "V4",
-      "date": "2023-02-20",
-      "note": "Patient P043 returns with stable lab values and improved symptoms. Physical examination reveals no new findings. Lab results show HbA1c of 7.0, BP 140/80, eGFR 65, and LDL 120. The patient's medications remain unchanged.",
-      "labs": {
-        "BP": "140/80",
-        "eGFR": 65.0,
-        "LDL": 120.0
-      },
-      "medications": [
-        "Metformin 1000mg twice daily",
-        "Lisinopril 30mg daily",
-        "Atorvastatin 80mg daily"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -178,16 +285,138 @@
         "Edema"
       ],
       "extracted": {
-        "conditions": [],
-        "medications": [],
-        "lab_values": {
-          "BP": "140/80",
-          "eGFR": 65.0,
-          "LDL": 120.0
-        },
-        "symptoms": [],
+        "conditions": [
+          "Chronic Kidney Disease"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "atorvastatin",
+          "1000mg",
+          "30mg",
+          "80mg"
+        ],
+        "symptoms": [
+          "Edema"
+        ],
         "procedures": [],
-        "relationships": []
+        "relationships": [],
+        "lab_values": {
+          "BP_systolic": 148,
+          "BP_diastolic": 98,
+          "eGFR": 58.0,
+          "LDL": 155.0
+        }
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-02-20",
+      "note": "Patient P043 returns with stable lab values and improved symptoms. Physical examination reveals no new findings. Lab results show HbA1c of 7.0, BP 140/80, eGFR 65, and LDL 120. The patient's medications remain unchanged.",
+      "labs": {
+        "HbA1c": 7.0,
+        "BP_systolic": 140,
+        "BP_diastolic": 80,
+        "eGFR": 65,
+        "LDL": 120
+      },
+      "medications": [
+        "Metformin 1000mg twice daily",
+        "Lisinopril 30mg daily",
+        "Atorvastatin 80mg daily",
+        "Medication not specified"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease",
+        "Diabetes"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Shortness of breath",
+        "Edema",
+        "Improved symptoms"
+      ],
+      "extracted": {
+        "conditions": [
+          "Diabetes"
+        ],
+        "medications": [
+          "Medication not specified"
+        ],
+        "symptoms": [
+          "Improved symptoms"
+        ],
+        "procedures": [
+          "Physical examination"
+        ],
+        "relationships": [
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Lab results",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Lab results",
+            "confidence": 0.9
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Lab results",
+            "confidence": 0.9
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "Lab results",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "managed_by",
+            "object": "Medication not specified",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "managed_by",
+            "object": "Medication not specified",
+            "confidence": 0.8
+          },
+          {
+            "subject": "LDL",
+            "predicate": "managed_by",
+            "object": "Medication not specified",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "managed_by",
+            "object": "Medication not specified",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Improved symptoms",
+            "predicate": "improves",
+            "object": "Medication not specified",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "BP_systolic": 140,
+          "BP_diastolic": 80,
+          "eGFR": 65.0,
+          "LDL": 120.0,
+          "HbA1c": 7.0
+        }
       }
     }
   ]

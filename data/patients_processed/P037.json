@@ -7,19 +7,23 @@
       "note": "Patient presents with new diagnosis of Type 2 Diabetes (HbA1c 7.2), hypertension (BP 140/90), and hyperlipidemia (LDL 130). Plan to initiate Metformin 500mg twice daily and Lisinopril 10mg daily.",
       "labs": {
         "HbA1c": 7.2,
-        "BP": "140/90",
-        "LDL": 130.0
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
       },
       "medications": [
+        "Metformin 500mg twice daily",
+        "Lisinopril 10mg daily",
         "metformin",
         "lisinopril",
         "500mg",
         "10mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
         "Polyuria",
@@ -28,9 +32,9 @@
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -38,14 +42,15 @@
           "500mg",
           "10mg"
         ],
-        "lab_values": {
-          "HbA1c": 7.2,
-          "BP": "140/90",
-          "LDL": 130.0
-        },
         "symptoms": [],
         "procedures": [],
-        "relationships": []
+        "relationships": [],
+        "lab_values": {
+          "HbA1c": 7.2,
+          "BP_systolic": 140,
+          "BP_diastolic": 90,
+          "LDL": 130.0
+        }
       }
     },
     {
@@ -60,30 +65,85 @@
         "LDL": 140
       },
       "medications": [
-        "100mg"
+        "Metformin 500mg twice daily",
+        "Lisinopril 10mg daily",
+        "Sitagliptin 100mg daily",
+        "100mg",
+        "Sitagliptin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
-        "Coronary Artery Disease (suspected)"
+        "Coronary Artery Disease (suspected)",
+        "Diabetes"
       ],
       "symptoms": [
-        "Shortness of breath",
-        "Fatigue"
+        "Polyuria",
+        "Polydipsia",
+        "Fatigue",
+        "Shortness of breath"
       ],
       "extracted": {
-        "conditions": [],
-        "medications": [
-          "100mg"
+        "conditions": [
+          "Diabetes"
         ],
-        "lab_values": {},
+        "medications": [
+          "100mg",
+          "Sitagliptin"
+        ],
         "symptoms": [
           "Shortness of breath",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Sitagliptin",
+            "predicate": "managed_by",
+            "object": "Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Diabetes",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Shortness of breath",
+            "predicate": "has_symptom",
+            "object": "Diabetes",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Sitagliptin",
+            "predicate": "improves",
+            "object": "Diabetes",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Diabetes",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.5
+          },
+          {
+            "subject": "Diabetes",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
+            "confidence": 0.5
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.1
+        }
       }
     },
     {
@@ -91,45 +151,20 @@
       "date": "2023-06-15",
       "note": "Patient presents with worsening kidney function (eGFR 52). Renal ultrasound reveals mild renal impairment. Continue Sitagliptin, but initiate Amlodipine 5mg daily for blood pressure control. Also, patient reports swelling in lower extremities.",
       "labs": {
-        "eGFR": 52.0
+        "HbA1c": 8.5,
+        "BP_systolic": 155,
+        "BP_diastolic": 95,
+        "eGFR": 52,
+        "LDL": 145
       },
       "medications": [
+        "Metformin 500mg twice daily",
+        "Lisinopril 10mg daily",
+        "Sitagliptin 100mg daily",
+        "Amlodipine 5mg daily",
         "amlodipine",
-        "5mg"
-      ],
-      "diagnoses": [
-        "Chronic Kidney Disease"
-      ],
-      "symptoms": [
-        "Edema"
-      ],
-      "extracted": {
-        "conditions": [
-          "Chronic Kidney Disease"
-        ],
-        "medications": [
-          "amlodipine",
-          "5mg"
-        ],
-        "lab_values": {
-          "eGFR": 52.0
-        },
-        "symptoms": [
-          "Edema"
-        ],
-        "procedures": [],
-        "relationships": []
-      }
-    },
-    {
-      "visit_id": "V4",
-      "date": "2023-12-20",
-      "note": "Patient presents with worsening glycemic control (HbA1c 9.1) and increasing creatinine levels. Initiate Insulin Glargine 100 units daily for basal insulin coverage. Continue all current medications.",
-      "labs": {
-        "HbA1c": 9.1
-      },
-      "medications": [
-        "insulin"
+        "5mg",
+        "Sitagliptin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -144,19 +179,140 @@
         "Fatigue",
         "Shortness of breath",
         "Swelling in lower extremities",
-        "Increased thirst"
+        "Edema"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Chronic Kidney Disease"
+        ],
         "medications": [
-          "insulin"
+          "amlodipine",
+          "5mg",
+          "Sitagliptin"
+        ],
+        "symptoms": [
+          "Edema"
+        ],
+        "procedures": [
+          "renal ultrasound"
+        ],
+        "relationships": [
+          {
+            "subject": "amlodipine",
+            "predicate": "managed_by",
+            "object": "blood pressure control",
+            "confidence": 0.9
+          },
+          {
+            "subject": "amlodipine",
+            "predicate": "contraindicated_with",
+            "object": "Sitagliptin",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "renal ultrasound",
+            "confidence": 0.7
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Edema",
+            "predicate": "has_symptom",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.5
+          }
         ],
         "lab_values": {
-          "HbA1c": 9.1
-        },
-        "symptoms": [],
+          "eGFR": 52.0
+        }
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-12-20",
+      "note": "Patient presents with worsening glycemic control (HbA1c 9.1) and increasing creatinine levels. Initiate Insulin Glargine 100 units daily for basal insulin coverage. Continue all current medications.",
+      "labs": {
+        "HbA1c": 9.1,
+        "BP_systolic": 150,
+        "BP_diastolic": 98,
+        "eGFR": 45,
+        "LDL": 150,
+        "creatinine": null
+      },
+      "medications": [
+        "Metformin 500mg twice daily",
+        "Lisinopril 10mg daily",
+        "Sitagliptin 100mg daily",
+        "Amlodipine 5mg daily",
+        "Insulin Glargine 100 units daily",
+        "insulin",
+        "insulin glargine"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease",
+        "diabetes"
+      ],
+      "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Fatigue",
+        "Shortness of breath",
+        "Swelling in lower extremities",
+        "Increased thirst",
+        "worsening glycemic control"
+      ],
+      "extracted": {
+        "conditions": [
+          "diabetes"
+        ],
+        "medications": [
+          "insulin",
+          "insulin glargine"
+        ],
+        "symptoms": [
+          "worsening glycemic control"
+        ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "insulin glargine",
+            "predicate": "managed_by",
+            "object": "basal insulin coverage",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "glycemic control",
+            "confidence": 0.9
+          },
+          {
+            "subject": "creatinine",
+            "predicate": "measured_by",
+            "object": "increasing levels",
+            "confidence": 0.8
+          },
+          {
+            "subject": "insulin glargine",
+            "predicate": "contraindicated_with",
+            "object": "null",
+            "confidence": 0.0
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 9.1,
+          "creatinine": null
+        }
       }
     }
   ]

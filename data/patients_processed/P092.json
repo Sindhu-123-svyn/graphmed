@@ -13,6 +13,8 @@
         "LDL": 180
       },
       "medications": [
+        "Lisinopril 20mg",
+        "Atorvastatin 20mg",
         "lisinopril",
         "atorvastatin"
       ],
@@ -24,18 +26,43 @@
       "symptoms": [],
       "extracted": {
         "conditions": [
-          "Hypertension",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
         "medications": [
           "lisinopril",
           "atorvastatin"
         ],
-        "lab_values": {},
         "symptoms": [],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "atorvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Patient",
+            "predicate": "has_symptom",
+            "object": "no symptoms of diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Patient",
+            "predicate": "has_family_history",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          }
+        ],
+        "lab_values": {}
       }
     },
     {
@@ -50,11 +77,15 @@
         "LDL": 200
       },
       "medications": [
+        "Lisinopril 20mg",
+        "Atorvastatin 20mg",
+        "Metformin 500mg",
         "metformin"
       ],
       "diagnoses": [
         "Hypertension",
         "Hyperlipidemia",
+        "Chronic Kidney Disease",
         "Type 2 Diabetes"
       ],
       "symptoms": [
@@ -62,19 +93,19 @@
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
         "medications": [
           "metformin"
         ],
-        "lab_values": {},
         "symptoms": [
           "Edema"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [],
+        "lab_values": {}
       }
     },
     {
@@ -91,25 +122,75 @@
       "medications": [
         "Ramipril 10mg",
         "Atorvastatin 20mg",
-        "Metformin 1000mg"
+        "Metformin 1000mg",
+        "Ramipril"
       ],
       "diagnoses": [
-        "Hypertension"
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease",
+        "Kidney dysfunction"
       ],
       "symptoms": [
+        "Edema",
         "Shortness of breath"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension"
+          "Hypertension",
+          "Kidney dysfunction"
         ],
-        "medications": [],
-        "lab_values": {},
+        "medications": [
+          "Ramipril"
+        ],
         "symptoms": [
           "Shortness of breath"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Ramipril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Ramipril",
+            "predicate": "managed_by",
+            "object": "Kidney dysfunction",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Ramipril",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Ramipril",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Shortness of breath",
+            "predicate": "has_symptom",
+            "object": "Hypertension",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Shortness of breath",
+            "predicate": "has_symptom",
+            "object": "Kidney dysfunction",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "BP_systolic": 170,
+          "BP_diastolic": 95,
+          "eGFR": 40
+        }
       }
     }
   ]

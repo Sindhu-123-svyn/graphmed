@@ -7,29 +7,33 @@
       "note": "Patient presents with new onset of fatigue and polyuria. Physical examination reveals normal blood pressure and weight. Blood work is significant for HbA1c 7.2%, LDL 130, and eGFR 80. Diagnoses include Type 2 Diabetes, Hyperlipidemia, and Chronic Kidney Disease. Plan includes initiation of metformin 500mg twice daily and atorvastatin 20mg daily.",
       "labs": {
         "HbA1c": 7.2,
-        "eGFR": 80.0,
-        "LDL": 130.0
+        "BP_systolic": 128,
+        "BP_diastolic": 80,
+        "eGFR": 80,
+        "LDL": 130
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Atorvastatin 20mg daily",
         "metformin",
         "atorvastatin",
         "500mg",
         "20mg"
       ],
       "diagnoses": [
-        "Chronic Kidney Disease",
+        "Type 2 Diabetes",
         "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Chronic Kidney Disease"
       ],
       "symptoms": [
-        "Polyuria",
-        "Fatigue"
+        "Fatigue",
+        "Polyuria"
       ],
       "extracted": {
         "conditions": [
-          "Chronic Kidney Disease",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Chronic Kidney Disease"
         ],
         "medications": [
           "metformin",
@@ -37,17 +41,66 @@
           "500mg",
           "20mg"
         ],
-        "lab_values": {
-          "HbA1c": 7.2,
-          "eGFR": 80.0,
-          "LDL": 130.0
-        },
         "symptoms": [
           "Polyuria",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "atorvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "metformin",
+            "predicate": "contraindicated_with",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Blood work",
+            "confidence": 0.9
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "Blood work",
+            "confidence": 0.9
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Blood work",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Polyuria",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.2,
+          "eGFR": 80.0,
+          "LDL": 130.0
+        }
       }
     },
     {
@@ -56,20 +109,30 @@
       "note": "Follow-up visit for patient with Type 2 Diabetes. Patient reports improved energy levels but continues to experience polyuria. Blood work is significant for HbA1c 6.8%, LDL 120, and eGFR 72. Physical examination reveals increased blood pressure at 150/90. Plan includes adjustment of metformin to 500mg TID and lisinopril 5mg daily.",
       "labs": {
         "HbA1c": 6.8,
-        "eGFR": 72.0,
-        "LDL": 120.0
+        "BP_systolic": 150,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 120
       },
       "medications": [
+        "Metformin 500mg TID",
+        "Atorvastatin 20mg daily",
+        "Lisinopril 5mg daily",
         "metformin",
         "lisinopril",
         "500mg",
         "5mg"
       ],
       "diagnoses": [
-        "Type 2 Diabetes"
+        "Type 2 Diabetes",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Hypertension"
       ],
       "symptoms": [
-        "Polyuria"
+        "Fatigue",
+        "Polyuria",
+        "Headache"
       ],
       "extracted": {
         "conditions": [
@@ -81,16 +144,65 @@
           "500mg",
           "5mg"
         ],
-        "lab_values": {
-          "HbA1c": 6.8,
-          "eGFR": 72.0,
-          "LDL": 120.0
-        },
         "symptoms": [
           "Polyuria"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "lisinopril",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Polyuria",
+            "confidence": 0.7
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Blood work",
+            "confidence": 0.9
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "Blood work",
+            "confidence": 0.9
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Blood work",
+            "confidence": 0.9
+          },
+          {
+            "subject": "150/90",
+            "predicate": "measured_by",
+            "object": "Physical examination",
+            "confidence": 0.8
+          },
+          {
+            "subject": "metformin",
+            "predicate": "contraindicated_with",
+            "object": "lisinopril",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 6.8,
+          "eGFR": 72.0,
+          "LDL": 120.0
+        }
       }
     },
     {
@@ -99,46 +211,141 @@
       "note": "Patient returns for 6-month follow-up. Patient reports worsening fatigue and increased frequency of urination. Blood work is significant for HbA1c 7.5%, LDL 140, and eGFR 68. Physical examination reveals increased blood pressure at 160/95 and new onset of edema. Plan includes adjustment of metformin to 1000mg BID, atorvastatin to 40mg daily, and addition of furosemide 20mg daily.",
       "labs": {
         "HbA1c": 7.5,
-        "eGFR": 68.0,
-        "LDL": 140.0
+        "BP_systolic": 160,
+        "BP_diastolic": 95,
+        "eGFR": 68,
+        "LDL": 140
       },
       "medications": [
+        "Metformin 1000mg BID",
+        "Atorvastatin 40mg daily",
+        "Lisinopril 10mg daily",
+        "Furosemide 20mg daily",
         "metformin",
         "atorvastatin",
         "1000mg",
         "40mg",
-        "20mg"
+        "20mg",
+        "furosemide"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hyperlipidemia",
         "Chronic Kidney Disease",
-        "Hypertension"
+        "Hypertension",
+        "Diabetes Mellitus"
       ],
       "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Headache",
         "Edema",
-        "Fatigue"
+        "Increased Urination"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Diabetes Mellitus",
+          "Hypertension"
+        ],
         "medications": [
           "metformin",
           "atorvastatin",
           "1000mg",
           "40mg",
-          "20mg"
+          "20mg",
+          "furosemide"
+        ],
+        "symptoms": [
+          "Edema",
+          "Fatigue",
+          "Increased Urination"
+        ],
+        "procedures": [],
+        "relationships": [
+          {
+            "subject": "metformin",
+            "predicate": "managed_by",
+            "object": "Diabetes Mellitus",
+            "confidence": 0.9
+          },
+          {
+            "subject": "atorvastatin",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "furosemide",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Blood Work",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Blood Work",
+            "confidence": 0.8
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "Blood Work",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Edema",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Increased Urination",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Edema",
+            "predicate": "has_symptom",
+            "object": "Increased Urination",
+            "confidence": 0.7
+          },
+          {
+            "subject": "metformin",
+            "predicate": "contraindicated_with",
+            "object": "furosemide",
+            "confidence": 0.6
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "worsens",
+            "object": "Diabetes Mellitus",
+            "confidence": 0.5
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "worsens",
+            "object": "Hypertension",
+            "confidence": 0.5
+          },
+          {
+            "subject": "LDL",
+            "predicate": "worsens",
+            "object": "Hypertension",
+            "confidence": 0.5
+          }
         ],
         "lab_values": {
           "HbA1c": 7.5,
           "eGFR": 68.0,
           "LDL": 140.0
-        },
-        "symptoms": [
-          "Edema",
-          "Fatigue"
-        ],
-        "procedures": [],
-        "relationships": []
+        }
       }
     },
     {
@@ -147,42 +354,92 @@
       "note": "Patient returns for follow-up after 8 months. Patient reports stable energy levels but continues to experience polyuria and edema. Blood work is significant for HbA1c 7.0%, LDL 110, and eGFR 60. Physical examination reveals stable blood pressure at 140/80. Plan includes adjustment of metformin to 1000mg BID and addition of aspirin 81mg daily.",
       "labs": {
         "HbA1c": 7.0,
-        "eGFR": 60.0,
-        "LDL": 110.0
+        "BP_systolic": 140,
+        "BP_diastolic": 80,
+        "eGFR": 60,
+        "LDL": 110
       },
       "medications": [
+        "Metformin 1000mg BID",
+        "Atorvastatin 40mg daily",
+        "Lisinopril 10mg daily",
+        "Furosemide 20mg daily",
+        "Aspirin 81mg daily",
         "metformin",
         "1000mg",
-        "81mg"
+        "81mg",
+        "aspirin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hyperlipidemia",
         "Chronic Kidney Disease",
-        "Hypertension"
+        "Hypertension",
+        "Diabetes Mellitus"
       ],
       "symptoms": [
-        "Edema",
-        "Polyuria"
+        "Fatigue",
+        "Polyuria",
+        "Edema"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Diabetes Mellitus"
+        ],
         "medications": [
           "metformin",
           "1000mg",
-          "81mg"
+          "81mg",
+          "aspirin"
         ],
-        "lab_values": {
-          "HbA1c": 7.0,
-          "eGFR": 60.0,
-          "LDL": 110.0
-        },
         "symptoms": [
           "Edema",
           "Polyuria"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "metformin",
+            "predicate": "managed_by",
+            "object": "Diabetes Mellitus",
+            "confidence": 0.9
+          },
+          {
+            "subject": "aspirin",
+            "predicate": "managed_by",
+            "object": "Diabetes Mellitus",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Polyuria",
+            "predicate": "has_symptom",
+            "object": "Edema",
+            "confidence": 0.7
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Blood work",
+            "confidence": 0.6
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "Blood work",
+            "confidence": 0.6
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Blood work",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.0,
+          "eGFR": 60.0,
+          "LDL": 110.0
+        }
       }
     }
   ]

@@ -7,8 +7,9 @@
       "note": "New patient with complaints of fatigue and polyuria. On physical exam, patient has a blood pressure of 140/90 and weight of 95kg. Initial HbA1c is 7.2. Diagnoses include Type 2 Diabetes and Hypertension. Meds include Metformin 500mg qd. Follow-up in 3 months.",
       "labs": {
         "HbA1c": 7.2,
-        "BP": "140/90",
-        "eGFR": 72
+        "eGFR": 72,
+        "BP_systolic": 140,
+        "BP_diastolic": 90
       },
       "medications": [
         "Metformin 500mg"
@@ -28,8 +29,9 @@
       "note": "Patient returns for follow-up. BP is 130/80, HbA1c is 6.8. Adding Lisinopril 10mg qd for hypertension. Patient reports improved energy, but new symptoms of nocturia and edema. Meds now Metformin 500mg, Lisinopril 10mg.",
       "labs": {
         "HbA1c": 6.8,
-        "BP": "130/80",
-        "eGFR": 68
+        "eGFR": 68,
+        "BP_systolic": 130,
+        "BP_diastolic": 80
       },
       "medications": [
         "Metformin 500mg",
@@ -52,8 +54,9 @@
       "note": "Patient returns for follow-up. BP is 125/75, HbA1c is 6.5. Patient reports improvement in nocturia and edema. Adding Sitagliptin 100mg qd for glycemic control. Meds now Metformin 500mg, Lisinopril 10mg, Sitagliptin 100mg.",
       "labs": {
         "HbA1c": 6.5,
-        "BP": "125/75",
-        "eGFR": 65
+        "eGFR": 65,
+        "BP_systolic": 125,
+        "BP_diastolic": 75
       },
       "medications": [
         "Metformin 500mg",
@@ -77,8 +80,9 @@
       "note": "Patient returns for follow-up. BP is 120/70, HbA1c is 6.2. Patient reports new symptom of tingling in hands and feet. Meds now Metformin 500mg, Lisinopril 10mg, Sitagliptin 100mg, and Gabapentin 100mg for neuropathy. Discussing need for referral to endocrinology for further management.",
       "labs": {
         "HbA1c": 6.2,
-        "BP": "120/70",
-        "eGFR": 62
+        "eGFR": 62,
+        "BP_systolic": 120,
+        "BP_diastolic": 70
       },
       "medications": [
         "Metformin 500mg",

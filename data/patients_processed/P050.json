@@ -7,29 +7,34 @@
       "note": "Patient presents with new onset of fatigue and increased thirst. Physical examination reveals a blood pressure of 140/90 and a BMI of 30. Labs: HbA1c 7.2, BP_systolic 140, BP_diastolic 90, eGFR 72, LDL 130. Diagnoses: Type 2 Diabetes, Hypertension, Hyperlipidemia. Medications: Metformin 500mg BID, Lisinopril 10mg daily.",
       "labs": {
         "HbA1c": 7.2,
-        "eGFR": 72.0,
-        "LDL": 130.0
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg daily",
         "metformin",
         "lisinopril",
         "500mg",
         "10mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
-        "Polydipsia",
-        "Fatigue"
+        "Fatigue",
+        "Increased thirst",
+        "Polydipsia"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -37,17 +42,80 @@
           "500mg",
           "10mg"
         ],
-        "lab_values": {
-          "HbA1c": 7.2,
-          "eGFR": 72.0,
-          "LDL": 130.0
-        },
         "symptoms": [
           "Polydipsia",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "metformin",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Hyperlipidemia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Hyperlipidemia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Polydipsia",
+            "confidence": 0.7
+          },
+          {
+            "subject": "BP_systolic",
+            "predicate": "measured_by",
+            "object": "Physical examination",
+            "confidence": 0.6
+          },
+          {
+            "subject": "BP_diastolic",
+            "predicate": "measured_by",
+            "object": "Physical examination",
+            "confidence": 0.6
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Labs",
+            "confidence": 0.6
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "Labs",
+            "confidence": 0.6
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Labs",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.2,
+          "eGFR": 72.0,
+          "LDL": 130.0,
+          "BP_systolic": 140,
+          "BP_diastolic": 90
+        }
       }
     },
     {
@@ -56,10 +124,15 @@
       "note": "Patient reports worsening fatigue and increased blood pressure. Labs: HbA1c 8.1, BP_systolic 150, BP_diastolic 95, eGFR 68, LDL 140. Diagnoses: Type 2 Diabetes, Hypertension, Hyperlipidemia, Chronic Kidney Disease. Medications: Metformin 500mg BID, Lisinopril 20mg daily, Atorvastatin 20mg daily.",
       "labs": {
         "HbA1c": 8.1,
-        "eGFR": 68.0,
-        "LDL": 140.0
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 68,
+        "LDL": 140
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 20mg daily",
+        "Atorvastatin 20mg daily",
         "metformin",
         "lisinopril",
         "atorvastatin",
@@ -67,20 +140,22 @@
         "20mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Chronic Kidney Disease",
         "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Chronic Kidney Disease"
       ],
       "symptoms": [
-        "Fatigue"
+        "Fatigue",
+        "Increased thirst",
+        "Shortness of breath"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Chronic Kidney Disease",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension",
+          "Chronic Kidney Disease"
         ],
         "medications": [
           "metformin",
@@ -89,16 +164,115 @@
           "500mg",
           "20mg"
         ],
-        "lab_values": {
-          "HbA1c": 8.1,
-          "eGFR": 68.0,
-          "LDL": 140.0
-        },
         "symptoms": [
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Atorvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "contraindicated_with",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Hypertension",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Hyperlipidemia",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.7
+          },
+          {
+            "subject": "BP_systolic 150",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP_diastolic 95",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "eGFR 68",
+            "predicate": "measured_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.9
+          },
+          {
+            "subject": "LDL 140",
+            "predicate": "measured_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.8
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.1,
+          "eGFR": 68.0,
+          "LDL": 140.0,
+          "BP_systolic": 150,
+          "BP_diastolic": 95
+        }
       }
     },
     {
@@ -107,86 +281,42 @@
       "note": "Patient reports improved energy levels, but increased edema. Labs: HbA1c 7.5, BP_systolic 145, BP_diastolic 90, eGFR 60, LDL 120. Diagnoses: Type 2 Diabetes, Hypertension, Hyperlipidemia, Chronic Kidney Disease. Medications: Metformin 1000mg BID, Lisinopril 20mg daily, Atorvastatin 20mg daily, Furosemide 40mg daily.",
       "labs": {
         "HbA1c": 7.5,
-        "eGFR": 60.0,
-        "LDL": 120.0
+        "BP_systolic": 145,
+        "BP_diastolic": 90,
+        "eGFR": 60,
+        "LDL": 120
       },
       "medications": [
-        "metformin",
-        "lisinopril",
-        "atorvastatin",
-        "1000mg",
-        "20mg",
-        "40mg"
-      ],
-      "diagnoses": [
-        "Hypertension",
-        "Chronic Kidney Disease",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
-      ],
-      "symptoms": [
-        "Edema"
-      ],
-      "extracted": {
-        "conditions": [
-          "Hypertension",
-          "Chronic Kidney Disease",
-          "Hyperlipidemia",
-          "Type 2 Diabetes"
-        ],
-        "medications": [
-          "metformin",
-          "lisinopril",
-          "atorvastatin",
-          "1000mg",
-          "20mg",
-          "40mg"
-        ],
-        "lab_values": {
-          "HbA1c": 7.5,
-          "eGFR": 60.0,
-          "LDL": 120.0
-        },
-        "symptoms": [
-          "Edema"
-        ],
-        "procedures": [],
-        "relationships": []
-      }
-    },
-    {
-      "visit_id": "V4",
-      "date": "2023-11-21",
-      "note": "Patient reports stable energy levels and decreased edema. Labs: HbA1c 7.8, BP_systolic 140, BP_diastolic 80, eGFR 55, LDL 110. Diagnoses: Type 2 Diabetes, Hypertension, Hyperlipidemia, Chronic Kidney Disease. Medications: Metformin 1000mg BID, Lisinopril 20mg daily, Atorvastatin 20mg daily, Furosemide 40mg daily, Eplerenone 50mg daily.",
-      "labs": {
-        "HbA1c": 7.8,
-        "eGFR": 55.0,
-        "LDL": 110.0
-      },
-      "medications": [
+        "Metformin 1000mg BID",
+        "Lisinopril 20mg daily",
+        "Atorvastatin 20mg daily",
+        "Furosemide 40mg daily",
         "metformin",
         "lisinopril",
         "atorvastatin",
         "1000mg",
         "20mg",
         "40mg",
-        "50mg"
+        "furosemide"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Chronic Kidney Disease",
         "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Chronic Kidney Disease"
       ],
       "symptoms": [
+        "Fatigue",
+        "Increased thirst",
+        "Shortness of breath",
         "Edema"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Chronic Kidney Disease",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension",
+          "Chronic Kidney Disease"
         ],
         "medications": [
           "metformin",
@@ -195,18 +325,238 @@
           "1000mg",
           "20mg",
           "40mg",
-          "50mg"
+          "furosemide"
+        ],
+        "symptoms": [
+          "Edema",
+          "Fatigue"
+        ],
+        "procedures": [],
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Atorvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Furosemide",
+            "predicate": "managed_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Edema",
+            "predicate": "has_symptom",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Edema",
+            "predicate": "has_symptom",
+            "object": "Hypertension",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Edema",
+            "predicate": "has_symptom",
+            "object": "Hyperlipidemia",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Edema",
+            "predicate": "has_symptom",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.7
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP_systolic",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP_diastolic",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.9
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          }
         ],
         "lab_values": {
-          "HbA1c": 7.8,
-          "eGFR": 55.0,
-          "LDL": 110.0
-        },
+          "HbA1c": 7.5,
+          "eGFR": 60.0,
+          "LDL": 120.0,
+          "BP_systolic": 145,
+          "BP_diastolic": 90
+        }
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-11-21",
+      "note": "Patient reports stable energy levels and decreased edema. Labs: HbA1c 7.8, BP_systolic 140, BP_diastolic 80, eGFR 55, LDL 110. Diagnoses: Type 2 Diabetes, Hypertension, Hyperlipidemia, Chronic Kidney Disease. Medications: Metformin 1000mg BID, Lisinopril 20mg daily, Atorvastatin 20mg daily, Furosemide 40mg daily, Eplerenone 50mg daily.",
+      "labs": {
+        "HbA1c": 7.8,
+        "BP_systolic": 140,
+        "BP_diastolic": 80,
+        "eGFR": 55,
+        "LDL": 110
+      },
+      "medications": [
+        "Metformin 1000mg BID",
+        "Lisinopril 20mg daily",
+        "Atorvastatin 20mg daily",
+        "Furosemide 40mg daily",
+        "Eplerenone 50mg daily",
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "1000mg",
+        "20mg",
+        "40mg",
+        "50mg",
+        "Furosemide",
+        "Eplerenone"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Increased thirst",
+        "Shortness of breath",
+        "Edema"
+      ],
+      "extracted": {
+        "conditions": [
+          "Type 2 Diabetes",
+          "Hyperlipidemia",
+          "Hypertension",
+          "Chronic Kidney Disease"
+        ],
+        "medications": [
+          "metformin",
+          "lisinopril",
+          "atorvastatin",
+          "1000mg",
+          "20mg",
+          "40mg",
+          "50mg",
+          "Furosemide",
+          "Eplerenone"
+        ],
         "symptoms": [
           "Edema"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Atorvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Furosemide",
+            "predicate": "managed_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Furosemide",
+            "predicate": "contraindicated_with",
+            "object": "Eplerenone",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Edema",
+            "predicate": "has_symptom",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.7
+          },
+          {
+            "subject": "BP_systolic",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.6
+          },
+          {
+            "subject": "BP_diastolic",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.6
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.6
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.5
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.8,
+          "eGFR": 55.0,
+          "LDL": 110.0,
+          "BP_systolic": 140,
+          "BP_diastolic": 80
+        }
       }
     }
   ]

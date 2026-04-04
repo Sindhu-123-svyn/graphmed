@@ -7,37 +7,124 @@
       "note": "New patient with complaints of fatigue and polyuria. On physical exam, patient has a blood pressure of 140/90 and weight of 95kg. Initial HbA1c is 7.2. Diagnoses include Type 2 Diabetes and Hypertension. Meds include Metformin 500mg qd. Follow-up in 3 months.",
       "labs": {
         "HbA1c": 7.2,
-        "BP": "140/90",
-        "eGFR": 72
+        "eGFR": 72,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "Blood Pressure": "140/90",
+        "Weight": 95
       },
       "medications": [
+        "Metformin 500mg",
         "metformin",
         "500mg"
       ],
       "diagnoses": [
-        "Hypertension",
-        "Type 2 Diabetes"
+        "Type 2 Diabetes",
+        "Hypertension"
       ],
       "symptoms": [
-        "Polyuria",
-        "Fatigue"
+        "Fatigue",
+        "Polyuria"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Type 2 Diabetes"
+          "Type 2 Diabetes",
+          "Hypertension"
         ],
         "medications": [
           "metformin",
           "500mg"
         ],
-        "lab_values": {},
         "symptoms": [
           "Polyuria",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Initial",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Blood Pressure",
+            "predicate": "measured_by",
+            "object": "Physical Exam",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Weight",
+            "predicate": "measured_by",
+            "object": "Physical Exam",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "contraindicated_with",
+            "object": "None",
+            "confidence": 0.5
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "contraindicated_with",
+            "object": "None",
+            "confidence": 0.5
+          },
+          {
+            "subject": "Metformin",
+            "predicate": "improves",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.4
+          },
+          {
+            "subject": "Metformin",
+            "predicate": "improves",
+            "object": "Hypertension",
+            "confidence": 0.4
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Polyuria",
+            "confidence": 0.3
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.3
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Polyuria",
+            "confidence": 0.2
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.2
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.2,
+          "Blood Pressure": "140/90",
+          "Weight": 95
+        }
       }
     },
     {
@@ -46,19 +133,26 @@
       "note": "Patient returns for follow-up. BP is 130/80, HbA1c is 6.8. Adding Lisinopril 10mg qd for hypertension. Patient reports improved energy, but new symptoms of nocturia and edema. Meds now Metformin 500mg, Lisinopril 10mg.",
       "labs": {
         "HbA1c": 6.8,
-        "BP": "130/80",
-        "eGFR": 68
+        "eGFR": 68,
+        "BP_systolic": 130,
+        "BP_diastolic": 80
       },
       "medications": [
+        "Metformin 500mg",
+        "Lisinopril 10mg",
         "lisinopril",
         "metformin",
         "10mg",
         "500mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension"
       ],
       "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Nocturia",
         "Edema"
       ],
       "extracted": {
@@ -71,12 +165,78 @@
           "10mg",
           "500mg"
         ],
-        "lab_values": {},
         "symptoms": [
-          "Edema"
+          "Edema",
+          "Nocturia"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Lisinopril",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "contraindicated_with",
+            "object": "Nocturia",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "contraindicated_with",
+            "object": "Edema",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "improves",
+            "object": "BP",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Nocturia",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Edema",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 6.8,
+          "BP_systolic": 130,
+          "BP_diastolic": 80
+        }
       }
     },
     {
@@ -85,38 +245,92 @@
       "note": "Patient returns for follow-up. BP is 125/75, HbA1c is 6.5. Patient reports improvement in nocturia and edema. Adding Sitagliptin 100mg qd for glycemic control. Meds now Metformin 500mg, Lisinopril 10mg, Sitagliptin 100mg.",
       "labs": {
         "HbA1c": 6.5,
-        "BP": "125/75",
-        "eGFR": 65
+        "eGFR": 65,
+        "BP_systolic": 125,
+        "BP_diastolic": 75
       },
       "medications": [
+        "Metformin 500mg",
+        "Lisinopril 10mg",
+        "Sitagliptin 100mg",
         "metformin",
         "lisinopril",
         "100mg",
         "500mg",
-        "10mg"
+        "10mg",
+        "sitagliptin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
-        "Hypertension"
+        "Hypertension",
+        "Diabetes"
       ],
       "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Nocturia",
         "Edema"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Diabetes"
+        ],
         "medications": [
           "metformin",
           "lisinopril",
           "100mg",
           "500mg",
-          "10mg"
+          "10mg",
+          "sitagliptin"
         ],
-        "lab_values": {},
         "symptoms": [
-          "Edema"
+          "Edema",
+          "Nocturia"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Sitagliptin",
+            "predicate": "managed_by",
+            "object": "glycemic control",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Sitagliptin",
+            "predicate": "contraindicated_with",
+            "object": "None",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "BP measurement",
+            "confidence": 0.7
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "HbA1c measurement",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Nocturia",
+            "predicate": "improves",
+            "object": "Sitagliptin",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Edema",
+            "predicate": "improves",
+            "object": "Sitagliptin",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 6.5,
+          "BP_systolic": 125,
+          "BP_diastolic": 75
+        }
       }
     },
     {
@@ -125,22 +339,36 @@
       "note": "Patient returns for follow-up. BP is 120/70, HbA1c is 6.2. Patient reports new symptom of tingling in hands and feet. Meds now Metformin 500mg, Lisinopril 10mg, Sitagliptin 100mg, and Gabapentin 100mg for neuropathy. Discussing need for referral to endocrinology for further management.",
       "labs": {
         "HbA1c": 6.2,
-        "BP": "120/70",
-        "eGFR": 62
+        "eGFR": 62,
+        "BP_systolic": 120,
+        "BP_diastolic": 70
       },
       "medications": [
+        "Metformin 500mg",
+        "Lisinopril 10mg",
+        "Sitagliptin 100mg",
+        "Gabapentin 100mg",
         "metformin",
         "lisinopril",
         "gabapentin",
         "500mg",
         "10mg",
-        "100mg"
+        "100mg",
+        "sitagliptin"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
         "Diabetic Neuropathy"
       ],
       "symptoms": [
-        "Tingling"
+        "Fatigue",
+        "Polyuria",
+        "Nocturia",
+        "Edema",
+        "Tingling in hands and feet",
+        "Tingling",
+        "Neuropathy"
       ],
       "extracted": {
         "conditions": [
@@ -152,14 +380,63 @@
           "gabapentin",
           "500mg",
           "10mg",
-          "100mg"
+          "100mg",
+          "sitagliptin"
         ],
-        "lab_values": {},
         "symptoms": [
-          "Tingling"
+          "Tingling",
+          "Neuropathy"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Diabetic Neuropathy",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Diabetic Neuropathy",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Diabetic Neuropathy",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Diabetic Neuropathy",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Sitagliptin",
+            "predicate": "managed_by",
+            "object": "Diabetic Neuropathy",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Gabapentin",
+            "predicate": "managed_by",
+            "object": "Neuropathy",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Neuropathy",
+            "predicate": "has_symptom",
+            "object": "Tingling",
+            "confidence": 0.9
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 6.2,
+          "BP_systolic": 120,
+          "BP_diastolic": 70
+        }
       }
     }
   ]

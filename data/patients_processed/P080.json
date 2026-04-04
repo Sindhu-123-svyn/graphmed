@@ -13,23 +13,28 @@
         "LDL": 140
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Atorvastatin 20mg daily",
         "metformin",
         "atorvastatin",
         "500mg",
         "20mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia"
       ],
       "symptoms": [
-        "Polydipsia",
-        "Fatigue"
+        "Fatigue",
+        "Increased thirst",
+        "Weight gain",
+        "Polydipsia"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Hyperlipidemia"
+          "Hyperlipidemia",
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -37,13 +42,82 @@
           "500mg",
           "20mg"
         ],
-        "lab_values": {},
         "symptoms": [
           "Polydipsia",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "metformin",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "metformin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "atorvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "atorvastatin",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Blood Pressure",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "contraindicated_with",
+            "object": "Polydipsia",
+            "confidence": 0.7
+          },
+          {
+            "subject": "metformin",
+            "predicate": "improves",
+            "object": "Hypertension",
+            "confidence": 0.6
+          },
+          {
+            "subject": "metformin",
+            "predicate": "improves",
+            "object": "Hyperlipidemia",
+            "confidence": 0.6
+          },
+          {
+            "subject": "atorvastatin",
+            "predicate": "improves",
+            "object": "Hyperlipidemia",
+            "confidence": 0.6
+          },
+          {
+            "subject": "atorvastatin",
+            "predicate": "improves",
+            "object": "Hypertension",
+            "confidence": 0.6
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.5
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.1
+        }
       }
     },
     {
@@ -55,9 +129,13 @@
         "BP_systolic": 152,
         "BP_diastolic": 98,
         "eGFR": 60,
-        "LDL": 120
+        "LDL": 120,
+        "blood pressure": "152/98"
       },
       "medications": [
+        "Metformin 1000mg BID",
+        "Atorvastatin 20mg daily",
+        "Losartan 50mg daily",
         "metformin",
         "losartan",
         "1000mg",
@@ -70,22 +148,85 @@
         "Chronic Kidney Disease"
       ],
       "symptoms": [
-        "Edema"
+        "Fatigue",
+        "Increased thirst",
+        "Weight gain",
+        "Lower extremity edema",
+        "Edema",
+        "worsening blood pressure"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "hypertension",
+          "chronic kidney disease"
+        ],
         "medications": [
           "metformin",
           "losartan",
           "1000mg",
           "50mg"
         ],
-        "lab_values": {},
         "symptoms": [
-          "Edema"
+          "Edema",
+          "worsening blood pressure",
+          "lower extremity edema"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "metformin",
+            "predicate": "increased",
+            "object": "1000mg",
+            "confidence": 1.0
+          },
+          {
+            "subject": "losartan",
+            "predicate": "initiated",
+            "object": "50mg",
+            "confidence": 1.0
+          },
+          {
+            "subject": "losartan",
+            "predicate": "managed_by",
+            "object": "hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "metformin",
+            "predicate": "managed_by",
+            "object": "diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "lab test",
+            "confidence": 0.7
+          },
+          {
+            "subject": "blood pressure",
+            "predicate": "measured_by",
+            "object": "physical examination",
+            "confidence": 0.6
+          },
+          {
+            "subject": "lower extremity edema",
+            "predicate": "has_symptom",
+            "object": "hypertension",
+            "confidence": 0.5
+          },
+          {
+            "subject": "lower extremity edema",
+            "predicate": "has_symptom",
+            "object": "chronic kidney disease",
+            "confidence": 0.4
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.2,
+          "eGFR": "decreased",
+          "blood pressure": "152/98"
+        }
       }
     },
     {
@@ -97,36 +238,84 @@
         "BP_systolic": 158,
         "BP_diastolic": 102,
         "eGFR": 45,
-        "LDL": 110
+        "LDL": 110,
+        "Blood pressure": "158/102"
       },
       "medications": [
+        "Metformin 1000mg BID",
+        "Atorvastatin 20mg daily",
+        "Losartan 100mg daily",
+        "Furosemide 40mg daily",
         "losartan",
         "100mg",
-        "40mg"
+        "40mg",
+        "furosemide"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
         "Chronic Kidney Disease",
-        "Coronary Artery Disease"
+        "Coronary Artery Disease",
+        "Renal failure"
       ],
       "symptoms": [
+        "Fatigue",
+        "Increased thirst",
+        "Weight gain",
+        "Lower extremity edema",
         "Shortness of breath"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Renal failure"
+        ],
         "medications": [
           "losartan",
           "100mg",
-          "40mg"
+          "40mg",
+          "furosemide"
         ],
-        "lab_values": {},
         "symptoms": [
           "Shortness of breath"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Renal failure",
+            "predicate": "worsens",
+            "object": "Blood pressure",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Blood pressure",
+            "predicate": "managed_by",
+            "object": "losartan",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Blood pressure",
+            "predicate": "managed_by",
+            "object": "furosemide",
+            "confidence": 0.6
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "lab test",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Shortness of breath",
+            "predicate": "has_symptom",
+            "object": "Renal failure",
+            "confidence": 0.5
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 6.8,
+          "Blood pressure": "158/102"
+        }
       }
     }
   ]

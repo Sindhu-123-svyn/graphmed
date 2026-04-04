@@ -7,28 +7,32 @@
       "note": "Patient presents with new onset of fatigue and increased thirst. Physical examination reveals obesity and hypertension. HbA1c 7.5, BP 150/90, eGFR 80, LDL 140. Diagnoses: Type 2 Diabetes, Hypertension. Medications: Metformin 500mg BID, Lisinopril 10mg QD.",
       "labs": {
         "HbA1c": 7.5,
-        "BP": "150/90",
-        "eGFR": 80.0,
-        "LDL": 140.0
+        "BP_systolic": 150,
+        "BP_diastolic": 90,
+        "eGFR": 80,
+        "LDL": 140
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg QD",
         "metformin",
         "lisinopril",
         "500mg",
         "10mg"
       ],
       "diagnoses": [
-        "Hypertension",
-        "Type 2 Diabetes"
+        "Type 2 Diabetes",
+        "Hypertension"
       ],
       "symptoms": [
-        "Polydipsia",
-        "Fatigue"
+        "Fatigue",
+        "Increased thirst",
+        "Polydipsia"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Type 2 Diabetes"
+          "Type 2 Diabetes",
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -36,18 +40,19 @@
           "500mg",
           "10mg"
         ],
-        "lab_values": {
-          "HbA1c": 7.5,
-          "BP": "150/90",
-          "eGFR": 80.0,
-          "LDL": 140.0
-        },
         "symptoms": [
           "Polydipsia",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [],
+        "lab_values": {
+          "HbA1c": 7.5,
+          "BP_systolic": 150,
+          "BP_diastolic": 90,
+          "eGFR": 80.0,
+          "LDL": 140.0
+        }
       }
     },
     {
@@ -56,51 +61,131 @@
       "note": "Follow-up visit for worsening fatigue and shortness of breath. Physical examination reveals orthopnea and peripheral edema. HbA1c 8.1, BP 160/95, eGFR 70, LDL 145. Diagnoses: Type 2 Diabetes, Hypertension, Hypertensive Heart Disease. Medications: Metformin 1000mg BID, Lisinopril 20mg QD, Furosemide 40mg QD.",
       "labs": {
         "HbA1c": 8.1,
-        "BP": "160/95",
-        "eGFR": 70.0,
-        "LDL": 145.0
+        "BP_systolic": 160,
+        "BP_diastolic": 95,
+        "eGFR": 70,
+        "LDL": 145
       },
       "medications": [
+        "Metformin 1000mg BID",
+        "Lisinopril 20mg QD",
+        "Furosemide 40mg QD",
         "metformin",
         "lisinopril",
         "1000mg",
         "20mg",
-        "40mg"
+        "40mg",
+        "furosemide"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Type 2 Diabetes"
+        "Hypertensive Heart Disease"
       ],
       "symptoms": [
+        "Fatigue",
         "Shortness of breath",
-        "Edema",
-        "Fatigue"
+        "Orthopnea",
+        "Peripheral edema",
+        "Edema"
       ],
       "extracted": {
         "conditions": [
+          "Type 2 Diabetes",
           "Hypertension",
-          "Type 2 Diabetes"
+          "Hypertensive Heart Disease"
         ],
         "medications": [
           "metformin",
           "lisinopril",
           "1000mg",
           "20mg",
-          "40mg"
+          "40mg",
+          "furosemide"
+        ],
+        "symptoms": [
+          "Edema",
+          "Shortness of breath",
+          "Fatigue",
+          "orthopnea",
+          "peripheral edema"
+        ],
+        "procedures": [],
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Furosemide",
+            "predicate": "managed_by",
+            "object": "Hypertensive Heart Disease",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Hypertensive Heart Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Shortness of breath",
+            "predicate": "has_symptom",
+            "object": "Hypertensive Heart Disease",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Orthopnea",
+            "predicate": "has_symptom",
+            "object": "Hypertensive Heart Disease",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Peripheral edema",
+            "predicate": "has_symptom",
+            "object": "Hypertensive Heart Disease",
+            "confidence": 0.7
+          }
         ],
         "lab_values": {
           "HbA1c": 8.1,
-          "BP": "160/95",
+          "BP_systolic": 160,
+          "BP_diastolic": 95,
           "eGFR": 70.0,
           "LDL": 145.0
-        },
-        "symptoms": [
-          "Shortness of breath",
-          "Edema",
-          "Fatigue"
-        ],
-        "procedures": [],
-        "relationships": []
+        }
       }
     },
     {
@@ -109,11 +194,16 @@
       "note": "Follow-up visit for worsening renal function and hyperlipidemia. Physical examination reveals decreased kidney function and increased risk of cardiovascular disease. HbA1c 8.5, BP 155/100, eGFR 60, LDL 160. Diagnoses: Type 2 Diabetes, Hypertension, Hypertensive Heart Disease, Chronic Kidney Disease. Medications: Metformin 2000mg BID, Lisinopril 30mg QD, Furosemide 80mg QD, Rosuvastatin 20mg QD.",
       "labs": {
         "HbA1c": 8.5,
-        "BP": "155/100",
-        "eGFR": 60.0,
-        "LDL": 160.0
+        "BP_systolic": 155,
+        "BP_diastolic": 100,
+        "eGFR": 60,
+        "LDL": 160
       },
       "medications": [
+        "Metformin 2000mg BID",
+        "Lisinopril 30mg QD",
+        "Furosemide 80mg QD",
+        "Rosuvastatin 20mg QD",
         "metformin",
         "lisinopril",
         "rosuvastatin",
@@ -123,10 +213,11 @@
         "20mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
+        "Hypertensive Heart Disease",
         "Chronic Kidney Disease",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
         "Fatigue",
@@ -137,10 +228,10 @@
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Chronic Kidney Disease",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension",
+          "Chronic Kidney Disease"
         ],
         "medications": [
           "metformin",
@@ -151,15 +242,16 @@
           "80mg",
           "20mg"
         ],
-        "lab_values": {
-          "HbA1c": 8.5,
-          "BP": "155/100",
-          "eGFR": 60.0,
-          "LDL": 160.0
-        },
         "symptoms": [],
         "procedures": [],
-        "relationships": []
+        "relationships": [],
+        "lab_values": {
+          "HbA1c": 8.5,
+          "BP_systolic": 155,
+          "BP_diastolic": 100,
+          "eGFR": 60.0,
+          "LDL": 160.0
+        }
       }
     },
     {
@@ -168,11 +260,17 @@
       "note": "Follow-up visit for worsening hyperlipidemia and cardiovascular disease. Physical examination reveals increased risk of cardiovascular disease and decreased kidney function. HbA1c 7.8, BP 140/80, eGFR 55, LDL 180. Diagnoses: Type 2 Diabetes, Hypertension, Hypertensive Heart Disease, Chronic Kidney Disease, Hyperlipidemia. Medications: Metformin 2000mg BID, Lisinopril 30mg QD, Furosemide 80mg QD, Rosuvastatin 40mg QD, Atorvastatin 20mg QD.",
       "labs": {
         "HbA1c": 7.8,
-        "BP": "140/80",
-        "eGFR": 55.0,
-        "LDL": 180.0
+        "BP_systolic": 140,
+        "BP_diastolic": 80,
+        "eGFR": 55,
+        "LDL": 180
       },
       "medications": [
+        "Metformin 2000mg BID",
+        "Lisinopril 30mg QD",
+        "Furosemide 80mg QD",
+        "Rosuvastatin 40mg QD",
+        "Atorvastatin 20mg QD",
         "metformin",
         "lisinopril",
         "rosuvastatin",
@@ -184,10 +282,11 @@
         "20mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
+        "Hypertensive Heart Disease",
         "Chronic Kidney Disease",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
         "Fatigue",
@@ -195,14 +294,15 @@
         "Orthopnea",
         "Peripheral edema",
         "Decreased kidney function",
-        "Increased risk of cardiovascular disease"
+        "Increased risk of cardiovascular disease",
+        "worsening hyperlipidemia"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Chronic Kidney Disease",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension",
+          "Chronic Kidney Disease"
         ],
         "medications": [
           "metformin",
@@ -215,15 +315,87 @@
           "40mg",
           "20mg"
         ],
+        "symptoms": [
+          "worsening hyperlipidemia",
+          "increased risk of cardiovascular disease",
+          "decreased kidney function"
+        ],
+        "procedures": [],
+        "relationships": [
+          {
+            "subject": "metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "rosuvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "atorvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "worsening hyperlipidemia",
+            "predicate": "worsens",
+            "object": "cardiovascular disease",
+            "confidence": 0.7
+          },
+          {
+            "subject": "increased risk of cardiovascular disease",
+            "predicate": "worsens",
+            "object": "cardiovascular disease",
+            "confidence": 0.7
+          },
+          {
+            "subject": "decreased kidney function",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.7
+          }
+        ],
         "lab_values": {
           "HbA1c": 7.8,
-          "BP": "140/80",
+          "BP_systolic": 140,
+          "BP_diastolic": 80,
           "eGFR": 55.0,
           "LDL": 180.0
-        },
-        "symptoms": [],
-        "procedures": [],
-        "relationships": []
+        }
       }
     },
     {
@@ -232,11 +404,17 @@
       "note": "Follow-up visit for continued worsening of renal function. Physical examination reveals decreased kidney function and increased risk of cardiovascular disease. HbA1c 9.0, BP 135/75, eGFR 50, LDL 170. Diagnoses: Type 2 Diabetes, Hypertension, Hypertensive Heart Disease, Chronic Kidney Disease, Hyperlipidemia. Medications: Metformin 2500mg BID, Lisinopril 40mg QD, Furosemide 100mg QD, Rosuvastatin 60mg QD, Atorvastatin 30mg QD.",
       "labs": {
         "HbA1c": 9.0,
-        "BP": "135/75",
-        "eGFR": 50.0,
-        "LDL": 170.0
+        "BP_systolic": 135,
+        "BP_diastolic": 75,
+        "eGFR": 50,
+        "LDL": 170
       },
       "medications": [
+        "Metformin 2500mg BID",
+        "Lisinopril 40mg QD",
+        "Furosemide 100mg QD",
+        "Rosuvastatin 60mg QD",
+        "Atorvastatin 30mg QD",
         "metformin",
         "lisinopril",
         "rosuvastatin",
@@ -248,10 +426,11 @@
         "30mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
+        "Hypertensive Heart Disease",
         "Chronic Kidney Disease",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
         "Fatigue",
@@ -263,10 +442,10 @@
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Chronic Kidney Disease",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension",
+          "Chronic Kidney Disease"
         ],
         "medications": [
           "metformin",
@@ -279,15 +458,16 @@
           "60mg",
           "30mg"
         ],
-        "lab_values": {
-          "HbA1c": 9.0,
-          "BP": "135/75",
-          "eGFR": 50.0,
-          "LDL": 170.0
-        },
         "symptoms": [],
         "procedures": [],
-        "relationships": []
+        "relationships": [],
+        "lab_values": {
+          "HbA1c": 9.0,
+          "BP_systolic": 135,
+          "BP_diastolic": 75,
+          "eGFR": 50.0,
+          "LDL": 170.0
+        }
       }
     }
   ]

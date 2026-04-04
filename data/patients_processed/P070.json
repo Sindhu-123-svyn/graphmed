@@ -7,8 +7,10 @@
       "note": "Patient P070 is a 45-year-old male with a history of Type 2 Diabetes (HbA1c 7.2), Hypertension (BP 140/90), and Hyperlipidemia (LDL 130). He reports shortness of breath and fatigue. His physical examination is unremarkable. Plan: Adjust medications to improve HbA1c and BP. Refer to cardiology for further evaluation of shortness of breath.",
       "labs": {
         "HbA1c": 7.2,
-        "BP": "140/90",
-        "LDL": 130.0
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
       },
       "medications": [
         "Metformin 1000mg BID",
@@ -16,9 +18,9 @@
         "Atorvastatin 20mg daily"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
         "Shortness of breath",
@@ -26,22 +28,72 @@
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
         "medications": [],
-        "lab_values": {
-          "HbA1c": 7.2,
-          "BP": "140/90",
-          "LDL": 130.0
-        },
         "symptoms": [
           "Shortness of breath",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Adjust medications",
+            "predicate": "managed_by",
+            "object": "improve HbA1c and BP",
+            "confidence": 0.9
+          },
+          {
+            "subject": "cardiology",
+            "predicate": "evaluated_by",
+            "object": "shortness of breath",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "shortness of breath",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "fatigue",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "shortness of breath",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "fatigue",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "worsens",
+            "object": "shortness of breath",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "worsens",
+            "object": "fatigue",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.2,
+          "BP_systolic": 140,
+          "BP_diastolic": 90,
+          "LDL": 130.0
+        }
       }
     },
     {
@@ -59,28 +111,123 @@
         "Metformin 1500mg BID",
         "Lisinopril 20mg daily",
         "Atorvastatin 20mg daily",
-        "Furosemide 40mg daily"
+        "Furosemide 40mg daily",
+        "Adjust medications"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
-        "Chronic Kidney Disease"
+        "Chronic Kidney Disease",
+        "Diabetes"
       ],
       "symptoms": [
         "Shortness of breath",
-        "Fatigue"
+        "Fatigue",
+        "Swelling in legs"
       ],
       "extracted": {
-        "conditions": [],
-        "medications": [],
-        "lab_values": {},
+        "conditions": [
+          "Diabetes",
+          "Hypertension",
+          "Chronic Kidney Disease"
+        ],
+        "medications": [
+          "Adjust medications"
+        ],
         "symptoms": [
           "Shortness of breath",
           "Fatigue"
         ],
-        "procedures": [],
-        "relationships": []
+        "procedures": [
+          "Refer to nephrology"
+        ],
+        "relationships": [
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Patient P070",
+            "confidence": 1.0
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Patient P070",
+            "confidence": 1.0
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Patient P070",
+            "confidence": 1.0
+          },
+          {
+            "subject": "Adjust medications",
+            "predicate": "managed_by",
+            "object": "Patient P070",
+            "confidence": 1.0
+          },
+          {
+            "subject": "Refer to nephrology",
+            "predicate": "recommended_for",
+            "object": "Patient P070",
+            "confidence": 1.0
+          },
+          {
+            "subject": "Shortness of breath",
+            "predicate": "has_symptom",
+            "object": "Patient P070",
+            "confidence": 1.0
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Patient P070",
+            "confidence": 1.0
+          },
+          {
+            "subject": "Diabetes",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Diabetes",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.8
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.1,
+          "BP_systolic": 150,
+          "BP_diastolic": 95,
+          "eGFR": 60
+        }
       }
     },
     {
@@ -99,28 +246,94 @@
         "Lisinopril 40mg daily",
         "Atorvastatin 40mg daily",
         "Furosemide 80mg daily",
-        "Losartan 100mg daily"
+        "Losartan 100mg daily",
+        "Adjust medications"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
         "Chronic Kidney Disease",
-        "Coronary Artery Disease"
+        "Coronary Artery Disease",
+        "Diabetes Mellitus"
       ],
       "symptoms": [
         "Shortness of breath",
         "Fatigue",
         "Swelling in legs",
-        "Chest pain"
+        "Chest pain",
+        "Worsening symptoms"
       ],
       "extracted": {
-        "conditions": [],
-        "medications": [],
-        "lab_values": {},
-        "symptoms": [],
-        "procedures": [],
-        "relationships": []
+        "conditions": [
+          "Diabetes Mellitus",
+          "Hypertension"
+        ],
+        "medications": [
+          "Adjust medications"
+        ],
+        "symptoms": [
+          "Worsening symptoms"
+        ],
+        "procedures": [
+          "Refer to cardiology"
+        ],
+        "relationships": [
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Patient P070",
+            "confidence": 1.0
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Patient P070",
+            "confidence": 1.0
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Patient P070",
+            "confidence": 1.0
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "improves",
+            "object": "Adjust medications",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "improves",
+            "object": "Adjust medications",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Worsening symptoms",
+            "predicate": "has_symptom",
+            "object": "Hypertension",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Worsening symptoms",
+            "predicate": "has_symptom",
+            "object": "Diabetes Mellitus",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Adjust medications",
+            "predicate": "managed_by",
+            "object": "Patient P070",
+            "confidence": 0.9
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.5,
+          "BP_systolic": 160,
+          "BP_diastolic": 100,
+          "eGFR": 45
+        }
       }
     },
     {
@@ -139,26 +352,66 @@
         "Lisinopril 40mg daily",
         "Atorvastatin 40mg daily",
         "Furosemide 80mg daily",
-        "Losartan 100mg daily"
+        "Losartan 100mg daily",
+        "Current Medications"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
         "Coronary Artery Disease"
       ],
       "symptoms": [
         "Shortness of breath",
         "Fatigue",
         "Swelling in legs",
-        "Chest pain"
+        "Chest pain",
+        "stable symptoms"
       ],
       "extracted": {
         "conditions": [
           "Coronary Artery Disease"
         ],
-        "medications": [],
-        "lab_values": {},
-        "symptoms": [],
+        "medications": [
+          "Current Medications"
+        ],
+        "symptoms": [
+          "stable symptoms"
+        ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "HbA1c",
+            "predicate": "improved",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "improved",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "remained stable",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Current Medications",
+            "predicate": "managed_by",
+            "object": "cardiology",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.8,
+          "BP_systolic": 140,
+          "BP_diastolic": 85,
+          "eGFR": 45
+        }
       }
     }
   ]

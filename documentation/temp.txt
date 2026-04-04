@@ -1,0 +1,246 @@
+GraphMed: A Temporally-Evolving Patient Knowledge Graph System for Longitudinal Clinical Reasoning with Memory-Augmented Generation
+Short name: GraphMed
+
+========================================
+CONCEPTUAL EXPLANATION
+========================================
+
+LAYER 1 — THE PROBLEM (WHY IT MATTERS)
+
+"When you visit a doctor after 6 months, they read your file. Current AI assistants don't have that file. They start fresh every single time."
+
+Today's LLM-based clinical tools:
+- Have no memory across sessions
+- Cannot track trends (e.g., rising blood pressure over visits)
+- Cannot detect contradictions in prescriptions
+- May hallucinate incorrect medical facts
+
+----------------------------------------
+
+LAYER 2 — THE IDEA (WHAT YOU’RE BUILDING)
+
+"Give the AI a living, breathing patient file — structured as a graph — that grows smarter with every visit."
+
+Instead of flat text, patient data is stored as a Knowledge Graph:
+
+[Patient]
+ ├── diagnosed_with → [Type 2 Diabetes] (Jan 2024)
+ │        ├── managed_by → [Metformin 500mg]
+ │        └── flagged_conflict → [Ibuprofen] (Oct 2024)
+ │
+ ├── lab_trend → [HbA1c: 7.2 → 7.8 → 8.1]
+ │
+ └── symptom → [Fatigue, Frequent Urination]
+
+Key idea:
+- Every visit updates the graph
+- Adds nodes, updates edges, flags contradictions
+- LLM reasons using this graph + RAG
+
+----------------------------------------
+
+LAYER 3 — THE INTELLIGENCE (HOW IT REASONS)
+
+"The AI doesn't just retrieve facts — it reasons about how facts change over time."
+
+Example Workflow:
+
+Query: "Is it safe to prescribe Ibuprofen?"
+
+1. Agent checks graph → finds Metformin
+2. Retrieves medical knowledge via RAG
+3. Detects drug conflict
+4. Responds:
+   "Avoid — risk of lactic acidosis with current Metformin dosage"
+5. Updates graph:
+   Ibuprofen → contraindicated → Metformin
+
+----------------------------------------
+
+CONCEPTUAL PILLARS
+
+GraphMed = MEMORY + GRAPH + REASONING
+
+- MEMORY: Long-term patient store (ChromaDB)
+- GRAPH: Knowledge evolution (NetworkX)
+- REASONING: Agentic LLM (RAG + ReAct)
+
+All together → grounded, longitudinal clinical answers
+
+========================================
+SYSTEM ARCHITECTURE
+========================================
+
+Patient Interaction (New Visit / Query)
+        ↓
+Long-Term Memory Store
+- Vector Store (FAISS / Chroma)
+- Knowledge Graph (Neo4j / NetworkX)
+        ↓
+Memory Router (Agentic Layer)
+- Decide: retrieve / update / conflict
+        ↓
+RAG + Reasoning (LLM Core)
+        ↓
+Knowledge Updater
+- Detect new facts
+- Resolve conflicts
+- Update graph
+        ↓
+Output:
+- Grounded clinical response
+- Updated patient memory
+
+----------------------------------------
+
+END-TO-END FLOW
+
+CLINICAL NOTE (text)
+        ↓
+NLP Extractor
+- Extracts entities, relations, timestamps
+        ↓
+Dual Memory System
+   ├── Knowledge Graph (structured facts)
+   └── Vector Store (contextual embeddings)
+        ↓
+ReAct Agent
+- Think → Tool → Observe loop
+        ↓
+Tool Layer:
+   - query_graph()
+   - retrieve_memory()
+   - verify_fact()
+   - detect_conflict()
+        ↓
+Grounded Answer
+        ↓
+Graph Updater
+
+----------------------------------------
+
+PIPELINE EXPLANATION
+
+1. Input → Extraction
+   - Clinical note processed into structured data
+
+2. Dual Memory
+   - Graph = structured knowledge
+   - Vector DB = contextual memory
+
+3. ReAct Agent
+   - Decides which tool to use
+
+4. Tool Layer
+   - Specialized tools handle tasks
+
+5. Output → Updater
+   - Response generated
+   - Graph evolves
+
+========================================
+KNOWLEDGE GRAPH (MEMORY BACKBONE)
+========================================
+
+Example after 3 visits:
+
+[Raj - Patient]
+ ├── diagnosed_with → Type 2 Diabetes
+ ├── prescribed → Metformin 500mg
+ ├── lab_trend → HbA1c: 7.2 → 7.8 → 8.1
+ └── worsening_flag = TRUE
+
+Temporal Evolution:
+- Each node has timestamp + confidence
+- Old facts fade, new facts dominate
+
+Example:
+Jan 2024 → 7.2
+Apr 2024 → 7.8
+Aug 2024 → 8.1 → TREND: WORSENING
+
+========================================
+LONG-TERM MEMORY (CHROMADB)
+========================================
+
+Stores full visit summaries:
+
+Visit 1 (Jan 2024):
+"Newly diagnosed T2DM. Started Metformin. Patient anxious..."
+
+Visit 2 (Apr 2024):
+"HbA1c worsened. Dosage increased. Dietary non-compliance..."
+
+Visit 3 (Aug 2024):
+"Fatigue and joint pain. Considering add-on therapy..."
+
+Key Insight:
+- Graph = facts
+- Memory = context/story
+
+========================================
+THE AGENT (REACT-STYLE)
+========================================
+
+Tools Available:
+
+- retrieve_memory()
+- query_graph()
+- verify_fact()
+- detect_conflict()
+- update_graph()
+- generate_response()
+
+----------------------------------------
+
+REACT LOOP EXAMPLE
+
+Query: "Can Raj take Ibuprofen?"
+
+1. Check medications → Metformin
+2. Check interaction → Risk found
+3. Check kidney function → Missing data
+4. Generate response:
+   - Avoid Ibuprofen
+   - Risk: lactic acidosis
+   - Suggest Paracetamol
+   - Recommend eGFR test
+5. Update graph
+
+========================================
+KNOWLEDGE EVOLUTION
+========================================
+
+Three types:
+
+1. ADDITION
+   - New symptom added
+
+2. UPDATE
+   - Values change (HbA1c increases)
+
+3. CONFLICT RESOLUTION
+   - Contradictory facts detected
+
+Flow:
+- Detect contradiction
+- Compare timestamps
+- New fact gets priority
+- Old marked as SUPERSEDED
+- Doctor notified if needed
+
+========================================
+LORA CONFLICT CLASSIFIER
+========================================
+
+Input:
+A: "No drug allergies"
+B: "Penicillin allergy"
+
+Output:
+- CONFLICT = TRUE
+- Confidence = 0.94
+
+Purpose:
+- Faster than full LLM
+- More accurate for conflicts

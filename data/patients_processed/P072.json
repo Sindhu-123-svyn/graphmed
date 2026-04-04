@@ -7,10 +7,14 @@
       "note": "Initial visit for patient with hypertension and hyperlipidemia. Patient reports headaches and fatigue. BP 140/90, HbA1c 7.2, LDL 130. Started on Amlodipine 5mg and Atorvastatin 20mg.",
       "labs": {
         "HbA1c": 7.2,
-        "BP": "140/90",
-        "LDL": 130.0
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
       },
       "medications": [
+        "Amlodipine 5mg",
+        "Atorvastatin 20mg",
         "amlodipine",
         "atorvastatin",
         "5mg",
@@ -21,12 +25,13 @@
         "Hyperlipidemia"
       ],
       "symptoms": [
+        "Headaches",
         "Fatigue"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Hyperlipidemia"
+          "Hyperlipidemia",
+          "Hypertension"
         ],
         "medications": [
           "amlodipine",
@@ -34,16 +39,17 @@
           "5mg",
           "20mg"
         ],
-        "lab_values": {
-          "HbA1c": 7.2,
-          "BP": "140/90",
-          "LDL": 130.0
-        },
         "symptoms": [
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [],
+        "lab_values": {
+          "HbA1c": 7.2,
+          "BP_systolic": 140,
+          "BP_diastolic": 90,
+          "LDL": 130.0
+        }
       }
     },
     {
@@ -52,20 +58,29 @@
       "note": "Follow-up visit 6 months after initial visit. Patient reports decreased headaches, but increased fatigue. BP 145/95, HbA1c 7.8, LDL 120. BP is elevated, so increased Amlodipine to 10mg. Started on Metformin 500mg for new diagnosis of Type 2 Diabetes.",
       "labs": {
         "HbA1c": 7.8,
-        "BP": "145/95",
-        "LDL": 120.0
+        "BP_systolic": 145,
+        "BP_diastolic": 95,
+        "eGFR": 68,
+        "LDL": 120
       },
       "medications": [
+        "Amlodipine 10mg",
+        "Atorvastatin 20mg",
+        "Metformin 500mg",
         "amlodipine",
         "metformin",
         "10mg",
         "500mg"
       ],
       "diagnoses": [
+        "Hypertension",
+        "Hyperlipidemia",
         "Type 2 Diabetes"
       ],
       "symptoms": [
-        "Fatigue"
+        "Fatigue",
+        "Nausea",
+        "headaches"
       ],
       "extracted": {
         "conditions": [
@@ -77,16 +92,43 @@
           "10mg",
           "500mg"
         ],
-        "lab_values": {
-          "HbA1c": 7.8,
-          "BP": "145/95",
-          "LDL": 120.0
-        },
         "symptoms": [
-          "Fatigue"
+          "Fatigue",
+          "headaches"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "BP",
+            "predicate": "elevated",
+            "object": "amlodipine",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "metformin",
+            "confidence": 0.8
+          },
+          {
+            "subject": "headaches",
+            "predicate": "improves",
+            "object": "amlodipine",
+            "confidence": 0.7
+          },
+          {
+            "subject": "fatigue",
+            "predicate": "worsens",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.8,
+          "BP_systolic": 145,
+          "BP_diastolic": 95,
+          "LDL": 120.0
+        }
       }
     },
     {
@@ -95,11 +137,16 @@
       "note": "Follow-up visit 6 months after V2. Patient reports increased fatigue and swelling in legs. BP 150/100, HbA1c 8.2, LDL 110, eGFR 58. BP and eGFR are concerning for worsening kidney function. Started on Lisinopril 2.5mg to protect kidneys. Increased Metformin to 1000mg and Atorvastatin to 40mg.",
       "labs": {
         "HbA1c": 8.2,
-        "BP": "150/100",
-        "eGFR": 58.0,
-        "LDL": 110.0
+        "BP_systolic": 150,
+        "BP_diastolic": 100,
+        "eGFR": 58,
+        "LDL": 110
       },
       "medications": [
+        "Amlodipine 10mg",
+        "Lisinopril 2.5mg",
+        "Atorvastatin 40mg",
+        "Metformin 1000mg",
         "lisinopril",
         "metformin",
         "atorvastatin",
@@ -111,14 +158,20 @@
         "Hypertension",
         "Hyperlipidemia",
         "Type 2 Diabetes",
-        "Chronic Kidney Disease"
+        "Chronic Kidney Disease",
+        "kidney disease"
       ],
       "symptoms": [
-        "Edema",
-        "Fatigue"
+        "Fatigue",
+        "Swelling in legs",
+        "Shortness of breath",
+        "Edema"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "hypertension",
+          "kidney disease"
+        ],
         "medications": [
           "lisinopril",
           "metformin",
@@ -127,18 +180,68 @@
           "1000mg",
           "40mg"
         ],
-        "lab_values": {
-          "HbA1c": 8.2,
-          "BP": "150/100",
-          "eGFR": 58.0,
-          "LDL": 110.0
-        },
         "symptoms": [
           "Edema",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "BP 150/100",
+            "predicate": "measured_by",
+            "object": "BP_systolic 150",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP 150/100",
+            "predicate": "measured_by",
+            "object": "BP_diastolic 100",
+            "confidence": 0.9
+          },
+          {
+            "subject": "eGFR 58",
+            "predicate": "measured_by",
+            "object": "eGFR 58.0",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP 150/100",
+            "predicate": "worsens",
+            "object": "kidney disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR 58",
+            "predicate": "worsens",
+            "object": "kidney disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Lisinopril 2.5mg",
+            "predicate": "managed_by",
+            "object": "kidney disease",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Metformin 1000mg",
+            "predicate": "managed_by",
+            "object": "diabetes",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Atorvastatin 40mg",
+            "predicate": "managed_by",
+            "object": "hyperlipidemia",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.2,
+          "BP_systolic": 150,
+          "BP_diastolic": 100,
+          "eGFR": 58.0,
+          "LDL": 110.0
+        }
       }
     }
   ]

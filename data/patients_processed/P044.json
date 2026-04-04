@@ -6,29 +6,34 @@
       "date": "2022-02-15",
       "note": "Patient presents with complaints of fatigue and polyuria. Physical examination reveals obesity and hypertension. HbA1c is 7.2, BP 140/90, eGFR 72. Diagnoses include Type 2 Diabetes, Hypertension, and Hyperlipidemia. Medications include Metformin 500mg bid and Lisinopril 10mg daily.",
       "labs": {
-        "BP": "140/90",
-        "eGFR": 72.0
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
       },
       "medications": [
+        "Metformin 500mg bid",
+        "Lisinopril 10mg daily",
         "metformin",
         "lisinopril",
         "500mg",
         "10mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
-        "Polyuria",
-        "Fatigue"
+        "Fatigue",
+        "Polyuria"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -36,16 +41,17 @@
           "500mg",
           "10mg"
         ],
-        "lab_values": {
-          "BP": "140/90",
-          "eGFR": 72.0
-        },
         "symptoms": [
           "Polyuria",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [],
+        "lab_values": {
+          "BP_systolic": 140,
+          "BP_diastolic": 90,
+          "eGFR": 72.0
+        }
       }
     },
     {
@@ -53,10 +59,16 @@
       "date": "2022-08-20",
       "note": "Patient returns with complaint of worsening edema and shortness of breath. Physical examination reveals weight gain and decreased eGFR. HbA1c is 7.5, BP 150/95, eGFR 60. Diagnoses include Type 2 Diabetes, Hypertension, Hyperlipidemia, and Chronic Kidney Disease. Medications include Metformin 500mg bid, Lisinopril 20mg daily, and Simvastatin 20mg daily.",
       "labs": {
-        "BP": "150/95",
-        "eGFR": 60.0
+        "HbA1c": 7.5,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 60,
+        "LDL": 120
       },
       "medications": [
+        "Metformin 500mg bid",
+        "Lisinopril 20mg daily",
+        "Simvastatin 20mg daily",
         "metformin",
         "lisinopril",
         "simvastatin",
@@ -64,21 +76,23 @@
         "20mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Chronic Kidney Disease",
         "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Chronic Kidney Disease"
       ],
       "symptoms": [
-        "Shortness of breath",
-        "Edema"
+        "Fatigue",
+        "Polyuria",
+        "Edema",
+        "Shortness of breath"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Chronic Kidney Disease",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension",
+          "Chronic Kidney Disease"
         ],
         "medications": [
           "metformin",
@@ -87,16 +101,73 @@
           "500mg",
           "20mg"
         ],
-        "lab_values": {
-          "BP": "150/95",
-          "eGFR": 60.0
-        },
         "symptoms": [
-          "Shortness of breath",
-          "Edema"
+          "Edema",
+          "Shortness of breath"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Simvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.7
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Shortness of breath",
+            "predicate": "has_symptom",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Edema",
+            "predicate": "has_symptom",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.5
+          }
+        ],
+        "lab_values": {
+          "BP_systolic": 150,
+          "BP_diastolic": 95,
+          "eGFR": 60.0,
+          "HbA1c": 7.5
+        }
       }
     },
     {
@@ -104,35 +175,48 @@
       "date": "2023-02-22",
       "note": "Patient returns with complaint of worsening chest pain and palpitations. Physical examination reveals new-onset atrial fibrillation. HbA1c is 8.0, BP 155/100, eGFR 50. Diagnoses include Type 2 Diabetes, Hypertension, Hyperlipidemia, Chronic Kidney Disease, and Coronary Artery Disease. Medications include Metformin 1000mg bid, Lisinopril 30mg daily, Simvastatin 40mg daily, and Apixaban 5mg bid.",
       "labs": {
-        "BP": "155/100",
-        "eGFR": 50.0
+        "HbA1c": 8.0,
+        "BP_systolic": 155,
+        "BP_diastolic": 100,
+        "eGFR": 50,
+        "LDL": 110
       },
       "medications": [
+        "Metformin 1000mg bid",
+        "Lisinopril 30mg daily",
+        "Simvastatin 40mg daily",
+        "Apixaban 5mg bid",
         "metformin",
         "lisinopril",
         "simvastatin",
         "1000mg",
         "30mg",
         "40mg",
-        "5mg"
+        "5mg",
+        "Apixaban"
       ],
       "diagnoses": [
-        "Hyperlipidemia",
-        "Hypertension",
-        "Coronary Artery Disease",
         "Type 2 Diabetes",
-        "Chronic Kidney Disease"
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease"
       ],
       "symptoms": [
-        "Chest pain"
+        "Fatigue",
+        "Polyuria",
+        "Edema",
+        "Shortness of breath",
+        "Chest pain",
+        "Palpitations"
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia",
-          "Hypertension",
-          "Coronary Artery Disease",
+          "Chronic Kidney Disease",
           "Type 2 Diabetes",
-          "Chronic Kidney Disease"
+          "Coronary Artery Disease",
+          "Hyperlipidemia",
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -141,17 +225,72 @@
           "1000mg",
           "30mg",
           "40mg",
-          "5mg"
+          "5mg",
+          "Apixaban"
+        ],
+        "symptoms": [
+          "Chest pain",
+          "palpitations"
+        ],
+        "procedures": [
+          "physical examination"
+        ],
+        "relationships": [
+          {
+            "subject": "Atrial fibrillation",
+            "predicate": "has_symptom",
+            "object": "palpitations",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Simvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Apixaban",
+            "predicate": "managed_by",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.7
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.7
+          }
         ],
         "lab_values": {
-          "BP": "155/100",
-          "eGFR": 50.0
-        },
-        "symptoms": [
-          "Chest pain"
-        ],
-        "procedures": [],
-        "relationships": []
+          "BP_systolic": 155,
+          "BP_diastolic": 100,
+          "eGFR": 50.0,
+          "HbA1c": 8.0
+        }
       }
     },
     {
@@ -159,25 +298,35 @@
       "date": "2023-10-25",
       "note": "Patient returns with complaint of worsening weakness and anemia. Physical examination reveals anemia and decreased eGFR. HbA1c is 8.5, BP 160/105, eGFR 45. Diagnoses include Type 2 Diabetes, Hypertension, Hyperlipidemia, Chronic Kidney Disease, Coronary Artery Disease, and Anemia. Medications include Metformin 1500mg bid, Lisinopril 40mg daily, Simvastatin 60mg daily, Apixaban 10mg bid, and Epoietin alfa 5000 units qw.",
       "labs": {
-        "BP": "160/105",
-        "eGFR": 45.0
+        "HbA1c": 8.5,
+        "BP_systolic": 160,
+        "BP_diastolic": 105,
+        "eGFR": 45,
+        "LDL": 100
       },
       "medications": [
+        "Metformin 1500mg bid",
+        "Lisinopril 40mg daily",
+        "Simvastatin 60mg daily",
+        "Apixaban 10mg bid",
+        "Epoietin alfa 5000 units qw",
         "metformin",
         "lisinopril",
         "simvastatin",
         "1500mg",
         "40mg",
         "60mg",
-        "10mg"
+        "10mg",
+        "apixaban",
+        "epoietin alfa"
       ],
       "diagnoses": [
-        "Hyperlipidemia",
-        "Anemia",
-        "Hypertension",
-        "Coronary Artery Disease",
         "Type 2 Diabetes",
-        "Chronic Kidney Disease"
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease",
+        "Anemia"
       ],
       "symptoms": [
         "Fatigue",
@@ -186,16 +335,18 @@
         "Shortness of breath",
         "Chest pain",
         "Palpitations",
-        "Weakness"
+        "Weakness",
+        "worsening weakness",
+        "anemia"
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia",
+          "Chronic Kidney Disease",
           "Anemia",
-          "Hypertension",
-          "Coronary Artery Disease",
           "Type 2 Diabetes",
-          "Chronic Kidney Disease"
+          "Coronary Artery Disease",
+          "Hyperlipidemia",
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -204,15 +355,83 @@
           "1500mg",
           "40mg",
           "60mg",
-          "10mg"
+          "10mg",
+          "apixaban",
+          "epoietin alfa"
+        ],
+        "symptoms": [
+          "worsening weakness",
+          "anemia"
+        ],
+        "procedures": [],
+        "relationships": [
+          {
+            "subject": "metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "simvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "apixaban",
+            "predicate": "managed_by",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.9
+          },
+          {
+            "subject": "epoietin alfa",
+            "predicate": "managed_by",
+            "object": "Anemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "anemia",
+            "predicate": "has_symptom",
+            "object": "worsening weakness",
+            "confidence": 0.7
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "has_symptom",
+            "object": "anemia",
+            "confidence": 0.7
+          }
         ],
         "lab_values": {
-          "BP": "160/105",
-          "eGFR": 45.0
-        },
-        "symptoms": [],
-        "procedures": [],
-        "relationships": []
+          "BP_systolic": 160,
+          "BP_diastolic": 105,
+          "eGFR": 45.0,
+          "HbA1c": 8.5
+        }
       }
     }
   ]

@@ -13,24 +13,27 @@
         "LDL": 130
       },
       "medications": [
+        "Metformin 1000mg daily",
+        "Lisinopril 20mg daily",
         "metformin",
         "lisinopril",
         "1000mg",
         "20mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
-        "Fatigue"
+        "Fatigue",
+        "Weight loss"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -38,12 +41,55 @@
           "1000mg",
           "20mg"
         ],
-        "lab_values": {},
         "symptoms": [
-          "Fatigue"
+          "Fatigue",
+          "Weight Loss"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Weight Loss",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.2,
+          "BP_systolic": 140,
+          "BP_diastolic": 90,
+          "LDL": 130
+        }
       }
     },
     {
@@ -58,6 +104,9 @@
         "LDL": 145
       },
       "medications": [
+        "Metformin 1000mg daily",
+        "Lisinopril 30mg daily",
+        "Simvastatin 40mg daily",
         "lisinopril",
         "simvastatin",
         "40mg",
@@ -67,27 +116,113 @@
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
-        "Chronic Kidney Disease"
+        "Chronic Kidney Disease",
+        "Diabetes"
       ],
       "symptoms": [
+        "Fatigue",
+        "Weight loss",
         "Shortness of breath",
+        "Swelling in legs",
         "Edema"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Diabetes",
+          "Hypertension"
+        ],
         "medications": [
           "lisinopril",
           "simvastatin",
           "40mg",
           "30mg"
         ],
-        "lab_values": {},
         "symptoms": [
-          "Shortness of breath",
-          "Edema"
+          "Edema",
+          "Shortness of breath"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Patient P091",
+            "confidence": 1.0
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Patient P091",
+            "confidence": 1.0
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "Patient P091",
+            "confidence": 1.0
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Patient P091",
+            "confidence": 1.0
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "has_decreased",
+            "object": "Patient P091",
+            "confidence": 1.0
+          },
+          {
+            "subject": "BP",
+            "predicate": "has_increased",
+            "object": "Patient P091",
+            "confidence": 1.0
+          },
+          {
+            "subject": "LDL",
+            "predicate": "has_increased",
+            "object": "Patient P091",
+            "confidence": 1.0
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "has_increased",
+            "object": "Patient P091",
+            "confidence": 1.0
+          },
+          {
+            "subject": "Shortness of breath",
+            "predicate": "has_symptom",
+            "object": "Patient P091",
+            "confidence": 1.0
+          },
+          {
+            "subject": "Edema",
+            "predicate": "has_symptom",
+            "object": "Patient P091",
+            "confidence": 1.0
+          },
+          {
+            "subject": "Simvastatin",
+            "predicate": "managed_by",
+            "object": "Patient P091",
+            "confidence": 1.0
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Patient P091",
+            "confidence": 1.0
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.1,
+          "BP_systolic": 150,
+          "BP_diastolic": 95,
+          "LDL": 145,
+          "eGFR": 60
+        }
       }
     },
     {
@@ -102,6 +237,10 @@
         "LDL": 155
       },
       "medications": [
+        "Metformin 1000mg daily",
+        "Lisinopril 30mg daily",
+        "Simvastatin 80mg daily",
+        "Amlodipine 10mg daily",
         "amlodipine",
         "simvastatin",
         "10mg",
@@ -112,25 +251,103 @@
         "Hypertension",
         "Hyperlipidemia",
         "Chronic Kidney Disease",
-        "Coronary Artery Disease"
+        "Coronary Artery Disease",
+        "diabetes"
       ],
       "symptoms": [
+        "Fatigue",
+        "Weight loss",
+        "Shortness of breath",
+        "Swelling in legs",
+        "Vision changes",
+        "Numbness in toes",
         "Tingling"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "diabetes"
+        ],
         "medications": [
           "amlodipine",
           "simvastatin",
           "10mg",
           "80mg"
         ],
-        "lab_values": {},
         "symptoms": [
-          "Tingling"
+          "Tingling",
+          "vision changes",
+          "numbness in toes"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "amlodipine",
+            "predicate": "managed_by",
+            "object": "BP",
+            "confidence": 0.8
+          },
+          {
+            "subject": "simvastatin",
+            "predicate": "managed_by",
+            "object": "LDL",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "lab_values",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "lab_values",
+            "confidence": 0.9
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "lab_values",
+            "confidence": 0.9
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "lab_values",
+            "confidence": 0.9
+          },
+          {
+            "subject": "vision changes",
+            "predicate": "has_symptom",
+            "object": "tingling",
+            "confidence": 0.7
+          },
+          {
+            "subject": "numbness in toes",
+            "predicate": "has_symptom",
+            "object": "tingling",
+            "confidence": 0.7
+          },
+          {
+            "subject": "tingling",
+            "predicate": "has_symptom",
+            "object": "diabetes",
+            "confidence": 0.6
+          },
+          {
+            "subject": "diabetes",
+            "predicate": "worsens",
+            "object": "tingling",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 9.0,
+          "BP_systolic": 160,
+          "BP_diastolic": 100,
+          "LDL": 155,
+          "eGFR": 45
+        }
       }
     },
     {
@@ -145,31 +362,98 @@
         "LDL": 165
       },
       "medications": [
+        "Metformin 1000mg daily",
+        "Lisinopril 30mg daily",
+        "Simvastatin 80mg daily",
+        "Amlodipine 20mg daily",
         "amlodipine",
         "20mg"
       ],
       "diagnoses": [
-        "Coronary Artery Disease"
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease",
+        "End-stage renal disease"
       ],
       "symptoms": [
+        "Fatigue",
+        "Weight loss",
         "Shortness of breath",
+        "Swelling in legs",
+        "Vision changes",
+        "Numbness in toes",
+        "Severe shortness of breath",
         "Chest pain"
       ],
       "extracted": {
         "conditions": [
-          "Coronary Artery Disease"
+          "Coronary Artery Disease",
+          "End-stage renal disease"
         ],
         "medications": [
           "amlodipine",
           "20mg"
         ],
-        "lab_values": {},
         "symptoms": [
-          "Shortness of breath",
-          "Chest pain"
+          "Chest pain",
+          "Shortness of breath"
         ],
-        "procedures": [],
-        "relationships": []
+        "procedures": [
+          "IV fluids"
+        ],
+        "relationships": [
+          {
+            "subject": "Amlodipine",
+            "predicate": "increased",
+            "object": "20mg",
+            "confidence": 1.0
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "increased",
+            "object": "9.5",
+            "confidence": 1.0
+          },
+          {
+            "subject": "BP",
+            "predicate": "increased",
+            "object": "170/105",
+            "confidence": 1.0
+          },
+          {
+            "subject": "LDL",
+            "predicate": "increased",
+            "object": "165",
+            "confidence": 1.0
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured",
+            "object": "20",
+            "confidence": 1.0
+          },
+          {
+            "subject": "Amlodipine",
+            "predicate": "managed_by",
+            "object": "IV fluids",
+            "confidence": 1.0
+          },
+          {
+            "subject": "Chest pain",
+            "predicate": "has_symptom",
+            "object": "Shortness of breath",
+            "confidence": 1.0
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 9.5,
+          "BP_systolic": 170,
+          "BP_diastolic": 105,
+          "LDL": 165,
+          "eGFR": 20
+        }
       }
     }
   ]

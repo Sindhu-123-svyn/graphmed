@@ -1,0 +1,106 @@
+{
+  "patient_id": "CONFLICT_TEST",
+  "created_at": "2026-04-02T18:24:32.259058",
+  "nodes": [
+    {
+      "id": "CONFLICT_TEST",
+      "type": "PATIENT",
+      "added": "2026-04-02T18:24:32.259058",
+      "last_confirmed": "2026-04-02T18:24:32.259058",
+      "confidence": 1.0
+    },
+    {
+      "id": "CONDITION_Type 2 Diabetes_2024-01-15",
+      "name": "type 2 diabetes",
+      "type": "CONDITION",
+      "added": "2024-01-15",
+      "last_confirmed": "2024-01-15",
+      "confidence": 0.7466666666666666,
+      "decayed": true
+    },
+    {
+      "id": "MEDICATION_Metformin 500mg_2024-01-15",
+      "name": "metformin 500mg",
+      "type": "MEDICATION",
+      "added": "2024-01-15",
+      "last_confirmed": "2024-01-15",
+      "confidence": 0.7466666666666666,
+      "decayed": true
+    },
+    {
+      "id": "SYMPTOM_Fatigue_2024-01-15",
+      "name": "fatigue",
+      "type": "SYMPTOM",
+      "added": "2024-01-15",
+      "last_confirmed": "2024-01-15",
+      "confidence": 0.7466666666666666,
+      "decayed": true
+    },
+    {
+      "id": "LAB_VALUE_HbA1c_2024-01-15",
+      "name": "hba1c",
+      "type": "LAB_VALUE",
+      "added": "2024-01-15",
+      "last_confirmed": "2024-01-15",
+      "confidence": 0.7466666666666666,
+      "value": 7.2,
+      "decayed": true
+    },
+    {
+      "id": "CONDITION_No diabetes_2024-06-15",
+      "name": "no diabetes",
+      "type": "CONDITION",
+      "added": "2024-06-15",
+      "last_confirmed": "2024-06-15",
+      "confidence": 1.0,
+      "decayed": true
+    },
+    {
+      "id": "MEDICATION_No medications_2024-06-15",
+      "name": "no medications",
+      "type": "MEDICATION",
+      "added": "2024-06-15",
+      "last_confirmed": "2024-06-15",
+      "confidence": 1.0,
+      "decayed": true
+    }
+  ],
+  "edges": [
+    {
+      "source": "CONFLICT_TEST",
+      "target": "CONDITION_Type 2 Diabetes_2024-01-15",
+      "relation": "has",
+      "established": "2024-01-15"
+    },
+    {
+      "source": "CONFLICT_TEST",
+      "target": "MEDICATION_Metformin 500mg_2024-01-15",
+      "relation": "has",
+      "established": "2024-01-15"
+    },
+    {
+      "source": "CONFLICT_TEST",
+      "target": "SYMPTOM_Fatigue_2024-01-15",
+      "relation": "has",
+      "established": "2024-01-15"
+    },
+    {
+      "source": "CONFLICT_TEST",
+      "target": "LAB_VALUE_HbA1c_2024-01-15",
+      "relation": "has",
+      "established": "2024-01-15"
+    },
+    {
+      "source": "CONFLICT_TEST",
+      "target": "CONDITION_No diabetes_2024-06-15",
+      "relation": "has",
+      "established": "2024-06-15"
+    },
+    {
+      "source": "CONFLICT_TEST",
+      "target": "MEDICATION_No medications_2024-06-15",
+      "relation": "has",
+      "established": "2024-06-15"
+    }
+  ]
+}

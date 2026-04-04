@@ -1,0 +1,618 @@
+[
+  {
+    "id": "consist_var_52",
+    "statement_a": "HbA1c 7.2%",
+    "statement_b": "A1C 7.2, slightly elevated",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "conflict_var_104",
+    "statement_a": "Never smoked",
+    "statement_b": "Current heavy smoker",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "consist_var_60",
+    "statement_a": "Taking metformin",
+    "statement_b": "Prescribed metformin 500mg",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "conflict_var_77",
+    "statement_a": "No history of hypertension",
+    "statement_b": "BP 150/90 on admission",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_var_96",
+    "statement_a": "Denies chest pain",
+    "statement_b": "Reports chest pressure on exertion",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "consist_2",
+    "statement_a": "Blood pressure 130/85",
+    "statement_b": "BP 130/85, controlled",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "consist_4",
+    "statement_a": "HbA1c 7.2%",
+    "statement_b": "A1C 7.2, slightly elevated",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "conflict_var_89",
+    "statement_a": "No family history",
+    "statement_b": "Father had heart attack at 50",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_17",
+    "statement_a": "No history of hypertension",
+    "statement_b": "BP 150/90 on admission",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_14",
+    "statement_a": "BP well controlled",
+    "statement_b": "Blood pressure 165/95, uncontrolled",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "consist_var_64",
+    "statement_a": "Blood pressure 130/85",
+    "statement_b": "BP 130/85, controlled",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "consist_var_67",
+    "statement_a": "Blood pressure 130/85",
+    "statement_b": "BP 130/85, controlled",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "consist_var_70",
+    "statement_a": "Blood pressure 130/85",
+    "statement_b": "BP 130/85, controlled",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "conflict_var_111",
+    "statement_a": "Healthy patient",
+    "statement_b": "Multiple chronic conditions",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_var_112",
+    "statement_a": "Never smoked",
+    "statement_b": "Current heavy smoker",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "consist_var_69",
+    "statement_a": "Blood pressure 130/85",
+    "statement_b": "BP 130/85, controlled",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "consist_var_51",
+    "statement_a": "On lisinopril",
+    "statement_b": "Taking lisinopril 10mg daily",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "conflict_19",
+    "statement_a": "No kidney disease",
+    "statement_b": "eGFR 45, stage 3 CKD",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_var_116",
+    "statement_a": "No family history",
+    "statement_b": "Father had heart attack at 50",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "consist_var_54",
+    "statement_a": "Diabetes well-controlled",
+    "statement_b": "Good glycemic control",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "consist_var_71",
+    "statement_a": "No fever",
+    "statement_b": "Afebrile",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "consist_9",
+    "statement_a": "Diabetes well-controlled",
+    "statement_b": "Good glycemic control",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "consist_var_62",
+    "statement_a": "On lisinopril",
+    "statement_b": "Taking lisinopril 10mg daily",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "consist_var_38",
+    "statement_a": "HbA1c 7.2%",
+    "statement_b": "A1C 7.2, slightly elevated",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "consist_var_59",
+    "statement_a": "Patient has diabetes",
+    "statement_b": "Type 2 diabetes mellitus",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "consist_10",
+    "statement_a": "Hypertension diagnosed",
+    "statement_b": "High blood pressure history",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "consist_var_34",
+    "statement_a": "Diabetes well-controlled",
+    "statement_b": "Good glycemic control",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "consist_var_39",
+    "statement_a": "Taking metformin",
+    "statement_b": "Prescribed metformin 500mg",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "consist_6",
+    "statement_a": "On lisinopril",
+    "statement_b": "Taking lisinopril 10mg daily",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "conflict_var_113",
+    "statement_a": "No known drug allergies",
+    "statement_b": "Allergy to penicillin documented",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_var_83",
+    "statement_a": "No kidney disease",
+    "statement_b": "eGFR 45, stage 3 CKD",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "consist_var_37",
+    "statement_a": "Taking metformin",
+    "statement_b": "Prescribed metformin 500mg",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "conflict_var_78",
+    "statement_a": "No family history",
+    "statement_b": "Father had heart attack at 50",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "consist_var_75",
+    "statement_a": "No known allergies",
+    "statement_b": "No allergies documented",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "conflict_var_124",
+    "statement_a": "Denies chest pain",
+    "statement_b": "Reports chest pressure on exertion",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_var_114",
+    "statement_a": "Not taking warfarin",
+    "statement_b": "INR 3.5 on warfarin therapy",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "consist_var_29",
+    "statement_a": "No fever",
+    "statement_b": "Afebrile",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "conflict_var_126",
+    "statement_a": "No allergies",
+    "statement_b": "Sulfa allergy in record",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "consist_var_27",
+    "statement_a": "Taking metformin",
+    "statement_b": "Prescribed metformin 500mg",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "consist_5",
+    "statement_a": "Chest pain reported",
+    "statement_b": "Complains of chest discomfort",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "conflict_var_115",
+    "statement_a": "No known drug allergies",
+    "statement_b": "Allergy to penicillin documented",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "consist_var_48",
+    "statement_a": "On lisinopril",
+    "statement_b": "Taking lisinopril 10mg daily",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "consist_var_46",
+    "statement_a": "Diabetes well-controlled",
+    "statement_b": "Good glycemic control",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "conflict_var_86",
+    "statement_a": "Not diabetic",
+    "statement_b": "Diagnosed with Type 2 diabetes",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "consist_var_68",
+    "statement_a": "Allergy to penicillin",
+    "statement_b": "Penicillin allergy in chart",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "conflict_var_97",
+    "statement_a": "No kidney disease",
+    "statement_b": "eGFR 45, stage 3 CKD",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "consist_var_73",
+    "statement_a": "Chest pain reported",
+    "statement_b": "Complains of chest discomfort",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "conflict_var_108",
+    "statement_a": "Not diabetic",
+    "statement_b": "Diagnosed with Type 2 diabetes",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_var_88",
+    "statement_a": "Discontinued metformin",
+    "statement_b": "Continue metformin 1000mg daily",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_var_99",
+    "statement_a": "Not taking warfarin",
+    "statement_b": "INR 3.5 on warfarin therapy",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "consist_var_30",
+    "statement_a": "Diabetes well-controlled",
+    "statement_b": "Good glycemic control",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "conflict_var_100",
+    "statement_a": "Healthy patient",
+    "statement_b": "Multiple chronic conditions",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "consist_var_40",
+    "statement_a": "Blood pressure 130/85",
+    "statement_b": "BP 130/85, controlled",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "consist_var_63",
+    "statement_a": "Blood pressure 130/85",
+    "statement_b": "BP 130/85, controlled",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "consist_var_56",
+    "statement_a": "Blood pressure 130/85",
+    "statement_b": "BP 130/85, controlled",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "conflict_var_107",
+    "statement_a": "Not diabetic",
+    "statement_b": "Diagnosed with Type 2 diabetes",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "consist_var_33",
+    "statement_a": "Taking metformin",
+    "statement_b": "Prescribed metformin 500mg",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "conflict_21",
+    "statement_a": "No symptoms reported",
+    "statement_b": "Complains of severe headache",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "consist_var_36",
+    "statement_a": "No fever",
+    "statement_b": "Afebrile",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "consist_var_31",
+    "statement_a": "Blood pressure 130/85",
+    "statement_b": "BP 130/85, controlled",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "conflict_var_92",
+    "statement_a": "Discontinued metformin",
+    "statement_b": "Continue metformin 1000mg daily",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "consist_var_43",
+    "statement_a": "HbA1c 7.2%",
+    "statement_b": "A1C 7.2, slightly elevated",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "consist_7",
+    "statement_a": "Allergy to penicillin",
+    "statement_b": "Penicillin allergy in chart",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "consist_var_53",
+    "statement_a": "No known allergies",
+    "statement_b": "No allergies documented",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "consist_var_28",
+    "statement_a": "Patient has diabetes",
+    "statement_b": "Type 2 diabetes mellitus",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "conflict_var_84",
+    "statement_a": "No medications",
+    "statement_b": "Currently taking metformin 500mg",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_var_81",
+    "statement_a": "No family history",
+    "statement_b": "Father had heart attack at 50",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_var_85",
+    "statement_a": "No known drug allergies",
+    "statement_b": "Allergy to penicillin documented",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_var_102",
+    "statement_a": "BP well controlled",
+    "statement_b": "Blood pressure 165/95, uncontrolled",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "consist_var_65",
+    "statement_a": "Allergy to penicillin",
+    "statement_b": "Penicillin allergy in chart",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "conflict_var_93",
+    "statement_a": "Not taking warfarin",
+    "statement_b": "INR 3.5 on warfarin therapy",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "consist_var_61",
+    "statement_a": "No fever",
+    "statement_b": "Afebrile",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "consist_var_55",
+    "statement_a": "No fever",
+    "statement_b": "Afebrile",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "consist_var_32",
+    "statement_a": "HbA1c 7.2%",
+    "statement_b": "A1C 7.2, slightly elevated",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "consist_0",
+    "statement_a": "Patient has diabetes",
+    "statement_b": "Type 2 diabetes mellitus",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "conflict_15",
+    "statement_a": "No medications",
+    "statement_b": "Currently taking metformin 500mg",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_var_105",
+    "statement_a": "No kidney disease",
+    "statement_b": "eGFR 45, stage 3 CKD",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_var_80",
+    "statement_a": "Discontinued metformin",
+    "statement_b": "Continue metformin 1000mg daily",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_var_118",
+    "statement_a": "Never smoked",
+    "statement_b": "Current heavy smoker",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "conflict_24",
+    "statement_a": "Healthy patient",
+    "statement_b": "Multiple chronic conditions",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "consist_var_74",
+    "statement_a": "No known allergies",
+    "statement_b": "No allergies documented",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "consist_var_66",
+    "statement_a": "HbA1c 7.2%",
+    "statement_b": "A1C 7.2, slightly elevated",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "consist_var_47",
+    "statement_a": "On lisinopril",
+    "statement_b": "Taking lisinopril 10mg daily",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "consist_11",
+    "statement_a": "Discontinued statin",
+    "statement_b": "Stopped taking atorvastatin",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "conflict_var_87",
+    "statement_a": "No medications",
+    "statement_b": "Currently taking metformin 500mg",
+    "label": 1,
+    "label_name": "CONFLICT"
+  },
+  {
+    "id": "consist_1",
+    "statement_a": "Taking metformin",
+    "statement_b": "Prescribed metformin 500mg",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "consist_var_72",
+    "statement_a": "Diabetes well-controlled",
+    "statement_b": "Good glycemic control",
+    "label": 0,
+    "label_name": "CONSISTENT"
+  },
+  {
+    "id": "conflict_18",
+    "statement_a": "Not taking warfarin",
+    "statement_b": "INR 3.5 on warfarin therapy",
+    "label": 1,
+    "label_name": "CONFLICT"
+  }
+]

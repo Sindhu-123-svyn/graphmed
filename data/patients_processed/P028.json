@@ -13,6 +13,9 @@
         "LDL": 130
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Amlodipine 5mg QD",
+        "Atorvastatin 20mg QD",
         "metformin",
         "amlodipine",
         "atorvastatin",
@@ -21,22 +24,23 @@
         "20mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Chronic Kidney Disease",
         "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Chronic Kidney Disease"
       ],
       "symptoms": [
-        "Shortness of breath",
-        "Edema",
-        "Fatigue"
+        "fatigue",
+        "shortness of breath",
+        "bilateral pedal edema",
+        "Edema"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Chronic Kidney Disease",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension",
+          "Chronic Kidney Disease"
         ],
         "medications": [
           "metformin",
@@ -46,14 +50,106 @@
           "5mg",
           "20mg"
         ],
-        "lab_values": {},
         "symptoms": [
-          "Shortness of breath",
           "Edema",
-          "Fatigue"
+          "Shortness of breath",
+          "Fatigue",
+          "Bilateral pedal edema"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Amlodipine",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Atorvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Metformin",
+            "predicate": "contraindicated_with",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Shortness of breath",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Bilateral pedal edema",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Shortness of breath",
+            "predicate": "has_symptom",
+            "object": "Bilateral pedal edema",
+            "confidence": 0.6
+          },
+          {
+            "subject": "BP_systolic",
+            "predicate": "measured_by",
+            "object": "Physical examination",
+            "confidence": 0.5
+          },
+          {
+            "subject": "BP_diastolic",
+            "predicate": "measured_by",
+            "object": "Physical examination",
+            "confidence": 0.5
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Labs",
+            "confidence": 0.5
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "Labs",
+            "confidence": 0.5
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.2,
+          "BP_systolic": 140,
+          "BP_diastolic": 90,
+          "eGFR": 72,
+          "LDL": 130
+        }
       }
     },
     {
@@ -68,27 +164,35 @@
         "LDL": 140
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Amlodipine 5mg QD",
+        "Atorvastatin 20mg QD",
+        "Lisinopril 10mg QD",
+        "Simvastatin 40mg QD",
         "lisinopril",
         "simvastatin",
         "10mg",
         "40mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
+        "Chronic Kidney Disease",
         "Coronary Artery Disease"
       ],
       "symptoms": [
-        "Shortness of breath",
-        "Chest pain",
-        "Edema",
-        "Fatigue"
+        "fatigue",
+        "shortness of breath",
+        "bilateral pedal edema",
+        "chest pain",
+        "Edema"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
           "Hyperlipidemia",
-          "Coronary Artery Disease"
+          "Coronary Artery Disease",
+          "Hypertension"
         ],
         "medications": [
           "lisinopril",
@@ -96,15 +200,82 @@
           "10mg",
           "40mg"
         ],
-        "lab_values": {},
         "symptoms": [
-          "Shortness of breath",
           "Chest pain",
           "Edema",
+          "Shortness of breath",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Simvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Labs",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP_systolic",
+            "predicate": "measured_by",
+            "object": "Labs",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP_diastolic",
+            "predicate": "measured_by",
+            "object": "Labs",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Labs",
+            "confidence": 0.8
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "Labs",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Chest pain",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Shortness of breath",
+            "predicate": "has_symptom",
+            "object": "Chest pain",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Bilateral pedal edema",
+            "predicate": "has_symptom",
+            "object": "Chest pain",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.1,
+          "BP_systolic": 150,
+          "BP_diastolic": 95,
+          "eGFR": 60,
+          "LDL": 140
+        }
       }
     },
     {
@@ -119,33 +290,125 @@
         "LDL": 150
       },
       "medications": [
+        "IV insulin therapy",
+        "Lisinopril 10mg QD",
+        "Simvastatin 40mg QD",
+        "Atorvastatin 20mg QD",
         "insulin"
       ],
       "diagnoses": [
-        "Type 2 Diabetes"
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease",
+        "End-Stage Renal Disease"
       ],
       "symptoms": [
-        "Shortness of breath",
-        "Chest pain",
-        "Edema",
-        "Fatigue"
+        "fatigue",
+        "shortness of breath",
+        "bilateral pedal edema",
+        "chest pain",
+        "confusion",
+        "Edema"
       ],
       "extracted": {
         "conditions": [
-          "Type 2 Diabetes"
+          "Type 2 Diabetes",
+          "End-Stage Renal Disease"
         ],
         "medications": [
           "insulin"
         ],
-        "lab_values": {},
         "symptoms": [
-          "Shortness of breath",
           "Chest pain",
           "Edema",
-          "Fatigue"
+          "Shortness of breath",
+          "Fatigue",
+          "Confusion"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "insulin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP_systolic",
+            "predicate": "measured_by",
+            "object": "BP_diastolic",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP_systolic",
+            "predicate": "measured_by",
+            "object": "BP_systolic",
+            "confidence": 0.9
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "eGFR",
+            "confidence": 0.9
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "LDL",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "HbA1c",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "contraindicated_with",
+            "object": "End-Stage Renal Disease",
+            "confidence": 0.7
+          },
+          {
+            "subject": "insulin",
+            "predicate": "improves",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP_systolic",
+            "predicate": "worsens",
+            "object": "End-Stage Renal Disease",
+            "confidence": 0.6
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "worsens",
+            "object": "End-Stage Renal Disease",
+            "confidence": 0.6
+          },
+          {
+            "subject": "LDL",
+            "predicate": "worsens",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.5
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "worsens",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.5
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 9.0,
+          "BP_systolic": 160,
+          "BP_diastolic": 100,
+          "eGFR": 45,
+          "LDL": 150
+        }
       }
     }
   ]

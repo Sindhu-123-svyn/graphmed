@@ -13,6 +13,7 @@
         "LDL": 110
       },
       "medications": [
+        "Metformin 500mg PO BID",
         "metformin",
         "500mg"
       ],
@@ -20,8 +21,8 @@
         "Type 2 Diabetes"
       ],
       "symptoms": [
-        "Polydipsia",
-        "Polyuria"
+        "Polyuria",
+        "Polydipsia"
       ],
       "extracted": {
         "conditions": [
@@ -31,13 +32,40 @@
           "metformin",
           "500mg"
         ],
-        "lab_values": {},
         "symptoms": [
           "Polydipsia",
           "Polyuria"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 1.0
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Laboratory results",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Metformin",
+            "predicate": "contraindicated_with",
+            "object": "None",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Metformin",
+            "predicate": "improves",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.7
+        }
       }
     },
     {
@@ -49,27 +77,31 @@
         "BP_systolic": 150,
         "BP_diastolic": 90,
         "eGFR": 75,
-        "LDL": 120
+        "LDL": 120,
+        "Blood pressure": "150/90"
       },
       "medications": [
+        "Metformin 1000mg PO BID",
+        "Amlodipine 5mg PO daily",
         "amlodipine",
         "metformin",
         "5mg",
         "1000mg"
       ],
       "diagnoses": [
-        "Hypertension",
-        "Type 2 Diabetes"
+        "Type 2 Diabetes",
+        "Hypertension"
       ],
       "symptoms": [
         "Polyuria",
         "Polydipsia",
-        "Dyspnea on exertion"
+        "Dyspnea on exertion",
+        "improved symptoms"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Type 2 Diabetes"
+          "Type 2 Diabetes",
+          "Hypertension"
         ],
         "medications": [
           "amlodipine",
@@ -77,10 +109,58 @@
           "5mg",
           "1000mg"
         ],
-        "lab_values": {},
-        "symptoms": [],
+        "symptoms": [
+          "improved symptoms"
+        ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "amlodipine",
+            "predicate": "managed_by",
+            "object": "hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "metformin",
+            "predicate": "managed_by",
+            "object": "type 2 diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "blood test",
+            "confidence": 0.7
+          },
+          {
+            "subject": "amlodipine",
+            "predicate": "contraindicated_with",
+            "object": "metformin",
+            "confidence": 0.6
+          },
+          {
+            "subject": "amlodipine",
+            "predicate": "improves",
+            "object": "hypertension",
+            "confidence": 0.5
+          },
+          {
+            "subject": "metformin",
+            "predicate": "improves",
+            "object": "type 2 diabetes",
+            "confidence": 0.5
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "worsens",
+            "object": "type 2 diabetes",
+            "confidence": 0.4
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.2,
+          "Blood pressure": "150/90"
+        }
       }
     },
     {
@@ -92,30 +172,35 @@
         "BP_systolic": 160,
         "BP_diastolic": 100,
         "eGFR": 65,
-        "LDL": 140
+        "LDL": 140,
+        "blood pressure": "160/100"
       },
       "medications": [
+        "Metformin 1000mg PO BID",
+        "Amlodipine 10mg PO daily",
+        "Atorvastatin 20mg PO daily",
         "amlodipine",
         "atorvastatin",
         "20mg",
         "10mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
         "Polyuria",
         "Polydipsia",
         "Dyspnea on exertion",
-        "Fatigue"
+        "Fatigue",
+        "worsening symptoms"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
         "medications": [
           "amlodipine",
@@ -123,10 +208,52 @@
           "20mg",
           "10mg"
         ],
-        "lab_values": {},
-        "symptoms": [],
+        "symptoms": [
+          "worsening symptoms"
+        ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "blood pressure",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "amlodipine",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.7
+          },
+          {
+            "subject": "atorvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.7
+          },
+          {
+            "subject": "worsening symptoms",
+            "predicate": "has_symptom",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.6
+          },
+          {
+            "subject": "worsening symptoms",
+            "predicate": "has_symptom",
+            "object": "Hypertension",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 9.0,
+          "blood pressure": "160/100"
+        }
       }
     },
     {
@@ -141,12 +268,19 @@
         "LDL": 130
       },
       "medications": [
+        "Metformin 500mg PO BID",
+        "Amlodipine 10mg PO daily",
+        "Atorvastatin 20mg PO daily",
+        "Lisinopril 10mg PO daily",
         "lisinopril",
         "metformin",
         "10mg",
         "500mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
         "Chronic Kidney Disease"
       ],
       "symptoms": [
@@ -166,10 +300,37 @@
           "10mg",
           "500mg"
         ],
-        "lab_values": {},
         "symptoms": [],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Metformin",
+            "predicate": "contraindicated_with",
+            "object": "kidney function decline",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Metformin",
+            "predicate": "adjusted_due_to",
+            "object": "kidney function decline",
+            "confidence": 0.7
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "lab test",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "eGFR": 55
+        }
       }
     }
   ]

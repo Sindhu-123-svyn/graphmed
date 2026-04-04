@@ -6,27 +6,33 @@
       "date": "2022-06-15",
       "note": "Patient presents with new onset of fatigue and increased thirst. Initial lab results reveal HbA1c of 8.5, BP 140/90, and eGFR 80. Diagnoses include Type 2 Diabetes and Hypertension. Meds include Metformin 500mg BID and Lisinopril 10mg daily.",
       "labs": {
-        "BP": "140/90",
-        "eGFR": 80.0
+        "HbA1c": 8.5,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 80,
+        "LDL": 160
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg daily",
         "metformin",
         "lisinopril",
         "500mg",
         "10mg"
       ],
       "diagnoses": [
-        "Hypertension",
-        "Type 2 Diabetes"
+        "Type 2 Diabetes",
+        "Hypertension"
       ],
       "symptoms": [
-        "Polydipsia",
-        "Fatigue"
+        "Fatigue",
+        "Increased thirst",
+        "Polydipsia"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Type 2 Diabetes"
+          "Type 2 Diabetes",
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -34,16 +40,17 @@
           "500mg",
           "10mg"
         ],
-        "lab_values": {
-          "BP": "140/90",
-          "eGFR": 80.0
-        },
         "symptoms": [
           "Polydipsia",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [],
+        "lab_values": {
+          "BP_systolic": 140,
+          "BP_diastolic": 90,
+          "eGFR": 80.0
+        }
       }
     },
     {
@@ -51,20 +58,31 @@
       "date": "2022-11-10",
       "note": "Patient returns with worsening fatigue and increased urination. Lab results show HbA1c of 9.2, BP 150/95, and eGFR 70. Meds are adjusted to include Sitagliptin 100mg daily and increased Lisinopril to 20mg daily. Diagnoses are updated to include Hyperlipidemia. New symptoms include polyuria and weight loss.",
       "labs": {
-        "BP": "150/95",
-        "eGFR": 70.0
+        "HbA1c": 9.2,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 70,
+        "LDL": 180
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Sitagliptin 100mg daily",
+        "Lisinopril 20mg daily",
         "lisinopril",
         "100mg",
-        "20mg"
+        "20mg",
+        "Sitagliptin"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
         "Hyperlipidemia"
       ],
       "symptoms": [
+        "Fatigue",
+        "Increased thirst",
         "Polyuria",
-        "Fatigue"
+        "Weight loss"
       ],
       "extracted": {
         "conditions": [
@@ -73,18 +91,119 @@
         "medications": [
           "lisinopril",
           "100mg",
-          "20mg"
+          "20mg",
+          "Sitagliptin"
         ],
-        "lab_values": {
-          "BP": "150/95",
-          "eGFR": 70.0
-        },
         "symptoms": [
           "Polyuria",
-          "Fatigue"
+          "Fatigue",
+          "Weight Loss"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Sitagliptin",
+            "predicate": "managed_by",
+            "object": "Patient",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "increased",
+            "object": "20mg",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Patient",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Lab results",
+            "confidence": 0.7
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Lab results",
+            "confidence": 0.7
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Lab results",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "diagnosed_with",
+            "object": "Patient",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Polyuria",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Weight Loss",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Polyuria",
+            "predicate": "has_symptom",
+            "object": "Weight Loss",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Sitagliptin",
+            "predicate": "contraindicated_with",
+            "object": "Hyperlipidemia",
+            "confidence": 0.5
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "contraindicated_with",
+            "object": "Hyperlipidemia",
+            "confidence": 0.5
+          },
+          {
+            "subject": "Sitagliptin",
+            "predicate": "improves",
+            "object": "Hyperlipidemia",
+            "confidence": 0.4
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "improves",
+            "object": "Hyperlipidemia",
+            "confidence": 0.4
+          },
+          {
+            "subject": "Sitagliptin",
+            "predicate": "worsens",
+            "object": "Hyperlipidemia",
+            "confidence": 0.3
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "worsens",
+            "object": "Hyperlipidemia",
+            "confidence": 0.3
+          }
+        ],
+        "lab_values": {
+          "BP_systolic": 150,
+          "BP_diastolic": 95,
+          "eGFR": 70.0,
+          "HbA1c": 9.2
+        }
       }
     },
     {
@@ -92,50 +211,20 @@
       "date": "2023-03-17",
       "note": "Patient returns with worsening symptoms. Lab results show HbA1c of 8.8, BP 155/100, and eGFR 65. Meds are adjusted to include Atorvastatin 20mg daily. Diagnoses are updated to include Chronic Kidney Disease. New symptoms include edema and shortness of breath.",
       "labs": {
-        "BP": "155/100",
-        "eGFR": 65.0
+        "HbA1c": 8.8,
+        "BP_systolic": 155,
+        "BP_diastolic": 100,
+        "eGFR": 65,
+        "LDL": 170
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Sitagliptin 100mg daily",
+        "Lisinopril 20mg daily",
+        "Atorvastatin 20mg daily",
         "atorvastatin",
-        "20mg"
-      ],
-      "diagnoses": [
-        "Chronic Kidney Disease"
-      ],
-      "symptoms": [
-        "Shortness of breath",
-        "Edema"
-      ],
-      "extracted": {
-        "conditions": [
-          "Chronic Kidney Disease"
-        ],
-        "medications": [
-          "atorvastatin",
-          "20mg"
-        ],
-        "lab_values": {
-          "BP": "155/100",
-          "eGFR": 65.0
-        },
-        "symptoms": [
-          "Shortness of breath",
-          "Edema"
-        ],
-        "procedures": [],
-        "relationships": []
-      }
-    },
-    {
-      "visit_id": "V4",
-      "date": "2023-09-14",
-      "note": "Patient returns with stable symptoms. Lab results show HbA1c of 8.0, BP 140/90, and eGFR 75. Meds are adjusted to include Furosemide 40mg daily for edema. Diagnoses remain the same. New symptoms include chest pain.",
-      "labs": {
-        "BP": "140/90",
-        "eGFR": 75.0
-      },
-      "medications": [
-        "40mg"
+        "20mg",
+        "Atorvastatin 20mg"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -144,24 +233,169 @@
         "Chronic Kidney Disease"
       ],
       "symptoms": [
-        "Chest pain",
-        "Edema"
+        "Fatigue",
+        "Increased thirst",
+        "Polyuria",
+        "Weight loss",
+        "Edema",
+        "Shortness of breath",
+        "Worsening symptoms"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Chronic Kidney Disease"
+        ],
         "medications": [
-          "40mg"
+          "atorvastatin",
+          "20mg",
+          "Atorvastatin 20mg"
+        ],
+        "symptoms": [
+          "Edema",
+          "Shortness of breath",
+          "Worsening symptoms"
+        ],
+        "procedures": [],
+        "relationships": [
+          {
+            "subject": "Atorvastatin 20mg",
+            "predicate": "managed_by",
+            "object": "BP 155/100",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Atorvastatin 20mg",
+            "predicate": "managed_by",
+            "object": "eGFR 65",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "improves",
+            "object": "BP 155/100",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "Worsening symptoms",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP 155/100",
+            "predicate": "contraindicated_with",
+            "object": "Edema",
+            "confidence": 0.7
+          },
+          {
+            "subject": "BP 155/100",
+            "predicate": "contraindicated_with",
+            "object": "Shortness of breath",
+            "confidence": 0.7
+          }
         ],
         "lab_values": {
-          "BP": "140/90",
-          "eGFR": 75.0
-        },
+          "BP_systolic": 155,
+          "BP_diastolic": 100,
+          "eGFR": 65.0,
+          "HbA1c": 8.8
+        }
+      }
+    },
+    {
+      "visit_id": "V4",
+      "date": "2023-09-14",
+      "note": "Patient returns with stable symptoms. Lab results show HbA1c of 8.0, BP 140/90, and eGFR 75. Meds are adjusted to include Furosemide 40mg daily for edema. Diagnoses remain the same. New symptoms include chest pain.",
+      "labs": {
+        "HbA1c": 8.0,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 75,
+        "LDL": 140
+      },
+      "medications": [
+        "Metformin 500mg BID",
+        "Sitagliptin 100mg daily",
+        "Lisinopril 20mg daily",
+        "Atorvastatin 20mg daily",
+        "Furosemide 40mg daily",
+        "40mg",
+        "Furosemide"
+      ],
+      "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Diabetes"
+      ],
+      "symptoms": [
+        "Fatigue",
+        "Increased thirst",
+        "Polyuria",
+        "Weight loss",
+        "Edema",
+        "Shortness of breath",
+        "Chest pain"
+      ],
+      "extracted": {
+        "conditions": [
+          "Diabetes",
+          "Hypertension"
+        ],
+        "medications": [
+          "40mg",
+          "Furosemide"
+        ],
         "symptoms": [
           "Chest pain",
           "Edema"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Furosemide",
+            "predicate": "managed_by",
+            "object": "edema",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "lab results",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "lab results",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "lab results",
+            "confidence": 0.8
+          },
+          {
+            "subject": "chest pain",
+            "predicate": "has_symptom",
+            "object": "diabetes",
+            "confidence": 0.7
+          },
+          {
+            "subject": "chest pain",
+            "predicate": "has_symptom",
+            "object": "hypertension",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "BP_systolic": 140,
+          "BP_diastolic": 90,
+          "eGFR": 75.0,
+          "HbA1c": 8.0
+        }
       }
     },
     {
@@ -169,20 +403,40 @@
       "date": "2024-01-12",
       "note": "Patient returns with worsening chest pain and shortness of breath. Lab results show HbA1c of 7.8, BP 130/80, and eGFR 85. Meds are adjusted to include Aspirin 81mg daily and increased Atorvastatin to 40mg daily. Diagnoses are updated to include Coronary Artery Disease. New symptoms include angina.",
       "labs": {
-        "BP": "130/80",
-        "eGFR": 85.0
+        "HbA1c": 7.8,
+        "BP_systolic": 130,
+        "BP_diastolic": 80,
+        "eGFR": 85,
+        "LDL": 120
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Sitagliptin 100mg daily",
+        "Lisinopril 20mg daily",
+        "Atorvastatin 40mg daily",
+        "Furosemide 40mg daily",
+        "Aspirin 81mg daily",
         "atorvastatin",
         "81mg",
-        "40mg"
+        "40mg",
+        "Aspirin"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
         "Coronary Artery Disease"
       ],
       "symptoms": [
+        "Fatigue",
+        "Increased thirst",
+        "Polyuria",
+        "Weight loss",
+        "Edema",
         "Shortness of breath",
-        "Chest pain"
+        "Chest pain",
+        "Angina"
       ],
       "extracted": {
         "conditions": [
@@ -191,18 +445,59 @@
         "medications": [
           "atorvastatin",
           "81mg",
-          "40mg"
+          "40mg",
+          "Aspirin"
         ],
-        "lab_values": {
-          "BP": "130/80",
-          "eGFR": 85.0
-        },
         "symptoms": [
+          "Chest pain",
           "Shortness of breath",
-          "Chest pain"
+          "Angina"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Aspirin",
+            "predicate": "contraindicated_with",
+            "object": "Atorvastatin",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Atorvastatin",
+            "predicate": "increased",
+            "object": "40mg",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "130/80",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "managed_by",
+            "object": "Aspirin",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "managed_by",
+            "object": "Atorvastatin",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Chest pain",
+            "predicate": "has_symptom",
+            "object": "Angina",
+            "confidence": 0.5
+          }
+        ],
+        "lab_values": {
+          "BP_systolic": 130,
+          "BP_diastolic": 80,
+          "eGFR": 85.0,
+          "HbA1c": 7.8
+        }
       }
     }
   ]

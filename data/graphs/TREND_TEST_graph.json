@@ -1,0 +1,128 @@
+{
+  "patient_id": "TREND_TEST",
+  "created_at": "2026-04-02T18:24:33.032563",
+  "nodes": [
+    {
+      "id": "TREND_TEST",
+      "type": "PATIENT",
+      "added": "2026-04-02T18:24:33.032563",
+      "last_confirmed": "2026-04-02T18:24:33.032563",
+      "confidence": 1.0
+    },
+    {
+      "id": "CONDITION_Diabetes_2024-01-15",
+      "name": "diabetes",
+      "type": "CONDITION",
+      "added": "2024-01-15",
+      "last_confirmed": "2024-01-15",
+      "confidence": 0.2,
+      "decayed": true
+    },
+    {
+      "id": "LAB_VALUE_HbA1c_2024-01-15",
+      "name": "hba1c",
+      "type": "LAB_VALUE",
+      "added": "2024-01-15",
+      "last_confirmed": "2024-10-15",
+      "confidence": 1.0,
+      "value": 7.9,
+      "decayed": true,
+      "history": [
+        {
+          "date": "2024-04-15",
+          "old": {
+            "value": 7.2,
+            "confidence": 1.0
+          },
+          "new": {
+            "trend": "INSUFFICIENT_DATA"
+          }
+        },
+        {
+          "date": "2024-07-15",
+          "old": {
+            "value": 7.8,
+            "confidence": 1.0
+          },
+          "new": {
+            "trend": "INSUFFICIENT_DATA"
+          }
+        },
+        {
+          "date": "2024-10-15",
+          "old": {
+            "value": 8.1,
+            "confidence": 1.0
+          },
+          "new": {
+            "trend": "INSUFFICIENT_DATA"
+          }
+        }
+      ],
+      "trend": "INSUFFICIENT_DATA"
+    },
+    {
+      "id": "LAB_VALUE_eGFR_2024-01-15",
+      "name": "egfr",
+      "type": "LAB_VALUE",
+      "added": "2024-01-15",
+      "last_confirmed": "2024-10-15",
+      "confidence": 1.0,
+      "value": 50,
+      "decayed": true,
+      "history": [
+        {
+          "date": "2024-04-15",
+          "old": {
+            "value": 72,
+            "confidence": 1.0
+          },
+          "new": {
+            "trend": "INSUFFICIENT_DATA"
+          }
+        },
+        {
+          "date": "2024-07-15",
+          "old": {
+            "value": 68,
+            "confidence": 1.0
+          },
+          "new": {
+            "trend": "INSUFFICIENT_DATA"
+          }
+        },
+        {
+          "date": "2024-10-15",
+          "old": {
+            "value": 55,
+            "confidence": 1.0
+          },
+          "new": {
+            "trend": "INSUFFICIENT_DATA"
+          }
+        }
+      ],
+      "trend": "INSUFFICIENT_DATA"
+    }
+  ],
+  "edges": [
+    {
+      "source": "TREND_TEST",
+      "target": "CONDITION_Diabetes_2024-01-15",
+      "relation": "has",
+      "established": "2024-01-15"
+    },
+    {
+      "source": "TREND_TEST",
+      "target": "LAB_VALUE_HbA1c_2024-01-15",
+      "relation": "has",
+      "established": "2024-01-15"
+    },
+    {
+      "source": "TREND_TEST",
+      "target": "LAB_VALUE_eGFR_2024-01-15",
+      "relation": "has",
+      "established": "2024-01-15"
+    }
+  ]
+}

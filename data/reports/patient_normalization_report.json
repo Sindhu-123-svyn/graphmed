@@ -1,0 +1,748 @@
+{
+  "generated_at_utc": "2026-04-03T23:22:23.313052+00:00",
+  "script": "phase1_normalize_patients.py",
+  "dry_run": false,
+  "input_dir": "data/patients",
+  "total_files": 100,
+  "total_visits": 397,
+  "files_modified": 0,
+  "bp_key_found_count": 0,
+  "bp_key_fixed_count": 0,
+  "bp_key_parse_failures": [],
+  "schema_issue_count": 0,
+  "schema_issues": [],
+  "visit_count_summary": {
+    "min": 3,
+    "max": 5,
+    "avg": 3.97
+  },
+  "top_level_key_frequency": {
+    "patient_id": 100,
+    "visits": 100
+  },
+  "visit_key_frequency": {
+    "date": 397,
+    "diagnoses": 397,
+    "labs": 397,
+    "medications": 397,
+    "note": 397,
+    "symptoms": 397,
+    "visit_id": 397
+  },
+  "lab_key_frequency_before": {
+    "BP_diastolic": 397,
+    "BP_systolic": 397,
+    "HbA1c": 397,
+    "LDL": 393,
+    "eGFR": 397
+  },
+  "lab_key_frequency_after": {
+    "BP_diastolic": 397,
+    "BP_systolic": 397,
+    "HbA1c": 397,
+    "LDL": 393,
+    "eGFR": 397
+  },
+  "file_summaries": [
+    {
+      "file": "P001.json",
+      "visits": 5,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P002.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P003.json",
+      "visits": 3,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P004.json",
+      "visits": 5,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P005.json",
+      "visits": 5,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P006.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P007.json",
+      "visits": 3,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P008.json",
+      "visits": 5,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P009.json",
+      "visits": 3,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P010.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P011.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P012.json",
+      "visits": 3,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P013.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P014.json",
+      "visits": 3,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P015.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P016.json",
+      "visits": 5,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P017.json",
+      "visits": 3,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P018.json",
+      "visits": 5,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P019.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P020.json",
+      "visits": 3,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P021.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P022.json",
+      "visits": 3,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P023.json",
+      "visits": 5,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P024.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P025.json",
+      "visits": 3,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P026.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P027.json",
+      "visits": 3,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P028.json",
+      "visits": 3,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P029.json",
+      "visits": 5,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P030.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P031.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P032.json",
+      "visits": 5,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P033.json",
+      "visits": 5,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P034.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P035.json",
+      "visits": 5,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P036.json",
+      "visits": 3,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P037.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P038.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P039.json",
+      "visits": 3,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P040.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P041.json",
+      "visits": 5,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P042.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P043.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P044.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P045.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P046.json",
+      "visits": 3,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P047.json",
+      "visits": 3,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P048.json",
+      "visits": 5,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P049.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P050.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P051.json",
+      "visits": 5,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P052.json",
+      "visits": 3,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P053.json",
+      "visits": 5,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P054.json",
+      "visits": 5,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P055.json",
+      "visits": 3,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P056.json",
+      "visits": 3,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P057.json",
+      "visits": 5,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P058.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P059.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P060.json",
+      "visits": 3,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P061.json",
+      "visits": 5,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P062.json",
+      "visits": 3,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P063.json",
+      "visits": 5,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P064.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P065.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P066.json",
+      "visits": 3,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P067.json",
+      "visits": 5,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P068.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P069.json",
+      "visits": 5,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P070.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P071.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P072.json",
+      "visits": 3,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P073.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P074.json",
+      "visits": 3,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P075.json",
+      "visits": 3,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P076.json",
+      "visits": 5,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P077.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P078.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P079.json",
+      "visits": 5,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P080.json",
+      "visits": 3,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P081.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P082.json",
+      "visits": 5,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P083.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P084.json",
+      "visits": 5,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P085.json",
+      "visits": 3,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P086.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P087.json",
+      "visits": 3,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P088.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P089.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P090.json",
+      "visits": 3,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P091.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P092.json",
+      "visits": 3,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P093.json",
+      "visits": 3,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P094.json",
+      "visits": 5,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P095.json",
+      "visits": 3,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P096.json",
+      "visits": 4,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P097.json",
+      "visits": 5,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P098.json",
+      "visits": 5,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P099.json",
+      "visits": 5,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    },
+    {
+      "file": "P100.json",
+      "visits": 3,
+      "bp_found": 0,
+      "bp_fixed": 0,
+      "modified": false
+    }
+  ]
+}

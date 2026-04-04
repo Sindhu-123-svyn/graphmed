@@ -13,26 +13,28 @@
         "LDL": 130
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Amlodipine 5mg daily",
         "metformin",
         "amlodipine",
         "500mg",
         "5mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
-        "Polydipsia",
         "Polyuria",
+        "Polydipsia",
         "Fatigue"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -40,14 +42,69 @@
           "500mg",
           "5mg"
         ],
-        "lab_values": {},
         "symptoms": [
           "Polydipsia",
           "Polyuria",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Amlodipine",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Metformin",
+            "predicate": "contraindicated_with",
+            "object": "Hyperlipidemia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Polyuria",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Polydipsia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.8
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.2,
+          "BP_systolic": 140,
+          "BP_diastolic": 90,
+          "eGFR": 72,
+          "LDL": 130
+        }
       }
     },
     {
@@ -62,15 +119,24 @@
         "LDL": 140
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Amlodipine 5mg daily",
+        "Lisinopril 10mg daily",
         "lisinopril",
-        "10mg"
+        "10mg",
+        "Lisinopril 10mg"
       ],
       "diagnoses": [
-        "Hypertension"
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
       ],
       "symptoms": [
-        "Shortness of breath",
-        "Fatigue"
+        "Polyuria",
+        "Polydipsia",
+        "Fatigue",
+        "Shortness of breath"
       ],
       "extracted": {
         "conditions": [
@@ -78,15 +144,65 @@
         ],
         "medications": [
           "lisinopril",
-          "10mg"
+          "10mg",
+          "Lisinopril 10mg"
         ],
-        "lab_values": {},
         "symptoms": [
           "Shortness of breath",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Lisinopril 10mg",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "lab values",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "lab values",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "lab values",
+            "confidence": 0.8
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "lab values",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.8,
+          "BP_systolic": 145,
+          "BP_diastolic": 95,
+          "eGFR": 65,
+          "LDL": 140
+        }
       }
     },
     {
@@ -101,17 +217,26 @@
         "LDL": 145
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg daily",
+        "Amlodipine 10mg daily",
+        "Simvastatin 40mg daily",
         "amlodipine",
         "simvastatin",
         "40mg",
         "10mg"
       ],
       "diagnoses": [
-        "Hyperlipidemia"
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
       ],
       "symptoms": [
-        "Shortness of breath",
-        "Fatigue"
+        "Polyuria",
+        "Polydipsia",
+        "Fatigue",
+        "Shortness of breath"
       ],
       "extracted": {
         "conditions": [
@@ -123,13 +248,68 @@
           "40mg",
           "10mg"
         ],
-        "lab_values": {},
         "symptoms": [
           "Shortness of breath",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "amlodipine",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "simvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "lab values",
+            "confidence": 0.7
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "lab values",
+            "confidence": 0.7
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "lab values",
+            "confidence": 0.7
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "lab values",
+            "confidence": 0.7
+          },
+          {
+            "subject": "amlodipine",
+            "predicate": "increased",
+            "object": "10mg",
+            "confidence": 0.6
+          },
+          {
+            "subject": "simvastatin",
+            "predicate": "increased",
+            "object": "40mg",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.5,
+          "BP_systolic": 150,
+          "BP_diastolic": 100,
+          "eGFR": 55,
+          "LDL": 145
+        }
       }
     },
     {
@@ -144,18 +324,30 @@
         "LDL": 150
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg daily",
+        "Amlodipine 15mg daily",
+        "Simvastatin 40mg daily",
+        "Losartan 50mg daily",
         "losartan",
         "amlodipine",
         "50mg",
         "15mg"
       ],
       "diagnoses": [
-        "Hypertension"
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Heart Failure"
       ],
       "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Fatigue",
         "Shortness of breath",
-        "Edema",
-        "Fatigue"
+        "Swelling in legs",
+        "Edema"
       ],
       "extracted": {
         "conditions": [
@@ -167,14 +359,81 @@
           "50mg",
           "15mg"
         ],
-        "lab_values": {},
         "symptoms": [
-          "Shortness of breath",
           "Edema",
+          "Shortness of breath",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "Losartan",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "Amlodipine",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "lab values",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "lab values",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "lab values",
+            "confidence": 0.8
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "lab values",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Losartan",
+            "predicate": "contraindicated_with",
+            "object": "Amlodipine",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Edema",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.0,
+          "BP_systolic": 155,
+          "BP_diastolic": 105,
+          "eGFR": 45,
+          "LDL": 150
+        }
       }
     }
   ]

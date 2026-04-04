@@ -13,35 +13,72 @@
         "LDL": 130
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg daily",
         "metformin",
         "lisinopril",
         "500mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
-        "Polydipsia",
-        "Fatigue"
+        "Fatigue",
+        "Increased thirst",
+        "Polydipsia"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Type 2 Diabetes"
+          "Type 2 Diabetes",
+          "Hypertension"
         ],
         "medications": [
           "metformin",
           "lisinopril",
           "500mg"
         ],
-        "lab_values": {},
         "symptoms": [
           "Polydipsia",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "improves",
+            "object": "Metformin",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "improves",
+            "object": "Lisinopril",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.2
+        }
       }
     },
     {
@@ -61,24 +98,63 @@
         "Atorvastatin 20mg daily"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
         "Coronary Artery Disease"
       ],
       "symptoms": [
+        "Fatigue",
         "Shortness of breath",
-        "Fatigue"
+        "Chest pain"
       ],
       "extracted": {
         "conditions": [
           "Coronary Artery Disease"
         ],
         "medications": [],
-        "lab_values": {},
         "symptoms": [
           "Shortness of breath",
           "Fatigue"
         ],
-        "procedures": [],
-        "relationships": []
+        "procedures": [
+          "ECG"
+        ],
+        "relationships": [
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "managed_by",
+            "object": "ECG",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "ECG",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "indicates",
+            "object": "worsening glycemic control",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Shortness of breath",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.5
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.1
+        }
       }
     },
     {
@@ -103,20 +179,44 @@
         "Hypertension",
         "Hyperlipidemia",
         "Coronary Artery Disease",
-        "Chronic Kidney Disease"
+        "Chronic Kidney Disease",
+        "Diabetes",
+        "Kidney Disease"
       ],
       "symptoms": [
-        "Fatigue"
+        "Fatigue",
+        "Muscle weakness",
+        "Shortness of breath"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Diabetes",
+          "Kidney Disease"
+        ],
         "medications": [],
-        "lab_values": {},
         "symptoms": [
-          "Fatigue"
+          "Fatigue",
+          "Muscle Weakness"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "HbA1c",
+            "predicate": "improves",
+            "object": "Glycemic Control",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "worsens",
+            "object": "Kidney Function",
+            "confidence": 0.9
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.5,
+          "eGFR": 50
+        }
       }
     },
     {
@@ -143,22 +243,75 @@
         "Hyperlipidemia",
         "Coronary Artery Disease",
         "Chronic Kidney Disease",
-        "Anemia"
+        "Anemia",
+        "Diabetes Mellitus"
       ],
       "symptoms": [
         "Shortness of breath",
+        "Swelling in legs",
+        "Fatigue",
+        "Muscle weakness",
         "Edema"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Diabetes Mellitus",
+          "Chronic Kidney Disease"
+        ],
         "medications": [],
-        "lab_values": {},
         "symptoms": [
-          "Shortness of breath",
-          "Edema"
+          "Edema",
+          "Shortness of breath"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Diabetes Mellitus",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Diabetes Mellitus",
+            "predicate": "worsens",
+            "object": "Edema",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Diabetes Mellitus",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "Edema",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Diabetes Mellitus",
+            "confidence": 0.9
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.9
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.5,
+          "eGFR": 40
+        }
       }
     }
   ]

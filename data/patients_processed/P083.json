@@ -13,24 +13,27 @@
         "LDL": 160
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg QD",
         "metformin",
         "lisinopril",
         "500mg",
         "10mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
-        "Fatigue"
+        "Fatigue",
+        "Difficulty walking"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -38,12 +41,61 @@
           "500mg",
           "10mg"
         ],
-        "lab_values": {},
         "symptoms": [
-          "Fatigue"
+          "Fatigue",
+          "Difficulty walking"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Difficulty walking",
+            "predicate": "has_symptom",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.1,
+          "BP_systolic": 140,
+          "BP_diastolic": 90,
+          "LDL": 160
+        }
       }
     },
     {
@@ -58,35 +110,117 @@
         "LDL": 180
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Empagliflozin 10mg QD",
+        "Simvastatin 20mg QD",
+        "Lisinopril 10mg QD",
         "simvastatin",
         "10mg",
-        "20mg"
+        "20mg",
+        "Empagliflozin"
       ],
       "diagnoses": [
-        "Chronic Kidney Disease",
-        "Coronary Artery Disease"
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease"
       ],
       "symptoms": [
-        "Shortness of breath",
-        "Fatigue"
+        "Fatigue",
+        "Difficulty walking",
+        "Shortness of breath"
       ],
       "extracted": {
         "conditions": [
-          "Chronic Kidney Disease",
-          "Coronary Artery Disease"
+          "Coronary Artery Disease",
+          "Chronic Kidney Disease"
         ],
         "medications": [
           "simvastatin",
           "10mg",
-          "20mg"
+          "20mg",
+          "Empagliflozin"
         ],
-        "lab_values": {},
         "symptoms": [
           "Shortness of breath",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Empagliflozin",
+            "predicate": "managed_by",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Simvastatin",
+            "predicate": "managed_by",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Empagliflozin",
+            "predicate": "contraindicated_with",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Simvastatin",
+            "predicate": "contraindicated_with",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.7
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.9
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Shortness of breath",
+            "predicate": "has_symptom",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "worsens",
+            "object": "BP",
+            "confidence": 0.5
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "LDL",
+            "confidence": 0.5
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.5,
+          "BP_systolic": 150,
+          "BP_diastolic": 95,
+          "LDL": 180
+        }
       }
     },
     {
@@ -101,33 +235,95 @@
         "LDL": 140
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Empagliflozin 10mg QD",
+        "Simvastatin 20mg QD",
+        "Lisinopril 10mg QD",
+        "Sacubitril/Valsartan 24mg/26mg QD",
+        "Allopurinol 100mg QD",
         "24mg",
         "26mg",
-        "100mg"
+        "100mg",
+        "Sacubitril/Valsartan",
+        "Allopurinol"
       ],
       "diagnoses": [
-        "Heart Failure"
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease",
+        "Heart Failure",
+        "Gout"
       ],
       "symptoms": [
+        "Fatigue",
+        "Difficulty walking",
         "Shortness of breath",
+        "Swelling in the legs",
         "Edema"
       ],
       "extracted": {
         "conditions": [
-          "Heart Failure"
+          "Heart Failure",
+          "Gout"
         ],
         "medications": [
           "24mg",
           "26mg",
-          "100mg"
+          "100mg",
+          "Sacubitril/Valsartan",
+          "Allopurinol"
         ],
-        "lab_values": {},
         "symptoms": [
-          "Shortness of breath",
-          "Edema"
+          "Edema",
+          "Shortness of breath"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Sacubitril/Valsartan",
+            "predicate": "managed_by",
+            "object": "Heart Failure",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Allopurinol",
+            "predicate": "managed_by",
+            "object": "Gout",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "LDL",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "LDL",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Shortness of breath",
+            "predicate": "worsens",
+            "object": "Heart Failure",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Edema",
+            "predicate": "worsens",
+            "object": "Heart Failure",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.5,
+          "BP_systolic": 160,
+          "BP_diastolic": 100,
+          "LDL": 140
+        }
       }
     },
     {
@@ -142,8 +338,18 @@
         "LDL": 150
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Empagliflozin 10mg QD",
+        "Simvastatin 20mg QD",
+        "Lisinopril 10mg QD",
+        "Sacubitril/Valsartan 24mg/26mg QD",
+        "Allopurinol 100mg QD",
+        "Tolvaptan 15mg QD",
+        "Pioglitazone 30mg QD",
         "15mg",
-        "30mg"
+        "30mg",
+        "Tolvaptan",
+        "Pioglitazone"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -156,20 +362,83 @@
         "Diabetic Nephropathy"
       ],
       "symptoms": [
-        "Fatigue"
+        "Fatigue",
+        "Difficulty walking",
+        "Shortness of breath",
+        "Swelling in the legs",
+        "Difficulty breathing"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Diabetic Nephropathy"
+        ],
         "medications": [
           "15mg",
-          "30mg"
+          "30mg",
+          "Tolvaptan",
+          "Pioglitazone"
         ],
-        "lab_values": {},
         "symptoms": [
-          "Fatigue"
+          "Fatigue",
+          "Difficulty breathing"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Diabetic Nephropathy",
+            "predicate": "managed_by",
+            "object": "Tolvaptan",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Diabetic Nephropathy",
+            "predicate": "managed_by",
+            "object": "Pioglitazone",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Difficulty breathing",
+            "confidence": 0.7
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "LDL",
+            "confidence": 0.6
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "BP",
+            "confidence": 0.6
+          },
+          {
+            "subject": "LDL",
+            "predicate": "contraindicated_with",
+            "object": "Diabetic Nephropathy",
+            "confidence": 0.5
+          },
+          {
+            "subject": "Diabetic Nephropathy",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Diabetic Nephropathy",
+            "predicate": "worsens",
+            "object": "Difficulty breathing",
+            "confidence": 0.9
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 9.0,
+          "BP_systolic": 165,
+          "BP_diastolic": 105,
+          "LDL": 150
+        }
       }
     }
   ]

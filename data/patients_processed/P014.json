@@ -7,11 +7,14 @@
       "note": "Initial evaluation for new patient with hypertension and hyperlipidemia. Patient reports fatigue and shortness of breath. BP 140/90, HbA1c 7.2, eGFR 72, LDL 130. Patient started on lisinopril 10mg and simvastatin 20mg.",
       "labs": {
         "HbA1c": 7.2,
-        "BP": "140/90",
-        "eGFR": 72.0,
-        "LDL": 130.0
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
       },
       "medications": [
+        "Lisinopril 10mg",
+        "Simvastatin 20mg",
         "lisinopril",
         "simvastatin",
         "10mg",
@@ -22,13 +25,13 @@
         "Hyperlipidemia"
       ],
       "symptoms": [
-        "Shortness of breath",
-        "Fatigue"
+        "Fatigue",
+        "Shortness of breath"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Hyperlipidemia"
+          "Hyperlipidemia",
+          "Hypertension"
         ],
         "medications": [
           "lisinopril",
@@ -36,18 +39,74 @@
           "10mg",
           "20mg"
         ],
-        "lab_values": {
-          "HbA1c": 7.2,
-          "BP": "140/90",
-          "eGFR": 72.0,
-          "LDL": 130.0
-        },
         "symptoms": [
           "Shortness of breath",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "simvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "lisinopril",
+            "predicate": "contraindicated_with",
+            "object": "BP",
+            "confidence": 0.7
+          },
+          {
+            "subject": "BP",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
+            "confidence": 0.6
+          },
+          {
+            "subject": "BP",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.2,
+          "BP_systolic": 140,
+          "BP_diastolic": 90,
+          "eGFR": 72.0,
+          "LDL": 130.0
+        }
       }
     },
     {
@@ -56,11 +115,14 @@
       "note": "Follow-up visit to assess lab trends. Patient reports worsening fatigue and recent onset of leg swelling. BP 145/95, HbA1c 8.1, eGFR 65, LDL 145. Due to elevated HbA1c, patient's simvastatin dose increased to 40mg. Lisinopril increased to 20mg.",
       "labs": {
         "HbA1c": 8.1,
-        "BP": "145/95",
-        "eGFR": 65.0,
-        "LDL": 145.0
+        "BP_systolic": 145,
+        "BP_diastolic": 95,
+        "eGFR": 65,
+        "LDL": 145
       },
       "medications": [
+        "Lisinopril 20mg",
+        "Simvastatin 40mg",
         "lisinopril",
         "simvastatin",
         "40mg",
@@ -69,32 +131,69 @@
       "diagnoses": [
         "Hypertension",
         "Hyperlipidemia",
-        "Chronic Kidney Disease (Stage 3)"
+        "Chronic Kidney Disease (Stage 3)",
+        "Diabetes"
       ],
       "symptoms": [
-        "Edema",
-        "Fatigue"
+        "Fatigue",
+        "Shortness of breath",
+        "Leg swelling",
+        "Edema"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Diabetes"
+        ],
         "medications": [
           "lisinopril",
           "simvastatin",
           "40mg",
           "20mg"
         ],
-        "lab_values": {
-          "HbA1c": 8.1,
-          "BP": "145/95",
-          "eGFR": 65.0,
-          "LDL": 145.0
-        },
         "symptoms": [
           "Edema",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "HbA1c",
+            "predicate": "managed_by",
+            "object": "simvastatin",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "lab trends",
+            "confidence": 0.7
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.6
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "worsens",
+            "object": "Edema",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.1,
+          "BP_systolic": 145,
+          "BP_diastolic": 95,
+          "eGFR": 65.0,
+          "LDL": 145.0
+        }
       }
     },
     {
@@ -103,45 +202,54 @@
       "note": "Follow-up visit to reassess lab trends and manage chronic kidney disease. Patient reports continued fatigue, shortness of breath, and leg swelling. BP 150/100, HbA1c 9.0, eGFR 55, LDL 160. Due to declining eGFR, patient started on erythropoietin for anemia management. Lisinopril and simvastatin doses remain the same.",
       "labs": {
         "HbA1c": 9.0,
-        "BP": "150/100",
-        "eGFR": 55.0,
-        "LDL": 160.0
+        "BP_systolic": 150,
+        "BP_diastolic": 100,
+        "eGFR": 55,
+        "LDL": 160
       },
       "medications": [
+        "Lisinopril 20mg",
+        "Simvastatin 40mg",
+        "Erythropoietin 5000 units weekly",
         "lisinopril",
         "simvastatin"
       ],
       "diagnoses": [
-        "Chronic Kidney Disease",
-        "Anemia"
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease (Stage 4)",
+        "Anemia",
+        "Chronic Kidney Disease"
       ],
       "symptoms": [
+        "Fatigue",
         "Shortness of breath",
-        "Edema",
-        "Fatigue"
+        "Leg swelling",
+        "Edema"
       ],
       "extracted": {
         "conditions": [
-          "Chronic Kidney Disease",
-          "Anemia"
+          "Anemia",
+          "Chronic Kidney Disease"
         ],
         "medications": [
           "lisinopril",
           "simvastatin"
         ],
-        "lab_values": {
-          "HbA1c": 9.0,
-          "BP": "150/100",
-          "eGFR": 55.0,
-          "LDL": 160.0
-        },
         "symptoms": [
-          "Shortness of breath",
           "Edema",
+          "Shortness of breath",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [],
+        "lab_values": {
+          "HbA1c": 9.0,
+          "BP_systolic": 150,
+          "BP_diastolic": 100,
+          "eGFR": 55.0,
+          "LDL": 160.0
+        }
       }
     }
   ]

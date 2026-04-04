@@ -13,33 +13,79 @@
         "LDL": 145
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Atorvastatin 20mg daily",
         "metformin",
-        "145 mg"
+        "145 mg",
+        "statin"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
-        "Fatigue"
+        "Fatigue",
+        "Decreased exercise tolerance"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
         "medications": [
           "metformin",
-          "145 mg"
+          "145 mg",
+          "statin"
         ],
-        "lab_values": {},
         "symptoms": [
-          "Fatigue"
+          "Fatigue",
+          "Decreased exercise tolerance"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "metformin",
+            "predicate": "adjusted_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "statin",
+            "predicate": "prescribed_for",
+            "object": "Hyperlipidemia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "metformin",
+            "predicate": "contraindicated_with",
+            "object": "statin",
+            "confidence": 0.7
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.6
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Decreased exercise tolerance",
+            "confidence": 0.5
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.8,
+          "LDL": 145
+        }
       }
     },
     {
@@ -54,6 +100,9 @@
         "LDL": 160
       },
       "medications": [
+        "Metformin 1000mg BID",
+        "Atorvastatin 40mg daily",
+        "Lisinopril 10mg daily",
         "160 mg"
       ],
       "diagnoses": [
@@ -63,21 +112,22 @@
         "Coronary Artery Disease"
       ],
       "symptoms": [
+        "Fatigue",
         "Shortness of breath",
-        "Fatigue"
+        "Decreased exercise tolerance"
       ],
       "extracted": {
         "conditions": [],
         "medications": [
           "160 mg"
         ],
-        "lab_values": {},
         "symptoms": [
           "Shortness of breath",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [],
+        "lab_values": {}
       }
     },
     {
@@ -92,6 +142,9 @@
         "LDL": 120
       },
       "medications": [
+        "Metformin 1000mg BID",
+        "Atorvastatin 40mg daily",
+        "Lisinopril 20mg daily",
         "120 mg"
       ],
       "diagnoses": [
@@ -102,7 +155,9 @@
         "Chronic Kidney Disease"
       ],
       "symptoms": [
+        "Decreased fatigue",
         "Shortness of breath",
+        "Decreased exercise tolerance",
         "Fatigue"
       ],
       "extracted": {
@@ -110,13 +165,13 @@
         "medications": [
           "120 mg"
         ],
-        "lab_values": {},
         "symptoms": [
           "Shortness of breath",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [],
+        "lab_values": {}
       }
     }
   ]

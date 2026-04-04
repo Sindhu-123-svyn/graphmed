@@ -5,13 +5,14 @@ Phase 2: Process all patients through extraction pipeline
 import os
 import json
 from pathlib import Path
-from src.extraction import process_patient_visits
+from src.extraction import process_patient_visits, extract_entities
 import time
 
 def process_all_patients(input_dir: str = "data/patients", 
                          output_dir: str = "data/patients_processed",
                          use_llm: bool = True,
-                         limit: int = None):
+                         limit: int = None,
+                         rate_limit_sleep: float = 0.5):
     """
     Process all patient files and add extracted entities.
     
@@ -20,16 +21,27 @@ def process_all_patients(input_dir: str = "data/patients",
         output_dir: Directory to save processed files
         use_llm: Whether to use LLM for extraction
         limit: Maximum number of patients to process
+        rate_limit_sleep: Delay between patients when using LLM
     """
     
     # Create output directory
     os.makedirs(output_dir, exist_ok=True)
     
     # Get all patient files
-    patient_files = list(Path(input_dir).glob("*.json"))
+    patient_files = sorted(Path(input_dir).glob("*.json"))
     
-    if limit:
+    if limit is not None:
         patient_files = patient_files[:limit]
+
+    if not patient_files:
+        print(f"No patient files found in {input_dir}")
+        return {
+            "processed": 0,
+            "total": 0,
+            "errors": [],
+            "total_relationships": 0,
+            "total_procedures": 0
+        }
     
     print(f"\n{'='*60}")
     print(f"📊 PHASE 2: NLP EXTRACTION PIPELINE")
@@ -42,6 +54,8 @@ def process_all_patients(input_dir: str = "data/patients",
     
     processed = 0
     errors = []
+    total_relationships = 0
+    total_procedures = 0
     
     for file_path in patient_files:
         try:
@@ -60,11 +74,19 @@ def process_all_patients(input_dir: str = "data/patients",
                 json.dump(processed_data, f, indent=2, ensure_ascii=False)
             
             processed += 1
-            print(f"✅ ({len(processed_data['visits'])} visits, {sum(len(v.get('extracted', {}).get('conditions', [])) for v in processed_data['visits'])} conditions extracted)")
+            relationship_count = sum(len(v.get('extracted', {}).get('relationships', [])) for v in processed_data['visits'])
+            procedure_count = sum(len(v.get('extracted', {}).get('procedures', [])) for v in processed_data['visits'])
+            total_relationships += relationship_count
+            total_procedures += procedure_count
+            print(
+                f"✅ ({len(processed_data['visits'])} visits, "
+                f"{sum(len(v.get('extracted', {}).get('conditions', [])) for v in processed_data['visits'])} conditions, "
+                f"{relationship_count} relationships)"
+            )
             
             # Small delay to respect rate limits if using LLM
             if use_llm:
-                time.sleep(0.1)
+                time.sleep(rate_limit_sleep)
                 
         except Exception as e:
             errors.append((file_path.name, str(e)))
@@ -75,12 +97,35 @@ def process_all_patients(input_dir: str = "data/patients",
     print(f"{'='*60}")
     print(f"✅ Processed: {processed}/{len(patient_files)}")
     print(f"❌ Errors: {len(errors)}")
+    print(f"🔗 Total relationships extracted: {total_relationships}")
+    print(f"🛠️  Total procedures extracted: {total_procedures}")
     if errors:
         print("Errors:")
         for err_file, err_msg in errors[:5]:
             print(f"  - {err_file}: {err_msg}")
     print(f"📁 Location: {output_dir}")
     print(f"{'='*60}")
+
+    return {
+        "processed": processed,
+        "total": len(patient_files),
+        "errors": errors,
+        "total_relationships": total_relationships,
+        "total_procedures": total_procedures
+    }
+
+
+def quick_test_extraction(use_llm: bool = False):
+    """Quick extraction smoke test with a representative clinical note."""
+    note = (
+        "Patient with Type 2 Diabetes on Metformin 500mg reports fatigue and shortness "
+        "of breath. HbA1c 8.1 and BP 150/95. Plan to increase metformin and monitor kidneys."
+    )
+    print("\nQuick test note:")
+    print(f"  {note}")
+    result = extract_entities(note, use_llm=use_llm)
+    print("\nExtraction result:")
+    print(json.dumps(result, indent=2, ensure_ascii=False))
 
 def show_sample_extraction(patient_id: str = "P001"):
     """Show a sample extraction result."""
@@ -149,8 +194,8 @@ def main():
     choice = input("\nEnter choice (1-6): ").strip()
     
     if choice == "1":
-        from src.extraction import test_extraction
-        test_extraction()
+        print("\nRunning quick extraction test (rule-based)...")
+        quick_test_extraction(use_llm=False)
         
     elif choice == "2":
         confirm = input("\nProcess all patients with rule-based extraction? (y/n): ")
@@ -182,8 +227,7 @@ def main():
         
     else:
         print("Invalid choice. Running test...")
-        from src.extraction import test_extraction
-        test_extraction()
+        quick_test_extraction(use_llm=False)
 
 if __name__ == "__main__":
     main()

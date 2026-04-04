@@ -13,24 +13,27 @@
         "LDL": 160
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg QD",
         "metformin",
         "lisinopril",
         "500mg",
         "10mg"
       ],
       "diagnoses": [
-        "Hypertension",
-        "Type 2 Diabetes"
+        "Type 2 Diabetes",
+        "Hypertension"
       ],
       "symptoms": [
         "Shortness of breath",
-        "Edema",
-        "Fatigue"
+        "Fatigue",
+        "Bilateral edema",
+        "Edema"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Type 2 Diabetes"
+          "Type 2 Diabetes",
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -38,14 +41,45 @@
           "500mg",
           "10mg"
         ],
-        "lab_values": {},
         "symptoms": [
-          "Shortness of breath",
           "Edema",
+          "Shortness of breath",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "dietary counseling",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "dietary counseling",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Metformin",
+            "predicate": "contraindicated_with",
+            "object": "Lisinopril",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Edema",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Edema",
+            "confidence": 0.9
+          }
+        ],
+        "lab_values": {}
       }
     },
     {
@@ -60,6 +94,9 @@
         "LDL": 170
       },
       "medications": [
+        "Metformin 750mg BID",
+        "Lisinopril 10mg QD",
+        "Amlodipine 5mg QD",
         "metformin",
         "amlodipine",
         "750mg",
@@ -68,27 +105,67 @@
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia"
+        "Hyperlipidemia",
+        "diabetes"
       ],
       "symptoms": [
-        "Edema",
-        "Fatigue"
+        "Shortness of breath",
+        "Fatigue",
+        "Bilateral edema",
+        "Decreased exercise tolerance",
+        "Edema"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "diabetes",
+          "hypertension"
+        ],
         "medications": [
           "metformin",
           "amlodipine",
           "750mg",
           "5mg"
         ],
-        "lab_values": {},
         "symptoms": [
           "Edema",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "metformin",
+            "predicate": "managed_by",
+            "object": "amlodipine",
+            "confidence": 0.8
+          },
+          {
+            "subject": "amlodipine",
+            "predicate": "measured_by",
+            "object": "BP",
+            "confidence": 0.7
+          },
+          {
+            "subject": "metformin",
+            "predicate": "contraindicated_with",
+            "object": "edema",
+            "confidence": 0.6
+          },
+          {
+            "subject": "amlodipine",
+            "predicate": "improves",
+            "object": "BP",
+            "confidence": 0.9
+          },
+          {
+            "subject": "metformin",
+            "predicate": "worsens",
+            "object": "edema",
+            "confidence": 0.5
+          }
+        ],
+        "lab_values": {
+          "HbA1c": "elevated"
+        }
       }
     },
     {
@@ -100,9 +177,14 @@
         "BP_systolic": 162,
         "BP_diastolic": 94,
         "eGFR": 58,
-        "LDL": 180
+        "LDL": 180,
+        "ejection fraction": 45
       },
       "medications": [
+        "Metformin 750mg BID",
+        "Lisinopril 10mg QD",
+        "Amlodipine 10mg QD",
+        "Metoprolol 25mg BID",
         "metoprolol",
         "amlodipine",
         "25mg",
@@ -112,25 +194,101 @@
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
-        "Coronary Artery Disease"
+        "Coronary Artery Disease",
+        "diabetes"
       ],
       "symptoms": [
-        "Chest pain"
+        "Shortness of breath",
+        "Fatigue",
+        "Bilateral edema",
+        "Decreased exercise tolerance",
+        "Chest pain",
+        "Palpitations",
+        "jugular venous distension"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "hypertension",
+          "diabetes"
+        ],
         "medications": [
           "metoprolol",
           "amlodipine",
           "25mg",
           "10mg"
         ],
-        "lab_values": {},
         "symptoms": [
-          "Chest pain"
+          "Chest pain",
+          "palpitations",
+          "jugular venous distension"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metoprolol",
+            "predicate": "managed_by",
+            "object": "hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Amlodipine",
+            "predicate": "managed_by",
+            "object": "hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Metoprolol",
+            "predicate": "contraindicated_with",
+            "object": "Amlodipine",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "elevated",
+            "confidence": 0.7
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "elevated",
+            "confidence": 0.7
+          },
+          {
+            "subject": "ejection fraction",
+            "predicate": "measured_by",
+            "object": "45%",
+            "confidence": 0.7
+          },
+          {
+            "subject": "chest pain",
+            "predicate": "has_symptom",
+            "object": "palpitations",
+            "confidence": 0.6
+          },
+          {
+            "subject": "chest pain",
+            "predicate": "has_symptom",
+            "object": "jugular venous distension",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Metoprolol",
+            "predicate": "improves",
+            "object": "ejection fraction",
+            "confidence": 0.5
+          },
+          {
+            "subject": "Amlodipine",
+            "predicate": "worsens",
+            "object": "ejection fraction",
+            "confidence": 0.5
+          }
+        ],
+        "lab_values": {
+          "HbA1c": "elevated",
+          "ejection fraction": 45
+        }
       }
     },
     {
@@ -145,37 +303,98 @@
         "LDL": 190
       },
       "medications": [
+        "Metformin 750mg BID",
+        "Lisinopril 20mg QD",
+        "Amlodipine 10mg QD",
+        "Metoprolol 25mg BID",
+        "Eplerenone 25mg QD",
         "lisinopril",
         "25mg",
-        "20mg"
+        "20mg",
+        "eplerenone"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
         "Coronary Artery Disease",
-        "Chronic Kidney Disease"
+        "Chronic Kidney Disease",
+        "Diabetes"
       ],
       "symptoms": [
         "Shortness of breath",
-        "Edema",
-        "Fatigue"
+        "Fatigue",
+        "Bilateral edema",
+        "Decreased exercise tolerance",
+        "Chest pain",
+        "Palpitations",
+        "Edema"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Diabetes",
+          "Chronic Kidney Disease"
+        ],
         "medications": [
           "lisinopril",
           "25mg",
-          "20mg"
+          "20mg",
+          "eplerenone"
         ],
-        "lab_values": {},
         "symptoms": [
-          "Shortness of breath",
           "Edema",
+          "Shortness of breath",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "eplerenone",
+            "predicate": "managed_by",
+            "object": "BP",
+            "confidence": 0.8
+          },
+          {
+            "subject": "lisinopril",
+            "predicate": "managed_by",
+            "object": "BP",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eplerenone",
+            "predicate": "managed_by",
+            "object": "eGFR",
+            "confidence": 0.7
+          },
+          {
+            "subject": "lisinopril",
+            "predicate": "managed_by",
+            "object": "eGFR",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Shortness of breath",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Edema",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": "elevated",
+          "eGFR": 45
+        }
       }
     },
     {
@@ -190,7 +409,14 @@
         "LDL": 200
       },
       "medications": [
-        "50mg"
+        "Metformin 750mg BID",
+        "Lisinopril 20mg QD",
+        "Amlodipine 10mg QD",
+        "Metoprolol 25mg BID",
+        "Eplerenone 50mg QD",
+        "Hemodialysis",
+        "50mg",
+        "Eplerenone"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -198,24 +424,71 @@
         "Hyperlipidemia",
         "Coronary Artery Disease",
         "Chronic Kidney Disease",
-        "End-Stage Renal Disease"
+        "End-Stage Renal Disease",
+        "Diabetes"
       ],
       "symptoms": [
-        "Edema",
-        "Fatigue"
+        "Shortness of breath",
+        "Fatigue",
+        "Bilateral edema",
+        "Decreased exercise tolerance",
+        "Chest pain",
+        "Palpitations",
+        "Edema"
       ],
       "extracted": {
-        "conditions": [],
-        "medications": [
-          "50mg"
+        "conditions": [
+          "Diabetes",
+          "Chronic Kidney Disease"
         ],
-        "lab_values": {},
+        "medications": [
+          "50mg",
+          "Eplerenone"
+        ],
         "symptoms": [
           "Edema",
-          "Fatigue"
+          "Fatigue",
+          "Decreased exercise tolerance"
         ],
-        "procedures": [],
-        "relationships": []
+        "procedures": [
+          "Hemodialysis"
+        ],
+        "relationships": [
+          {
+            "subject": "Eplerenone",
+            "predicate": "managed_by",
+            "object": "Physician",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hemodialysis",
+            "predicate": "measured_by",
+            "object": "eGFR",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Eplerenone",
+            "predicate": "contraindicated_with",
+            "object": "Hemodialysis",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hemodialysis",
+            "predicate": "improves",
+            "object": "eGFR",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Eplerenone",
+            "predicate": "worsens",
+            "object": "BP",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": "elevated",
+          "eGFR": 38
+        }
       }
     }
   ]

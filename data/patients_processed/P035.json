@@ -18,6 +18,7 @@
         "Amlodipine 5mg daily"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia"
       ],
@@ -27,14 +28,48 @@
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Hyperlipidemia"
+          "Hyperlipidemia",
+          "Hypertension"
         ],
         "medications": [],
-        "lab_values": {},
         "symptoms": [],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "lifestyle modifications",
+            "confidence": 1.0
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "managed_by",
+            "object": "lifestyle modifications",
+            "confidence": 1.0
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "labs",
+            "confidence": 1.0
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "labs",
+            "confidence": 1.0
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "labs",
+            "confidence": 1.0
+          }
+        ],
+        "lab_values": {
+          "HbA1c": "elevated",
+          "LDL": "elevated"
+        }
       }
     },
     {
@@ -55,24 +90,68 @@
         "Amlodipine 5mg daily"
       ],
       "diagnoses": [
-        "Hyperlipidemia"
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease"
       ],
       "symptoms": [
+        "Fatigue",
         "Polyuria",
-        "Fatigue"
+        "Weight loss"
       ],
       "extracted": {
         "conditions": [
           "Hyperlipidemia"
         ],
         "medications": [],
-        "lab_values": {},
         "symptoms": [
           "Polyuria",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "BP",
+            "predicate": "remains controlled",
+            "object": "None",
+            "confidence": 1.0
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "labs",
+            "confidence": 0.9
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "labs",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "managed_by",
+            "object": "medications",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Polyuria",
+            "confidence": 0.7
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "worsens",
+            "object": "eGFR",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": "elevated",
+          "eGFR": "worsening"
+        }
       }
     },
     {
@@ -94,22 +173,70 @@
         "Furosemide 20mg daily"
       ],
       "diagnoses": [
-        "Hyperlipidemia"
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease"
       ],
       "symptoms": [
-        "Polyuria"
+        "Fatigue",
+        "Polyuria",
+        "Weight loss",
+        "Dyspnea"
       ],
       "extracted": {
         "conditions": [
           "Hyperlipidemia"
         ],
         "medications": [],
-        "lab_values": {},
         "symptoms": [
-          "Polyuria"
+          "Polyuria",
+          "weight loss"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "labs",
+            "confidence": 0.9
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "labs",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "remains_controlled",
+            "object": "BP",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "stable",
+            "object": "Hyperlipidemia",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Polyuria",
+            "predicate": "has_symptom",
+            "object": "weight loss",
+            "confidence": 0.6
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "worsens",
+            "object": "eGFR",
+            "confidence": 0.5
+          }
+        ],
+        "lab_values": {
+          "HbA1c": "elevated",
+          "eGFR": "worsening"
+        }
       }
     },
     {
@@ -132,22 +259,77 @@
         "Enalapril 10mg daily"
       ],
       "diagnoses": [
-        "Hyperlipidemia"
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease",
+        "Cardiac Failure",
+        "Diabetes"
       ],
       "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Weight loss",
+        "Dyspnea",
+        "Orthopnea",
         "Shortness of breath"
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia"
+          "Hyperlipidemia",
+          "Diabetes",
+          "Chronic kidney disease"
         ],
         "medications": [],
-        "lab_values": {},
         "symptoms": [
-          "Shortness of breath"
+          "Shortness of breath",
+          "Dyspnea",
+          "Weight loss"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "BP",
+            "predicate": "managed_by",
+            "object": "medication",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "lab_test",
+            "confidence": 0.9
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "lab_test",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Dyspnea",
+            "predicate": "has_symptom",
+            "object": "Shortness of breath",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Dyspnea",
+            "predicate": "worsens",
+            "object": "Hyperlipidemia",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Weight loss",
+            "predicate": "worsens",
+            "object": "Hyperlipidemia",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": "elevated",
+          "eGFR": "worsening"
+        }
       }
     },
     {
@@ -171,7 +353,14 @@
         "Spironolactone 25mg daily"
       ],
       "diagnoses": [
-        "Hyperlipidemia"
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease",
+        "Cardiac Failure",
+        "Heart Failure with Reduced Ejection Fraction",
+        "Diabetes"
       ],
       "symptoms": [
         "Fatigue",
@@ -183,13 +372,64 @@
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia"
+          "Hyperlipidemia",
+          "Diabetes",
+          "Chronic Kidney Disease"
         ],
         "medications": [],
-        "lab_values": {},
-        "symptoms": [],
+        "symptoms": [
+          "orthopnea",
+          "weight loss"
+        ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "labs",
+            "confidence": 1.0
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "labs",
+            "confidence": 1.0
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "labs",
+            "confidence": 1.0
+          },
+          {
+            "subject": "orthopnea",
+            "predicate": "has_symptom",
+            "object": "weight loss",
+            "confidence": 1.0
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "managed_by",
+            "object": "stable",
+            "confidence": 1.0
+          },
+          {
+            "subject": "Diabetes",
+            "predicate": "managed_by",
+            "object": "elevated HbA1c",
+            "confidence": 1.0
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "managed_by",
+            "object": "worsening eGFR",
+            "confidence": 1.0
+          }
+        ],
+        "lab_values": {
+          "HbA1c": "elevated",
+          "eGFR": "worsening"
+        }
       }
     }
   ]

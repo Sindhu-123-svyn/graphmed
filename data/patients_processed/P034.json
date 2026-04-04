@@ -13,6 +13,7 @@
         "LDL": 150
       },
       "medications": [
+        "Metformin 500mg BID",
         "metformin",
         "500mg"
       ],
@@ -20,8 +21,8 @@
         "Type 2 Diabetes"
       ],
       "symptoms": [
-        "Polyuria",
-        "Fatigue"
+        "Fatigue",
+        "Polyuria"
       ],
       "extracted": {
         "conditions": [
@@ -31,13 +32,40 @@
           "metformin",
           "500mg"
         ],
-        "lab_values": {},
         "symptoms": [
           "Polyuria",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Polyuria",
+            "predicate": "has_symptom",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.5
+        }
       }
     },
     {
@@ -45,31 +73,83 @@
       "date": "2022-12-20",
       "note": "Patient returns with worsening fatigue and increased urination. Physical exam reveals blood pressure 140/90. HbA1c now 9.1, indicating uncontrolled diabetes. LDL also elevated at 180. BP medication added.",
       "labs": {
-        "BP": "140/90"
+        "HbA1c": 9.1,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 180
       },
       "medications": [
         "Metformin 500mg BID",
-        "Lisinopril 10mg daily"
+        "Lisinopril 10mg daily",
+        "BP medication"
       ],
       "diagnoses": [
-        "Type 2 Diabetes"
+        "Type 2 Diabetes",
+        "Hypertension"
       ],
       "symptoms": [
-        "Fatigue"
+        "Fatigue",
+        "Polyuria",
+        "Headache",
+        "Increased urination"
       ],
       "extracted": {
         "conditions": [
           "Type 2 Diabetes"
         ],
-        "medications": [],
-        "lab_values": {
-          "BP": "140/90"
-        },
+        "medications": [
+          "BP medication"
+        ],
         "symptoms": [
-          "Fatigue"
+          "Fatigue",
+          "Increased urination"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "BP medication",
+            "predicate": "managed_by",
+            "object": "BP",
+            "confidence": 1.0
+          },
+          {
+            "subject": "BP medication",
+            "predicate": "contraindicated_with",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 1.0
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 1.0
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Increased urination",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "worsens",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "BP_systolic": 140,
+          "BP_diastolic": 90,
+          "HbA1c": 9.1,
+          "LDL": 180
+        }
       }
     },
     {
@@ -84,31 +164,82 @@
         "LDL": 120
       },
       "medications": [
-        "metformin"
+        "Metformin 1000mg BID",
+        "Lisinopril 20mg daily",
+        "Atorvastatin 20mg daily",
+        "metformin",
+        "statin"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
         "Chronic Kidney Disease"
       ],
       "symptoms": [
-        "Shortness of breath",
+        "Fatigue",
         "Polyuria",
-        "Fatigue"
+        "Headache",
+        "Shortness of breath",
+        "Bilateral wheezes"
       ],
       "extracted": {
         "conditions": [
           "Chronic Kidney Disease"
         ],
         "medications": [
-          "metformin"
+          "metformin",
+          "statin"
         ],
-        "lab_values": {},
         "symptoms": [
           "Shortness of breath",
           "Polyuria",
-          "Fatigue"
+          "Fatigue",
+          "Bilateral wheezes"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "metformin",
+            "predicate": "improves",
+            "object": "HbA1c",
+            "confidence": 0.9
+          },
+          {
+            "subject": "statin",
+            "predicate": "managed_by",
+            "object": "CKD",
+            "confidence": 0.8
+          },
+          {
+            "subject": "CKD",
+            "predicate": "worsens",
+            "object": "eGFR",
+            "confidence": 0.7
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "CKD",
+            "confidence": 0.6
+          },
+          {
+            "subject": "metformin",
+            "predicate": "contraindicated_with",
+            "object": "CKD",
+            "confidence": 0.5
+          },
+          {
+            "subject": "CKD",
+            "predicate": "has_symptom",
+            "object": "Bilateral wheezes",
+            "confidence": 0.4
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.8,
+          "eGFR": 60
+        }
       }
     },
     {
@@ -132,24 +263,73 @@
         "Hypertension",
         "Hyperlipidemia",
         "Chronic Kidney Disease",
-        "Coronary Artery Disease"
+        "Coronary Artery Disease",
+        "Diabetes Mellitus"
       ],
       "symptoms": [
+        "Fatigue",
         "Polyuria",
-        "Edema",
-        "Fatigue"
+        "Headache",
+        "Shortness of breath",
+        "Swelling in lower extremities",
+        "Edema"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Diabetes Mellitus",
+          "Chronic Kidney Disease"
+        ],
         "medications": [],
-        "lab_values": {},
         "symptoms": [
-          "Polyuria",
           "Edema",
+          "Polyuria",
           "Fatigue"
         ],
-        "procedures": [],
-        "relationships": []
+        "procedures": [
+          "Renal Referral"
+        ],
+        "relationships": [
+          {
+            "subject": "Diabetes Mellitus",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "declined",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "remains",
+            "object": "Diabetes Mellitus",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Polyuria",
+            "predicate": "has_symptom",
+            "object": "Diabetes Mellitus",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Diabetes Mellitus",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Edema",
+            "predicate": "has_symptom",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.8
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.8,
+          "eGFR": 45
+        }
       }
     }
   ]

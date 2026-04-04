@@ -7,11 +7,15 @@
       "note": "Patient presents with chief complaint of fatigue and increased thirst. Physical exam reveals obesity, BP 140/90, and 1+ pitting edema in bilateral lower extremities. Initial labs show HbA1c 7.8, BP_systolic 140, eGFR 65, and LDL 145. Diagnoses include Type 2 Diabetes, Hypertension, and Hyperlipidemia. Medications initiated: Metformin 500mg BID, Lisinopril 10mg QD, and Atorvastatin 20mg QD. Symptoms include polyuria, polydipsia, and fatigue.",
       "labs": {
         "HbA1c": 7.8,
-        "BP": "140/90",
-        "eGFR": 65.0,
-        "LDL": 145.0
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 65,
+        "LDL": 145
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg QD",
+        "Atorvastatin 20mg QD",
         "metformin",
         "lisinopril",
         "atorvastatin",
@@ -20,21 +24,21 @@
         "20mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
-        "Polydipsia",
-        "Polyuria",
-        "Edema",
-        "Fatigue"
+        "polyuria",
+        "polydipsia",
+        "fatigue",
+        "Edema"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -44,20 +48,118 @@
           "10mg",
           "20mg"
         ],
-        "lab_values": {
-          "HbA1c": 7.8,
-          "BP": "140/90",
-          "eGFR": 65.0,
-          "LDL": 145.0
-        },
         "symptoms": [
           "Polydipsia",
           "Polyuria",
-          "Edema",
-          "Fatigue"
+          "Fatigue",
+          "Edema"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "metformin",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "managed_by",
+            "object": "atorvastatin",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "has_symptom",
+            "object": "Polydipsia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "has_symptom",
+            "object": "Polyuria",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "has_symptom",
+            "object": "Fatigue",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Edema",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP_systolic",
+            "predicate": "measured_by",
+            "object": "BP_systolic",
+            "confidence": 0.7
+          },
+          {
+            "subject": "BP_diastolic",
+            "predicate": "measured_by",
+            "object": "BP_diastolic",
+            "confidence": 0.7
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "eGFR",
+            "confidence": 0.7
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "LDL",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "contraindicated_with",
+            "object": "Edema",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "improves",
+            "object": "metformin",
+            "confidence": 0.5
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "improves",
+            "object": "lisinopril",
+            "confidence": 0.5
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "improves",
+            "object": "atorvastatin",
+            "confidence": 0.5
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Edema",
+            "confidence": 0.4
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.8,
+          "BP_systolic": 140,
+          "BP_diastolic": 90,
+          "eGFR": 65.0,
+          "LDL": 145.0
+        }
       }
     },
     {
@@ -66,11 +168,15 @@
       "note": "Follow-up visit after 6 months of medication therapy. Patient reports improved energy levels but increased urination at night. BP 130/85, and no new edema noted. Labs show HbA1c 7.2, BP_systolic 130, eGFR 70, and LDL 135. Medications adjusted: Metformin increased to 1000mg BID, Lisinopril to 20mg QD, and Atorvastatin to 40mg QD. Diagnoses remain unchanged, but symptoms now include nocturia.",
       "labs": {
         "HbA1c": 7.2,
-        "BP": "130/85",
-        "eGFR": 70.0,
-        "LDL": 135.0
+        "BP_systolic": 130,
+        "BP_diastolic": 85,
+        "eGFR": 70,
+        "LDL": 135
       },
       "medications": [
+        "Metformin 1000mg BID",
+        "Lisinopril 20mg QD",
+        "Atorvastatin 40mg QD",
         "metformin",
         "lisinopril",
         "atorvastatin",
@@ -81,13 +187,22 @@
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia"
+        "Hyperlipidemia",
+        "diabetes"
       ],
       "symptoms": [
-        "Edema"
+        "polyuria",
+        "polydipsia",
+        "fatigue",
+        "nocturia",
+        "Edema",
+        "improved energy levels",
+        "increased urination at night"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "diabetes"
+        ],
         "medications": [
           "metformin",
           "lisinopril",
@@ -96,17 +211,88 @@
           "20mg",
           "40mg"
         ],
-        "lab_values": {
-          "HbA1c": 7.2,
-          "BP": "130/85",
-          "eGFR": 70.0,
-          "LDL": 135.0
-        },
         "symptoms": [
-          "Edema"
+          "Edema",
+          "improved energy levels",
+          "increased urination at night",
+          "nocturia"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "metformin",
+            "predicate": "increased",
+            "object": "1000mg",
+            "confidence": 0.9
+          },
+          {
+            "subject": "lisinopril",
+            "predicate": "increased",
+            "object": "20mg",
+            "confidence": 0.9
+          },
+          {
+            "subject": "atorvastatin",
+            "predicate": "increased",
+            "object": "40mg",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP_systolic",
+            "predicate": "measured_by",
+            "object": "130",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP_diastolic",
+            "predicate": "measured_by",
+            "object": "85",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "7.2",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "70.0",
+            "confidence": 0.8
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "135.0",
+            "confidence": 0.8
+          },
+          {
+            "subject": "metformin",
+            "predicate": "managed_by",
+            "object": "improved energy levels",
+            "confidence": 0.7
+          },
+          {
+            "subject": "lisinopril",
+            "predicate": "managed_by",
+            "object": "increased urination at night",
+            "confidence": 0.7
+          },
+          {
+            "subject": "atorvastatin",
+            "predicate": "managed_by",
+            "object": "nocturia",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.2,
+          "BP_systolic": 130,
+          "BP_diastolic": 85,
+          "eGFR": 70.0,
+          "LDL": 135.0
+        }
       }
     },
     {
@@ -115,11 +301,15 @@
       "note": "Patient reports worsening symptoms: increased urination, fatigue, and shortness of breath. BP 150/95, and 2+ pitting edema in bilateral lower extremities. Labs show HbA1c 8.1, BP_systolic 150, eGFR 55, and LDL 155. New diagnoses include Chronic Kidney Disease. Medications adjusted: Metformin increased to 1500mg BID, Lisinopril to 30mg QD, and Atorvastatin to 80mg QD. Symptoms now include orthopnea.",
       "labs": {
         "HbA1c": 8.1,
-        "BP": "150/95",
-        "eGFR": 55.0,
-        "LDL": 155.0
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 55,
+        "LDL": 155
       },
       "medications": [
+        "Metformin 1500mg BID",
+        "Lisinopril 30mg QD",
+        "Atorvastatin 80mg QD",
         "metformin",
         "lisinopril",
         "atorvastatin",
@@ -128,12 +318,20 @@
         "80mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
         "Chronic Kidney Disease"
       ],
       "symptoms": [
-        "Shortness of breath",
+        "polyuria",
+        "polydipsia",
+        "fatigue",
+        "nocturia",
+        "orthopnea",
         "Edema",
-        "Fatigue"
+        "Shortness of breath",
+        "increased urination"
       ],
       "extracted": {
         "conditions": [
@@ -147,19 +345,95 @@
           "30mg",
           "80mg"
         ],
-        "lab_values": {
-          "HbA1c": 8.1,
-          "BP": "150/95",
-          "eGFR": 55.0,
-          "LDL": 155.0
-        },
         "symptoms": [
-          "Shortness of breath",
           "Edema",
-          "Fatigue"
+          "Shortness of breath",
+          "Fatigue",
+          "orthopnea",
+          "increased urination"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "orthopnea",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "increased urination",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "shortness of breath",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "fatigue",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Metformin",
+            "predicate": "increased",
+            "object": "1500mg",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "increased",
+            "object": "30mg",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Atorvastatin",
+            "predicate": "increased",
+            "object": "80mg",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP_systolic",
+            "predicate": "measured_by",
+            "object": "150",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP_diastolic",
+            "predicate": "measured_by",
+            "object": "95",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "55",
+            "confidence": 0.8
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "155",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "8.1",
+            "confidence": 0.8
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.1,
+          "BP_systolic": 150,
+          "BP_diastolic": 95,
+          "eGFR": 55.0,
+          "LDL": 155.0
+        }
       }
     },
     {
@@ -168,11 +442,15 @@
       "note": "Patient reports continued worsening of symptoms: shortness of breath, orthopnea, and decreased urine output. BP 160/100, and 3+ pitting edema in bilateral lower extremities. Labs show HbA1c 8.5, BP_systolic 160, eGFR 45, and LDL 165. Medications adjusted: Metformin increased to 2000mg BID, Lisinopril to 40mg QD, and Atorvastatin to 100mg QD. New diagnoses include Coronary Artery Disease. Symptoms now include decreased urine output.",
       "labs": {
         "HbA1c": 8.5,
-        "BP": "160/100",
-        "eGFR": 45.0,
-        "LDL": 165.0
+        "BP_systolic": 160,
+        "BP_diastolic": 100,
+        "eGFR": 45,
+        "LDL": 165
       },
       "medications": [
+        "Metformin 2000mg BID",
+        "Lisinopril 40mg QD",
+        "Atorvastatin 100mg QD",
         "metformin",
         "lisinopril",
         "atorvastatin",
@@ -181,11 +459,21 @@
         "100mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
         "Coronary Artery Disease"
       ],
       "symptoms": [
-        "Shortness of breath",
-        "Edema"
+        "polyuria",
+        "polydipsia",
+        "fatigue",
+        "nocturia",
+        "orthopnea",
+        "decreased urine output",
+        "Edema",
+        "Shortness of breath"
       ],
       "extracted": {
         "conditions": [
@@ -199,18 +487,112 @@
           "40mg",
           "100mg"
         ],
-        "lab_values": {
-          "HbA1c": 8.5,
-          "BP": "160/100",
-          "eGFR": 45.0,
-          "LDL": 165.0
-        },
         "symptoms": [
+          "Edema",
           "Shortness of breath",
-          "Edema"
+          "orthopnea",
+          "decreased urine output"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "metformin",
+            "predicate": "increased",
+            "object": "2000mg",
+            "confidence": 0.9
+          },
+          {
+            "subject": "lisinopril",
+            "predicate": "increased",
+            "object": "40mg",
+            "confidence": 0.9
+          },
+          {
+            "subject": "atorvastatin",
+            "predicate": "increased",
+            "object": "100mg",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP_systolic",
+            "predicate": "measured_by",
+            "object": "Labs",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Labs",
+            "confidence": 0.8
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "Labs",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Labs",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "managed_by",
+            "object": "Metformin",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "managed_by",
+            "object": "Lisinopril",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "managed_by",
+            "object": "Atorvastatin",
+            "confidence": 0.7
+          },
+          {
+            "subject": "orthopnea",
+            "predicate": "has_symptom",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.6
+          },
+          {
+            "subject": "decreased urine output",
+            "predicate": "has_symptom",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.6
+          },
+          {
+            "subject": "shortness of breath",
+            "predicate": "has_symptom",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.6
+          },
+          {
+            "subject": "BP 160/100",
+            "predicate": "contraindicated_with",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.5
+          },
+          {
+            "subject": "3+ pitting edema",
+            "predicate": "has_symptom",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.5
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.5,
+          "BP_systolic": 160,
+          "BP_diastolic": 100,
+          "eGFR": 45.0,
+          "LDL": 165.0
+        }
       }
     }
   ]

@@ -15,31 +15,99 @@
       "medications": [
         "Metformin 850mg BID",
         "Lisinopril 20mg OD",
-        "Simvastatin 20mg OD"
+        "Simvastatin 20mg OD",
+        "statin",
+        "antihypertensive"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
-        "Chest pain",
-        "Fatigue"
+        "Fatigue",
+        "Chest pain"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
-        "medications": [],
-        "lab_values": {},
+        "medications": [
+          "statin",
+          "antihypertensive"
+        ],
         "symptoms": [
           "Chest pain",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "statin",
+            "predicate": "measured_by",
+            "object": "BP",
+            "confidence": 0.8
+          },
+          {
+            "subject": "statin",
+            "predicate": "measured_by",
+            "object": "HbA1c",
+            "confidence": 0.8
+          },
+          {
+            "subject": "antihypertensive",
+            "predicate": "measured_by",
+            "object": "BP",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "diabetes management",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "antihypertensive regimen",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "managed_by",
+            "object": "statin therapy",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Chest pain",
+            "predicate": "has_symptom",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Chest pain",
+            "predicate": "has_symptom",
+            "object": "Hypertension",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Hypertension",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": "elevated"
+        }
       }
     },
     {
@@ -51,35 +119,86 @@
         "BP_systolic": 150,
         "BP_diastolic": 95,
         "eGFR": 60,
-        "LDL": 180
+        "LDL": 180,
+        "dyslipidemia": "worsening"
       },
       "medications": [
         "Metformin 850mg BID",
         "Lisinopril 40mg OD",
         "Atorvastatin 80mg OD",
-        "Aspirin 81mg OD"
+        "Aspirin 81mg OD",
+        "Antihypertensive therapy"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
         "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Coronary Artery Disease"
       ],
       "symptoms": [
+        "Chest pain",
         "Shortness of breath",
-        "Chest pain"
+        "Fatigue"
       ],
       "extracted": {
         "conditions": [
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
-        "medications": [],
-        "lab_values": {},
+        "medications": [
+          "Antihypertensive therapy"
+        ],
         "symptoms": [
-          "Shortness of breath",
-          "Chest pain"
+          "Chest pain",
+          "Shortness of breath"
         ],
-        "procedures": [],
-        "relationships": []
+        "procedures": [
+          "Referral to cardiology"
+        ],
+        "relationships": [
+          {
+            "subject": "Antihypertensive therapy",
+            "predicate": "managed_by",
+            "object": "cardiology",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "diabetes management",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Chest pain",
+            "predicate": "has_symptom",
+            "object": "Shortness of breath",
+            "confidence": 0.7
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "labs",
+            "confidence": 0.6
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "labs",
+            "confidence": 0.6
+          },
+          {
+            "subject": "dyslipidemia",
+            "predicate": "measured_by",
+            "object": "labs",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": "elevated",
+          "eGFR": "decline",
+          "dyslipidemia": "worsening"
+        }
       }
     },
     {
@@ -91,36 +210,120 @@
         "BP_systolic": 155,
         "BP_diastolic": 100,
         "eGFR": 50,
-        "LDL": 190
+        "LDL": 190,
+        "dyslipidemia": "worsening"
       },
       "medications": [
         "Metformin 850mg BID",
         "Lisinopril 60mg OD",
         "Atorvastatin 120mg OD",
         "Aspirin 81mg OD",
-        "Furosemide 40mg OD"
+        "Furosemide 40mg OD",
+        "Antihypertensive therapy"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
         "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease"
       ],
       "symptoms": [
-        "Edema",
-        "Fatigue"
+        "Fatigue",
+        "Swelling in legs",
+        "Chest pain",
+        "Shortness of breath",
+        "Edema"
       ],
       "extracted": {
         "conditions": [
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
-        "medications": [],
-        "lab_values": {},
+        "medications": [
+          "Antihypertensive therapy"
+        ],
         "symptoms": [
           "Edema",
           "Fatigue"
         ],
-        "procedures": [],
-        "relationships": []
+        "procedures": [
+          "Referral to nephrology"
+        ],
+        "relationships": [
+          {
+            "subject": "Antihypertensive therapy",
+            "predicate": "managed_by",
+            "object": "Patient P081",
+            "confidence": 1.0
+          },
+          {
+            "subject": "Diabetes management",
+            "predicate": "managed_by",
+            "object": "Patient P081",
+            "confidence": 1.0
+          },
+          {
+            "subject": "Referral to nephrology",
+            "predicate": "recommended_for",
+            "object": "further evaluation",
+            "confidence": 1.0
+          },
+          {
+            "subject": "Antihypertensive therapy",
+            "predicate": "contraindicated_with",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Diabetes management",
+            "predicate": "contraindicated_with",
+            "object": "Hyperlipidemia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Labs",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Physical examination",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Physical examination",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Edema",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "eGFR",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "worsens",
+            "object": "dyslipidemia",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": "elevated",
+          "eGFR": "decline",
+          "dyslipidemia": "worsening"
+        }
       }
     },
     {
@@ -132,7 +335,8 @@
         "BP_systolic": 160,
         "BP_diastolic": 105,
         "eGFR": 45,
-        "LDL": 200
+        "LDL": 200,
+        "dyslipidemia": "worsening"
       },
       "medications": [
         "Metformin 850mg BID",
@@ -140,31 +344,106 @@
         "Atorvastatin 160mg OD",
         "Aspirin 81mg OD",
         "Furosemide 40mg OD",
-        "Erythropoietin 40,000 units/week"
+        "Erythropoietin 40,000 units/week",
+        "Antihypertensive therapy",
+        "Erythropoietin therapy"
       ],
       "diagnoses": [
-        "Hyperlipidemia",
         "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
+        "Chronic Kidney Disease",
         "Anemia"
       ],
       "symptoms": [
+        "Fatigue",
         "Shortness of breath",
-        "Fatigue"
+        "Chest pain",
+        "Swelling in legs"
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia",
+          "Anemia",
           "Type 2 Diabetes",
-          "Anemia"
+          "Hyperlipidemia"
         ],
-        "medications": [],
-        "lab_values": {},
+        "medications": [
+          "Antihypertensive therapy",
+          "Erythropoietin therapy"
+        ],
         "symptoms": [
           "Shortness of breath",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Antihypertensive therapy",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Erythropoietin therapy",
+            "predicate": "managed_by",
+            "object": "Anemia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "has_symptom",
+            "object": "Fatigue",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "has_symptom",
+            "object": "Shortness of breath",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "has_symptom",
+            "object": "Shortness of breath",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "has_symptom",
+            "object": "Fatigue",
+            "confidence": 0.6
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Physical examination",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Physical examination",
+            "confidence": 0.9
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Labs",
+            "confidence": 0.8
+          },
+          {
+            "subject": "dyslipidemia",
+            "predicate": "measured_by",
+            "object": "Labs",
+            "confidence": 0.8
+          }
+        ],
+        "lab_values": {
+          "HbA1c": "elevated",
+          "eGFR": "decline",
+          "dyslipidemia": "worsening"
+        }
       }
     }
   ]

@@ -7,19 +7,23 @@
       "note": "Patient P020 presents with a 2-year history of Type 2 Diabetes. Patient is compliant with diet and exercise. BP 140/90, HbA1c 7.2, LDL 130. Diagnoses include Type 2 Diabetes, Hypertension, and Hyperlipidemia. Medications include Metformin 500mg twice daily and Lisinopril 5mg daily.",
       "labs": {
         "HbA1c": 7.2,
-        "BP": "140/90",
-        "LDL": 130.0
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
       },
       "medications": [
+        "Metformin 500mg twice daily",
+        "Lisinopril 5mg daily",
         "metformin",
         "lisinopril",
         "500mg",
         "5mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
         "Polydipsia",
@@ -27,9 +31,9 @@
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -37,14 +41,76 @@
           "500mg",
           "5mg"
         ],
-        "lab_values": {
-          "HbA1c": 7.2,
-          "BP": "140/90",
-          "LDL": 130.0
-        },
         "symptoms": [],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "diet",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "diet",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "exercise",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "exercise",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "has_symptom",
+            "object": "Hypertension",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "has_symptom",
+            "object": "Hyperlipidemia",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "BP 140/90",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "has_symptom",
+            "object": "LDL 130",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Metformin",
+            "predicate": "measured_by",
+            "object": "HbA1c",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "measured_by",
+            "object": "BP",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.2,
+          "BP_systolic": 140,
+          "BP_diastolic": 90,
+          "LDL": 130.0
+        }
       }
     },
     {
@@ -53,10 +119,15 @@
       "note": "Patient P020 returns with worsening symptoms of polydipsia and polyuria. Patient reports increased fatigue. BP 160/100, HbA1c 8.5, LDL 150. eGFR has worsened to 60. Diagnoses include Chronic Kidney Disease in addition to previous diagnoses. Medications include Metformin 1000mg twice daily, Lisinopril 10mg daily, and Simvastatin 20mg daily.",
       "labs": {
         "HbA1c": 8.5,
-        "BP": "160/100",
-        "LDL": 150.0
+        "BP_systolic": 160,
+        "BP_diastolic": 100,
+        "eGFR": 60,
+        "LDL": 150
       },
       "medications": [
+        "Metformin 1000mg twice daily",
+        "Lisinopril 10mg daily",
+        "Simvastatin 20mg daily",
         "metformin",
         "lisinopril",
         "simvastatin",
@@ -65,6 +136,9 @@
         "20mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
         "Chronic Kidney Disease"
       ],
       "symptoms": [
@@ -84,18 +158,81 @@
           "10mg",
           "20mg"
         ],
-        "lab_values": {
-          "HbA1c": 8.5,
-          "BP": "160/100",
-          "LDL": 150.0
-        },
         "symptoms": [
           "Polydipsia",
           "Polyuria",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Simvastatin",
+            "predicate": "managed_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Lisinopril",
+            "confidence": 0.7
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Metformin",
+            "confidence": 0.7
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "Simvastatin",
+            "confidence": 0.7
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Lisinopril",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Polydipsia",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Polyuria",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.5
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.5,
+          "BP_systolic": 160,
+          "BP_diastolic": 100,
+          "LDL": 150.0,
+          "eGFR": 60
+        }
       }
     },
     {
@@ -104,28 +241,42 @@
       "note": "Patient P020 returns with worsening fatigue and weight loss. BP 145/95, HbA1c 9.0, LDL 140. eGFR has worsened to 55. Diagnoses include worsening Chronic Kidney Disease and possible anemia. Medications include Metformin 1500mg twice daily, Lisinopril 15mg daily, Simvastatin 40mg daily, and Epoetin alfa 50,000 units weekly.",
       "labs": {
         "HbA1c": 9.0,
-        "BP": "145/95",
-        "LDL": 140.0
+        "BP_systolic": 145,
+        "BP_diastolic": 95,
+        "eGFR": 55,
+        "LDL": 140
       },
       "medications": [
+        "Metformin 1500mg twice daily",
+        "Lisinopril 15mg daily",
+        "Simvastatin 40mg daily",
+        "Epoetin alfa 50,000 units weekly",
         "metformin",
         "lisinopril",
         "simvastatin",
         "1500mg",
         "15mg",
-        "40mg"
+        "40mg",
+        "Epoetin alfa"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
         "Chronic Kidney Disease",
+        "Possible anemia",
         "Anemia"
       ],
       "symptoms": [
-        "Fatigue"
+        "Polydipsia",
+        "Polyuria",
+        "Fatigue",
+        "Weight loss"
       ],
       "extracted": {
         "conditions": [
-          "Chronic Kidney Disease",
-          "Anemia"
+          "Anemia",
+          "Chronic Kidney Disease"
         ],
         "medications": [
           "metformin",
@@ -133,18 +284,125 @@
           "simvastatin",
           "1500mg",
           "15mg",
-          "40mg"
+          "40mg",
+          "Epoetin alfa"
+        ],
+        "symptoms": [
+          "Fatigue",
+          "Weight loss"
+        ],
+        "procedures": [],
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Simvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Epoetin alfa",
+            "predicate": "managed_by",
+            "object": "Anemia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Metformin",
+            "predicate": "contraindicated_with",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Anemia",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Weight loss",
+            "predicate": "has_symptom",
+            "object": "Anemia",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Weight loss",
+            "predicate": "has_symptom",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.7
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "Simvastatin",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Metformin",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Lisinopril",
+            "confidence": 0.9
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "Weight loss",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Anemia",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Anemia",
+            "predicate": "worsens",
+            "object": "Weight loss",
+            "confidence": 0.7
+          }
         ],
         "lab_values": {
           "HbA1c": 9.0,
-          "BP": "145/95",
-          "LDL": 140.0
-        },
-        "symptoms": [
-          "Fatigue"
-        ],
-        "procedures": [],
-        "relationships": []
+          "BP_systolic": 145,
+          "BP_diastolic": 95,
+          "LDL": 140.0,
+          "eGFR": 55
+        }
       }
     }
   ]

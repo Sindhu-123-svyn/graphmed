@@ -10,18 +10,21 @@
         "BP_systolic": 150,
         "BP_diastolic": 95,
         "eGFR": 65,
-        "LDL": 160
+        "LDL": 160,
+        "Blood Pressure": "150/95"
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 2.5mg daily",
         "metformin",
         "lisinopril",
         "500mg",
         "2.5mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
         "Polydipsia",
@@ -30,9 +33,9 @@
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -40,14 +43,60 @@
           "500mg",
           "2.5mg"
         ],
-        "lab_values": {},
         "symptoms": [
           "Polydipsia",
           "Polyuria",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Blood Pressure",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Polydipsia",
+            "predicate": "has_symptom",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Polyuria",
+            "predicate": "has_symptom",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.5,
+          "Blood Pressure": "150/95"
+        }
       }
     },
     {
@@ -59,9 +108,13 @@
         "BP_systolic": 140,
         "BP_diastolic": 80,
         "eGFR": 58,
-        "LDL": 140
+        "LDL": 140,
+        "Blood Pressure": "140/80"
       },
       "medications": [
+        "Metformin 1000mg BID",
+        "Lisinopril 5mg daily",
+        "Simvastatin 40mg daily",
         "metformin",
         "lisinopril",
         "simvastatin",
@@ -70,21 +123,25 @@
         "40mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Chronic Kidney Disease",
         "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Chronic Kidney Disease"
       ],
       "symptoms": [
+        "Polydipsia",
+        "Polyuria",
+        "Dyspnea",
+        "Orthopnea",
         "Shortness of breath",
         "Fatigue"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Chronic Kidney Disease",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension",
+          "Chronic Kidney Disease"
         ],
         "medications": [
           "metformin",
@@ -94,13 +151,98 @@
           "5mg",
           "40mg"
         ],
-        "lab_values": {},
         "symptoms": [
           "Shortness of breath",
-          "Fatigue"
+          "Fatigue",
+          "Dyspnea",
+          "Orthopnea"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Simvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Metformin",
+            "predicate": "contraindicated_with",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Blood Pressure",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Dyspnea",
+            "predicate": "has_symptom",
+            "object": "Shortness of breath",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Dyspnea",
+            "predicate": "has_symptom",
+            "object": "Orthopnea",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Dyspnea",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Orthopnea",
+            "confidence": 0.7
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.6
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "improves",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.8,
+          "eGFR": 58,
+          "Blood Pressure": "140/80"
+        }
       }
     },
     {
@@ -112,36 +254,46 @@
         "BP_systolic": 130,
         "BP_diastolic": 70,
         "eGFR": 52,
-        "LDL": 120
+        "LDL": 120,
+        "Blood Pressure": "130/70"
       },
       "medications": [
+        "Metformin 1500mg BID",
+        "Lisinopril 10mg daily",
+        "Simvastatin 80mg daily",
+        "Aspirin 81mg daily",
         "metformin",
         "lisinopril",
         "simvastatin",
         "1500mg",
         "10mg",
         "80mg",
-        "81mg"
+        "81mg",
+        "Aspirin"
       ],
       "diagnoses": [
-        "Hyperlipidemia",
-        "Hypertension",
-        "Coronary Artery Disease",
         "Type 2 Diabetes",
-        "Chronic Kidney Disease"
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease"
       ],
       "symptoms": [
-        "Shortness of breath",
+        "Polydipsia",
+        "Polyuria",
+        "Dyspnea",
+        "Orthopnea",
         "Chest pain",
+        "Shortness of breath",
         "Fatigue"
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia",
-          "Hypertension",
-          "Coronary Artery Disease",
+          "Chronic Kidney Disease",
           "Type 2 Diabetes",
-          "Chronic Kidney Disease"
+          "Coronary Artery Disease",
+          "Hyperlipidemia",
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -150,16 +302,96 @@
           "1500mg",
           "10mg",
           "80mg",
-          "81mg"
+          "81mg",
+          "Aspirin"
         ],
-        "lab_values": {},
         "symptoms": [
-          "Shortness of breath",
           "Chest pain",
-          "Fatigue"
+          "Shortness of breath",
+          "Fatigue",
+          "Dyspnea",
+          "Orthopnea"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Simvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Aspirin",
+            "predicate": "managed_by",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Blood Pressure",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Dyspnea",
+            "predicate": "has_symptom",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Orthopnea",
+            "predicate": "has_symptom",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Chest pain",
+            "predicate": "has_symptom",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Shortness of breath",
+            "predicate": "has_symptom",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.2,
+          "eGFR": 52,
+          "Blood Pressure": "130/70"
+        }
       }
     },
     {
@@ -171,9 +403,15 @@
         "BP_systolic": 125,
         "BP_diastolic": 65,
         "eGFR": 60,
-        "LDL": 100
+        "LDL": 100,
+        "Blood Pressure": "125/65"
       },
       "medications": [
+        "Metformin 2000mg BID",
+        "Lisinopril 20mg daily",
+        "Simvastatin 100mg daily",
+        "Aspirin 81mg daily",
+        "Furosemide 40mg daily",
         "metformin",
         "lisinopril",
         "simvastatin",
@@ -181,29 +419,38 @@
         "20mg",
         "100mg",
         "81mg",
-        "40mg"
+        "40mg",
+        "Aspirin",
+        "Furosemide"
       ],
       "diagnoses": [
-        "Hyperlipidemia",
-        "Hypertension",
-        "Coronary Artery Disease",
         "Type 2 Diabetes",
-        "Heart Failure",
-        "Chronic Kidney Disease"
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease",
+        "Congestive Heart Failure",
+        "Heart Failure"
       ],
       "symptoms": [
-        "Shortness of breath",
+        "Polydipsia",
+        "Polyuria",
+        "Dyspnea",
+        "Orthopnea",
+        "Chest pain",
+        "Peripheral edema",
         "Edema",
+        "Shortness of breath",
         "Fatigue"
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia",
-          "Hypertension",
-          "Coronary Artery Disease",
-          "Type 2 Diabetes",
+          "Chronic Kidney Disease",
           "Heart Failure",
-          "Chronic Kidney Disease"
+          "Type 2 Diabetes",
+          "Coronary Artery Disease",
+          "Hyperlipidemia",
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -213,16 +460,104 @@
           "20mg",
           "100mg",
           "81mg",
-          "40mg"
+          "40mg",
+          "Aspirin",
+          "Furosemide"
         ],
-        "lab_values": {},
         "symptoms": [
-          "Shortness of breath",
           "Edema",
-          "Fatigue"
+          "Shortness of breath",
+          "Fatigue",
+          "Dyspnea",
+          "Orthopnea",
+          "Peripheral Edema"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Simvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Aspirin",
+            "predicate": "managed_by",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Furosemide",
+            "predicate": "managed_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Blood Pressure",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Shortness of breath",
+            "predicate": "has_symptom",
+            "object": "Heart Failure",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Dyspnea",
+            "predicate": "has_symptom",
+            "object": "Heart Failure",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Orthopnea",
+            "predicate": "has_symptom",
+            "object": "Heart Failure",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Peripheral Edema",
+            "predicate": "has_symptom",
+            "object": "Heart Failure",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.5,
+          "eGFR": 60,
+          "Blood Pressure": "125/65"
+        }
       }
     },
     {
@@ -234,9 +569,16 @@
         "BP_systolic": 120,
         "BP_diastolic": 70,
         "eGFR": 48,
-        "LDL": 110
+        "LDL": 110,
+        "Blood Pressure": "120/70"
       },
       "medications": [
+        "Metformin 3000mg BID",
+        "Lisinopril 30mg daily",
+        "Simvastatin 120mg daily",
+        "Aspirin 81mg daily",
+        "Furosemide 60mg daily",
+        "Epogen 10,000 units weekly",
         "metformin",
         "lisinopril",
         "simvastatin",
@@ -244,31 +586,43 @@
         "30mg",
         "120mg",
         "81mg",
-        "60mg"
+        "60mg",
+        "Aspirin",
+        "Furosemide",
+        "Epogen"
       ],
       "diagnoses": [
-        "Hyperlipidemia",
-        "Anemia",
-        "Hypertension",
-        "Coronary Artery Disease",
         "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease",
+        "Congestive Heart Failure",
+        "End-Stage Renal Disease",
         "Heart Failure",
-        "Chronic Kidney Disease"
+        "Anemia"
       ],
       "symptoms": [
-        "Shortness of breath",
+        "Polydipsia",
+        "Polyuria",
+        "Dyspnea",
+        "Orthopnea",
         "Chest pain",
+        "Peripheral edema",
+        "Anemia",
+        "Shortness of breath",
         "Fatigue"
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia",
-          "Anemia",
-          "Hypertension",
-          "Coronary Artery Disease",
-          "Type 2 Diabetes",
+          "Chronic Kidney Disease",
           "Heart Failure",
-          "Chronic Kidney Disease"
+          "Type 2 Diabetes",
+          "Anemia",
+          "Coronary Artery Disease",
+          "Hyperlipidemia",
+          "Hypertension",
+          "Congestive Heart Failure"
         ],
         "medications": [
           "metformin",
@@ -278,16 +632,110 @@
           "30mg",
           "120mg",
           "81mg",
-          "60mg"
+          "60mg",
+          "Aspirin",
+          "Furosemide",
+          "Epogen"
         ],
-        "lab_values": {},
         "symptoms": [
-          "Shortness of breath",
           "Chest pain",
-          "Fatigue"
+          "Shortness of breath",
+          "Fatigue",
+          "Dyspnea",
+          "Orthopnea"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Simvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Aspirin",
+            "predicate": "managed_by",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Furosemide",
+            "predicate": "managed_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Epogen",
+            "predicate": "managed_by",
+            "object": "Anemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Blood Pressure",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Dyspnea",
+            "predicate": "has_symptom",
+            "object": "Congestive Heart Failure",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Orthopnea",
+            "predicate": "has_symptom",
+            "object": "Congestive Heart Failure",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Chest pain",
+            "predicate": "has_symptom",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Shortness of breath",
+            "predicate": "has_symptom",
+            "object": "Congestive Heart Failure",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Anemia",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.5,
+          "eGFR": 48,
+          "Blood Pressure": "120/70"
+        }
       }
     }
   ]

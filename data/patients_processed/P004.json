@@ -7,28 +7,35 @@
       "note": "Patient presents with complaints of increased thirst and urination over the past 6 months. Physical exam reveals obesity and hypertension (BP 140/90). Lab results show HbA1c 8.2, LDL 150. Diagnoses include Type 2 Diabetes mellitus, Hypertension, Hyperlipidemia. Medications include Metformin 500mg BID, Lisinopril 10mg daily.",
       "labs": {
         "HbA1c": 8.2,
-        "BP": "140/90",
-        "LDL": 150.0
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 68,
+        "LDL": 150
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg daily",
         "metformin",
         "lisinopril",
         "500mg",
         "10mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes mellitus",
         "Hypertension",
         "Hyperlipidemia",
         "Type 2 Diabetes"
       ],
       "symptoms": [
+        "Increased thirst",
+        "Increased urination",
         "Polydipsia"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -36,16 +43,17 @@
           "500mg",
           "10mg"
         ],
-        "lab_values": {
-          "HbA1c": 8.2,
-          "BP": "140/90",
-          "LDL": 150.0
-        },
         "symptoms": [
           "Polydipsia"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [],
+        "lab_values": {
+          "HbA1c": 8.2,
+          "BP_systolic": 140,
+          "BP_diastolic": 90,
+          "LDL": 150.0
+        }
       }
     },
     {
@@ -54,10 +62,15 @@
       "note": "Patient reports worsening symptoms of fatigue and shortness of breath. Physical exam reveals no significant changes. Lab results show HbA1c 7.5, BP 130/80, LDL 140. Diagnoses include Type 2 Diabetes mellitus, Hypertension, Hyperlipidemia, and Chronic Kidney Disease stage 3. Medications include Metformin 500mg BID, Lisinopril 10mg daily, and Atorvastatin 20mg daily.",
       "labs": {
         "HbA1c": 7.5,
-        "BP": "130/80",
-        "LDL": 140.0
+        "BP_systolic": 130,
+        "BP_diastolic": 80,
+        "eGFR": 58,
+        "LDL": 140
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg daily",
+        "Atorvastatin 20mg daily",
         "metformin",
         "lisinopril",
         "atorvastatin",
@@ -66,21 +79,25 @@
         "20mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes mellitus",
         "Hypertension",
-        "Chronic Kidney Disease",
         "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Chronic Kidney Disease stage 3",
+        "Type 2 Diabetes",
+        "Chronic Kidney Disease"
       ],
       "symptoms": [
-        "Shortness of breath",
-        "Fatigue"
+        "Increased thirst",
+        "Increased urination",
+        "Fatigue",
+        "Shortness of breath"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Chronic Kidney Disease",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension",
+          "Chronic Kidney Disease"
         ],
         "medications": [
           "metformin",
@@ -90,17 +107,18 @@
           "10mg",
           "20mg"
         ],
-        "lab_values": {
-          "HbA1c": 7.5,
-          "BP": "130/80",
-          "LDL": 140.0
-        },
         "symptoms": [
           "Shortness of breath",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [],
+        "lab_values": {
+          "HbA1c": 7.5,
+          "BP_systolic": 130,
+          "BP_diastolic": 80,
+          "LDL": 140.0
+        }
       }
     },
     {
@@ -109,11 +127,16 @@
       "note": "Patient reports decreased fatigue but worsening shortness of breath. Physical exam reveals increased crackles at lung bases. Lab results show HbA1c 7.8, BP 125/75, eGFR 52, LDL 120. Diagnoses include Type 2 Diabetes mellitus, Hypertension, Hyperlipidemia, Chronic Kidney Disease stage 4, and possible congestive heart failure. Medications include Metformin 500mg BID, Lisinopril 20mg daily, Atorvastatin 20mg daily, and Furosemide 40mg daily.",
       "labs": {
         "HbA1c": 7.8,
-        "BP": "125/75",
-        "eGFR": 52.0,
-        "LDL": 120.0
+        "BP_systolic": 125,
+        "BP_diastolic": 75,
+        "eGFR": 52,
+        "LDL": 120
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 20mg daily",
+        "Atorvastatin 20mg daily",
+        "Furosemide 40mg daily",
         "metformin",
         "lisinopril",
         "atorvastatin",
@@ -122,23 +145,29 @@
         "40mg"
       ],
       "diagnoses": [
-        "Hyperlipidemia",
+        "Type 2 Diabetes mellitus",
         "Hypertension",
-        "Type 2 Diabetes",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease stage 4",
+        "Congestive Heart Failure",
+        "Chronic Kidney Disease",
         "Heart Failure",
-        "Chronic Kidney Disease"
+        "Type 2 Diabetes"
       ],
       "symptoms": [
+        "Increased thirst",
+        "Increased urination",
+        "Fatigue",
         "Shortness of breath",
-        "Fatigue"
+        "Dyspnea on exertion"
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia",
-          "Hypertension",
-          "Type 2 Diabetes",
+          "Chronic Kidney Disease",
           "Heart Failure",
-          "Chronic Kidney Disease"
+          "Type 2 Diabetes",
+          "Hyperlipidemia",
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -148,18 +177,19 @@
           "20mg",
           "40mg"
         ],
-        "lab_values": {
-          "HbA1c": 7.8,
-          "BP": "125/75",
-          "eGFR": 52.0,
-          "LDL": 120.0
-        },
         "symptoms": [
           "Shortness of breath",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [],
+        "lab_values": {
+          "HbA1c": 7.8,
+          "BP_systolic": 125,
+          "BP_diastolic": 75,
+          "eGFR": 52.0,
+          "LDL": 120.0
+        }
       }
     },
     {
@@ -168,11 +198,17 @@
       "note": "Patient reports worsening shortness of breath and decreased mobility. Physical exam reveals significant weight gain and edema. Lab results show HbA1c 8.5, BP 150/90, eGFR 42, LDL 160. Diagnoses include Type 2 Diabetes mellitus, Hypertension, Hyperlipidemia, Chronic Kidney Disease stage 5, and congestive heart failure with significant decompensation. Medications include Metformin 500mg BID, Lisinopril 20mg daily, Atorvastatin 20mg daily, Furosemide 80mg daily, and Enalapril 10mg daily.",
       "labs": {
         "HbA1c": 8.5,
-        "BP": "150/90",
-        "eGFR": 42.0,
-        "LDL": 160.0
+        "BP_systolic": 150,
+        "BP_diastolic": 90,
+        "eGFR": 42,
+        "LDL": 160
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 20mg daily",
+        "Atorvastatin 20mg daily",
+        "Furosemide 80mg daily",
+        "Enalapril 10mg daily",
         "metformin",
         "lisinopril",
         "atorvastatin",
@@ -182,23 +218,35 @@
         "10mg"
       ],
       "diagnoses": [
-        "Hyperlipidemia",
+        "Type 2 Diabetes mellitus",
         "Hypertension",
-        "Type 2 Diabetes",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease stage 5",
+        "Congestive Heart Failure with significant decompensation",
+        "Chronic Kidney Disease",
         "Heart Failure",
-        "Chronic Kidney Disease"
+        "Type 2 Diabetes",
+        "Congestive Heart Failure"
       ],
       "symptoms": [
+        "Increased thirst",
+        "Increased urination",
+        "Fatigue",
         "Shortness of breath",
-        "Edema"
+        "Dyspnea on exertion",
+        "Edema",
+        "Decreased mobility"
       ],
       "extracted": {
         "conditions": [
+          "Chronic Kidney Disease",
+          "Heart Failure",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
           "Hypertension",
-          "Type 2 Diabetes",
-          "Heart Failure",
-          "Chronic Kidney Disease"
+          "Chronic Kidney Disease stage 5",
+          "Congestive Heart Failure",
+          "Type 2 Diabetes mellitus"
         ],
         "medications": [
           "metformin",
@@ -207,20 +255,100 @@
           "500mg",
           "20mg",
           "80mg",
-          "10mg"
+          "10mg",
+          "Metformin 500mg BID",
+          "Lisinopril 20mg daily",
+          "Atorvastatin 20mg daily",
+          "Furosemide 80mg daily",
+          "Enalapril 10mg daily"
+        ],
+        "symptoms": [
+          "Edema",
+          "Shortness of breath",
+          "Decreased mobility"
+        ],
+        "procedures": [],
+        "relationships": [
+          {
+            "subject": "Metformin 500mg BID",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes mellitus",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Lisinopril 20mg daily",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Atorvastatin 20mg daily",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Furosemide 80mg daily",
+            "predicate": "managed_by",
+            "object": "Congestive Heart Failure",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Enalapril 10mg daily",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Shortness of breath",
+            "predicate": "has_symptom",
+            "object": "Congestive Heart Failure",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Decreased mobility",
+            "predicate": "has_symptom",
+            "object": "Congestive Heart Failure",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Edema",
+            "predicate": "has_symptom",
+            "object": "Congestive Heart Failure",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c 8.5",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes mellitus",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP 150/90",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "eGFR 42",
+            "predicate": "measured_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.9
+          },
+          {
+            "subject": "LDL 160",
+            "predicate": "measured_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          }
         ],
         "lab_values": {
           "HbA1c": 8.5,
-          "BP": "150/90",
+          "BP_systolic": 150,
+          "BP_diastolic": 90,
           "eGFR": 42.0,
           "LDL": 160.0
-        },
-        "symptoms": [
-          "Shortness of breath",
-          "Edema"
-        ],
-        "procedures": [],
-        "relationships": []
+        }
       }
     },
     {
@@ -229,11 +357,18 @@
       "note": "Patient is now on home oxygen and physical therapy for mobility. Physical exam reveals significant improvement in shortness of breath. Lab results show HbA1c 7.2, BP 130/80, eGFR 48, LDL 140. Diagnoses include Type 2 Diabetes mellitus, Hypertension, Hyperlipidemia, Chronic Kidney Disease stage 5, and congestive heart failure with moderate decompensation. Medications include Metformin 500mg BID, Lisinopril 20mg daily, Atorvastatin 20mg daily, Furosemide 80mg daily, Enalapril 10mg daily, and home oxygen.",
       "labs": {
         "HbA1c": 7.2,
-        "BP": "130/80",
-        "eGFR": 48.0,
-        "LDL": 140.0
+        "BP_systolic": 130,
+        "BP_diastolic": 80,
+        "eGFR": 48,
+        "LDL": 140
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 20mg daily",
+        "Atorvastatin 20mg daily",
+        "Furosemide 80mg daily",
+        "Enalapril 10mg daily",
+        "Home oxygen",
         "metformin",
         "lisinopril",
         "atorvastatin",
@@ -243,22 +378,33 @@
         "10mg"
       ],
       "diagnoses": [
-        "Hyperlipidemia",
+        "Type 2 Diabetes mellitus",
         "Hypertension",
-        "Type 2 Diabetes",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease stage 5",
+        "Congestive Heart Failure with moderate decompensation",
+        "Chronic Kidney Disease",
         "Heart Failure",
-        "Chronic Kidney Disease"
+        "Type 2 Diabetes"
       ],
       "symptoms": [
-        "Shortness of breath"
+        "Increased thirst",
+        "Increased urination",
+        "Fatigue",
+        "Shortness of breath",
+        "Dyspnea on exertion",
+        "Edema"
       ],
       "extracted": {
         "conditions": [
+          "Chronic Kidney Disease",
+          "Heart Failure",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
           "Hypertension",
-          "Type 2 Diabetes",
-          "Heart Failure",
-          "Chronic Kidney Disease"
+          "Chronic Kidney Disease stage 5",
+          "Congestive Heart Failure with moderate decompensation",
+          "Type 2 Diabetes mellitus"
         ],
         "medications": [
           "metformin",
@@ -267,19 +413,95 @@
           "500mg",
           "20mg",
           "80mg",
-          "10mg"
+          "10mg",
+          "Metformin 500mg BID",
+          "Lisinopril 20mg daily",
+          "Atorvastatin 20mg daily",
+          "Furosemide 80mg daily",
+          "Enalapril 10mg daily"
         ],
-        "lab_values": {
-          "HbA1c": 7.2,
-          "BP": "130/80",
-          "eGFR": 48.0,
-          "LDL": 140.0
-        },
         "symptoms": [
           "Shortness of breath"
         ],
-        "procedures": [],
-        "relationships": []
+        "procedures": [
+          "Physical therapy for mobility",
+          "Home oxygen"
+        ],
+        "relationships": [
+          {
+            "subject": "Metformin 500mg BID",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes mellitus",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Lisinopril 20mg daily",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Atorvastatin 20mg daily",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Furosemide 80mg daily",
+            "predicate": "managed_by",
+            "object": "Chronic Kidney Disease stage 5",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Enalapril 10mg daily",
+            "predicate": "managed_by",
+            "object": "Congestive Heart Failure with moderate decompensation",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Home oxygen",
+            "predicate": "managed_by",
+            "object": "Shortness of breath",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Physical therapy for mobility",
+            "predicate": "managed_by",
+            "object": "Shortness of breath",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c 7.2",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes mellitus",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP 130/80",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "LDL 140",
+            "predicate": "measured_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.9
+          },
+          {
+            "subject": "eGFR 48",
+            "predicate": "measured_by",
+            "object": "Chronic Kidney Disease stage 5",
+            "confidence": 0.9
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.2,
+          "BP_systolic": 130,
+          "BP_diastolic": 80,
+          "eGFR": 48.0,
+          "LDL": 140.0
+        }
       }
     }
   ]

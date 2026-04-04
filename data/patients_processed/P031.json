@@ -7,26 +7,32 @@
       "note": "Patient presents with new onset diabetes. BP 140/90, HbA1c 7.2. Diagnoses include Type 2 Diabetes, Hypertension. Medications: Metformin 500mg bid, Lisinopril 10mg daily.",
       "labs": {
         "HbA1c": 7.2,
-        "BP": "140/90"
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
       },
       "medications": [
+        "Metformin 500mg bid",
+        "Lisinopril 10mg daily",
         "metformin",
         "lisinopril",
         "500mg",
         "10mg"
       ],
       "diagnoses": [
-        "Hypertension",
-        "Type 2 Diabetes"
+        "Type 2 Diabetes",
+        "Hypertension"
       ],
       "symptoms": [
         "Polyuria",
-        "Polydipsia"
+        "Polydipsia",
+        "new onset diabetes"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Type 2 Diabetes"
+          "Type 2 Diabetes",
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -34,13 +40,47 @@
           "500mg",
           "10mg"
         ],
+        "symptoms": [
+          "new onset diabetes"
+        ],
+        "procedures": [],
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "new onset diabetes",
+            "predicate": "has_symptom",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          }
+        ],
         "lab_values": {
           "HbA1c": 7.2,
-          "BP": "140/90"
-        },
-        "symptoms": [],
-        "procedures": [],
-        "relationships": []
+          "BP_systolic": 140,
+          "BP_diastolic": 90
+        }
       }
     },
     {
@@ -49,15 +89,22 @@
       "note": "BP 150/95, HbA1c 7.8. Medications adjusted to Metformin 1000mg bid, Lisinopril 20mg daily. Diagnoses updated to include Hyperlipidemia.",
       "labs": {
         "HbA1c": 7.8,
-        "BP": "150/95"
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 68,
+        "LDL": 160
       },
       "medications": [
+        "Metformin 1000mg bid",
+        "Lisinopril 20mg daily",
         "metformin",
         "lisinopril",
         "1000mg",
         "20mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
         "Hyperlipidemia"
       ],
       "symptoms": [
@@ -75,13 +122,57 @@
           "1000mg",
           "20mg"
         ],
-        "lab_values": {
-          "HbA1c": 7.8,
-          "BP": "150/95"
-        },
         "symptoms": [],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "BP_systolic",
+            "confidence": 1.0
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "BP_diastolic",
+            "confidence": 1.0
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "HbA1c",
+            "confidence": 1.0
+          },
+          {
+            "subject": "Metformin",
+            "predicate": "adjusted_to",
+            "object": "1000mg",
+            "confidence": 1.0
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "adjusted_to",
+            "object": "20mg",
+            "confidence": 1.0
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "managed_by",
+            "object": "Metformin",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "managed_by",
+            "object": "Lisinopril",
+            "confidence": 0.8
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.8,
+          "BP_systolic": 150,
+          "BP_diastolic": 95
+        }
       }
     },
     {
@@ -90,9 +181,15 @@
       "note": "BP 160/100, HbA1c 8.2. Patient reports new onset edema. Medications adjusted to Metformin 1500mg bid, Lisinopril 30mg daily, Atorvastatin 20mg daily.",
       "labs": {
         "HbA1c": 8.2,
-        "BP": "160/100"
+        "BP_systolic": 160,
+        "BP_diastolic": 100,
+        "eGFR": 60,
+        "LDL": 180
       },
       "medications": [
+        "Metformin 1500mg bid",
+        "Lisinopril 30mg daily",
+        "Atorvastatin 20mg daily",
         "metformin",
         "lisinopril",
         "atorvastatin",
@@ -104,13 +201,20 @@
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
-        "Chronic Kidney Disease"
+        "Chronic Kidney Disease",
+        "diabetes"
       ],
       "symptoms": [
+        "Polyuria",
+        "Polydipsia",
+        "Fatigue",
         "Edema"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "hypertension",
+          "diabetes"
+        ],
         "medications": [
           "metformin",
           "lisinopril",
@@ -119,15 +223,53 @@
           "30mg",
           "20mg"
         ],
-        "lab_values": {
-          "HbA1c": 8.2,
-          "BP": "160/100"
-        },
         "symptoms": [
           "Edema"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "metformin",
+            "predicate": "managed_by",
+            "object": "diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "lisinopril",
+            "predicate": "managed_by",
+            "object": "hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "atorvastatin",
+            "predicate": "managed_by",
+            "object": "hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "BP_systolic",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "BP_diastolic",
+            "confidence": 0.8
+          },
+          {
+            "subject": "edema",
+            "predicate": "has_symptom",
+            "object": "new onset edema",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.2,
+          "BP_systolic": 160,
+          "BP_diastolic": 100
+        }
       }
     },
     {
@@ -136,9 +278,15 @@
       "note": "BP 155/90, HbA1c 7.5. Patient's kidney function has stabilized. Medications adjusted to Metformin 1000mg bid, Lisinopril 20mg daily, Atorvastatin 40mg daily.",
       "labs": {
         "HbA1c": 7.5,
-        "BP": "155/90"
+        "BP_systolic": 155,
+        "BP_diastolic": 90,
+        "eGFR": 70,
+        "LDL": 140
       },
       "medications": [
+        "Metformin 1000mg bid",
+        "Lisinopril 20mg daily",
+        "Atorvastatin 40mg daily",
         "metformin",
         "lisinopril",
         "atorvastatin",
@@ -150,7 +298,8 @@
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
-        "Chronic Kidney Disease"
+        "Chronic Kidney Disease",
+        "kidney dysfunction"
       ],
       "symptoms": [
         "Polyuria",
@@ -158,7 +307,9 @@
         "Fatigue"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "kidney dysfunction"
+        ],
         "medications": [
           "metformin",
           "lisinopril",
@@ -167,13 +318,51 @@
           "20mg",
           "40mg"
         ],
-        "lab_values": {
-          "HbA1c": 7.5,
-          "BP": "155/90"
-        },
         "symptoms": [],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "kidney function",
+            "predicate": "has_stabilized",
+            "object": "BP 155/90",
+            "confidence": 0.8
+          },
+          {
+            "subject": "metformin",
+            "predicate": "managed_by",
+            "object": "kidney dysfunction",
+            "confidence": 0.7
+          },
+          {
+            "subject": "lisinopril",
+            "predicate": "managed_by",
+            "object": "kidney dysfunction",
+            "confidence": 0.7
+          },
+          {
+            "subject": "atorvastatin",
+            "predicate": "managed_by",
+            "object": "kidney dysfunction",
+            "confidence": 0.7
+          },
+          {
+            "subject": "BP 155/90",
+            "predicate": "measured_by",
+            "object": "BP_systolic",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP 155/90",
+            "predicate": "measured_by",
+            "object": "BP_diastolic",
+            "confidence": 0.9
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.5,
+          "BP_systolic": 155,
+          "BP_diastolic": 90
+        }
       }
     }
   ]

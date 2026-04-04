@@ -7,11 +7,15 @@
       "note": "Patient presented with new-onset fatigue and palpitations. Physical examination revealed elevated blood pressure (140/90 mmHg) and obesity (BMI 35). Initial diagnoses include Hypertension and Hyperlipidemia. Laboratory results: HbA1c 7.2%, BP 140/90 mmHg, eGFR 72 mL/min, LDL 130 mg/dL. Prescribed Metformin 500mg twice daily for Type 2 Diabetes, Lisinopril 10mg daily for Hypertension, and Simvastatin 20mg nightly for Hyperlipidemia.",
       "labs": {
         "HbA1c": 7.2,
-        "BP": "140/90",
-        "eGFR": 72.0,
-        "LDL": 130.0
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg daily",
+        "Simvastatin 20mg HS",
         "metformin",
         "lisinopril",
         "simvastatin",
@@ -21,18 +25,19 @@
         "20mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
-        "Fatigue"
+        "Fatigue",
+        "Palpitations"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -43,17 +48,18 @@
           "10mg",
           "20mg"
         ],
-        "lab_values": {
-          "HbA1c": 7.2,
-          "BP": "140/90",
-          "eGFR": 72.0,
-          "LDL": 130.0
-        },
         "symptoms": [
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [],
+        "lab_values": {
+          "HbA1c": 7.2,
+          "BP_systolic": 140,
+          "BP_diastolic": 90,
+          "eGFR": 72.0,
+          "LDL": 130.0
+        }
       }
     },
     {
@@ -62,16 +68,23 @@
       "note": "Patient returned for follow-up. Physical examination revealed continued elevated blood pressure (145/95 mmHg) and obesity (BMI 35). Laboratory results: HbA1c 7.5%, BP 145/95 mmHg, eGFR 70 mL/min, LDL 145 mg/dL. The dose of Lisinopril has been increased to 20mg daily to better control blood pressure. Patient now reports experiencing nocturia. New diagnosis: Chronic Kidney Disease.",
       "labs": {
         "HbA1c": 7.5,
-        "BP": "145/95",
-        "eGFR": 70.0,
-        "LDL": 145.0
+        "BP_systolic": 145,
+        "BP_diastolic": 95,
+        "eGFR": 70,
+        "LDL": 145
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 20mg daily",
+        "Simvastatin 20mg HS",
         "lisinopril",
         "145 mg",
         "20mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
         "Chronic Kidney Disease"
       ],
       "symptoms": [
@@ -88,15 +101,16 @@
           "145 mg",
           "20mg"
         ],
-        "lab_values": {
-          "HbA1c": 7.5,
-          "BP": "145/95",
-          "eGFR": 70.0,
-          "LDL": 145.0
-        },
         "symptoms": [],
         "procedures": [],
-        "relationships": []
+        "relationships": [],
+        "lab_values": {
+          "HbA1c": 7.5,
+          "BP_systolic": 145,
+          "BP_diastolic": 95,
+          "eGFR": 70.0,
+          "LDL": 145.0
+        }
       }
     },
     {
@@ -105,21 +119,37 @@
       "note": "Patient returned for follow-up. Physical examination revealed elevated blood pressure (150/100 mmHg) and obesity (BMI 35). Laboratory results: HbA1c 8.1%, BP 150/100 mmHg, eGFR 65 mL/min, LDL 155 mg/dL. The patient has developed new symptoms of ankle edema. The dose of Lisinopril has been increased to 40mg daily and the patient has been started on Furosemide 20mg daily to manage edema. New diagnosis: Coronary Artery Disease.",
       "labs": {
         "HbA1c": 8.1,
-        "BP": "150/100",
-        "eGFR": 65.0,
-        "LDL": 155.0
+        "BP_systolic": 150,
+        "BP_diastolic": 100,
+        "eGFR": 65,
+        "LDL": 155
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 40mg daily",
+        "Simvastatin 20mg HS",
+        "Furosemide 20mg daily",
         "lisinopril",
         "155 mg",
         "40mg",
-        "20mg"
+        "20mg",
+        "furosemide"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
         "Coronary Artery Disease"
       ],
       "symptoms": [
-        "Edema"
+        "Fatigue",
+        "Palpitations",
+        "Nocturia",
+        "Ankle edema",
+        "Dyspnea",
+        "Edema",
+        "obesity"
       ],
       "extracted": {
         "conditions": [
@@ -129,19 +159,72 @@
           "lisinopril",
           "155 mg",
           "40mg",
-          "20mg"
+          "20mg",
+          "furosemide"
+        ],
+        "symptoms": [
+          "Edema",
+          "ankle edema",
+          "obesity"
+        ],
+        "procedures": [],
+        "relationships": [
+          {
+            "subject": "lisinopril",
+            "predicate": "increased",
+            "object": "40mg",
+            "confidence": 0.9
+          },
+          {
+            "subject": "lisinopril",
+            "predicate": "contraindicated_with",
+            "object": "furosemide",
+            "confidence": 0.8
+          },
+          {
+            "subject": "furosemide",
+            "predicate": "managed_by",
+            "object": "edema",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "worsens",
+            "object": "ankle edema",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "worsens",
+            "object": "obesity",
+            "confidence": 0.7
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "150/100 mmHg",
+            "confidence": 0.9
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "65 mL/min",
+            "confidence": 0.9
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "155 mg/dL",
+            "confidence": 0.9
+          }
         ],
         "lab_values": {
           "HbA1c": 8.1,
-          "BP": "150/100",
+          "BP_systolic": 150,
+          "BP_diastolic": 100,
           "eGFR": 65.0,
           "LDL": 155.0
-        },
-        "symptoms": [
-          "Edema"
-        ],
-        "procedures": [],
-        "relationships": []
+        }
       }
     },
     {
@@ -150,11 +233,17 @@
       "note": "Patient returned for follow-up. Physical examination revealed continued elevated blood pressure (155/105 mmHg) and obesity (BMI 35). Laboratory results: HbA1c 8.5%, BP 155/105 mmHg, eGFR 60 mL/min, LDL 165 mg/dL. The patient has developed new symptoms of headaches and dizziness. The dose of Lisinopril has been increased to 60mg daily and the patient has been started on Amlodipine 5mg daily to better control blood pressure. New diagnosis: Retinopathy.",
       "labs": {
         "HbA1c": 8.5,
-        "BP": "155/105",
-        "eGFR": 60.0,
-        "LDL": 165.0
+        "BP_systolic": 155,
+        "BP_diastolic": 105,
+        "eGFR": 60,
+        "LDL": 165
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 60mg daily",
+        "Simvastatin 20mg HS",
+        "Furosemide 20mg daily",
+        "Amlodipine 5mg daily",
         "lisinopril",
         "amlodipine",
         "165 mg",
@@ -167,13 +256,26 @@
         "Hyperlipidemia",
         "Chronic Kidney Disease",
         "Coronary Artery Disease",
-        "Retinopathy"
+        "Retinopathy",
+        "Obesity",
+        "Diabetes"
       ],
       "symptoms": [
+        "Fatigue",
+        "Palpitations",
+        "Nocturia",
+        "Ankle edema",
+        "Dyspnea",
+        "Headaches",
         "Dizziness"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Hypertension",
+          "Obesity",
+          "Diabetes",
+          "Retinopathy"
+        ],
         "medications": [
           "lisinopril",
           "amlodipine",
@@ -181,17 +283,80 @@
           "60mg",
           "5mg"
         ],
-        "lab_values": {
-          "HbA1c": 8.5,
-          "BP": "155/105",
-          "eGFR": 60.0,
-          "LDL": 165.0
-        },
         "symptoms": [
-          "Dizziness"
+          "Dizziness",
+          "Headaches"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Lisinopril",
+            "predicate": "increased",
+            "object": "60mg",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Amlodipine",
+            "predicate": "started",
+            "object": "5mg",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "BP_systolic",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "BP_diastolic",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "HbA1c",
+            "confidence": 0.9
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "eGFR",
+            "confidence": 0.9
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "LDL",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "contraindicated_with",
+            "object": "Retinopathy",
+            "confidence": 0.7
+          },
+          {
+            "subject": "BP",
+            "predicate": "worsens",
+            "object": "Headaches",
+            "confidence": 0.6
+          },
+          {
+            "subject": "BP",
+            "predicate": "worsens",
+            "object": "Dizziness",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.5,
+          "BP_systolic": 155,
+          "BP_diastolic": 105,
+          "eGFR": 60.0,
+          "LDL": 165.0
+        }
       }
     },
     {
@@ -200,18 +365,38 @@
       "note": "Patient returned for follow-up. Physical examination revealed continued elevated blood pressure (160/110 mmHg) and obesity (BMI 35). Laboratory results: HbA1c 9.0%, BP 160/110 mmHg, eGFR 55 mL/min, LDL 175 mg/dL. The patient has developed new symptoms of shortness of breath. The dose of Furosemide has been increased to 40mg daily to manage edema. New diagnosis: Heart Failure.",
       "labs": {
         "HbA1c": 9.0,
-        "BP": "160/110",
-        "eGFR": 55.0,
-        "LDL": 175.0
+        "BP_systolic": 160,
+        "BP_diastolic": 110,
+        "eGFR": 55,
+        "LDL": 175
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 60mg daily",
+        "Simvastatin 20mg HS",
+        "Furosemide 40mg daily",
+        "Amlodipine 5mg daily",
         "175 mg",
-        "40mg"
+        "40mg",
+        "Furosemide"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Chronic Kidney Disease",
+        "Coronary Artery Disease",
+        "Retinopathy",
         "Heart Failure"
       ],
       "symptoms": [
+        "Fatigue",
+        "Palpitations",
+        "Nocturia",
+        "Ankle edema",
+        "Dyspnea",
+        "Headaches",
+        "Dizziness",
         "Shortness of breath",
         "Edema"
       ],
@@ -221,20 +406,65 @@
         ],
         "medications": [
           "175 mg",
-          "40mg"
+          "40mg",
+          "Furosemide"
+        ],
+        "symptoms": [
+          "Edema",
+          "Shortness of breath"
+        ],
+        "procedures": [],
+        "relationships": [
+          {
+            "subject": "Furosemide",
+            "predicate": "managed_by",
+            "object": "edema",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Heart Failure",
+            "predicate": "worsens",
+            "object": "shortness of breath",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "lab results",
+            "confidence": 0.7
+          },
+          {
+            "subject": "BP_systolic",
+            "predicate": "measured_by",
+            "object": "lab results",
+            "confidence": 0.7
+          },
+          {
+            "subject": "BP_diastolic",
+            "predicate": "measured_by",
+            "object": "lab results",
+            "confidence": 0.7
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "lab results",
+            "confidence": 0.7
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "lab results",
+            "confidence": 0.7
+          }
         ],
         "lab_values": {
           "HbA1c": 9.0,
-          "BP": "160/110",
+          "BP_systolic": 160,
+          "BP_diastolic": 110,
           "eGFR": 55.0,
           "LDL": 175.0
-        },
-        "symptoms": [
-          "Shortness of breath",
-          "Edema"
-        ],
-        "procedures": [],
-        "relationships": []
+        }
       }
     }
   ]

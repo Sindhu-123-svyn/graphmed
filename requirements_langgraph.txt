@@ -1,0 +1,29 @@
+# Core LangChain and LangGraph (compatible versions)
+langchain==0.2.0
+langchain-core==0.2.0
+langchain-groq==0.1.0
+langgraph==0.0.20
+langgraph-checkpoint==1.0.0
+langgraph-prebuilt==0.0.1
+
+# Vector and Embeddings
+chromadb==0.4.22
+sentence-transformers==2.2.2
+
+# Data Processing
+pandas==2.2.0
+numpy==1.26.3
+
+# API Clients
+groq==0.10.0
+huggingface-hub==0.22.0
+python-dotenv==1.0.0
+
+# Utilities
+requests==2.31.0
+typing-extensions==4.10.0
+pydantic==2.6.0
+packaging==23.2
+
+# Additional
+tiktoken==0.5.2

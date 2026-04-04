@@ -6,29 +6,35 @@
       "date": "2022-06-15",
       "note": "Patient presents with Type 2 Diabetes, Hypertension, and Hyperlipidemia. HbA1c is 7.2%, BP 140/90, and LDL is 130. Medications include Metformin 500mg BID and Lisinopril 10mg OD. Diagnoses include Type 2 Diabetes, Hypertension, and Hyperlipidemia. Symptoms include polyuria, polydipsia, and fatigue.",
       "labs": {
-        "BP": "140/90"
+        "HbA1c": 7.2,
+        "BP_systolic": 140,
+        "BP_diastolic": 90,
+        "eGFR": 72,
+        "LDL": 130
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg OD",
         "metformin",
         "lisinopril",
         "500mg",
         "10mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia",
-        "Type 2 Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
-        "Polydipsia",
-        "Polyuria",
-        "Fatigue"
+        "polyuria",
+        "polydipsia",
+        "fatigue"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
+          "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Type 2 Diabetes"
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -36,16 +42,68 @@
           "500mg",
           "10mg"
         ],
-        "lab_values": {
-          "BP": "140/90"
-        },
         "symptoms": [
           "Polydipsia",
           "Polyuria",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Polyuria",
+            "predicate": "has_symptom",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Polydipsia",
+            "predicate": "has_symptom",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "BP_systolic": 140,
+          "BP_diastolic": 90,
+          "HbA1c": 7.2,
+          "LDL": 130
+        }
       }
     },
     {
@@ -53,38 +111,89 @@
       "date": "2023-02-20",
       "note": "Patient returns with worsening hypertension and hyperlipidemia. HbA1c is 7.8%, BP 150/95, and LDL is 145. Medications are adjusted to include Atorvastatin 20mg OD. Diagnoses remain the same, but symptoms include edema and shortness of breath.",
       "labs": {
-        "BP": "150/95"
+        "HbA1c": 7.8,
+        "BP_systolic": 150,
+        "BP_diastolic": 95,
+        "eGFR": 68,
+        "LDL": 145
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg OD",
+        "Atorvastatin 20mg OD",
         "atorvastatin",
         "20mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia"
       ],
       "symptoms": [
-        "Shortness of breath",
-        "Edema"
+        "polyuria",
+        "polydipsia",
+        "fatigue",
+        "edema",
+        "shortness of breath"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Hyperlipidemia"
+          "Hyperlipidemia",
+          "Hypertension"
         ],
         "medications": [
           "atorvastatin",
           "20mg"
         ],
-        "lab_values": {
-          "BP": "150/95"
-        },
         "symptoms": [
-          "Shortness of breath",
-          "Edema"
+          "Edema",
+          "Shortness of breath"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "BP_systolic",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "worsens",
+            "object": "LDL",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Atorvastatin",
+            "predicate": "managed_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Atorvastatin",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP_systolic",
+            "predicate": "measured_by",
+            "object": "Hypertension",
+            "confidence": 0.7
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "Hyperlipidemia",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "BP_systolic": 150,
+          "BP_diastolic": 95,
+          "HbA1c": 7.8,
+          "LDL": 145
+        }
       }
     },
     {
@@ -92,40 +201,108 @@
       "date": "2023-10-15",
       "note": "Patient returns with worsening kidney function and coronary artery disease. HbA1c is 8.2%, BP 160/100, and LDL is 155. Medications are adjusted to include Furosemide 40mg BID and Aspirin 81mg OD. Diagnoses now include Chronic Kidney Disease. Symptoms include fatigue, edema, and shortness of breath.",
       "labs": {
-        "BP": "160/100"
+        "HbA1c": 8.2,
+        "BP_systolic": 160,
+        "BP_diastolic": 100,
+        "eGFR": 45,
+        "LDL": 155
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg OD",
+        "Atorvastatin 20mg OD",
+        "Furosemide 40mg BID",
+        "Aspirin 81mg OD",
         "40mg",
         "81mg"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
         "Chronic Kidney Disease",
         "Coronary Artery Disease"
       ],
       "symptoms": [
-        "Shortness of breath",
-        "Edema",
-        "Fatigue"
+        "polyuria",
+        "polydipsia",
+        "fatigue",
+        "edema",
+        "shortness of breath"
       ],
       "extracted": {
         "conditions": [
-          "Chronic Kidney Disease",
-          "Coronary Artery Disease"
+          "Coronary Artery Disease",
+          "Chronic Kidney Disease"
         ],
         "medications": [
           "40mg",
-          "81mg"
+          "81mg",
+          "Furosemide 40mg BID",
+          "Aspirin 81mg OD"
         ],
-        "lab_values": {
-          "BP": "160/100"
-        },
         "symptoms": [
-          "Shortness of breath",
           "Edema",
+          "Shortness of breath",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Furosemide",
+            "predicate": "managed_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Aspirin",
+            "predicate": "managed_by",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "LDL",
+            "predicate": "measured_by",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Furosemide",
+            "predicate": "contraindicated_with",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Aspirin",
+            "predicate": "contraindicated_with",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "BP_systolic": 160,
+          "BP_diastolic": 100,
+          "HbA1c": 8.2,
+          "LDL": 155
+        }
       }
     }
   ]

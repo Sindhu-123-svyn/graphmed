@@ -13,23 +13,25 @@
         "LDL": 140
       },
       "medications": [
+        "Metformin 500mg BID",
+        "Lisinopril 10mg daily",
         "metformin",
         "lisinopril",
         "500mg",
         "10mg"
       ],
       "diagnoses": [
-        "Hypertension",
-        "Type 2 Diabetes"
+        "Type 2 Diabetes",
+        "Hypertension"
       ],
       "symptoms": [
-        "Polyuria",
-        "Fatigue"
+        "Fatigue",
+        "Polyuria"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Type 2 Diabetes"
+          "Type 2 Diabetes",
+          "Hypertension"
         ],
         "medications": [
           "metformin",
@@ -37,13 +39,44 @@
           "500mg",
           "10mg"
         ],
-        "lab_values": {},
         "symptoms": [
           "Polyuria",
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "metformin",
+            "predicate": "managed_by",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.9
+          },
+          {
+            "subject": "lisinopril",
+            "predicate": "managed_by",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "metformin",
+            "predicate": "contraindicated_with",
+            "object": "lisinopril",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Polyuria",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {}
       }
     },
     {
@@ -65,22 +98,71 @@
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia"
+        "Hyperlipidemia",
+        "Diabetes Mellitus"
       ],
       "symptoms": [
-        "Edema",
-        "Fatigue"
+        "Fatigue",
+        "Polyuria",
+        "Pedal edema",
+        "Edema"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Diabetes Mellitus",
+          "Hypertension"
+        ],
         "medications": [],
-        "lab_values": {},
         "symptoms": [
           "Edema",
           "Fatigue"
         ],
-        "procedures": [],
-        "relationships": []
+        "procedures": [
+          "ECG"
+        ],
+        "relationships": [
+          {
+            "subject": "HbA1c",
+            "predicate": "measured_by",
+            "object": "ECG",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "measured_by",
+            "object": "ECG",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Diabetes Mellitus",
+            "predicate": "worsens",
+            "object": "Edema",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Diabetes Mellitus",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Edema",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.8
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.2,
+          "BP_systolic": 150,
+          "BP_diastolic": 95
+        }
       }
     },
     {
@@ -95,28 +177,61 @@
         "LDL": 140
       },
       "medications": [
+        "Metformin 1500mg BID",
+        "Lisinopril 30mg daily",
+        "Atorvastatin 20mg daily",
+        "Aspirin 81mg daily",
         "metformin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
-        "Coronary Artery Disease"
+        "Coronary Artery Disease",
+        "elevated blood pressure"
       ],
       "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Pedal edema",
         "Chest pain"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "elevated blood pressure"
+        ],
         "medications": [
           "metformin"
         ],
-        "lab_values": {},
         "symptoms": [
           "Chest pain"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "metformin",
+            "predicate": "improves",
+            "object": "HbA1c",
+            "confidence": 0.9
+          },
+          {
+            "subject": "metformin",
+            "predicate": "managed_by",
+            "object": "increased doses",
+            "confidence": 0.8
+          },
+          {
+            "subject": "BP",
+            "predicate": "worsens",
+            "object": "chest pain",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.5,
+          "BP_systolic": 155,
+          "BP_diastolic": 100
+        }
       }
     },
     {
@@ -138,9 +253,17 @@
         "Furosemide 20mg daily"
       ],
       "diagnoses": [
+        "Type 2 Diabetes",
+        "Hypertension",
+        "Hyperlipidemia",
+        "Coronary Artery Disease",
         "Chronic Kidney Disease"
       ],
       "symptoms": [
+        "Fatigue",
+        "Polyuria",
+        "Pedal edema",
+        "Chest pain",
         "Shortness of breath"
       ],
       "extracted": {
@@ -148,12 +271,41 @@
           "Chronic Kidney Disease"
         ],
         "medications": [],
-        "lab_values": {},
         "symptoms": [
           "Shortness of breath"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "eGFR",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "elevated",
+            "object": "160/105",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "measured_by",
+            "object": "lab",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Shortness of breath",
+            "predicate": "has_symptom",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "eGFR": 45,
+          "BP_systolic": 160,
+          "BP_diastolic": 105
+        }
       }
     },
     {
@@ -181,20 +333,61 @@
         "Hyperlipidemia",
         "Coronary Artery Disease",
         "Chronic Kidney Disease",
-        "Peripheral neuropathy"
+        "Peripheral neuropathy",
+        "Diabetes Mellitus"
       ],
       "symptoms": [
-        "Tingling"
+        "Fatigue",
+        "Polyuria",
+        "Pedal edema",
+        "Chest pain",
+        "Shortness of breath",
+        "Numbness in fingers",
+        "Tingling",
+        "Numbness"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Diabetes Mellitus",
+          "Hypertension"
+        ],
         "medications": [],
-        "lab_values": {},
         "symptoms": [
-          "Tingling"
+          "Tingling",
+          "Numbness"
         ],
         "procedures": [],
-        "relationships": []
+        "relationships": [
+          {
+            "subject": "HbA1c",
+            "predicate": "worsens",
+            "object": "Diabetes Mellitus",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP",
+            "predicate": "worsens",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Numbness",
+            "predicate": "has_symptom",
+            "object": "Diabetes Mellitus",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Tingling",
+            "predicate": "has_symptom",
+            "object": "Diabetes Mellitus",
+            "confidence": 0.8
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.5,
+          "BP_systolic": 165,
+          "BP_diastolic": 110
+        }
       }
     }
   ]
