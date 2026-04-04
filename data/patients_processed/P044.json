@@ -13,12 +13,8 @@
         "LDL": 130
       },
       "medications": [
-        "Metformin 500mg bid",
-        "Lisinopril 10mg daily",
         "metformin",
-        "lisinopril",
-        "500mg",
-        "10mg"
+        "lisinopril"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -27,32 +23,64 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria"
+        "Frequent urination"
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [
           "metformin",
-          "lisinopril",
-          "500mg",
-          "10mg"
+          "lisinopril"
+        ],
+        "dosages": [
+          "500mg bid",
+          "10mg daily"
         ],
         "symptoms": [
-          "Polyuria",
-          "Fatigue"
+          "Fatigue",
+          "Frequent urination"
         ],
         "procedures": [],
-        "relationships": [],
+        "relationships": [
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "metformin",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Frequent urination",
+            "confidence": 0.8
+          }
+        ],
         "lab_values": {
           "BP_systolic": 140,
           "BP_diastolic": 90,
-          "eGFR": 72.0
+          "eGFR": 72.0,
+          "HbA1c": 7.2
         }
-      }
+      },
+      "dosages": [
+        "500mg bid",
+        "10mg daily"
+      ]
     },
     {
       "visit_id": "V2",
@@ -66,14 +94,9 @@
         "LDL": 120
       },
       "medications": [
-        "Metformin 500mg bid",
-        "Lisinopril 20mg daily",
-        "Simvastatin 20mg daily",
         "metformin",
         "lisinopril",
-        "simvastatin",
-        "500mg",
-        "20mg"
+        "simvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -83,83 +106,61 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Edema",
         "Shortness of breath"
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Hypertension",
           "Chronic Kidney Disease"
         ],
         "medications": [
           "metformin",
           "lisinopril",
-          "simvastatin",
-          "500mg",
-          "20mg"
+          "simvastatin"
+        ],
+        "dosages": [
+          "500mg bid",
+          "20mg daily"
         ],
         "symptoms": [
-          "Edema",
-          "Shortness of breath"
+          "Shortness of breath",
+          "Edema"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "metformin",
             "confidence": 0.8
           },
           {
-            "subject": "Lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "lisinopril",
             "confidence": 0.8
           },
           {
-            "subject": "Simvastatin",
+            "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Hyperlipidemia",
+            "object": "simvastatin",
             "confidence": 0.8
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.7
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.7
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Hypertension",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Shortness of breath",
-            "predicate": "has_symptom",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Edema",
-            "predicate": "has_symptom",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.6
           },
           {
             "subject": "Type 2 Diabetes",
             "predicate": "worsens",
             "object": "Chronic Kidney Disease",
-            "confidence": 0.5
+            "confidence": 0.6
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.6
           }
         ],
         "lab_values": {
@@ -168,7 +169,11 @@
           "eGFR": 60.0,
           "HbA1c": 7.5
         }
-      }
+      },
+      "dosages": [
+        "500mg bid",
+        "20mg daily"
+      ]
     },
     {
       "visit_id": "V3",
@@ -182,18 +187,10 @@
         "LDL": 110
       },
       "medications": [
-        "Metformin 1000mg bid",
-        "Lisinopril 30mg daily",
-        "Simvastatin 40mg daily",
-        "Apixaban 5mg bid",
         "metformin",
         "lisinopril",
         "simvastatin",
-        "1000mg",
-        "30mg",
-        "40mg",
-        "5mg",
-        "Apixaban"
+        "apixaban"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -204,7 +201,7 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Edema",
         "Shortness of breath",
         "Chest pain",
@@ -212,77 +209,55 @@
       ],
       "extracted": {
         "conditions": [
-          "Chronic Kidney Disease",
+          "Hypertension",
           "Type 2 Diabetes",
-          "Coronary Artery Disease",
           "Hyperlipidemia",
-          "Hypertension"
+          "Chronic Kidney Disease",
+          "Coronary Artery Disease"
         ],
         "medications": [
           "metformin",
           "lisinopril",
           "simvastatin",
-          "1000mg",
-          "30mg",
-          "40mg",
-          "5mg",
-          "Apixaban"
+          "apixaban"
+        ],
+        "dosages": [
+          "1000mg bid",
+          "30mg daily",
+          "40mg daily",
+          "5mg bid"
         ],
         "symptoms": [
           "Chest pain",
-          "palpitations"
+          "Palpitations"
         ],
         "procedures": [
-          "physical examination"
+          "Physical examination"
         ],
         "relationships": [
           {
-            "subject": "Atrial fibrillation",
-            "predicate": "has_symptom",
-            "object": "palpitations",
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "Metformin",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.8
+            "object": "lisinopril",
+            "confidence": 0.9
           },
           {
-            "subject": "Lisinopril",
+            "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Hypertension",
-            "confidence": 0.8
+            "object": "simvastatin",
+            "confidence": 0.9
           },
           {
-            "subject": "Simvastatin",
+            "subject": "Coronary Artery Disease",
             "predicate": "managed_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Apixaban",
-            "predicate": "managed_by",
-            "object": "Coronary Artery Disease",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.7
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Hypertension",
-            "confidence": 0.7
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.7
+            "object": "apixaban",
+            "confidence": 0.9
           }
         ],
         "lab_values": {
@@ -291,7 +266,13 @@
           "eGFR": 50.0,
           "HbA1c": 8.0
         }
-      }
+      },
+      "dosages": [
+        "1000mg bid",
+        "30mg daily",
+        "40mg daily",
+        "5mg bid"
+      ]
     },
     {
       "visit_id": "V4",
@@ -305,19 +286,11 @@
         "LDL": 100
       },
       "medications": [
-        "Metformin 1500mg bid",
-        "Lisinopril 40mg daily",
-        "Simvastatin 60mg daily",
-        "Apixaban 10mg bid",
-        "Epoietin alfa 5000 units qw",
         "metformin",
         "lisinopril",
         "simvastatin",
-        "1500mg",
-        "40mg",
-        "60mg",
-        "10mg",
         "apixaban",
+        "epoietin alfa 5000 units qw",
         "epoietin alfa"
       ],
       "diagnoses": [
@@ -330,100 +303,103 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Edema",
         "Shortness of breath",
         "Chest pain",
         "Palpitations",
         "Weakness",
-        "worsening weakness",
-        "anemia"
+        "Worsening weakness",
+        "Anemia"
       ],
       "extracted": {
         "conditions": [
-          "Chronic Kidney Disease",
-          "Anemia",
+          "Hypertension",
           "Type 2 Diabetes",
-          "Coronary Artery Disease",
           "Hyperlipidemia",
-          "Hypertension"
+          "Chronic Kidney Disease",
+          "Coronary Artery Disease",
+          "Anemia"
         ],
         "medications": [
           "metformin",
           "lisinopril",
           "simvastatin",
-          "1500mg",
-          "40mg",
-          "60mg",
-          "10mg",
           "apixaban",
           "epoietin alfa"
         ],
+        "dosages": [
+          "1500mg bid",
+          "40mg daily",
+          "60mg daily",
+          "10mg bid",
+          "5000 units qw"
+        ],
         "symptoms": [
-          "worsening weakness",
-          "anemia"
+          "Worsening weakness",
+          "Anemia"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "lisinopril",
             "confidence": 0.9
           },
           {
-            "subject": "simvastatin",
+            "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Hyperlipidemia",
+            "object": "simvastatin",
             "confidence": 0.9
           },
           {
-            "subject": "apixaban",
+            "subject": "Coronary Artery Disease",
             "predicate": "managed_by",
-            "object": "Coronary Artery Disease",
+            "object": "apixaban",
             "confidence": 0.9
           },
           {
-            "subject": "epoietin alfa",
+            "subject": "Anemia",
             "predicate": "managed_by",
-            "object": "Anemia",
+            "object": "epoietin alfa",
             "confidence": 0.9
           },
           {
-            "subject": "eGFR",
-            "predicate": "measured_by",
+            "subject": "Hypertension",
+            "predicate": "worsens",
             "object": "Chronic Kidney Disease",
             "confidence": 0.8
           },
           {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
             "confidence": 0.8
           },
           {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Hypertension",
+            "subject": "Hyperlipidemia",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
             "confidence": 0.8
           },
           {
-            "subject": "anemia",
-            "predicate": "has_symptom",
-            "object": "worsening weakness",
-            "confidence": 0.7
+            "subject": "Coronary Artery Disease",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.8
           },
           {
-            "subject": "eGFR",
-            "predicate": "has_symptom",
-            "object": "anemia",
-            "confidence": 0.7
+            "subject": "Anemia",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.8
           }
         ],
         "lab_values": {
@@ -432,7 +408,14 @@
           "eGFR": 45.0,
           "HbA1c": 8.5
         }
-      }
+      },
+      "dosages": [
+        "1500mg bid",
+        "40mg daily",
+        "60mg daily",
+        "10mg bid",
+        "5000 units qw"
+      ]
     }
   ]
 }

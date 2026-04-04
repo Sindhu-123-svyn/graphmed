@@ -10,16 +10,11 @@
         "BP_systolic": 140,
         "BP_diastolic": 90,
         "eGFR": 80,
-        "LDL": 150,
-        "Blood pressure": "140/90 mmHg"
+        "LDL": 150
       },
       "medications": [
-        "Lisinopril 10mg daily",
-        "Atorvastatin 20mg daily",
         "lisinopril",
-        "atorvastatin",
-        "20mg",
-        "10mg"
+        "atorvastatin"
       ],
       "diagnoses": [
         "Hypertension",
@@ -28,55 +23,62 @@
       "symptoms": [
         "Shortness of breath on exertion",
         "Occasional chest pain",
-        "Chest pain",
-        "Shortness of breath"
+        "Shortness of breath",
+        "Chest pain"
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hypertension",
+          "Hyperlipidemia"
         ],
         "medications": [
           "lisinopril",
-          "atorvastatin",
-          "20mg",
-          "10mg"
+          "atorvastatin"
+        ],
+        "dosages": [
+          "20mg daily",
+          "10mg daily"
         ],
         "symptoms": [
-          "Chest pain",
-          "Shortness of breath"
+          "Shortness of breath",
+          "Chest pain"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Atorvastatin",
-            "predicate": "managed_by",
-            "object": "Lisinopril",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Atorvastatin",
-            "predicate": "measured_by",
-            "object": "Blood pressure",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Lisinopril",
-            "predicate": "measured_by",
-            "object": "Blood pressure",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Chest pain",
+            "subject": "Hypertension",
             "predicate": "has_symptom",
             "object": "Shortness of breath",
             "confidence": 0.7
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Chest pain",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "has_symptom",
+            "object": "Shortness of breath",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "has_symptom",
+            "object": "Chest pain",
+            "confidence": 0.6
           }
         ],
         "lab_values": {
-          "Blood pressure": "140/90 mmHg"
+          "BP_systolic": 140,
+          "BP_diastolic": 90
         }
-      }
+      },
+      "dosages": [
+        "10mg daily",
+        "20mg daily"
+      ]
     },
     {
       "visit_id": "V2",
@@ -87,17 +89,12 @@
         "BP_systolic": 160,
         "BP_diastolic": 100,
         "eGFR": 70,
-        "LDL": 140,
-        "Blood pressure": "160/100 mmHg"
+        "LDL": 140
       },
       "medications": [
-        "Lisinopril 20mg daily",
-        "Atorvastatin 20mg daily",
-        "Metoprolol 50mg daily",
-        "metoprolol",
         "lisinopril",
-        "50mg",
-        "20mg"
+        "atorvastatin",
+        "metoprolol"
       ],
       "diagnoses": [
         "Hypertension",
@@ -108,8 +105,8 @@
         "Shortness of breath on exertion",
         "Occasional chest pain",
         "Palpitations",
-        "Chest pain",
-        "Shortness of breath"
+        "Shortness of breath",
+        "Chest pain"
       ],
       "extracted": {
         "conditions": [
@@ -117,42 +114,20 @@
         ],
         "medications": [
           "metoprolol",
-          "lisinopril",
-          "50mg",
-          "20mg"
+          "lisinopril"
+        ],
+        "dosages": [
+          "50mg daily",
+          "20mg daily"
         ],
         "symptoms": [
-          "Chest pain",
-          "Shortness of breath"
+          "Shortness of breath",
+          "Chest pain"
         ],
         "procedures": [
-          "cardiology referral"
+          "cardiology evaluation"
         ],
         "relationships": [
-          {
-            "subject": "metoprolol",
-            "predicate": "managed_by",
-            "object": "cardiology",
-            "confidence": 0.8
-          },
-          {
-            "subject": "metoprolol",
-            "predicate": "measured_by",
-            "object": "blood pressure",
-            "confidence": 0.7
-          },
-          {
-            "subject": "lisinopril",
-            "predicate": "measured_by",
-            "object": "blood pressure",
-            "confidence": 0.7
-          },
-          {
-            "subject": "chest pain",
-            "predicate": "has_symptom",
-            "object": "shortness of breath",
-            "confidence": 0.9
-          },
           {
             "subject": "metoprolol",
             "predicate": "contraindicated_with",
@@ -161,9 +136,14 @@
           }
         ],
         "lab_values": {
-          "Blood pressure": "160/100 mmHg"
+          "BP_systolic": 160,
+          "BP_diastolic": 100
         }
-      }
+      },
+      "dosages": [
+        "20mg daily",
+        "50mg daily"
+      ]
     },
     {
       "visit_id": "V3",
@@ -174,88 +154,54 @@
         "BP_systolic": 150,
         "BP_diastolic": 90,
         "eGFR": 60,
-        "LDL": 130,
-        "blood_pressure": "elevated at 150/90 mmHg"
+        "LDL": 130
       },
       "medications": [
-        "Lisinopril 20mg daily",
-        "Atorvastatin 20mg daily",
-        "Metoprolol 100mg daily",
-        "Losartan 100mg daily",
-        "losartan",
+        "lisinopril",
+        "atorvastatin",
         "metoprolol",
-        "100mg"
+        "losartan"
       ],
       "diagnoses": [
         "Hypertension",
         "Hyperlipidemia",
         "Coronary Artery Disease",
         "Chronic Kidney Disease",
-        "renal dysfunction"
+        "Renal Failure"
       ],
       "symptoms": [
         "Shortness of breath on exertion",
         "Occasional chest pain",
         "Palpitations",
         "Fatigue",
-        "worsening renal function"
+        "Renal function"
       ],
       "extracted": {
         "conditions": [
-          "renal dysfunction"
+          "Renal Failure"
         ],
         "medications": [
           "losartan",
-          "metoprolol",
-          "100mg"
+          "metoprolol"
+        ],
+        "dosages": [
+          "100mg daily"
         ],
         "symptoms": [
-          "worsening renal function"
+          "Renal function"
         ],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "losartan",
-            "predicate": "managed_by",
-            "object": "hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "metoprolol",
-            "predicate": "managed_by",
-            "object": "hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "losartan",
-            "predicate": "contraindicated_with",
-            "object": "renal dysfunction",
-            "confidence": 0.7
-          },
-          {
-            "subject": "metoprolol",
-            "predicate": "contraindicated_with",
-            "object": "renal dysfunction",
-            "confidence": 0.7
-          },
-          {
-            "subject": "losartan",
-            "predicate": "improves",
-            "object": "hypertension",
-            "confidence": 0.9
-          },
-          {
-            "subject": "metoprolol",
-            "predicate": "improves",
-            "object": "hypertension",
-            "confidence": 0.9
-          }
-        ],
+        "relationships": [],
         "lab_values": {
           "eGFR": "decreased",
-          "blood_pressure": "elevated at 150/90 mmHg"
+          "BP_systolic": "elevated",
+          "BP_diastolic": "elevated"
         }
-      }
+      },
+      "dosages": [
+        "20mg daily",
+        "100mg daily"
+      ]
     },
     {
       "visit_id": "V4",
@@ -266,17 +212,14 @@
         "BP_systolic": 155,
         "BP_diastolic": 95,
         "eGFR": 50,
-        "LDL": 120,
-        "blood_pressure": "155/95 mmHg"
+        "LDL": 120
       },
       "medications": [
-        "Lisinopril 20mg daily",
-        "Atorvastatin 20mg daily",
-        "Metoprolol 100mg daily",
-        "Losartan 100mg daily",
-        "Amlodipine 10mg daily",
-        "amlodipine",
-        "10mg"
+        "lisinopril",
+        "atorvastatin",
+        "metoprolol",
+        "losartan",
+        "amlodipine"
       ],
       "diagnoses": [
         "Hypertension",
@@ -290,49 +233,37 @@
         "Occasional chest pain",
         "Palpitations",
         "Fatigue",
-        "Nausea"
+        "Nausea",
+        "Elevated blood pressure"
       ],
       "extracted": {
         "conditions": [
-          "hypertension"
+          "Hypertension"
         ],
         "medications": [
-          "amlodipine",
-          "10mg"
+          "amlodipine"
         ],
-        "symptoms": [],
-        "procedures": [],
-        "relationships": [
-          {
-            "subject": "amlodipine",
-            "predicate": "managed_by",
-            "object": "nephrology",
-            "confidence": 0.8
-          },
-          {
-            "subject": "amlodipine",
-            "predicate": "measured_by",
-            "object": "blood_pressure",
-            "confidence": 0.9
-          },
-          {
-            "subject": "amlodipine",
-            "predicate": "measured_by",
-            "object": "eGFR",
-            "confidence": 0.9
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "worsens",
-            "object": "hypertension",
-            "confidence": 0.7
-          }
+        "dosages": [
+          "10mg daily"
         ],
+        "symptoms": [
+          "Elevated blood pressure"
+        ],
+        "procedures": [
+          "nephrology referral"
+        ],
+        "relationships": [],
         "lab_values": {
-          "eGFR": 50,
-          "blood_pressure": "155/95 mmHg"
+          "BP_systolic": 155,
+          "BP_diastolic": 95,
+          "eGFR": 50
         }
-      }
+      },
+      "dosages": [
+        "20mg daily",
+        "100mg daily",
+        "10mg daily"
+      ]
     },
     {
       "visit_id": "V5",
@@ -343,18 +274,15 @@
         "BP_systolic": 145,
         "BP_diastolic": 85,
         "eGFR": 40,
-        "LDL": 110,
-        "Blood pressure": "145/85 mmHg"
+        "LDL": 110
       },
       "medications": [
-        "Lisinopril 20mg daily",
-        "Atorvastatin 20mg daily",
-        "Metoprolol 150mg daily",
-        "Losartan 100mg daily",
-        "Amlodipine 10mg daily",
-        "Erythropoietin",
+        "lisinopril",
+        "atorvastatin",
         "metoprolol",
-        "150mg"
+        "losartan",
+        "amlodipine",
+        "erythropoietin"
       ],
       "diagnoses": [
         "Hypertension",
@@ -379,45 +307,30 @@
         ],
         "medications": [
           "metoprolol",
-          "150mg",
           "erythropoietin"
         ],
+        "dosages": [
+          "150mg daily"
+        ],
         "symptoms": [
-          "Shortness of breath"
+          "Shortness of breath",
+          "Anemia"
         ],
         "procedures": [
           "dialysis"
         ],
-        "relationships": [
-          {
-            "subject": "metoprolol",
-            "predicate": "increased",
-            "object": "150mg",
-            "confidence": 0.9
-          },
-          {
-            "subject": "erythropoietin",
-            "predicate": "prescribed_for",
-            "object": "Anemia",
-            "confidence": 0.8
-          },
-          {
-            "subject": "metoprolol",
-            "predicate": "managed_by",
-            "object": "dialysis",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Anemia",
-            "predicate": "has_symptom",
-            "object": "Shortness of breath",
-            "confidence": 0.6
-          }
-        ],
+        "relationships": [],
         "lab_values": {
-          "Blood pressure": "145/85 mmHg"
+          "BP_systolic": 145,
+          "BP_diastolic": 85
         }
-      }
+      },
+      "dosages": [
+        "20mg daily",
+        "150mg daily",
+        "100mg daily",
+        "10mg daily"
+      ]
     }
   ]
 }

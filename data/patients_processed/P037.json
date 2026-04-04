@@ -13,12 +13,9 @@
         "LDL": 130
       },
       "medications": [
-        "Metformin 500mg twice daily",
-        "Lisinopril 10mg daily",
-        "metformin",
+        "metformin twice daily",
         "lisinopril",
-        "500mg",
-        "10mg"
+        "metformin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -26,32 +23,64 @@
         "Hyperlipidemia"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Fatigue"
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [
           "metformin",
-          "lisinopril",
-          "500mg",
-          "10mg"
+          "lisinopril"
+        ],
+        "dosages": [
+          "500mg twice daily",
+          "10mg daily"
         ],
         "symptoms": [],
         "procedures": [],
-        "relationships": [],
+        "relationships": [
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "metformin",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.9
+          },
+          {
+            "subject": "metformin",
+            "predicate": "contraindicated_with",
+            "object": "lisinopril",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Hyperlipidemia",
+            "confidence": 0.7
+          }
+        ],
         "lab_values": {
           "HbA1c": 7.2,
           "BP_systolic": 140,
           "BP_diastolic": 90,
           "LDL": 130.0
         }
-      }
+      },
+      "dosages": [
+        "500mg",
+        "10mg daily",
+        "500mg twice daily"
+      ]
     },
     {
       "visit_id": "V2",
@@ -65,86 +94,60 @@
         "LDL": 140
       },
       "medications": [
-        "Metformin 500mg twice daily",
-        "Lisinopril 10mg daily",
-        "Sitagliptin 100mg daily",
-        "100mg",
-        "Sitagliptin"
+        "metformin twice daily",
+        "lisinopril",
+        "sitagliptin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
-        "Coronary Artery Disease (suspected)",
-        "Diabetes"
+        "Coronary Artery Disease (Suspected)"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Fatigue",
         "Shortness of breath"
       ],
       "extracted": {
         "conditions": [
-          "Diabetes"
+          "Type 2 Diabetes"
         ],
         "medications": [
-          "100mg",
-          "Sitagliptin"
+          "sitagliptin"
+        ],
+        "dosages": [
+          "100mg daily"
         ],
         "symptoms": [
-          "Shortness of breath",
-          "Fatigue"
+          "Fatigue",
+          "Shortness of breath"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Sitagliptin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Diabetes",
+            "object": "sitagliptin",
             "confidence": 0.9
           },
           {
-            "subject": "HbA1c",
+            "subject": "Type 2 Diabetes",
             "predicate": "measured_by",
-            "object": "Diabetes",
+            "object": "HbA1c",
             "confidence": 0.8
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Diabetes",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Shortness of breath",
-            "predicate": "has_symptom",
-            "object": "Diabetes",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Sitagliptin",
-            "predicate": "improves",
-            "object": "Diabetes",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Diabetes",
-            "predicate": "worsens",
-            "object": "Fatigue",
-            "confidence": 0.5
-          },
-          {
-            "subject": "Diabetes",
-            "predicate": "worsens",
-            "object": "Shortness of breath",
-            "confidence": 0.5
           }
         ],
         "lab_values": {
           "HbA1c": 8.1
         }
-      }
+      },
+      "dosages": [
+        "500mg",
+        "10mg daily",
+        "100mg daily"
+      ]
     },
     {
       "visit_id": "V3",
@@ -158,23 +161,21 @@
         "LDL": 145
       },
       "medications": [
-        "Metformin 500mg twice daily",
-        "Lisinopril 10mg daily",
-        "Sitagliptin 100mg daily",
-        "Amlodipine 5mg daily",
-        "amlodipine",
-        "5mg",
-        "Sitagliptin"
+        "metformin twice daily",
+        "lisinopril",
+        "sitagliptin",
+        "amlodipine"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
         "Coronary Artery Disease",
-        "Chronic Kidney Disease"
+        "Chronic Kidney Disease",
+        "Mild Renal Impairment"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Fatigue",
         "Shortness of breath",
@@ -183,55 +184,47 @@
       ],
       "extracted": {
         "conditions": [
-          "Chronic Kidney Disease"
+          "Chronic Kidney Disease",
+          "Mild Renal Impairment"
         ],
         "medications": [
           "amlodipine",
-          "5mg",
-          "Sitagliptin"
+          "sitagliptin"
+        ],
+        "dosages": [
+          "5mg daily"
         ],
         "symptoms": [
-          "Edema"
+          "Edema",
+          "Swelling in lower extremities"
         ],
         "procedures": [
-          "renal ultrasound"
+          "Renal Ultrasound"
         ],
         "relationships": [
           {
-            "subject": "amlodipine",
-            "predicate": "managed_by",
-            "object": "blood pressure control",
-            "confidence": 0.9
-          },
-          {
-            "subject": "amlodipine",
+            "subject": "sitagliptin",
             "predicate": "contraindicated_with",
-            "object": "Sitagliptin",
+            "object": "amlodipine",
             "confidence": 0.8
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "renal ultrasound",
-            "confidence": 0.7
           },
           {
             "subject": "eGFR",
             "predicate": "worsens",
             "object": "Chronic Kidney Disease",
             "confidence": 0.6
-          },
-          {
-            "subject": "Edema",
-            "predicate": "has_symptom",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.5
           }
         ],
         "lab_values": {
           "eGFR": 52.0
         }
-      }
+      },
+      "dosages": [
+        "500mg",
+        "10mg daily",
+        "100mg daily",
+        "5mg daily"
+      ]
     },
     {
       "visit_id": "V4",
@@ -243,14 +236,14 @@
         "BP_diastolic": 98,
         "eGFR": 45,
         "LDL": 150,
-        "creatinine": null
+        "Creatinine": "increasing"
       },
       "medications": [
-        "Metformin 500mg twice daily",
-        "Lisinopril 10mg daily",
-        "Sitagliptin 100mg daily",
-        "Amlodipine 5mg daily",
-        "Insulin Glargine 100 units daily",
+        "metformin twice daily",
+        "lisinopril",
+        "sitagliptin",
+        "amlodipine",
+        "insulin glargine 100 units daily",
         "insulin",
         "insulin glargine"
       ],
@@ -259,61 +252,45 @@
         "Hypertension",
         "Hyperlipidemia",
         "Coronary Artery Disease",
-        "Chronic Kidney Disease",
-        "diabetes"
+        "Chronic Kidney Disease"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Fatigue",
         "Shortness of breath",
         "Swelling in lower extremities",
         "Increased thirst",
-        "worsening glycemic control"
+        "Worsening glycemic control"
       ],
       "extracted": {
         "conditions": [
-          "diabetes"
+          "Type 2 Diabetes"
         ],
         "medications": [
           "insulin",
           "insulin glargine"
         ],
+        "dosages": [
+          "100 units daily"
+        ],
         "symptoms": [
-          "worsening glycemic control"
+          "Worsening glycemic control"
         ],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "insulin glargine",
-            "predicate": "managed_by",
-            "object": "basal insulin coverage",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "glycemic control",
-            "confidence": 0.9
-          },
-          {
-            "subject": "creatinine",
-            "predicate": "measured_by",
-            "object": "increasing levels",
-            "confidence": 0.8
-          },
-          {
-            "subject": "insulin glargine",
-            "predicate": "contraindicated_with",
-            "object": "null",
-            "confidence": 0.0
-          }
-        ],
+        "relationships": [],
         "lab_values": {
           "HbA1c": 9.1,
-          "creatinine": null
+          "Creatinine": "increasing"
         }
-      }
+      },
+      "dosages": [
+        "500mg",
+        "10mg daily",
+        "100mg daily",
+        "5mg daily",
+        "100 units daily"
+      ]
     }
   ]
 }

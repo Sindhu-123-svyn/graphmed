@@ -13,21 +13,17 @@
         "LDL": 130
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg QD",
-        "Atorvastatin 20mg QD",
         "metformin",
+        "lisinopril qd",
+        "atorvastatin qd",
         "lisinopril",
-        "atorvastatin",
-        "500mg",
-        "10mg",
-        "20mg"
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
-        "Chronic Kidney Disease (mild)",
+        "Chronic Kidney Disease (Mild)",
         "Chronic Kidney Disease"
       ],
       "symptoms": [
@@ -38,91 +34,117 @@
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Hypertension",
           "Chronic Kidney Disease"
         ],
         "medications": [
           "metformin",
           "lisinopril",
-          "atorvastatin",
-          "500mg",
-          "10mg",
-          "20mg"
+          "atorvastatin"
+        ],
+        "dosages": [
+          "500mg BID",
+          "10mg QD",
+          "20mg QD"
         ],
         "symptoms": [
-          "Edema",
+          "Fatigue",
           "Shortness of breath",
-          "Fatigue"
+          "Edema"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "metformin",
             "confidence": 0.8
           },
           {
-            "subject": "lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "lisinopril",
             "confidence": 0.8
           },
           {
-            "subject": "atorvastatin",
+            "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Hyperlipidemia",
+            "object": "atorvastatin",
             "confidence": 0.8
           },
           {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Fatigue",
             "confidence": 0.7
           },
           {
-            "subject": "BP_systolic",
-            "predicate": "measured_by",
-            "object": "Hypertension",
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
             "confidence": 0.7
           },
           {
-            "subject": "BP_diastolic",
-            "predicate": "measured_by",
-            "object": "Hypertension",
-            "confidence": 0.7
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.7
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
+            "subject": "Hypertension",
+            "predicate": "worsens",
             "object": "Edema",
-            "confidence": 0.6
+            "confidence": 0.7
           },
           {
-            "subject": "Shortness of breath",
-            "predicate": "has_symptom",
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
             "object": "Edema",
-            "confidence": 0.6
+            "confidence": 0.7
           },
           {
-            "subject": "metformin",
-            "predicate": "contraindicated_with",
-            "object": "CKD",
-            "confidence": 0.5
+            "subject": "Hyperlipidemia",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "worsens",
+            "object": "Edema",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "Edema",
+            "confidence": 0.7
           }
         ],
         "lab_values": {
@@ -132,7 +154,14 @@
           "eGFR": 72.0,
           "LDL": 130.0
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg",
+        "20mg",
+        "10mg QD",
+        "20mg QD"
+      ]
     },
     {
       "visit_id": "V2",
@@ -146,18 +175,17 @@
         "LDL": 150
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 20mg QD",
-        "Atorvastatin 20mg QD",
-        "Furosemide 40mg QD",
-        "40mg",
-        "Furosemide 40mg"
+        "metformin",
+        "lisinopril qd",
+        "atorvastatin qd",
+        "furosemide qd",
+        "furosemide"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
-        "Chronic Kidney Disease (moderate)",
+        "Chronic Kidney Disease (Moderate)",
         "Chronic Kidney Disease",
         "Heart Failure"
       ],
@@ -170,94 +198,90 @@
       ],
       "extracted": {
         "conditions": [
-          "Chronic Kidney Disease",
-          "Heart Failure",
+          "Hypertension",
           "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Hypertension"
+          "Chronic Kidney Disease",
+          "Heart Failure"
         ],
         "medications": [
-          "40mg",
-          "Furosemide 40mg"
+          "furosemide"
+        ],
+        "dosages": [
+          "40mg"
         ],
         "symptoms": [
-          "Edema",
           "Shortness of breath",
+          "Edema",
           "Orthopnea"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Furosemide",
+            "subject": "Heart Failure",
             "predicate": "managed_by",
-            "object": "Congestive Heart Failure",
+            "object": "furosemide",
             "confidence": 0.9
           },
           {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Labs",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP_systolic",
-            "predicate": "measured_by",
-            "object": "Labs",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP_diastolic",
-            "predicate": "measured_by",
-            "object": "Labs",
-            "confidence": 0.8
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "Labs",
-            "confidence": 0.8
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "Labs",
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
             "confidence": 0.8
           },
           {
             "subject": "Type 2 Diabetes",
-            "predicate": "contraindicated_with",
-            "object": "CKD",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "contraindicated_with",
-            "object": "CKD",
-            "confidence": 0.7
+            "predicate": "worsens",
+            "object": "Shortness of breath",
+            "confidence": 0.8
           },
           {
             "subject": "Hyperlipidemia",
-            "predicate": "contraindicated_with",
-            "object": "CKD",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Shortness of breath",
-            "predicate": "has_symptom",
-            "object": "Orthopnea",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Shortness of breath",
             "predicate": "worsens",
-            "object": "CKD",
-            "confidence": 0.6
+            "object": "Shortness of breath",
+            "confidence": 0.8
           },
           {
-            "subject": "Orthopnea",
-            "predicate": "has_symptom",
-            "object": "Edema",
-            "confidence": 0.6
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Heart Failure",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Orthopnea",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Orthopnea",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "worsens",
+            "object": "Orthopnea",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "Orthopnea",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Heart Failure",
+            "predicate": "worsens",
+            "object": "Orthopnea",
+            "confidence": 0.8
           }
         ],
         "lab_values": {
@@ -267,7 +291,12 @@
           "eGFR": 55.0,
           "LDL": 150.0
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "20mg",
+        "40mg"
+      ]
     },
     {
       "visit_id": "V3",
@@ -281,17 +310,17 @@
         "LDL": 140
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Enalapril 10mg QD",
-        "Atorvastatin 20mg QD",
-        "Furosemide 40mg QD",
-        "10mg"
+        "metformin",
+        "enalapril qd",
+        "atorvastatin qd",
+        "furosemide qd",
+        "enalapril"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
-        "Chronic Kidney Disease (severe)",
+        "Chronic Kidney Disease (Severe)",
         "Chronic Kidney Disease",
         "Heart Failure"
       ],
@@ -301,24 +330,68 @@
         "Pitting edema",
         "Orthopnea",
         "Significant weight gain",
-        "Edema"
+        "Edema",
+        "Weight gain"
       ],
       "extracted": {
         "conditions": [
-          "Chronic Kidney Disease",
-          "Heart Failure",
+          "Hypertension",
           "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Hypertension"
+          "Chronic Kidney Disease",
+          "Heart Failure"
         ],
         "medications": [
+          "enalapril"
+        ],
+        "dosages": [
           "10mg"
         ],
         "symptoms": [
-          "Edema"
+          "Edema",
+          "Weight gain"
         ],
-        "procedures": [],
-        "relationships": [],
+        "procedures": [
+          "Dialysis"
+        ],
+        "relationships": [
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "enalapril",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Heart Failure",
+            "predicate": "managed_by",
+            "object": "enalapril",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Edema",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Edema",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "worsens",
+            "object": "Edema",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "Edema",
+            "confidence": 0.7
+          }
+        ],
         "lab_values": {
           "HbA1c": 9.0,
           "BP_systolic": 150,
@@ -326,7 +399,13 @@
           "eGFR": 45.0,
           "LDL": 140.0
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg",
+        "20mg",
+        "40mg"
+      ]
     }
   ]
 }

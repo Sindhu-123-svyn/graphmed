@@ -10,20 +10,14 @@
         "BP_systolic": 140,
         "BP_diastolic": 90,
         "eGFR": 72,
-        "LDL": 130,
-        "Blood pressure": "140/90 mmHg"
+        "LDL": 130
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg QD",
-        "Atorvastatin 20mg QD",
         "metformin",
+        "lisinopril qd",
+        "atorvastatin qd",
         "lisinopril",
-        "atorvastatin",
-        "130 mg",
-        "500mg",
-        "10mg",
-        "20mg"
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -38,129 +32,108 @@
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [
           "metformin",
           "lisinopril",
-          "atorvastatin",
-          "130 mg",
-          "500mg",
-          "10mg",
-          "20mg"
+          "atorvastatin"
+        ],
+        "dosages": [
+          "500mg BID",
+          "10mg QD",
+          "20mg QD"
         ],
         "symptoms": [
-          "Polydipsia",
           "Fatigue",
+          "Polydipsia",
           "Weight loss"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
+            "object": "metformin",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "managed_by",
+            "object": "atorvastatin",
+            "confidence": 0.9
+          },
+          {
+            "subject": "metformin",
+            "predicate": "contraindicated_with",
+            "object": "lisinopril",
+            "confidence": 0.8
+          },
+          {
+            "subject": "metformin",
+            "predicate": "contraindicated_with",
+            "object": "atorvastatin",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Weight loss",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "worsens",
+            "object": "Polydipsia",
+            "confidence": 0.7
+          },
+          {
+            "subject": "metformin",
+            "predicate": "improves",
             "object": "Type 2 Diabetes",
-            "confidence": 0.9
+            "confidence": 0.6
           },
           {
             "subject": "lisinopril",
-            "predicate": "managed_by",
+            "predicate": "improves",
             "object": "Hypertension",
-            "confidence": 0.9
+            "confidence": 0.6
           },
           {
             "subject": "atorvastatin",
-            "predicate": "managed_by",
+            "predicate": "improves",
             "object": "Hyperlipidemia",
-            "confidence": 0.9
-          },
-          {
-            "subject": "metformin",
-            "predicate": "contraindicated_with",
-            "object": "130 mg",
-            "confidence": 0.8
-          },
-          {
-            "subject": "metformin",
-            "predicate": "contraindicated_with",
-            "object": "500mg",
-            "confidence": 0.8
-          },
-          {
-            "subject": "lisinopril",
-            "predicate": "contraindicated_with",
-            "object": "10mg",
-            "confidence": 0.8
-          },
-          {
-            "subject": "atorvastatin",
-            "predicate": "contraindicated_with",
-            "object": "20mg",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "Polydipsia",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "Fatigue",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "Weight loss",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "worsens",
-            "object": "Polydipsia",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "worsens",
-            "object": "Fatigue",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "worsens",
-            "object": "Weight loss",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Hyperlipidemia",
-            "predicate": "worsens",
-            "object": "Polydipsia",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Hyperlipidemia",
-            "predicate": "worsens",
-            "object": "Fatigue",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Hyperlipidemia",
-            "predicate": "worsens",
-            "object": "Weight loss",
-            "confidence": 0.7
+            "confidence": 0.6
           }
         ],
         "lab_values": {
           "HbA1c": 7.2,
-          "LDL": "130 mg/dL",
-          "Blood pressure": "140/90 mmHg"
+          "BP_systolic": "140 mmHg",
+          "BP_diastolic": "90 mmHg",
+          "LDL": "130 mg/dL"
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg",
+        "20mg",
+        "10mg QD",
+        "20mg QD"
+      ]
     },
     {
       "visit_id": "V2",
@@ -171,21 +144,16 @@
         "BP_systolic": 150,
         "BP_diastolic": 95,
         "eGFR": 65,
-        "LDL": 145,
-        "Blood Pressure": "150/95 mmHg"
+        "LDL": 145
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Amlodipine 5mg QD",
-        "Atorvastatin 20mg QD",
-        "Simvastatin 40mg QD",
-        "Furosemide 20mg QD",
+        "metformin",
+        "amlodipine qd",
+        "atorvastatin qd",
+        "simvastatin qd",
+        "furosemide qd",
         "amlodipine",
         "simvastatin",
-        "145 mg",
-        "5mg",
-        "40mg",
-        "20mg",
         "furosemide"
       ],
       "diagnoses": [
@@ -203,78 +171,60 @@
       ],
       "extracted": {
         "conditions": [
+          "Type 2 Diabetes",
           "Fluid Overload"
         ],
         "medications": [
           "amlodipine",
           "simvastatin",
-          "145 mg",
-          "5mg",
-          "40mg",
-          "20mg",
           "furosemide"
+        ],
+        "dosages": [
+          "5mg QD",
+          "40mg QD",
+          "20mg QD"
         ],
         "symptoms": [
           "Fatigue",
-          "Decreased Urine Output"
+          "Decreased urine output"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "amlodipine",
+            "subject": "Fluid Overload",
             "predicate": "managed_by",
-            "object": "hypertension",
-            "confidence": 0.9
-          },
-          {
-            "subject": "simvastatin",
-            "predicate": "managed_by",
-            "object": "hyperlipidemia",
-            "confidence": 0.9
-          },
-          {
-            "subject": "furosemide",
-            "predicate": "managed_by",
-            "object": "fluid overload",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Decreased Urine Output",
+            "object": "furosemide",
             "confidence": 0.8
           },
           {
-            "subject": "amlodipine",
-            "predicate": "contraindicated_with",
-            "object": "furosemide",
+            "subject": "Fluid Overload",
+            "predicate": "worsens",
+            "object": "Fatigue",
             "confidence": 0.7
           },
           {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "blood test",
-            "confidence": 0.6
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "blood test",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Blood Pressure",
-            "predicate": "measured_by",
-            "object": "blood pressure cuff",
-            "confidence": 0.6
+            "subject": "Fluid Overload",
+            "predicate": "worsens",
+            "object": "Decreased urine output",
+            "confidence": 0.7
           }
         ],
         "lab_values": {
           "HbA1c": 8.1,
-          "LDL": "145 mg/dL",
-          "Blood Pressure": "150/95 mmHg"
+          "BP_systolic": "150 mmHg",
+          "BP_diastolic": "95 mmHg",
+          "LDL": "145 mg/dL"
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "5mg",
+        "20mg",
+        "40mg",
+        "5mg QD",
+        "40mg QD",
+        "20mg QD"
+      ]
     },
     {
       "visit_id": "V3",
@@ -288,22 +238,19 @@
         "LDL": 155
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg QD",
-        "Amlodipine 5mg QD",
-        "Atorvastatin 20mg QD",
-        "Simvastatin 40mg QD",
-        "Furosemide 20mg QD",
-        "Losartan 50mg QD",
-        "Aspirin 81mg QD",
-        "Enalapril 10mg QD",
-        "Metoprolol 50mg BID",
-        "losartan",
+        "metformin",
+        "lisinopril qd",
+        "amlodipine qd",
+        "atorvastatin qd",
+        "simvastatin qd",
+        "furosemide qd",
+        "losartan qd",
+        "aspirin qd",
+        "enalapril qd",
         "metoprolol",
-        "155 mg",
-        "50mg",
-        "81mg",
-        "10mg"
+        "losartan",
+        "aspirin",
+        "enalapril"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -326,19 +273,61 @@
         "medications": [
           "losartan",
           "metoprolol",
-          "155 mg",
-          "50mg",
-          "81mg",
-          "10mg"
+          "aspirin",
+          "enalapril"
+        ],
+        "dosages": [
+          "50mg QD",
+          "81mg QD",
+          "10mg QD",
+          "50mg BID"
         ],
         "symptoms": [
+          "Fatigue",
           "Shortness of breath",
-          "Fatigue"
+          "Weight loss"
         ],
         "procedures": [],
-        "relationships": [],
-        "lab_values": {}
-      }
+        "relationships": [
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "managed_by",
+            "object": "losartan",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "managed_by",
+            "object": "metoprolol",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "managed_by",
+            "object": "aspirin",
+            "confidence": 0.8
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 9.0,
+          "BP_systolic": 160,
+          "BP_diastolic": 100,
+          "LDL": "155 mg/dL"
+        }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg",
+        "5mg",
+        "20mg",
+        "40mg",
+        "50mg",
+        "81mg",
+        "50mg BID",
+        "50mg QD",
+        "81mg QD",
+        "10mg QD"
+      ]
     }
   ]
 }

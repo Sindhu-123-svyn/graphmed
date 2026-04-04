@@ -13,12 +13,8 @@
         "LDL": 130
       },
       "medications": [
-        "Metformin 500mg",
-        "Lisinopril 5mg",
         "metformin",
-        "lisinopril",
-        "500mg",
-        "5mg"
+        "lisinopril"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -26,76 +22,72 @@
         "Hyperlipidemia"
       ],
       "symptoms": [
-        "polyuria",
-        "polydipsia",
-        "fatigue"
+        "Frequent urination",
+        "Polydipsia",
+        "Fatigue"
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [
           "metformin",
-          "lisinopril",
+          "lisinopril"
+        ],
+        "dosages": [
           "500mg",
           "5mg"
         ],
         "symptoms": [
-          "Polydipsia",
-          "Polyuria",
-          "Fatigue"
+          "Fatigue",
+          "Frequent urination",
+          "Polydipsia"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "Lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "lisinopril",
             "confidence": 0.9
           },
           {
-            "subject": "HbA1c",
+            "subject": "Type 2 Diabetes",
             "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
+            "object": "HbA1c",
             "confidence": 0.8
           },
           {
-            "subject": "BP",
+            "subject": "Type 2 Diabetes",
             "predicate": "measured_by",
+            "object": "eGFR",
+            "confidence": 0.8
+          },
+          {
+            "subject": "metformin",
+            "predicate": "improves",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.6
+          },
+          {
+            "subject": "lisinopril",
+            "predicate": "improves",
             "object": "Hypertension",
-            "confidence": 0.8
+            "confidence": 0.6
           },
           {
-            "subject": "eGFR",
-            "predicate": "measured_by",
+            "subject": "Hypertension",
+            "predicate": "worsens",
             "object": "Type 2 Diabetes",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Polyuria",
-            "predicate": "has_symptom",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Polydipsia",
-            "predicate": "has_symptom",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.7
+            "confidence": 0.5
           }
         ],
         "lab_values": {
@@ -104,7 +96,11 @@
           "BP_diastolic": 90,
           "eGFR": 72
         }
-      }
+      },
+      "dosages": [
+        "500mg",
+        "5mg"
+      ]
     },
     {
       "visit_id": "V2",
@@ -118,11 +114,9 @@
         "LDL": 120
       },
       "medications": [
-        "Metformin 500mg",
-        "Lisinopril 5mg",
-        "Rosuvastatin 10mg",
-        "rosuvastatin",
-        "10mg"
+        "metformin",
+        "lisinopril",
+        "rosuvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -131,54 +125,37 @@
         "Chronic Kidney Disease"
       ],
       "symptoms": [
-        "polyuria",
-        "polydipsia",
-        "fatigue",
-        "edema"
+        "Frequent urination",
+        "Polydipsia",
+        "Fatigue",
+        "Edema"
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Hypertension",
           "Chronic Kidney Disease"
         ],
         "medications": [
-          "rosuvastatin",
-          "10mg",
-          "Rosuvastatin 10mg"
+          "rosuvastatin"
+        ],
+        "dosages": [
+          "10mg"
         ],
         "symptoms": [
-          "Polydipsia",
-          "Polyuria",
           "Fatigue",
+          "Frequent urination",
+          "Polydipsia",
           "Edema"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Rosuvastatin 10mg",
+            "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Hyperlipidemia",
+            "object": "rosuvastatin",
             "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "eGFR",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "eGFR",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "Edema",
-            "confidence": 0.7
           },
           {
             "subject": "Type 2 Diabetes",
@@ -189,13 +166,19 @@
           {
             "subject": "Type 2 Diabetes",
             "predicate": "worsens",
-            "object": "Polyuria",
+            "object": "Frequent urination",
             "confidence": 0.7
           },
           {
             "subject": "Type 2 Diabetes",
             "predicate": "worsens",
             "object": "Polydipsia",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Edema",
             "confidence": 0.7
           }
         ],
@@ -205,7 +188,12 @@
           "BP_diastolic": 95,
           "eGFR": 70
         }
-      }
+      },
+      "dosages": [
+        "500mg",
+        "5mg",
+        "10mg"
+      ]
     },
     {
       "visit_id": "V3",
@@ -219,11 +207,10 @@
         "LDL": 110
       },
       "medications": [
-        "Metformin 500mg",
-        "Lisinopril 5mg",
-        "Rosuvastatin 10mg",
-        "Sitagliptin 100mg",
-        "100mg"
+        "metformin",
+        "lisinopril",
+        "rosuvastatin",
+        "sitagliptin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -233,71 +220,61 @@
         "Coronary Artery Disease"
       ],
       "symptoms": [
-        "polyuria",
-        "polydipsia",
-        "fatigue",
-        "edema",
-        "chest pain"
+        "Frequent urination",
+        "Polydipsia",
+        "Fatigue",
+        "Edema",
+        "Chest pain"
       ],
       "extracted": {
         "conditions": [
-          "Chronic Kidney Disease",
+          "Hypertension",
           "Type 2 Diabetes",
-          "Coronary Artery Disease",
           "Hyperlipidemia",
-          "Hypertension"
+          "Chronic Kidney Disease",
+          "Coronary Artery Disease"
         ],
         "medications": [
-          "100mg",
-          "Sitagliptin 100mg"
+          "sitagliptin"
+        ],
+        "dosages": [
+          "100mg"
         ],
         "symptoms": [
-          "Edema",
-          "Polydipsia",
           "Fatigue",
           "Chest pain",
-          "Polyuria"
+          "Frequent urination",
+          "Polydipsia",
+          "Edema"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Sitagliptin 100mg",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "sitagliptin",
             "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "BP",
-            "confidence": 0.8
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "eGFR",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "HbA1c",
-            "confidence": 0.8
           },
           {
             "subject": "Type 2 Diabetes",
             "predicate": "worsens",
             "object": "Chronic Kidney Disease",
-            "confidence": 0.7
+            "confidence": 0.6
           }
         ],
         "lab_values": {
           "HbA1c": "elevated",
-          "eGFR": 60,
           "BP_systolic": 155,
-          "BP_diastolic": 100
+          "BP_diastolic": 100,
+          "eGFR": 60
         }
-      }
+      },
+      "dosages": [
+        "500mg",
+        "5mg",
+        "10mg",
+        "100mg"
+      ]
     },
     {
       "visit_id": "V4",
@@ -308,16 +285,19 @@
         "BP_systolic": 140,
         "BP_diastolic": 85,
         "eGFR": 65,
-        "LDL": 105
+        "LDL": 105,
+        "HDL": null,
+        "Creatinine": null,
+        "Glucose": null,
+        "Potassium": null,
+        "Sodium": null
       },
       "medications": [
-        "Metformin 500mg",
-        "Lisinopril 5mg",
-        "Rosuvastatin 10mg",
-        "Sitagliptin 100mg",
-        "Clopidogrel 75mg",
-        "clopidogrel",
-        "75mg"
+        "metformin",
+        "lisinopril",
+        "rosuvastatin",
+        "sitagliptin",
+        "clopidogrel"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -327,77 +307,116 @@
         "Coronary Artery Disease"
       ],
       "symptoms": [
-        "polyuria",
-        "polydipsia",
-        "fatigue",
-        "edema",
-        "chest pain"
+        "Frequent urination",
+        "Polydipsia",
+        "Fatigue",
+        "Edema",
+        "Chest pain"
       ],
       "extracted": {
         "conditions": [
-          "Chronic Kidney Disease",
+          "Hypertension",
           "Type 2 Diabetes",
-          "Coronary Artery Disease",
           "Hyperlipidemia",
-          "Hypertension"
+          "Chronic Kidney Disease",
+          "Coronary Artery Disease"
         ],
         "medications": [
-          "clopidogrel",
+          "clopidogrel"
+        ],
+        "dosages": [
           "75mg"
         ],
         "symptoms": [
-          "Edema",
-          "Polydipsia",
           "Fatigue",
           "Chest pain",
-          "Polyuria"
+          "Frequent urination",
+          "Polydipsia",
+          "Edema"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "clopidogrel",
+            "subject": "Coronary Artery Disease",
             "predicate": "managed_by",
-            "object": "Coronary Artery Disease",
+            "object": "clopidogrel",
             "confidence": 0.9
           },
           {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "stable",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "140/85",
-            "confidence": 0.8
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "65",
-            "confidence": 0.8
+            "subject": "Type 2 Diabetes",
+            "predicate": "has_symptom",
+            "object": "Frequent urination",
+            "confidence": 0.5
           },
           {
             "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.7
+            "predicate": "has_symptom",
+            "object": "Polydipsia",
+            "confidence": 0.5
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "has_symptom",
+            "object": "Fatigue",
+            "confidence": 0.5
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "has_symptom",
+            "object": "Edema",
+            "confidence": 0.5
           },
           {
             "subject": "Coronary Artery Disease",
-            "predicate": "contraindicated_with",
-            "object": "Hypertension",
-            "confidence": 0.6
+            "predicate": "has_symptom",
+            "object": "Chest pain",
+            "confidence": 0.5
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Fatigue",
+            "confidence": 0.5
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Edema",
+            "confidence": 0.5
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "has_symptom",
+            "object": "Frequent urination",
+            "confidence": 0.5
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "has_symptom",
+            "object": "Edema",
+            "confidence": 0.5
           }
         ],
         "lab_values": {
-          "HbA1c": "stable",
+          "HbA1c": null,
           "BP_systolic": 140,
           "BP_diastolic": 85,
-          "eGFR": 65
+          "eGFR": 65,
+          "LDL": null,
+          "HDL": null,
+          "Creatinine": null,
+          "Glucose": null,
+          "Potassium": null,
+          "Sodium": null
         }
-      }
+      },
+      "dosages": [
+        "500mg",
+        "5mg",
+        "10mg",
+        "100mg",
+        "75mg"
+      ]
     }
   ]
 }

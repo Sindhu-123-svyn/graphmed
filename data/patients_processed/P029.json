@@ -13,8 +13,6 @@
         "LDL": 130
       },
       "medications": [
-        "Amlodipine 10mg",
-        "Simvastatin 20mg",
         "amlodipine",
         "simvastatin"
       ],
@@ -28,63 +26,28 @@
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hypertension",
+          "Hyperlipidemia"
         ],
         "medications": [
           "amlodipine",
           "simvastatin"
         ],
+        "dosages": [],
         "symptoms": [],
         "procedures": [],
         "relationships": [
           {
-            "subject": "amlodipine",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "amlodipine",
             "confidence": 0.9
           },
           {
-            "subject": "simvastatin",
+            "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Hyperlipidemia",
+            "object": "simvastatin",
             "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "BP",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "LDL",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "eGFR",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "LDL",
-            "confidence": 0.7
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "eGFR",
-            "confidence": 0.7
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "eGFR",
-            "confidence": 0.6
           }
         ],
         "lab_values": {
@@ -94,7 +57,11 @@
           "LDL": 130,
           "eGFR": 72
         }
-      }
+      },
+      "dosages": [
+        "10mg",
+        "20mg"
+      ]
     },
     {
       "visit_id": "V2",
@@ -108,12 +75,10 @@
         "LDL": 145
       },
       "medications": [
-        "Amlodipine 10mg twice daily",
-        "Simvastatin 20mg",
-        "Metformin 500mg",
+        "amlodipine twice daily",
+        "simvastatin",
         "metformin",
-        "amlodipine",
-        "10mg"
+        "amlodipine"
       ],
       "diagnoses": [
         "Hypertension",
@@ -131,56 +96,46 @@
         ],
         "medications": [
           "metformin",
-          "amlodipine",
+          "amlodipine"
+        ],
+        "dosages": [
           "10mg"
         ],
         "symptoms": [
-          "Shortness of breath",
-          "Fatigue"
+          "Fatigue",
+          "Shortness of breath"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "amlodipine",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "BP",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "lab results",
-            "confidence": 0.7
-          },
-          {
-            "subject": "metformin",
-            "predicate": "contraindicated_with",
-            "object": "BP",
-            "confidence": 0.6
-          },
-          {
-            "subject": "amlodipine",
-            "predicate": "contraindicated_with",
-            "object": "HbA1c",
-            "confidence": 0.6
+            "object": "amlodipine",
+            "confidence": 0.9
           },
           {
             "subject": "metformin",
             "predicate": "improves",
             "object": "Type 2 Diabetes",
-            "confidence": 0.5
+            "confidence": 0.7
           },
           {
             "subject": "amlodipine",
             "predicate": "worsens",
-            "object": "BP",
-            "confidence": 0.5
+            "object": "Shortness of breath",
+            "confidence": 0.6
+          },
+          {
+            "subject": "amlodipine",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.6
           }
         ],
         "lab_values": {
@@ -190,7 +145,12 @@
           "LDL": 145,
           "eGFR": 65
         }
-      }
+      },
+      "dosages": [
+        "10mg",
+        "20mg",
+        "500mg"
+      ]
     },
     {
       "visit_id": "V3",
@@ -204,12 +164,9 @@
         "LDL": 140
       },
       "medications": [
-        "Amlodipine 10mg twice daily",
-        "Simvastatin 40mg",
-        "Metformin 1000mg",
-        "Aspirin 81mg",
+        "amlodipine twice daily",
         "simvastatin",
-        "40mg",
+        "metformin",
         "aspirin"
       ],
       "diagnoses": [
@@ -231,74 +188,40 @@
         ],
         "medications": [
           "simvastatin",
-          "40mg",
           "aspirin"
         ],
+        "dosages": [
+          "40mg"
+        ],
         "symptoms": [
-          "Edema",
-          "Shortness of breath"
+          "Shortness of breath",
+          "Edema"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "aspirin",
+            "subject": "Coronary Artery Disease",
             "predicate": "managed_by",
-            "object": "Coronary Artery Disease",
+            "object": "aspirin",
             "confidence": 0.9
           },
           {
-            "subject": "simvastatin",
+            "subject": "Coronary Artery Disease",
             "predicate": "managed_by",
-            "object": "Coronary Artery Disease",
+            "object": "simvastatin",
             "confidence": 0.9
           },
           {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "lab results",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "lab results",
-            "confidence": 0.8
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "lab results",
-            "confidence": 0.8
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "lab results",
-            "confidence": 0.8
-          },
-          {
-            "subject": "simvastatin",
-            "predicate": "contraindicated_with",
-            "object": "aspirin",
-            "confidence": 0.7
-          },
-          {
             "subject": "Coronary Artery Disease",
-            "predicate": "improves",
-            "object": "aspirin",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Coronary Artery Disease",
-            "predicate": "worsens",
-            "object": "Edema",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Coronary Artery Disease",
-            "predicate": "worsens",
+            "predicate": "has_symptom",
             "object": "Shortness of breath",
-            "confidence": 0.6
+            "confidence": 0.8
+          },
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "has_symptom",
+            "object": "Edema",
+            "confidence": 0.8
           }
         ],
         "lab_values": {
@@ -308,7 +231,13 @@
           "LDL": 140,
           "eGFR": 55
         }
-      }
+      },
+      "dosages": [
+        "10mg",
+        "40mg",
+        "1000mg",
+        "81mg"
+      ]
     },
     {
       "visit_id": "V4",
@@ -322,14 +251,11 @@
         "LDL": 150
       },
       "medications": [
-        "Amlodipine 20mg twice daily",
-        "Simvastatin 80mg",
-        "Metformin 2000mg",
-        "Aspirin 325mg",
-        "amlodipine",
+        "amlodipine twice daily",
         "simvastatin",
-        "20mg",
-        "80mg"
+        "metformin",
+        "aspirin",
+        "amlodipine"
       ],
       "diagnoses": [
         "Hypertension",
@@ -337,7 +263,7 @@
         "Type 2 Diabetes",
         "Coronary Artery Disease",
         "Chronic Kidney Disease",
-        "Acute coronary syndrome"
+        "Acute Coronary Syndrome"
       ],
       "symptoms": [
         "Headache",
@@ -348,69 +274,24 @@
       ],
       "extracted": {
         "conditions": [
-          "Acute coronary syndrome"
+          "Acute Coronary Syndrome"
         ],
         "medications": [
           "amlodipine",
-          "simvastatin",
+          "simvastatin"
+        ],
+        "dosages": [
           "20mg",
           "80mg"
         ],
         "symptoms": [
-          "Chest pain",
-          "Shortness of breath"
+          "Shortness of breath",
+          "Chest pain"
         ],
-        "procedures": [],
-        "relationships": [
-          {
-            "subject": "amlodipine",
-            "predicate": "increased",
-            "object": "20mg",
-            "confidence": 0.9
-          },
-          {
-            "subject": "simvastatin",
-            "predicate": "increased",
-            "object": "80mg",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "BP",
-            "confidence": 0.8
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "LDL",
-            "confidence": 0.8
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "eGFR",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "HbA1c",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Acute coronary syndrome",
-            "predicate": "managed_by",
-            "object": "hospitalized",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Chest pain",
-            "predicate": "has_symptom",
-            "object": "Shortness of breath",
-            "confidence": 0.6
-          }
+        "procedures": [
+          "Hospitalization"
         ],
+        "relationships": [],
         "lab_values": {
           "HbA1c": 8.5,
           "BP_systolic": 160,
@@ -418,7 +299,13 @@
           "LDL": 150,
           "eGFR": 45
         }
-      }
+      },
+      "dosages": [
+        "20mg",
+        "80mg",
+        "2000mg",
+        "325mg"
+      ]
     },
     {
       "visit_id": "V5",
@@ -432,13 +319,12 @@
         "LDL": 135
       },
       "medications": [
-        "Amlodipine 10mg twice daily",
-        "Simvastatin 40mg",
-        "Metformin 1500mg",
-        "Aspirin 81mg",
-        "Erythropoietin 10,000 units",
+        "amlodipine twice daily",
+        "simvastatin",
+        "metformin",
+        "aspirin",
+        "erythropoietin 10,000 units",
         "amlodipine",
-        "10mg",
         "erythropoietin"
       ],
       "diagnoses": [
@@ -454,8 +340,7 @@
         "Fatigue",
         "Shortness of breath",
         "Chest pain",
-        "Swelling in legs",
-        "stable"
+        "Swelling in legs"
       ],
       "extracted": {
         "conditions": [
@@ -463,57 +348,14 @@
         ],
         "medications": [
           "amlodipine",
-          "10mg",
           "erythropoietin"
         ],
-        "symptoms": [
-          "stable"
+        "dosages": [
+          "10mg"
         ],
+        "symptoms": [],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "amlodipine",
-            "predicate": "dose_decreased",
-            "object": "10mg",
-            "confidence": 0.9
-          },
-          {
-            "subject": "erythropoietin",
-            "predicate": "managed_by",
-            "object": "anemia",
-            "confidence": 0.8
-          },
-          {
-            "subject": "anemia",
-            "predicate": "has_symptom",
-            "object": "stable",
-            "confidence": 0.7
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "lab results",
-            "confidence": 0.6
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "lab results",
-            "confidence": 0.6
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "lab results",
-            "confidence": 0.6
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "lab results",
-            "confidence": 0.6
-          }
-        ],
+        "relationships": [],
         "lab_values": {
           "HbA1c": 7.8,
           "BP_systolic": 145,
@@ -521,7 +363,13 @@
           "LDL": 135,
           "eGFR": 50
         }
-      }
+      },
+      "dosages": [
+        "10mg",
+        "40mg",
+        "1500mg",
+        "81mg"
+      ]
     }
   ]
 }

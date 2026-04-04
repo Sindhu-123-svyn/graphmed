@@ -10,17 +10,11 @@
         "BP_systolic": 140,
         "BP_diastolic": 90,
         "eGFR": 72,
-        "LDL": 130,
-        "Blood Pressure": "140/90 mmHg"
+        "LDL": 130
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg daily",
         "metformin",
-        "lisinopril",
-        "130 mg",
-        "500mg",
-        "10mg"
+        "lisinopril"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -28,72 +22,52 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria"
+        "Frequent urination",
+        "Hypertension"
       ],
       "extracted": {
         "conditions": [
-          "Type 2 Diabetes",
-          "Hypertension"
+          "Hypertension",
+          "Type 2 Diabetes"
         ],
         "medications": [
           "metformin",
-          "lisinopril",
-          "130 mg",
-          "500mg",
-          "10mg"
+          "lisinopril"
         ],
-        "symptoms": [],
+        "dosages": [
+          "500mg twice daily",
+          "10mg daily"
+        ],
+        "symptoms": [
+          "Hypertension"
+        ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "lisinopril",
             "confidence": 0.9
-          },
-          {
-            "subject": "Blood Pressure",
-            "predicate": "measured_by",
-            "object": "HbA1c",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Blood Pressure",
-            "predicate": "measured_by",
-            "object": "LDL",
-            "confidence": 0.8
-          },
-          {
-            "subject": "140/90 mmHg",
-            "predicate": "has_symptom",
-            "object": "Hypertension",
-            "confidence": 0.7
-          },
-          {
-            "subject": "7.2%",
-            "predicate": "has_symptom",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.7
-          },
-          {
-            "subject": "130 mg/dL",
-            "predicate": "has_symptom",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.7
           }
         ],
         "lab_values": {
-          "Blood Pressure": "140/90 mmHg",
           "HbA1c": 7.2,
+          "BP_systolic": "140 mmHg",
+          "BP_diastolic": "90 mmHg",
           "LDL": "130 mg/dL"
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg daily",
+        "500mg twice daily"
+      ]
     },
     {
       "visit_id": "V2",
@@ -107,11 +81,9 @@
         "LDL": 150
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg daily",
-        "Simvastatin 20mg daily",
-        "simvastatin",
-        "20mg"
+        "metformin",
+        "lisinopril",
+        "simvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -120,7 +92,7 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Dyspnea on exertion"
       ],
       "extracted": {
@@ -128,17 +100,35 @@
           "Hyperlipidemia"
         ],
         "medications": [
-          "simvastatin",
-          "20mg"
+          "simvastatin"
+        ],
+        "dosages": [
+          "20mg daily"
         ],
         "symptoms": [
-          "Polyuria",
-          "Fatigue"
+          "Fatigue",
+          "Frequent urination"
         ],
         "procedures": [],
-        "relationships": [],
-        "lab_values": {}
-      }
+        "relationships": [
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "managed_by",
+            "object": "simvastatin",
+            "confidence": 0.9
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.1,
+          "BP_systolic": 130,
+          "BP_diastolic": 80
+        }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg daily",
+        "20mg daily"
+      ]
     },
     {
       "visit_id": "V3",
@@ -152,12 +142,10 @@
         "LDL": 120
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg daily",
-        "Simvastatin 20mg daily",
-        "Furosemide 40mg daily",
-        "40mg",
-        "Furosemide 40mg"
+        "metformin",
+        "lisinopril",
+        "simvastatin",
+        "furosemide"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -167,7 +155,7 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Dyspnea on exertion",
         "Edema",
         "Shortness of breath"
@@ -177,45 +165,22 @@
           "Chronic Kidney Disease"
         ],
         "medications": [
-          "40mg",
-          "Furosemide 40mg"
+          "furosemide"
+        ],
+        "dosages": [
+          "40mg daily"
         ],
         "symptoms": [
-          "Edema",
           "Shortness of breath",
-          "Dyspnea on exertion"
+          "Edema"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Furosemide",
+            "subject": "Chronic Kidney Disease",
             "predicate": "managed_by",
-            "object": "Chronic Kidney Disease",
+            "object": "furosemide",
             "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Lab",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Lab",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "worsens",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Dyspnea on exertion",
-            "predicate": "has_symptom",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.6
           }
         ],
         "lab_values": {
@@ -223,7 +188,13 @@
           "BP_systolic": 150,
           "BP_diastolic": 95
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg daily",
+        "20mg daily",
+        "40mg daily"
+      ]
     },
     {
       "visit_id": "V4",
@@ -237,16 +208,14 @@
         "LDL": 110
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg daily",
-        "Simvastatin 20mg daily",
-        "Furosemide 40mg daily",
-        "Insulin glargine 10units daily",
-        "Enalapril 10mg daily",
+        "metformin",
+        "lisinopril",
+        "simvastatin",
+        "furosemide",
+        "insulin glargine 10units daily",
+        "enalapril",
         "insulin",
-        "10mg",
-        "insulin glargine",
-        "enalapril"
+        "insulin glargine"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -256,63 +225,48 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Dyspnea on exertion",
         "Edema",
         "Weight gain"
       ],
       "extracted": {
         "conditions": [
-          "Type 2 Diabetes",
-          "Hypertension"
+          "Hypertension",
+          "Type 2 Diabetes"
         ],
         "medications": [
           "insulin",
-          "10mg",
           "insulin glargine",
           "enalapril"
         ],
+        "dosages": [
+          "10 units daily",
+          "10mg daily"
+        ],
         "symptoms": [
-          "Edema",
-          "Polyuria",
-          "Fatigue"
+          "Fatigue",
+          "Frequent urination",
+          "Edema"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "insulin glargine",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
+            "object": "insulin glargine",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "enalapril",
+            "confidence": 0.9
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "worsens",
             "object": "Type 2 Diabetes",
-            "confidence": 0.9
-          },
-          {
-            "subject": "enalapril",
-            "predicate": "managed_by",
-            "object": "Hypertension",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "HbA1c",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "worsens",
-            "object": "Edema",
-            "confidence": 0.7
-          },
-          {
-            "subject": "BP",
-            "predicate": "worsens",
-            "object": "Polyuria",
-            "confidence": 0.7
-          },
-          {
-            "subject": "BP",
-            "predicate": "worsens",
-            "object": "Fatigue",
             "confidence": 0.7
           }
         ],
@@ -321,7 +275,14 @@
           "BP_systolic": 160,
           "BP_diastolic": 100
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg daily",
+        "20mg daily",
+        "40mg daily",
+        "10 units daily"
+      ]
     }
   ]
 }

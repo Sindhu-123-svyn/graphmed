@@ -1,0 +1,894 @@
+{
+  "patient_id": "P069",
+  "created_at": "2026-04-04T13:46:01.537994",
+  "nodes": [
+    {
+      "id": "P069",
+      "type": "PATIENT",
+      "name": "P069",
+      "added": "2026-04-04T13:46:01.537994",
+      "last_confirmed": "2026-04-04T13:46:01.537994",
+      "confidence": 1.0
+    },
+    {
+      "id": "CONDITION_hypertension",
+      "name": "hypertension",
+      "type": "CONDITION",
+      "added": "2022-06-15",
+      "last_confirmed": "2022-06-15",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-06-15"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "CONDITION_type_2_diabetes",
+      "name": "type 2 diabetes",
+      "type": "CONDITION",
+      "added": "2022-06-15",
+      "last_confirmed": "2023-04-25",
+      "confidence": 0.29166666666666663,
+      "observed_dates": [
+        "2022-06-15",
+        "2022-12-20",
+        "2023-04-25"
+      ],
+      "decayed": true,
+      "history": [
+        {
+          "date": "2022-12-20",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2023-04-25",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "CONDITION_hyperlipidemia",
+      "name": "hyperlipidemia",
+      "type": "CONDITION",
+      "added": "2022-06-15",
+      "last_confirmed": "2022-06-15",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-06-15"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "CONDITION_coronary_artery_disease",
+      "name": "coronary artery disease",
+      "type": "CONDITION",
+      "added": "2022-06-15",
+      "last_confirmed": "2022-06-15",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-06-15"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "MEDICATION_metformin",
+      "name": "metformin",
+      "type": "MEDICATION",
+      "added": "2022-06-15",
+      "last_confirmed": "2022-06-15",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-06-15"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "MEDICATION_lisinopril",
+      "name": "lisinopril",
+      "type": "MEDICATION",
+      "added": "2022-06-15",
+      "last_confirmed": "2023-09-01",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-06-15",
+        "2023-09-01"
+      ],
+      "decayed": true,
+      "history": [
+        {
+          "date": "2023-09-01",
+          "old": {
+            "confidence": 0.2
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "MEDICATION_atorvastatin",
+      "name": "atorvastatin",
+      "type": "MEDICATION",
+      "added": "2022-06-15",
+      "last_confirmed": "2022-06-15",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-06-15"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "LAB_VALUE_hba1c",
+      "name": "hba1c",
+      "type": "LAB_VALUE",
+      "added": "2022-06-15",
+      "last_confirmed": "2024-02-15",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2022-06-15",
+        "2022-12-20",
+        "2023-04-25",
+        "2023-09-01",
+        "2024-02-15"
+      ],
+      "value": 8.0,
+      "decayed": true,
+      "history": [
+        {
+          "date": "2022-12-20",
+          "old": {
+            "value": 7.5,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2023-04-25",
+          "old": {
+            "value": 7.2,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2023-09-01",
+          "old": {
+            "value": 7.8,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2024-02-15",
+          "old": {
+            "value": 7.5,
+            "confidence": 1.0
+          },
+          "new": {}
+        }
+      ]
+    },
+    {
+      "id": "LAB_VALUE_bp_systolic",
+      "name": "bp_systolic",
+      "type": "LAB_VALUE",
+      "added": "2022-06-15",
+      "last_confirmed": "2024-02-15",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2022-06-15",
+        "2022-12-20",
+        "2023-04-25",
+        "2023-09-01",
+        "2024-02-15"
+      ],
+      "value": 115,
+      "decayed": true,
+      "history": [
+        {
+          "date": "2022-12-20",
+          "old": {
+            "value": 140,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2023-04-25",
+          "old": {
+            "value": 130,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2023-09-01",
+          "old": {
+            "value": 120,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2024-02-15",
+          "old": {
+            "value": 125,
+            "confidence": 1.0
+          },
+          "new": {}
+        }
+      ]
+    },
+    {
+      "id": "LAB_VALUE_bp_diastolic",
+      "name": "bp_diastolic",
+      "type": "LAB_VALUE",
+      "added": "2022-06-15",
+      "last_confirmed": "2024-02-15",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2022-06-15",
+        "2022-12-20",
+        "2023-04-25",
+        "2023-09-01",
+        "2024-02-15"
+      ],
+      "value": 65,
+      "decayed": true,
+      "history": [
+        {
+          "date": "2022-12-20",
+          "old": {
+            "value": 90,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2023-04-25",
+          "old": {
+            "value": 80,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2023-09-01",
+          "old": {
+            "value": 70,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2024-02-15",
+          "old": {
+            "value": 80,
+            "confidence": 1.0
+          },
+          "new": {}
+        }
+      ]
+    },
+    {
+      "id": "SYMPTOM_shortness_of_breath",
+      "name": "shortness of breath",
+      "type": "SYMPTOM",
+      "added": "2022-06-15",
+      "last_confirmed": "2022-06-15",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-06-15"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "SYMPTOM_chest_pain",
+      "name": "chest pain",
+      "type": "SYMPTOM",
+      "added": "2022-06-15",
+      "last_confirmed": "2022-06-15",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-06-15"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "PROCEDURE_ecg",
+      "name": "ecg",
+      "type": "PROCEDURE",
+      "added": "2022-06-15",
+      "last_confirmed": "2022-06-15",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-06-15"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "MEDICATION_medication_not_specified",
+      "name": "medication not specified",
+      "type": "MEDICATION",
+      "added": "2022-12-20",
+      "last_confirmed": "2022-12-20",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-12-20"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "LAB_VALUE_ldl",
+      "name": "ldl",
+      "type": "LAB_VALUE",
+      "added": "2022-12-20",
+      "last_confirmed": "2024-02-15",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2022-12-20",
+        "2023-04-25",
+        "2023-09-01",
+        "2024-02-15"
+      ],
+      "value": 115,
+      "decayed": true,
+      "history": [
+        {
+          "date": "2023-04-25",
+          "old": {
+            "value": 150,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2023-09-01",
+          "old": {
+            "value": 155,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2024-02-15",
+          "old": {
+            "value": 120,
+            "confidence": 1.0
+          },
+          "new": {}
+        }
+      ]
+    },
+    {
+      "id": "SYMPTOM_fatigue",
+      "name": "fatigue",
+      "type": "SYMPTOM",
+      "added": "2022-12-20",
+      "last_confirmed": "2024-02-15",
+      "confidence": 0.785,
+      "observed_dates": [
+        "2022-12-20",
+        "2023-04-25",
+        "2024-02-15"
+      ],
+      "decayed": true,
+      "history": [
+        {
+          "date": "2023-04-25",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2024-02-15",
+          "old": {
+            "confidence": 0.785
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "SYMPTOM_weakness",
+      "name": "weakness",
+      "type": "SYMPTOM",
+      "added": "2022-12-20",
+      "last_confirmed": "2024-02-15",
+      "confidence": 0.785,
+      "observed_dates": [
+        "2022-12-20",
+        "2023-04-25",
+        "2024-02-15"
+      ],
+      "decayed": true,
+      "history": [
+        {
+          "date": "2023-04-25",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2024-02-15",
+          "old": {
+            "confidence": 0.785
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "MEDICATION_amlodipine",
+      "name": "amlodipine",
+      "type": "MEDICATION",
+      "added": "2023-04-25",
+      "last_confirmed": "2023-04-25",
+      "confidence": 0.29166666666666663,
+      "observed_dates": [
+        "2023-04-25"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "CONDITION_kidney_function",
+      "name": "kidney function",
+      "type": "CONDITION",
+      "added": "2023-09-01",
+      "last_confirmed": "2023-09-01",
+      "confidence": 0.7216666666666667,
+      "observed_dates": [
+        "2023-09-01"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "MEDICATION_fenofibrate",
+      "name": "fenofibrate",
+      "type": "MEDICATION",
+      "added": "2023-09-01",
+      "last_confirmed": "2023-09-01",
+      "confidence": 0.7216666666666667,
+      "observed_dates": [
+        "2023-09-01"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "LAB_VALUE_egfr",
+      "name": "egfr",
+      "type": "LAB_VALUE",
+      "added": "2023-09-01",
+      "last_confirmed": "2023-09-01",
+      "confidence": 0.7216666666666667,
+      "observed_dates": [
+        "2023-09-01"
+      ],
+      "value": 55,
+      "decayed": true
+    },
+    {
+      "id": "SYMPTOM_worsening_kidney_function",
+      "name": "worsening kidney function",
+      "type": "SYMPTOM",
+      "added": "2023-09-01",
+      "last_confirmed": "2023-09-01",
+      "confidence": 0.7216666666666667,
+      "observed_dates": [
+        "2023-09-01"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "CONDITION_anemia",
+      "name": "anemia",
+      "type": "CONDITION",
+      "added": "2024-02-15",
+      "last_confirmed": "2024-02-15",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2024-02-15"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "MEDICATION_erythropoietin",
+      "name": "erythropoietin",
+      "type": "MEDICATION",
+      "added": "2024-02-15",
+      "last_confirmed": "2024-02-15",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2024-02-15"
+      ],
+      "decayed": true
+    }
+  ],
+  "edges": [
+    {
+      "source": "P069",
+      "target": "CONDITION_hypertension",
+      "relation": "has",
+      "established": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P069",
+      "target": "CONDITION_type_2_diabetes",
+      "relation": "has",
+      "established": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P069",
+      "target": "CONDITION_hyperlipidemia",
+      "relation": "has",
+      "established": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P069",
+      "target": "CONDITION_coronary_artery_disease",
+      "relation": "has",
+      "established": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P069",
+      "target": "MEDICATION_metformin",
+      "relation": "has",
+      "established": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P069",
+      "target": "MEDICATION_lisinopril",
+      "relation": "has",
+      "established": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P069",
+      "target": "MEDICATION_atorvastatin",
+      "relation": "has",
+      "established": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P069",
+      "target": "LAB_VALUE_hba1c",
+      "relation": "has",
+      "established": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P069",
+      "target": "LAB_VALUE_bp_systolic",
+      "relation": "has",
+      "established": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P069",
+      "target": "LAB_VALUE_bp_diastolic",
+      "relation": "has",
+      "established": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P069",
+      "target": "SYMPTOM_shortness_of_breath",
+      "relation": "has",
+      "established": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P069",
+      "target": "SYMPTOM_chest_pain",
+      "relation": "has",
+      "established": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P069",
+      "target": "PROCEDURE_ecg",
+      "relation": "has",
+      "established": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P069",
+      "target": "MEDICATION_medication_not_specified",
+      "relation": "has",
+      "established": "2022-12-20",
+      "confidence": 1.0
+    },
+    {
+      "source": "P069",
+      "target": "LAB_VALUE_ldl",
+      "relation": "has",
+      "established": "2022-12-20",
+      "confidence": 1.0
+    },
+    {
+      "source": "P069",
+      "target": "SYMPTOM_fatigue",
+      "relation": "has",
+      "established": "2022-12-20",
+      "confidence": 1.0
+    },
+    {
+      "source": "P069",
+      "target": "SYMPTOM_weakness",
+      "relation": "has",
+      "established": "2022-12-20",
+      "confidence": 1.0
+    },
+    {
+      "source": "P069",
+      "target": "MEDICATION_amlodipine",
+      "relation": "has",
+      "established": "2023-04-25",
+      "confidence": 1.0
+    },
+    {
+      "source": "P069",
+      "target": "CONDITION_kidney_function",
+      "relation": "has",
+      "established": "2023-09-01",
+      "confidence": 1.0
+    },
+    {
+      "source": "P069",
+      "target": "MEDICATION_fenofibrate",
+      "relation": "has",
+      "established": "2023-09-01",
+      "confidence": 1.0
+    },
+    {
+      "source": "P069",
+      "target": "LAB_VALUE_egfr",
+      "relation": "has",
+      "established": "2023-09-01",
+      "confidence": 1.0
+    },
+    {
+      "source": "P069",
+      "target": "SYMPTOM_worsening_kidney_function",
+      "relation": "has",
+      "established": "2023-09-01",
+      "confidence": 1.0
+    },
+    {
+      "source": "P069",
+      "target": "CONDITION_anemia",
+      "relation": "has",
+      "established": "2024-02-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P069",
+      "target": "MEDICATION_erythropoietin",
+      "relation": "has",
+      "established": "2024-02-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_hypertension",
+      "target": "MEDICATION_lisinopril",
+      "relation": "managed_by",
+      "established": "2022-06-15",
+      "last_observed": "2022-06-15",
+      "observed_dates": [
+        "2022-06-15"
+      ],
+      "observations": 1,
+      "confidence": 0.9
+    },
+    {
+      "source": "CONDITION_type_2_diabetes",
+      "target": "MEDICATION_metformin",
+      "relation": "managed_by",
+      "established": "2022-06-15",
+      "last_observed": "2022-06-15",
+      "observed_dates": [
+        "2022-06-15"
+      ],
+      "observations": 1,
+      "confidence": 0.9
+    },
+    {
+      "source": "CONDITION_type_2_diabetes",
+      "target": "MEDICATION_medication_not_specified",
+      "relation": "managed_by",
+      "established": "2022-12-20",
+      "last_observed": "2022-12-20",
+      "observed_dates": [
+        "2022-12-20"
+      ],
+      "observations": 1,
+      "confidence": 0.8
+    },
+    {
+      "source": "CONDITION_type_2_diabetes",
+      "target": "MEDICATION_amlodipine",
+      "relation": "managed_by",
+      "established": "2023-04-25",
+      "last_observed": "2023-04-25",
+      "observed_dates": [
+        "2023-04-25"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_type_2_diabetes",
+      "target": "SYMPTOM_fatigue",
+      "relation": "has_symptom",
+      "established": "2023-04-25",
+      "last_observed": "2023-04-25",
+      "observed_dates": [
+        "2023-04-25"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_type_2_diabetes",
+      "target": "SYMPTOM_weakness",
+      "relation": "has_symptom",
+      "established": "2023-04-25",
+      "last_observed": "2023-04-25",
+      "observed_dates": [
+        "2023-04-25"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_type_2_diabetes",
+      "target": "LAB_VALUE_hba1c",
+      "relation": "measured_by",
+      "established": "2023-04-25",
+      "last_observed": "2023-04-25",
+      "observed_dates": [
+        "2023-04-25"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_type_2_diabetes",
+      "target": "LAB_VALUE_bp_systolic",
+      "relation": "measured_by",
+      "established": "2023-04-25",
+      "last_observed": "2023-04-25",
+      "observed_dates": [
+        "2023-04-25"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_type_2_diabetes",
+      "target": "LAB_VALUE_bp_diastolic",
+      "relation": "measured_by",
+      "established": "2023-04-25",
+      "last_observed": "2023-04-25",
+      "observed_dates": [
+        "2023-04-25"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_type_2_diabetes",
+      "target": "LAB_VALUE_ldl",
+      "relation": "measured_by",
+      "established": "2023-04-25",
+      "last_observed": "2023-04-25",
+      "observed_dates": [
+        "2023-04-25"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_hyperlipidemia",
+      "target": "MEDICATION_atorvastatin",
+      "relation": "managed_by",
+      "established": "2022-06-15",
+      "last_observed": "2022-06-15",
+      "observed_dates": [
+        "2022-06-15"
+      ],
+      "observations": 1,
+      "confidence": 0.9
+    },
+    {
+      "source": "CONDITION_kidney_function",
+      "target": "LAB_VALUE_egfr",
+      "relation": "measured_by",
+      "established": "2023-09-01",
+      "last_observed": "2023-09-01",
+      "observed_dates": [
+        "2023-09-01"
+      ],
+      "observations": 1,
+      "confidence": 0.8
+    },
+    {
+      "source": "CONDITION_kidney_function",
+      "target": "LAB_VALUE_hba1c",
+      "relation": "measured_by",
+      "established": "2023-09-01",
+      "last_observed": "2023-09-01",
+      "observed_dates": [
+        "2023-09-01"
+      ],
+      "observations": 1,
+      "confidence": 0.8
+    },
+    {
+      "source": "CONDITION_kidney_function",
+      "target": "LAB_VALUE_bp_systolic",
+      "relation": "measured_by",
+      "established": "2023-09-01",
+      "last_observed": "2023-09-01",
+      "observed_dates": [
+        "2023-09-01"
+      ],
+      "observations": 1,
+      "confidence": 0.8
+    },
+    {
+      "source": "CONDITION_kidney_function",
+      "target": "LAB_VALUE_bp_diastolic",
+      "relation": "measured_by",
+      "established": "2023-09-01",
+      "last_observed": "2023-09-01",
+      "observed_dates": [
+        "2023-09-01"
+      ],
+      "observations": 1,
+      "confidence": 0.8
+    },
+    {
+      "source": "CONDITION_anemia",
+      "target": "MEDICATION_erythropoietin",
+      "relation": "managed_by",
+      "established": "2024-02-15",
+      "last_observed": "2024-02-15",
+      "observed_dates": [
+        "2024-02-15"
+      ],
+      "observations": 1,
+      "confidence": 0.9
+    }
+  ]
+}

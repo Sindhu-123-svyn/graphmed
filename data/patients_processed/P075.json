@@ -13,10 +13,9 @@
         "LDL": 150
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg OD",
-        "Atorvastatin 20mg OD",
         "metformin",
+        "lisinopril od",
+        "atorvastatin od",
         "lisinopril",
         "atorvastatin"
       ],
@@ -26,66 +25,56 @@
         "Hyperlipidemia"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Fatigue"
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [
           "metformin",
           "lisinopril",
           "atorvastatin"
         ],
+        "dosages": [],
         "symptoms": [],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.8
+            "object": "metformin",
+            "confidence": 0.9
           },
           {
-            "subject": "Lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
-            "confidence": 0.8
+            "object": "lisinopril",
+            "confidence": 0.9
           },
           {
-            "subject": "Atorvastatin",
+            "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Lisinopril",
-            "confidence": 0.7
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "Atorvastatin",
-            "confidence": 0.7
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.7
+            "object": "atorvastatin",
+            "confidence": 0.9
           }
         ],
         "lab_values": {
           "HbA1c": "elevated",
+          "BP_systolic": "elevated",
+          "BP_diastolic": "well-controlled",
           "LDL": "high"
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg",
+        "20mg"
+      ]
     },
     {
       "visit_id": "V2",
@@ -99,11 +88,11 @@
         "LDL": 160
       },
       "medications": [
-        "Metformin 1000mg BID",
-        "Lisinopril 20mg OD",
-        "Atorvastatin 20mg OD",
-        "Empagliflozin 10mg OD",
-        "Simvastatin 40mg OD",
+        "metformin",
+        "lisinopril od",
+        "atorvastatin od",
+        "empagliflozin od",
+        "simvastatin od",
         "simvastatin",
         "empagliflozin"
       ],
@@ -111,65 +100,49 @@
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
-        "Chronic Kidney Disease",
-        "diabetes"
+        "Chronic Kidney Disease"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Fatigue",
         "Swelling in legs",
-        "worsening symptoms"
+        "Worsening symptoms"
       ],
       "extracted": {
         "conditions": [
-          "diabetes"
+          "Type 2 Diabetes"
         ],
         "medications": [
           "simvastatin",
           "empagliflozin"
         ],
+        "dosages": [],
         "symptoms": [
-          "worsening symptoms"
+          "Worsening symptoms"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "empagliflozin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "diabetes",
+            "object": "empagliflozin",
             "confidence": 0.9
-          },
-          {
-            "subject": "simvastatin",
-            "predicate": "managed_by",
-            "object": "elevated LDL",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "BP",
-            "confidence": 0.7
-          },
-          {
-            "subject": "BP",
-            "predicate": "worsens",
-            "object": "worsening symptoms",
-            "confidence": 0.6
-          },
-          {
-            "subject": "LDL",
-            "predicate": "worsens",
-            "object": "worsening symptoms",
-            "confidence": 0.6
           }
         ],
         "lab_values": {
           "HbA1c": "increased",
+          "BP_systolic": "elevated",
+          "BP_diastolic": "elevated",
           "LDL": "slightly higher"
         }
-      }
+      },
+      "dosages": [
+        "1000mg BID",
+        "20mg",
+        "10mg",
+        "40mg"
+      ]
     },
     {
       "visit_id": "V3",
@@ -181,16 +154,20 @@
         "BP_diastolic": 95,
         "eGFR": 55,
         "LDL": 140,
-        "creatinine": "elevated"
+        "HDL": "not mentioned",
+        "Creatinine": "elevated",
+        "Glucose": "not mentioned",
+        "Potassium": "not mentioned",
+        "Sodium": "not mentioned"
       },
       "medications": [
-        "Metformin 1000mg BID",
-        "Lisinopril 20mg OD",
-        "Atorvastatin 20mg OD",
-        "Empagliflozin 10mg OD",
-        "Simvastatin 40mg OD",
-        "Losartan 50mg OD",
-        "Amlodipine 10mg OD",
+        "metformin",
+        "lisinopril od",
+        "atorvastatin od",
+        "empagliflozin od",
+        "simvastatin od",
+        "losartan od",
+        "amlodipine od",
         "losartan",
         "amlodipine"
       ],
@@ -200,78 +177,77 @@
         "Hyperlipidemia",
         "Chronic Kidney Disease",
         "Coronary Artery Disease",
-        "kidney dysfunction"
+        "Kidney Dysfunction"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Fatigue",
         "Swelling in legs",
         "Chest pain",
-        "worsening kidney function"
+        "Elevated creatinine",
+        "Worsening kidney function"
       ],
       "extracted": {
         "conditions": [
-          "kidney dysfunction"
+          "Kidney Dysfunction"
         ],
         "medications": [
           "losartan",
           "amlodipine"
         ],
+        "dosages": [],
         "symptoms": [
-          "worsening kidney function"
+          "Elevated creatinine",
+          "Worsening kidney function"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "losartan",
+            "subject": "Kidney Dysfunction",
             "predicate": "managed_by",
-            "object": "kidney dysfunction",
-            "confidence": 0.8
-          },
-          {
-            "subject": "amlodipine",
-            "predicate": "managed_by",
-            "object": "kidney dysfunction",
-            "confidence": 0.8
-          },
-          {
-            "subject": "losartan",
-            "predicate": "contraindicated_with",
-            "object": "kidney dysfunction",
-            "confidence": 0.6
-          },
-          {
-            "subject": "kidney dysfunction",
-            "predicate": "worsens",
-            "object": "kidney function",
+            "object": "losartan",
             "confidence": 0.9
           },
           {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "decreased",
-            "confidence": 0.7
+            "subject": "Kidney Dysfunction",
+            "predicate": "managed_by",
+            "object": "amlodipine",
+            "confidence": 0.9
           },
           {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "elevated",
-            "confidence": 0.7
+            "subject": "Kidney Dysfunction",
+            "predicate": "has_symptom",
+            "object": "Elevated creatinine",
+            "confidence": 0.8
           },
           {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "lower",
-            "confidence": 0.7
+            "subject": "Kidney Dysfunction",
+            "predicate": "has_symptom",
+            "object": "Worsening kidney function",
+            "confidence": 0.8
           }
         ],
         "lab_values": {
-          "creatinine": "elevated",
           "HbA1c": "decreased",
-          "LDL": "lower"
+          "BP_systolic": "elevated",
+          "BP_diastolic": "not mentioned",
+          "eGFR": "worsening",
+          "LDL": "slightly lower",
+          "HDL": "not mentioned",
+          "Creatinine": "elevated",
+          "Glucose": "not mentioned",
+          "Potassium": "not mentioned",
+          "Sodium": "not mentioned"
         }
-      }
+      },
+      "dosages": [
+        "1000mg BID",
+        "20mg",
+        "10mg",
+        "40mg",
+        "50mg"
+      ]
     }
   ]
 }

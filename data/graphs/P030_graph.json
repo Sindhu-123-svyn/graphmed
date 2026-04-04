@@ -1,0 +1,805 @@
+{
+  "patient_id": "P030",
+  "created_at": "2026-04-04T13:46:00.113509",
+  "nodes": [
+    {
+      "id": "P030",
+      "type": "PATIENT",
+      "name": "P030",
+      "added": "2026-04-04T13:46:00.113509",
+      "last_confirmed": "2026-04-04T13:46:00.113509",
+      "confidence": 1.0
+    },
+    {
+      "id": "CONDITION_hypertension",
+      "name": "hypertension",
+      "type": "CONDITION",
+      "added": "2022-02-15",
+      "last_confirmed": "2023-08-15",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-02-15",
+        "2023-08-15"
+      ],
+      "decayed": true,
+      "history": [
+        {
+          "date": "2023-08-15",
+          "old": {
+            "confidence": 0.2
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "CONDITION_type_2_diabetes",
+      "name": "type 2 diabetes",
+      "type": "CONDITION",
+      "added": "2022-02-15",
+      "last_confirmed": "2023-08-15",
+      "confidence": 0.6866666666666666,
+      "observed_dates": [
+        "2022-02-15",
+        "2023-02-28",
+        "2023-08-15"
+      ],
+      "decayed": true,
+      "history": [
+        {
+          "date": "2023-02-28",
+          "old": {
+            "confidence": 0.6866666666666666
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2023-08-15",
+          "old": {
+            "confidence": 0.6866666666666666
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "CONDITION_hyperlipidemia",
+      "name": "hyperlipidemia",
+      "type": "CONDITION",
+      "added": "2022-02-15",
+      "last_confirmed": "2023-02-28",
+      "confidence": 0.4066666666666667,
+      "observed_dates": [
+        "2022-02-15",
+        "2023-02-28"
+      ],
+      "decayed": true,
+      "history": [
+        {
+          "date": "2023-02-28",
+          "old": {
+            "confidence": 0.6866666666666666
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "MEDICATION_new_medication",
+      "name": "new medication",
+      "type": "MEDICATION",
+      "added": "2022-02-15",
+      "last_confirmed": "2022-02-15",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-02-15"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "LAB_VALUE_bp_systolic",
+      "name": "bp_systolic",
+      "type": "LAB_VALUE",
+      "added": "2022-02-15",
+      "last_confirmed": "2023-08-15",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2022-02-15",
+        "2022-08-22",
+        "2023-02-28",
+        "2023-08-15"
+      ],
+      "value": 146,
+      "decayed": true,
+      "history": [
+        {
+          "date": "2022-08-22",
+          "old": {
+            "value": 140,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2023-02-28",
+          "old": {
+            "value": 152,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2023-08-15",
+          "old": {
+            "value": 140,
+            "confidence": 1.0
+          },
+          "new": {}
+        }
+      ]
+    },
+    {
+      "id": "LAB_VALUE_bp_diastolic",
+      "name": "bp_diastolic",
+      "type": "LAB_VALUE",
+      "added": "2022-02-15",
+      "last_confirmed": "2023-08-15",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2022-02-15",
+        "2022-08-22",
+        "2023-02-28",
+        "2023-08-15"
+      ],
+      "value": 92,
+      "decayed": true,
+      "history": [
+        {
+          "date": "2022-08-22",
+          "old": {
+            "value": 90,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2023-02-28",
+          "old": {
+            "value": 95,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2023-08-15",
+          "old": {
+            "value": 85,
+            "confidence": 1.0
+          },
+          "new": {}
+        }
+      ]
+    },
+    {
+      "id": "SYMPTOM_fatigue",
+      "name": "fatigue",
+      "type": "SYMPTOM",
+      "added": "2022-02-15",
+      "last_confirmed": "2023-02-28",
+      "confidence": 0.4066666666666667,
+      "observed_dates": [
+        "2022-02-15",
+        "2023-02-28"
+      ],
+      "decayed": true,
+      "history": [
+        {
+          "date": "2023-02-28",
+          "old": {
+            "confidence": 0.6866666666666666
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "SYMPTOM_shortness_of_breath",
+      "name": "shortness of breath",
+      "type": "SYMPTOM",
+      "added": "2022-02-15",
+      "last_confirmed": "2023-02-28",
+      "confidence": 0.72,
+      "observed_dates": [
+        "2022-02-15",
+        "2022-08-22",
+        "2023-02-28"
+      ],
+      "decayed": true,
+      "history": [
+        {
+          "date": "2022-08-22",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2023-02-28",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "SYMPTOM_weight_gain",
+      "name": "weight gain",
+      "type": "SYMPTOM",
+      "added": "2022-02-15",
+      "last_confirmed": "2022-02-15",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-02-15"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "CONDITION_cardiomyopathy",
+      "name": "cardiomyopathy",
+      "type": "CONDITION",
+      "added": "2022-08-22",
+      "last_confirmed": "2022-08-22",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-08-22"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "MEDICATION_metformin",
+      "name": "metformin",
+      "type": "MEDICATION",
+      "added": "2022-08-22",
+      "last_confirmed": "2023-08-15",
+      "confidence": 0.6833333333333333,
+      "observed_dates": [
+        "2022-08-22",
+        "2023-08-15"
+      ],
+      "decayed": true,
+      "history": [
+        {
+          "date": "2023-08-15",
+          "old": {
+            "confidence": 0.6833333333333333
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "MEDICATION_losartan",
+      "name": "losartan",
+      "type": "MEDICATION",
+      "added": "2022-08-22",
+      "last_confirmed": "2023-08-15",
+      "confidence": 0.6833333333333333,
+      "observed_dates": [
+        "2022-08-22",
+        "2023-08-15"
+      ],
+      "decayed": true,
+      "history": [
+        {
+          "date": "2023-08-15",
+          "old": {
+            "confidence": 0.6833333333333333
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "MEDICATION_atorvastatin",
+      "name": "atorvastatin",
+      "type": "MEDICATION",
+      "added": "2022-08-22",
+      "last_confirmed": "2022-08-22",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-08-22"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "SYMPTOM_dizziness",
+      "name": "dizziness",
+      "type": "SYMPTOM",
+      "added": "2022-08-22",
+      "last_confirmed": "2023-02-28",
+      "confidence": 0.72,
+      "observed_dates": [
+        "2022-08-22",
+        "2023-02-28"
+      ],
+      "decayed": true,
+      "history": [
+        {
+          "date": "2023-02-28",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "PROCEDURE_cardiologist_referral",
+      "name": "cardiologist referral",
+      "type": "PROCEDURE",
+      "added": "2022-08-22",
+      "last_confirmed": "2022-08-22",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-08-22"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "CONDITION_coronary_artery_disease",
+      "name": "coronary artery disease",
+      "type": "CONDITION",
+      "added": "2023-02-28",
+      "last_confirmed": "2023-02-28",
+      "confidence": 0.72,
+      "observed_dates": [
+        "2023-02-28"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "MEDICATION_beta_blocker",
+      "name": "beta-blocker",
+      "type": "MEDICATION",
+      "added": "2023-02-28",
+      "last_confirmed": "2023-02-28",
+      "confidence": 0.72,
+      "observed_dates": [
+        "2023-02-28"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "SYMPTOM_chest_pain",
+      "name": "chest pain",
+      "type": "SYMPTOM",
+      "added": "2023-02-28",
+      "last_confirmed": "2023-02-28",
+      "confidence": 0.72,
+      "observed_dates": [
+        "2023-02-28"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "PROCEDURE_cardiac_catheterization",
+      "name": "cardiac catheterization",
+      "type": "PROCEDURE",
+      "added": "2023-02-28",
+      "last_confirmed": "2023-02-28",
+      "confidence": 0.72,
+      "observed_dates": [
+        "2023-02-28"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "SYMPTOM_kidney_function_worsening",
+      "name": "kidney function worsening",
+      "type": "SYMPTOM",
+      "added": "2023-08-15",
+      "last_confirmed": "2023-08-15",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2023-08-15"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "PROCEDURE_referral_to_nephrologist",
+      "name": "referral to nephrologist",
+      "type": "PROCEDURE",
+      "added": "2023-08-15",
+      "last_confirmed": "2023-08-15",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2023-08-15"
+      ],
+      "decayed": true
+    }
+  ],
+  "edges": [
+    {
+      "source": "P030",
+      "target": "CONDITION_hypertension",
+      "relation": "has",
+      "established": "2022-02-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P030",
+      "target": "CONDITION_type_2_diabetes",
+      "relation": "has",
+      "established": "2022-02-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P030",
+      "target": "CONDITION_hyperlipidemia",
+      "relation": "has",
+      "established": "2022-02-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P030",
+      "target": "MEDICATION_new_medication",
+      "relation": "has",
+      "established": "2022-02-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P030",
+      "target": "LAB_VALUE_bp_systolic",
+      "relation": "has",
+      "established": "2022-02-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P030",
+      "target": "LAB_VALUE_bp_diastolic",
+      "relation": "has",
+      "established": "2022-02-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P030",
+      "target": "SYMPTOM_fatigue",
+      "relation": "has",
+      "established": "2022-02-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P030",
+      "target": "SYMPTOM_shortness_of_breath",
+      "relation": "has",
+      "established": "2022-02-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P030",
+      "target": "SYMPTOM_weight_gain",
+      "relation": "has",
+      "established": "2022-02-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P030",
+      "target": "CONDITION_cardiomyopathy",
+      "relation": "has",
+      "established": "2022-08-22",
+      "confidence": 1.0
+    },
+    {
+      "source": "P030",
+      "target": "MEDICATION_metformin",
+      "relation": "has",
+      "established": "2022-08-22",
+      "confidence": 1.0
+    },
+    {
+      "source": "P030",
+      "target": "MEDICATION_losartan",
+      "relation": "has",
+      "established": "2022-08-22",
+      "confidence": 1.0
+    },
+    {
+      "source": "P030",
+      "target": "MEDICATION_atorvastatin",
+      "relation": "has",
+      "established": "2022-08-22",
+      "confidence": 1.0
+    },
+    {
+      "source": "P030",
+      "target": "SYMPTOM_dizziness",
+      "relation": "has",
+      "established": "2022-08-22",
+      "confidence": 1.0
+    },
+    {
+      "source": "P030",
+      "target": "PROCEDURE_cardiologist_referral",
+      "relation": "has",
+      "established": "2022-08-22",
+      "confidence": 1.0
+    },
+    {
+      "source": "P030",
+      "target": "CONDITION_coronary_artery_disease",
+      "relation": "has",
+      "established": "2023-02-28",
+      "confidence": 1.0
+    },
+    {
+      "source": "P030",
+      "target": "MEDICATION_beta_blocker",
+      "relation": "has",
+      "established": "2023-02-28",
+      "confidence": 1.0
+    },
+    {
+      "source": "P030",
+      "target": "SYMPTOM_chest_pain",
+      "relation": "has",
+      "established": "2023-02-28",
+      "confidence": 1.0
+    },
+    {
+      "source": "P030",
+      "target": "PROCEDURE_cardiac_catheterization",
+      "relation": "has",
+      "established": "2023-02-28",
+      "confidence": 1.0
+    },
+    {
+      "source": "P030",
+      "target": "SYMPTOM_kidney_function_worsening",
+      "relation": "has",
+      "established": "2023-08-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P030",
+      "target": "PROCEDURE_referral_to_nephrologist",
+      "relation": "has",
+      "established": "2023-08-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_hypertension",
+      "target": "LAB_VALUE_bp_systolic",
+      "relation": "measured_by",
+      "established": "2022-02-15",
+      "last_observed": "2023-08-15",
+      "observed_dates": [
+        "2022-02-15",
+        "2023-08-15"
+      ],
+      "observations": 2,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_hypertension",
+      "target": "LAB_VALUE_bp_diastolic",
+      "relation": "measured_by",
+      "established": "2022-02-15",
+      "last_observed": "2023-08-15",
+      "observed_dates": [
+        "2022-02-15",
+        "2023-08-15"
+      ],
+      "observations": 2,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_hypertension",
+      "target": "MEDICATION_metformin",
+      "relation": "managed_by",
+      "established": "2023-08-15",
+      "last_observed": "2023-08-15",
+      "observed_dates": [
+        "2023-08-15"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_hypertension",
+      "target": "MEDICATION_losartan",
+      "relation": "managed_by",
+      "established": "2023-08-15",
+      "last_observed": "2023-08-15",
+      "observed_dates": [
+        "2023-08-15"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_hypertension",
+      "target": "SYMPTOM_kidney_function_worsening",
+      "relation": "has_symptom",
+      "established": "2023-08-15",
+      "last_observed": "2023-08-15",
+      "observed_dates": [
+        "2023-08-15"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_type_2_diabetes",
+      "target": "MEDICATION_new_medication",
+      "relation": "managed_by",
+      "established": "2022-02-15",
+      "last_observed": "2022-02-15",
+      "observed_dates": [
+        "2022-02-15"
+      ],
+      "observations": 1,
+      "confidence": 0.9
+    },
+    {
+      "source": "CONDITION_type_2_diabetes",
+      "target": "SYMPTOM_fatigue",
+      "relation": "has_symptom",
+      "established": "2022-02-15",
+      "last_observed": "2022-02-15",
+      "observed_dates": [
+        "2022-02-15"
+      ],
+      "observations": 1,
+      "confidence": 0.7
+    },
+    {
+      "source": "CONDITION_type_2_diabetes",
+      "target": "SYMPTOM_shortness_of_breath",
+      "relation": "has_symptom",
+      "established": "2022-02-15",
+      "last_observed": "2022-02-15",
+      "observed_dates": [
+        "2022-02-15"
+      ],
+      "observations": 1,
+      "confidence": 0.7
+    },
+    {
+      "source": "CONDITION_type_2_diabetes",
+      "target": "SYMPTOM_weight_gain",
+      "relation": "has_symptom",
+      "established": "2022-02-15",
+      "last_observed": "2022-02-15",
+      "observed_dates": [
+        "2022-02-15"
+      ],
+      "observations": 1,
+      "confidence": 0.7
+    },
+    {
+      "source": "CONDITION_type_2_diabetes",
+      "target": "MEDICATION_metformin",
+      "relation": "managed_by",
+      "established": "2023-08-15",
+      "last_observed": "2023-08-15",
+      "observed_dates": [
+        "2023-08-15"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_type_2_diabetes",
+      "target": "MEDICATION_losartan",
+      "relation": "managed_by",
+      "established": "2023-08-15",
+      "last_observed": "2023-08-15",
+      "observed_dates": [
+        "2023-08-15"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_type_2_diabetes",
+      "target": "SYMPTOM_kidney_function_worsening",
+      "relation": "has_symptom",
+      "established": "2023-08-15",
+      "last_observed": "2023-08-15",
+      "observed_dates": [
+        "2023-08-15"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_type_2_diabetes",
+      "target": "LAB_VALUE_bp_systolic",
+      "relation": "measured_by",
+      "established": "2023-08-15",
+      "last_observed": "2023-08-15",
+      "observed_dates": [
+        "2023-08-15"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_type_2_diabetes",
+      "target": "LAB_VALUE_bp_diastolic",
+      "relation": "measured_by",
+      "established": "2023-08-15",
+      "last_observed": "2023-08-15",
+      "observed_dates": [
+        "2023-08-15"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_cardiomyopathy",
+      "target": "SYMPTOM_shortness_of_breath",
+      "relation": "worsens",
+      "established": "2022-08-22",
+      "last_observed": "2022-08-22",
+      "observed_dates": [
+        "2022-08-22"
+      ],
+      "observations": 1,
+      "confidence": 0.9
+    },
+    {
+      "source": "CONDITION_cardiomyopathy",
+      "target": "SYMPTOM_dizziness",
+      "relation": "worsens",
+      "established": "2022-08-22",
+      "last_observed": "2022-08-22",
+      "observed_dates": [
+        "2022-08-22"
+      ],
+      "observations": 1,
+      "confidence": 0.9
+    },
+    {
+      "source": "CONDITION_coronary_artery_disease",
+      "target": "MEDICATION_beta_blocker",
+      "relation": "managed_by",
+      "established": "2023-02-28",
+      "last_observed": "2023-02-28",
+      "observed_dates": [
+        "2023-02-28"
+      ],
+      "observations": 1,
+      "confidence": 0.9
+    }
+  ]
+}

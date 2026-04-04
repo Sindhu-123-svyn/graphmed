@@ -10,16 +10,13 @@
         "BP_systolic": 150,
         "BP_diastolic": 95,
         "eGFR": 80,
-        "LDL": 150,
-        "Blood Pressure": "150/95 mmHg"
+        "LDL": 150
       },
       "medications": [
-        "Metformin 500mg BD",
-        "Lisinopril 10mg OD",
+        "metformin bd",
+        "lisinopril od",
         "metformin",
-        "lisinopril",
-        "500mg",
-        "10mg"
+        "lisinopril"
       ],
       "diagnoses": [
         "Hypertension",
@@ -27,37 +24,39 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Edema"
       ],
       "extracted": {
         "conditions": [
-          "Type 2 Diabetes",
-          "Hypertension"
+          "Hypertension",
+          "Type 2 Diabetes"
         ],
         "medications": [
           "metformin",
-          "lisinopril",
+          "lisinopril"
+        ],
+        "dosages": [
           "500mg",
           "10mg"
         ],
         "symptoms": [
-          "Edema",
-          "Polyuria",
-          "Fatigue"
+          "Fatigue",
+          "Frequent urination",
+          "Edema"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "lisinopril",
             "confidence": 0.9
           },
           {
@@ -67,22 +66,21 @@
             "confidence": 0.8
           },
           {
-            "subject": "Hypertension",
+            "subject": "Type 2 Diabetes",
             "predicate": "worsens",
-            "object": "Polyuria",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "worsens",
-            "object": "Fatigue",
+            "object": "Frequent urination",
             "confidence": 0.8
           }
         ],
         "lab_values": {
-          "Blood Pressure": "150/95 mmHg"
+          "BP_systolic": 150,
+          "BP_diastolic": 95
         }
-      }
+      },
+      "dosages": [
+        "500mg",
+        "10mg"
+      ]
     },
     {
       "visit_id": "V2",
@@ -93,18 +91,15 @@
         "BP_systolic": 160,
         "BP_diastolic": 100,
         "eGFR": 70,
-        "LDL": 120,
-        "Blood Pressure": "160/100 mmHg"
+        "LDL": 120
       },
       "medications": [
-        "Metformin 500mg BD",
-        "Lisinopril 20mg OD",
-        "Atorvastatin 20mg OD",
-        "Aspirin 81mg OD",
+        "metformin bd",
+        "lisinopril od",
+        "atorvastatin od",
+        "aspirin od",
         "lisinopril",
         "atorvastatin",
-        "20mg",
-        "81mg",
         "aspirin"
       ],
       "diagnoses": [
@@ -114,11 +109,10 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Worsening edema",
         "Shortness of breath",
-        "Edema",
-        "Murmur"
+        "Edema"
       ],
       "extracted": {
         "conditions": [
@@ -127,58 +121,49 @@
         "medications": [
           "lisinopril",
           "atorvastatin",
-          "20mg",
-          "81mg",
           "aspirin"
         ],
+        "dosages": [
+          "20mg",
+          "81mg",
+          "20mg daily"
+        ],
         "symptoms": [
-          "Edema",
           "Shortness of breath",
-          "Murmur"
+          "Edema"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "lisinopril",
+            "subject": "Coronary Artery Disease",
             "predicate": "managed_by",
-            "object": "Coronary Artery Disease",
+            "object": "lisinopril",
             "confidence": 0.8
           },
           {
-            "subject": "atorvastatin",
+            "subject": "Coronary Artery Disease",
             "predicate": "managed_by",
-            "object": "Coronary Artery Disease",
+            "object": "atorvastatin",
             "confidence": 0.8
           },
           {
-            "subject": "aspirin",
+            "subject": "Coronary Artery Disease",
             "predicate": "managed_by",
-            "object": "Coronary Artery Disease",
+            "object": "aspirin",
             "confidence": 0.8
-          },
-          {
-            "subject": "Edema",
-            "predicate": "has_symptom",
-            "object": "Shortness of breath",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Edema",
-            "predicate": "worsens",
-            "object": "Coronary Artery Disease",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Blood Pressure",
-            "predicate": "measured_by",
-            "object": "160/100 mmHg",
-            "confidence": 0.9
           }
         ],
         "lab_values": {
-          "Blood Pressure": "160/100 mmHg"
+          "BP_systolic": 160,
+          "BP_diastolic": 100
         }
-      }
+      },
+      "dosages": [
+        "500mg",
+        "20mg",
+        "81mg",
+        "20mg daily"
+      ]
     },
     {
       "visit_id": "V3",
@@ -189,18 +174,15 @@
         "BP_systolic": 155,
         "BP_diastolic": 105,
         "eGFR": 60,
-        "LDL": 140,
-        "Blood Pressure": "155/105 mmHg"
+        "LDL": 140
       },
       "medications": [
-        "Metformin 500mg BD",
-        "Lisinopril 30mg OD",
-        "Atorvastatin 20mg OD",
-        "Aspirin 81mg OD",
-        "Furosemide 40mg OD",
+        "metformin bd",
+        "lisinopril od",
+        "atorvastatin od",
+        "aspirin od",
+        "furosemide od",
         "lisinopril",
-        "40mg",
-        "30mg",
         "furosemide"
       ],
       "diagnoses": [
@@ -212,12 +194,11 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Worsening edema",
         "Shortness of breath",
         "Worsening diastolic murmur",
-        "Edema",
-        "Diastolic murmur"
+        "Edema"
       ],
       "extracted": {
         "conditions": [
@@ -226,27 +207,24 @@
         ],
         "medications": [
           "lisinopril",
-          "40mg",
-          "30mg",
           "furosemide"
         ],
-        "symptoms": [
-          "Edema",
-          "Shortness of breath",
-          "Diastolic murmur"
+        "dosages": [
+          "40mg daily",
+          "30mg daily"
         ],
-        "procedures": [],
+        "symptoms": [
+          "Shortness of breath",
+          "Edema"
+        ],
+        "procedures": [
+          "Physical exam"
+        ],
         "relationships": [
           {
-            "subject": "furosemide",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "edema",
-            "confidence": 0.9
-          },
-          {
-            "subject": "lisinopril",
-            "predicate": "managed_by",
-            "object": "hypertension",
+            "object": "lisinopril",
             "confidence": 0.8
           },
           {
@@ -254,30 +232,22 @@
             "predicate": "contraindicated_with",
             "object": "furosemide",
             "confidence": 0.7
-          },
-          {
-            "subject": "furosemide",
-            "predicate": "improves",
-            "object": "edema",
-            "confidence": 0.6
-          },
-          {
-            "subject": "lisinopril",
-            "predicate": "improves",
-            "object": "hypertension",
-            "confidence": 0.5
-          },
-          {
-            "subject": "fluid intake",
-            "predicate": "contraindicated_with",
-            "object": "edema",
-            "confidence": 0.4
           }
         ],
         "lab_values": {
-          "Blood Pressure": "155/105 mmHg"
+          "BP_systolic": 155,
+          "BP_diastolic": 105
         }
-      }
+      },
+      "dosages": [
+        "500mg",
+        "30mg",
+        "20mg",
+        "81mg",
+        "40mg",
+        "40mg daily",
+        "30mg daily"
+      ]
     },
     {
       "visit_id": "V4",
@@ -288,18 +258,16 @@
         "BP_systolic": 165,
         "BP_diastolic": 110,
         "eGFR": 50,
-        "LDL": 130,
-        "Blood Pressure": "165/110 mmHg"
+        "LDL": 130
       },
       "medications": [
-        "Metformin 500mg BD",
-        "Lisinopril 35mg OD",
-        "Atorvastatin 20mg OD",
-        "Aspirin 81mg OD",
-        "Furosemide 80mg OD",
-        "Spironolactone 25mg OD",
-        "25mg",
-        "Spironolactone"
+        "metformin bd",
+        "lisinopril od",
+        "atorvastatin od",
+        "aspirin od",
+        "furosemide od",
+        "spironolactone od",
+        "spironolactone"
       ],
       "diagnoses": [
         "Hypertension",
@@ -310,11 +278,11 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Worsening edema",
         "Shortness of breath",
         "Worsening diastolic murmur",
-        "Worsening S3 heart sound",
+        "Worsening s3 heart sound",
         "Edema"
       ],
       "extracted": {
@@ -322,57 +290,57 @@
           "Heart Failure"
         ],
         "medications": [
-          "25mg",
-          "Spironolactone"
+          "spironolactone"
+        ],
+        "dosages": [
+          "25mg daily"
         ],
         "symptoms": [
-          "Edema",
+          "Fatigue",
           "Shortness of breath",
-          "Fatigue"
+          "Edema"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Spironolactone",
+            "subject": "Heart Failure",
             "predicate": "managed_by",
-            "object": "Heart Failure",
+            "object": "spironolactone",
             "confidence": 0.9
           },
           {
-            "subject": "Spironolactone",
-            "predicate": "contraindicated_with",
-            "object": "Salt Intake",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Spironolactone",
+            "subject": "spironolactone",
             "predicate": "improves",
             "object": "Edema",
             "confidence": 0.7
           },
           {
-            "subject": "Spironolactone",
-            "predicate": "improves",
-            "object": "Shortness of breath",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Spironolactone",
-            "predicate": "improves",
+            "subject": "spironolactone",
+            "predicate": "worsens",
             "object": "Fatigue",
-            "confidence": 0.7
+            "confidence": 0.6
           },
           {
-            "subject": "Salt Intake",
-            "predicate": "contraindicated_with",
-            "object": "Diuretic Use",
+            "subject": "spironolactone",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
             "confidence": 0.6
           }
         ],
         "lab_values": {
-          "Blood Pressure": "165/110 mmHg"
+          "BP_systolic": 165,
+          "BP_diastolic": 110
         }
-      }
+      },
+      "dosages": [
+        "500mg",
+        "35mg",
+        "20mg",
+        "81mg",
+        "80mg",
+        "25mg",
+        "25mg daily"
+      ]
     },
     {
       "visit_id": "V5",
@@ -383,19 +351,17 @@
         "BP_systolic": 170,
         "BP_diastolic": 115,
         "eGFR": 40,
-        "LDL": 140,
-        "Blood Pressure": "170/115 mmHg"
+        "LDL": 140
       },
       "medications": [
-        "Metformin 500mg BD",
-        "Lisinopril 40mg OD",
-        "Atorvastatin 20mg OD",
-        "Aspirin 81mg OD",
-        "Furosemide 120mg OD",
-        "Spironolactone 25mg OD",
-        "Torsemide 40mg OD",
-        "40mg",
-        "Torsemide"
+        "metformin bd",
+        "lisinopril od",
+        "atorvastatin od",
+        "aspirin od",
+        "furosemide od",
+        "spironolactone od",
+        "torsemide od",
+        "torsemide"
       ],
       "diagnoses": [
         "Hypertension",
@@ -407,84 +373,59 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Worsening edema",
         "Shortness of breath",
         "Worsening diastolic murmur",
-        "Worsening S3 heart sound",
+        "Worsening s3 heart sound",
         "Worsening orthopnea",
         "Edema",
         "Orthopnea"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
           "Heart Failure"
         ],
         "medications": [
-          "40mg",
-          "Torsemide"
+          "torsemide"
+        ],
+        "dosages": [
+          "40mg daily"
         ],
         "symptoms": [
-          "Edema",
           "Shortness of breath",
+          "Edema",
           "Orthopnea"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Torsemide",
-            "predicate": "managed_by",
-            "object": "Edema",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Torsemide",
-            "predicate": "managed_by",
-            "object": "Shortness of breath",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Torsemide",
-            "predicate": "contraindicated_with",
-            "object": "Fluid intake",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Torsemide",
+            "subject": "torsemide",
             "predicate": "improves",
             "object": "Edema",
             "confidence": 0.9
           },
           {
-            "subject": "Torsemide",
-            "predicate": "worsens",
-            "object": "Fluid intake",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "measured_by",
-            "object": "Blood Pressure",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Hypertension",
+            "subject": "torsemide",
             "predicate": "worsens",
             "object": "Shortness of breath",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Heart Failure",
-            "predicate": "worsens",
-            "object": "Shortness of breath",
-            "confidence": 0.8
+            "confidence": 0.7
           }
         ],
         "lab_values": {
-          "Blood Pressure": "170/115 mmHg"
+          "BP_systolic": 170,
+          "BP_diastolic": 115
         }
-      }
+      },
+      "dosages": [
+        "500mg",
+        "40mg",
+        "20mg",
+        "81mg",
+        "120mg",
+        "25mg",
+        "40mg daily"
+      ]
     }
   ]
 }

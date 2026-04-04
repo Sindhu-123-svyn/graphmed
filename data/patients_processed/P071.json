@@ -9,14 +9,10 @@
         "HbA1c": 7.2,
         "eGFR": 72,
         "BP_systolic": 140,
-        "BP_diastolic": 90,
-        "Blood Pressure": "140/90",
-        "Weight": 95
+        "BP_diastolic": 90
       },
       "medications": [
-        "Metformin 500mg",
-        "metformin",
-        "500mg"
+        "metformin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -24,108 +20,69 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria"
+        "Frequent urination"
       ],
       "extracted": {
         "conditions": [
-          "Type 2 Diabetes",
-          "Hypertension"
+          "Hypertension",
+          "Type 2 Diabetes"
         ],
         "medications": [
-          "metformin",
+          "metformin"
+        ],
+        "dosages": [
           "500mg"
         ],
         "symptoms": [
-          "Polyuria",
-          "Fatigue"
+          "Fatigue",
+          "Frequent urination"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "Metformin",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
-            "confidence": 0.8
+            "object": "metformin",
+            "confidence": 0.9
           },
           {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Initial",
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Fatigue",
             "confidence": 0.7
           },
           {
-            "subject": "Blood Pressure",
-            "predicate": "measured_by",
-            "object": "Physical Exam",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Weight",
-            "predicate": "measured_by",
-            "object": "Physical Exam",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "contraindicated_with",
-            "object": "None",
-            "confidence": 0.5
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "contraindicated_with",
-            "object": "None",
-            "confidence": 0.5
-          },
-          {
-            "subject": "Metformin",
-            "predicate": "improves",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.4
-          },
-          {
-            "subject": "Metformin",
-            "predicate": "improves",
-            "object": "Hypertension",
-            "confidence": 0.4
-          },
-          {
             "subject": "Type 2 Diabetes",
             "predicate": "worsens",
-            "object": "Polyuria",
-            "confidence": 0.3
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "Fatigue",
-            "confidence": 0.3
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "worsens",
-            "object": "Polyuria",
-            "confidence": 0.2
+            "object": "Frequent urination",
+            "confidence": 0.7
           },
           {
             "subject": "Hypertension",
             "predicate": "worsens",
             "object": "Fatigue",
-            "confidence": 0.2
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Frequent urination",
+            "confidence": 0.7
           }
         ],
         "lab_values": {
-          "HbA1c": 7.2,
-          "Blood Pressure": "140/90",
-          "Weight": 95
+          "HbA1c": 7.2
         }
-      }
+      },
+      "dosages": [
+        "500mg"
+      ]
     },
     {
       "visit_id": "V2",
@@ -138,12 +95,8 @@
         "BP_diastolic": 80
       },
       "medications": [
-        "Metformin 500mg",
-        "Lisinopril 10mg",
-        "lisinopril",
         "metformin",
-        "10mg",
-        "500mg"
+        "lisinopril"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -151,7 +104,7 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Nocturia",
         "Edema"
       ],
@@ -161,7 +114,9 @@
         ],
         "medications": [
           "lisinopril",
-          "metformin",
+          "metformin"
+        ],
+        "dosages": [
           "10mg",
           "500mg"
         ],
@@ -172,64 +127,28 @@
         "procedures": [],
         "relationships": [
           {
-            "subject": "Lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "lisinopril",
             "confidence": 0.9
-          },
-          {
-            "subject": "Metformin",
-            "predicate": "managed_by",
-            "object": "Hypertension",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Lisinopril",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Lisinopril",
-            "predicate": "contraindicated_with",
-            "object": "Nocturia",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Lisinopril",
-            "predicate": "contraindicated_with",
-            "object": "Edema",
-            "confidence": 0.7
           },
           {
             "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "metformin",
+            "confidence": 0.9
+          },
+          {
+            "subject": "lisinopril",
             "predicate": "improves",
-            "object": "BP",
-            "confidence": 0.6
+            "object": "Hypertension",
+            "confidence": 0.9
           },
           {
-            "subject": "Hypertension",
-            "predicate": "worsens",
-            "object": "Nocturia",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "worsens",
-            "object": "Edema",
-            "confidence": 0.6
+            "subject": "metformin",
+            "predicate": "improves",
+            "object": "Hypertension",
+            "confidence": 0.9
           }
         ],
         "lab_values": {
@@ -237,7 +156,11 @@
           "BP_systolic": 130,
           "BP_diastolic": 80
         }
-      }
+      },
+      "dosages": [
+        "500mg",
+        "10mg"
+      ]
     },
     {
       "visit_id": "V3",
@@ -250,38 +173,33 @@
         "BP_diastolic": 75
       },
       "medications": [
-        "Metformin 500mg",
-        "Lisinopril 10mg",
-        "Sitagliptin 100mg",
         "metformin",
         "lisinopril",
-        "100mg",
-        "500mg",
-        "10mg",
         "sitagliptin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
-        "Hypertension",
-        "Diabetes"
+        "Hypertension"
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Nocturia",
         "Edema"
       ],
       "extracted": {
         "conditions": [
-          "Diabetes"
+          "Type 2 Diabetes"
         ],
         "medications": [
           "metformin",
           "lisinopril",
+          "sitagliptin"
+        ],
+        "dosages": [
           "100mg",
           "500mg",
-          "10mg",
-          "sitagliptin"
+          "10mg"
         ],
         "symptoms": [
           "Edema",
@@ -290,39 +208,15 @@
         "procedures": [],
         "relationships": [
           {
-            "subject": "Sitagliptin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "glycemic control",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "Sitagliptin",
+            "subject": "sitagliptin",
             "predicate": "contraindicated_with",
-            "object": "None",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "BP measurement",
-            "confidence": 0.7
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "HbA1c measurement",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Nocturia",
-            "predicate": "improves",
-            "object": "Sitagliptin",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Edema",
-            "predicate": "improves",
-            "object": "Sitagliptin",
+            "object": "lisinopril",
             "confidence": 0.6
           }
         ],
@@ -331,7 +225,12 @@
           "BP_systolic": 125,
           "BP_diastolic": 75
         }
-      }
+      },
+      "dosages": [
+        "500mg",
+        "10mg",
+        "100mg"
+      ]
     },
     {
       "visit_id": "V4",
@@ -344,17 +243,10 @@
         "BP_diastolic": 70
       },
       "medications": [
-        "Metformin 500mg",
-        "Lisinopril 10mg",
-        "Sitagliptin 100mg",
-        "Gabapentin 100mg",
         "metformin",
         "lisinopril",
-        "gabapentin",
-        "500mg",
-        "10mg",
-        "100mg",
-        "sitagliptin"
+        "sitagliptin",
+        "gabapentin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -363,12 +255,11 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Nocturia",
         "Edema",
         "Tingling in hands and feet",
-        "Tingling",
-        "Neuropathy"
+        "Tingling"
       ],
       "extracted": {
         "conditions": [
@@ -378,58 +269,65 @@
           "metformin",
           "lisinopril",
           "gabapentin",
-          "500mg",
-          "10mg",
-          "100mg",
           "sitagliptin"
         ],
+        "dosages": [
+          "500mg",
+          "10mg",
+          "100mg"
+        ],
         "symptoms": [
-          "Tingling",
-          "Neuropathy"
+          "Tingling"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Diabetic Neuropathy",
+            "subject": "Diabetic Neuropathy",
+            "predicate": "managed_by",
+            "object": "metformin",
             "confidence": 0.8
           },
           {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Diabetic Neuropathy",
+            "subject": "Diabetic Neuropathy",
+            "predicate": "managed_by",
+            "object": "lisinopril",
             "confidence": 0.8
           },
           {
-            "subject": "Metformin",
+            "subject": "Diabetic Neuropathy",
             "predicate": "managed_by",
-            "object": "Diabetic Neuropathy",
-            "confidence": 0.7
+            "object": "sitagliptin",
+            "confidence": 0.8
           },
           {
-            "subject": "Lisinopril",
-            "predicate": "managed_by",
-            "object": "Diabetic Neuropathy",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Sitagliptin",
-            "predicate": "managed_by",
-            "object": "Diabetic Neuropathy",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Gabapentin",
-            "predicate": "managed_by",
-            "object": "Neuropathy",
+            "subject": "Diabetic Neuropathy",
+            "predicate": "measured_by",
+            "object": "HbA1c",
             "confidence": 0.6
           },
           {
-            "subject": "Neuropathy",
-            "predicate": "has_symptom",
-            "object": "Tingling",
-            "confidence": 0.9
+            "subject": "Diabetic Neuropathy",
+            "predicate": "measured_by",
+            "object": "BP_systolic",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Diabetic Neuropathy",
+            "predicate": "measured_by",
+            "object": "BP_diastolic",
+            "confidence": 0.6
+          },
+          {
+            "subject": "metformin",
+            "predicate": "contraindicated_with",
+            "object": "sitagliptin",
+            "confidence": 0.5
+          },
+          {
+            "subject": "lisinopril",
+            "predicate": "contraindicated_with",
+            "object": "gabapentin",
+            "confidence": 0.5
           }
         ],
         "lab_values": {
@@ -437,7 +335,12 @@
           "BP_systolic": 120,
           "BP_diastolic": 70
         }
-      }
+      },
+      "dosages": [
+        "500mg",
+        "10mg",
+        "100mg"
+      ]
     }
   ]
 }

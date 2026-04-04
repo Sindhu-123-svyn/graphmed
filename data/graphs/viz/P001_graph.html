@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 700px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#1f2937", "id": "P001", "label": "P001", "shape": "dot", "size": 30, "title": "Type: PATIENT\u003cbr\u003eName: P001\u003cbr\u003eAdded: 2026-04-04T13:45:58.436137\u003cbr\u003eLast confirmed: 2026-04-04T13:45:58.436137\u003cbr\u003eConfidence: 1.00"}, {"color": "#b91c1c", "id": "CONDITION_hypertension", "label": "hypertension", "shape": "dot", "size": 18, "title": "Type: CONDITION\u003cbr\u003eName: hypertension\u003cbr\u003eAdded: 2022-06-15\u003cbr\u003eLast confirmed: 2023-12-20\u003cbr\u003eConfidence: 0.41"}, {"color": "#b91c1c", "id": "CONDITION_hyperlipidemia", "label": "hyperlipidemia", "shape": "dot", "size": 18, "title": "Type: CONDITION\u003cbr\u003eName: hyperlipidemia\u003cbr\u003eAdded: 2022-06-15\u003cbr\u003eLast confirmed: 2022-06-15\u003cbr\u003eConfidence: 0.20"}, {"color": "#0369a1", "id": "MEDICATION_lisinopril", "label": "lisinopril", "shape": "dot", "size": 18, "title": "Type: MEDICATION\u003cbr\u003eName: lisinopril\u003cbr\u003eAdded: 2022-06-15\u003cbr\u003eLast confirmed: 2022-12-20\u003cbr\u003eConfidence: 0.20"}, {"color": "#0369a1", "id": "MEDICATION_atorvastatin", "label": "atorvastatin", "shape": "dot", "size": 18, "title": "Type: MEDICATION\u003cbr\u003eName: atorvastatin\u003cbr\u003eAdded: 2022-06-15\u003cbr\u003eLast confirmed: 2022-06-15\u003cbr\u003eConfidence: 0.20"}, {"color": "#047857", "id": "LAB_VALUE_bp_systolic", "label": "bp_systolic", "shape": "dot", "size": 18, "title": "Type: LAB_VALUE\u003cbr\u003eName: bp_systolic\u003cbr\u003eAdded: 2022-06-15\u003cbr\u003eLast confirmed: 2024-06-15\u003cbr\u003eConfidence: 1.00"}, {"color": "#047857", "id": "LAB_VALUE_bp_diastolic", "label": "bp_diastolic", "shape": "dot", "size": 18, "title": "Type: LAB_VALUE\u003cbr\u003eName: bp_diastolic\u003cbr\u003eAdded: 2022-06-15\u003cbr\u003eLast confirmed: 2024-06-15\u003cbr\u003eConfidence: 1.00"}, {"color": "#a21caf", "id": "SYMPTOM_shortness_of_breath", "label": "shortness of breath", "shape": "dot", "size": 18, "title": "Type: SYMPTOM\u003cbr\u003eName: shortness of breath\u003cbr\u003eAdded: 2022-06-15\u003cbr\u003eLast confirmed: 2024-06-15\u003cbr\u003eConfidence: 0.20"}, {"color": "#a21caf", "id": "SYMPTOM_chest_pain", "label": "chest pain", "shape": "dot", "size": 18, "title": "Type: SYMPTOM\u003cbr\u003eName: chest pain\u003cbr\u003eAdded: 2022-06-15\u003cbr\u003eLast confirmed: 2022-12-20\u003cbr\u003eConfidence: 0.20"}, {"color": "#0369a1", "id": "MEDICATION_metoprolol", "label": "metoprolol", "shape": "dot", "size": 18, "title": "Type: MEDICATION\u003cbr\u003eName: metoprolol\u003cbr\u003eAdded: 2022-12-20\u003cbr\u003eLast confirmed: 2024-06-15\u003cbr\u003eConfidence: 0.69"}, {"color": "#b45309", "id": "PROCEDURE_cardiology_evaluation", "label": "cardiology evaluation", "shape": "dot", "size": 18, "title": "Type: PROCEDURE\u003cbr\u003eName: cardiology evaluation\u003cbr\u003eAdded: 2022-12-20\u003cbr\u003eLast confirmed: 2022-12-20\u003cbr\u003eConfidence: 0.20"}, {"color": "#b91c1c", "id": "CONDITION_renal_failure", "label": "renal failure", "shape": "dot", "size": 18, "title": "Type: CONDITION\u003cbr\u003eName: renal failure\u003cbr\u003eAdded: 2023-06-15\u003cbr\u003eLast confirmed: 2023-06-15\u003cbr\u003eConfidence: 0.20"}, {"color": "#0369a1", "id": "MEDICATION_losartan", "label": "losartan", "shape": "dot", "size": 18, "title": "Type: MEDICATION\u003cbr\u003eName: losartan\u003cbr\u003eAdded: 2023-06-15\u003cbr\u003eLast confirmed: 2023-06-15\u003cbr\u003eConfidence: 0.20"}, {"color": "#047857", "id": "LAB_VALUE_egfr", "label": "egfr", "shape": "dot", "size": 18, "title": "Type: LAB_VALUE\u003cbr\u003eName: egfr\u003cbr\u003eAdded: 2023-06-15\u003cbr\u003eLast confirmed: 2023-12-20\u003cbr\u003eConfidence: 0.70"}, {"color": "#a21caf", "id": "SYMPTOM_renal_function", "label": "renal function", "shape": "dot", "size": 18, "title": "Type: SYMPTOM\u003cbr\u003eName: renal function\u003cbr\u003eAdded: 2023-06-15\u003cbr\u003eLast confirmed: 2023-06-15\u003cbr\u003eConfidence: 0.20"}, {"color": "#0369a1", "id": "MEDICATION_amlodipine", "label": "amlodipine", "shape": "dot", "size": 18, "title": "Type: MEDICATION\u003cbr\u003eName: amlodipine\u003cbr\u003eAdded: 2023-12-20\u003cbr\u003eLast confirmed: 2023-12-20\u003cbr\u003eConfidence: 0.70"}, {"color": "#a21caf", "id": "SYMPTOM_elevated_blood_pressure", "label": "elevated blood pressure", "shape": "dot", "size": 18, "title": "Type: SYMPTOM\u003cbr\u003eName: elevated blood pressure\u003cbr\u003eAdded: 2023-12-20\u003cbr\u003eLast confirmed: 2023-12-20\u003cbr\u003eConfidence: 0.70"}, {"color": "#b45309", "id": "PROCEDURE_nephrology_referral", "label": "nephrology referral", "shape": "dot", "size": 18, "title": "Type: PROCEDURE\u003cbr\u003eName: nephrology referral\u003cbr\u003eAdded: 2023-12-20\u003cbr\u003eLast confirmed: 2023-12-20\u003cbr\u003eConfidence: 0.70"}, {"color": "#b91c1c", "id": "CONDITION_anemia", "label": "anemia", "shape": "dot", "size": 18, "title": "Type: CONDITION\u003cbr\u003eName: anemia\u003cbr\u003eAdded: 2024-06-15\u003cbr\u003eLast confirmed: 2024-06-15\u003cbr\u003eConfidence: 1.00"}, {"color": "#0369a1", "id": "MEDICATION_erythropoietin", "label": "erythropoietin", "shape": "dot", "size": 18, "title": "Type: MEDICATION\u003cbr\u003eName: erythropoietin\u003cbr\u003eAdded: 2024-06-15\u003cbr\u003eLast confirmed: 2024-06-15\u003cbr\u003eConfidence: 1.00"}, {"color": "#a21caf", "id": "SYMPTOM_anemia", "label": "anemia", "shape": "dot", "size": 18, "title": "Type: SYMPTOM\u003cbr\u003eName: anemia\u003cbr\u003eAdded: 2024-06-15\u003cbr\u003eLast confirmed: 2024-06-15\u003cbr\u003eConfidence: 1.00"}, {"color": "#b45309", "id": "PROCEDURE_dialysis", "label": "dialysis", "shape": "dot", "size": 18, "title": "Type: PROCEDURE\u003cbr\u003eName: dialysis\u003cbr\u003eAdded: 2024-06-15\u003cbr\u003eLast confirmed: 2024-06-15\u003cbr\u003eConfidence: 1.00"}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "P001", "label": "has", "title": "Relation: has\u003cbr\u003eDate: 2022-06-15\u003cbr\u003eConfidence: 1.00", "to": "CONDITION_hypertension"}, {"arrows": "to", "from": "P001", "label": "has", "title": "Relation: has\u003cbr\u003eDate: 2022-06-15\u003cbr\u003eConfidence: 1.00", "to": "CONDITION_hyperlipidemia"}, {"arrows": "to", "from": "P001", "label": "has", "title": "Relation: has\u003cbr\u003eDate: 2022-06-15\u003cbr\u003eConfidence: 1.00", "to": "MEDICATION_lisinopril"}, {"arrows": "to", "from": "P001", "label": "has", "title": "Relation: has\u003cbr\u003eDate: 2022-06-15\u003cbr\u003eConfidence: 1.00", "to": "MEDICATION_atorvastatin"}, {"arrows": "to", "from": "P001", "label": "has", "title": "Relation: has\u003cbr\u003eDate: 2022-06-15\u003cbr\u003eConfidence: 1.00", "to": "LAB_VALUE_bp_systolic"}, {"arrows": "to", "from": "P001", "label": "has", "title": "Relation: has\u003cbr\u003eDate: 2022-06-15\u003cbr\u003eConfidence: 1.00", "to": "LAB_VALUE_bp_diastolic"}, {"arrows": "to", "from": "P001", "label": "has", "title": "Relation: has\u003cbr\u003eDate: 2022-06-15\u003cbr\u003eConfidence: 1.00", "to": "SYMPTOM_shortness_of_breath"}, {"arrows": "to", "from": "P001", "label": "has", "title": "Relation: has\u003cbr\u003eDate: 2022-06-15\u003cbr\u003eConfidence: 1.00", "to": "SYMPTOM_chest_pain"}, {"arrows": "to", "from": "P001", "label": "has", "title": "Relation: has\u003cbr\u003eDate: 2022-12-20\u003cbr\u003eConfidence: 1.00", "to": "MEDICATION_metoprolol"}, {"arrows": "to", "from": "P001", "label": "has", "title": "Relation: has\u003cbr\u003eDate: 2022-12-20\u003cbr\u003eConfidence: 1.00", "to": "PROCEDURE_cardiology_evaluation"}, {"arrows": "to", "from": "P001", "label": "has", "title": "Relation: has\u003cbr\u003eDate: 2023-06-15\u003cbr\u003eConfidence: 1.00", "to": "CONDITION_renal_failure"}, {"arrows": "to", "from": "P001", "label": "has", "title": "Relation: has\u003cbr\u003eDate: 2023-06-15\u003cbr\u003eConfidence: 1.00", "to": "MEDICATION_losartan"}, {"arrows": "to", "from": "P001", "label": "has", "title": "Relation: has\u003cbr\u003eDate: 2023-06-15\u003cbr\u003eConfidence: 1.00", "to": "LAB_VALUE_egfr"}, {"arrows": "to", "from": "P001", "label": "has", "title": "Relation: has\u003cbr\u003eDate: 2023-06-15\u003cbr\u003eConfidence: 1.00", "to": "SYMPTOM_renal_function"}, {"arrows": "to", "from": "P001", "label": "has", "title": "Relation: has\u003cbr\u003eDate: 2023-12-20\u003cbr\u003eConfidence: 1.00", "to": "MEDICATION_amlodipine"}, {"arrows": "to", "from": "P001", "label": "has", "title": "Relation: has\u003cbr\u003eDate: 2023-12-20\u003cbr\u003eConfidence: 1.00", "to": "SYMPTOM_elevated_blood_pressure"}, {"arrows": "to", "from": "P001", "label": "has", "title": "Relation: has\u003cbr\u003eDate: 2023-12-20\u003cbr\u003eConfidence: 1.00", "to": "PROCEDURE_nephrology_referral"}, {"arrows": "to", "from": "P001", "label": "has", "title": "Relation: has\u003cbr\u003eDate: 2024-06-15\u003cbr\u003eConfidence: 1.00", "to": "CONDITION_anemia"}, {"arrows": "to", "from": "P001", "label": "has", "title": "Relation: has\u003cbr\u003eDate: 2024-06-15\u003cbr\u003eConfidence: 1.00", "to": "MEDICATION_erythropoietin"}, {"arrows": "to", "from": "P001", "label": "has", "title": "Relation: has\u003cbr\u003eDate: 2024-06-15\u003cbr\u003eConfidence: 1.00", "to": "SYMPTOM_anemia"}, {"arrows": "to", "from": "P001", "label": "has", "title": "Relation: has\u003cbr\u003eDate: 2024-06-15\u003cbr\u003eConfidence: 1.00", "to": "PROCEDURE_dialysis"}, {"arrows": "to", "from": "CONDITION_hypertension", "label": "has_symptom", "title": "Relation: has_symptom\u003cbr\u003eDate: 2022-06-15\u003cbr\u003eConfidence: 0.70", "to": "SYMPTOM_shortness_of_breath"}, {"arrows": "to", "from": "CONDITION_hypertension", "label": "has_symptom", "title": "Relation: has_symptom\u003cbr\u003eDate: 2022-06-15\u003cbr\u003eConfidence: 0.70", "to": "SYMPTOM_chest_pain"}, {"arrows": "to", "from": "CONDITION_hypertension", "label": "managed_by", "title": "Relation: managed_by\u003cbr\u003eDate: 2023-12-20\u003cbr\u003eConfidence: 1.00", "to": "MEDICATION_amlodipine"}, {"arrows": "to", "from": "CONDITION_hypertension", "label": "has_symptom", "title": "Relation: has_symptom\u003cbr\u003eDate: 2023-12-20\u003cbr\u003eConfidence: 1.00", "to": "SYMPTOM_elevated_blood_pressure"}, {"arrows": "to", "from": "CONDITION_hypertension", "label": "measured_by", "title": "Relation: measured_by\u003cbr\u003eDate: 2023-12-20\u003cbr\u003eConfidence: 1.00", "to": "LAB_VALUE_bp_systolic"}, {"arrows": "to", "from": "CONDITION_hypertension", "label": "measured_by", "title": "Relation: measured_by\u003cbr\u003eDate: 2023-12-20\u003cbr\u003eConfidence: 1.00", "to": "LAB_VALUE_bp_diastolic"}, {"arrows": "to", "from": "CONDITION_hypertension", "label": "measured_by", "title": "Relation: measured_by\u003cbr\u003eDate: 2023-12-20\u003cbr\u003eConfidence: 1.00", "to": "LAB_VALUE_egfr"}, {"arrows": "to", "from": "CONDITION_hyperlipidemia", "label": "has_symptom", "title": "Relation: has_symptom\u003cbr\u003eDate: 2022-06-15\u003cbr\u003eConfidence: 0.60", "to": "SYMPTOM_shortness_of_breath"}, {"arrows": "to", "from": "CONDITION_hyperlipidemia", "label": "has_symptom", "title": "Relation: has_symptom\u003cbr\u003eDate: 2022-06-15\u003cbr\u003eConfidence: 0.60", "to": "SYMPTOM_chest_pain"}, {"arrows": "to", "from": "MEDICATION_metoprolol", "label": "contraindicated_with", "title": "Relation: contraindicated_with\u003cbr\u003eDate: 2022-12-20\u003cbr\u003eConfidence: 0.60", "to": "MEDICATION_lisinopril"}, {"arrows": "to", "from": "CONDITION_renal_failure", "label": "managed_by", "title": "Relation: managed_by\u003cbr\u003eDate: 2023-06-15\u003cbr\u003eConfidence: 1.00", "to": "MEDICATION_losartan"}, {"arrows": "to", "from": "CONDITION_renal_failure", "label": "managed_by", "title": "Relation: managed_by\u003cbr\u003eDate: 2023-06-15\u003cbr\u003eConfidence: 1.00", "to": "MEDICATION_metoprolol"}, {"arrows": "to", "from": "CONDITION_renal_failure", "label": "has_symptom", "title": "Relation: has_symptom\u003cbr\u003eDate: 2023-06-15\u003cbr\u003eConfidence: 1.00", "to": "SYMPTOM_renal_function"}, {"arrows": "to", "from": "CONDITION_renal_failure", "label": "measured_by", "title": "Relation: measured_by\u003cbr\u003eDate: 2023-06-15\u003cbr\u003eConfidence: 1.00", "to": "LAB_VALUE_egfr"}, {"arrows": "to", "from": "CONDITION_renal_failure", "label": "measured_by", "title": "Relation: measured_by\u003cbr\u003eDate: 2023-06-15\u003cbr\u003eConfidence: 1.00", "to": "LAB_VALUE_bp_systolic"}, {"arrows": "to", "from": "CONDITION_renal_failure", "label": "measured_by", "title": "Relation: measured_by\u003cbr\u003eDate: 2023-06-15\u003cbr\u003eConfidence: 1.00", "to": "LAB_VALUE_bp_diastolic"}, {"arrows": "to", "from": "CONDITION_anemia", "label": "managed_by", "title": "Relation: managed_by\u003cbr\u003eDate: 2024-06-15\u003cbr\u003eConfidence: 1.00", "to": "MEDICATION_metoprolol"}, {"arrows": "to", "from": "CONDITION_anemia", "label": "managed_by", "title": "Relation: managed_by\u003cbr\u003eDate: 2024-06-15\u003cbr\u003eConfidence: 1.00", "to": "MEDICATION_erythropoietin"}, {"arrows": "to", "from": "CONDITION_anemia", "label": "has_symptom", "title": "Relation: has_symptom\u003cbr\u003eDate: 2024-06-15\u003cbr\u003eConfidence: 1.00", "to": "SYMPTOM_shortness_of_breath"}, {"arrows": "to", "from": "CONDITION_anemia", "label": "has_symptom", "title": "Relation: has_symptom\u003cbr\u003eDate: 2024-06-15\u003cbr\u003eConfidence: 1.00", "to": "SYMPTOM_anemia"}, {"arrows": "to", "from": "CONDITION_anemia", "label": "measured_by", "title": "Relation: measured_by\u003cbr\u003eDate: 2024-06-15\u003cbr\u003eConfidence: 1.00", "to": "LAB_VALUE_bp_systolic"}, {"arrows": "to", "from": "CONDITION_anemia", "label": "measured_by", "title": "Relation: measured_by\u003cbr\u003eDate: 2024-06-15\u003cbr\u003eConfidence: 1.00", "to": "LAB_VALUE_bp_diastolic"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

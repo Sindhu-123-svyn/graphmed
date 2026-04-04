@@ -13,12 +13,8 @@
         "LDL": 160
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg daily",
         "metformin",
-        "lisinopril",
-        "500mg",
-        "10mg"
+        "lisinopril"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -31,68 +27,46 @@
       ],
       "extracted": {
         "conditions": [
-          "Type 2 Diabetes",
-          "Hypertension"
+          "Hypertension",
+          "Type 2 Diabetes"
         ],
         "medications": [
           "metformin",
-          "lisinopril",
-          "500mg",
-          "10mg"
+          "lisinopril"
+        ],
+        "dosages": [
+          "500mg BID",
+          "10mg daily"
         ],
         "symptoms": [
-          "Polydipsia",
-          "Fatigue"
+          "Fatigue",
+          "Polydipsia"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Metformin",
-            "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Lisinopril",
-            "predicate": "managed_by",
-            "object": "Hypertension",
-            "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Blood work",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Blood work",
-            "confidence": 0.8
-          },
-          {
             "subject": "Type 2 Diabetes",
-            "predicate": "contraindicated_with",
-            "object": "Polydipsia",
-            "confidence": 0.7
+            "predicate": "managed_by",
+            "object": "metformin",
+            "confidence": 0.9
           },
           {
             "subject": "Hypertension",
-            "predicate": "contraindicated_with",
+            "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
             "object": "Fatigue",
             "confidence": 0.7
           },
           {
-            "subject": "Metformin",
-            "predicate": "improves",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Lisinopril",
-            "predicate": "improves",
-            "object": "Hypertension",
-            "confidence": 0.6
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Polydipsia",
+            "confidence": 0.7
           }
         ],
         "lab_values": {
@@ -100,7 +74,11 @@
           "BP_systolic": 148,
           "BP_diastolic": 92
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg daily"
+      ]
     },
     {
       "visit_id": "V2",
@@ -114,11 +92,9 @@
         "LDL": 140
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg daily",
-        "Simvastatin 20mg daily",
-        "simvastatin",
-        "20mg"
+        "metformin",
+        "lisinopril",
+        "simvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -135,44 +111,34 @@
           "Hyperlipidemia"
         ],
         "medications": [
-          "simvastatin",
-          "20mg"
+          "simvastatin"
+        ],
+        "dosages": [
+          "20mg daily"
         ],
         "symptoms": [
-          "Shortness of breath",
-          "Fatigue"
+          "Fatigue",
+          "Shortness of breath"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Simvastatin",
+            "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Hyperlipidemia",
+            "object": "simvastatin",
             "confidence": 0.9
           },
           {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Blood work",
+            "subject": "Hyperlipidemia",
+            "predicate": "worsens",
+            "object": "Fatigue",
             "confidence": 0.8
           },
           {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Blood work",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
+            "subject": "Hyperlipidemia",
+            "predicate": "worsens",
             "object": "Shortness of breath",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Simvastatin",
-            "predicate": "contraindicated_with",
-            "object": "BP",
-            "confidence": 0.6
+            "confidence": 0.8
           }
         ],
         "lab_values": {
@@ -180,7 +146,12 @@
           "BP_systolic": 150,
           "BP_diastolic": 94
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg daily",
+        "20mg daily"
+      ]
     },
     {
       "visit_id": "V3",
@@ -194,12 +165,10 @@
         "LDL": 130
       },
       "medications": [
-        "Metformin 1000mg BID",
-        "Lisinopril 20mg daily",
-        "Simvastatin 20mg daily",
-        "Furosemide 40mg daily",
-        "40mg",
-        "Furosemide"
+        "metformin",
+        "lisinopril",
+        "simvastatin",
+        "furosemide"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -218,8 +187,10 @@
           "Chronic Kidney Disease"
         ],
         "medications": [
-          "40mg",
-          "Furosemide"
+          "furosemide"
+        ],
+        "dosages": [
+          "40mg daily"
         ],
         "symptoms": [
           "Edema"
@@ -227,43 +198,29 @@
         "procedures": [],
         "relationships": [
           {
-            "subject": "Furosemide",
+            "subject": "Chronic Kidney Disease",
             "predicate": "managed_by",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Blood work",
+            "object": "furosemide",
             "confidence": 0.9
           },
           {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Blood work",
-            "confidence": 0.9
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "Blood work",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Edema",
-            "predicate": "worsens",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.7
+            "subject": "furosemide",
+            "predicate": "improves",
+            "object": "Edema",
+            "confidence": 0.6
           }
         ],
         "lab_values": {
           "HbA1c": 7.2,
           "BP_systolic": 140,
-          "BP_diastolic": 90,
-          "eGFR": "decreased"
+          "BP_diastolic": 90
         }
-      }
+      },
+      "dosages": [
+        "1000mg BID",
+        "20mg daily",
+        "40mg daily"
+      ]
     },
     {
       "visit_id": "V4",
@@ -277,16 +234,12 @@
         "LDL": 120
       },
       "medications": [
-        "Metformin 1000mg BID",
-        "Lisinopril 20mg daily",
-        "Simvastatin 40mg daily",
-        "Furosemide 40mg daily",
-        "Aspirin 81mg daily",
-        "Clopidogrel 75mg daily",
-        "clopidogrel",
-        "81mg",
-        "75mg",
-        "Aspirin"
+        "metformin",
+        "lisinopril",
+        "simvastatin",
+        "furosemide",
+        "aspirin",
+        "clopidogrel"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -307,10 +260,12 @@
           "Coronary Artery Disease"
         ],
         "medications": [
-          "clopidogrel",
-          "81mg",
-          "75mg",
-          "Aspirin"
+          "aspirin",
+          "clopidogrel"
+        ],
+        "dosages": [
+          "81mg daily",
+          "75mg daily"
         ],
         "symptoms": [
           "Chest pain"
@@ -320,32 +275,20 @@
           {
             "subject": "Coronary Artery Disease",
             "predicate": "managed_by",
-            "object": "Aspirin",
-            "confidence": 0.9
+            "object": "aspirin",
+            "confidence": 0.8
           },
           {
             "subject": "Coronary Artery Disease",
             "predicate": "managed_by",
-            "object": "Clopidogrel",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Chest pain",
-            "predicate": "has_symptom",
-            "object": "Coronary Artery Disease",
+            "object": "clopidogrel",
             "confidence": 0.8
           },
           {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Blood work",
-            "confidence": 0.7
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Blood work",
-            "confidence": 0.7
+            "subject": "aspirin",
+            "predicate": "contraindicated_with",
+            "object": "clopidogrel",
+            "confidence": 0.6
           }
         ],
         "lab_values": {
@@ -353,7 +296,14 @@
           "BP_systolic": 138,
           "BP_diastolic": 88
         }
-      }
+      },
+      "dosages": [
+        "1000mg BID",
+        "20mg daily",
+        "40mg daily",
+        "81mg daily",
+        "75mg daily"
+      ]
     }
   ]
 }

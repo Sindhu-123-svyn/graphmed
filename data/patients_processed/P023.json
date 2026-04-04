@@ -13,11 +13,11 @@
         "LDL": 150
       },
       "medications": [
-        "Atorvastatin 20mg",
-        "Lisinopril 20mg",
-        "Metformin 1000mg",
+        "atorvastatin",
+        "lisinopril",
+        "metformin",
         "statin",
-        "ACE inhibitor"
+        "ace inhibitor"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -26,79 +26,72 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Shortness of breath",
-        "Orthostatic"
+        "Shortness of breath"
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [
           "statin",
-          "ACE inhibitor"
+          "ace inhibitor"
         ],
+        "dosages": [],
         "symptoms": [
-          "Shortness of breath",
           "Fatigue",
-          "Orthostatic"
+          "Shortness of breath"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "statin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.9
+            "object": "statin",
+            "confidence": 0.8
           },
           {
-            "subject": "ACE inhibitor",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
-            "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
+            "object": "ace inhibitor",
             "confidence": 0.8
           },
           {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.8
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Shortness of breath",
+            "confidence": 0.7
           },
           {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Shortness of breath",
+            "subject": "Type 2 Diabetes",
             "predicate": "has_symptom",
             "object": "Fatigue",
             "confidence": 0.7
           },
           {
             "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "Shortness of breath",
-            "confidence": 0.6
+            "predicate": "measured_by",
+            "object": "HbA1c",
+            "confidence": 0.9
           },
           {
-            "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "Fatigue",
-            "confidence": 0.6
+            "subject": "Hypertension",
+            "predicate": "measured_by",
+            "object": "BP_systolic",
+            "confidence": 0.9
           }
         ],
         "lab_values": {
-          "HbA1c": 7.5
+          "HbA1c": 7.5,
+          "BP_systolic": 140,
+          "BP_diastolic": 90
         }
-      }
+      },
+      "dosages": [
+        "20mg",
+        "1000mg"
+      ]
     },
     {
       "visit_id": "V2",
@@ -109,22 +102,20 @@
         "BP_systolic": 145,
         "BP_diastolic": 95,
         "eGFR": 70,
-        "LDL": 160,
-        "Blood Pressure": "145/95 mmHg"
+        "LDL": 160
       },
       "medications": [
-        "Atorvastatin 40mg",
-        "Lisinopril 30mg",
-        "Metformin 2000mg",
-        "Furosemide 20mg",
-        "Diuretic"
+        "atorvastatin",
+        "lisinopril",
+        "metformin",
+        "furosemide",
+        "diuretic"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
-        "Chronic Kidney Disease",
-        "Diabetes"
+        "Chronic Kidney Disease"
       ],
       "symptoms": [
         "Fatigue",
@@ -134,55 +125,45 @@
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Diabetes"
+          "Type 2 Diabetes",
+          "Hypertension"
         ],
         "medications": [
-          "Diuretic"
+          "diuretic"
         ],
+        "dosages": [],
         "symptoms": [
-          "Edema",
+          "Fatigue",
           "Shortness of breath",
-          "Fatigue"
+          "Edema"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Diuretic",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Physician",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Diabetes",
-            "predicate": "worsens",
-            "object": "Edema",
+            "object": "diuretic",
             "confidence": 0.8
           },
           {
             "subject": "Hypertension",
-            "predicate": "worsens",
-            "object": "Shortness of breath",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Diuretic",
-            "predicate": "improves",
-            "object": "Edema",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Diuretic",
-            "predicate": "improves",
-            "object": "Shortness of breath",
-            "confidence": 0.5
+            "predicate": "managed_by",
+            "object": "diuretic",
+            "confidence": 0.8
           }
         ],
         "lab_values": {
           "HbA1c": 8.2,
-          "Blood Pressure": "145/95 mmHg"
+          "BP_systolic": 145,
+          "BP_diastolic": 95
         }
-      }
+      },
+      "dosages": [
+        "40mg",
+        "30mg",
+        "2000mg",
+        "20mg"
+      ]
     },
     {
       "visit_id": "V3",
@@ -193,80 +174,55 @@
         "BP_systolic": 148,
         "BP_diastolic": 100,
         "eGFR": 60,
-        "LDL": 170,
-        "blood pressure": "148/100 mmHg"
+        "LDL": 170
       },
       "medications": [
-        "Atorvastatin 80mg",
-        "Lisinopril 40mg",
-        "Metformin 3000mg",
-        "Furosemide 40mg",
-        "Empagliflozin 25mg",
-        "SGLT2 inhibitor"
+        "atorvastatin",
+        "lisinopril",
+        "metformin",
+        "furosemide",
+        "empagliflozin",
+        "sglt2 inhibitor"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
         "Chronic Kidney Disease",
-        "Coronary Artery Disease",
-        "diabetes"
+        "Coronary Artery Disease"
       ],
       "symptoms": [
         "Fatigue",
         "Shortness of breath",
         "Lower extremity edema",
-        "stable symptoms"
+        "Stable"
       ],
       "extracted": {
         "conditions": [
-          "diabetes"
+          "Type 2 Diabetes"
         ],
         "medications": [
-          "SGLT2 inhibitor"
+          "sglt2 inhibitor"
         ],
+        "dosages": [],
         "symptoms": [
-          "stable symptoms"
+          "Stable"
         ],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "SGLT2 inhibitor",
-            "predicate": "managed_by",
-            "object": "doctor",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "lab test",
-            "confidence": 0.9
-          },
-          {
-            "subject": "blood pressure",
-            "predicate": "measured_by",
-            "object": "lab test",
-            "confidence": 0.9
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "lab test",
-            "confidence": 0.9
-          },
-          {
-            "subject": "stable symptoms",
-            "predicate": "has_symptom",
-            "object": "diabetes",
-            "confidence": 0.7
-          }
-        ],
+        "relationships": [],
         "lab_values": {
           "HbA1c": 9.0,
-          "blood pressure": "148/100 mmHg",
+          "BP_systolic": 148,
+          "BP_diastolic": 100,
           "eGFR": 60
         }
-      }
+      },
+      "dosages": [
+        "80mg",
+        "40mg",
+        "3000mg",
+        "25mg"
+      ]
     },
     {
       "visit_id": "V4",
@@ -277,17 +233,16 @@
         "BP_systolic": 152,
         "BP_diastolic": 105,
         "eGFR": 50,
-        "LDL": 180,
-        "Blood pressure": "152/105 mmHg"
+        "LDL": 180
       },
       "medications": [
-        "Atorvastatin 120mg",
-        "Lisinopril 60mg",
-        "Metformin 4000mg",
-        "Furosemide 60mg",
-        "Empagliflozin 50mg",
-        "Metoprolol 50mg",
-        "Beta blocker"
+        "atorvastatin",
+        "lisinopril",
+        "metformin",
+        "furosemide",
+        "empagliflozin",
+        "metoprolol",
+        "beta blocker"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -303,55 +258,30 @@
         "Chest pain"
       ],
       "extracted": {
-        "conditions": [
-          "Hypertension"
-        ],
+        "conditions": [],
         "medications": [
-          "Beta blocker"
+          "beta blocker"
         ],
+        "dosages": [],
         "symptoms": [
-          "Chest pain",
+          "Fatigue",
           "Shortness of breath",
-          "Fatigue"
+          "Chest pain"
         ],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "Beta blocker",
-            "predicate": "managed_by",
-            "object": "Hypertension",
-            "confidence": 0.9
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "Blood pressure",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "worsens",
-            "object": "Hypertension",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Shortness of breath",
-            "predicate": "worsens",
-            "object": "Hypertension",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Chest pain",
-            "predicate": "has_symptom",
-            "object": "Hypertension",
-            "confidence": 0.6
-          }
-        ],
+        "relationships": [],
         "lab_values": {
-          "eGFR": 50,
-          "Blood pressure": "152/105 mmHg"
+          "BP_systolic": 152,
+          "BP_diastolic": 105,
+          "eGFR": 50
         }
-      }
+      },
+      "dosages": [
+        "120mg",
+        "60mg",
+        "4000mg",
+        "50mg"
+      ]
     },
     {
       "visit_id": "V5",
@@ -362,17 +292,16 @@
         "BP_systolic": 155,
         "BP_diastolic": 110,
         "eGFR": 45,
-        "LDL": 190,
-        "Blood pressure": "155/110 mmHg"
+        "LDL": 190
       },
       "medications": [
-        "Atorvastatin 160mg",
-        "Lisinopril 80mg",
-        "Metformin 5000mg",
-        "Furosemide 80mg",
-        "Empagliflozin 100mg",
-        "Metoprolol 100mg",
-        "Oxygen therapy"
+        "atorvastatin",
+        "lisinopril",
+        "metformin",
+        "furosemide",
+        "empagliflozin",
+        "metoprolol",
+        "oxygen therapy"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -389,58 +318,32 @@
         "Dyspnea at rest"
       ],
       "extracted": {
-        "conditions": [
-          "Hypertension",
-          "Chronic Kidney Disease"
-        ],
+        "conditions": [],
         "medications": [
-          "Oxygen therapy"
+          "oxygen therapy"
         ],
+        "dosages": [],
         "symptoms": [
-          "Shortness of breath",
           "Fatigue",
+          "Shortness of breath",
           "Dyspnea at rest"
         ],
         "procedures": [
           "Oxygen therapy"
         ],
-        "relationships": [
-          {
-            "subject": "Oxygen therapy",
-            "predicate": "managed_by",
-            "object": "Physician",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Oxygen therapy",
-            "predicate": "measured_by",
-            "object": "Physician",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Dyspnea at rest",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Shortness of breath",
-            "predicate": "has_symptom",
-            "object": "Dyspnea at rest",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "worsens",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.6
-          }
-        ],
+        "relationships": [],
         "lab_values": {
-          "eGFR": 45,
-          "Blood pressure": "155/110 mmHg"
+          "BP_systolic": 155,
+          "BP_diastolic": 110,
+          "eGFR": 45
         }
-      }
+      },
+      "dosages": [
+        "160mg",
+        "80mg",
+        "5000mg",
+        "100mg"
+      ]
     }
   ]
 }

@@ -13,10 +13,8 @@
         "LDL": 145
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Atorvastatin 20mg daily",
         "metformin",
-        "145 mg",
+        "atorvastatin",
         "statin"
       ],
       "diagnoses": [
@@ -30,63 +28,35 @@
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [
           "metformin",
-          "145 mg",
           "statin"
+        ],
+        "dosages": [
+          "145 mg"
         ],
         "symptoms": [
           "Fatigue",
           "Decreased exercise tolerance"
         ],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "metformin",
-            "predicate": "adjusted_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.9
-          },
-          {
-            "subject": "statin",
-            "predicate": "prescribed_for",
-            "object": "Hyperlipidemia",
-            "confidence": 0.8
-          },
-          {
-            "subject": "metformin",
-            "predicate": "contraindicated_with",
-            "object": "statin",
-            "confidence": 0.7
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.6
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Decreased exercise tolerance",
-            "confidence": 0.5
-          }
-        ],
+        "relationships": [],
         "lab_values": {
           "HbA1c": 7.8,
-          "LDL": 145
+          "BP_systolic": "140 mmHg",
+          "BP_diastolic": "90 mmHg",
+          "LDL": "145 mg/dL"
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "20mg daily",
+        "145 mg"
+      ]
     },
     {
       "visit_id": "V2",
@@ -100,10 +70,10 @@
         "LDL": 160
       },
       "medications": [
-        "Metformin 1000mg BID",
-        "Atorvastatin 40mg daily",
-        "Lisinopril 10mg daily",
-        "160 mg"
+        "metformin",
+        "atorvastatin",
+        "lisinopril",
+        "ace inhibitor"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -117,18 +87,35 @@
         "Decreased exercise tolerance"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Hypertension",
+          "Type 2 Diabetes"
+        ],
         "medications": [
+          "ace inhibitor"
+        ],
+        "dosages": [
           "160 mg"
         ],
         "symptoms": [
-          "Shortness of breath",
-          "Fatigue"
+          "Fatigue",
+          "Shortness of breath"
         ],
         "procedures": [],
         "relationships": [],
-        "lab_values": {}
-      }
+        "lab_values": {
+          "HbA1c": 9.2,
+          "BP_systolic": "155 mmHg",
+          "BP_diastolic": "95 mmHg",
+          "LDL": "160 mg/dL"
+        }
+      },
+      "dosages": [
+        "1000mg BID",
+        "40mg daily",
+        "10mg daily",
+        "160 mg"
+      ]
     },
     {
       "visit_id": "V3",
@@ -142,17 +129,17 @@
         "LDL": 120
       },
       "medications": [
-        "Metformin 1000mg BID",
-        "Atorvastatin 40mg daily",
-        "Lisinopril 20mg daily",
-        "120 mg"
+        "metformin",
+        "atorvastatin",
+        "lisinopril"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
         "Coronary Artery Disease",
-        "Chronic Kidney Disease"
+        "Chronic Kidney Disease",
+        "Kidney Disease"
       ],
       "symptoms": [
         "Decreased fatigue",
@@ -161,18 +148,41 @@
         "Fatigue"
       ],
       "extracted": {
-        "conditions": [],
-        "medications": [
+        "conditions": [
+          "Type 2 Diabetes",
+          "Kidney Disease"
+        ],
+        "medications": [],
+        "dosages": [
           "120 mg"
         ],
         "symptoms": [
-          "Shortness of breath",
-          "Fatigue"
+          "Fatigue",
+          "Shortness of breath"
         ],
         "procedures": [],
-        "relationships": [],
-        "lab_values": {}
-      }
+        "relationships": [
+          {
+            "subject": "eGFR",
+            "predicate": "worsens",
+            "object": "Kidney Disease",
+            "confidence": 0.7
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.5,
+          "BP_systolic": 130,
+          "BP_diastolic": 80,
+          "eGFR": 50,
+          "LDL": "120 mg/dL"
+        }
+      },
+      "dosages": [
+        "1000mg BID",
+        "40mg daily",
+        "20mg daily",
+        "120 mg"
+      ]
     }
   ]
 }

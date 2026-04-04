@@ -13,12 +13,8 @@
         "LDL": 130
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg daily",
         "metformin",
-        "lisinopril",
-        "500mg",
-        "10mg"
+        "lisinopril"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -32,22 +28,37 @@
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [
           "metformin",
-          "lisinopril",
-          "500mg",
-          "10mg"
+          "lisinopril"
+        ],
+        "dosages": [
+          "500mg BID",
+          "10mg daily"
         ],
         "symptoms": [
-          "Polydipsia",
-          "Fatigue"
+          "Fatigue",
+          "Polydipsia"
         ],
         "procedures": [],
-        "relationships": [],
+        "relationships": [
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "metformin",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.8
+          }
+        ],
         "lab_values": {
           "HbA1c": 7.2,
           "BP_systolic": 140,
@@ -55,7 +66,11 @@
           "eGFR": 72.0,
           "LDL": 130.0
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg daily"
+      ]
     },
     {
       "visit_id": "V2",
@@ -69,11 +84,9 @@
         "LDL": 145
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg daily",
-        "Atorvastatin 40mg daily",
-        "atorvastatin",
-        "40mg"
+        "metformin",
+        "lisinopril",
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -93,46 +106,17 @@
           "Hyperlipidemia"
         ],
         "medications": [
-          "atorvastatin",
-          "40mg"
+          "atorvastatin"
+        ],
+        "dosages": [
+          "40mg daily"
         ],
         "symptoms": [
-          "Edema",
-          "Shortness of breath"
+          "Shortness of breath",
+          "Edema"
         ],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "Atorvastatin",
-            "predicate": "managed_by",
-            "object": "40mg",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "worsens",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "LDL",
-            "predicate": "worsens",
-            "object": "Hyperlipidemia",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Lab results",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Atorvastatin",
-            "predicate": "improves",
-            "object": "Hyperlipidemia",
-            "confidence": 0.6
-          }
-        ],
+        "relationships": [],
         "lab_values": {
           "HbA1c": 8.1,
           "BP_systolic": 160,
@@ -140,7 +124,12 @@
           "eGFR": 68.0,
           "LDL": 145.0
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg daily",
+        "40mg daily"
+      ]
     },
     {
       "visit_id": "V3",
@@ -154,12 +143,10 @@
         "LDL": 155
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg daily",
-        "Atorvastatin 40mg daily",
-        "Furosemide 40mg daily",
-        "40mg",
-        "Furosemide 40mg"
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "furosemide"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -180,52 +167,17 @@
           "Chronic Kidney Disease"
         ],
         "medications": [
-          "40mg",
-          "Furosemide 40mg"
+          "furosemide"
+        ],
+        "dosages": [
+          "40mg daily"
         ],
         "symptoms": [
           "Edema",
-          "headaches"
+          "Headaches"
         ],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "Furosemide",
-            "predicate": "managed_by",
-            "object": "edema",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Chronic Kidney Disease",
-            "predicate": "worsens",
-            "object": "BP_systolic",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Chronic Kidney Disease",
-            "predicate": "worsens",
-            "object": "BP_diastolic",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Chronic Kidney Disease",
-            "predicate": "worsens",
-            "object": "LDL",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Chronic Kidney Disease",
-            "predicate": "worsens",
-            "object": "eGFR",
-            "confidence": 0.8
-          },
-          {
-            "subject": "headaches",
-            "predicate": "has_symptom",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.7
-          }
-        ],
+        "relationships": [],
         "lab_values": {
           "HbA1c": 8.5,
           "BP_systolic": 165,
@@ -233,7 +185,12 @@
           "eGFR": 60.0,
           "LDL": 155.0
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg daily",
+        "40mg daily"
+      ]
     },
     {
       "visit_id": "V4",
@@ -247,13 +204,11 @@
         "LDL": 160
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg daily",
-        "Atorvastatin 40mg daily",
-        "Furosemide 40mg daily",
-        "Enalapril 5mg daily",
-        "5mg",
-        "Enalapril 5mg"
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "furosemide",
+        "enalapril"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -276,8 +231,10 @@
           "Chronic Kidney Disease"
         ],
         "medications": [
-          "5mg",
-          "Enalapril 5mg"
+          "enalapril"
+        ],
+        "dosages": [
+          "5mg daily"
         ],
         "symptoms": [
           "Dizziness",
@@ -286,46 +243,10 @@
         "procedures": [],
         "relationships": [
           {
-            "subject": "Enalapril 5mg",
-            "predicate": "managed_by",
-            "object": "kidney protection",
-            "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c 8.8",
-            "predicate": "measured_by",
-            "object": "lab results",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP 170/110",
-            "predicate": "measured_by",
-            "object": "lab results",
-            "confidence": 0.8
-          },
-          {
-            "subject": "eGFR 55",
-            "predicate": "measured_by",
-            "object": "lab results",
-            "confidence": 0.8
-          },
-          {
-            "subject": "LDL 160",
-            "predicate": "measured_by",
-            "object": "lab results",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Dizziness",
-            "predicate": "has_symptom",
-            "object": "Palpitations",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Chronic Kidney Disease",
+            "subject": "eGFR",
             "predicate": "worsens",
-            "object": "eGFR 55",
-            "confidence": 0.6
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.8
           }
         ],
         "lab_values": {
@@ -335,7 +256,13 @@
           "eGFR": 55.0,
           "LDL": 160.0
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg daily",
+        "40mg daily",
+        "5mg daily"
+      ]
     },
     {
       "visit_id": "V5",
@@ -349,13 +276,13 @@
         "LDL": 165
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg daily",
-        "Atorvastatin 40mg daily",
-        "Furosemide 40mg daily",
-        "Enalapril 5mg daily",
-        "Hemodialysis 3 times a week",
-        "Hemodialysis"
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "furosemide",
+        "enalapril",
+        "hemodialysis 3 times a week",
+        "hemodialysis"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -379,46 +306,19 @@
           "End-Stage Renal Disease"
         ],
         "medications": [
-          "Hemodialysis"
+          "hemodialysis"
+        ],
+        "dosages": [
+          "3 times a week"
         ],
         "symptoms": [],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Hemodialysis",
-            "predicate": "managed_by",
-            "object": "End-Stage Renal Disease",
-            "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Lab results",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Lab results",
-            "confidence": 0.8
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "Lab results",
-            "confidence": 0.8
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "Lab results",
-            "confidence": 0.8
-          },
-          {
             "subject": "End-Stage Renal Disease",
-            "predicate": "worsens",
-            "object": "kidney function",
-            "confidence": 0.7
+            "predicate": "managed_by",
+            "object": "hemodialysis",
+            "confidence": 0.9
           }
         ],
         "lab_values": {
@@ -428,7 +328,14 @@
           "eGFR": 45.0,
           "LDL": 165.0
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg daily",
+        "40mg daily",
+        "5mg daily",
+        "3 times a week"
+      ]
     }
   ]
 }

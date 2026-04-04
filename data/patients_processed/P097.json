@@ -13,9 +13,9 @@
         "LDL": 180
       },
       "medications": [
-        "Atorvastatin 20mg",
-        "Lisinopril 10mg",
-        "Statin"
+        "atorvastatin",
+        "lisinopril",
+        "statin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -24,65 +24,47 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
-        "new onset of hypertension",
-        "new onset of hyperlipidemia"
+        "Frequent urination",
+        "Hypertension",
+        "Hyperlipidemia"
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hypertension",
+          "Hyperlipidemia"
         ],
         "medications": [
-          "Statin"
+          "statin"
         ],
+        "dosages": [],
         "symptoms": [
-          "new onset of hypertension",
-          "new onset of hyperlipidemia"
+          "Hypertension",
+          "Hyperlipidemia"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Statin",
-            "predicate": "prescribed_for",
-            "object": "Hyperlipidemia",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Statin",
-            "predicate": "prescribed_for",
-            "object": "Hypertension",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Blood work",
-            "confidence": 0.8
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "Blood work",
-            "confidence": 0.8
-          },
-          {
             "subject": "Hypertension",
-            "predicate": "has_symptom",
-            "object": "new onset of hypertension",
-            "confidence": 0.7
+            "predicate": "managed_by",
+            "object": "statin",
+            "confidence": 0.9
           },
           {
             "subject": "Hyperlipidemia",
-            "predicate": "has_symptom",
-            "object": "new onset of hyperlipidemia",
-            "confidence": 0.7
+            "predicate": "managed_by",
+            "object": "statin",
+            "confidence": 0.9
           }
         ],
         "lab_values": {
+          "BP_systolic": "elevated",
           "LDL": "elevated"
         }
-      }
+      },
+      "dosages": [
+        "20mg",
+        "10mg"
+      ]
     },
     {
       "visit_id": "V2",
@@ -96,9 +78,9 @@
         "LDL": 140
       },
       "medications": [
-        "Atorvastatin 40mg",
-        "Lisinopril 10mg",
-        "Glipizide 5mg",
+        "atorvastatin",
+        "lisinopril",
+        "glipizide",
         "statin",
         "sulfonylurea"
       ],
@@ -106,49 +88,27 @@
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
-        "Chronic Kidney Disease (CKD) stage 3",
-        "diabetes"
+        "Chronic Kidney Disease (Ckd) Stage 3"
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Nocturia"
       ],
       "extracted": {
         "conditions": [
-          "diabetes"
+          "Type 2 Diabetes"
         ],
         "medications": [
           "statin",
           "sulfonylurea"
         ],
+        "dosages": [
+          "statin dose adjustment"
+        ],
         "symptoms": [],
         "procedures": [],
         "relationships": [
-          {
-            "subject": "statin",
-            "predicate": "improves",
-            "object": "BP",
-            "confidence": 0.8
-          },
-          {
-            "subject": "statin",
-            "predicate": "improves",
-            "object": "LDL",
-            "confidence": 0.8
-          },
-          {
-            "subject": "statin",
-            "predicate": "worsens",
-            "object": "HbA1c",
-            "confidence": 0.8
-          },
-          {
-            "subject": "sulfonylurea",
-            "predicate": "considered_for",
-            "object": "HbA1c",
-            "confidence": 0.7
-          },
           {
             "subject": "statin",
             "predicate": "contraindicated_with",
@@ -157,10 +117,18 @@
           }
         ],
         "lab_values": {
-          "LDL": "improved",
-          "HbA1c": "worsened"
+          "HbA1c": "worsened",
+          "BP_systolic": "improved",
+          "BP_diastolic": "improved",
+          "LDL": "improved"
         }
-      }
+      },
+      "dosages": [
+        "40mg",
+        "10mg",
+        "5mg",
+        "statin dose adjustment"
+      ]
     },
     {
       "visit_id": "V3",
@@ -174,65 +142,48 @@
         "LDL": 120
       },
       "medications": [
-        "Atorvastatin 40mg",
-        "Lisinopril 20mg",
-        "Glipizide 10mg",
+        "atorvastatin",
+        "lisinopril",
+        "glipizide",
         "adjusted medication regimen"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
-        "CKD stage 3",
-        "Coronary Artery Disease (CAD)",
-        "elevated HbA1c"
+        "Ckd Stage 3",
+        "Coronary Artery Disease (Cad)",
+        "Elevated Hba1C"
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Nocturia",
         "Chest pain"
       ],
       "extracted": {
         "conditions": [
-          "elevated HbA1c"
+          "Elevated Hba1C"
         ],
         "medications": [
           "adjusted medication regimen"
         ],
+        "dosages": [],
         "symptoms": [],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "adjusted medication regimen",
-            "predicate": "improves",
-            "object": "BP",
-            "confidence": 0.8
-          },
-          {
-            "subject": "adjusted medication regimen",
-            "predicate": "improves",
-            "object": "LDL",
-            "confidence": 0.8
-          },
-          {
-            "subject": "adjusted medication regimen",
-            "predicate": "worsens",
-            "object": "HbA1c",
-            "confidence": 0.7
-          },
-          {
-            "subject": "endocrinologist",
-            "predicate": "managed_by",
-            "object": "further management",
-            "confidence": 0.9
-          }
-        ],
+        "relationships": [],
         "lab_values": {
-          "LDL": "improved",
-          "HbA1c": "elevated"
+          "HbA1c": "elevated",
+          "BP_systolic": "improved",
+          "BP_diastolic": "improved",
+          "LDL": "improved"
         }
-      }
+      },
+      "dosages": [
+        "40mg",
+        "20mg",
+        "10mg"
+      ]
     },
     {
       "visit_id": "V4",
@@ -246,68 +197,52 @@
         "LDL": 110
       },
       "medications": [
-        "Atorvastatin 40mg",
-        "Lisinopril 20mg",
-        "Glipizide 15mg",
-        "Ezetimibe 10mg",
-        "Adjusted medication regimen"
+        "atorvastatin",
+        "lisinopril",
+        "glipizide",
+        "ezetimibe",
+        "adjusted medication regimen"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
-        "CKD stage 3",
-        "CAD",
+        "Ckd Stage 3",
+        "Coronary Artery Disease",
         "Nephropathy",
-        "Diabetes"
+        "Elevated Hba1C"
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Nocturia",
         "Chest pain",
-        "Swelling"
+        "Edema"
       ],
       "extracted": {
         "conditions": [
-          "Diabetes"
+          "Elevated Hba1C"
         ],
         "medications": [
-          "Adjusted medication regimen"
+          "adjusted medication regimen"
         ],
+        "dosages": [],
         "symptoms": [],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "Adjusted medication regimen",
-            "predicate": "improves",
-            "object": "BP",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Adjusted medication regimen",
-            "predicate": "improves",
-            "object": "LDL",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Adjusted medication regimen",
-            "predicate": "worsens",
-            "object": "HbA1c",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Renal-protective therapy",
-            "predicate": "considered",
-            "object": "HbA1c",
-            "confidence": 0.6
-          }
-        ],
+        "relationships": [],
         "lab_values": {
-          "LDL": "improved",
-          "HbA1c": "elevated"
+          "HbA1c": "elevated",
+          "BP_systolic": "improved",
+          "BP_diastolic": "improved",
+          "LDL": "improved"
         }
-      }
+      },
+      "dosages": [
+        "40mg",
+        "20mg",
+        "15mg",
+        "10mg"
+      ]
     },
     {
       "visit_id": "V5",
@@ -321,78 +256,56 @@
         "LDL": 100
       },
       "medications": [
-        "Atorvastatin 40mg",
-        "Lisinopril 20mg",
-        "Glipizide 20mg",
-        "Ezetimibe 10mg",
-        "Losartan 50mg",
+        "atorvastatin",
+        "lisinopril",
+        "glipizide",
+        "ezetimibe",
+        "losartan",
         "adjusted medication regimen"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
-        "CKD stage 4",
-        "CAD",
+        "Ckd Stage 4",
+        "Coronary Artery Disease",
         "Nephropathy",
-        "elevated HbA1c"
+        "Elevated Hba1C"
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Nocturia",
         "Chest pain",
-        "Swelling",
+        "Edema",
         "Shortness of breath"
       ],
       "extracted": {
         "conditions": [
-          "elevated HbA1c"
+          "Elevated Hba1C"
         ],
         "medications": [
           "adjusted medication regimen"
         ],
+        "dosages": [],
         "symptoms": [],
         "procedures": [
           "bariatric surgery"
         ],
-        "relationships": [
-          {
-            "subject": "adjusted medication regimen",
-            "predicate": "improves",
-            "object": "BP",
-            "confidence": 0.8
-          },
-          {
-            "subject": "adjusted medication regimen",
-            "predicate": "improves",
-            "object": "LDL",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "remains",
-            "object": "elevated",
-            "confidence": 0.7
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "worsens",
-            "object": "adjusted medication regimen",
-            "confidence": 0.7
-          },
-          {
-            "subject": "bariatric surgery",
-            "predicate": "considered",
-            "object": "HbA1c",
-            "confidence": 0.6
-          }
-        ],
+        "relationships": [],
         "lab_values": {
-          "LDL": "improved",
-          "HbA1c": "elevated"
+          "HbA1c": "elevated",
+          "BP_systolic": "improved",
+          "BP_diastolic": "improved",
+          "LDL": "improved"
         }
-      }
+      },
+      "dosages": [
+        "40mg",
+        "20mg",
+        "10mg",
+        "50mg"
+      ]
     }
   ]
 }

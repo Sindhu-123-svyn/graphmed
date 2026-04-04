@@ -1,21 +1,28 @@
 {
   "patient_id": "P010",
-  "created_at": "2026-04-01T19:13:51.718675",
+  "created_at": "2026-04-04T13:45:59.471699",
   "nodes": [
     {
       "id": "P010",
       "type": "PATIENT",
-      "added": "2026-04-01T19:13:51.718675",
-      "last_confirmed": "2026-04-01T19:13:51.718675",
+      "name": "P010",
+      "added": "2026-04-04T13:45:59.471699",
+      "last_confirmed": "2026-04-04T13:45:59.471699",
       "confidence": 1.0
     },
     {
-      "id": "CONDITION_Hypertension_2022-06-10",
+      "id": "CONDITION_hypertension",
       "name": "hypertension",
       "type": "CONDITION",
       "added": "2022-06-10",
       "last_confirmed": "2023-12-15",
-      "confidence": 1.0,
+      "confidence": 0.6883333333333332,
+      "observed_dates": [
+        "2022-06-10",
+        "2022-12-15",
+        "2023-12-15"
+      ],
+      "decayed": true,
       "history": [
         {
           "date": "2022-12-15",
@@ -29,7 +36,7 @@
         {
           "date": "2023-12-15",
           "old": {
-            "confidence": 1.0
+            "confidence": 0.6883333333333332
           },
           "new": {
             "confirmed": true
@@ -39,53 +46,72 @@
       "confirmed": true
     },
     {
-      "id": "CONDITION_Hyperlipidemia_2022-06-10",
-      "name": "hyperlipidemia",
-      "type": "CONDITION",
-      "added": "2022-06-10",
-      "last_confirmed": "2023-06-20",
-      "confidence": 1.0,
-      "history": [
-        {
-          "date": "2023-06-20",
-          "old": {
-            "confidence": 1.0
-          },
-          "new": {
-            "confirmed": true
-          }
-        }
-      ],
-      "confirmed": true
-    },
-    {
-      "id": "CONDITION_Type 2 Diabetes_2022-06-10",
+      "id": "CONDITION_type_2_diabetes",
       "name": "type 2 diabetes",
       "type": "CONDITION",
       "added": "2022-06-10",
       "last_confirmed": "2022-06-10",
-      "confidence": 1.0
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-06-10"
+      ],
+      "decayed": true
     },
     {
-      "id": "MEDICATION_metformin_2022-06-10",
-      "name": "metformin",
-      "type": "MEDICATION",
+      "id": "CONDITION_hyperlipidemia",
+      "name": "hyperlipidemia",
+      "type": "CONDITION",
       "added": "2022-06-10",
-      "last_confirmed": "2022-06-10",
-      "confidence": 1.0
-    },
-    {
-      "id": "MEDICATION_amlodipine_2022-06-10",
-      "name": "amlodipine",
-      "type": "MEDICATION",
-      "added": "2022-06-10",
-      "last_confirmed": "2023-12-15",
-      "confidence": 1.0,
+      "last_confirmed": "2023-06-20",
+      "confidence": 0.38999999999999996,
+      "observed_dates": [
+        "2022-06-10",
+        "2023-06-20"
+      ],
+      "decayed": true,
       "history": [
         {
           "date": "2023-06-20",
           "old": {
-            "confidence": 1.0
+            "confidence": 0.6866666666666666
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "MEDICATION_metformin",
+      "name": "metformin",
+      "type": "MEDICATION",
+      "added": "2022-06-10",
+      "last_confirmed": "2022-06-10",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-06-10"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "MEDICATION_amlodipine",
+      "name": "amlodipine",
+      "type": "MEDICATION",
+      "added": "2022-06-10",
+      "last_confirmed": "2023-12-15",
+      "confidence": 0.6866666666666666,
+      "observed_dates": [
+        "2022-06-10",
+        "2023-06-20",
+        "2023-12-15"
+      ],
+      "decayed": true,
+      "history": [
+        {
+          "date": "2023-06-20",
+          "old": {
+            "confidence": 0.6866666666666666
           },
           "new": {
             "confirmed": true
@@ -94,7 +120,7 @@
         {
           "date": "2023-12-15",
           "old": {
-            "confidence": 1.0
+            "confidence": 0.6866666666666666
           },
           "new": {
             "confirmed": true
@@ -104,44 +130,211 @@
       "confirmed": true
     },
     {
-      "id": "MEDICATION_500mg_2022-06-10",
-      "name": "500mg",
-      "type": "MEDICATION",
+      "id": "LAB_VALUE_hba1c",
+      "name": "hba1c",
+      "type": "LAB_VALUE",
       "added": "2022-06-10",
-      "last_confirmed": "2022-06-10",
-      "confidence": 1.0
+      "last_confirmed": "2023-12-15",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2022-06-10",
+        "2022-12-15",
+        "2023-06-20",
+        "2023-12-15"
+      ],
+      "value": 8.0,
+      "decayed": true,
+      "history": [
+        {
+          "date": "2022-12-15",
+          "old": {
+            "value": 7.2,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2023-06-20",
+          "old": {
+            "value": 7.8,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2023-12-15",
+          "old": {
+            "value": 7.5,
+            "confidence": 1.0
+          },
+          "new": {}
+        }
+      ]
     },
     {
-      "id": "MEDICATION_5mg_2022-06-10",
-      "name": "5mg",
-      "type": "MEDICATION",
+      "id": "LAB_VALUE_bp_systolic",
+      "name": "bp_systolic",
+      "type": "LAB_VALUE",
       "added": "2022-06-10",
-      "last_confirmed": "2022-06-10",
-      "confidence": 1.0
+      "last_confirmed": "2023-12-15",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2022-06-10",
+        "2022-12-15",
+        "2023-06-20",
+        "2023-12-15"
+      ],
+      "value": 155,
+      "decayed": true,
+      "history": [
+        {
+          "date": "2022-12-15",
+          "old": {
+            "value": 140,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2023-06-20",
+          "old": {
+            "value": 145,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2023-12-15",
+          "old": {
+            "value": 150,
+            "confidence": 1.0
+          },
+          "new": {}
+        }
+      ]
     },
     {
-      "id": "SYMPTOM_Polydipsia_2022-06-10",
-      "name": "polydipsia",
-      "type": "SYMPTOM",
+      "id": "LAB_VALUE_bp_diastolic",
+      "name": "bp_diastolic",
+      "type": "LAB_VALUE",
       "added": "2022-06-10",
-      "last_confirmed": "2022-06-10",
-      "confidence": 1.0
+      "last_confirmed": "2023-12-15",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2022-06-10",
+        "2022-12-15",
+        "2023-06-20",
+        "2023-12-15"
+      ],
+      "value": 105,
+      "decayed": true,
+      "history": [
+        {
+          "date": "2022-12-15",
+          "old": {
+            "value": 90,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2023-06-20",
+          "old": {
+            "value": 95,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2023-12-15",
+          "old": {
+            "value": 100,
+            "confidence": 1.0
+          },
+          "new": {}
+        }
+      ]
     },
     {
-      "id": "SYMPTOM_Polyuria_2022-06-10",
-      "name": "polyuria",
-      "type": "SYMPTOM",
+      "id": "LAB_VALUE_egfr",
+      "name": "egfr",
+      "type": "LAB_VALUE",
       "added": "2022-06-10",
-      "last_confirmed": "2022-06-10",
-      "confidence": 1.0
+      "last_confirmed": "2023-12-15",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2022-06-10",
+        "2022-12-15",
+        "2023-06-20",
+        "2023-12-15"
+      ],
+      "value": 45,
+      "decayed": true,
+      "history": [
+        {
+          "date": "2022-12-15",
+          "old": {
+            "value": 72,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2023-06-20",
+          "old": {
+            "value": 65,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2023-12-15",
+          "old": {
+            "value": 55,
+            "confidence": 1.0
+          },
+          "new": {}
+        }
+      ]
     },
     {
-      "id": "SYMPTOM_Fatigue_2022-06-10",
+      "id": "LAB_VALUE_ldl",
+      "name": "ldl",
+      "type": "LAB_VALUE",
+      "added": "2022-06-10",
+      "last_confirmed": "2023-06-20",
+      "confidence": 0.38999999999999996,
+      "observed_dates": [
+        "2022-06-10",
+        "2023-06-20"
+      ],
+      "value": 145,
+      "decayed": true,
+      "history": [
+        {
+          "date": "2023-06-20",
+          "old": {
+            "value": 130,
+            "confidence": 0.6866666666666666
+          },
+          "new": {}
+        }
+      ]
+    },
+    {
+      "id": "SYMPTOM_fatigue",
       "name": "fatigue",
       "type": "SYMPTOM",
       "added": "2022-06-10",
       "last_confirmed": "2023-12-15",
       "confidence": 1.0,
+      "observed_dates": [
+        "2022-06-10",
+        "2022-12-15",
+        "2023-06-20",
+        "2023-12-15"
+      ],
+      "decayed": true,
       "history": [
         {
           "date": "2022-12-15",
@@ -174,40 +367,54 @@
       "confirmed": true
     },
     {
-      "id": "MEDICATION_lisinopril_2022-12-15",
+      "id": "SYMPTOM_frequent_urination",
+      "name": "frequent urination",
+      "type": "SYMPTOM",
+      "added": "2022-06-10",
+      "last_confirmed": "2022-06-10",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-06-10"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "SYMPTOM_polydipsia",
+      "name": "polydipsia",
+      "type": "SYMPTOM",
+      "added": "2022-06-10",
+      "last_confirmed": "2022-06-10",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-06-10"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "MEDICATION_lisinopril",
       "name": "lisinopril",
       "type": "MEDICATION",
       "added": "2022-12-15",
       "last_confirmed": "2022-12-15",
-      "confidence": 1.0
-    },
-    {
-      "id": "MEDICATION_10mg_2022-12-15",
-      "name": "10mg",
-      "type": "MEDICATION",
-      "added": "2022-12-15",
-      "last_confirmed": "2023-06-20",
-      "confidence": 1.0,
-      "history": [
-        {
-          "date": "2023-06-20",
-          "old": {
-            "confidence": 1.0
-          },
-          "new": {
-            "confirmed": true
-          }
-        }
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-12-15"
       ],
-      "confirmed": true
+      "decayed": true
     },
     {
-      "id": "SYMPTOM_Shortness of breath_2022-12-15",
+      "id": "SYMPTOM_shortness_of_breath",
       "name": "shortness of breath",
       "type": "SYMPTOM",
       "added": "2022-12-15",
       "last_confirmed": "2023-12-15",
       "confidence": 1.0,
+      "observed_dates": [
+        "2022-12-15",
+        "2023-06-20",
+        "2023-12-15"
+      ],
+      "decayed": true,
       "history": [
         {
           "date": "2023-06-20",
@@ -231,168 +438,304 @@
       "confirmed": true
     },
     {
-      "id": "MEDICATION_simvastatin_2023-06-20",
+      "id": "MEDICATION_simvastatin",
       "name": "simvastatin",
       "type": "MEDICATION",
       "added": "2023-06-20",
       "last_confirmed": "2023-06-20",
-      "confidence": 1.0
+      "confidence": 0.7033333333333334,
+      "observed_dates": [
+        "2023-06-20"
+      ],
+      "decayed": true
     },
     {
-      "id": "MEDICATION_40mg_2023-06-20",
-      "name": "40mg",
-      "type": "MEDICATION",
-      "added": "2023-06-20",
-      "last_confirmed": "2023-06-20",
-      "confidence": 1.0
-    },
-    {
-      "id": "MEDICATION_losartan_2023-12-15",
+      "id": "MEDICATION_losartan",
       "name": "losartan",
       "type": "MEDICATION",
       "added": "2023-12-15",
       "last_confirmed": "2023-12-15",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "observed_dates": [
+        "2023-12-15"
+      ],
+      "decayed": true
     },
     {
-      "id": "MEDICATION_50mg_2023-12-15",
-      "name": "50mg",
-      "type": "MEDICATION",
-      "added": "2023-12-15",
-      "last_confirmed": "2023-12-15",
-      "confidence": 1.0
-    },
-    {
-      "id": "MEDICATION_15mg_2023-12-15",
-      "name": "15mg",
-      "type": "MEDICATION",
-      "added": "2023-12-15",
-      "last_confirmed": "2023-12-15",
-      "confidence": 1.0
-    },
-    {
-      "id": "SYMPTOM_Edema_2023-12-15",
+      "id": "SYMPTOM_edema",
       "name": "edema",
       "type": "SYMPTOM",
       "added": "2023-12-15",
       "last_confirmed": "2023-12-15",
-      "confidence": 1.0
+      "confidence": 1.0,
+      "observed_dates": [
+        "2023-12-15"
+      ],
+      "decayed": true
     }
   ],
   "edges": [
     {
       "source": "P010",
-      "target": "CONDITION_Hypertension_2022-06-10",
+      "target": "CONDITION_hypertension",
       "relation": "has",
-      "established": "2022-06-10"
+      "established": "2022-06-10",
+      "confidence": 1.0
     },
     {
       "source": "P010",
-      "target": "CONDITION_Hyperlipidemia_2022-06-10",
+      "target": "CONDITION_type_2_diabetes",
       "relation": "has",
-      "established": "2022-06-10"
+      "established": "2022-06-10",
+      "confidence": 1.0
     },
     {
       "source": "P010",
-      "target": "CONDITION_Type 2 Diabetes_2022-06-10",
+      "target": "CONDITION_hyperlipidemia",
       "relation": "has",
-      "established": "2022-06-10"
+      "established": "2022-06-10",
+      "confidence": 1.0
     },
     {
       "source": "P010",
-      "target": "MEDICATION_metformin_2022-06-10",
+      "target": "MEDICATION_metformin",
       "relation": "has",
-      "established": "2022-06-10"
+      "established": "2022-06-10",
+      "confidence": 1.0
     },
     {
       "source": "P010",
-      "target": "MEDICATION_amlodipine_2022-06-10",
+      "target": "MEDICATION_amlodipine",
       "relation": "has",
-      "established": "2022-06-10"
+      "established": "2022-06-10",
+      "confidence": 1.0
     },
     {
       "source": "P010",
-      "target": "MEDICATION_500mg_2022-06-10",
+      "target": "LAB_VALUE_hba1c",
       "relation": "has",
-      "established": "2022-06-10"
+      "established": "2022-06-10",
+      "confidence": 1.0
     },
     {
       "source": "P010",
-      "target": "MEDICATION_5mg_2022-06-10",
+      "target": "LAB_VALUE_bp_systolic",
       "relation": "has",
-      "established": "2022-06-10"
+      "established": "2022-06-10",
+      "confidence": 1.0
     },
     {
       "source": "P010",
-      "target": "SYMPTOM_Polydipsia_2022-06-10",
+      "target": "LAB_VALUE_bp_diastolic",
       "relation": "has",
-      "established": "2022-06-10"
+      "established": "2022-06-10",
+      "confidence": 1.0
     },
     {
       "source": "P010",
-      "target": "SYMPTOM_Polyuria_2022-06-10",
+      "target": "LAB_VALUE_egfr",
       "relation": "has",
-      "established": "2022-06-10"
+      "established": "2022-06-10",
+      "confidence": 1.0
     },
     {
       "source": "P010",
-      "target": "SYMPTOM_Fatigue_2022-06-10",
+      "target": "LAB_VALUE_ldl",
       "relation": "has",
-      "established": "2022-06-10"
+      "established": "2022-06-10",
+      "confidence": 1.0
     },
     {
       "source": "P010",
-      "target": "MEDICATION_lisinopril_2022-12-15",
+      "target": "SYMPTOM_fatigue",
       "relation": "has",
-      "established": "2022-12-15"
+      "established": "2022-06-10",
+      "confidence": 1.0
     },
     {
       "source": "P010",
-      "target": "MEDICATION_10mg_2022-12-15",
+      "target": "SYMPTOM_frequent_urination",
       "relation": "has",
-      "established": "2022-12-15"
+      "established": "2022-06-10",
+      "confidence": 1.0
     },
     {
       "source": "P010",
-      "target": "SYMPTOM_Shortness of breath_2022-12-15",
+      "target": "SYMPTOM_polydipsia",
       "relation": "has",
-      "established": "2022-12-15"
+      "established": "2022-06-10",
+      "confidence": 1.0
     },
     {
       "source": "P010",
-      "target": "MEDICATION_simvastatin_2023-06-20",
+      "target": "MEDICATION_lisinopril",
       "relation": "has",
-      "established": "2023-06-20"
+      "established": "2022-12-15",
+      "confidence": 1.0
     },
     {
       "source": "P010",
-      "target": "MEDICATION_40mg_2023-06-20",
+      "target": "SYMPTOM_shortness_of_breath",
       "relation": "has",
-      "established": "2023-06-20"
+      "established": "2022-12-15",
+      "confidence": 1.0
     },
     {
       "source": "P010",
-      "target": "MEDICATION_losartan_2023-12-15",
+      "target": "MEDICATION_simvastatin",
       "relation": "has",
-      "established": "2023-12-15"
+      "established": "2023-06-20",
+      "confidence": 1.0
     },
     {
       "source": "P010",
-      "target": "MEDICATION_50mg_2023-12-15",
+      "target": "MEDICATION_losartan",
       "relation": "has",
-      "established": "2023-12-15"
+      "established": "2023-12-15",
+      "confidence": 1.0
     },
     {
       "source": "P010",
-      "target": "MEDICATION_15mg_2023-12-15",
+      "target": "SYMPTOM_edema",
       "relation": "has",
-      "established": "2023-12-15"
+      "established": "2023-12-15",
+      "confidence": 1.0
     },
     {
-      "source": "P010",
-      "target": "SYMPTOM_Edema_2023-12-15",
-      "relation": "has",
-      "established": "2023-12-15"
+      "source": "CONDITION_hypertension",
+      "target": "MEDICATION_amlodipine",
+      "relation": "managed_by",
+      "established": "2022-06-10",
+      "last_observed": "2023-12-15",
+      "observed_dates": [
+        "2022-06-10",
+        "2023-12-15"
+      ],
+      "observations": 2,
+      "confidence": 0.9
+    },
+    {
+      "source": "CONDITION_hypertension",
+      "target": "SYMPTOM_fatigue",
+      "relation": "worsens",
+      "established": "2022-06-10",
+      "last_observed": "2023-12-15",
+      "observed_dates": [
+        "2022-06-10",
+        "2022-12-15",
+        "2023-12-15"
+      ],
+      "observations": 3,
+      "confidence": 0.7
+    },
+    {
+      "source": "CONDITION_hypertension",
+      "target": "MEDICATION_lisinopril",
+      "relation": "managed_by",
+      "established": "2022-12-15",
+      "last_observed": "2022-12-15",
+      "observed_dates": [
+        "2022-12-15"
+      ],
+      "observations": 1,
+      "confidence": 0.9
+    },
+    {
+      "source": "CONDITION_hypertension",
+      "target": "SYMPTOM_shortness_of_breath",
+      "relation": "worsens",
+      "established": "2022-12-15",
+      "last_observed": "2023-12-15",
+      "observed_dates": [
+        "2022-12-15",
+        "2023-12-15"
+      ],
+      "observations": 2,
+      "confidence": 0.6
+    },
+    {
+      "source": "CONDITION_hypertension",
+      "target": "MEDICATION_losartan",
+      "relation": "managed_by",
+      "established": "2023-12-15",
+      "last_observed": "2023-12-15",
+      "observed_dates": [
+        "2023-12-15"
+      ],
+      "observations": 1,
+      "confidence": 0.8
+    },
+    {
+      "source": "CONDITION_hypertension",
+      "target": "SYMPTOM_edema",
+      "relation": "worsens",
+      "established": "2023-12-15",
+      "last_observed": "2023-12-15",
+      "observed_dates": [
+        "2023-12-15"
+      ],
+      "observations": 1,
+      "confidence": 0.6
+    },
+    {
+      "source": "CONDITION_type_2_diabetes",
+      "target": "MEDICATION_metformin",
+      "relation": "managed_by",
+      "established": "2022-06-10",
+      "last_observed": "2022-06-10",
+      "observed_dates": [
+        "2022-06-10"
+      ],
+      "observations": 1,
+      "confidence": 0.9
+    },
+    {
+      "source": "CONDITION_type_2_diabetes",
+      "target": "SYMPTOM_fatigue",
+      "relation": "worsens",
+      "established": "2022-06-10",
+      "last_observed": "2022-06-10",
+      "observed_dates": [
+        "2022-06-10"
+      ],
+      "observations": 1,
+      "confidence": 0.7
+    },
+    {
+      "source": "CONDITION_hyperlipidemia",
+      "target": "SYMPTOM_fatigue",
+      "relation": "worsens",
+      "established": "2022-06-10",
+      "last_observed": "2022-06-10",
+      "observed_dates": [
+        "2022-06-10"
+      ],
+      "observations": 1,
+      "confidence": 0.7
+    },
+    {
+      "source": "CONDITION_hyperlipidemia",
+      "target": "MEDICATION_amlodipine",
+      "relation": "managed_by",
+      "established": "2023-06-20",
+      "last_observed": "2023-06-20",
+      "observed_dates": [
+        "2023-06-20"
+      ],
+      "observations": 1,
+      "confidence": 0.8
+    },
+    {
+      "source": "CONDITION_hyperlipidemia",
+      "target": "MEDICATION_simvastatin",
+      "relation": "managed_by",
+      "established": "2023-06-20",
+      "last_observed": "2023-06-20",
+      "observed_dates": [
+        "2023-06-20"
+      ],
+      "observations": 1,
+      "confidence": 0.8
     }
   ]
 }

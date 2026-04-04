@@ -13,12 +13,8 @@
         "LDL": 130
       },
       "medications": [
-        "Lisinopril 10mg daily",
-        "Atorvastatin 20mg daily",
         "lisinopril",
-        "atorvastatin",
-        "10mg",
-        "20mg"
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -27,81 +23,101 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia"
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [
           "lisinopril",
-          "atorvastatin",
-          "10mg",
-          "20mg"
+          "atorvastatin"
+        ],
+        "dosages": [
+          "10mg daily",
+          "20mg daily"
         ],
         "symptoms": [
-          "Polydipsia",
-          "Polyuria",
-          "Fatigue"
+          "Fatigue",
+          "Frequent urination",
+          "Polydipsia"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "lisinopril",
             "confidence": 0.9
           },
           {
-            "subject": "atorvastatin",
+            "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Hyperlipidemia",
+            "object": "atorvastatin",
             "confidence": 0.9
           },
           {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "lisinopril",
             "confidence": 0.8
           },
           {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.8
-          },
-          {
-            "subject": "lisinopril",
-            "predicate": "contraindicated_with",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.7
-          },
-          {
-            "subject": "atorvastatin",
-            "predicate": "contraindicated_with",
-            "object": "Type 2 Diabetes",
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Fatigue",
             "confidence": 0.7
           },
           {
             "subject": "Hypertension",
-            "predicate": "improves",
-            "object": "BP",
+            "predicate": "has_symptom",
+            "object": "Frequent urination",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Polydipsia",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "has_symptom",
+            "object": "Fatigue",
             "confidence": 0.6
           },
           {
             "subject": "Hyperlipidemia",
-            "predicate": "improves",
-            "object": "LDL",
+            "predicate": "has_symptom",
+            "object": "Frequent urination",
             "confidence": 0.6
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "has_symptom",
+            "object": "Polydipsia",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "has_symptom",
+            "object": "Fatigue",
+            "confidence": 0.5
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "has_symptom",
+            "object": "Frequent urination",
+            "confidence": 0.5
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "has_symptom",
+            "object": "Polydipsia",
+            "confidence": 0.5
           }
         ],
         "lab_values": {
@@ -110,7 +126,11 @@
           "BP_diastolic": 90,
           "LDL": 130.0
         }
-      }
+      },
+      "dosages": [
+        "10mg daily",
+        "20mg daily"
+      ]
     },
     {
       "visit_id": "V2",
@@ -124,12 +144,8 @@
         "LDL": 140
       },
       "medications": [
-        "Lisinopril 20mg daily",
-        "Atorvastatin 40mg daily",
         "lisinopril",
-        "atorvastatin",
-        "20mg",
-        "40mg"
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -139,95 +155,55 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Chest pain",
         "Shortness of breath"
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Hyperlipidemia",
-          "Coronary Artery Disease",
-          "Hypertension"
+          "Coronary Artery Disease"
         ],
         "medications": [
           "lisinopril",
-          "atorvastatin",
-          "20mg",
-          "40mg"
+          "atorvastatin"
+        ],
+        "dosages": [
+          "20mg daily",
+          "40mg daily"
         ],
         "symptoms": [
-          "Chest pain",
+          "Fatigue",
           "Shortness of breath",
-          "Fatigue"
+          "Chest pain"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "lisinopril",
-            "predicate": "managed_by",
-            "object": "Hypertension",
-            "confidence": 0.9
-          },
-          {
-            "subject": "atorvastatin",
-            "predicate": "managed_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "LDL",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "BP_systolic",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "BP_diastolic",
-            "confidence": 0.8
-          },
-          {
             "subject": "Hypertension",
-            "predicate": "worsens",
-            "object": "Coronary Artery Disease",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Hyperlipidemia",
-            "predicate": "worsens",
-            "object": "Coronary Artery Disease",
-            "confidence": 0.7
-          },
-          {
-            "subject": "lisinopril",
-            "predicate": "contraindicated_with",
-            "object": "20mg",
-            "confidence": 0.6
-          },
-          {
-            "subject": "atorvastatin",
-            "predicate": "contraindicated_with",
-            "object": "40mg",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "improves",
+            "predicate": "managed_by",
             "object": "lisinopril",
-            "confidence": 0.5
+            "confidence": 0.9
           },
           {
             "subject": "Hyperlipidemia",
-            "predicate": "improves",
+            "predicate": "managed_by",
             "object": "atorvastatin",
-            "confidence": 0.5
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "worsens",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.8
           }
         ],
         "lab_values": {
@@ -236,7 +212,11 @@
           "BP_diastolic": 95,
           "LDL": 140.0
         }
-      }
+      },
+      "dosages": [
+        "20mg daily",
+        "40mg daily"
+      ]
     },
     {
       "visit_id": "V3",
@@ -250,12 +230,8 @@
         "LDL": 160
       },
       "medications": [
-        "Lisinopril 30mg daily",
-        "Atorvastatin 80mg daily",
         "lisinopril",
-        "atorvastatin",
-        "30mg",
-        "80mg"
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -266,7 +242,7 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Chest pain",
         "Shortness of breath",
@@ -274,67 +250,39 @@
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia",
           "Hypertension",
+          "Hyperlipidemia",
           "Chronic Kidney Disease"
         ],
         "medications": [
           "lisinopril",
-          "atorvastatin",
-          "30mg",
-          "80mg"
+          "atorvastatin"
+        ],
+        "dosages": [
+          "30mg daily",
+          "80mg daily"
         ],
         "symptoms": [
-          "Edema",
-          "Polydipsia",
           "Fatigue",
-          "Chest pain",
           "Shortness of breath",
-          "Polyuria"
+          "Chest pain",
+          "Frequent urination",
+          "Polydipsia",
+          "Edema"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "lisinopril",
-            "predicate": "managed_by",
-            "object": "Hypertension",
-            "confidence": 0.9
-          },
-          {
-            "subject": "atorvastatin",
-            "predicate": "managed_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.9
-          },
-          {
             "subject": "Hypertension",
-            "predicate": "worsens",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.8
+            "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.9
           },
           {
             "subject": "Hyperlipidemia",
-            "predicate": "worsens",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Hypertension",
-            "confidence": 0.7
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.7
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.7
+            "predicate": "managed_by",
+            "object": "atorvastatin",
+            "confidence": 0.9
           }
         ],
         "lab_values": {
@@ -343,7 +291,11 @@
           "BP_diastolic": 100,
           "LDL": 160.0
         }
-      }
+      },
+      "dosages": [
+        "30mg daily",
+        "80mg daily"
+      ]
     },
     {
       "visit_id": "V4",
@@ -357,12 +309,8 @@
         "LDL": 120
       },
       "medications": [
-        "Lisinopril 20mg daily",
-        "Atorvastatin 40mg daily",
         "lisinopril",
-        "atorvastatin",
-        "20mg",
-        "40mg"
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -373,85 +321,42 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Edema"
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hypertension",
+          "Hyperlipidemia"
         ],
         "medications": [
           "lisinopril",
-          "atorvastatin",
-          "20mg",
-          "40mg"
+          "atorvastatin"
+        ],
+        "dosages": [
+          "20mg daily",
+          "40mg daily"
         ],
         "symptoms": [
-          "Polydipsia",
-          "Polyuria",
           "Fatigue",
+          "Frequent urination",
+          "Polydipsia",
           "Edema"
         ],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "lisinopril",
-            "predicate": "managed_by",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "atorvastatin",
-            "predicate": "managed_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "BP",
-            "confidence": 0.7
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "LDL",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "improves",
-            "object": "BP",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Hyperlipidemia",
-            "predicate": "improves",
-            "object": "LDL",
-            "confidence": 0.6
-          },
-          {
-            "subject": "BP",
-            "predicate": "worsens",
-            "object": "kidney function",
-            "confidence": 0.5
-          },
-          {
-            "subject": "kidney function",
-            "predicate": "worsens",
-            "object": "Hypertension",
-            "confidence": 0.5
-          }
-        ],
+        "relationships": [],
         "lab_values": {
           "HbA1c": 7.5,
           "BP_systolic": 140,
           "BP_diastolic": 90,
           "LDL": 120.0
         }
-      }
+      },
+      "dosages": [
+        "20mg daily",
+        "40mg daily"
+      ]
     }
   ]
 }

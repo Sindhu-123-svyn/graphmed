@@ -10,12 +10,11 @@
         "BP_systolic": 140,
         "BP_diastolic": 90,
         "eGFR": 72,
-        "LDL": 130,
-        "Blood pressure": "140/90"
+        "LDL": 130
       },
       "medications": [
-        "Metformin 500mg twice daily",
-        "Amlodipine 5mg daily"
+        "metformin twice daily",
+        "amlodipine"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -28,70 +27,27 @@
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [],
+        "dosages": [],
         "symptoms": [
           "Fatigue"
         ],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "managed_by",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "managed_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "managed_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "Fatigue",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "worsens",
-            "object": "Fatigue",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Hyperlipidemia",
-            "predicate": "worsens",
-            "object": "Fatigue",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "measured_by",
-            "object": "HbA1c",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "measured_by",
-            "object": "Blood pressure",
-            "confidence": 0.9
-          }
-        ],
+        "relationships": [],
         "lab_values": {
           "HbA1c": 7.2,
-          "Blood pressure": "140/90"
+          "BP_systolic": 140,
+          "BP_diastolic": 90
         }
-      }
+      },
+      "dosages": [
+        "500mg",
+        "5mg daily"
+      ]
     },
     {
       "visit_id": "V2",
@@ -105,9 +61,9 @@
         "LDL": 150
       },
       "medications": [
-        "Metformin 1000mg twice daily",
-        "Losartan 50mg daily",
-        "Simvastatin 20mg daily"
+        "metformin twice daily",
+        "losartan",
+        "simvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -121,21 +77,50 @@
         "Chest discomfort",
         "Swelling in legs",
         "Chest pain",
-        "Edema"
+        "Edema",
+        "Swelling in the legs"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Type 2 Diabetes",
+          "Hypertension"
+        ],
         "medications": [],
+        "dosages": [],
         "symptoms": [
+          "Fatigue",
+          "Shortness of breath",
           "Chest pain",
           "Edema",
-          "Shortness of breath",
-          "Fatigue"
+          "Chest discomfort",
+          "Swelling in the legs"
         ],
         "procedures": [],
-        "relationships": [],
-        "lab_values": {}
-      }
+        "relationships": [
+          {
+            "subject": "BP_systolic",
+            "predicate": "worsens",
+            "object": "Hypertension",
+            "confidence": 0.8
+          },
+          {
+            "subject": "HbA1c",
+            "predicate": "worsens",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.1,
+          "BP_systolic": 150,
+          "BP_diastolic": 95
+        }
+      },
+      "dosages": [
+        "1000mg",
+        "50mg daily",
+        "20mg daily"
+      ]
     },
     {
       "visit_id": "V3",
@@ -146,14 +131,13 @@
         "BP_systolic": 160,
         "BP_diastolic": 100,
         "eGFR": 50,
-        "LDL": 180,
-        "blood pressure": "160/100"
+        "LDL": 180
       },
       "medications": [
-        "Metformin 1500mg twice daily",
-        "Losartan 100mg daily",
-        "Simvastatin 40mg daily",
-        "Enalapril 10mg daily"
+        "metformin twice daily",
+        "losartan",
+        "simvastatin",
+        "enalapril"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -161,7 +145,7 @@
         "Hyperlipidemia",
         "Coronary Artery Disease",
         "Chronic Kidney Disease",
-        "kidney dysfunction"
+        "Kidney Dysfunction"
       ],
       "symptoms": [
         "Fatigue",
@@ -173,58 +157,48 @@
       ],
       "extracted": {
         "conditions": [
-          "kidney dysfunction"
+          "Kidney Dysfunction"
         ],
         "medications": [],
+        "dosages": [],
         "symptoms": [
-          "confusion",
-          "difficulty concentrating"
+          "Confusion",
+          "Difficulty concentrating"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "kidney dysfunction",
-            "predicate": "worsens",
-            "object": "kidney function",
-            "confidence": 0.9
-          },
-          {
-            "subject": "kidney dysfunction",
+            "subject": "Kidney Dysfunction",
             "predicate": "measured_by",
             "object": "eGFR",
-            "confidence": 0.8
-          },
-          {
-            "subject": "kidney dysfunction",
-            "predicate": "contraindicated_with",
-            "object": "high blood pressure",
-            "confidence": 0.7
-          },
-          {
-            "subject": "kidney dysfunction",
-            "predicate": "improves",
-            "object": "kidney function",
             "confidence": 0.6
           },
           {
-            "subject": "kidney dysfunction",
+            "subject": "Kidney Dysfunction",
             "predicate": "has_symptom",
-            "object": "confusion",
+            "object": "Confusion",
             "confidence": 0.5
           },
           {
-            "subject": "kidney dysfunction",
+            "subject": "Kidney Dysfunction",
             "predicate": "has_symptom",
-            "object": "difficulty concentrating",
+            "object": "Difficulty concentrating",
             "confidence": 0.5
           }
         ],
         "lab_values": {
-          "eGFR": 50,
-          "blood pressure": "160/100",
-          "HbA1c": 8.5
+          "HbA1c": 8.5,
+          "BP_systolic": 160,
+          "BP_diastolic": 100,
+          "eGFR": 50
         }
-      }
+      },
+      "dosages": [
+        "1500mg",
+        "100mg daily",
+        "40mg daily",
+        "10mg daily"
+      ]
     },
     {
       "visit_id": "V4",
@@ -238,9 +212,9 @@
         "LDL": 120
       },
       "medications": [
-        "Metformin 1500mg twice daily",
-        "Losartan 100mg daily",
-        "Simvastatin 40mg daily"
+        "metformin twice daily",
+        "losartan",
+        "simvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -253,15 +227,36 @@
         "Fatigue"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Type 2 Diabetes"
+        ],
         "medications": [],
+        "dosages": [],
         "symptoms": [
           "Fatigue"
         ],
-        "procedures": [],
-        "relationships": [],
-        "lab_values": {}
-      }
+        "procedures": [
+          "Lifestyle Changes"
+        ],
+        "relationships": [
+          {
+            "subject": "Lifestyle Changes",
+            "predicate": "improves",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.5,
+          "BP_systolic": 140,
+          "BP_diastolic": 90
+        }
+      },
+      "dosages": [
+        "1500mg",
+        "100mg daily",
+        "40mg daily"
+      ]
     }
   ]
 }

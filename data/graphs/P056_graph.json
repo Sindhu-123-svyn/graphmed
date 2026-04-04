@@ -1,0 +1,560 @@
+{
+  "patient_id": "P056",
+  "created_at": "2026-04-04T13:46:01.088926",
+  "nodes": [
+    {
+      "id": "P056",
+      "type": "PATIENT",
+      "name": "P056",
+      "added": "2026-04-04T13:46:01.088926",
+      "last_confirmed": "2026-04-04T13:46:01.088926",
+      "confidence": 1.0
+    },
+    {
+      "id": "CONDITION_hypertension",
+      "name": "hypertension",
+      "type": "CONDITION",
+      "added": "2022-06-15",
+      "last_confirmed": "2023-10-18",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2022-06-15",
+        "2023-02-22",
+        "2023-10-18"
+      ],
+      "decayed": true,
+      "history": [
+        {
+          "date": "2023-02-22",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2023-10-18",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "CONDITION_hyperlipidemia",
+      "name": "hyperlipidemia",
+      "type": "CONDITION",
+      "added": "2022-06-15",
+      "last_confirmed": "2022-06-15",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-06-15"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "MEDICATION_lisinopril",
+      "name": "lisinopril",
+      "type": "MEDICATION",
+      "added": "2022-06-15",
+      "last_confirmed": "2023-02-22",
+      "confidence": 0.6033333333333333,
+      "observed_dates": [
+        "2022-06-15",
+        "2023-02-22"
+      ],
+      "decayed": true,
+      "history": [
+        {
+          "date": "2023-02-22",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "MEDICATION_atorvastatin",
+      "name": "atorvastatin",
+      "type": "MEDICATION",
+      "added": "2022-06-15",
+      "last_confirmed": "2023-10-18",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2022-06-15",
+        "2023-02-22",
+        "2023-10-18"
+      ],
+      "decayed": true,
+      "history": [
+        {
+          "date": "2023-02-22",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2023-10-18",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "LAB_VALUE_hba1c",
+      "name": "hba1c",
+      "type": "LAB_VALUE",
+      "added": "2022-06-15",
+      "last_confirmed": "2023-10-18",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2022-06-15",
+        "2023-02-22",
+        "2023-10-18"
+      ],
+      "value": 9.0,
+      "decayed": true,
+      "history": [
+        {
+          "date": "2023-02-22",
+          "old": {
+            "value": 7.2,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2023-10-18",
+          "old": {
+            "value": 8.1,
+            "confidence": 1.0
+          },
+          "new": {}
+        }
+      ]
+    },
+    {
+      "id": "SYMPTOM_elevated_bp",
+      "name": "elevated bp",
+      "type": "SYMPTOM",
+      "added": "2022-06-15",
+      "last_confirmed": "2022-06-15",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-06-15"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "MEDICATION_metoprolol",
+      "name": "metoprolol",
+      "type": "MEDICATION",
+      "added": "2023-02-22",
+      "last_confirmed": "2023-10-18",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2023-02-22",
+        "2023-10-18"
+      ],
+      "decayed": true,
+      "history": [
+        {
+          "date": "2023-10-18",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "LAB_VALUE_bp_systolic",
+      "name": "bp_systolic",
+      "type": "LAB_VALUE",
+      "added": "2023-02-22",
+      "last_confirmed": "2023-10-18",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2023-02-22",
+        "2023-10-18"
+      ],
+      "value": 170,
+      "decayed": true,
+      "history": [
+        {
+          "date": "2023-10-18",
+          "old": {
+            "value": 160,
+            "confidence": 1.0
+          },
+          "new": {}
+        }
+      ]
+    },
+    {
+      "id": "LAB_VALUE_bp_diastolic",
+      "name": "bp_diastolic",
+      "type": "LAB_VALUE",
+      "added": "2023-02-22",
+      "last_confirmed": "2023-10-18",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2023-02-22",
+        "2023-10-18"
+      ],
+      "value": 110,
+      "decayed": true,
+      "history": [
+        {
+          "date": "2023-10-18",
+          "old": {
+            "value": 100,
+            "confidence": 1.0
+          },
+          "new": {}
+        }
+      ]
+    },
+    {
+      "id": "LAB_VALUE_egfr",
+      "name": "egfr",
+      "type": "LAB_VALUE",
+      "added": "2023-02-22",
+      "last_confirmed": "2023-10-18",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2023-02-22",
+        "2023-10-18"
+      ],
+      "value": 45,
+      "decayed": true,
+      "history": [
+        {
+          "date": "2023-10-18",
+          "old": {
+            "value": 60,
+            "confidence": 1.0
+          },
+          "new": {}
+        }
+      ]
+    },
+    {
+      "id": "SYMPTOM_dizziness",
+      "name": "dizziness",
+      "type": "SYMPTOM",
+      "added": "2023-02-22",
+      "last_confirmed": "2023-02-22",
+      "confidence": 0.6033333333333333,
+      "observed_dates": [
+        "2023-02-22"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "SYMPTOM_headache",
+      "name": "headache",
+      "type": "SYMPTOM",
+      "added": "2023-02-22",
+      "last_confirmed": "2023-02-22",
+      "confidence": 0.6033333333333333,
+      "observed_dates": [
+        "2023-02-22"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "CONDITION_chronic_kidney_disease",
+      "name": "chronic kidney disease",
+      "type": "CONDITION",
+      "added": "2023-10-18",
+      "last_confirmed": "2023-10-18",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2023-10-18"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "MEDICATION_losartan",
+      "name": "losartan",
+      "type": "MEDICATION",
+      "added": "2023-10-18",
+      "last_confirmed": "2023-10-18",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2023-10-18"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "SYMPTOM_worsening_of_symptoms",
+      "name": "worsening of symptoms",
+      "type": "SYMPTOM",
+      "added": "2023-10-18",
+      "last_confirmed": "2023-10-18",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2023-10-18"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "PROCEDURE_referral_to_nephrology",
+      "name": "referral to nephrology",
+      "type": "PROCEDURE",
+      "added": "2023-10-18",
+      "last_confirmed": "2023-10-18",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2023-10-18"
+      ],
+      "decayed": true
+    }
+  ],
+  "edges": [
+    {
+      "source": "P056",
+      "target": "CONDITION_hypertension",
+      "relation": "has",
+      "established": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P056",
+      "target": "CONDITION_hyperlipidemia",
+      "relation": "has",
+      "established": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P056",
+      "target": "MEDICATION_lisinopril",
+      "relation": "has",
+      "established": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P056",
+      "target": "MEDICATION_atorvastatin",
+      "relation": "has",
+      "established": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P056",
+      "target": "LAB_VALUE_hba1c",
+      "relation": "has",
+      "established": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P056",
+      "target": "SYMPTOM_elevated_bp",
+      "relation": "has",
+      "established": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P056",
+      "target": "MEDICATION_metoprolol",
+      "relation": "has",
+      "established": "2023-02-22",
+      "confidence": 1.0
+    },
+    {
+      "source": "P056",
+      "target": "LAB_VALUE_bp_systolic",
+      "relation": "has",
+      "established": "2023-02-22",
+      "confidence": 1.0
+    },
+    {
+      "source": "P056",
+      "target": "LAB_VALUE_bp_diastolic",
+      "relation": "has",
+      "established": "2023-02-22",
+      "confidence": 1.0
+    },
+    {
+      "source": "P056",
+      "target": "LAB_VALUE_egfr",
+      "relation": "has",
+      "established": "2023-02-22",
+      "confidence": 1.0
+    },
+    {
+      "source": "P056",
+      "target": "SYMPTOM_dizziness",
+      "relation": "has",
+      "established": "2023-02-22",
+      "confidence": 1.0
+    },
+    {
+      "source": "P056",
+      "target": "SYMPTOM_headache",
+      "relation": "has",
+      "established": "2023-02-22",
+      "confidence": 1.0
+    },
+    {
+      "source": "P056",
+      "target": "CONDITION_chronic_kidney_disease",
+      "relation": "has",
+      "established": "2023-10-18",
+      "confidence": 1.0
+    },
+    {
+      "source": "P056",
+      "target": "MEDICATION_losartan",
+      "relation": "has",
+      "established": "2023-10-18",
+      "confidence": 1.0
+    },
+    {
+      "source": "P056",
+      "target": "SYMPTOM_worsening_of_symptoms",
+      "relation": "has",
+      "established": "2023-10-18",
+      "confidence": 1.0
+    },
+    {
+      "source": "P056",
+      "target": "PROCEDURE_referral_to_nephrology",
+      "relation": "has",
+      "established": "2023-10-18",
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_hypertension",
+      "target": "MEDICATION_lisinopril",
+      "relation": "managed_by",
+      "established": "2022-06-15",
+      "last_observed": "2023-02-22",
+      "observed_dates": [
+        "2022-06-15",
+        "2023-02-22"
+      ],
+      "observations": 2,
+      "confidence": 0.9
+    },
+    {
+      "source": "CONDITION_hypertension",
+      "target": "MEDICATION_atorvastatin",
+      "relation": "managed_by",
+      "established": "2023-02-22",
+      "last_observed": "2023-10-18",
+      "observed_dates": [
+        "2023-02-22",
+        "2023-10-18"
+      ],
+      "observations": 2,
+      "confidence": 0.8
+    },
+    {
+      "source": "CONDITION_hypertension",
+      "target": "MEDICATION_metoprolol",
+      "relation": "managed_by",
+      "established": "2023-02-22",
+      "last_observed": "2023-10-18",
+      "observed_dates": [
+        "2023-02-22",
+        "2023-10-18"
+      ],
+      "observations": 2,
+      "confidence": 0.8
+    },
+    {
+      "source": "CONDITION_hypertension",
+      "target": "MEDICATION_losartan",
+      "relation": "managed_by",
+      "established": "2023-10-18",
+      "last_observed": "2023-10-18",
+      "observed_dates": [
+        "2023-10-18"
+      ],
+      "observations": 1,
+      "confidence": 0.8
+    },
+    {
+      "source": "CONDITION_hyperlipidemia",
+      "target": "MEDICATION_atorvastatin",
+      "relation": "managed_by",
+      "established": "2022-06-15",
+      "last_observed": "2022-06-15",
+      "observed_dates": [
+        "2022-06-15"
+      ],
+      "observations": 1,
+      "confidence": 0.9
+    },
+    {
+      "source": "MEDICATION_atorvastatin",
+      "target": "CONDITION_hypertension",
+      "relation": "improves",
+      "established": "2023-10-18",
+      "last_observed": "2023-10-18",
+      "observed_dates": [
+        "2023-10-18"
+      ],
+      "observations": 1,
+      "confidence": 0.9
+    },
+    {
+      "source": "LAB_VALUE_hba1c",
+      "target": "CONDITION_hypertension",
+      "relation": "worsens",
+      "established": "2023-02-22",
+      "last_observed": "2023-02-22",
+      "observed_dates": [
+        "2023-02-22"
+      ],
+      "observations": 1,
+      "confidence": 0.8
+    },
+    {
+      "source": "LAB_VALUE_egfr",
+      "target": "CONDITION_hypertension",
+      "relation": "worsens",
+      "established": "2023-02-22",
+      "last_observed": "2023-02-22",
+      "observed_dates": [
+        "2023-02-22"
+      ],
+      "observations": 1,
+      "confidence": 0.7
+    },
+    {
+      "source": "MEDICATION_losartan",
+      "target": "CONDITION_hypertension",
+      "relation": "improves",
+      "established": "2023-10-18",
+      "last_observed": "2023-10-18",
+      "observed_dates": [
+        "2023-10-18"
+      ],
+      "observations": 1,
+      "confidence": 0.9
+    }
+  ]
+}

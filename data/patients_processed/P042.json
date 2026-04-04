@@ -13,8 +13,8 @@
         "LDL": 130
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Amlodipine 5mg QD"
+        "metformin",
+        "amlodipine qd"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -27,72 +27,28 @@
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [],
+        "dosages": [],
         "symptoms": [
           "Fatigue",
           "Weight gain"
         ],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "managed_by",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "managed_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "measured_by",
-            "object": "BP_systolic",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "measured_by",
-            "object": "BP",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "measured_by",
-            "object": "HbA1c",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "measured_by",
-            "object": "eGFR",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "Fatigue",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "Weight gain",
-            "confidence": 0.7
-          }
-        ],
+        "relationships": [],
         "lab_values": {
           "HbA1c": 7.2,
-          "eGFR": 72,
-          "BP_systolic": 140
+          "BP_systolic": 140,
+          "eGFR": 72
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "5mg"
+      ]
     },
     {
       "visit_id": "V2",
@@ -106,10 +62,10 @@
         "LDL": 160
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Amlodipine 5mg QD",
-        "Atorvastatin 20mg QD",
-        "Statin therapy"
+        "metformin",
+        "amlodipine qd",
+        "atorvastatin qd",
+        "statin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -128,49 +84,33 @@
           "Coronary Artery Disease"
         ],
         "medications": [
-          "Statin therapy"
+          "statin"
         ],
+        "dosages": [],
         "symptoms": [
-          "Chest pain",
-          "Shortness of breath"
+          "Shortness of breath",
+          "Chest pain"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Statin therapy",
+            "subject": "Coronary Artery Disease",
             "predicate": "managed_by",
-            "object": "Coronary Artery Disease",
+            "object": "statin",
             "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "HbA1c",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "improves",
-            "object": "HbA1c",
-            "confidence": 0.7
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "worsens",
-            "object": "Coronary Artery Disease",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Chest pain",
-            "predicate": "has_symptom",
-            "object": "Shortness of breath",
-            "confidence": 0.5
           }
         ],
         "lab_values": {
-          "HbA1c": 8.2
+          "HbA1c": 8.2,
+          "BP_systolic": 130,
+          "BP_diastolic": 80
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "5mg",
+        "20mg"
+      ]
     },
     {
       "visit_id": "V3",
@@ -184,10 +124,11 @@
         "LDL": 140
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Amlodipine 5mg QD",
-        "Atorvastatin 20mg QD",
-        "Lisinopril 5mg QD"
+        "metformin",
+        "amlodipine qd",
+        "atorvastatin qd",
+        "lisinopril qd",
+        "ace-inhibitor"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -207,14 +148,40 @@
         "conditions": [
           "Chronic Kidney Disease"
         ],
-        "medications": [],
+        "medications": [
+          "ace-inhibitor"
+        ],
+        "dosages": [],
         "symptoms": [
           "Edema"
         ],
         "procedures": [],
-        "relationships": [],
-        "lab_values": {}
-      }
+        "relationships": [
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "managed_by",
+            "object": "ace-inhibitor",
+            "confidence": 0.9
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.5,
+          "BP_systolic": 150,
+          "BP_diastolic": 95,
+          "eGFR": 58
+        }
+      },
+      "dosages": [
+        "500mg BID",
+        "5mg",
+        "20mg"
+      ]
     },
     {
       "visit_id": "V4",
@@ -228,19 +195,18 @@
         "LDL": 150
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Losartan 50mg QD",
-        "Atorvastatin 20mg QD",
-        "Lisinopril 5mg QD",
-        "BP medication"
+        "metformin",
+        "losartan qd",
+        "atorvastatin qd",
+        "lisinopril qd",
+        "bp medication"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
         "Coronary Artery Disease",
-        "Chronic Kidney Disease",
-        "Diabetes"
+        "Chronic Kidney Disease"
       ],
       "symptoms": [
         "Fatigue",
@@ -253,12 +219,12 @@
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Diabetes"
+          "Type 2 Diabetes"
         ],
         "medications": [
-          "BP medication"
+          "bp medication"
         ],
+        "dosages": [],
         "symptoms": [
           "Dizziness",
           "Confusion"
@@ -266,54 +232,24 @@
         "procedures": [],
         "relationships": [
           {
-            "subject": "BP medication",
-            "predicate": "managed_by",
-            "object": "BP",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "BP medication",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "BP medication",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "improves",
-            "object": "BP medication",
-            "confidence": 0.7
-          },
-          {
             "subject": "HbA1c",
             "predicate": "worsens",
-            "object": "BP medication",
+            "object": "Type 2 Diabetes",
             "confidence": 0.7
-          },
-          {
-            "subject": "Dizziness",
-            "predicate": "has_symptom",
-            "object": "BP medication",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Confusion",
-            "predicate": "has_symptom",
-            "object": "BP medication",
-            "confidence": 0.6
           }
         ],
         "lab_values": {
+          "HbA1c": 8.5,
           "BP_systolic": 140,
-          "BP_diastolic": 90,
-          "HbA1c": 8.5
+          "BP_diastolic": 90
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "50mg",
+        "20mg",
+        "5mg"
+      ]
     }
   ]
 }

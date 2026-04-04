@@ -13,8 +13,8 @@
         "LDL": 150
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 20mg OD"
+        "metformin",
+        "lisinopril od"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -23,32 +23,45 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria"
+        "Frequent urination"
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [],
+        "dosages": [],
         "symptoms": [
-          "Polyuria",
-          "Fatigue"
+          "Fatigue",
+          "Frequent urination"
         ],
         "procedures": [],
         "relationships": [
           {
             "subject": "Type 2 Diabetes",
-            "predicate": "managed_by",
-            "object": "Hypertension",
-            "confidence": 0.8
+            "predicate": "has_symptom",
+            "object": "Fatigue",
+            "confidence": 0.9
           },
           {
             "subject": "Type 2 Diabetes",
-            "predicate": "managed_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.8
+            "predicate": "has_symptom",
+            "object": "Frequent urination",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Fatigue",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "has_symptom",
+            "object": "Fatigue",
+            "confidence": 0.7
           },
           {
             "subject": "Type 2 Diabetes",
@@ -73,18 +86,6 @@
             "predicate": "measured_by",
             "object": "LDL",
             "confidence": 0.9
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "Fatigue",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "Polyuria",
-            "confidence": 0.7
           }
         ],
         "lab_values": {
@@ -93,7 +94,11 @@
           "BP_diastolic": 90,
           "LDL": 150.0
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "20mg"
+      ]
     },
     {
       "visit_id": "V2",
@@ -107,29 +112,29 @@
         "LDL": 170
       },
       "medications": [
-        "Metformin 1000mg BID",
-        "Lisinopril 20mg OD",
-        "Atorvastatin 20mg OD"
+        "metformin",
+        "lisinopril od",
+        "atorvastatin od"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
-        "Chronic Kidney Disease (CKD) stage 1",
-        "Diabetes"
+        "Chronic Kidney Disease (Ckd) Stage 1"
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Nocturia",
         "Increased urination during the day",
         "Increased urination"
       ],
       "extracted": {
         "conditions": [
-          "Diabetes"
+          "Type 2 Diabetes"
         ],
         "medications": [],
+        "dosages": [],
         "symptoms": [
           "Nocturia",
           "Increased urination"
@@ -137,33 +142,15 @@
         "procedures": [],
         "relationships": [
           {
-            "subject": "Diabetes",
+            "subject": "Type 2 Diabetes",
             "predicate": "worsens",
             "object": "Nocturia",
-            "confidence": 0.8
+            "confidence": 0.9
           },
           {
-            "subject": "Diabetes",
+            "subject": "Type 2 Diabetes",
             "predicate": "worsens",
             "object": "Increased urination",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Diabetes",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Diabetes",
-            "confidence": 0.9
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "Diabetes",
             "confidence": 0.9
           }
         ],
@@ -173,7 +160,11 @@
           "LDL": 170.0,
           "HbA1c": 8.2
         }
-      }
+      },
+      "dosages": [
+        "1000mg BID",
+        "20mg"
+      ]
     },
     {
       "visit_id": "V3",
@@ -187,21 +178,21 @@
         "LDL": 160
       },
       "medications": [
-        "Metformin 1000mg BID",
-        "Lisinopril 40mg OD",
-        "Atorvastatin 20mg OD",
-        "Furosemide 20mg OD"
+        "metformin",
+        "lisinopril od",
+        "atorvastatin od",
+        "furosemide od"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
-        "Chronic Kidney Disease (CKD) stage 2",
+        "Chronic Kidney Disease (Ckd) Stage 2",
         "Chronic Kidney Disease"
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Nocturia",
         "Increased urination during the day",
         "Edema in lower extremities",
@@ -209,20 +200,35 @@
       ],
       "extracted": {
         "conditions": [
-          "Chronic Kidney Disease"
+          "Chronic Kidney Disease",
+          "Type 2 Diabetes"
         ],
         "medications": [],
+        "dosages": [],
         "symptoms": [
           "Edema"
         ],
         "procedures": [],
-        "relationships": [],
+        "relationships": [
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "Edema",
+            "confidence": 0.8
+          }
+        ],
         "lab_values": {
           "BP_systolic": 152,
           "BP_diastolic": 96,
-          "LDL": 160.0
+          "LDL": 160.0,
+          "HbA1c": 8.0
         }
-      }
+      },
+      "dosages": [
+        "1000mg BID",
+        "40mg",
+        "20mg"
+      ]
     },
     {
       "visit_id": "V4",
@@ -236,23 +242,23 @@
         "LDL": 180
       },
       "medications": [
-        "Metformin 1500mg BID",
-        "Lisinopril 40mg OD",
-        "Atorvastatin 40mg OD",
-        "Furosemide 40mg OD",
-        "Losartan 50mg OD"
+        "metformin",
+        "lisinopril od",
+        "atorvastatin od",
+        "furosemide od",
+        "losartan od"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
-        "Chronic Kidney Disease (CKD) stage 2",
-        "Coronary Artery Disease (CAD)",
+        "Chronic Kidney Disease (Ckd) Stage 2",
+        "Coronary Artery Disease (Cad)",
         "Chronic Kidney Disease"
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Nocturia",
         "Increased urination during the day",
         "Edema in lower extremities",
@@ -264,47 +270,18 @@
           "Chronic Kidney Disease"
         ],
         "medications": [],
+        "dosages": [],
         "symptoms": [
-          "Edema",
-          "Shortness of breath"
+          "Shortness of breath",
+          "Edema"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Chronic Kidney Disease",
+            "subject": "HbA1c",
             "predicate": "worsens",
-            "object": "HbA1c",
+            "object": "Chronic Kidney Disease",
             "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "worsens",
-            "object": "BP_systolic",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "worsens",
-            "object": "BP_diastolic",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "worsens",
-            "object": "LDL",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "worsens",
-            "object": "Edema",
-            "confidence": 0.7
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "worsens",
-            "object": "Shortness of breath",
-            "confidence": 0.7
           }
         ],
         "lab_values": {
@@ -313,7 +290,12 @@
           "LDL": 180.0,
           "HbA1c": 8.5
         }
-      }
+      },
+      "dosages": [
+        "1500mg BID",
+        "40mg",
+        "50mg"
+      ]
     },
     {
       "visit_id": "V5",
@@ -327,30 +309,31 @@
         "LDL": 165
       },
       "medications": [
-        "Metformin 2000mg BID",
-        "Lisinopril 80mg OD",
-        "Atorvastatin 80mg OD",
-        "Furosemide 80mg OD",
-        "Losartan 100mg OD",
-        "Eplerenone 50mg OD",
+        "metformin",
+        "lisinopril od",
+        "atorvastatin od",
+        "furosemide od",
+        "losartan od",
+        "eplerenone od",
         "statin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
-        "Chronic Kidney Disease (CKD) stage 2",
-        "Coronary Artery Disease (CAD)",
+        "Chronic Kidney Disease (Ckd) Stage 2",
+        "Coronary Artery Disease (Cad)",
         "Heart Failure",
         "Coronary Artery Disease"
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Nocturia",
         "Increased urination during the day",
         "Edema in lower extremities",
-        "Shortness of breath"
+        "Shortness of breath",
+        "Chest pain"
       ],
       "extracted": {
         "conditions": [
@@ -360,27 +343,18 @@
         "medications": [
           "statin"
         ],
-        "symptoms": [],
+        "dosages": [],
+        "symptoms": [
+          "Chest pain"
+        ],
         "procedures": [
           "hospitalization"
         ],
         "relationships": [
           {
-            "subject": "statin",
-            "predicate": "managed_by",
-            "object": "LDL",
-            "confidence": 0.9
-          },
-          {
-            "subject": "statin",
-            "predicate": "contraindicated_with",
-            "object": "HbA1c",
-            "confidence": 0.8
-          },
-          {
-            "subject": "heart failure",
+            "subject": "BP_systolic",
             "predicate": "worsens",
-            "object": "CAD",
+            "object": "Heart Failure",
             "confidence": 0.7
           }
         ],
@@ -390,7 +364,13 @@
           "LDL": 165.0,
           "HbA1c": 8.2
         }
-      }
+      },
+      "dosages": [
+        "2000mg BID",
+        "80mg",
+        "100mg",
+        "50mg"
+      ]
     }
   ]
 }

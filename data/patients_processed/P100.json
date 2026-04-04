@@ -13,13 +13,9 @@
         "LDL": 130
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg daily",
-        "Atorvastatin 20mg daily",
         "metformin",
         "lisinopril",
-        "500mg",
-        "10mg"
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -34,76 +30,61 @@
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [
           "metformin",
-          "lisinopril",
-          "500mg",
-          "10mg"
+          "lisinopril"
+        ],
+        "dosages": [
+          "500mg BID",
+          "10mg daily"
         ],
         "symptoms": [
-          "Polydipsia",
           "Fatigue",
-          "Blurred Vision"
+          "Polydipsia",
+          "Increased thirst",
+          "Blurred vision"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "Lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "lisinopril",
             "confidence": 0.9
           },
           {
-            "subject": "HbA1c",
+            "subject": "Type 2 Diabetes",
             "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
+            "object": "HbA1c",
             "confidence": 0.8
           },
           {
-            "subject": "BP",
+            "subject": "Hypertension",
             "predicate": "measured_by",
-            "object": "Hypertension",
+            "object": "BP_systolic",
             "confidence": 0.8
           },
           {
-            "subject": "eGFR",
+            "subject": "Type 2 Diabetes",
             "predicate": "measured_by",
-            "object": "Hyperlipidemia",
+            "object": "eGFR",
             "confidence": 0.8
           },
           {
-            "subject": "LDL",
+            "subject": "Hyperlipidemia",
             "predicate": "measured_by",
-            "object": "Hyperlipidemia",
+            "object": "LDL",
             "confidence": 0.8
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Polydipsia",
-            "predicate": "has_symptom",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Blurred Vision",
-            "predicate": "has_symptom",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.7
           }
         ],
         "lab_values": {
@@ -113,7 +94,12 @@
           "eGFR": 72,
           "LDL": 130
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg daily",
+        "20mg daily"
+      ]
     },
     {
       "visit_id": "V2",
@@ -127,16 +113,10 @@
         "LDL": 140
       },
       "medications": [
-        "Metformin 850mg BID",
-        "Lisinopril 20mg daily",
-        "Atorvastatin 40mg daily",
-        "Furosemide 20mg daily",
         "metformin",
         "lisinopril",
         "atorvastatin",
-        "850mg",
-        "20mg",
-        "40mg"
+        "furosemide"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -153,128 +133,77 @@
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Hypertension",
           "Chronic Kidney Disease"
         ],
         "medications": [
           "metformin",
           "lisinopril",
-          "atorvastatin",
-          "850mg",
-          "20mg",
-          "40mg"
+          "atorvastatin"
+        ],
+        "dosages": [
+          "Metformin 850mg BID",
+          "Lisinopril 20mg daily",
+          "Atorvastatin 40mg daily"
         ],
         "symptoms": [
-          "Polydipsia",
-          "Shortness of breath",
           "Fatigue",
+          "Shortness of breath",
+          "Polydipsia",
+          "Increased thirst",
           "Blurred vision"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Lisinopril",
-            "predicate": "managed_by",
-            "object": "Hypertension",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Atorvastatin",
-            "predicate": "managed_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Metformin",
-            "predicate": "contraindicated_with",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "worsens",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Hyperlipidemia",
-            "predicate": "worsens",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "has_symptom",
-            "object": "Polydipsia",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "has_symptom",
-            "object": "Fatigue",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "has_symptom",
-            "object": "Blurred vision",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
             "subject": "Hypertension",
-            "predicate": "has_symptom",
-            "object": "Shortness of breath",
+            "predicate": "managed_by",
+            "object": "lisinopril",
             "confidence": 0.9
           },
           {
             "subject": "Hyperlipidemia",
-            "predicate": "has_symptom",
-            "object": "Shortness of breath",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Chronic Kidney Disease",
-            "predicate": "has_symptom",
-            "object": "Shortness of breath",
-            "confidence": 0.8
+            "predicate": "managed_by",
+            "object": "atorvastatin",
+            "confidence": 0.9
           },
           {
             "subject": "Type 2 Diabetes",
             "predicate": "measured_by",
             "object": "HbA1c",
-            "confidence": 0.9
+            "confidence": 0.8
           },
           {
             "subject": "Hypertension",
             "predicate": "measured_by",
-            "object": "BP",
-            "confidence": 0.9
+            "object": "BP_systolic",
+            "confidence": 0.8
           },
           {
-            "subject": "Hyperlipidemia",
+            "subject": "Hypertension",
             "predicate": "measured_by",
-            "object": "LDL",
-            "confidence": 0.9
+            "object": "BP_diastolic",
+            "confidence": 0.8
           },
           {
             "subject": "Chronic Kidney Disease",
             "predicate": "measured_by",
             "object": "eGFR",
-            "confidence": 0.9
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "measured_by",
+            "object": "LDL",
+            "confidence": 0.8
           }
         ],
         "lab_values": {
@@ -284,7 +213,15 @@
           "eGFR": 60,
           "LDL": 140
         }
-      }
+      },
+      "dosages": [
+        "850mg BID",
+        "20mg daily",
+        "40mg daily",
+        "Metformin 850mg BID",
+        "Lisinopril 20mg daily",
+        "Atorvastatin 40mg daily"
+      ]
     },
     {
       "visit_id": "V3",
@@ -295,21 +232,18 @@
         "BP_systolic": 148,
         "BP_diastolic": 88,
         "eGFR": 55,
-        "LDL": 120
+        "LDL": 120,
+        "Creatinine": null,
+        "Glucose": null,
+        "Potassium": null,
+        "Sodium": null
       },
       "medications": [
-        "Metformin 1000mg BID",
-        "Lisinopril 40mg daily",
-        "Atorvastatin 80mg daily",
-        "Furosemide 40mg daily",
-        "Aspirin 81mg daily",
         "metformin",
         "lisinopril",
         "atorvastatin",
-        "1000mg",
-        "40mg",
-        "80mg",
-        "Furosemide"
+        "furosemide",
+        "aspirin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -330,27 +264,29 @@
       ],
       "extracted": {
         "conditions": [
-          "Chronic Kidney Disease",
+          "Hypertension",
           "Type 2 Diabetes",
-          "Coronary Artery Disease",
           "Hyperlipidemia",
-          "Hypertension"
+          "Chronic Kidney Disease",
+          "Coronary Artery Disease"
         ],
         "medications": [
           "metformin",
           "lisinopril",
           "atorvastatin",
-          "1000mg",
-          "40mg",
-          "80mg",
-          "Furosemide"
+          "furosemide"
+        ],
+        "dosages": [
+          "1000mg BID",
+          "40mg daily",
+          "80mg daily"
         ],
         "symptoms": [
-          "Dizziness",
-          "Polydipsia",
           "Fatigue",
-          "Chest pain",
           "Shortness of breath",
+          "Chest pain",
+          "Polydipsia",
+          "Dizziness",
           "Increased thirst",
           "Blurred vision",
           "Muscle weakness"
@@ -358,76 +294,94 @@
         "procedures": [],
         "relationships": [
           {
-            "subject": "Metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "Lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "lisinopril",
             "confidence": 0.9
           },
           {
-            "subject": "Atorvastatin",
+            "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Hyperlipidemia",
+            "object": "atorvastatin",
             "confidence": 0.9
           },
           {
-            "subject": "Furosemide",
+            "subject": "Chronic Kidney Disease",
             "predicate": "managed_by",
-            "object": "Chronic Kidney Disease",
+            "object": "furosemide",
             "confidence": 0.9
           },
           {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
+            "subject": "metformin",
+            "predicate": "contraindicated_with",
+            "object": "furosemide",
             "confidence": 0.8
           },
           {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.8
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Fatigue",
+            "subject": "Type 2 Diabetes",
             "predicate": "has_symptom",
-            "object": "Muscle weakness",
-            "confidence": 0.7
+            "object": "Fatigue",
+            "confidence": 0.8
           },
           {
-            "subject": "Fatigue",
+            "subject": "Type 2 Diabetes",
             "predicate": "has_symptom",
-            "object": "Dizziness",
-            "confidence": 0.7
+            "object": "Increased thirst",
+            "confidence": 0.8
           },
           {
-            "subject": "Increased thirst",
+            "subject": "Type 2 Diabetes",
             "predicate": "has_symptom",
             "object": "Blurred vision",
-            "confidence": 0.7
+            "confidence": 0.8
           },
           {
-            "subject": "Chest pain",
-            "predicate": "worsens",
-            "object": "Coronary Artery Disease",
-            "confidence": 0.6
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Dizziness",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Chest pain",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Shortness of breath",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "has_symptom",
+            "object": "Chest pain",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "has_symptom",
+            "object": "Chest pain",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "has_symptom",
+            "object": "Muscle weakness",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "has_symptom",
+            "object": "Chest pain",
+            "confidence": 0.8
           }
         ],
         "lab_values": {
@@ -435,9 +389,19 @@
           "BP_systolic": 148,
           "BP_diastolic": 88,
           "eGFR": 55,
-          "LDL": 120
+          "LDL": 120,
+          "Creatinine": null,
+          "Glucose": null,
+          "Potassium": null,
+          "Sodium": null
         }
-      }
+      },
+      "dosages": [
+        "1000mg BID",
+        "40mg daily",
+        "80mg daily",
+        "81mg daily"
+      ]
     }
   ]
 }

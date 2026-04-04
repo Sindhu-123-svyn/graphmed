@@ -10,16 +10,11 @@
         "BP_systolic": 140,
         "BP_diastolic": 90,
         "eGFR": 72,
-        "LDL": 130,
-        "Blood Pressure": "140/90 mmHg"
+        "LDL": 130
       },
       "medications": [
-        "Metoprolol 50mg daily",
-        "Simvastatin 20mg daily",
         "metoprolol",
-        "simvastatin",
-        "50mg",
-        "20mg"
+        "simvastatin"
       ],
       "diagnoses": [
         "Hypertension",
@@ -28,62 +23,81 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria"
+        "Frequent urination"
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [
           "metoprolol",
-          "simvastatin",
-          "50mg",
-          "20mg"
+          "simvastatin"
+        ],
+        "dosages": [
+          "50mg daily",
+          "20mg daily"
         ],
         "symptoms": [
-          "Polyuria",
-          "Fatigue"
+          "Fatigue",
+          "Frequent urination"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Metoprolol",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "metoprolol",
             "confidence": 0.9
           },
           {
-            "subject": "Simvastatin",
+            "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Hyperlipidemia",
+            "object": "simvastatin",
             "confidence": 0.9
           },
           {
-            "subject": "Metoprolol",
-            "predicate": "contraindicated_with",
-            "object": "Type 2 Diabetes",
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "metoprolol",
             "confidence": 0.8
           },
           {
             "subject": "Hypertension",
-            "predicate": "worsens",
+            "predicate": "has_symptom",
+            "object": "Fatigue",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Frequent urination",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "has_symptom",
             "object": "Fatigue",
             "confidence": 0.7
           },
           {
-            "subject": "Hyperlipidemia",
-            "predicate": "worsens",
-            "object": "Polyuria",
+            "subject": "Type 2 Diabetes",
+            "predicate": "has_symptom",
+            "object": "Frequent urination",
             "confidence": 0.7
           }
         ],
         "lab_values": {
           "HbA1c": 7.2,
-          "Blood Pressure": "140/90 mmHg"
+          "BP_systolic": 140,
+          "BP_diastolic": 90
         }
-      }
+      },
+      "dosages": [
+        "50mg daily",
+        "20mg daily"
+      ]
     },
     {
       "visit_id": "V2",
@@ -97,11 +111,9 @@
         "LDL": 120
       },
       "medications": [
-        "Metoprolol 50mg daily",
-        "Simvastatin 20mg daily",
-        "Lisinopril 10mg daily",
-        "lisinopril",
-        "10mg"
+        "metoprolol",
+        "simvastatin",
+        "lisinopril"
       ],
       "diagnoses": [
         "Hypertension",
@@ -111,8 +123,7 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
-        "Dyspnea",
+        "Frequent urination",
         "Shortness of breath"
       ],
       "extracted": {
@@ -121,57 +132,41 @@
           "Chronic Kidney Disease"
         ],
         "medications": [
-          "lisinopril",
-          "10mg"
+          "lisinopril"
+        ],
+        "dosages": [
+          "10mg daily"
         ],
         "symptoms": [
-          "Shortness of breath",
-          "Fatigue"
+          "Fatigue",
+          "Shortness of breath"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "lisinopril",
             "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Patient P096",
-            "confidence": 0.8
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "Patient P096",
-            "confidence": 0.8
           },
           {
             "subject": "Hypertension",
             "predicate": "worsens",
             "object": "Chronic Kidney Disease",
             "confidence": 0.7
-          },
-          {
-            "subject": "Lisinopril",
-            "predicate": "contraindicated_with",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Lisinopril",
-            "predicate": "improves",
-            "object": "Hypertension",
-            "confidence": 0.9
           }
         ],
         "lab_values": {
           "HbA1c": 6.8,
-          "eGFR": "worsening"
+          "BP_systolic": 150,
+          "BP_diastolic": 95
         }
-      }
+      },
+      "dosages": [
+        "50mg daily",
+        "20mg daily",
+        "10mg daily"
+      ]
     },
     {
       "visit_id": "V3",
@@ -182,17 +177,13 @@
         "BP_systolic": 160,
         "BP_diastolic": 100,
         "eGFR": 58,
-        "LDL": 110,
-        "name": "HbA1c",
-        "value": 7.5
+        "LDL": 110
       },
       "medications": [
-        "Metoprolol 50mg daily",
-        "Simvastatin 20mg daily",
-        "Lisinopril 20mg daily",
-        "Furosemide 40mg daily",
-        "40mg",
-        "Furosemide 40mg"
+        "metoprolol",
+        "simvastatin",
+        "lisinopril",
+        "furosemide"
       ],
       "diagnoses": [
         "Hypertension",
@@ -202,8 +193,8 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
-        "Dyspnea",
+        "Frequent urination",
+        "Shortness of breath",
         "Orthopnea",
         "Edema"
       ],
@@ -212,51 +203,28 @@
           "Hypertension"
         ],
         "medications": [
-          "40mg",
-          "Furosemide 40mg"
+          "furosemide"
+        ],
+        "dosages": [
+          "40mg daily"
         ],
         "symptoms": [
           "Edema",
           "Orthopnea"
         ],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "Furosemide 40mg",
-            "predicate": "managed_by",
-            "object": "edema management",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "worsens",
-            "object": "kidney function",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "lab test",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "worsens",
-            "object": "HbA1c",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Furosemide 40mg",
-            "predicate": "contraindicated_with",
-            "object": "Hypertension",
-            "confidence": 0.5
-          }
-        ],
+        "relationships": [],
         "lab_values": {
-          "name": "HbA1c",
-          "value": 7.5
+          "HbA1c": 7.5,
+          "BP_systolic": "160 mmHg",
+          "BP_diastolic": "100 mmHg"
         }
-      }
+      },
+      "dosages": [
+        "50mg daily",
+        "20mg daily",
+        "40mg daily"
+      ]
     },
     {
       "visit_id": "V4",
@@ -267,41 +235,39 @@
         "BP_systolic": 155,
         "BP_diastolic": 105,
         "eGFR": 45,
-        "LDL": 100,
-        "Blood pressure": "155/105 mmHg"
+        "LDL": 100
       },
       "medications": [
-        "Metoprolol 50mg daily",
-        "Simvastatin 20mg daily",
-        "Lisinopril 20mg daily",
-        "Furosemide 40mg daily",
-        "Aspirin 81mg daily",
-        "81mg",
-        "Aspirin"
+        "metoprolol",
+        "simvastatin",
+        "lisinopril",
+        "furosemide",
+        "aspirin"
       ],
       "diagnoses": [
         "Hypertension",
         "Hyperlipidemia",
         "Type 2 Diabetes",
         "Chronic Kidney Disease",
-        "Kidney disease"
+        "Kidney Disease"
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
-        "Dyspnea",
+        "Frequent urination",
+        "Shortness of breath",
         "Orthopnea",
-        "Paroxysmal nocturnal dyspnea",
-        "Shortness of breath"
+        "Paroxysmal nocturnal dyspnea"
       ],
       "extracted": {
         "conditions": [
           "Hypertension",
-          "Kidney disease"
+          "Kidney Disease"
         ],
         "medications": [
-          "81mg",
-          "Aspirin"
+          "aspirin"
+        ],
+        "dosages": [
+          "81mg daily"
         ],
         "symptoms": [
           "Shortness of breath",
@@ -310,47 +276,30 @@
         "procedures": [],
         "relationships": [
           {
-            "subject": "Aspirin",
-            "predicate": "managed_by",
-            "object": "antiplatelet therapy",
-            "confidence": 0.9
-          },
-          {
             "subject": "Hypertension",
-            "predicate": "worsens",
-            "object": "Kidney disease",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Kidney function",
-            "predicate": "measured_by",
-            "object": "eGFR",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Blood pressure",
-            "predicate": "measured_by",
-            "object": "Blood pressure",
+            "predicate": "has_symptom",
+            "object": "Shortness of breath",
             "confidence": 0.6
           },
           {
-            "subject": "Aspirin",
-            "predicate": "contraindicated_with",
-            "object": "None",
-            "confidence": 0.5
-          },
-          {
-            "subject": "Aspirin",
-            "predicate": "improves",
-            "object": "Hypertension",
-            "confidence": 0.4
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Paroxysmal nocturnal dyspnea",
+            "confidence": 0.6
           }
         ],
         "lab_values": {
           "eGFR": 45,
-          "Blood pressure": "155/105 mmHg"
+          "BP_systolic": 155,
+          "BP_diastolic": 105
         }
-      }
+      },
+      "dosages": [
+        "50mg daily",
+        "20mg daily",
+        "40mg daily",
+        "81mg daily"
+      ]
     }
   ]
 }

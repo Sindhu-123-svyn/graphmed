@@ -10,15 +10,19 @@
         "BP_systolic": 145,
         "BP_diastolic": 85,
         "eGFR": 70,
-        "LDL": 180
+        "LDL": 180,
+        "HDL": null,
+        "Creatinine": null,
+        "Glucose": null,
+        "Potassium": null,
+        "Sodium": null
       },
       "medications": [
-        "Metformin 500mg BD",
-        "Amlodipine 5mg OD",
-        "Atorvastatin 20mg OD",
-        "Lifestyle modifications",
-        "Medication for hypertension",
-        "Medication for hyperlipidemia"
+        "metformin bd",
+        "amlodipine od",
+        "atorvastatin od",
+        "hypertension medication",
+        "hyperlipidemia medication"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -26,53 +30,64 @@
         "Hyperlipidemia"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
-        "Fatigue"
+        "Fatigue",
+        "Elevated bp"
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [
-          "Lifestyle modifications",
-          "Medication for hypertension",
-          "Medication for hyperlipidemia"
+          "hypertension medication",
+          "hyperlipidemia medication"
         ],
-        "symptoms": [],
+        "dosages": [],
+        "symptoms": [
+          "Elevated bp"
+        ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Medication for hypertension",
-            "predicate": "managed_by",
-            "object": "Lifestyle modifications",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Medication for hypertension",
-            "predicate": "measured_by",
-            "object": "BP",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Medication for hyperlipidemia",
-            "predicate": "measured_by",
-            "object": "BP",
-            "confidence": 0.7
-          },
-          {
             "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "HbA1c",
-            "confidence": 0.9
+            "predicate": "has_symptom",
+            "object": "Elevated bp",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Elevated bp",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "has_symptom",
+            "object": "Elevated bp",
+            "confidence": 0.7
           }
         ],
         "lab_values": {
-          "HbA1c": "above target"
+          "HbA1c": "slightly above target",
+          "BP_systolic": "elevated",
+          "BP_diastolic": null,
+          "eGFR": null,
+          "LDL": null,
+          "HDL": null,
+          "Creatinine": null,
+          "Glucose": null,
+          "Potassium": null,
+          "Sodium": null
         }
-      }
+      },
+      "dosages": [
+        "500mg",
+        "5mg",
+        "20mg"
+      ]
     },
     {
       "visit_id": "V2",
@@ -86,12 +101,12 @@
         "LDL": 160
       },
       "medications": [
-        "Metformin 750mg BD",
-        "Amlodipine 5mg OD",
-        "Atorvastatin 20mg OD",
-        "Furosemide 20mg OD",
-        "Metformin",
-        "Diuretic"
+        "metformin bd",
+        "amlodipine od",
+        "atorvastatin od",
+        "furosemide od",
+        "metformin",
+        "diuretic"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -100,58 +115,48 @@
         "Volume Depletion"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Fatigue",
         "Edema"
       ],
       "extracted": {
         "conditions": [
-          "Type 2 Diabetes",
-          "Hypertension"
+          "Hypertension",
+          "Type 2 Diabetes"
         ],
         "medications": [
-          "Metformin",
-          "Diuretic"
+          "metformin",
+          "diuretic"
         ],
+        "dosages": [],
         "symptoms": [],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "Diuretic",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Diuretic",
-            "confidence": 0.7
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "contraindicated_with",
-            "object": "HbA1c worsened",
-            "confidence": 0.5
+            "object": "diuretic",
+            "confidence": 0.9
           }
         ],
         "lab_values": {
-          "HbA1c": "worsened"
+          "HbA1c": "worsened",
+          "BP_systolic": "improved",
+          "BP_diastolic": "improved"
         }
-      }
+      },
+      "dosages": [
+        "750mg",
+        "5mg",
+        "20mg"
+      ]
     },
     {
       "visit_id": "V3",
@@ -162,15 +167,20 @@
         "BP_systolic": 155,
         "BP_diastolic": 90,
         "eGFR": 65,
-        "LDL": 140
+        "LDL": 140,
+        "HDL": null,
+        "Creatinine": null,
+        "Glucose": null,
+        "Potassium": null,
+        "Sodium": null
       },
       "medications": [
-        "Metformin 1000mg BD",
-        "Amlodipine 10mg OD",
-        "Atorvastatin 20mg OD",
-        "Furosemide 20mg OD",
-        "Metformin",
-        "Lisinopril"
+        "metformin bd",
+        "amlodipine od",
+        "atorvastatin od",
+        "furosemide od",
+        "metformin",
+        "losartan"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -180,53 +190,56 @@
         "Kidney Disease"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Fatigue",
         "Edema",
-        "Dyspnea"
+        "Shortness of breath"
       ],
       "extracted": {
         "conditions": [
-          "Type 2 Diabetes",
-          "Hypertension"
+          "Hypertension",
+          "Type 2 Diabetes"
         ],
         "medications": [
-          "Metformin",
-          "Lisinopril"
+          "metformin",
+          "losartan"
         ],
+        "dosages": [],
         "symptoms": [],
         "procedures": [],
         "relationships": [
           {
-            "subject": "BP",
-            "predicate": "worsens",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "improves",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "losartan",
             "confidence": 0.9
           },
           {
-            "subject": "Metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "metformin",
             "confidence": 0.9
           }
         ],
         "lab_values": {
-          "HbA1c": "improved slightly"
+          "HbA1c": "improved slightly",
+          "BP_systolic": "worsened",
+          "BP_diastolic": null,
+          "eGFR": null,
+          "LDL": null,
+          "HDL": null,
+          "Creatinine": null,
+          "Glucose": null,
+          "Potassium": null,
+          "Sodium": null
         }
-      }
+      },
+      "dosages": [
+        "1000mg",
+        "10mg",
+        "20mg"
+      ]
     },
     {
       "visit_id": "V4",
@@ -240,11 +253,11 @@
         "LDL": 120
       },
       "medications": [
-        "Metformin 1500mg BD",
-        "Amlodipine 10mg OD",
-        "Atorvastatin 20mg OD",
-        "Furosemide 20mg OD",
-        "Sitagliptin 100mg OD",
+        "metformin bd",
+        "amlodipine od",
+        "atorvastatin od",
+        "furosemide od",
+        "sitagliptin od",
         "metformin"
       ],
       "diagnoses": [
@@ -256,11 +269,11 @@
         "Chronic Kidney Disease"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Fatigue",
         "Edema",
-        "Dyspnea",
+        "Shortness of breath",
         "Nausea"
       ],
       "extracted": {
@@ -271,44 +284,30 @@
         "medications": [
           "metformin"
         ],
+        "dosages": [],
         "symptoms": [],
         "procedures": [],
         "relationships": [
           {
-            "subject": "metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "contraindicated_with",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.7
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
+            "object": "metformin",
             "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.6
           }
         ],
         "lab_values": {
-          "HbA1c": "worsened"
+          "HbA1c": "high",
+          "BP_systolic": "low",
+          "BP_diastolic": "low",
+          "eGFR": "low"
         }
-      }
+      },
+      "dosages": [
+        "1500mg",
+        "10mg",
+        "20mg",
+        "100mg"
+      ]
     }
   ]
 }

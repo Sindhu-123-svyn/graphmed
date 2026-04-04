@@ -13,8 +13,8 @@
         "LDL": 130
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg daily"
+        "metformin",
+        "lisinopril"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -28,54 +28,19 @@
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [],
+        "dosages": [],
         "symptoms": [
+          "Fatigue",
           "Polydipsia",
-          "Fatigue"
+          "Increased thirst"
         ],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "managed_by",
-            "object": "closer monitoring",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "measured_by",
-            "object": "HbA1c",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "measured_by",
-            "object": "BP",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Hyperlipidemia",
-            "predicate": "measured_by",
-            "object": "LDL",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "Fatigue",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "Polydipsia",
-            "confidence": 0.7
-          }
-        ],
+        "relationships": [],
         "lab_values": {
           "HbA1c": 7.2,
           "BP_systolic": 140,
@@ -83,7 +48,11 @@
           "eGFR": 72,
           "LDL": 130
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg daily"
+      ]
     },
     {
       "visit_id": "V2",
@@ -97,9 +66,9 @@
         "LDL": 140
       },
       "medications": [
-        "Metformin 1000mg BID",
-        "Lisinopril 20mg daily",
-        "Atorvastatin 20mg daily"
+        "metformin",
+        "lisinopril",
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -115,77 +84,43 @@
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Hypertension",
           "Chronic Kidney Disease"
         ],
         "medications": [],
+        "dosages": [],
         "symptoms": [
-          "Polydipsia",
           "Fatigue",
+          "Polydipsia",
+          "Increased thirst",
           "Increased frequency of urination"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
+            "subject": "BP_systolic",
+            "predicate": "worsens",
             "object": "Hypertension",
-            "confidence": 0.9
+            "confidence": 0.8
           },
           {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.9
+            "subject": "HbA1c",
+            "predicate": "worsens",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
           },
           {
             "subject": "LDL",
-            "predicate": "measured_by",
+            "predicate": "worsens",
             "object": "Hyperlipidemia",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "Fatigue",
             "confidence": 0.8
           },
           {
-            "subject": "Type 2 Diabetes",
+            "subject": "eGFR",
             "predicate": "worsens",
-            "object": "Increased frequency of urination",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "Increased thirst",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "worsens",
-            "object": "BP",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Hyperlipidemia",
-            "predicate": "worsens",
-            "object": "LDL",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Chronic Kidney Disease",
-            "predicate": "worsens",
-            "object": "eGFR",
+            "object": "Chronic Kidney Disease",
             "confidence": 0.8
           }
         ],
@@ -196,7 +131,11 @@
           "eGFR": 60,
           "LDL": 140
         }
-      }
+      },
+      "dosages": [
+        "1000mg BID",
+        "20mg daily"
+      ]
     },
     {
       "visit_id": "V3",
@@ -210,10 +149,11 @@
         "LDL": 130
       },
       "medications": [
-        "Metformin 1000mg BID",
-        "Lisinopril 20mg daily",
-        "Atorvastatin 20mg daily",
-        "Aspirin 81mg daily"
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "aspirin",
+        "medication adjustment"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -229,50 +169,23 @@
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Hypertension",
           "Chronic Kidney Disease"
         ],
-        "medications": [],
+        "medications": [
+          "medication adjustment"
+        ],
+        "dosages": [],
         "symptoms": [
-          "Polydipsia",
+          "Fatigue",
           "Shortness of breath",
-          "Fatigue"
+          "Polydipsia",
+          "Increased thirst"
         ],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "HbA1c",
-            "predicate": "improves",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "improves",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "improves",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.7
-          },
-          {
-            "subject": "LDL",
-            "predicate": "worsens",
-            "object": "Hyperlipidemia",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "managed_by",
-            "object": "medication adjustment",
-            "confidence": 0.5
-          }
-        ],
+        "relationships": [],
         "lab_values": {
           "HbA1c": 7.0,
           "BP_systolic": 130,
@@ -280,7 +193,12 @@
           "eGFR": 70,
           "LDL": 130
         }
-      }
+      },
+      "dosages": [
+        "1000mg BID",
+        "20mg daily",
+        "81mg daily"
+      ]
     },
     {
       "visit_id": "V4",
@@ -294,11 +212,11 @@
         "LDL": 120
       },
       "medications": [
-        "Metformin 1000mg BID",
-        "Lisinopril 20mg daily",
-        "Atorvastatin 20mg daily",
-        "Aspirin 81mg daily",
-        "Clopidogrel 75mg daily",
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "aspirin",
+        "clopidogrel",
         "medication"
       ],
       "diagnoses": [
@@ -316,51 +234,65 @@
       ],
       "extracted": {
         "conditions": [
-          "Chronic Kidney Disease",
+          "Hypertension",
           "Type 2 Diabetes",
-          "Coronary Artery Disease",
           "Hyperlipidemia",
-          "Hypertension"
+          "Chronic Kidney Disease",
+          "Coronary Artery Disease"
         ],
         "medications": [
           "medication"
         ],
+        "dosages": [],
         "symptoms": [
-          "Polydipsia",
+          "Fatigue",
           "Shortness of breath",
-          "Fatigue"
+          "Polydipsia",
+          "Increased thirst"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "medication",
-            "predicate": "improves",
-            "object": "HbA1c",
-            "confidence": 0.9
-          },
-          {
-            "subject": "medication",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "medication",
             "confidence": 0.8
           },
           {
-            "subject": "BP",
-            "predicate": "remains_controlled",
-            "object": "Hypertension",
-            "confidence": 0.7
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "medication",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "managed_by",
+            "object": "medication",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "managed_by",
+            "object": "medication",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "managed_by",
+            "object": "medication",
+            "confidence": 0.8
           },
           {
             "subject": "eGFR",
-            "predicate": "decreases",
+            "predicate": "worsens",
             "object": "Chronic Kidney Disease",
-            "confidence": 0.6
+            "confidence": 0.7
           },
           {
             "subject": "LDL",
-            "predicate": "remains_elevated",
+            "predicate": "worsens",
             "object": "Hyperlipidemia",
-            "confidence": 0.5
+            "confidence": 0.7
           }
         ],
         "lab_values": {
@@ -370,7 +302,13 @@
           "eGFR": 65,
           "LDL": 120
         }
-      }
+      },
+      "dosages": [
+        "1000mg BID",
+        "20mg daily",
+        "81mg daily",
+        "75mg daily"
+      ]
     }
   ]
 }

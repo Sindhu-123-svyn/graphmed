@@ -10,19 +10,12 @@
         "BP_systolic": 140,
         "BP_diastolic": 90,
         "eGFR": 78,
-        "LDL": 145,
-        "Blood pressure": "140/90 mmHg"
+        "LDL": 145
       },
       "medications": [
-        "Metformin 500mg daily",
-        "Lisinopril 10mg daily",
-        "Atorvastatin 20mg daily",
         "metformin",
         "lisinopril",
-        "atorvastatin",
-        "500mg",
-        "10mg",
-        "20mg"
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -36,63 +29,59 @@
       ],
       "extracted": {
         "conditions": [
-          "Coronary Artery Disease",
+          "Hypertension",
           "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Hypertension"
+          "Coronary Artery Disease"
         ],
         "medications": [
           "metformin",
           "lisinopril",
-          "atorvastatin",
-          "500mg",
-          "10mg",
-          "20mg"
+          "atorvastatin"
+        ],
+        "dosages": [
+          "500mg daily",
+          "10mg daily",
+          "20mg daily"
         ],
         "symptoms": [
-          "Chest pain",
-          "Shortness of breath"
+          "Shortness of breath",
+          "Chest pain"
         ],
         "procedures": [
           "ECG"
         ],
         "relationships": [
           {
-            "subject": "metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.8
-          },
-          {
-            "subject": "lisinopril",
-            "predicate": "managed_by",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "atorvastatin",
-            "predicate": "managed_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.8
-          },
-          {
-            "subject": "ECG",
-            "predicate": "measured_by",
-            "object": "Coronary Artery Disease",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "Chest pain",
-            "predicate": "has_symptom",
-            "object": "Shortness of breath",
-            "confidence": 0.7
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "managed_by",
+            "object": "atorvastatin",
+            "confidence": 0.9
           }
         ],
         "lab_values": {
           "HbA1c": 7.5,
-          "Blood pressure": "140/90 mmHg"
+          "BP_systolic": 140,
+          "BP_diastolic": 90
         }
-      }
+      },
+      "dosages": [
+        "500mg daily",
+        "10mg daily",
+        "20mg daily"
+      ]
     },
     {
       "visit_id": "V2",
@@ -106,9 +95,10 @@
         "LDL": 150
       },
       "medications": [
-        "Metformin 500mg daily",
-        "Lisinopril 10mg daily",
-        "Atorvastatin 20mg daily"
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "medication not specified"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -123,15 +113,38 @@
         "Weakness"
       ],
       "extracted": {
-        "conditions": [],
-        "medications": [],
+        "conditions": [
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "medication not specified"
+        ],
+        "dosages": [],
         "symptoms": [
-          "Fatigue"
+          "Fatigue",
+          "Weakness"
         ],
         "procedures": [],
-        "relationships": [],
-        "lab_values": {}
-      }
+        "relationships": [
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "medication not specified",
+            "confidence": 0.8
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.2,
+          "BP_systolic": 130,
+          "BP_diastolic": 80,
+          "LDL": 150
+        }
+      },
+      "dosages": [
+        "500mg daily",
+        "10mg daily",
+        "20mg daily"
+      ]
     },
     {
       "visit_id": "V3",
@@ -142,22 +155,18 @@
         "BP_systolic": 120,
         "BP_diastolic": 70,
         "eGFR": 70,
-        "LDL": 155,
-        "Blood Pressure": "120/70 mmHg"
+        "LDL": 155
       },
       "medications": [
-        "Metformin 500mg daily",
-        "Amlodipine 5mg daily",
-        "Atorvastatin 20mg daily",
+        "metformin",
         "amlodipine",
-        "5mg"
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
-        "Coronary Artery Disease",
-        "Diabetes"
+        "Coronary Artery Disease"
       ],
       "symptoms": [
         "Chest pain",
@@ -167,68 +176,32 @@
       ],
       "extracted": {
         "conditions": [
-          "Diabetes",
-          "Hypertension"
+          "Type 2 Diabetes"
         ],
         "medications": [
-          "amlodipine",
-          "5mg"
+          "amlodipine"
+        ],
+        "dosages": [
+          "5mg daily"
         ],
         "symptoms": [
           "Fatigue",
           "Weakness"
         ],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "amlodipine",
-            "predicate": "managed_by",
-            "object": "blood pressure control",
-            "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "blood test",
-            "confidence": 0.8
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "blood test",
-            "confidence": 0.8
-          },
-          {
-            "subject": "amlodipine",
-            "predicate": "contraindicated_with",
-            "object": "unknown",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Weakness",
-            "confidence": 0.7
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "worsens",
-            "object": "Diabetes",
-            "confidence": 0.9
-          },
-          {
-            "subject": "LDL",
-            "predicate": "worsens",
-            "object": "Hypertension",
-            "confidence": 0.8
-          }
-        ],
+        "relationships": [],
         "lab_values": {
           "HbA1c": 7.8,
-          "Blood Pressure": "120/70 mmHg",
+          "BP_systolic": 120,
+          "BP_diastolic": 70,
           "LDL": 155
         }
-      }
+      },
+      "dosages": [
+        "500mg daily",
+        "5mg daily",
+        "20mg daily"
+      ]
     },
     {
       "visit_id": "V4",
@@ -239,18 +212,13 @@
         "BP_systolic": 125,
         "BP_diastolic": 80,
         "eGFR": 55,
-        "LDL": 120,
-        "blood pressure": "125/80 mmHg"
+        "LDL": 120
       },
       "medications": [
-        "Metformin 500mg daily",
-        "Lisinopril 20mg daily",
-        "Fenofibrate 54mg daily",
-        "Atorvastatin 20mg daily",
+        "metformin",
         "lisinopril",
-        "20mg",
-        "54mg",
-        "fenofibrate"
+        "fenofibrate",
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -258,75 +226,70 @@
         "Hyperlipidemia",
         "Coronary Artery Disease",
         "Chronic Kidney Disease",
-        "kidney function"
+        "Kidney Function"
       ],
       "symptoms": [
         "Chest pain",
         "Shortness of breath",
         "Fatigue",
         "Weakness",
-        "worsening kidney function"
+        "Worsening kidney function"
       ],
       "extracted": {
         "conditions": [
-          "kidney function",
-          "hypertension"
+          "Kidney Function"
         ],
         "medications": [
           "lisinopril",
-          "20mg",
-          "54mg",
           "fenofibrate"
         ],
+        "dosages": [
+          "20mg daily",
+          "54mg daily"
+        ],
         "symptoms": [
-          "worsening kidney function"
+          "Worsening kidney function"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "lisinopril",
-            "predicate": "managed_by",
-            "object": "blood pressure control",
+            "subject": "Kidney Function",
+            "predicate": "measured_by",
+            "object": "eGFR",
             "confidence": 0.8
           },
           {
-            "subject": "fenofibrate",
-            "predicate": "managed_by",
-            "object": "cholesterol management",
+            "subject": "Kidney Function",
+            "predicate": "measured_by",
+            "object": "HbA1c",
             "confidence": 0.8
           },
           {
-            "subject": "eGFR",
+            "subject": "Kidney Function",
             "predicate": "measured_by",
-            "object": "kidney function",
-            "confidence": 0.9
+            "object": "BP_systolic",
+            "confidence": 0.8
           },
           {
-            "subject": "HbA1c",
+            "subject": "Kidney Function",
             "predicate": "measured_by",
-            "object": "blood glucose levels",
-            "confidence": 0.9
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "cholesterol levels",
-            "confidence": 0.9
-          },
-          {
-            "subject": "kidney function",
-            "predicate": "worsens",
-            "object": "blood pressure control",
-            "confidence": 0.7
+            "object": "BP_diastolic",
+            "confidence": 0.8
           }
         ],
         "lab_values": {
-          "eGFR": 55,
-          "blood pressure": "125/80 mmHg",
           "HbA1c": 7.5,
+          "BP_systolic": 125,
+          "BP_diastolic": 80,
+          "eGFR": 55,
           "LDL": 120
         }
-      }
+      },
+      "dosages": [
+        "500mg daily",
+        "20mg daily",
+        "54mg daily"
+      ]
     },
     {
       "visit_id": "V5",
@@ -337,16 +300,15 @@
         "BP_systolic": 115,
         "BP_diastolic": 65,
         "eGFR": 45,
-        "LDL": 115,
-        "Blood Pressure": "115/65 mmHg"
+        "LDL": 115
       },
       "medications": [
-        "Metformin 500mg daily",
-        "Lisinopril 20mg daily",
-        "Fenofibrate 54mg daily",
-        "Atorvastatin 20mg daily",
-        "Erythropoietin 20,000 units weekly",
-        "Erythropoietin"
+        "metformin",
+        "lisinopril",
+        "fenofibrate",
+        "atorvastatin",
+        "erythropoietin 20,000 units weekly",
+        "erythropoietin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -368,7 +330,10 @@
           "Anemia"
         ],
         "medications": [
-          "Erythropoietin"
+          "erythropoietin"
+        ],
+        "dosages": [
+          "20,000 units weekly"
         ],
         "symptoms": [
           "Fatigue",
@@ -377,36 +342,25 @@
         "procedures": [],
         "relationships": [
           {
-            "subject": "Erythropoietin",
+            "subject": "Anemia",
             "predicate": "managed_by",
-            "object": "Anemia",
+            "object": "erythropoietin",
             "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "LDL",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Weakness",
-            "confidence": 0.7
-          },
-          {
-            "subject": "LDL",
-            "predicate": "worsens",
-            "object": "Anemia",
-            "confidence": 0.6
           }
         ],
         "lab_values": {
           "HbA1c": 8.0,
-          "LDL": 115,
-          "Blood Pressure": "115/65 mmHg"
+          "BP_systolic": 115,
+          "BP_diastolic": 65,
+          "LDL": 115
         }
-      }
+      },
+      "dosages": [
+        "500mg daily",
+        "20mg daily",
+        "54mg daily",
+        "20,000 units weekly"
+      ]
     }
   ]
 }

@@ -13,12 +13,8 @@
         "LDL": 120
       },
       "medications": [
-        "Lisinopril 10mg",
-        "Atorvastatin 20mg",
         "lisinopril",
-        "atorvastatin",
-        "10mg",
-        "20mg"
+        "atorvastatin"
       ],
       "diagnoses": [
         "Hypertension",
@@ -27,53 +23,49 @@
       "symptoms": [
         "Headache",
         "Dizziness",
-        "elevated BP"
+        "Elevated bp"
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hypertension",
+          "Hyperlipidemia"
         ],
         "medications": [
           "lisinopril",
-          "atorvastatin",
-          "10mg",
-          "20mg"
+          "atorvastatin"
+        ],
+        "dosages": [
+          "10mg daily",
+          "20mg daily"
         ],
         "symptoms": [
-          "elevated BP"
+          "Elevated bp"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "lisinopril",
             "confidence": 0.9
           },
           {
-            "subject": "atorvastatin",
+            "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Hyperlipidemia",
+            "object": "atorvastatin",
             "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "has_symptom",
-            "object": "elevated BP",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "lab_values",
-            "confidence": 0.7
           }
         ],
         "lab_values": {
           "HbA1c": 7.2
         }
-      }
+      },
+      "dosages": [
+        "10mg",
+        "20mg",
+        "10mg daily",
+        "20mg daily"
+      ]
     },
     {
       "visit_id": "V2",
@@ -87,15 +79,9 @@
         "LDL": 100
       },
       "medications": [
-        "Lisinopril 20mg",
-        "Atorvastatin 40mg",
-        "Metoprolol 50mg",
         "lisinopril",
-        "metoprolol",
         "atorvastatin",
-        "40mg",
-        "20mg",
-        "50mg"
+        "metoprolol"
       ],
       "diagnoses": [
         "Hypertension",
@@ -114,42 +100,20 @@
         "medications": [
           "lisinopril",
           "metoprolol",
-          "atorvastatin",
-          "40mg",
-          "20mg",
-          "50mg"
+          "atorvastatin"
+        ],
+        "dosages": [
+          "40mg daily",
+          "20mg daily",
+          "50mg daily"
         ],
         "symptoms": [
-          "Headache",
-          "Dizziness"
+          "Dizziness",
+          "Headache"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Hypertension",
-            "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Hypertension",
-            "confidence": 0.9
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "Hypertension",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "worsens",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
             "subject": "HbA1c",
             "predicate": "worsens",
             "object": "Hypertension",
@@ -159,34 +123,42 @@
             "subject": "eGFR",
             "predicate": "worsens",
             "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Atorvastatin",
-            "predicate": "increased_by",
-            "object": "40mg",
             "confidence": 0.7
           },
           {
-            "subject": "Lisinopril",
-            "predicate": "increased_by",
-            "object": "20mg",
-            "confidence": 0.7
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "atorvastatin",
+            "confidence": 0.6
           },
           {
-            "subject": "Metoprolol",
-            "predicate": "started_for",
-            "object": "Hypertension",
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "metoprolol",
             "confidence": 0.6
           }
         ],
         "lab_values": {
+          "HbA1c": 8.1,
           "BP_systolic": 160,
           "BP_diastolic": 100,
-          "HbA1c": 8.1,
           "eGFR": 60
         }
-      }
+      },
+      "dosages": [
+        "20mg",
+        "40mg",
+        "50mg",
+        "40mg daily",
+        "20mg daily",
+        "50mg daily"
+      ]
     },
     {
       "visit_id": "V3",
@@ -200,16 +172,10 @@
         "LDL": 90
       },
       "medications": [
-        "Lisinopril 20mg",
-        "Atorvastatin 80mg",
-        "Metoprolol 100mg",
-        "Losartan 50mg",
-        "metoprolol",
-        "losartan",
+        "lisinopril",
         "atorvastatin",
-        "80mg",
-        "100mg",
-        "50mg"
+        "metoprolol",
+        "losartan"
       ],
       "diagnoses": [
         "Hypertension",
@@ -221,7 +187,8 @@
         "Dizziness",
         "Headache",
         "Fatigue",
-        "Polyuria"
+        "Frequent urination",
+        "Worsening of symptoms"
       ],
       "extracted": {
         "conditions": [
@@ -231,16 +198,67 @@
         "medications": [
           "metoprolol",
           "losartan",
-          "atorvastatin",
-          "80mg",
-          "100mg",
-          "50mg"
+          "atorvastatin"
         ],
-        "symptoms": [],
-        "procedures": [],
-        "relationships": [],
-        "lab_values": {}
-      }
+        "dosages": [
+          "80mg daily",
+          "100mg daily",
+          "50mg daily"
+        ],
+        "symptoms": [
+          "Worsening of symptoms"
+        ],
+        "procedures": [
+          "referral to nephrology"
+        ],
+        "relationships": [
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "metoprolol",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "losartan",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "atorvastatin",
+            "confidence": 0.8
+          },
+          {
+            "subject": "losartan",
+            "predicate": "improves",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "atorvastatin",
+            "predicate": "improves",
+            "object": "Hypertension",
+            "confidence": 0.9
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 9.0,
+          "BP_systolic": 170,
+          "BP_diastolic": 110,
+          "eGFR": 45
+        }
+      },
+      "dosages": [
+        "20mg",
+        "80mg",
+        "100mg",
+        "50mg",
+        "80mg daily",
+        "100mg daily",
+        "50mg daily"
+      ]
     }
   ]
 }

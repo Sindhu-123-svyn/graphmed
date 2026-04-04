@@ -13,67 +13,47 @@
         "LDL": 130
       },
       "medications": [
-        "Metformin 500mg bid",
-        "Lisinopril 10mg daily",
         "metformin",
-        "lisinopril",
-        "500mg",
-        "10mg"
+        "lisinopril"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
-        "new onset diabetes"
+        "New onset diabetes"
       ],
       "extracted": {
         "conditions": [
-          "Type 2 Diabetes",
-          "Hypertension"
+          "Hypertension",
+          "Type 2 Diabetes"
         ],
         "medications": [
           "metformin",
-          "lisinopril",
-          "500mg",
-          "10mg"
+          "lisinopril"
+        ],
+        "dosages": [
+          "500mg bid",
+          "10mg daily"
         ],
         "symptoms": [
-          "new onset diabetes"
+          "New onset diabetes"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "Lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "lisinopril",
             "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "new onset diabetes",
-            "predicate": "has_symptom",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.7
           }
         ],
         "lab_values": {
@@ -81,7 +61,11 @@
           "BP_systolic": 140,
           "BP_diastolic": 90
         }
-      }
+      },
+      "dosages": [
+        "500mg bid",
+        "10mg daily"
+      ]
     },
     {
       "visit_id": "V2",
@@ -95,12 +79,8 @@
         "LDL": 160
       },
       "medications": [
-        "Metformin 1000mg bid",
-        "Lisinopril 20mg daily",
         "metformin",
-        "lisinopril",
-        "1000mg",
-        "20mg"
+        "lisinopril"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -108,7 +88,7 @@
         "Hyperlipidemia"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Fatigue"
       ],
@@ -118,54 +98,26 @@
         ],
         "medications": [
           "metformin",
-          "lisinopril",
-          "1000mg",
-          "20mg"
+          "lisinopril"
+        ],
+        "dosages": [
+          "1000mg bid",
+          "20mg daily"
         ],
         "symptoms": [],
         "procedures": [],
         "relationships": [
           {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "BP_systolic",
-            "confidence": 1.0
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "BP_diastolic",
-            "confidence": 1.0
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "HbA1c",
-            "confidence": 1.0
-          },
-          {
-            "subject": "Metformin",
-            "predicate": "adjusted_to",
-            "object": "1000mg",
-            "confidence": 1.0
-          },
-          {
-            "subject": "Lisinopril",
-            "predicate": "adjusted_to",
-            "object": "20mg",
-            "confidence": 1.0
+            "subject": "Hyperlipidemia",
+            "predicate": "managed_by",
+            "object": "metformin",
+            "confidence": 0.9
           },
           {
             "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Metformin",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Hyperlipidemia",
-            "predicate": "managed_by",
-            "object": "Lisinopril",
-            "confidence": 0.8
+            "object": "lisinopril",
+            "confidence": 0.9
           }
         ],
         "lab_values": {
@@ -173,7 +125,11 @@
           "BP_systolic": 150,
           "BP_diastolic": 95
         }
-      }
+      },
+      "dosages": [
+        "1000mg bid",
+        "20mg daily"
+      ]
     },
     {
       "visit_id": "V3",
@@ -187,41 +143,35 @@
         "LDL": 180
       },
       "medications": [
-        "Metformin 1500mg bid",
-        "Lisinopril 30mg daily",
-        "Atorvastatin 20mg daily",
         "metformin",
         "lisinopril",
-        "atorvastatin",
-        "1500mg",
-        "30mg",
-        "20mg"
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
-        "Chronic Kidney Disease",
-        "diabetes"
+        "Chronic Kidney Disease"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Fatigue",
         "Edema"
       ],
       "extracted": {
         "conditions": [
-          "hypertension",
-          "diabetes"
+          "Hypertension"
         ],
         "medications": [
           "metformin",
           "lisinopril",
-          "atorvastatin",
-          "1500mg",
-          "30mg",
-          "20mg"
+          "atorvastatin"
+        ],
+        "dosages": [
+          "1500mg bid",
+          "30mg daily",
+          "20mg daily"
         ],
         "symptoms": [
           "Edema"
@@ -229,40 +179,22 @@
         "procedures": [],
         "relationships": [
           {
-            "subject": "metformin",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "diabetes",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "hypertension",
+            "object": "lisinopril",
             "confidence": 0.9
           },
           {
-            "subject": "atorvastatin",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "hypertension",
+            "object": "atorvastatin",
             "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "BP_systolic",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "BP_diastolic",
-            "confidence": 0.8
-          },
-          {
-            "subject": "edema",
-            "predicate": "has_symptom",
-            "object": "new onset edema",
-            "confidence": 0.7
           }
         ],
         "lab_values": {
@@ -270,7 +202,12 @@
           "BP_systolic": 160,
           "BP_diastolic": 100
         }
-      }
+      },
+      "dosages": [
+        "1500mg bid",
+        "30mg daily",
+        "20mg daily"
+      ]
     },
     {
       "visit_id": "V4",
@@ -284,86 +221,50 @@
         "LDL": 140
       },
       "medications": [
-        "Metformin 1000mg bid",
-        "Lisinopril 20mg daily",
-        "Atorvastatin 40mg daily",
         "metformin",
         "lisinopril",
-        "atorvastatin",
-        "1000mg",
-        "20mg",
-        "40mg"
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
         "Chronic Kidney Disease",
-        "kidney dysfunction"
+        "Kidney Dysfunction"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Fatigue"
       ],
       "extracted": {
         "conditions": [
-          "kidney dysfunction"
+          "Kidney Dysfunction"
         ],
         "medications": [
           "metformin",
           "lisinopril",
-          "atorvastatin",
-          "1000mg",
-          "20mg",
-          "40mg"
+          "atorvastatin"
+        ],
+        "dosages": [
+          "1000mg bid",
+          "20mg daily",
+          "40mg daily"
         ],
         "symptoms": [],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "kidney function",
-            "predicate": "has_stabilized",
-            "object": "BP 155/90",
-            "confidence": 0.8
-          },
-          {
-            "subject": "metformin",
-            "predicate": "managed_by",
-            "object": "kidney dysfunction",
-            "confidence": 0.7
-          },
-          {
-            "subject": "lisinopril",
-            "predicate": "managed_by",
-            "object": "kidney dysfunction",
-            "confidence": 0.7
-          },
-          {
-            "subject": "atorvastatin",
-            "predicate": "managed_by",
-            "object": "kidney dysfunction",
-            "confidence": 0.7
-          },
-          {
-            "subject": "BP 155/90",
-            "predicate": "measured_by",
-            "object": "BP_systolic",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP 155/90",
-            "predicate": "measured_by",
-            "object": "BP_diastolic",
-            "confidence": 0.9
-          }
-        ],
+        "relationships": [],
         "lab_values": {
           "HbA1c": 7.5,
           "BP_systolic": 155,
           "BP_diastolic": 90
         }
-      }
+      },
+      "dosages": [
+        "1000mg bid",
+        "20mg daily",
+        "40mg daily"
+      ]
     }
   ]
 }

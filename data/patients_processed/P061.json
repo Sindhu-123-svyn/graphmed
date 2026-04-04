@@ -13,12 +13,8 @@
         "LDL": 160
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 2.5mg daily",
         "metformin",
-        "lisinopril",
-        "500mg",
-        "2.5mg"
+        "lisinopril"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -26,7 +22,7 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia"
       ],
       "extracted": {
@@ -35,58 +31,58 @@
         ],
         "medications": [
           "metformin",
-          "lisinopril",
-          "500mg",
-          "2.5mg"
+          "lisinopril"
+        ],
+        "dosages": [
+          "500mg BID",
+          "2.5mg daily"
         ],
         "symptoms": [
-          "Polydipsia",
-          "Polyuria",
-          "Fatigue"
+          "Fatigue",
+          "Frequent urination",
+          "Polydipsia"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "Lisinopril",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "lisinopril",
             "confidence": 0.9
           },
           {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
+            "subject": "Type 2 Diabetes",
+            "predicate": "has_symptom",
+            "object": "Fatigue",
             "confidence": 0.8
           },
           {
-            "subject": "Polyuria",
+            "subject": "Type 2 Diabetes",
             "predicate": "has_symptom",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.7
+            "object": "Frequent urination",
+            "confidence": 0.8
           },
           {
-            "subject": "Polydipsia",
+            "subject": "Type 2 Diabetes",
             "predicate": "has_symptom",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.7
+            "object": "Polydipsia",
+            "confidence": 0.8
           }
         ],
         "lab_values": {
           "HbA1c": 8.5
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "2.5mg daily"
+      ]
     },
     {
       "visit_id": "V2",
@@ -100,11 +96,9 @@
         "LDL": 140
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 2.5mg daily",
-        "Atorvastatin 20mg daily",
-        "atorvastatin",
-        "20mg"
+        "metformin",
+        "lisinopril",
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -114,7 +108,7 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Joint pain"
       ],
@@ -124,35 +118,19 @@
           "Hyperuricemia"
         ],
         "medications": [
-          "atorvastatin",
-          "20mg"
+          "atorvastatin"
+        ],
+        "dosages": [
+          "20mg daily"
         ],
         "symptoms": [],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Atorvastatin",
+            "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Hyperlipidemia",
+            "object": "atorvastatin",
             "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Follow-up visit",
-            "confidence": 0.8
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "Follow-up visit",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "improves",
-            "object": "Hyperlipidemia",
-            "confidence": 0.7
           },
           {
             "subject": "eGFR",
@@ -165,7 +143,12 @@
           "HbA1c": 7.8,
           "eGFR": 60
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "2.5mg daily",
+        "20mg daily"
+      ]
     },
     {
       "visit_id": "V3",
@@ -177,15 +160,13 @@
         "BP_diastolic": 95,
         "eGFR": 50,
         "LDL": 120,
-        "creatinine": "increasing"
+        "Creatinine": "increasing"
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 2.5mg daily",
-        "Atorvastatin 20mg daily",
-        "Losartan 50mg daily",
-        "losartan",
-        "50mg"
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "losartan"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -196,7 +177,7 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Joint pain",
         "Swelling in legs"
@@ -206,36 +187,32 @@
           "Chronic Kidney Disease"
         ],
         "medications": [
-          "losartan",
-          "50mg"
+          "losartan"
+        ],
+        "dosages": [
+          "50mg daily"
         ],
         "symptoms": [],
         "procedures": [],
         "relationships": [
           {
-            "subject": "losartan",
-            "predicate": "managed_by",
-            "object": "blood pressure control",
-            "confidence": 0.8
-          },
-          {
-            "subject": "losartan",
-            "predicate": "measured_by",
-            "object": "creatinine levels",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Chronic Kidney Disease",
+            "subject": "eGFR",
             "predicate": "worsens",
-            "object": "eGFR",
-            "confidence": 0.9
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.7
           }
         ],
         "lab_values": {
           "eGFR": 50,
-          "creatinine": "increasing"
+          "Creatinine": "increasing"
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "2.5mg daily",
+        "20mg daily",
+        "50mg daily"
+      ]
     },
     {
       "visit_id": "V4",
@@ -249,11 +226,11 @@
         "LDL": 110
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 2.5mg daily",
-        "Atorvastatin 20mg daily",
-        "Losartan 50mg daily",
-        "Furosemide 40mg daily"
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "losartan",
+        "furosemide"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -265,7 +242,7 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Joint pain",
         "Swelling in legs",
@@ -276,6 +253,7 @@
           "Chronic Kidney Disease"
         ],
         "medications": [],
+        "dosages": [],
         "symptoms": [
           "Shortness of breath"
         ],
@@ -289,28 +267,29 @@
           },
           {
             "subject": "Chronic Kidney Disease",
-            "predicate": "managed_by",
-            "object": "nephrology",
-            "confidence": 0.9
-          },
-          {
-            "subject": "eGFR",
             "predicate": "measured_by",
-            "object": "nephrology",
+            "object": "eGFR",
             "confidence": 0.8
           },
           {
-            "subject": "HbA1c",
+            "subject": "Chronic Kidney Disease",
             "predicate": "measured_by",
-            "object": "nephrology",
+            "object": "HbA1c",
             "confidence": 0.8
           }
         ],
         "lab_values": {
-          "eGFR": 45,
-          "HbA1c": 7.0
+          "HbA1c": 7.0,
+          "eGFR": 45
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "2.5mg daily",
+        "20mg daily",
+        "50mg daily",
+        "40mg daily"
+      ]
     },
     {
       "visit_id": "V5",
@@ -324,13 +303,13 @@
         "LDL": 100
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 2.5mg daily",
-        "Atorvastatin 20mg daily",
-        "Losartan 50mg daily",
-        "Furosemide 40mg daily",
-        "Erythropoietin 2000 U weekly",
-        "Erythropoietin"
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "losartan",
+        "furosemide",
+        "erythropoietin 2000 u weekly",
+        "erythropoietin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -343,7 +322,7 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Joint pain",
         "Swelling in legs",
@@ -352,51 +331,28 @@
       ],
       "extracted": {
         "conditions": [
-          "Anemia",
-          "Chronic Kidney Disease"
+          "Chronic Kidney Disease",
+          "Anemia"
         ],
         "medications": [
-          "Erythropoietin"
+          "erythropoietin"
         ],
+        "dosages": [],
         "symptoms": [],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "Erythropoietin",
-            "predicate": "managed_by",
-            "object": "Nephrology",
-            "confidence": 0.9
-          },
-          {
-            "subject": "CKD",
-            "predicate": "worsens",
-            "object": "eGFR",
-            "confidence": 0.8
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "lab_values",
-            "confidence": 0.7
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "lab_values",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Anemia",
-            "predicate": "treated_with",
-            "object": "Erythropoietin",
-            "confidence": 0.6
-          }
-        ],
+        "relationships": [],
         "lab_values": {
           "HbA1c": 6.8,
           "eGFR": 38
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "2.5mg daily",
+        "20mg daily",
+        "50mg daily",
+        "40mg daily"
+      ]
     }
   ]
 }

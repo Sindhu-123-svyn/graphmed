@@ -13,12 +13,9 @@
         "LDL": 130
       },
       "medications": [
-        "Metformin 500mg twice daily",
-        "Lisinopril 10mg daily",
-        "metformin",
+        "metformin twice daily",
         "lisinopril",
-        "500mg",
-        "10mg"
+        "metformin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -31,74 +28,59 @@
       ],
       "extracted": {
         "conditions": [
-          "Type 2 Diabetes",
-          "Hypertension"
+          "Hypertension",
+          "Type 2 Diabetes"
         ],
         "medications": [
           "metformin",
-          "lisinopril",
-          "500mg",
-          "10mg"
+          "lisinopril"
+        ],
+        "dosages": [
+          "500mg twice daily",
+          "10mg daily"
         ],
         "symptoms": [
+          "Fatigue",
           "Polydipsia",
-          "Fatigue"
+          "Increased thirst"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "metformin",
-            "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.8
-          },
-          {
-            "subject": "lisinopril",
-            "predicate": "managed_by",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.7
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Hypertension",
-            "confidence": 0.7
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.7
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Polydipsia",
-            "confidence": 0.6
-          },
-          {
             "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "Fatigue",
-            "confidence": 0.6
+            "predicate": "managed_by",
+            "object": "metformin",
+            "confidence": 0.9
           },
           {
             "subject": "Hypertension",
-            "predicate": "worsens",
+            "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "has_symptom",
             "object": "Fatigue",
-            "confidence": 0.6
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "has_symptom",
+            "object": "Increased thirst",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Fatigue",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Increased thirst",
+            "confidence": 0.7
           }
         ],
         "lab_values": {
@@ -108,7 +90,12 @@
           "eGFR": 72.0,
           "LDL": 130.0
         }
-      }
+      },
+      "dosages": [
+        "500mg",
+        "10mg daily",
+        "500mg twice daily"
+      ]
     },
     {
       "visit_id": "V2",
@@ -122,15 +109,10 @@
         "LDL": 140
       },
       "medications": [
-        "Metformin 850mg twice daily",
-        "Lisinopril 20mg daily",
-        "amlodipine 10mg daily",
-        "metformin",
+        "metformin twice daily",
         "lisinopril",
         "amlodipine",
-        "850mg",
-        "20mg",
-        "10mg"
+        "metformin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -145,25 +127,59 @@
       ],
       "extracted": {
         "conditions": [
-          "Type 2 Diabetes",
           "Hypertension",
+          "Type 2 Diabetes",
           "Chronic Kidney Disease"
         ],
         "medications": [
           "metformin",
           "lisinopril",
-          "amlodipine",
-          "850mg",
-          "20mg",
-          "10mg"
+          "amlodipine"
+        ],
+        "dosages": [
+          "850mg twice daily",
+          "20mg daily",
+          "10mg daily"
         ],
         "symptoms": [
-          "Edema",
+          "Fatigue",
           "Shortness of breath",
-          "Fatigue"
+          "Edema",
+          "Bilateral lower extremity edema"
         ],
         "procedures": [],
-        "relationships": [],
+        "relationships": [
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "metformin",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "amlodipine",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.8
+          }
+        ],
         "lab_values": {
           "HbA1c": 8.5,
           "BP_systolic": 150,
@@ -171,7 +187,13 @@
           "eGFR": 60.0,
           "LDL": 140.0
         }
-      }
+      },
+      "dosages": [
+        "850mg",
+        "20mg daily",
+        "10mg daily",
+        "850mg twice daily"
+      ]
     },
     {
       "visit_id": "V3",
@@ -185,16 +207,11 @@
         "LDL": 120
       },
       "medications": [
-        "Metformin 1000mg twice daily",
-        "Lisinopril 40mg daily",
-        "amlodipine 20mg daily",
-        "furosemide 40mg daily",
-        "metformin",
+        "metformin twice daily",
         "lisinopril",
         "amlodipine",
-        "1000mg",
-        "40mg",
-        "20mg"
+        "furosemide",
+        "metformin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -210,25 +227,61 @@
       ],
       "extracted": {
         "conditions": [
-          "Type 2 Diabetes",
-          "Coronary Artery Disease",
           "Hypertension",
-          "Chronic Kidney Disease"
+          "Type 2 Diabetes",
+          "Chronic Kidney Disease",
+          "Coronary Artery Disease"
         ],
         "medications": [
           "metformin",
           "lisinopril",
           "amlodipine",
+          "furosemide"
+        ],
+        "dosages": [
           "1000mg",
-          "40mg",
-          "20mg"
+          "40mg daily",
+          "20mg daily"
         ],
         "symptoms": [
+          "Shortness of breath",
           "Edema",
-          "Shortness of breath"
+          "Orthopnea",
+          "Pulmonary edema"
         ],
         "procedures": [],
-        "relationships": [],
+        "relationships": [
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "furosemide",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "managed_by",
+            "object": "furosemide",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "metformin",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "amlodipine",
+            "confidence": 0.8
+          }
+        ],
         "lab_values": {
           "HbA1c": 9.0,
           "BP_systolic": 155,
@@ -236,7 +289,12 @@
           "eGFR": 45.0,
           "LDL": 120.0
         }
-      }
+      },
+      "dosages": [
+        "1000mg",
+        "40mg daily",
+        "20mg daily"
+      ]
     }
   ]
 }

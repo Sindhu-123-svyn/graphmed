@@ -10,13 +10,11 @@
         "BP_systolic": 150,
         "BP_diastolic": 90,
         "eGFR": 75,
-        "LDL": 140,
-        "LDL level": "high",
-        "blood pressure": "elevated"
+        "LDL": 140
       },
       "medications": [
-        "Atorvastatin 20mg daily",
-        "Metoprolol 25mg twice daily",
+        "atorvastatin",
+        "metoprolol twice daily",
         "statin"
       ],
       "diagnoses": [
@@ -26,65 +24,46 @@
       "symptoms": [
         "Headache",
         "Fatigue",
-        "high LDL level",
-        "elevated blood pressure"
+        "Elevated blood pressure",
+        "High ldl level"
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hypertension",
+          "Hyperlipidemia"
         ],
         "medications": [
           "statin"
         ],
+        "dosages": [],
         "symptoms": [
-          "high LDL level",
-          "elevated blood pressure"
+          "Elevated blood pressure",
+          "High ldl level"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "statin",
-            "predicate": "prescribed_for",
-            "object": "Hyperlipidemia",
-            "confidence": 0.8
-          },
-          {
-            "subject": "statin",
-            "predicate": "prescribed_for",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "diet and exercise regimen",
-            "predicate": "improves",
-            "object": "blood sugar control",
-            "confidence": 0.7
-          },
-          {
-            "subject": "blood pressure monitoring",
-            "predicate": "measured_by",
-            "object": "blood pressure",
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "statin",
             "confidence": 0.9
           },
           {
-            "subject": "high LDL level",
-            "predicate": "has_symptom",
-            "object": "Hyperlipidemia",
-            "confidence": 0.6
-          },
-          {
-            "subject": "elevated blood pressure",
-            "predicate": "has_symptom",
-            "object": "Hypertension",
-            "confidence": 0.6
+            "subject": "Hyperlipidemia",
+            "predicate": "managed_by",
+            "object": "statin",
+            "confidence": 0.9
           }
         ],
         "lab_values": {
-          "LDL level": "high",
-          "blood pressure": "elevated"
+          "BP_systolic": "elevated",
+          "LDL": "high"
         }
-      }
+      },
+      "dosages": [
+        "20mg daily",
+        "25mg"
+      ]
     },
     {
       "visit_id": "V2",
@@ -96,15 +75,14 @@
         "BP_diastolic": 95,
         "eGFR": 68,
         "LDL": 160,
-        "Blood Pressure": "elevated",
-        "LDL Level": "high"
+        "Glucose": "closely monitor"
       },
       "medications": [
-        "Atorvastatin 40mg daily",
-        "Metoprolol 50mg twice daily",
-        "Hydrochlorothiazide 25mg daily",
-        "Statin",
-        "Diuretic"
+        "atorvastatin",
+        "metoprolol twice daily",
+        "hydrochlorothiazide",
+        "statin",
+        "diuretic"
       ],
       "diagnoses": [
         "Hypertension",
@@ -117,61 +95,45 @@
         "Chest pain",
         "Worsening hypertension",
         "High blood pressure",
-        "High LDL level"
+        "High ldl level"
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hypertension",
+          "Hyperlipidemia"
         ],
         "medications": [
-          "Statin",
-          "Diuretic"
+          "statin",
+          "diuretic"
         ],
+        "dosages": [],
         "symptoms": [
           "Worsening hypertension",
           "High blood pressure",
-          "High LDL level"
+          "High ldl level"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Statin",
-            "predicate": "contraindicated_with",
-            "object": "Diuretic",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Diuretic",
-            "predicate": "managed_by",
-            "object": "Diet and exercise regimen",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Blood sugar levels",
-            "predicate": "measured_by",
-            "object": "Patient",
-            "confidence": 0.9
-          },
-          {
             "subject": "Hypertension",
-            "predicate": "worsens",
-            "object": "eGFR",
-            "confidence": 0.6
-          },
-          {
-            "subject": "LDL Level",
-            "predicate": "improves",
-            "object": "Statin",
-            "confidence": 0.5
+            "predicate": "managed_by",
+            "object": "diuretic",
+            "confidence": 0.9
           }
         ],
         "lab_values": {
-          "Blood Pressure": "elevated",
-          "LDL Level": "high",
-          "eGFR": "slightly decreased"
+          "BP_systolic": "elevated",
+          "BP_diastolic": "elevated",
+          "LDL": "high",
+          "eGFR": "slightly decreased",
+          "Glucose": "closely monitor"
         }
-      }
+      },
+      "dosages": [
+        "40mg daily",
+        "50mg",
+        "25mg daily"
+      ]
     },
     {
       "visit_id": "V3",
@@ -183,17 +145,15 @@
         "BP_diastolic": 100,
         "eGFR": 62,
         "LDL": 170,
-        "Blood Pressure": "elevated",
-        "LDL Level": "high",
-        "Blood Sugar Levels": "closely monitor"
+        "Glucose": "to be monitored"
       },
       "medications": [
-        "Atorvastatin 80mg daily",
-        "Metoprolol 50mg twice daily",
-        "Hydrochlorothiazide 25mg daily",
-        "Lisinopril 10mg daily",
-        "Statin",
-        "ACE Inhibitor"
+        "atorvastatin",
+        "metoprolol twice daily",
+        "hydrochlorothiazide",
+        "lisinopril",
+        "statin",
+        "ace inhibitor"
       ],
       "diagnoses": [
         "Hypertension",
@@ -207,68 +167,46 @@
         "Chest pain",
         "Shortness of breath",
         "Worsening hypertension",
-        "High LDL level"
+        "High ldl level"
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Hyperlipidemia",
-          "Coronary Artery Disease",
-          "Hypertension"
+          "Coronary Artery Disease"
         ],
         "medications": [
-          "Statin",
-          "ACE Inhibitor"
+          "statin",
+          "ace inhibitor"
         ],
+        "dosages": [],
         "symptoms": [
           "Worsening hypertension",
-          "High LDL level"
+          "High ldl level"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Statin",
-            "predicate": "contraindicated_with",
-            "object": "Coronary Artery Disease",
-            "confidence": 0.8
-          },
-          {
-            "subject": "ACE Inhibitor",
-            "predicate": "managed_by",
-            "object": "Hypertension",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Diet and Exercise Regimen",
-            "predicate": "improves",
-            "object": "Hypertension",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Diet and Exercise Regimen",
-            "predicate": "improves",
-            "object": "Hyperlipidemia",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Blood Sugar Levels",
-            "predicate": "measured_by",
-            "object": "eGFR",
-            "confidence": 0.6
-          },
-          {
             "subject": "Hypertension",
-            "predicate": "worsens",
-            "object": "Coronary Artery Disease",
-            "confidence": 0.5
+            "predicate": "managed_by",
+            "object": "ace inhibitor",
+            "confidence": 0.9
           }
         ],
         "lab_values": {
-          "Blood Pressure": "elevated",
-          "LDL Level": "high",
+          "BP_systolic": "elevated",
+          "BP_diastolic": "elevated",
+          "LDL": "high",
           "eGFR": "decreased",
-          "Blood Sugar Levels": "closely monitor"
+          "Glucose": "to be monitored"
         }
-      }
+      },
+      "dosages": [
+        "80mg daily",
+        "50mg",
+        "25mg daily",
+        "10mg daily"
+      ]
     }
   ]
 }

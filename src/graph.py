@@ -8,6 +8,7 @@ from datetime import datetime
 from typing import Dict, List, Any, Optional, Tuple
 import json
 from pathlib import Path
+import re
 
 
 class PatientKnowledgeGraph:
@@ -31,9 +32,45 @@ class PatientKnowledgeGraph:
         # Add patient as root node
         self.G.add_node(patient_id, 
                         type="PATIENT",
+                        name=patient_id,
                         added=self.created_at,
                         last_confirmed=self.created_at,
                         confidence=1.0)
+
+    def _normalize_name(self, name: str) -> str:
+        """Normalize entity names for stable node identity."""
+        value = str(name).strip().lower()
+        value = re.sub(r"\s+", " ", value)
+        return value
+
+    def _stable_node_id(self, entity_type: str, name: str) -> str:
+        """Stable node IDs keep one node per entity per patient over time."""
+        normalized = self._normalize_name(name)
+        safe = re.sub(r"[^a-z0-9]+", "_", normalized).strip("_")
+        return f"{entity_type}_{safe}"
+
+    def _as_date_str(self, date: str) -> str:
+        """Normalize dates to YYYY-MM-DD where possible."""
+        value = str(date).strip()
+        if not value:
+            return datetime.now().strftime("%Y-%m-%d")
+        # Fast path for common yyyy-mm-dd prefix.
+        if re.match(r"^\d{4}-\d{2}-\d{2}$", value[:10]):
+            return value[:10]
+
+        # ISO timestamps and close variants.
+        try:
+            return datetime.fromisoformat(value.replace("Z", "+00:00")).strftime("%Y-%m-%d")
+        except Exception:
+            pass
+
+        for fmt in ("%Y-%m-%d", "%Y/%m/%d", "%d-%m-%Y", "%d/%m/%Y"):
+            try:
+                return datetime.strptime(value, fmt).strftime("%Y-%m-%d")
+            except Exception:
+                pass
+        # If parsing fails, keep first 10 chars (common ISO date prefix).
+        return value[:10]
     
     def add_entity(self, name: str, entity_type: str, date: str, 
                    confidence: float = 1.0, **kwargs) -> str:
@@ -50,24 +87,35 @@ class PatientKnowledgeGraph:
         Returns:
             node_id: Unique identifier for the node
         """
-        node_id = f"{entity_type}_{name}_{date}"
-        
-        # Clean name for consistency
-        clean_name = name.lower().strip()
-        
-        self.G.add_node(node_id,
-                        name=clean_name,
-                        type=entity_type,
-                        added=date,
-                        last_confirmed=date,
-                        confidence=confidence,
-                        **kwargs)
-        
-        # Connect to patient
-        self.G.add_edge(self.patient_id, node_id,
-                        relation="has",
-                        established=date)
-        
+        norm_date = self._as_date_str(date)
+        clean_name = self._normalize_name(name)
+        node_id = self._stable_node_id(entity_type, clean_name)
+
+        if node_id in self.G.nodes:
+            self.update_entity(node_id, norm_date, confirmed=True, **kwargs)
+            existing_conf = self.G.nodes[node_id].get("confidence", 1.0)
+            self.G.nodes[node_id]["confidence"] = max(existing_conf, confidence)
+            return node_id
+
+        self.G.add_node(
+            node_id,
+            name=clean_name,
+            type=entity_type,
+            added=norm_date,
+            last_confirmed=norm_date,
+            confidence=confidence,
+            observed_dates=[norm_date],
+            **kwargs,
+        )
+
+        self.G.add_edge(
+            self.patient_id,
+            node_id,
+            relation="has",
+            established=norm_date,
+            confidence=1.0,
+        )
+
         return node_id
     
     def add_relation(self, src: str, dst: str, relation: str, date: str,
@@ -83,11 +131,36 @@ class PatientKnowledgeGraph:
             confidence: Confidence score for this relationship
             **kwargs: Additional attributes
         """
-        self.G.add_edge(src, dst,
-                        relation=relation,
-                        established=date,
-                        confidence=confidence,
-                        **kwargs)
+        norm_date = self._as_date_str(date)
+        if src not in self.G.nodes or dst not in self.G.nodes:
+            return
+
+        # Keep one edge per (src, dst, relation) and update temporal metadata.
+        for _, existing_dst, key, edge_data in self.G.out_edges(src, keys=True, data=True):
+            if existing_dst == dst and edge_data.get("relation") == relation:
+                old_conf = float(edge_data.get("confidence", confidence))
+                edge_data["confidence"] = max(old_conf, confidence)
+                edge_data["last_observed"] = norm_date
+                edge_data["observations"] = int(edge_data.get("observations", 1)) + 1
+                dates = edge_data.get("observed_dates", [])
+                if norm_date not in dates:
+                    dates.append(norm_date)
+                edge_data["observed_dates"] = sorted(dates)
+                for k, v in kwargs.items():
+                    edge_data[k] = v
+                return
+
+        self.G.add_edge(
+            src,
+            dst,
+            relation=relation,
+            established=norm_date,
+            last_observed=norm_date,
+            observed_dates=[norm_date],
+            observations=1,
+            confidence=confidence,
+            **kwargs,
+        )
     
     def update_entity(self, node_id: str, date: str, 
                       new_value: Any = None, **kwargs):
@@ -104,9 +177,13 @@ class PatientKnowledgeGraph:
             print(f"Warning: Node {node_id} not found")
             return
         
+        norm_date = self._as_date_str(date)
+
         # Store history
         if 'history' not in self.G.nodes[node_id]:
             self.G.nodes[node_id]['history'] = []
+        if 'observed_dates' not in self.G.nodes[node_id]:
+            self.G.nodes[node_id]['observed_dates'] = []
         
         # Record old values before update
         old_values = {}
@@ -115,7 +192,9 @@ class PatientKnowledgeGraph:
                 old_values[key] = self.G.nodes[node_id][key]
         
         # Update node
-        self.G.nodes[node_id]['last_confirmed'] = date
+        self.G.nodes[node_id]['last_confirmed'] = norm_date
+        if norm_date not in self.G.nodes[node_id]['observed_dates']:
+            self.G.nodes[node_id]['observed_dates'].append(norm_date)
         if new_value is not None:
             self.G.nodes[node_id]['value'] = new_value
         for key, val in kwargs.items():
@@ -123,7 +202,7 @@ class PatientKnowledgeGraph:
         
         # Record in history
         self.G.nodes[node_id]['history'].append({
-            'date': date,
+            'date': norm_date,
             'old': old_values,
             'new': {k: v for k, v in kwargs.items()}
         })
@@ -136,7 +215,7 @@ class PatientKnowledgeGraph:
             current_date: Current date for decay calculation
             decay_rate: Confidence decay per month (default 5%)
         """
-        cur_date = datetime.strptime(current_date, '%Y-%m-%d')
+        cur_date = datetime.strptime(self._as_date_str(current_date), '%Y-%m-%d')
         
         for node in self.G.nodes:
             node_data = self.G.nodes[node]
@@ -145,7 +224,7 @@ class PatientKnowledgeGraph:
             if node_data.get('type') == 'PATIENT':
                 continue
             
-            last_confirmed = datetime.strptime(node_data.get('last_confirmed', current_date), '%Y-%m-%d')
+            last_confirmed = datetime.strptime(self._as_date_str(node_data.get('last_confirmed', current_date)), '%Y-%m-%d')
             months_old = (cur_date - last_confirmed).days / 30.0
             
             # Calculate new confidence
@@ -166,13 +245,65 @@ class PatientKnowledgeGraph:
         Returns:
             node_id if found, None otherwise
         """
-        clean_name = name.lower().strip()
+        clean_name = self._normalize_name(name)
         
         for node, data in self.G.nodes(data=True):
-            if data.get('name', '').lower() == clean_name:
+            if self._normalize_name(data.get('name', '')) == clean_name:
                 if entity_type is None or data.get('type') == entity_type:
                     return node
         return None
+
+    def visualize(self, output_file: str = "graph.html", notebook: bool = False) -> str:
+        """
+        Visualize graph using PyVis and save to an HTML file.
+
+        Returns:
+            Path to generated HTML file
+        """
+        try:
+            from pyvis.network import Network
+        except Exception as e:
+            raise RuntimeError("PyVis is not installed. Install with: pip install pyvis") from e
+
+        net = Network(height="700px", width="100%", directed=True, notebook=notebook)
+
+        color_map = {
+            "PATIENT": "#1f2937",
+            "CONDITION": "#b91c1c",
+            "MEDICATION": "#0369a1",
+            "LAB_VALUE": "#047857",
+            "SYMPTOM": "#a21caf",
+            "PROCEDURE": "#b45309",
+        }
+
+        for node_id, data in self.G.nodes(data=True):
+            node_type = data.get("type", "UNKNOWN")
+            label = data.get("name", node_id)
+            confidence = data.get("confidence", 1.0)
+            title = (
+                f"Type: {node_type}<br>"
+                f"Name: {label}<br>"
+                f"Added: {data.get('added')}<br>"
+                f"Last confirmed: {data.get('last_confirmed')}<br>"
+                f"Confidence: {confidence:.2f}"
+            )
+            net.add_node(
+                node_id,
+                label=label if node_type != "PATIENT" else self.patient_id,
+                color=color_map.get(node_type, "#6b7280"),
+                title=title,
+                size=30 if node_type == "PATIENT" else 18,
+            )
+
+        for src, dst, data in self.G.edges(data=True):
+            relation = data.get("relation", "related_to")
+            edge_title = f"Relation: {relation}<br>Date: {data.get('established')}<br>Confidence: {data.get('confidence', 1.0):.2f}"
+            net.add_edge(src, dst, label=relation, title=edge_title)
+
+        output_path = Path(output_file)
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        net.save_graph(str(output_path))
+        return str(output_path)
     
     def get_entities_by_type(self, entity_type: str) -> List[Tuple[str, Dict]]:
         """
@@ -327,68 +458,104 @@ def build_graph_from_patient_data(patient_data: Dict[str, Any]) -> PatientKnowle
     patient_id = patient_data['patient_id']
     pkg = PatientKnowledgeGraph(patient_id)
     
-    # Track seen entities to avoid duplicates
-    seen_entities = {}
-    
-    for visit in patient_data['visits']:
+    visits = sorted(patient_data.get('visits', []), key=lambda v: v.get('date', ''))
+
+    for visit in visits:
         date = visit.get('date', '')
         extracted = visit.get('extracted', {})
+
+        # Fallback to top-level fields if extracted is missing/incomplete.
+        conditions = extracted.get('conditions', []) or visit.get('diagnoses', [])
+        medications = extracted.get('medications', []) or visit.get('medications', [])
+        symptoms = extracted.get('symptoms', []) or visit.get('symptoms', [])
+        lab_values = extracted.get('lab_values', {}) or visit.get('labs', {})
+        procedures = extracted.get('procedures', []) or []
+        relationships = extracted.get('relationships', []) or []
         
         # Process conditions
-        for condition in extracted.get('conditions', []):
+        condition_nodes: List[str] = []
+        medication_nodes: List[str] = []
+        symptom_nodes: List[str] = []
+        lab_nodes: List[str] = []
+
+        for condition in conditions:
             node_id = pkg.get_entity(condition, 'CONDITION')
             if node_id is None:
                 node_id = pkg.add_entity(condition, 'CONDITION', date)
-                seen_entities[condition.lower()] = node_id
             else:
                 pkg.update_entity(node_id, date, confirmed=True)
+            condition_nodes.append(node_id)
         
         # Process medications
-        for med in extracted.get('medications', []):
+        for med in medications:
             node_id = pkg.get_entity(med, 'MEDICATION')
             if node_id is None:
                 node_id = pkg.add_entity(med, 'MEDICATION', date)
-                seen_entities[med.lower()] = node_id
             else:
                 pkg.update_entity(node_id, date, confirmed=True)
+            medication_nodes.append(node_id)
         
         # Process lab values
-        for lab_name, lab_value in extracted.get('lab_values', {}).items():
+        for lab_name, lab_value in lab_values.items():
             node_id = pkg.get_entity(lab_name, 'LAB_VALUE')
             if node_id is None:
                 node_id = pkg.add_entity(lab_name, 'LAB_VALUE', date, value=lab_value)
-                seen_entities[lab_name.lower()] = node_id
             else:
                 pkg.update_entity(node_id, date, new_value=lab_value)
+            lab_nodes.append(node_id)
         
         # Process symptoms
-        for symptom in extracted.get('symptoms', []):
+        for symptom in symptoms:
             node_id = pkg.get_entity(symptom, 'SYMPTOM')
             if node_id is None:
                 node_id = pkg.add_entity(symptom, 'SYMPTOM', date)
-                seen_entities[symptom.lower()] = node_id
             else:
                 pkg.update_entity(node_id, date, confirmed=True)
+            symptom_nodes.append(node_id)
+
+        # Process procedures
+        for procedure in procedures:
+            node_id = pkg.get_entity(procedure, 'PROCEDURE')
+            if node_id is None:
+                node_id = pkg.add_entity(procedure, 'PROCEDURE', date)
+            else:
+                pkg.update_entity(node_id, date, confirmed=True)
+
+        # Add fallback baseline relations only when extraction provides no explicit relationships.
+        if not relationships:
+            for c in condition_nodes:
+                for m in medication_nodes:
+                    pkg.add_relation(c, m, 'managed_by', date)
+                for s in symptom_nodes:
+                    pkg.add_relation(c, s, 'has_symptom', date)
+                for l in lab_nodes:
+                    pkg.add_relation(c, l, 'measured_by', date)
         
         # Process relationships
-        for rel in extracted.get('relationships', []):
+        for rel in relationships:
             subject = rel.get('subject', '')
             predicate = rel.get('predicate', '')
             obj = rel.get('object', '')
+            confidence = float(rel.get('confidence', 1.0)) if isinstance(rel.get('confidence', 1.0), (int, float)) else 1.0
             
-            if subject and obj:
+            if subject and obj and predicate:
                 src_id = pkg.get_entity(subject)
                 dst_id = pkg.get_entity(obj)
                 
                 if src_id and dst_id:
-                    pkg.add_relation(src_id, dst_id, predicate, date)
+                    pkg.add_relation(src_id, dst_id, predicate, date, confidence=confidence)
+
+        # Decay confidence after each visit to keep temporal trust dynamic.
+        pkg.decay_confidence(date)
     
     return pkg
 
 
 def build_graphs_for_all_patients(input_dir: str = "data/patients_processed",
                                    output_dir: str = "data/graphs",
-                                   limit: int = None) -> List[str]:
+                                   limit: int = None,
+                                   create_visualizations: bool = True,
+                                   viz_dir: str = "data/graphs/viz") -> List[str]:
     """
     Build knowledge graphs for all processed patients.
     
@@ -396,6 +563,8 @@ def build_graphs_for_all_patients(input_dir: str = "data/patients_processed",
         input_dir: Directory with processed patient JSON files
         output_dir: Directory to save graph JSON files
         limit: Maximum number of patients to process
+        create_visualizations: Whether to generate PyVis HTML graph files
+        viz_dir: Directory for visualization HTML files
     
     Returns:
         List of patient IDs that were processed
@@ -406,10 +575,13 @@ def build_graphs_for_all_patients(input_dir: str = "data/patients_processed",
     os.makedirs(output_dir, exist_ok=True)
     
     # Get all processed patient files
-    patient_files = list(Path(input_dir).glob("*.json"))
+    patient_files = sorted(Path(input_dir).glob("*.json"))
     
-    if limit:
+    if limit is not None:
         patient_files = patient_files[:limit]
+
+    if create_visualizations:
+        Path(viz_dir).mkdir(parents=True, exist_ok=True)
     
     print(f"\n{'='*60}")
     print(f"🏥 PHASE 3: KNOWLEDGE GRAPH CONSTRUCTION")
@@ -437,6 +609,10 @@ def build_graphs_for_all_patients(input_dir: str = "data/patients_processed",
             # Save graph
             output_path = Path(output_dir) / f"{patient_id}_graph.json"
             pkg.save(str(output_path))
+
+            if create_visualizations:
+                viz_path = Path(viz_dir) / f"{patient_id}_graph.html"
+                pkg.visualize(str(viz_path))
             
             # Print summary
             summary = pkg.summary()
@@ -468,8 +644,8 @@ if __name__ == "__main__":
                 "date": "2024-01-15",
                 "extracted": {
                     "conditions": ["Type 2 Diabetes", "Hypertension"],
-                    "medications": ["Metformin 500mg"],
-                    "lab_values": {"HbA1c": 7.2, "BP": "140/90"},
+                    "medications": ["Metformin"],
+                    "lab_values": {"HbA1c": 7.2, "BP_systolic": 140, "BP_diastolic": 90},
                     "symptoms": ["Fatigue", "Polyuria"],
                     "relationships": []
                 }

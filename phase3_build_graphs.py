@@ -71,31 +71,37 @@ def main():
     print("="*60)
     
     print("\nOptions:")
-    print("  1. Build graphs for all processed patients (10 patients)")
+    print("  1. Build graphs for all processed patients")
     print("  2. Build graphs for first 5 patients (test)")
-    print("  3. Show summary for P001")
-    print("  4. Show summary for all patients")
-    print("  5. Exit")
+    print("  3. Build graphs for first 10 patients (test with viz)")
+    print("  4. Show summary for P001")
+    print("  5. Show summary for all patients")
+    print("  6. Exit")
     
-    choice = input("\nEnter choice (1-5): ").strip()
+    choice = input("\nEnter choice (1-6): ").strip()
     
     if choice == "1":
-        confirm = input("\nBuild graphs for all 10 patients? (y/n): ")
+        confirm = input("\nBuild graphs for all processed patients with visualization? (y/n): ")
         if confirm.lower() == 'y':
-            build_graphs_for_all_patients(limit=10)
+            build_graphs_for_all_patients(limit=None, create_visualizations=True)
             show_graph_summary("P001")
         else:
             print("Cancelled.")
             
     elif choice == "2":
         print("\nBuilding graphs for first 5 patients...")
-        build_graphs_for_all_patients(limit=5)
+        build_graphs_for_all_patients(limit=5, create_visualizations=True)
         show_graph_summary("P001")
-        
+
     elif choice == "3":
+        print("\nBuilding graphs for first 10 patients...")
+        build_graphs_for_all_patients(limit=10, create_visualizations=True)
         show_graph_summary("P001")
         
     elif choice == "4":
+        show_graph_summary("P001")
+        
+    elif choice == "5":
         print("\nShowing summaries for all patients...")
         graph_files = list(Path("data/graphs").glob("*_graph.json"))
         for gf in graph_files:
@@ -103,12 +109,12 @@ def main():
             show_graph_summary(patient_id)
             print("-" * 40)
             
-    elif choice == "5":
+    elif choice == "6":
         print("Exiting...")
         
     else:
         print("Invalid choice. Building graphs for first 5 patients...")
-        build_graphs_for_all_patients(limit=5)
+        build_graphs_for_all_patients(limit=5, create_visualizations=True)
 
 if __name__ == "__main__":
     main()

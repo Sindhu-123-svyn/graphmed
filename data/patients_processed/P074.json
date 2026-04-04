@@ -13,15 +13,11 @@
         "LDL": 130
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg QD",
-        "Simvastatin 20mg QD",
         "metformin",
+        "lisinopril qd",
+        "simvastatin qd",
         "lisinopril",
-        "simvastatin",
-        "500mg",
-        "10mg",
-        "20mg"
+        "simvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -30,75 +26,89 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria"
+        "Frequent urination"
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [
           "metformin",
           "lisinopril",
-          "simvastatin",
-          "500mg",
-          "10mg",
-          "20mg"
+          "simvastatin"
+        ],
+        "dosages": [
+          "500mg BID",
+          "10mg QD",
+          "20mg QD"
         ],
         "symptoms": [
-          "Polyuria",
-          "Fatigue"
+          "Fatigue",
+          "Frequent urination"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "Lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "lisinopril",
             "confidence": 0.9
           },
           {
-            "subject": "Simvastatin",
+            "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Hyperlipidemia",
+            "object": "simvastatin",
             "confidence": 0.9
           },
           {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP_systolic",
-            "predicate": "measured_by",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP_diastolic",
-            "predicate": "measured_by",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Polyuria",
+            "subject": "Hypertension",
             "predicate": "has_symptom",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.7
+            "object": "Fatigue",
+            "confidence": 0.8
           },
           {
-            "subject": "Fatigue",
+            "subject": "Hypertension",
             "predicate": "has_symptom",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.7
+            "object": "Frequent urination",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "has_symptom",
+            "object": "Fatigue",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "has_symptom",
+            "object": "Frequent urination",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "measured_by",
+            "object": "HbA1c",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "measured_by",
+            "object": "BP_systolic",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "measured_by",
+            "object": "BP_diastolic",
+            "confidence": 0.9
           }
         ],
         "lab_values": {
@@ -106,7 +116,14 @@
           "BP_systolic": 140,
           "BP_diastolic": 90
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg",
+        "20mg",
+        "10mg QD",
+        "20mg QD"
+      ]
     },
     {
       "visit_id": "V2",
@@ -120,14 +137,12 @@
         "LDL": 120
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg QD",
-        "Amlodipine 5mg QD",
-        "Simvastatin 40mg QD",
+        "metformin",
+        "lisinopril qd",
+        "amlodipine qd",
+        "simvastatin qd",
         "amlodipine",
-        "simvastatin",
-        "5mg",
-        "40mg"
+        "simvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -137,8 +152,7 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
-        "Dyspnea",
+        "Frequent urination",
         "Shortness of breath"
       ],
       "extracted": {
@@ -147,55 +161,26 @@
         ],
         "medications": [
           "amlodipine",
-          "simvastatin",
-          "5mg",
-          "40mg"
+          "simvastatin"
+        ],
+        "dosages": [
+          "5mg QD",
+          "40mg QD"
         ],
         "symptoms": [
-          "Shortness of breath",
-          "Dyspnea"
+          "Shortness of breath"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Amlodipine",
-            "predicate": "managed_by",
-            "object": "BP_systolic",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Simvastatin",
-            "predicate": "managed_by",
-            "object": "HbA1c",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Amlodipine",
-            "predicate": "contraindicated_with",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Simvastatin",
-            "predicate": "contraindicated_with",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.7
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "improves",
-            "object": "Amlodipine",
-            "confidence": 0.6
-          },
-          {
             "subject": "BP_systolic",
             "predicate": "worsens",
-            "object": "Simvastatin",
-            "confidence": 0.6
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.7
           },
           {
             "subject": "eGFR",
-            "predicate": "measured_by",
+            "predicate": "worsens",
             "object": "Chronic Kidney Disease",
             "confidence": 0.5
           }
@@ -205,7 +190,15 @@
           "BP_systolic": 150,
           "eGFR": 60
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg",
+        "5mg",
+        "40mg",
+        "5mg QD",
+        "40mg QD"
+      ]
     },
     {
       "visit_id": "V3",
@@ -219,15 +212,11 @@
         "LDL": 140
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Enalapril 10mg QD",
-        "Furosemide 20mg BID",
-        "Simvastatin 80mg QD",
-        "simvastatin",
-        "10mg",
-        "20mg",
-        "80mg",
+        "metformin",
+        "enalapril qd",
         "furosemide",
+        "simvastatin qd",
+        "simvastatin",
         "enalapril"
       ],
       "diagnoses": [
@@ -239,10 +228,9 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
-        "Dyspnea",
-        "Edema",
-        "Shortness of breath"
+        "Frequent urination",
+        "Shortness of breath",
+        "Edema"
       ],
       "extracted": {
         "conditions": [
@@ -250,25 +238,20 @@
         ],
         "medications": [
           "simvastatin",
-          "10mg",
-          "20mg",
-          "80mg",
           "furosemide",
           "enalapril"
         ],
+        "dosages": [
+          "10mg QD",
+          "20mg BID",
+          "80mg QD"
+        ],
         "symptoms": [
-          "Edema",
           "Shortness of breath",
-          "dyspnea"
+          "Edema"
         ],
         "procedures": [],
         "relationships": [
-          {
-            "subject": "Coronary Artery Disease",
-            "predicate": "managed_by",
-            "object": "simvastatin",
-            "confidence": 0.8
-          },
           {
             "subject": "Coronary Artery Disease",
             "predicate": "managed_by",
@@ -282,28 +265,22 @@
             "confidence": 0.8
           },
           {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "8.2",
-            "confidence": 0.9
+            "subject": "Coronary Artery Disease",
+            "predicate": "managed_by",
+            "object": "simvastatin",
+            "confidence": 0.8
           },
           {
-            "subject": "BP_systolic",
-            "predicate": "measured_by",
-            "object": "160",
-            "confidence": 0.9
+            "subject": "Coronary Artery Disease",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
+            "confidence": 0.5
           },
           {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "45",
-            "confidence": 0.9
-          },
-          {
-            "subject": "dyspnea",
-            "predicate": "has_symptom",
-            "object": "edema",
-            "confidence": 0.7
+            "subject": "Coronary Artery Disease",
+            "predicate": "worsens",
+            "object": "Edema",
+            "confidence": 0.5
           }
         ],
         "lab_values": {
@@ -311,7 +288,15 @@
           "BP_systolic": 160,
           "eGFR": 45
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg",
+        "20mg BID",
+        "80mg",
+        "10mg QD",
+        "80mg QD"
+      ]
     }
   ]
 }

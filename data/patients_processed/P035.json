@@ -13,9 +13,9 @@
         "LDL": 150
       },
       "medications": [
-        "Aspirin 81mg daily",
-        "Atorvastatin 20mg daily",
-        "Amlodipine 5mg daily"
+        "aspirin",
+        "atorvastatin",
+        "amlodipine"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -24,53 +24,30 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria"
+        "Frequent urination"
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hypertension",
+          "Hyperlipidemia"
         ],
         "medications": [],
+        "dosages": [],
         "symptoms": [],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "Hypertension",
-            "predicate": "managed_by",
-            "object": "lifestyle modifications",
-            "confidence": 1.0
-          },
-          {
-            "subject": "Hyperlipidemia",
-            "predicate": "managed_by",
-            "object": "lifestyle modifications",
-            "confidence": 1.0
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "labs",
-            "confidence": 1.0
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "labs",
-            "confidence": 1.0
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "labs",
-            "confidence": 1.0
-          }
-        ],
+        "relationships": [],
         "lab_values": {
           "HbA1c": "elevated",
-          "LDL": "elevated"
+          "LDL": "elevated",
+          "BP_systolic": "controlled",
+          "BP_diastolic": "controlled"
         }
-      }
+      },
+      "dosages": [
+        "81mg daily",
+        "20mg daily",
+        "5mg daily"
+      ]
     },
     {
       "visit_id": "V2",
@@ -84,10 +61,10 @@
         "LDL": 140
       },
       "medications": [
-        "Metformin 500mg bid",
-        "Aspirin 81mg daily",
-        "Atorvastatin 20mg daily",
-        "Amlodipine 5mg daily"
+        "metformin",
+        "aspirin",
+        "atorvastatin",
+        "amlodipine"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -97,7 +74,7 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Weight loss"
       ],
       "extracted": {
@@ -105,54 +82,24 @@
           "Hyperlipidemia"
         ],
         "medications": [],
+        "dosages": [],
         "symptoms": [
-          "Polyuria",
-          "Fatigue"
+          "Fatigue",
+          "Frequent urination"
         ],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "BP",
-            "predicate": "remains controlled",
-            "object": "None",
-            "confidence": 1.0
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "labs",
-            "confidence": 0.9
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "labs",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Hyperlipidemia",
-            "predicate": "managed_by",
-            "object": "medications",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Polyuria",
-            "confidence": 0.7
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "worsens",
-            "object": "eGFR",
-            "confidence": 0.6
-          }
-        ],
+        "relationships": [],
         "lab_values": {
           "HbA1c": "elevated",
           "eGFR": "worsening"
         }
-      }
+      },
+      "dosages": [
+        "500mg bid",
+        "81mg daily",
+        "20mg daily",
+        "5mg daily"
+      ]
     },
     {
       "visit_id": "V3",
@@ -166,11 +113,11 @@
         "LDL": 130
       },
       "medications": [
-        "Metformin 1000mg bid",
-        "Aspirin 81mg daily",
-        "Atorvastatin 20mg daily",
-        "Amlodipine 5mg daily",
-        "Furosemide 20mg daily"
+        "metformin",
+        "aspirin",
+        "atorvastatin",
+        "amlodipine",
+        "furosemide"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -181,63 +128,49 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Weight loss",
-        "Dyspnea"
+        "Shortness of breath"
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia"
+          "Hyperlipidemia",
+          "Type 2 Diabetes"
         ],
         "medications": [],
+        "dosages": [],
         "symptoms": [
-          "Polyuria",
-          "weight loss"
+          "Frequent urination",
+          "Weight loss"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "labs",
-            "confidence": 0.9
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "labs",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "remains_controlled",
-            "object": "BP",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Hyperlipidemia",
-            "predicate": "stable",
-            "object": "Hyperlipidemia",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Polyuria",
+            "subject": "Type 2 Diabetes",
             "predicate": "has_symptom",
-            "object": "weight loss",
-            "confidence": 0.6
+            "object": "Frequent urination",
+            "confidence": 0.9
           },
           {
-            "subject": "HbA1c",
-            "predicate": "worsens",
-            "object": "eGFR",
-            "confidence": 0.5
+            "subject": "Type 2 Diabetes",
+            "predicate": "has_symptom",
+            "object": "Weight loss",
+            "confidence": 0.9
           }
         ],
         "lab_values": {
           "HbA1c": "elevated",
-          "eGFR": "worsening"
+          "eGFR": "worsening",
+          "BP_systolic": "controlled",
+          "BP_diastolic": "controlled"
         }
-      }
+      },
+      "dosages": [
+        "1000mg bid",
+        "81mg daily",
+        "20mg daily",
+        "5mg daily"
+      ]
     },
     {
       "visit_id": "V4",
@@ -251,12 +184,12 @@
         "LDL": 120
       },
       "medications": [
-        "Metformin 1500mg bid",
-        "Aspirin 81mg daily",
-        "Atorvastatin 20mg daily",
-        "Amlodipine 5mg daily",
-        "Furosemide 40mg daily",
-        "Enalapril 10mg daily"
+        "metformin",
+        "aspirin",
+        "atorvastatin",
+        "amlodipine",
+        "furosemide",
+        "enalapril"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -264,73 +197,40 @@
         "Hyperlipidemia",
         "Chronic Kidney Disease",
         "Coronary Artery Disease",
-        "Cardiac Failure",
-        "Diabetes"
+        "Cardiac Failure"
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Weight loss",
-        "Dyspnea",
-        "Orthopnea",
-        "Shortness of breath"
+        "Shortness of breath",
+        "Orthopnea"
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia",
-          "Diabetes",
-          "Chronic kidney disease"
+          "Hyperlipidemia"
         ],
         "medications": [],
+        "dosages": [],
         "symptoms": [
           "Shortness of breath",
-          "Dyspnea",
           "Weight loss"
         ],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "BP",
-            "predicate": "managed_by",
-            "object": "medication",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "lab_test",
-            "confidence": 0.9
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "lab_test",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Dyspnea",
-            "predicate": "has_symptom",
-            "object": "Shortness of breath",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Dyspnea",
-            "predicate": "worsens",
-            "object": "Hyperlipidemia",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Weight loss",
-            "predicate": "worsens",
-            "object": "Hyperlipidemia",
-            "confidence": 0.6
-          }
-        ],
+        "relationships": [],
         "lab_values": {
           "HbA1c": "elevated",
           "eGFR": "worsening"
         }
-      }
+      },
+      "dosages": [
+        "1500mg bid",
+        "81mg daily",
+        "20mg daily",
+        "5mg daily",
+        "40mg daily",
+        "10mg daily"
+      ]
     },
     {
       "visit_id": "V5",
@@ -344,13 +244,13 @@
         "LDL": 110
       },
       "medications": [
-        "Metformin 2000mg bid",
-        "Aspirin 81mg daily",
-        "Atorvastatin 20mg daily",
-        "Amlodipine 5mg daily",
-        "Furosemide 60mg daily",
-        "Enalapril 20mg daily",
-        "Spironolactone 25mg daily"
+        "metformin",
+        "aspirin",
+        "atorvastatin",
+        "amlodipine",
+        "furosemide",
+        "enalapril",
+        "spironolactone"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -359,78 +259,43 @@
         "Chronic Kidney Disease",
         "Coronary Artery Disease",
         "Cardiac Failure",
-        "Heart Failure with Reduced Ejection Fraction",
-        "Diabetes"
+        "Heart Failure With Reduced Ejection Fraction",
+        "Heart Failure"
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Weight loss",
-        "Dyspnea",
+        "Shortness of breath",
         "Orthopnea",
         "Paroxysmal nocturnal dyspnea"
       ],
       "extracted": {
         "conditions": [
           "Hyperlipidemia",
-          "Diabetes",
-          "Chronic Kidney Disease"
+          "Heart Failure"
         ],
         "medications": [],
+        "dosages": [],
         "symptoms": [
-          "orthopnea",
-          "weight loss"
+          "Orthopnea",
+          "Weight loss"
         ],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "labs",
-            "confidence": 1.0
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "labs",
-            "confidence": 1.0
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "labs",
-            "confidence": 1.0
-          },
-          {
-            "subject": "orthopnea",
-            "predicate": "has_symptom",
-            "object": "weight loss",
-            "confidence": 1.0
-          },
-          {
-            "subject": "Hyperlipidemia",
-            "predicate": "managed_by",
-            "object": "stable",
-            "confidence": 1.0
-          },
-          {
-            "subject": "Diabetes",
-            "predicate": "managed_by",
-            "object": "elevated HbA1c",
-            "confidence": 1.0
-          },
-          {
-            "subject": "Chronic Kidney Disease",
-            "predicate": "managed_by",
-            "object": "worsening eGFR",
-            "confidence": 1.0
-          }
-        ],
+        "relationships": [],
         "lab_values": {
           "HbA1c": "elevated",
           "eGFR": "worsening"
         }
-      }
+      },
+      "dosages": [
+        "2000mg bid",
+        "81mg daily",
+        "20mg daily",
+        "5mg daily",
+        "60mg daily",
+        "25mg daily"
+      ]
     }
   ]
 }

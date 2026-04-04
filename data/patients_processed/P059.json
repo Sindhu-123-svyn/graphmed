@@ -13,12 +13,9 @@
         "LDL": 140
       },
       "medications": [
-        "Metformin 500mg twice daily",
-        "Lisinopril 10mg daily",
-        "metformin",
+        "metformin twice daily",
         "lisinopril",
-        "500mg",
-        "10mg"
+        "metformin"
       ],
       "diagnoses": [
         "Type 2 Diabetes Mellitus",
@@ -27,60 +24,38 @@
         "Type 2 Diabetes"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
-        "Dyspnea"
+        "Shortness of breath"
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [
           "metformin",
-          "lisinopril",
-          "500mg",
-          "10mg"
+          "lisinopril"
+        ],
+        "dosages": [
+          "500mg twice daily",
+          "10mg daily"
         ],
         "symptoms": [],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "Lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "lisinopril",
             "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.8
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.8
           }
         ],
         "lab_values": {
@@ -90,7 +65,12 @@
           "eGFR": 78,
           "LDL": 140
         }
-      }
+      },
+      "dosages": [
+        "500mg",
+        "10mg daily",
+        "500mg twice daily"
+      ]
     },
     {
       "visit_id": "V2",
@@ -104,15 +84,10 @@
         "LDL": 145
       },
       "medications": [
-        "Metformin 500mg twice daily",
-        "Lisinopril 20mg daily",
-        "Amlodipine 5mg daily",
-        "Atorvastatin 20mg daily",
+        "metformin twice daily",
         "lisinopril",
         "amlodipine",
-        "atorvastatin",
-        "20mg",
-        "5mg"
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes Mellitus",
@@ -121,25 +96,43 @@
         "Chronic Kidney Disease"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
-        "Dyspnea",
-        "Fatigue"
+        "Shortness of breath",
+        "Fatigue",
+        "Hypertension"
       ],
       "extracted": {
-        "conditions": [],
+        "conditions": [
+          "Hypertension"
+        ],
         "medications": [
           "lisinopril",
           "amlodipine",
-          "atorvastatin",
-          "20mg",
-          "5mg"
+          "atorvastatin"
         ],
-        "symptoms": [],
+        "dosages": [
+          "20mg daily",
+          "5mg daily"
+        ],
+        "symptoms": [
+          "Hypertension"
+        ],
         "procedures": [],
         "relationships": [],
-        "lab_values": {}
-      }
+        "lab_values": {
+          "HbA1c": 7.8,
+          "BP_systolic": 160,
+          "BP_diastolic": 95,
+          "eGFR": 74,
+          "LDL": 145
+        }
+      },
+      "dosages": [
+        "500mg",
+        "20mg daily",
+        "5mg daily"
+      ]
     },
     {
       "visit_id": "V3",
@@ -153,108 +146,59 @@
         "LDL": 150
       },
       "medications": [
-        "Metformin 500mg twice daily",
-        "Lisinopril 30mg daily",
-        "Atorvastatin 20mg daily",
-        "amlodipine",
+        "metformin twice daily",
         "lisinopril",
-        "30mg"
+        "atorvastatin",
+        "amlodipine"
       ],
       "diagnoses": [
         "Type 2 Diabetes Mellitus",
         "Hypertension",
         "Hyperlipidemia",
         "Chronic Kidney Disease",
-        "kidney damage"
+        "Kidney Damage"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
-        "Dyspnea",
+        "Shortness of breath",
         "Fatigue",
         "Edema"
       ],
       "extracted": {
         "conditions": [
-          "kidney damage"
+          "Kidney Damage"
         ],
         "medications": [
           "amlodipine",
-          "lisinopril",
-          "30mg"
+          "lisinopril"
+        ],
+        "dosages": [
+          "30mg daily"
         ],
         "symptoms": [],
         "procedures": [],
         "relationships": [
           {
-            "subject": "amlodipine",
-            "predicate": "contraindicated_with",
-            "object": "side effects",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Lisinopril",
-            "predicate": "increased_by",
-            "object": "30mg",
-            "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "lab_values",
-            "confidence": 0.7
-          },
-          {
             "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "lab_values",
-            "confidence": 0.7
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "lab_values",
-            "confidence": 0.7
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "lab_values",
-            "confidence": 0.7
-          },
-          {
-            "subject": "kidney damage",
-            "predicate": "implied_by",
-            "object": "eGFR",
-            "confidence": 0.6
-          },
-          {
-            "subject": "kidney damage",
             "predicate": "worsens",
-            "object": "eGFR",
+            "object": "Kidney Damage",
             "confidence": 0.6
-          },
-          {
-            "subject": "BP",
-            "predicate": "improved_by",
-            "object": "Lisinopril",
-            "confidence": 0.5
-          },
-          {
-            "subject": "LDL",
-            "predicate": "improved_by",
-            "object": "Lisinopril",
-            "confidence": 0.5
           }
         ],
         "lab_values": {
           "HbA1c": 7.2,
-          "eGFR": 68,
           "BP_systolic": 140,
           "BP_diastolic": 90,
+          "eGFR": 68,
           "LDL": 150
         }
-      }
+      },
+      "dosages": [
+        "500mg",
+        "30mg daily",
+        "20mg daily"
+      ]
     },
     {
       "visit_id": "V4",
@@ -268,83 +212,51 @@
         "LDL": 155
       },
       "medications": [
-        "Metformin 500mg twice daily",
-        "Lisinopril 30mg daily",
-        "Simvastatin 40mg daily",
-        "simvastatin",
-        "40mg"
+        "metformin twice daily",
+        "lisinopril",
+        "simvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes Mellitus",
         "Hypertension",
         "Hyperlipidemia",
         "Chronic Kidney Disease",
-        "Diabetes"
+        "Type 2 Diabetes"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
-        "Dyspnea",
+        "Shortness of breath",
         "Fatigue",
         "Edema"
       ],
       "extracted": {
         "conditions": [
-          "Diabetes",
+          "Type 2 Diabetes",
           "Hyperlipidemia"
         ],
         "medications": [
-          "simvastatin",
-          "40mg"
+          "simvastatin"
+        ],
+        "dosages": [
+          "40mg daily"
         ],
         "symptoms": [
           "Edema"
         ],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "Simvastatin",
-            "predicate": "managed_by",
-            "object": "Lipid control",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Edema",
-            "predicate": "has_symptom",
-            "object": "Patient's symptoms",
-            "confidence": 0.8
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "Lab values",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Simvastatin",
-            "predicate": "contraindicated_with",
-            "object": "None",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Patient's symptoms",
-            "predicate": "improves",
-            "object": "Treatment",
-            "confidence": 0.5
-          },
-          {
-            "subject": "Edema",
-            "predicate": "worsens",
-            "object": "None",
-            "confidence": 0.4
-          }
-        ],
+        "relationships": [],
         "lab_values": {
           "HbA1c": 6.8,
           "eGFR": 70,
           "LDL": 155
         }
-      }
+      },
+      "dosages": [
+        "500mg",
+        "30mg daily",
+        "40mg daily"
+      ]
     }
   ]
 }

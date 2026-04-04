@@ -13,12 +13,8 @@
         "LDL": 140
       },
       "medications": [
-        "Metformin 1000mg daily",
-        "Lisinopril 20mg daily",
         "metformin",
-        "lisinopril",
-        "1000mg",
-        "20mg"
+        "lisinopril"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -27,87 +23,101 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia"
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [
           "metformin",
-          "lisinopril",
-          "1000mg",
-          "20mg"
+          "lisinopril"
+        ],
+        "dosages": [
+          "1000mg daily",
+          "20mg daily"
         ],
         "symptoms": [
-          "Polydipsia",
-          "Polyuria",
-          "Fatigue"
+          "Fatigue",
+          "Frequent urination",
+          "Polydipsia"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "Lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "lisinopril",
             "confidence": 0.9
           },
           {
-            "subject": "BP_systolic",
-            "predicate": "measured_by",
-            "object": "Physical examination",
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Fatigue",
             "confidence": 0.8
           },
           {
-            "subject": "BP_diastolic",
-            "predicate": "measured_by",
-            "object": "Physical examination",
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Frequent urination",
             "confidence": 0.8
           },
           {
-            "subject": "HbA1c",
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Polydipsia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "has_symptom",
+            "object": "Fatigue",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "has_symptom",
+            "object": "Frequent urination",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "has_symptom",
+            "object": "Polydipsia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
             "predicate": "measured_by",
-            "object": "Labs",
+            "object": "BP_systolic",
             "confidence": 0.9
           },
           {
-            "subject": "LDL",
+            "subject": "Hypertension",
             "predicate": "measured_by",
-            "object": "Labs",
+            "object": "BP_diastolic",
             "confidence": 0.9
           },
           {
-            "subject": "eGFR",
+            "subject": "Type 2 Diabetes",
             "predicate": "measured_by",
-            "object": "Labs",
+            "object": "HbA1c",
             "confidence": 0.9
           },
           {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Polyuria",
-            "predicate": "has_symptom",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Polydipsia",
-            "predicate": "has_symptom",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.7
+            "subject": "Hyperlipidemia",
+            "predicate": "measured_by",
+            "object": "LDL",
+            "confidence": 0.9
           }
         ],
         "lab_values": {
@@ -117,7 +127,11 @@
           "eGFR": 72,
           "LDL": 140
         }
-      }
+      },
+      "dosages": [
+        "1000mg daily",
+        "20mg daily"
+      ]
     },
     {
       "visit_id": "V2",
@@ -131,15 +145,9 @@
         "LDL": 130
       },
       "medications": [
-        "Metformin 1000mg daily",
-        "Lisinopril 25mg daily",
-        "Atorvastatin 20mg daily",
         "metformin",
         "lisinopril",
-        "atorvastatin",
-        "1000mg",
-        "25mg",
-        "20mg"
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -149,34 +157,85 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Nocturia"
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Hypertension",
           "Chronic Kidney Disease"
         ],
         "medications": [
           "metformin",
           "lisinopril",
-          "atorvastatin",
-          "1000mg",
-          "25mg",
-          "20mg"
+          "atorvastatin"
+        ],
+        "dosages": [
+          "1000mg daily",
+          "25mg daily",
+          "20mg daily"
         ],
         "symptoms": [
+          "Fatigue",
+          "Frequent urination",
           "Polydipsia",
-          "Polyuria",
-          "Fatigue"
+          "Nocturia"
         ],
         "procedures": [],
-        "relationships": [],
-        "lab_values": {}
-      }
+        "relationships": [
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "metformin",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "managed_by",
+            "object": "atorvastatin",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Frequent urination",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "worsens",
+            "object": "Nocturia",
+            "confidence": 0.8
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 7.8,
+          "BP_systolic": 130,
+          "BP_diastolic": 85,
+          "eGFR": 68,
+          "LDL": 130
+        }
+      },
+      "dosages": [
+        "1000mg daily",
+        "25mg daily",
+        "20mg daily"
+      ]
     },
     {
       "visit_id": "V3",
@@ -190,18 +249,10 @@
         "LDL": 120
       },
       "medications": [
-        "Metformin 1500mg daily",
-        "Lisinopril 30mg daily",
-        "Atorvastatin 40mg daily",
-        "Amlodipine 10mg daily",
         "metformin",
         "lisinopril",
-        "amlodipine",
         "atorvastatin",
-        "1500mg",
-        "30mg",
-        "40mg",
-        "10mg"
+        "amlodipine"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -212,115 +263,74 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Nocturia",
-        "Chest Pain"
+        "Chest pain"
       ],
       "extracted": {
         "conditions": [
-          "Chronic Kidney Disease",
+          "Hypertension",
           "Type 2 Diabetes",
-          "Coronary Artery Disease",
           "Hyperlipidemia",
-          "Hypertension"
+          "Chronic Kidney Disease",
+          "Coronary Artery Disease"
         ],
         "medications": [
           "metformin",
           "lisinopril",
           "amlodipine",
-          "atorvastatin",
-          "1500mg",
-          "30mg",
-          "40mg",
-          "10mg"
+          "atorvastatin"
+        ],
+        "dosages": [
+          "1500mg daily",
+          "30mg daily",
+          "40mg daily",
+          "10mg daily"
         ],
         "symptoms": [
-          "Chest pain",
-          "Polydipsia",
-          "Polyuria",
           "Fatigue",
-          "Nocturia"
+          "Chest pain",
+          "Frequent urination",
+          "Polydipsia"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.8
+            "object": "metformin",
+            "confidence": 0.9
           },
           {
-            "subject": "Lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
-            "confidence": 0.8
+            "object": "lisinopril",
+            "confidence": 0.9
           },
           {
-            "subject": "Amlodipine",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
-            "confidence": 0.8
+            "object": "amlodipine",
+            "confidence": 0.9
           },
           {
-            "subject": "Atorvastatin",
+            "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Labs",
+            "object": "atorvastatin",
             "confidence": 0.9
           },
           {
-            "subject": "BP_systolic",
-            "predicate": "measured_by",
-            "object": "Physical examination",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP_diastolic",
-            "predicate": "measured_by",
-            "object": "Physical examination",
-            "confidence": 0.9
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "Labs",
-            "confidence": 0.9
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "Labs",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
+            "subject": "Hypertension",
+            "predicate": "worsens",
             "object": "Chronic Kidney Disease",
-            "confidence": 0.7
+            "confidence": 0.8
           },
           {
-            "subject": "Polyuria",
-            "predicate": "has_symptom",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Polyuria",
-            "predicate": "has_symptom",
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
             "object": "Chronic Kidney Disease",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Chest pain",
-            "predicate": "has_symptom",
-            "object": "Coronary Artery Disease",
-            "confidence": 0.7
+            "confidence": 0.8
           }
         ],
         "lab_values": {
@@ -330,7 +340,13 @@
           "eGFR": 60,
           "LDL": 120
         }
-      }
+      },
+      "dosages": [
+        "1500mg daily",
+        "30mg daily",
+        "40mg daily",
+        "10mg daily"
+      ]
     }
   ]
 }

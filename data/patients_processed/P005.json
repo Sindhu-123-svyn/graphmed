@@ -13,15 +13,11 @@
         "LDL": 130
       },
       "medications": [
-        "Metformin 500mg bid",
-        "Lisinopril 10mg qd",
-        "Atorvastatin 20mg qd",
         "metformin",
+        "lisinopril qd",
+        "atorvastatin qd",
         "lisinopril",
-        "atorvastatin",
-        "500mg",
-        "10mg",
-        "20mg"
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -35,24 +31,46 @@
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [
           "metformin",
           "lisinopril",
-          "atorvastatin",
-          "500mg",
-          "10mg",
-          "20mg"
+          "atorvastatin"
+        ],
+        "dosages": [
+          "500mg bid",
+          "10mg qd",
+          "20mg qd"
         ],
         "symptoms": [
+          "Fatigue",
           "Polydipsia",
-          "Fatigue"
+          "Increased thirst"
         ],
         "procedures": [],
-        "relationships": [],
+        "relationships": [
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "metformin",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "managed_by",
+            "object": "atorvastatin",
+            "confidence": 0.9
+          }
+        ],
         "lab_values": {
           "HbA1c": 7.2,
           "BP_systolic": 140,
@@ -60,7 +78,14 @@
           "eGFR": 80.0,
           "LDL": 130.0
         }
-      }
+      },
+      "dosages": [
+        "500mg bid",
+        "10mg",
+        "20mg",
+        "10mg qd",
+        "20mg qd"
+      ]
     },
     {
       "visit_id": "V2",
@@ -74,16 +99,13 @@
         "LDL": 160
       },
       "medications": [
-        "Metformin 1000mg bid",
-        "Lisinopril 20mg qd",
-        "Atorvastatin 40mg qd",
-        "Furosemide 20mg qd",
         "metformin",
+        "lisinopril qd",
+        "atorvastatin qd",
+        "furosemide qd",
         "lisinopril",
         "atorvastatin",
-        "1000mg",
-        "20mg",
-        "40mg"
+        "furosemide"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -99,25 +121,85 @@
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Hypertension",
           "Chronic Kidney Disease"
         ],
         "medications": [
           "metformin",
           "lisinopril",
           "atorvastatin",
-          "1000mg",
-          "20mg",
-          "40mg"
+          "furosemide"
+        ],
+        "dosages": [
+          "1000mg bid",
+          "20mg qd",
+          "40mg qd"
         ],
         "symptoms": [
+          "Fatigue",
           "Polydipsia",
-          "Fatigue"
+          "Increased thirst",
+          "Weight gain"
         ],
         "procedures": [],
-        "relationships": [],
+        "relationships": [
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "metformin",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "managed_by",
+            "object": "atorvastatin",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "managed_by",
+            "object": "furosemide",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Increased thirst",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Weight gain",
+            "confidence": 0.8
+          }
+        ],
         "lab_values": {
           "HbA1c": 8.5,
           "BP_systolic": 150,
@@ -125,7 +207,14 @@
           "eGFR": 70.0,
           "LDL": 160.0
         }
-      }
+      },
+      "dosages": [
+        "1000mg bid",
+        "20mg",
+        "40mg",
+        "20mg qd",
+        "40mg qd"
+      ]
     },
     {
       "visit_id": "V3",
@@ -139,19 +228,14 @@
         "LDL": 180
       },
       "medications": [
-        "Metformin 1500mg bid",
-        "Lisinopril 40mg qd",
-        "Atorvastatin 80mg qd",
-        "Furosemide 40mg qd",
-        "Albuterol 2 puffs q4h",
         "metformin",
+        "lisinopril qd",
+        "atorvastatin qd",
+        "furosemide qd",
+        "albuterol 2 puffs q4h",
         "lisinopril",
         "atorvastatin",
-        "1500mg",
-        "40mg",
-        "80mg",
-        "Furosemide",
-        "Albuterol"
+        "furosemide"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -168,95 +252,66 @@
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Hypertension",
           "Chronic Kidney Disease"
         ],
         "medications": [
           "metformin",
           "lisinopril",
           "atorvastatin",
-          "1500mg",
-          "40mg",
-          "80mg",
-          "Furosemide",
-          "Albuterol"
+          "furosemide"
+        ],
+        "dosages": [
+          "1500mg bid",
+          "40mg qd",
+          "80mg qd"
         ],
         "symptoms": [
-          "Polydipsia",
-          "Shortness of breath",
           "Fatigue",
+          "Shortness of breath",
+          "Polydipsia",
           "Increased thirst",
           "Weight gain"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "metformin",
             "confidence": 0.8
           },
           {
-            "subject": "Lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "lisinopril",
             "confidence": 0.8
           },
           {
-            "subject": "Atorvastatin",
+            "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Hyperlipidemia",
+            "object": "atorvastatin",
             "confidence": 0.8
           },
           {
-            "subject": "Furosemide",
+            "subject": "Chronic Kidney Disease",
             "predicate": "managed_by",
-            "object": "Chronic Kidney Disease",
+            "object": "furosemide",
             "confidence": 0.8
           },
           {
-            "subject": "Albuterol",
-            "predicate": "managed_by",
+            "subject": "Hypertension",
+            "predicate": "worsens",
             "object": "Shortness of breath",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "worsens",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "worsens",
-            "object": "Hyperlipidemia",
             "confidence": 0.7
           },
           {
             "subject": "Hyperlipidemia",
             "predicate": "worsens",
-            "object": "Chronic Kidney Disease",
+            "object": "Shortness of breath",
             "confidence": 0.7
-          },
-          {
-            "subject": "BP 155/100",
-            "predicate": "measured_by",
-            "object": "Hypertension",
-            "confidence": 0.9
-          },
-          {
-            "subject": "LDL 180",
-            "predicate": "measured_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.9
-          },
-          {
-            "subject": "eGFR 65",
-            "predicate": "measured_by",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.9
           }
         ],
         "lab_values": {
@@ -266,7 +321,14 @@
           "eGFR": 65.0,
           "LDL": 180.0
         }
-      }
+      },
+      "dosages": [
+        "1500mg bid",
+        "40mg",
+        "80mg",
+        "40mg qd",
+        "80mg qd"
+      ]
     },
     {
       "visit_id": "V4",
@@ -280,22 +342,15 @@
         "LDL": 200
       },
       "medications": [
-        "Metformin 2000mg bid",
-        "Lisinopril 60mg qd",
-        "Atorvastatin 120mg qd",
-        "Furosemide 80mg qd",
-        "Albuterol 2 puffs q4h",
-        "Epoetin alfa 6000 units qw",
         "metformin",
+        "lisinopril qd",
+        "atorvastatin qd",
+        "furosemide qd",
+        "albuterol 2 puffs q4h",
+        "epoetin alfa 6000 units qw",
         "lisinopril",
         "atorvastatin",
-        "2000mg",
-        "60mg",
-        "120mg",
-        "80mg",
-        "furosemide",
-        "albuterol",
-        "epoetin alfa"
+        "furosemide"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -313,91 +368,85 @@
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Hypertension",
           "Chronic Kidney Disease"
         ],
         "medications": [
           "metformin",
           "lisinopril",
           "atorvastatin",
-          "2000mg",
+          "furosemide"
+        ],
+        "dosages": [
+          "2000mg bid",
           "60mg",
           "120mg",
-          "80mg",
-          "furosemide",
-          "albuterol",
-          "epoetin alfa"
+          "80mg"
         ],
         "symptoms": [
-          "Polydipsia",
-          "Shortness of breath",
           "Fatigue",
+          "Shortness of breath",
+          "Polydipsia",
           "Edema",
-          "Weight gain"
+          "Increased thirst"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "metformin",
-            "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.9
-          },
-          {
-            "subject": "lisinopril",
-            "predicate": "managed_by",
-            "object": "Hypertension",
-            "confidence": 0.9
-          },
-          {
-            "subject": "atorvastatin",
-            "predicate": "managed_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.9
-          },
-          {
-            "subject": "furosemide",
-            "predicate": "managed_by",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.9
-          },
-          {
-            "subject": "furosemide",
-            "predicate": "contraindicated_with",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.8
-          },
-          {
-            "subject": "albuterol",
-            "predicate": "managed_by",
-            "object": "Shortness of breath",
-            "confidence": 0.8
-          },
-          {
-            "subject": "epoetin alfa",
-            "predicate": "managed_by",
-            "object": "Anemia",
-            "confidence": 0.7
-          },
-          {
             "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "Chronic Kidney Disease",
+            "predicate": "managed_by",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
             "subject": "Hypertension",
-            "predicate": "worsens",
-            "object": "Chronic Kidney Disease",
+            "predicate": "managed_by",
+            "object": "lisinopril",
             "confidence": 0.9
           },
           {
             "subject": "Hyperlipidemia",
-            "predicate": "worsens",
-            "object": "Chronic Kidney Disease",
+            "predicate": "managed_by",
+            "object": "atorvastatin",
             "confidence": 0.9
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "managed_by",
+            "object": "furosemide",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "measured_by",
+            "object": "HbA1c",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "measured_by",
+            "object": "BP_systolic",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "measured_by",
+            "object": "BP_diastolic",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "measured_by",
+            "object": "eGFR",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "measured_by",
+            "object": "LDL",
+            "confidence": 0.8
           }
         ],
         "lab_values": {
@@ -407,7 +456,13 @@
           "eGFR": 55.0,
           "LDL": 200.0
         }
-      }
+      },
+      "dosages": [
+        "2000mg bid",
+        "60mg",
+        "120mg",
+        "80mg"
+      ]
     },
     {
       "visit_id": "V5",
@@ -421,23 +476,16 @@
         "LDL": 220
       },
       "medications": [
-        "Metformin 2500mg bid",
-        "Lisinopril 80mg qd",
-        "Atorvastatin 160mg qd",
-        "Furosemide 120mg qd",
-        "Albuterol 2 puffs q4h",
-        "Epoetin alfa 12000 units qw",
-        "Hemodialysis 3x/week",
         "metformin",
+        "lisinopril qd",
+        "atorvastatin qd",
+        "furosemide qd",
+        "albuterol 2 puffs q4h",
+        "epoetin alfa 12000 units qw",
+        "hemodialysis 3x/week",
         "lisinopril",
         "atorvastatin",
-        "2500mg",
-        "80mg",
-        "160mg",
-        "120mg",
-        "furosemide",
-        "albuterol",
-        "epoetin alfa"
+        "furosemide"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -456,29 +504,30 @@
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Hypertension",
           "Chronic Kidney Disease"
         ],
         "medications": [
           "metformin",
           "lisinopril",
           "atorvastatin",
-          "2500mg",
-          "80mg",
-          "160mg",
-          "120mg",
-          "furosemide",
-          "albuterol",
-          "epoetin alfa"
+          "furosemide"
+        ],
+        "dosages": [
+          "2500mg bid",
+          "80mg qd",
+          "160mg qd",
+          "120mg qd"
         ],
         "symptoms": [
-          "Edema",
-          "Polydipsia",
           "Fatigue",
           "Shortness of breath",
+          "Polydipsia",
+          "Edema",
           "Nausea",
+          "Increased thirst",
           "Weight gain"
         ],
         "procedures": [
@@ -486,50 +535,50 @@
         ],
         "relationships": [
           {
-            "subject": "metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "metformin",
             "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "managed_by",
+            "object": "atorvastatin",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "managed_by",
+            "object": "furosemide",
+            "confidence": 0.9
+          },
+          {
+            "subject": "metformin",
+            "predicate": "improves",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
           },
           {
             "subject": "lisinopril",
-            "predicate": "managed_by",
+            "predicate": "improves",
             "object": "Hypertension",
-            "confidence": 0.9
+            "confidence": 0.8
           },
           {
             "subject": "atorvastatin",
-            "predicate": "managed_by",
+            "predicate": "improves",
             "object": "Hyperlipidemia",
-            "confidence": 0.9
+            "confidence": 0.8
           },
           {
             "subject": "furosemide",
-            "predicate": "managed_by",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.9
-          },
-          {
-            "subject": "albuterol",
-            "predicate": "managed_by",
-            "object": "Shortness of breath",
-            "confidence": 0.8
-          },
-          {
-            "subject": "epoetin alfa",
-            "predicate": "managed_by",
-            "object": "Anemia",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Hemodialysis",
-            "predicate": "measured_by",
-            "object": "eGFR",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Hemodialysis",
-            "predicate": "contraindicated_with",
+            "predicate": "improves",
             "object": "Chronic Kidney Disease",
             "confidence": 0.8
           }
@@ -541,7 +590,16 @@
           "eGFR": 40.0,
           "LDL": 220.0
         }
-      }
+      },
+      "dosages": [
+        "2500mg bid",
+        "80mg",
+        "160mg",
+        "120mg",
+        "80mg qd",
+        "160mg qd",
+        "120mg qd"
+      ]
     }
   ]
 }

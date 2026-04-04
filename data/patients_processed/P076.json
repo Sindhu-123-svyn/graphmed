@@ -10,14 +10,13 @@
         "BP_systolic": 140,
         "BP_diastolic": 90,
         "eGFR": 80,
-        "LDL": 160,
-        "BMI": 30
+        "LDL": 160
       },
       "medications": [
-        "Atorvastatin 20mg",
-        "Lisinopril 10mg",
-        "Statin",
-        "ACE inhibitor"
+        "atorvastatin",
+        "lisinopril",
+        "statin",
+        "ace inhibitor"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -27,73 +26,95 @@
       "symptoms": [
         "Fatigue",
         "Weight loss",
-        "Polyuria"
+        "Frequent urination"
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hypertension",
+          "Hyperlipidemia"
         ],
         "medications": [
-          "Statin",
-          "ACE inhibitor"
+          "statin",
+          "ace inhibitor"
         ],
+        "dosages": [],
         "symptoms": [
-          "Polyuria",
           "Fatigue",
+          "Frequent urination",
           "Weight loss"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Statin",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hyperlipidemia",
+            "object": "statin",
             "confidence": 0.9
           },
           {
-            "subject": "ACE inhibitor",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "ace inhibitor",
             "confidence": 0.9
           },
           {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Physical exam",
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Fatigue",
             "confidence": 0.8
           },
           {
-            "subject": "BP",
-            "predicate": "has_value",
-            "object": "140/90",
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Weight loss",
             "confidence": 0.8
           },
           {
-            "subject": "BMI",
-            "predicate": "has_value",
-            "object": "30",
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Frequent urination",
             "confidence": 0.8
           },
           {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Frequent urination",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "worsens",
             "object": "Weight loss",
             "confidence": 0.7
           },
           {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Polyuria",
+            "subject": "Hyperlipidemia",
+            "predicate": "worsens",
+            "object": "Frequent urination",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "worsens",
+            "object": "Frequent urination",
             "confidence": 0.7
           }
         ],
         "lab_values": {
-          "BMI": 30,
           "BP_systolic": 140,
           "BP_diastolic": 90
         }
-      }
+      },
+      "dosages": [
+        "20mg",
+        "10mg"
+      ]
     },
     {
       "visit_id": "V2",
@@ -107,8 +128,9 @@
         "LDL": 180
       },
       "medications": [
-        "Atorvastatin 40mg",
-        "Lisinopril 10mg"
+        "atorvastatin",
+        "lisinopril",
+        "statin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -117,20 +139,37 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Increased thirst"
       ],
       "extracted": {
-        "conditions": [],
-        "medications": [],
+        "conditions": [
+          "Type 2 Diabetes"
+        ],
+        "medications": [
+          "statin"
+        ],
+        "dosages": [
+          "Increased"
+        ],
         "symptoms": [
-          "Polyuria",
-          "Fatigue"
+          "Fatigue",
+          "Frequent urination"
         ],
         "procedures": [],
         "relationships": [],
-        "lab_values": {}
-      }
+        "lab_values": {
+          "HbA1c": 7.8,
+          "BP_systolic": 130,
+          "BP_diastolic": 80,
+          "LDL": 180
+        }
+      },
+      "dosages": [
+        "40mg",
+        "10mg",
+        "Increased"
+      ]
     },
     {
       "visit_id": "V3",
@@ -144,32 +183,66 @@
         "LDL": 170
       },
       "medications": [
-        "Atorvastatin 40mg",
-        "Lisinopril 20mg",
-        "Losartan 50mg"
+        "atorvastatin",
+        "lisinopril",
+        "losartan",
+        "renal-protective medications"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
-        "Chronic Kidney Disease"
+        "Chronic Kidney Disease",
+        "Diabetes Mellitus"
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Nocuria",
         "Edema"
       ],
       "extracted": {
-        "conditions": [],
-        "medications": [],
-        "symptoms": [
-          "Polyuria"
+        "conditions": [
+          "Diabetes Mellitus",
+          "Chronic Kidney Disease"
         ],
-        "procedures": [],
-        "relationships": [],
-        "lab_values": {}
-      }
+        "medications": [
+          "renal-protective medications"
+        ],
+        "dosages": [],
+        "symptoms": [
+          "Frequent urination",
+          "Nocuria"
+        ],
+        "procedures": [
+          "Referral to nephrologist"
+        ],
+        "relationships": [
+          {
+            "subject": "Diabetes Mellitus",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.9
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.9
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.2,
+          "BP_systolic": 125,
+          "BP_diastolic": 75,
+          "eGFR": 60
+        }
+      },
+      "dosages": [
+        "40mg",
+        "20mg",
+        "50mg"
+      ]
     },
     {
       "visit_id": "V4",
@@ -183,81 +256,68 @@
         "LDL": 150
       },
       "medications": [
-        "Atorvastatin 40mg",
-        "Lisinopril 20mg",
-        "Losartan 50mg",
-        "Furosemide 40mg",
-        "Diuretic"
+        "atorvastatin",
+        "lisinopril",
+        "losartan",
+        "furosemide",
+        "diuretic"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
         "Chronic Kidney Disease",
-        "Coronary Artery Disease",
-        "Diabetes"
+        "Coronary Artery Disease"
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Nocuria",
         "Edema",
         "Shortness of breath"
       ],
       "extracted": {
         "conditions": [
-          "Diabetes",
-          "Chronic kidney disease"
+          "Type 2 Diabetes",
+          "Chronic Kidney Disease"
         ],
         "medications": [
-          "Diuretic"
+          "diuretic"
         ],
+        "dosages": [],
         "symptoms": [
-          "Edema",
-          "Shortness of breath"
+          "Shortness of breath",
+          "Edema"
         ],
         "procedures": [
           "Dialysis"
         ],
         "relationships": [
           {
-            "subject": "Diuretic",
-            "predicate": "managed_by",
-            "object": "Nephrologist",
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
             "confidence": 0.8
           },
           {
-            "subject": "Diabetes",
-            "predicate": "worsens",
-            "object": "Chronic kidney disease",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Diuretic",
+            "subject": "diuretic",
             "predicate": "improves",
             "object": "Edema",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Diuretic",
-            "predicate": "improves",
-            "object": "Shortness of breath",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Dialysis",
-            "predicate": "considered_for",
-            "object": "Chronic kidney disease",
-            "confidence": 0.9
+            "confidence": 0.7
           }
         ],
         "lab_values": {
           "HbA1c": 7.5,
-          "eGFR": 45,
           "BP_systolic": 120,
-          "BP_diastolic": 70
+          "BP_diastolic": 70,
+          "eGFR": 45
         }
-      }
+      },
+      "dosages": [
+        "40mg",
+        "20mg",
+        "50mg"
+      ]
     },
     {
       "visit_id": "V5",
@@ -271,13 +331,12 @@
         "LDL": 120
       },
       "medications": [
-        "Atorvastatin 40mg",
-        "Lisinopril 20mg",
-        "Losartan 50mg",
-        "Furosemide 40mg",
-        "Calcium channel blocker for dialysis-induced muscle cramps",
-        "Fluid balance adjustment",
-        "Medication adjustment"
+        "atorvastatin",
+        "lisinopril",
+        "losartan",
+        "furosemide",
+        "calcium channel blocker for dialysis-induced muscle cramps",
+        "fluid balance medication"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -285,12 +344,12 @@
         "Hyperlipidemia",
         "Chronic Kidney Disease",
         "Coronary Artery Disease",
-        "Dialysis-induced muscle cramps",
-        "Diabetes"
+        "Dialysis-Induced Muscle Cramps",
+        "Kidney Failure"
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Nocuria",
         "Edema",
         "Shortness of breath",
@@ -298,63 +357,32 @@
       ],
       "extracted": {
         "conditions": [
-          "Diabetes"
+          "Type 2 Diabetes",
+          "Kidney Failure"
         ],
         "medications": [
-          "Fluid balance adjustment",
-          "Medication adjustment"
+          "fluid balance medication"
         ],
+        "dosages": [],
         "symptoms": [
           "Fatigue",
           "Muscle cramps"
         ],
         "procedures": [
-          "In-center hemodialysis"
+          "In-center Hemodialysis"
         ],
-        "relationships": [
-          {
-            "subject": "Hemodialysis",
-            "predicate": "measured_by",
-            "object": "BP",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Hemodialysis",
-            "predicate": "measured_by",
-            "object": "HbA1c",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Hemodialysis",
-            "predicate": "has_symptom",
-            "object": "Fatigue",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Hemodialysis",
-            "predicate": "has_symptom",
-            "object": "Muscle cramps",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Hemodialysis",
-            "predicate": "contraindicated_with",
-            "object": "Fluid balance adjustment",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Hemodialysis",
-            "predicate": "contraindicated_with",
-            "object": "Medication adjustment",
-            "confidence": 0.7
-          }
-        ],
+        "relationships": [],
         "lab_values": {
           "HbA1c": 6.8,
           "BP_systolic": 110,
           "BP_diastolic": 60
         }
-      }
+      },
+      "dosages": [
+        "40mg",
+        "20mg",
+        "50mg"
+      ]
     }
   ]
 }

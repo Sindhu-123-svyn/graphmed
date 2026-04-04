@@ -13,7 +13,7 @@
         "LDL": 130
       },
       "medications": [
-        "Metformin 500mg, Lisinopril 10mg",
+        "metformin , lisinopril",
         "metformin",
         "lisinopril"
       ],
@@ -22,7 +22,7 @@
         "Hypertension"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia"
       ],
       "extracted": {
@@ -33,45 +33,53 @@
           "metformin",
           "lisinopril"
         ],
+        "dosages": [],
         "symptoms": [
-          "Polydipsia",
-          "Polyuria"
+          "Frequent urination",
+          "Polydipsia"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "metformin",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
-            "confidence": 0.8
+            "object": "metformin",
+            "confidence": 0.9
           },
           {
-            "subject": "lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Polyuria",
-            "predicate": "has_symptom",
-            "object": "Polydipsia",
+            "object": "lisinopril",
             "confidence": 0.9
           },
           {
             "subject": "metformin",
-            "predicate": "measured_by",
-            "object": "lab_values",
-            "confidence": 0.7
+            "predicate": "contraindicated_with",
+            "object": "lisinopril",
+            "confidence": 0.8
           },
           {
-            "subject": "lisinopril",
-            "predicate": "measured_by",
-            "object": "lab_values",
-            "confidence": 0.7
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Frequent urination",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Polydipsia",
+            "confidence": 0.8
           }
         ],
-        "lab_values": {}
-      }
+        "lab_values": {
+          "BP_systolic": "hypertension",
+          "BP_diastolic": "hypertension"
+        }
+      },
+      "dosages": [
+        "500mg",
+        "10mg"
+      ]
     },
     {
       "visit_id": "V2",
@@ -85,10 +93,9 @@
         "LDL": 150
       },
       "medications": [
-        "Metformin 500mg, Lisinopril 20mg, Amlodipine 5mg",
+        "metformin , lisinopril , amlodipine",
         "lisinopril",
-        "amlodipine",
-        "20mg"
+        "amlodipine"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -96,12 +103,12 @@
         "Hyperlipidemia"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Edema",
         "Wheezing",
-        "Weight gain",
-        "Bilateral wheezing"
+        "Bilateral wheezing",
+        "Weight gain"
       ],
       "extracted": {
         "conditions": [
@@ -109,43 +116,28 @@
         ],
         "medications": [
           "lisinopril",
-          "amlodipine",
+          "amlodipine"
+        ],
+        "dosages": [
           "20mg"
         ],
         "symptoms": [
           "Edema",
-          "Weight gain",
-          "Bilateral wheezing"
+          "Bilateral wheezing",
+          "Weight gain"
         ],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "amlodipine",
-            "predicate": "managed_by",
-            "object": "lisinopril",
-            "confidence": 0.9
-          },
-          {
-            "subject": "amlodipine",
-            "predicate": "measured_by",
-            "object": "20mg",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "worsens",
-            "object": "Edema",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "worsens",
-            "object": "Bilateral wheezing",
-            "confidence": 0.7
-          }
-        ],
-        "lab_values": {}
-      }
+        "relationships": [],
+        "lab_values": {
+          "BP_systolic": "worsening",
+          "BP_diastolic": "worsening"
+        }
+      },
+      "dosages": [
+        "500mg",
+        "20mg",
+        "5mg"
+      ]
     },
     {
       "visit_id": "V3",
@@ -156,11 +148,10 @@
         "BP_systolic": 160,
         "BP_diastolic": 100,
         "eGFR": 48,
-        "LDL": 180,
-        "name": "kidney function"
+        "LDL": 180
       },
       "medications": [
-        "Metformin 500mg, Lisinopril 20mg, Amlodipine 10mg, Simvastatin 20mg, Enalapril 5mg",
+        "metformin , lisinopril , amlodipine , simvastatin , enalapril",
         "simvastatin",
         "enalapril"
       ],
@@ -170,65 +161,60 @@
         "Hyperlipidemia",
         "Chronic Kidney Disease",
         "Coronary Artery Disease",
-        "Kidney Function"
+        "Kidney Function Disorder"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Edema",
         "Wheezing",
         "Angina",
-        "coronary artery disease symptoms"
+        "Coronary artery disease symptoms"
       ],
       "extracted": {
         "conditions": [
           "Coronary Artery Disease",
-          "Kidney Function"
+          "Kidney Function Disorder"
         ],
         "medications": [
           "simvastatin",
           "enalapril"
         ],
+        "dosages": [],
         "symptoms": [
-          "coronary artery disease symptoms"
+          "Coronary artery disease symptoms"
         ],
         "procedures": [],
         "relationships": [
           {
             "subject": "simvastatin",
-            "predicate": "managed_by",
-            "object": "doctor",
-            "confidence": 0.8
-          },
-          {
-            "subject": "simvastatin",
             "predicate": "improves",
-            "object": "coronary artery disease symptoms",
+            "object": "Coronary Artery Disease",
             "confidence": 0.7
           },
           {
             "subject": "enalapril",
-            "predicate": "managed_by",
-            "object": "doctor",
-            "confidence": 0.8
-          },
-          {
-            "subject": "enalapril",
             "predicate": "improves",
-            "object": "kidney function",
+            "object": "Kidney Function Disorder",
             "confidence": 0.6
           },
           {
-            "subject": "coronary artery disease symptoms",
+            "subject": "Coronary Artery Disease",
             "predicate": "worsens",
-            "object": "kidney function",
+            "object": "Kidney Function Disorder",
             "confidence": 0.9
           }
         ],
         "lab_values": {
-          "name": "kidney function"
+          "eGFR": "worsening"
         }
-      }
+      },
+      "dosages": [
+        "500mg",
+        "20mg",
+        "10mg",
+        "5mg"
+      ]
     },
     {
       "visit_id": "V4",
@@ -239,11 +225,10 @@
         "BP_systolic": 170,
         "BP_diastolic": 105,
         "eGFR": 36,
-        "LDL": 200,
-        "kidney function": "worsening"
+        "LDL": 200
       },
       "medications": [
-        "Metformin 500mg, Lisinopril 20mg, Amlodipine 15mg, Simvastatin 40mg, Enalapril 10mg, Spironolactone 25mg",
+        "metformin , lisinopril , amlodipine , simvastatin , enalapril , spironolactone",
         "spironolactone"
       ],
       "diagnoses": [
@@ -252,64 +237,61 @@
         "Hyperlipidemia",
         "Chronic Kidney Disease",
         "Coronary Artery Disease",
-        "kidney dysfunction",
-        "cardiovascular disease"
+        "Kidney Failure",
+        "Cardiovascular Disease"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Edema",
         "Wheezing",
         "Angina",
         "Shortness of breath",
-        "kidney function worsening",
-        "cardiovascular symptoms"
+        "Kidney function",
+        "Cardiovascular symptoms"
       ],
       "extracted": {
         "conditions": [
-          "kidney dysfunction",
-          "cardiovascular disease"
+          "Kidney Failure",
+          "Cardiovascular Disease"
         ],
         "medications": [
           "spironolactone"
         ],
+        "dosages": [],
         "symptoms": [
-          "kidney function worsening",
-          "cardiovascular symptoms"
+          "Kidney function",
+          "Cardiovascular symptoms"
         ],
         "procedures": [
           "dialysis referral"
         ],
         "relationships": [
           {
-            "subject": "spironolactone",
+            "subject": "Kidney Failure",
             "predicate": "managed_by",
-            "object": "kidney dysfunction",
+            "object": "spironolactone",
             "confidence": 0.8
           },
           {
-            "subject": "spironolactone",
+            "subject": "Cardiovascular Disease",
             "predicate": "managed_by",
-            "object": "cardiovascular disease",
+            "object": "spironolactone",
             "confidence": 0.8
-          },
-          {
-            "subject": "dialysis referral",
-            "predicate": "measured_by",
-            "object": "kidney function worsening",
-            "confidence": 0.7
-          },
-          {
-            "subject": "kidney function worsening",
-            "predicate": "worsens",
-            "object": "kidney dysfunction",
-            "confidence": 0.9
           }
         ],
         "lab_values": {
-          "kidney function": "worsening"
+          "eGFR": "worsening"
         }
-      }
+      },
+      "dosages": [
+        "500mg",
+        "20mg",
+        "15mg",
+        "40mg",
+        "10mg",
+        "25mg"
+      ]
     }
   ]
 }

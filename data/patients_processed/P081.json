@@ -10,12 +10,17 @@
         "BP_systolic": 140,
         "BP_diastolic": 90,
         "eGFR": 80,
-        "LDL": 160
+        "LDL": 160,
+        "HDL": "not specified",
+        "Creatinine": "not specified",
+        "Glucose": "not specified",
+        "Potassium": "not specified",
+        "Sodium": "not specified"
       },
       "medications": [
-        "Metformin 850mg BID",
-        "Lisinopril 20mg OD",
-        "Simvastatin 20mg OD",
+        "metformin",
+        "lisinopril od",
+        "simvastatin od",
         "statin",
         "antihypertensive"
       ],
@@ -30,85 +35,62 @@
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [
           "statin",
           "antihypertensive"
         ],
+        "dosages": [],
         "symptoms": [
-          "Chest pain",
-          "Fatigue"
+          "Fatigue",
+          "Chest pain"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "statin",
-            "predicate": "measured_by",
-            "object": "BP",
-            "confidence": 0.8
-          },
-          {
-            "subject": "statin",
-            "predicate": "measured_by",
-            "object": "HbA1c",
-            "confidence": 0.8
-          },
-          {
-            "subject": "antihypertensive",
-            "predicate": "measured_by",
-            "object": "BP",
-            "confidence": 0.8
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "antihypertensive",
+            "confidence": 0.9
           },
           {
             "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "diabetes management",
+            "object": "statin",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "antihypertensive",
             "confidence": 0.7
           },
           {
             "subject": "Hypertension",
-            "predicate": "managed_by",
-            "object": "antihypertensive regimen",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Hyperlipidemia",
-            "predicate": "managed_by",
-            "object": "statin therapy",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Chest pain",
-            "predicate": "has_symptom",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Chest pain",
-            "predicate": "has_symptom",
-            "object": "Hypertension",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Hypertension",
+            "predicate": "worsens",
+            "object": "Chest pain",
             "confidence": 0.6
           }
         ],
         "lab_values": {
-          "HbA1c": "elevated"
+          "HbA1c": "elevated",
+          "BP_systolic": "elevated",
+          "BP_diastolic": "elevated",
+          "LDL": "not specified",
+          "HDL": "not specified",
+          "Creatinine": "not specified",
+          "Glucose": "not specified",
+          "Potassium": "not specified",
+          "Sodium": "not specified"
         }
-      }
+      },
+      "dosages": [
+        "850mg BID",
+        "20mg"
+      ]
     },
     {
       "visit_id": "V2",
@@ -119,15 +101,14 @@
         "BP_systolic": 150,
         "BP_diastolic": 95,
         "eGFR": 60,
-        "LDL": 180,
-        "dyslipidemia": "worsening"
+        "LDL": 180
       },
       "medications": [
-        "Metformin 850mg BID",
-        "Lisinopril 40mg OD",
-        "Atorvastatin 80mg OD",
-        "Aspirin 81mg OD",
-        "Antihypertensive therapy"
+        "metformin",
+        "lisinopril od",
+        "atorvastatin od",
+        "aspirin od",
+        "antihypertensive therapy"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -138,68 +119,58 @@
       "symptoms": [
         "Chest pain",
         "Shortness of breath",
-        "Fatigue"
+        "Fatigue",
+        "Dyslipidemia"
       ],
       "extracted": {
         "conditions": [
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [
-          "Antihypertensive therapy"
+          "antihypertensive therapy"
         ],
+        "dosages": [],
         "symptoms": [
+          "Shortness of breath",
           "Chest pain",
-          "Shortness of breath"
+          "Dyslipidemia"
         ],
         "procedures": [
           "Referral to cardiology"
         ],
         "relationships": [
           {
-            "subject": "Antihypertensive therapy",
-            "predicate": "managed_by",
-            "object": "cardiology",
-            "confidence": 0.9
-          },
-          {
             "subject": "Type 2 Diabetes",
-            "predicate": "managed_by",
-            "object": "diabetes management",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
             "confidence": 0.8
           },
           {
-            "subject": "Chest pain",
-            "predicate": "has_symptom",
-            "object": "Shortness of breath",
-            "confidence": 0.7
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Chest pain",
+            "confidence": 0.8
           },
           {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "labs",
-            "confidence": 0.6
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "labs",
-            "confidence": 0.6
-          },
-          {
-            "subject": "dyslipidemia",
-            "predicate": "measured_by",
-            "object": "labs",
-            "confidence": 0.6
+            "subject": "Hyperlipidemia",
+            "predicate": "worsens",
+            "object": "Dyslipidemia",
+            "confidence": 0.8
           }
         ],
         "lab_values": {
           "HbA1c": "elevated",
-          "eGFR": "decline",
-          "dyslipidemia": "worsening"
+          "BP_systolic": "elevated",
+          "eGFR": "decline"
         }
-      }
+      },
+      "dosages": [
+        "850mg BID",
+        "40mg",
+        "80mg",
+        "81mg"
+      ]
     },
     {
       "visit_id": "V3",
@@ -211,15 +182,19 @@
         "BP_diastolic": 100,
         "eGFR": 50,
         "LDL": 190,
-        "dyslipidemia": "worsening"
+        "HDL": "not mentioned",
+        "Creatinine": "not mentioned",
+        "Glucose": "not mentioned",
+        "Potassium": "not mentioned",
+        "Sodium": "not mentioned"
       },
       "medications": [
-        "Metformin 850mg BID",
-        "Lisinopril 60mg OD",
-        "Atorvastatin 120mg OD",
-        "Aspirin 81mg OD",
-        "Furosemide 40mg OD",
-        "Antihypertensive therapy"
+        "metformin",
+        "lisinopril od",
+        "atorvastatin od",
+        "aspirin od",
+        "furosemide od",
+        "antihypertensive therapy"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -238,93 +213,53 @@
       "extracted": {
         "conditions": [
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [
-          "Antihypertensive therapy"
+          "antihypertensive therapy"
         ],
+        "dosages": [],
         "symptoms": [
-          "Edema",
-          "Fatigue"
+          "Fatigue",
+          "Edema"
         ],
         "procedures": [
           "Referral to nephrology"
         ],
         "relationships": [
           {
-            "subject": "Antihypertensive therapy",
-            "predicate": "managed_by",
-            "object": "Patient P081",
-            "confidence": 1.0
-          },
-          {
-            "subject": "Diabetes management",
-            "predicate": "managed_by",
-            "object": "Patient P081",
-            "confidence": 1.0
-          },
-          {
-            "subject": "Referral to nephrology",
-            "predicate": "recommended_for",
-            "object": "further evaluation",
-            "confidence": 1.0
-          },
-          {
-            "subject": "Antihypertensive therapy",
-            "predicate": "contraindicated_with",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Diabetes management",
-            "predicate": "contraindicated_with",
-            "object": "Hyperlipidemia",
-            "confidence": 0.8
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "Labs",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Physical examination",
-            "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Physical examination",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Edema",
-            "confidence": 0.7
-          },
-          {
             "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "eGFR",
-            "confidence": 0.6
+            "predicate": "managed_by",
+            "object": "antihypertensive therapy",
+            "confidence": 0.8
           },
           {
             "subject": "Hyperlipidemia",
-            "predicate": "worsens",
-            "object": "dyslipidemia",
-            "confidence": 0.6
+            "predicate": "managed_by",
+            "object": "antihypertensive therapy",
+            "confidence": 0.8
           }
         ],
         "lab_values": {
           "HbA1c": "elevated",
+          "BP_systolic": "elevated",
+          "BP_diastolic": "not mentioned",
           "eGFR": "decline",
-          "dyslipidemia": "worsening"
+          "LDL": "worsening dyslipidemia",
+          "HDL": "not mentioned",
+          "Creatinine": "not mentioned",
+          "Glucose": "not mentioned",
+          "Potassium": "not mentioned",
+          "Sodium": "not mentioned"
         }
-      }
+      },
+      "dosages": [
+        "850mg BID",
+        "60mg",
+        "120mg",
+        "81mg",
+        "40mg"
+      ]
     },
     {
       "visit_id": "V4",
@@ -335,18 +270,16 @@
         "BP_systolic": 160,
         "BP_diastolic": 105,
         "eGFR": 45,
-        "LDL": 200,
-        "dyslipidemia": "worsening"
+        "LDL": 200
       },
       "medications": [
-        "Metformin 850mg BID",
-        "Lisinopril 80mg OD",
-        "Atorvastatin 160mg OD",
-        "Aspirin 81mg OD",
-        "Furosemide 40mg OD",
-        "Erythropoietin 40,000 units/week",
-        "Antihypertensive therapy",
-        "Erythropoietin therapy"
+        "metformin",
+        "lisinopril od",
+        "atorvastatin od",
+        "aspirin od",
+        "furosemide od",
+        "erythropoietin 40,000 units/week",
+        "erythropoietin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -364,87 +297,64 @@
       ],
       "extracted": {
         "conditions": [
-          "Anemia",
           "Type 2 Diabetes",
-          "Hyperlipidemia"
+          "Hyperlipidemia",
+          "Anemia"
         ],
         "medications": [
-          "Antihypertensive therapy",
-          "Erythropoietin therapy"
+          "erythropoietin"
         ],
+        "dosages": [],
         "symptoms": [
-          "Shortness of breath",
-          "Fatigue"
+          "Fatigue",
+          "Shortness of breath"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Antihypertensive therapy",
+            "subject": "Anemia",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Erythropoietin therapy",
-            "predicate": "managed_by",
-            "object": "Anemia",
-            "confidence": 0.8
+            "object": "erythropoietin",
+            "confidence": 0.9
           },
           {
             "subject": "Type 2 Diabetes",
-            "predicate": "has_symptom",
+            "predicate": "worsens",
             "object": "Fatigue",
-            "confidence": 0.7
+            "confidence": 0.6
           },
           {
             "subject": "Type 2 Diabetes",
-            "predicate": "has_symptom",
-            "object": "Shortness of breath",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Hyperlipidemia",
-            "predicate": "has_symptom",
+            "predicate": "worsens",
             "object": "Shortness of breath",
             "confidence": 0.6
           },
           {
             "subject": "Hyperlipidemia",
-            "predicate": "has_symptom",
+            "predicate": "worsens",
             "object": "Fatigue",
-            "confidence": 0.6
+            "confidence": 0.5
           },
           {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Physical examination",
-            "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Physical examination",
-            "confidence": 0.9
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "Labs",
-            "confidence": 0.8
-          },
-          {
-            "subject": "dyslipidemia",
-            "predicate": "measured_by",
-            "object": "Labs",
-            "confidence": 0.8
+            "subject": "Hyperlipidemia",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
+            "confidence": 0.5
           }
         ],
         "lab_values": {
           "HbA1c": "elevated",
-          "eGFR": "decline",
-          "dyslipidemia": "worsening"
+          "BP_systolic": "elevated",
+          "eGFR": "decline"
         }
-      }
+      },
+      "dosages": [
+        "850mg BID",
+        "80mg",
+        "160mg",
+        "81mg",
+        "40mg"
+      ]
     }
   ]
 }

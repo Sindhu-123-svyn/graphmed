@@ -13,16 +13,9 @@
         "LDL": 130
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 5mg daily",
-        "Atorvastatin 20mg daily",
         "metformin",
         "lisinopril",
-        "atorvastatin",
-        "130 mg",
-        "500mg",
-        "5mg",
-        "20mg"
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -35,86 +28,76 @@
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [
           "metformin",
           "lisinopril",
-          "atorvastatin",
-          "130 mg",
-          "500mg",
-          "5mg",
-          "20mg"
+          "atorvastatin"
+        ],
+        "dosages": [
+          "500mg BID",
+          "5mg daily",
+          "20mg daily"
         ],
         "symptoms": [
           "Fatigue",
-          "weight gain"
+          "Weight gain"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "Lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "lisinopril",
             "confidence": 0.9
           },
           {
-            "subject": "Atorvastatin",
+            "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Hyperlipidemia",
+            "object": "atorvastatin",
             "confidence": 0.9
           },
           {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Physical examination",
-            "confidence": 0.8
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.7
           },
           {
-            "subject": "BMI",
-            "predicate": "measured_by",
-            "object": "Physical examination",
-            "confidence": 0.8
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.7
           },
           {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Initial lab results",
-            "confidence": 0.9
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "Initial lab results",
-            "confidence": 0.9
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "Initial lab results",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "weight gain",
+            "subject": "Hyperlipidemia",
+            "predicate": "worsens",
+            "object": "Fatigue",
             "confidence": 0.7
           }
         ],
         "lab_values": {
           "HbA1c": 7.2,
+          "BP_systolic": 140,
+          "BP_diastolic": 90,
           "LDL": "130 mg/dL",
           "eGFR": "72 mL/min"
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "5mg daily",
+        "20mg daily"
+      ]
     },
     {
       "visit_id": "V2",
@@ -128,16 +111,9 @@
         "LDL": 160
       },
       "medications": [
-        "Metformin 1000mg BID",
-        "Lisinopril 10mg daily",
-        "Atorvastatin 40mg daily",
         "metformin",
         "lisinopril",
-        "atorvastatin",
-        "160 mg",
-        "1000mg",
-        "10mg",
-        "40mg"
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -157,67 +133,32 @@
         "medications": [
           "metformin",
           "lisinopril",
-          "atorvastatin",
-          "160 mg",
-          "1000mg",
-          "10mg",
-          "40mg"
+          "atorvastatin"
+        ],
+        "dosages": [
+          "1000mg BID",
+          "10mg daily",
+          "40mg daily"
         ],
         "symptoms": [
-          "Shortness of breath",
-          "Fatigue"
+          "Fatigue",
+          "Shortness of breath"
         ],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "Metformin",
-            "predicate": "managed_by",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Lisinopril",
-            "predicate": "managed_by",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Atorvastatin",
-            "predicate": "managed_by",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.8
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "Lab results",
-            "confidence": 0.9
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "worsens",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Shortness of breath",
-            "predicate": "has_symptom",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.6
-          }
-        ],
+        "relationships": [],
         "lab_values": {
           "HbA1c": 8.1,
+          "BP_systolic": 150,
+          "BP_diastolic": 95,
           "LDL": "160 mg/dL",
           "eGFR": "60 mL/min"
         }
-      }
+      },
+      "dosages": [
+        "1000mg BID",
+        "10mg daily",
+        "40mg daily"
+      ]
     },
     {
       "visit_id": "V3",
@@ -228,20 +169,12 @@
         "BP_systolic": 160,
         "BP_diastolic": 100,
         "eGFR": 45,
-        "LDL": 180,
-        "BMI": 30
+        "LDL": 180
       },
       "medications": [
-        "Metformin 1500mg BID",
-        "Lisinopril 20mg daily",
-        "Atorvastatin 80mg daily",
         "metformin",
         "lisinopril",
-        "atorvastatin",
-        "180 mg",
-        "1500mg",
-        "20mg",
-        "80mg"
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -256,7 +189,7 @@
         "Shortness of breath",
         "Weight gain",
         "Chest pain",
-        "heart failure exacerbation"
+        "Heart failure exacerbation"
       ],
       "extracted": {
         "conditions": [
@@ -266,105 +199,64 @@
         "medications": [
           "metformin",
           "lisinopril",
-          "atorvastatin",
-          "180 mg",
-          "1500mg",
-          "20mg",
-          "80mg"
+          "atorvastatin"
+        ],
+        "dosages": [
+          "1500mg BID",
+          "20mg daily",
+          "80mg daily"
         ],
         "symptoms": [
-          "heart failure exacerbation"
+          "Heart failure exacerbation"
         ],
-        "procedures": [],
+        "procedures": [
+          "physical examination"
+        ],
         "relationships": [
           {
-            "subject": "Metformin",
+            "subject": "Heart Failure",
             "predicate": "managed_by",
-            "object": "heart failure exacerbation",
+            "object": "metformin",
             "confidence": 0.8
           },
           {
-            "subject": "Lisinopril",
+            "subject": "Heart Failure",
             "predicate": "managed_by",
-            "object": "heart failure exacerbation",
+            "object": "lisinopril",
             "confidence": 0.8
           },
           {
-            "subject": "Atorvastatin",
+            "subject": "Heart Failure",
             "predicate": "managed_by",
-            "object": "heart failure exacerbation",
+            "object": "atorvastatin",
             "confidence": 0.8
-          },
-          {
-            "subject": "Lisinopril",
-            "predicate": "managed_by",
-            "object": "Coronary Artery Disease",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Atorvastatin",
-            "predicate": "managed_by",
-            "object": "Coronary Artery Disease",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Metformin",
-            "predicate": "managed_by",
-            "object": "Coronary Artery Disease",
-            "confidence": 0.7
-          },
-          {
-            "subject": "heart failure exacerbation",
-            "predicate": "has_symptom",
-            "object": "kidney function decline",
-            "confidence": 0.9
           },
           {
             "subject": "Coronary Artery Disease",
-            "predicate": "has_symptom",
-            "object": "kidney function decline",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "physical examination",
-            "confidence": 0.6
-          },
-          {
-            "subject": "BMI",
-            "predicate": "measured_by",
-            "object": "physical examination",
-            "confidence": 0.6
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "lab results",
+            "predicate": "managed_by",
+            "object": "lisinopril",
             "confidence": 0.8
           },
           {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "lab results",
-            "confidence": 0.8
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "lab results",
+            "subject": "Coronary Artery Disease",
+            "predicate": "managed_by",
+            "object": "atorvastatin",
             "confidence": 0.8
           }
         ],
         "lab_values": {
           "HbA1c": 9.0,
-          "LDL": "180 mg/dL",
-          "eGFR": "45 mL/min",
           "BP_systolic": 160,
           "BP_diastolic": 100,
-          "BMI": 30
+          "LDL": "180 mg/dL",
+          "eGFR": "45 mL/min"
         }
-      }
+      },
+      "dosages": [
+        "1500mg BID",
+        "20mg daily",
+        "80mg daily"
+      ]
     }
   ]
 }

@@ -13,11 +13,8 @@
         "LDL": 130
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg daily",
         "metformin",
-        "lisinopril",
-        "500mg"
+        "lisinopril"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -31,55 +28,50 @@
       ],
       "extracted": {
         "conditions": [
-          "Type 2 Diabetes",
-          "Hypertension"
+          "Hypertension",
+          "Type 2 Diabetes"
         ],
         "medications": [
           "metformin",
-          "lisinopril",
+          "lisinopril"
+        ],
+        "dosages": [
           "500mg"
         ],
         "symptoms": [
-          "Polydipsia",
-          "Fatigue"
+          "Fatigue",
+          "Polydipsia"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Metformin",
-            "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Lisinopril",
-            "predicate": "managed_by",
-            "object": "Hypertension",
-            "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.8
-          },
-          {
             "subject": "Type 2 Diabetes",
-            "predicate": "improves",
-            "object": "Metformin",
-            "confidence": 0.7
+            "predicate": "managed_by",
+            "object": "metformin",
+            "confidence": 0.9
           },
           {
             "subject": "Hypertension",
-            "predicate": "improves",
-            "object": "Lisinopril",
-            "confidence": 0.7
+            "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "measured_by",
+            "object": "HbA1c",
+            "confidence": 0.8
           }
         ],
         "lab_values": {
           "HbA1c": 7.2
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg daily",
+        "500mg"
+      ]
     },
     {
       "visit_id": "V2",
@@ -93,9 +85,9 @@
         "LDL": 140
       },
       "medications": [
-        "Metformin 1000mg BID",
-        "Lisinopril 20mg daily",
-        "Atorvastatin 20mg daily"
+        "metformin",
+        "lisinopril",
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -113,9 +105,10 @@
           "Coronary Artery Disease"
         ],
         "medications": [],
+        "dosages": [],
         "symptoms": [
-          "Shortness of breath",
-          "Fatigue"
+          "Fatigue",
+          "Shortness of breath"
         ],
         "procedures": [
           "ECG"
@@ -123,39 +116,25 @@
         "relationships": [
           {
             "subject": "Coronary Artery Disease",
-            "predicate": "managed_by",
-            "object": "ECG",
-            "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "ECG",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "indicates",
-            "object": "worsening glycemic control",
+            "predicate": "worsens",
+            "object": "Fatigue",
             "confidence": 0.7
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Shortness of breath",
-            "confidence": 0.6
           },
           {
             "subject": "Coronary Artery Disease",
             "predicate": "worsens",
-            "object": "Fatigue",
-            "confidence": 0.5
+            "object": "Shortness of breath",
+            "confidence": 0.7
           }
         ],
         "lab_values": {
           "HbA1c": 8.1
         }
-      }
+      },
+      "dosages": [
+        "1000mg BID",
+        "20mg daily"
+      ]
     },
     {
       "visit_id": "V3",
@@ -169,19 +148,17 @@
         "LDL": 120
       },
       "medications": [
-        "Metformin 1000mg BID",
-        "Lisinopril 20mg daily",
-        "Atorvastatin 20mg daily",
-        "Furosemide 20mg daily"
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "furosemide"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
         "Coronary Artery Disease",
-        "Chronic Kidney Disease",
-        "Diabetes",
-        "Kidney Disease"
+        "Chronic Kidney Disease"
       ],
       "symptoms": [
         "Fatigue",
@@ -190,34 +167,25 @@
       ],
       "extracted": {
         "conditions": [
-          "Diabetes",
-          "Kidney Disease"
+          "Type 2 Diabetes"
         ],
         "medications": [],
+        "dosages": [],
         "symptoms": [
           "Fatigue",
-          "Muscle Weakness"
+          "Muscle weakness"
         ],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "HbA1c",
-            "predicate": "improves",
-            "object": "Glycemic Control",
-            "confidence": 0.8
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "worsens",
-            "object": "Kidney Function",
-            "confidence": 0.9
-          }
-        ],
+        "relationships": [],
         "lab_values": {
           "HbA1c": 7.5,
           "eGFR": 50
         }
-      }
+      },
+      "dosages": [
+        "1000mg BID",
+        "20mg daily"
+      ]
     },
     {
       "visit_id": "V4",
@@ -231,11 +199,11 @@
         "LDL": 150
       },
       "medications": [
-        "Metformin 1500mg BID",
-        "Lisinopril 40mg daily",
-        "Atorvastatin 40mg daily",
-        "Furosemide 40mg daily",
-        "Erythropoietin 5000 units weekly"
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "furosemide",
+        "erythropoietin 5000 units weekly"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -244,7 +212,7 @@
         "Coronary Artery Disease",
         "Chronic Kidney Disease",
         "Anemia",
-        "Diabetes Mellitus"
+        "Kidney Dysfunction"
       ],
       "symptoms": [
         "Shortness of breath",
@@ -255,56 +223,21 @@
       ],
       "extracted": {
         "conditions": [
-          "Diabetes Mellitus",
-          "Chronic Kidney Disease"
+          "Type 2 Diabetes",
+          "Kidney Dysfunction"
         ],
         "medications": [],
+        "dosages": [],
         "symptoms": [
-          "Edema",
-          "Shortness of breath"
+          "Shortness of breath",
+          "Edema"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Diabetes Mellitus",
+            "subject": "Type 2 Diabetes",
             "predicate": "worsens",
-            "object": "Shortness of breath",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Diabetes Mellitus",
-            "predicate": "worsens",
-            "object": "Edema",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Diabetes Mellitus",
-            "predicate": "worsens",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Chronic Kidney Disease",
-            "predicate": "worsens",
-            "object": "Shortness of breath",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Chronic Kidney Disease",
-            "predicate": "worsens",
-            "object": "Edema",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Diabetes Mellitus",
-            "confidence": 0.9
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "Chronic Kidney Disease",
+            "object": "Kidney Dysfunction",
             "confidence": 0.9
           }
         ],
@@ -312,7 +245,11 @@
           "HbA1c": 8.5,
           "eGFR": 40
         }
-      }
+      },
+      "dosages": [
+        "1500mg BID",
+        "40mg daily"
+      ]
     }
   ]
 }

@@ -10,13 +10,11 @@
         "BP_systolic": 140,
         "BP_diastolic": 90,
         "eGFR": 80,
-        "LDL": 150,
-        "BMI": 29.9,
-        "Blood Pressure": "140/90 mmHg"
+        "LDL": 150
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Losartan 50mg Daily",
+        "metformin",
+        "losartan",
         "new medication"
       ],
       "diagnoses": [
@@ -31,16 +29,18 @@
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [
           "new medication"
         ],
+        "dosages": [],
         "symptoms": [
+          "Fatigue",
           "Shortness of breath",
-          "Fatigue"
+          "Weight gain"
         ],
         "procedures": [],
         "relationships": [
@@ -48,50 +48,48 @@
             "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
             "object": "new medication",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "measured_by",
+            "object": "BP_systolic",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "measured_by",
+            "object": "BP_diastolic",
             "confidence": 0.8
           },
           {
             "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
+            "predicate": "has_symptom",
+            "object": "Fatigue",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "has_symptom",
             "object": "Shortness of breath",
             "confidence": 0.7
           },
           {
             "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "Fatigue",
+            "predicate": "has_symptom",
+            "object": "Weight gain",
             "confidence": 0.7
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "measured_by",
-            "object": "Blood Pressure",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "measured_by",
-            "object": "140/90 mmHg",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Hyperlipidemia",
-            "predicate": "worsens",
-            "object": "Shortness of breath",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Hyperlipidemia",
-            "predicate": "worsens",
-            "object": "Fatigue",
-            "confidence": 0.6
           }
         ],
         "lab_values": {
-          "BMI": 29.9,
-          "Blood Pressure": "140/90 mmHg"
+          "BP_systolic": 140,
+          "BP_diastolic": 90
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "50mg Daily"
+      ]
     },
     {
       "visit_id": "V2",
@@ -102,19 +100,19 @@
         "BP_systolic": 152,
         "BP_diastolic": 95,
         "eGFR": 70,
-        "LDL": 160,
-        "Blood Pressure": "152/95 mmHg"
+        "LDL": 160
       },
       "medications": [
-        "Metformin 1000mg BID",
-        "Losartan 100mg Daily",
-        "Atorvastatin 20mg Daily"
+        "metformin",
+        "losartan",
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
-        "Possible Coronary Artery Disease"
+        "Possible Coronary Artery Disease",
+        "Cardiomyopathy"
       ],
       "symptoms": [
         "Shortness of breath",
@@ -123,40 +121,41 @@
       ],
       "extracted": {
         "conditions": [
-          "Hypertension"
+          "Cardiomyopathy"
         ],
         "medications": [],
+        "dosages": [],
         "symptoms": [
           "Shortness of breath",
           "Dizziness"
         ],
         "procedures": [
-          "Cardiology Evaluation"
+          "Cardiologist referral"
         ],
         "relationships": [
           {
-            "subject": "Hypertension",
-            "predicate": "measured_by",
-            "object": "Blood Pressure",
+            "subject": "Cardiomyopathy",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
             "confidence": 0.9
           },
           {
-            "subject": "Hypertension",
-            "predicate": "worsens",
-            "object": "Shortness of breath",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Hypertension",
+            "subject": "Cardiomyopathy",
             "predicate": "worsens",
             "object": "Dizziness",
-            "confidence": 0.8
+            "confidence": 0.9
           }
         ],
         "lab_values": {
-          "Blood Pressure": "152/95 mmHg"
+          "BP_systolic": 152,
+          "BP_diastolic": 95
         }
-      }
+      },
+      "dosages": [
+        "1000mg BID",
+        "100mg Daily",
+        "20mg Daily"
+      ]
     },
     {
       "visit_id": "V3",
@@ -167,14 +166,13 @@
         "BP_systolic": 140,
         "BP_diastolic": 85,
         "eGFR": 65,
-        "LDL": 120,
-        "blood pressure": "140/85 mmHg"
+        "LDL": 120
       },
       "medications": [
-        "Metformin 1500mg BID",
-        "Losartan 100mg Daily",
-        "Atorvastatin 40mg Daily",
-        "Metoprolol 50mg Daily",
+        "metformin",
+        "losartan",
+        "atorvastatin",
+        "metoprolol",
         "beta-blocker"
       ],
       "diagnoses": [
@@ -192,13 +190,14 @@
       ],
       "extracted": {
         "conditions": [
-          "Coronary Artery Disease",
           "Type 2 Diabetes",
-          "Hyperlipidemia"
+          "Hyperlipidemia",
+          "Coronary Artery Disease"
         ],
         "medications": [
           "beta-blocker"
         ],
+        "dosages": [],
         "symptoms": [],
         "procedures": [
           "cardiac catheterization"
@@ -206,33 +205,22 @@
         "relationships": [
           {
             "subject": "Coronary Artery Disease",
-            "predicate": "confirmed_by",
-            "object": "cardiac catheterization",
-            "confidence": 1.0
-          },
-          {
-            "subject": "beta-blocker",
-            "predicate": "initiated_for",
-            "object": "Coronary Artery Disease",
-            "confidence": 1.0
-          },
-          {
-            "subject": "beta-blocker",
-            "predicate": "contraindicated_with",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.8
-          },
-          {
-            "subject": "beta-blocker",
-            "predicate": "contraindicated_with",
-            "object": "Hyperlipidemia",
-            "confidence": 0.8
+            "predicate": "managed_by",
+            "object": "beta-blocker",
+            "confidence": 0.9
           }
         ],
         "lab_values": {
-          "blood pressure": "140/85 mmHg"
+          "BP_systolic": 140,
+          "BP_diastolic": 85
         }
-      }
+      },
+      "dosages": [
+        "1500mg BID",
+        "100mg Daily",
+        "40mg Daily",
+        "50mg Daily"
+      ]
     },
     {
       "visit_id": "V4",
@@ -243,25 +231,21 @@
         "BP_systolic": 146,
         "BP_diastolic": 92,
         "eGFR": 55,
-        "LDL": 140,
-        "Blood Pressure": "146/92 mmHg"
+        "LDL": 140
       },
       "medications": [
-        "Metformin 2000mg BID",
-        "Losartan 150mg Daily",
-        "Atorvastatin 40mg Daily",
-        "Metoprolol 50mg Daily",
-        "Erythropoietin 10,000 units weekly",
-        "Diabetes Medication",
-        "Hypertension Medication"
+        "metformin",
+        "losartan",
+        "atorvastatin",
+        "metoprolol",
+        "erythropoietin 10,000 units weekly"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
         "Coronary Artery Disease",
-        "Chronic Kidney Disease",
-        "Kidney Function Impairment"
+        "Chronic Kidney Disease"
       ],
       "symptoms": [
         "Shortness of breath",
@@ -269,54 +253,36 @@
         "Fatigue",
         "Chest pain",
         "Nausea and vomiting",
-        "Worsening Kidney Function"
+        "Kidney function worsening"
       ],
       "extracted": {
         "conditions": [
-          "Type 2 Diabetes",
           "Hypertension",
-          "Kidney Function Impairment"
+          "Type 2 Diabetes"
         ],
         "medications": [
-          "Diabetes Medication",
-          "Hypertension Medication"
+          "metformin",
+          "losartan"
         ],
+        "dosages": [],
         "symptoms": [
-          "Worsening Kidney Function"
+          "Kidney function worsening"
         ],
         "procedures": [
-          "Referral to Nephrologist"
+          "referral to nephrologist"
         ],
-        "relationships": [
-          {
-            "subject": "Kidney Function Impairment",
-            "predicate": "worsens",
-            "object": "Blood Pressure",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Diabetes Medication",
-            "predicate": "managed_by",
-            "object": "Nephrologist",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Hypertension Medication",
-            "predicate": "managed_by",
-            "object": "Nephrologist",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Kidney Function Impairment",
-            "predicate": "improves",
-            "object": "Referral to Nephrologist",
-            "confidence": 0.6
-          }
-        ],
+        "relationships": [],
         "lab_values": {
-          "Blood Pressure": "146/92 mmHg"
+          "BP_systolic": 146,
+          "BP_diastolic": 92
         }
-      }
+      },
+      "dosages": [
+        "2000mg BID",
+        "150mg Daily",
+        "40mg Daily",
+        "50mg Daily"
+      ]
     }
   ]
 }

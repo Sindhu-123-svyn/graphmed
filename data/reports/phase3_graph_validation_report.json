@@ -1,0 +1,3101 @@
+{
+  "generated_at_utc": "2026-04-04T08:24:50.050909+00:00",
+  "script": "phase3_validate_graphs.py",
+  "graphs_dir": "data/graphs",
+  "summary": {
+    "total_graph_files": 102,
+    "validated_graph_files": 102,
+    "issue_count": 9,
+    "nodes_min": 4,
+    "nodes_max": 31,
+    "nodes_avg": 22.049,
+    "edges_min": 3,
+    "edges_max": 75,
+    "edges_avg": 40.2353,
+    "edges_per_node_avg": 1.8197,
+    "edges_per_node_median": 1.734,
+    "node_types_total": {
+      "CONDITION": 477,
+      "LAB_VALUE": 530,
+      "MEDICATION": 495,
+      "PATIENT": 102,
+      "PROCEDURE": 48,
+      "SYMPTOM": 597
+    },
+    "relation_types_total": {
+      "contraindicated_with": 23,
+      "has": 2147,
+      "has_symptom": 417,
+      "improves": 57,
+      "managed_by": 630,
+      "measured_by": 519,
+      "worsens": 311
+    }
+  },
+  "issues": [
+    "CONFLICT_TEST_graph.json: edge missing 'confidence'",
+    "CONFLICT_TEST_graph.json: edge missing 'confidence'",
+    "CONFLICT_TEST_graph.json: edge missing 'confidence'",
+    "CONFLICT_TEST_graph.json: edge missing 'confidence'",
+    "CONFLICT_TEST_graph.json: edge missing 'confidence'",
+    "CONFLICT_TEST_graph.json: edge missing 'confidence'",
+    "TREND_TEST_graph.json: edge missing 'confidence'",
+    "TREND_TEST_graph.json: edge missing 'confidence'",
+    "TREND_TEST_graph.json: edge missing 'confidence'"
+  ],
+  "per_graph": [
+    {
+      "file": "CONFLICT_TEST_graph.json",
+      "patient_id": "CONFLICT_TEST",
+      "nodes": 7,
+      "edges": 6,
+      "edges_per_node": 0.8571,
+      "node_types": {
+        "CONDITION": 2,
+        "LAB_VALUE": 1,
+        "MEDICATION": 2,
+        "PATIENT": 1,
+        "SYMPTOM": 1
+      },
+      "relation_types": {
+        "has": 6
+      },
+      "node_confidence_avg": 0.8552,
+      "node_confidence_median": 0.7467,
+      "edge_confidence_avg": 0.0,
+      "edge_confidence_median": 0.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 7,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P001_graph.json",
+      "patient_id": "P001",
+      "nodes": 22,
+      "edges": 43,
+      "edges_per_node": 1.9545,
+      "node_types": {
+        "CONDITION": 4,
+        "LAB_VALUE": 3,
+        "MEDICATION": 6,
+        "PATIENT": 1,
+        "PROCEDURE": 3,
+        "SYMPTOM": 5
+      },
+      "relation_types": {
+        "contraindicated_with": 1,
+        "has": 21,
+        "has_symptom": 8,
+        "managed_by": 5,
+        "measured_by": 8
+      },
+      "node_confidence_avg": 0.5777,
+      "node_confidence_median": 0.695,
+      "edge_confidence_avg": 0.9581,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P002_graph.json",
+      "patient_id": "P002",
+      "nodes": 26,
+      "edges": 38,
+      "edges_per_node": 1.4615,
+      "node_types": {
+        "CONDITION": 4,
+        "LAB_VALUE": 10,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "SYMPTOM": 6
+      },
+      "relation_types": {
+        "has": 25,
+        "has_symptom": 5,
+        "managed_by": 3,
+        "measured_by": 3,
+        "worsens": 2
+      },
+      "node_confidence_avg": 0.7964,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.8868,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P003_graph.json",
+      "patient_id": "P003",
+      "nodes": 17,
+      "edges": 45,
+      "edges_per_node": 2.6471,
+      "node_types": {
+        "CONDITION": 3,
+        "LAB_VALUE": 5,
+        "MEDICATION": 4,
+        "PATIENT": 1,
+        "SYMPTOM": 4
+      },
+      "relation_types": {
+        "has": 16,
+        "has_symptom": 8,
+        "managed_by": 9,
+        "measured_by": 12
+      },
+      "node_confidence_avg": 0.7925,
+      "node_confidence_median": 0.66,
+      "edge_confidence_avg": 1.0,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P004_graph.json",
+      "patient_id": "P004",
+      "nodes": 25,
+      "edges": 44,
+      "edges_per_node": 1.76,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 5,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "PROCEDURE": 1,
+        "SYMPTOM": 8
+      },
+      "relation_types": {
+        "has": 24,
+        "has_symptom": 3,
+        "improves": 1,
+        "managed_by": 6,
+        "worsens": 10
+      },
+      "node_confidence_avg": 0.8173,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.9023,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P005_graph.json",
+      "patient_id": "P005",
+      "nodes": 22,
+      "edges": 41,
+      "edges_per_node": 1.8636,
+      "node_types": {
+        "CONDITION": 4,
+        "LAB_VALUE": 5,
+        "MEDICATION": 4,
+        "PATIENT": 1,
+        "PROCEDURE": 1,
+        "SYMPTOM": 7
+      },
+      "relation_types": {
+        "has": 21,
+        "improves": 4,
+        "managed_by": 4,
+        "measured_by": 5,
+        "worsens": 7
+      },
+      "node_confidence_avg": 0.9858,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.9073,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P006_graph.json",
+      "patient_id": "P006",
+      "nodes": 22,
+      "edges": 53,
+      "edges_per_node": 2.4091,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 5,
+        "MEDICATION": 3,
+        "PATIENT": 1,
+        "PROCEDURE": 1,
+        "SYMPTOM": 7
+      },
+      "relation_types": {
+        "has": 21,
+        "has_symptom": 3,
+        "managed_by": 13,
+        "measured_by": 12,
+        "worsens": 4
+      },
+      "node_confidence_avg": 0.653,
+      "node_confidence_median": 0.6967,
+      "edge_confidence_avg": 0.9698,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P007_graph.json",
+      "patient_id": "P007",
+      "nodes": 25,
+      "edges": 41,
+      "edges_per_node": 1.64,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 4,
+        "MEDICATION": 10,
+        "PATIENT": 1,
+        "SYMPTOM": 5
+      },
+      "relation_types": {
+        "contraindicated_with": 2,
+        "has": 24,
+        "improves": 3,
+        "managed_by": 7,
+        "worsens": 5
+      },
+      "node_confidence_avg": 0.6841,
+      "node_confidence_median": 0.5833,
+      "edge_confidence_avg": 0.8976,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P008_graph.json",
+      "patient_id": "P008",
+      "nodes": 25,
+      "edges": 37,
+      "edges_per_node": 1.48,
+      "node_types": {
+        "CONDITION": 6,
+        "LAB_VALUE": 4,
+        "MEDICATION": 6,
+        "PATIENT": 1,
+        "PROCEDURE": 1,
+        "SYMPTOM": 7
+      },
+      "relation_types": {
+        "has": 24,
+        "has_symptom": 4,
+        "measured_by": 4,
+        "worsens": 5
+      },
+      "node_confidence_avg": 0.6779,
+      "node_confidence_median": 0.6933,
+      "edge_confidence_avg": 0.9459,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P009_graph.json",
+      "patient_id": "P009",
+      "nodes": 21,
+      "edges": 35,
+      "edges_per_node": 1.6667,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 4,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "SYMPTOM": 6
+      },
+      "relation_types": {
+        "has": 20,
+        "managed_by": 6,
+        "measured_by": 4,
+        "worsens": 5
+      },
+      "node_confidence_avg": 0.7144,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.9114,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P010_graph.json",
+      "patient_id": "P010",
+      "nodes": 19,
+      "edges": 29,
+      "edges_per_node": 1.5263,
+      "node_types": {
+        "CONDITION": 3,
+        "LAB_VALUE": 5,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "SYMPTOM": 5
+      },
+      "relation_types": {
+        "has": 18,
+        "managed_by": 6,
+        "worsens": 5
+      },
+      "node_confidence_avg": 0.6768,
+      "node_confidence_median": 0.7033,
+      "edge_confidence_avg": 0.9103,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P011_graph.json",
+      "patient_id": "P011",
+      "nodes": 20,
+      "edges": 31,
+      "edges_per_node": 1.55,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 3,
+        "MEDICATION": 6,
+        "PATIENT": 1,
+        "SYMPTOM": 5
+      },
+      "relation_types": {
+        "contraindicated_with": 1,
+        "has": 19,
+        "improves": 1,
+        "managed_by": 6,
+        "worsens": 4
+      },
+      "node_confidence_avg": 0.5775,
+      "node_confidence_median": 0.5833,
+      "edge_confidence_avg": 0.9161,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P012_graph.json",
+      "patient_id": "P012",
+      "nodes": 18,
+      "edges": 41,
+      "edges_per_node": 2.2778,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 4,
+        "MEDICATION": 4,
+        "PATIENT": 1,
+        "SYMPTOM": 4
+      },
+      "relation_types": {
+        "has": 17,
+        "has_symptom": 6,
+        "improves": 1,
+        "managed_by": 6,
+        "measured_by": 8,
+        "worsens": 3
+      },
+      "node_confidence_avg": 0.7994,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.9659,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P013_graph.json",
+      "patient_id": "P013",
+      "nodes": 27,
+      "edges": 68,
+      "edges_per_node": 2.5185,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 10,
+        "MEDICATION": 4,
+        "PATIENT": 1,
+        "SYMPTOM": 7
+      },
+      "relation_types": {
+        "has": 26,
+        "has_symptom": 4,
+        "managed_by": 9,
+        "measured_by": 28,
+        "worsens": 1
+      },
+      "node_confidence_avg": 0.6769,
+      "node_confidence_median": 0.6933,
+      "edge_confidence_avg": 0.9956,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P014_graph.json",
+      "patient_id": "P014",
+      "nodes": 17,
+      "edges": 32,
+      "edges_per_node": 1.8824,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 5,
+        "MEDICATION": 3,
+        "PATIENT": 1,
+        "SYMPTOM": 3
+      },
+      "relation_types": {
+        "has": 16,
+        "has_symptom": 2,
+        "managed_by": 6,
+        "measured_by": 5,
+        "worsens": 3
+      },
+      "node_confidence_avg": 0.8614,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.9688,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P015_graph.json",
+      "patient_id": "P015",
+      "nodes": 27,
+      "edges": 45,
+      "edges_per_node": 1.6667,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 10,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "SYMPTOM": 6
+      },
+      "relation_types": {
+        "has": 26,
+        "has_symptom": 8,
+        "managed_by": 6,
+        "measured_by": 2,
+        "worsens": 3
+      },
+      "node_confidence_avg": 0.5013,
+      "node_confidence_median": 0.2,
+      "edge_confidence_avg": 0.9244,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P016_graph.json",
+      "patient_id": "P016",
+      "nodes": 20,
+      "edges": 37,
+      "edges_per_node": 1.85,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 5,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "SYMPTOM": 4
+      },
+      "relation_types": {
+        "has": 19,
+        "has_symptom": 3,
+        "improves": 2,
+        "managed_by": 7,
+        "measured_by": 3,
+        "worsens": 3
+      },
+      "node_confidence_avg": 0.5603,
+      "node_confidence_median": 0.5367,
+      "edge_confidence_avg": 0.9162,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P017_graph.json",
+      "patient_id": "P017",
+      "nodes": 22,
+      "edges": 32,
+      "edges_per_node": 1.4545,
+      "node_types": {
+        "CONDITION": 4,
+        "LAB_VALUE": 5,
+        "MEDICATION": 4,
+        "PATIENT": 1,
+        "SYMPTOM": 8
+      },
+      "relation_types": {
+        "has": 21,
+        "has_symptom": 4,
+        "managed_by": 5,
+        "worsens": 2
+      },
+      "node_confidence_avg": 0.8906,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.9344,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P018_graph.json",
+      "patient_id": "P018",
+      "nodes": 25,
+      "edges": 49,
+      "edges_per_node": 1.96,
+      "node_types": {
+        "CONDITION": 4,
+        "LAB_VALUE": 5,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "SYMPTOM": 10
+      },
+      "relation_types": {
+        "has": 24,
+        "has_symptom": 4,
+        "managed_by": 5,
+        "measured_by": 5,
+        "worsens": 11
+      },
+      "node_confidence_avg": 0.8023,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.8898,
+      "edge_confidence_median": 0.9,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P019_graph.json",
+      "patient_id": "P019",
+      "nodes": 17,
+      "edges": 33,
+      "edges_per_node": 1.9412,
+      "node_types": {
+        "CONDITION": 4,
+        "LAB_VALUE": 3,
+        "MEDICATION": 4,
+        "PATIENT": 1,
+        "SYMPTOM": 5
+      },
+      "relation_types": {
+        "has": 16,
+        "has_symptom": 9,
+        "managed_by": 5,
+        "measured_by": 3
+      },
+      "node_confidence_avg": 0.9819,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.8606,
+      "edge_confidence_median": 0.9,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P020_graph.json",
+      "patient_id": "P020",
+      "nodes": 19,
+      "edges": 43,
+      "edges_per_node": 2.2632,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 5,
+        "MEDICATION": 4,
+        "PATIENT": 1,
+        "SYMPTOM": 4
+      },
+      "relation_types": {
+        "has": 18,
+        "has_symptom": 4,
+        "improves": 3,
+        "managed_by": 8,
+        "measured_by": 10
+      },
+      "node_confidence_avg": 0.8391,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.986,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P021_graph.json",
+      "patient_id": "P021",
+      "nodes": 18,
+      "edges": 29,
+      "edges_per_node": 1.6111,
+      "node_types": {
+        "CONDITION": 4,
+        "LAB_VALUE": 2,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "PROCEDURE": 1,
+        "SYMPTOM": 5
+      },
+      "relation_types": {
+        "has": 17,
+        "has_symptom": 2,
+        "managed_by": 5,
+        "measured_by": 2,
+        "worsens": 3
+      },
+      "node_confidence_avg": 0.7795,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.9724,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P022_graph.json",
+      "patient_id": "P022",
+      "nodes": 20,
+      "edges": 38,
+      "edges_per_node": 1.9,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 5,
+        "MEDICATION": 4,
+        "PATIENT": 1,
+        "SYMPTOM": 5
+      },
+      "relation_types": {
+        "has": 19,
+        "has_symptom": 6,
+        "managed_by": 4,
+        "measured_by": 4,
+        "worsens": 5
+      },
+      "node_confidence_avg": 0.9798,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.9211,
+      "edge_confidence_median": 0.95,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P023_graph.json",
+      "patient_id": "P023",
+      "nodes": 23,
+      "edges": 74,
+      "edges_per_node": 3.2174,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 4,
+        "MEDICATION": 6,
+        "PATIENT": 1,
+        "PROCEDURE": 1,
+        "SYMPTOM": 6
+      },
+      "relation_types": {
+        "has": 22,
+        "has_symptom": 21,
+        "managed_by": 15,
+        "measured_by": 16
+      },
+      "node_confidence_avg": 0.6492,
+      "node_confidence_median": 0.6717,
+      "edge_confidence_avg": 0.9892,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P024_graph.json",
+      "patient_id": "P024",
+      "nodes": 21,
+      "edges": 27,
+      "edges_per_node": 1.2857,
+      "node_types": {
+        "CONDITION": 4,
+        "LAB_VALUE": 4,
+        "MEDICATION": 7,
+        "PATIENT": 1,
+        "SYMPTOM": 5
+      },
+      "relation_types": {
+        "has": 20,
+        "managed_by": 6,
+        "worsens": 1
+      },
+      "node_confidence_avg": 0.6076,
+      "node_confidence_median": 0.5833,
+      "edge_confidence_avg": 0.9667,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P025_graph.json",
+      "patient_id": "P025",
+      "nodes": 16,
+      "edges": 19,
+      "edges_per_node": 1.1875,
+      "node_types": {
+        "CONDITION": 3,
+        "LAB_VALUE": 5,
+        "MEDICATION": 3,
+        "PATIENT": 1,
+        "SYMPTOM": 4
+      },
+      "relation_types": {
+        "has": 15,
+        "managed_by": 4
+      },
+      "node_confidence_avg": 0.8994,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.9789,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P026_graph.json",
+      "patient_id": "P026",
+      "nodes": 24,
+      "edges": 39,
+      "edges_per_node": 1.625,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 3,
+        "MEDICATION": 6,
+        "PATIENT": 1,
+        "PROCEDURE": 1,
+        "SYMPTOM": 8
+      },
+      "relation_types": {
+        "contraindicated_with": 1,
+        "has": 23,
+        "has_symptom": 5,
+        "improves": 2,
+        "managed_by": 5,
+        "measured_by": 2,
+        "worsens": 1
+      },
+      "node_confidence_avg": 0.5507,
+      "node_confidence_median": 0.6033,
+      "edge_confidence_avg": 0.9513,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P027_graph.json",
+      "patient_id": "P027",
+      "nodes": 24,
+      "edges": 58,
+      "edges_per_node": 2.4167,
+      "node_types": {
+        "CONDITION": 7,
+        "LAB_VALUE": 4,
+        "MEDICATION": 4,
+        "PATIENT": 1,
+        "SYMPTOM": 8
+      },
+      "relation_types": {
+        "has": 23,
+        "has_symptom": 6,
+        "managed_by": 13,
+        "measured_by": 14,
+        "worsens": 2
+      },
+      "node_confidence_avg": 0.7769,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.9828,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P028_graph.json",
+      "patient_id": "P028",
+      "nodes": 24,
+      "edges": 38,
+      "edges_per_node": 1.5833,
+      "node_types": {
+        "CONDITION": 6,
+        "LAB_VALUE": 5,
+        "MEDICATION": 6,
+        "PATIENT": 1,
+        "SYMPTOM": 6
+      },
+      "relation_types": {
+        "has": 23,
+        "managed_by": 6,
+        "worsens": 9
+      },
+      "node_confidence_avg": 0.7985,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.9053,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P029_graph.json",
+      "patient_id": "P029",
+      "nodes": 24,
+      "edges": 55,
+      "edges_per_node": 2.2917,
+      "node_types": {
+        "CONDITION": 6,
+        "LAB_VALUE": 5,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "PROCEDURE": 1,
+        "SYMPTOM": 6
+      },
+      "relation_types": {
+        "has": 23,
+        "has_symptom": 9,
+        "improves": 1,
+        "managed_by": 10,
+        "measured_by": 10,
+        "worsens": 2
+      },
+      "node_confidence_avg": 0.6376,
+      "node_confidence_median": 0.7042,
+      "edge_confidence_avg": 0.9618,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P030_graph.json",
+      "patient_id": "P030",
+      "nodes": 22,
+      "edges": 38,
+      "edges_per_node": 1.7273,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 2,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "PROCEDURE": 3,
+        "SYMPTOM": 6
+      },
+      "relation_types": {
+        "has": 21,
+        "has_symptom": 5,
+        "managed_by": 6,
+        "measured_by": 4,
+        "worsens": 2
+      },
+      "node_confidence_avg": 0.6085,
+      "node_confidence_median": 0.7033,
+      "edge_confidence_avg": 0.9658,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P031_graph.json",
+      "patient_id": "P031",
+      "nodes": 16,
+      "edges": 30,
+      "edges_per_node": 1.875,
+      "node_types": {
+        "CONDITION": 4,
+        "LAB_VALUE": 3,
+        "MEDICATION": 3,
+        "PATIENT": 1,
+        "SYMPTOM": 5
+      },
+      "relation_types": {
+        "has": 15,
+        "has_symptom": 3,
+        "managed_by": 9,
+        "measured_by": 3
+      },
+      "node_confidence_avg": 0.734,
+      "node_confidence_median": 0.8467,
+      "edge_confidence_avg": 0.98,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P032_graph.json",
+      "patient_id": "P032",
+      "nodes": 19,
+      "edges": 43,
+      "edges_per_node": 2.2632,
+      "node_types": {
+        "CONDITION": 6,
+        "LAB_VALUE": 4,
+        "MEDICATION": 3,
+        "PATIENT": 1,
+        "SYMPTOM": 5
+      },
+      "relation_types": {
+        "has": 18,
+        "has_symptom": 5,
+        "improves": 4,
+        "managed_by": 8,
+        "measured_by": 1,
+        "worsens": 7
+      },
+      "node_confidence_avg": 0.7566,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.8651,
+      "edge_confidence_median": 0.9,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P033_graph.json",
+      "patient_id": "P033",
+      "nodes": 20,
+      "edges": 42,
+      "edges_per_node": 2.1,
+      "node_types": {
+        "CONDITION": 4,
+        "LAB_VALUE": 3,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "SYMPTOM": 7
+      },
+      "relation_types": {
+        "contraindicated_with": 1,
+        "has": 19,
+        "has_symptom": 5,
+        "managed_by": 8,
+        "measured_by": 6,
+        "worsens": 3
+      },
+      "node_confidence_avg": 0.5693,
+      "node_confidence_median": 0.62,
+      "edge_confidence_avg": 0.9643,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P034_graph.json",
+      "patient_id": "P034",
+      "nodes": 20,
+      "edges": 34,
+      "edges_per_node": 1.7,
+      "node_types": {
+        "CONDITION": 2,
+        "LAB_VALUE": 5,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "PROCEDURE": 1,
+        "SYMPTOM": 6
+      },
+      "relation_types": {
+        "has": 19,
+        "has_symptom": 6,
+        "managed_by": 3,
+        "measured_by": 3,
+        "worsens": 3
+      },
+      "node_confidence_avg": 0.7065,
+      "node_confidence_median": 0.7042,
+      "edge_confidence_avg": 0.9794,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P035_graph.json",
+      "patient_id": "P035",
+      "nodes": 22,
+      "edges": 60,
+      "edges_per_node": 2.7273,
+      "node_types": {
+        "CONDITION": 4,
+        "LAB_VALUE": 5,
+        "MEDICATION": 7,
+        "PATIENT": 1,
+        "SYMPTOM": 5
+      },
+      "relation_types": {
+        "has": 21,
+        "has_symptom": 11,
+        "managed_by": 17,
+        "measured_by": 11
+      },
+      "node_confidence_avg": 0.732,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.9967,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P036_graph.json",
+      "patient_id": "P036",
+      "nodes": 20,
+      "edges": 29,
+      "edges_per_node": 1.45,
+      "node_types": {
+        "CONDITION": 4,
+        "LAB_VALUE": 4,
+        "MEDICATION": 6,
+        "PATIENT": 1,
+        "SYMPTOM": 5
+      },
+      "relation_types": {
+        "has": 19,
+        "has_symptom": 2,
+        "improves": 2,
+        "managed_by": 4,
+        "worsens": 2
+      },
+      "node_confidence_avg": 0.6233,
+      "node_confidence_median": 0.6133,
+      "edge_confidence_avg": 0.931,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P037_graph.json",
+      "patient_id": "P037",
+      "nodes": 26,
+      "edges": 37,
+      "edges_per_node": 1.4231,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 6,
+        "MEDICATION": 6,
+        "PATIENT": 1,
+        "PROCEDURE": 1,
+        "SYMPTOM": 7
+      },
+      "relation_types": {
+        "contraindicated_with": 2,
+        "has": 25,
+        "has_symptom": 1,
+        "managed_by": 5,
+        "measured_by": 2,
+        "worsens": 2
+      },
+      "node_confidence_avg": 0.5424,
+      "node_confidence_median": 0.6867,
+      "edge_confidence_avg": 0.9622,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P038_graph.json",
+      "patient_id": "P038",
+      "nodes": 29,
+      "edges": 51,
+      "edges_per_node": 1.7586,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 10,
+        "MEDICATION": 4,
+        "PATIENT": 1,
+        "PROCEDURE": 3,
+        "SYMPTOM": 6
+      },
+      "relation_types": {
+        "has": 28,
+        "has_symptom": 3,
+        "improves": 4,
+        "managed_by": 4,
+        "measured_by": 12
+      },
+      "node_confidence_avg": 0.5381,
+      "node_confidence_median": 0.3717,
+      "edge_confidence_avg": 0.9745,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P039_graph.json",
+      "patient_id": "P039",
+      "nodes": 27,
+      "edges": 44,
+      "edges_per_node": 1.6296,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 10,
+        "MEDICATION": 4,
+        "PATIENT": 1,
+        "PROCEDURE": 1,
+        "SYMPTOM": 6
+      },
+      "relation_types": {
+        "has": 26,
+        "has_symptom": 3,
+        "improves": 1,
+        "managed_by": 2,
+        "measured_by": 9,
+        "worsens": 3
+      },
+      "node_confidence_avg": 0.7091,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.9614,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P040_graph.json",
+      "patient_id": "P040",
+      "nodes": 28,
+      "edges": 47,
+      "edges_per_node": 1.6786,
+      "node_types": {
+        "CONDITION": 6,
+        "LAB_VALUE": 5,
+        "MEDICATION": 7,
+        "PATIENT": 1,
+        "SYMPTOM": 9
+      },
+      "relation_types": {
+        "has": 27,
+        "has_symptom": 9,
+        "managed_by": 9,
+        "worsens": 2
+      },
+      "node_confidence_avg": 0.4784,
+      "node_confidence_median": 0.285,
+      "edge_confidence_avg": 0.917,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P041_graph.json",
+      "patient_id": "P041",
+      "nodes": 21,
+      "edges": 35,
+      "edges_per_node": 1.6667,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 5,
+        "MEDICATION": 6,
+        "PATIENT": 1,
+        "PROCEDURE": 1,
+        "SYMPTOM": 3
+      },
+      "relation_types": {
+        "has": 20,
+        "improves": 1,
+        "managed_by": 8,
+        "measured_by": 4,
+        "worsens": 2
+      },
+      "node_confidence_avg": 0.7043,
+      "node_confidence_median": 0.7433,
+      "edge_confidence_avg": 0.9143,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P042_graph.json",
+      "patient_id": "P042",
+      "nodes": 22,
+      "edges": 46,
+      "edges_per_node": 2.0909,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 4,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "SYMPTOM": 7
+      },
+      "relation_types": {
+        "has": 21,
+        "has_symptom": 6,
+        "managed_by": 8,
+        "measured_by": 9,
+        "worsens": 2
+      },
+      "node_confidence_avg": 0.5151,
+      "node_confidence_median": 0.2483,
+      "edge_confidence_avg": 0.9804,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P043_graph.json",
+      "patient_id": "P043",
+      "nodes": 23,
+      "edges": 38,
+      "edges_per_node": 1.6522,
+      "node_types": {
+        "CONDITION": 6,
+        "LAB_VALUE": 5,
+        "MEDICATION": 4,
+        "PATIENT": 1,
+        "PROCEDURE": 1,
+        "SYMPTOM": 6
+      },
+      "relation_types": {
+        "has": 22,
+        "managed_by": 9,
+        "worsens": 7
+      },
+      "node_confidence_avg": 0.6478,
+      "node_confidence_median": 0.5833,
+      "edge_confidence_avg": 0.9211,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P044_graph.json",
+      "patient_id": "P044",
+      "nodes": 25,
+      "edges": 36,
+      "edges_per_node": 1.44,
+      "node_types": {
+        "CONDITION": 6,
+        "LAB_VALUE": 4,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "PROCEDURE": 1,
+        "SYMPTOM": 8
+      },
+      "relation_types": {
+        "has": 24,
+        "managed_by": 5,
+        "worsens": 7
+      },
+      "node_confidence_avg": 0.823,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.9472,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P045_graph.json",
+      "patient_id": "P045",
+      "nodes": 21,
+      "edges": 75,
+      "edges_per_node": 3.5714,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 5,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "SYMPTOM": 5
+      },
+      "relation_types": {
+        "has": 20,
+        "has_symptom": 16,
+        "managed_by": 15,
+        "measured_by": 20,
+        "worsens": 4
+      },
+      "node_confidence_avg": 0.8237,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.976,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P046_graph.json",
+      "patient_id": "P046",
+      "nodes": 18,
+      "edges": 36,
+      "edges_per_node": 2.0,
+      "node_types": {
+        "CONDITION": 4,
+        "LAB_VALUE": 5,
+        "MEDICATION": 4,
+        "PATIENT": 1,
+        "SYMPTOM": 4
+      },
+      "relation_types": {
+        "contraindicated_with": 1,
+        "has": 17,
+        "has_symptom": 4,
+        "managed_by": 4,
+        "measured_by": 5,
+        "worsens": 5
+      },
+      "node_confidence_avg": 0.8057,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.8972,
+      "edge_confidence_median": 0.9,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P047_graph.json",
+      "patient_id": "P047",
+      "nodes": 23,
+      "edges": 44,
+      "edges_per_node": 1.913,
+      "node_types": {
+        "CONDITION": 6,
+        "LAB_VALUE": 5,
+        "MEDICATION": 3,
+        "PATIENT": 1,
+        "SYMPTOM": 8
+      },
+      "relation_types": {
+        "has": 22,
+        "has_symptom": 3,
+        "improves": 3,
+        "managed_by": 4,
+        "worsens": 12
+      },
+      "node_confidence_avg": 0.7551,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.8932,
+      "edge_confidence_median": 0.95,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P048_graph.json",
+      "patient_id": "P048",
+      "nodes": 22,
+      "edges": 45,
+      "edges_per_node": 2.0455,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 5,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "SYMPTOM": 6
+      },
+      "relation_types": {
+        "has": 21,
+        "has_symptom": 5,
+        "managed_by": 6,
+        "measured_by": 7,
+        "worsens": 6
+      },
+      "node_confidence_avg": 0.6208,
+      "node_confidence_median": 0.715,
+      "edge_confidence_avg": 0.9267,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P049_graph.json",
+      "patient_id": "P049",
+      "nodes": 27,
+      "edges": 32,
+      "edges_per_node": 1.1852,
+      "node_types": {
+        "CONDITION": 4,
+        "LAB_VALUE": 10,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "SYMPTOM": 7
+      },
+      "relation_types": {
+        "has": 26,
+        "has_symptom": 3,
+        "managed_by": 3
+      },
+      "node_confidence_avg": 0.6472,
+      "node_confidence_median": 0.6867,
+      "edge_confidence_avg": 0.9625,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P050_graph.json",
+      "patient_id": "P050",
+      "nodes": 18,
+      "edges": 27,
+      "edges_per_node": 1.5,
+      "node_types": {
+        "CONDITION": 4,
+        "LAB_VALUE": 5,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "SYMPTOM": 3
+      },
+      "relation_types": {
+        "has": 17,
+        "managed_by": 3,
+        "measured_by": 5,
+        "worsens": 2
+      },
+      "node_confidence_avg": 0.9381,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.937,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P051_graph.json",
+      "patient_id": "P051",
+      "nodes": 24,
+      "edges": 49,
+      "edges_per_node": 2.0417,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 4,
+        "MEDICATION": 6,
+        "PATIENT": 1,
+        "SYMPTOM": 8
+      },
+      "relation_types": {
+        "has": 23,
+        "has_symptom": 4,
+        "managed_by": 9,
+        "measured_by": 8,
+        "worsens": 5
+      },
+      "node_confidence_avg": 0.5915,
+      "node_confidence_median": 0.6983,
+      "edge_confidence_avg": 0.9449,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P052_graph.json",
+      "patient_id": "P052",
+      "nodes": 18,
+      "edges": 46,
+      "edges_per_node": 2.5556,
+      "node_types": {
+        "CONDITION": 4,
+        "LAB_VALUE": 5,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "SYMPTOM": 3
+      },
+      "relation_types": {
+        "has": 17,
+        "has_symptom": 8,
+        "managed_by": 8,
+        "measured_by": 12,
+        "worsens": 1
+      },
+      "node_confidence_avg": 0.7936,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.9935,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P053_graph.json",
+      "patient_id": "P053",
+      "nodes": 27,
+      "edges": 52,
+      "edges_per_node": 1.9259,
+      "node_types": {
+        "CONDITION": 7,
+        "LAB_VALUE": 5,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "SYMPTOM": 9
+      },
+      "relation_types": {
+        "has": 26,
+        "has_symptom": 5,
+        "managed_by": 8,
+        "measured_by": 10,
+        "worsens": 3
+      },
+      "node_confidence_avg": 0.5877,
+      "node_confidence_median": 0.7533,
+      "edge_confidence_avg": 0.9635,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P054_graph.json",
+      "patient_id": "P054",
+      "nodes": 23,
+      "edges": 31,
+      "edges_per_node": 1.3478,
+      "node_types": {
+        "CONDITION": 4,
+        "LAB_VALUE": 5,
+        "MEDICATION": 7,
+        "PATIENT": 1,
+        "SYMPTOM": 6
+      },
+      "relation_types": {
+        "has": 22,
+        "managed_by": 7,
+        "worsens": 2
+      },
+      "node_confidence_avg": 0.6128,
+      "node_confidence_median": 0.7033,
+      "edge_confidence_avg": 0.9581,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P055_graph.json",
+      "patient_id": "P055",
+      "nodes": 18,
+      "edges": 27,
+      "edges_per_node": 1.5,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 5,
+        "MEDICATION": 3,
+        "PATIENT": 1,
+        "SYMPTOM": 4
+      },
+      "relation_types": {
+        "contraindicated_with": 1,
+        "has": 17,
+        "managed_by": 3,
+        "worsens": 6
+      },
+      "node_confidence_avg": 1.0,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.9,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P056_graph.json",
+      "patient_id": "P056",
+      "nodes": 17,
+      "edges": 25,
+      "edges_per_node": 1.4706,
+      "node_types": {
+        "CONDITION": 3,
+        "LAB_VALUE": 4,
+        "MEDICATION": 4,
+        "PATIENT": 1,
+        "PROCEDURE": 1,
+        "SYMPTOM": 4
+      },
+      "relation_types": {
+        "has": 16,
+        "improves": 2,
+        "managed_by": 5,
+        "worsens": 2
+      },
+      "node_confidence_avg": 0.8359,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.94,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P057_graph.json",
+      "patient_id": "P057",
+      "nodes": 30,
+      "edges": 44,
+      "edges_per_node": 1.4667,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 10,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "PROCEDURE": 2,
+        "SYMPTOM": 7
+      },
+      "relation_types": {
+        "contraindicated_with": 2,
+        "has": 29,
+        "has_symptom": 3,
+        "improves": 4,
+        "managed_by": 5,
+        "worsens": 1
+      },
+      "node_confidence_avg": 0.6126,
+      "node_confidence_median": 0.685,
+      "edge_confidence_avg": 0.9205,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P058_graph.json",
+      "patient_id": "P058",
+      "nodes": 23,
+      "edges": 42,
+      "edges_per_node": 1.8261,
+      "node_types": {
+        "CONDITION": 3,
+        "LAB_VALUE": 5,
+        "MEDICATION": 7,
+        "PATIENT": 1,
+        "SYMPTOM": 7
+      },
+      "relation_types": {
+        "has": 22,
+        "has_symptom": 2,
+        "managed_by": 8,
+        "measured_by": 9,
+        "worsens": 1
+      },
+      "node_confidence_avg": 0.7265,
+      "node_confidence_median": 0.7417,
+      "edge_confidence_avg": 0.981,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P059_graph.json",
+      "patient_id": "P059",
+      "nodes": 21,
+      "edges": 41,
+      "edges_per_node": 1.9524,
+      "node_types": {
+        "CONDITION": 4,
+        "LAB_VALUE": 5,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "SYMPTOM": 6
+      },
+      "relation_types": {
+        "has": 20,
+        "has_symptom": 3,
+        "managed_by": 6,
+        "measured_by": 11,
+        "worsens": 1
+      },
+      "node_confidence_avg": 0.5617,
+      "node_confidence_median": 0.615,
+      "edge_confidence_avg": 0.9878,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P060_graph.json",
+      "patient_id": "P060",
+      "nodes": 24,
+      "edges": 38,
+      "edges_per_node": 1.5833,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 9,
+        "MEDICATION": 4,
+        "PATIENT": 1,
+        "SYMPTOM": 5
+      },
+      "relation_types": {
+        "has": 23,
+        "has_symptom": 4,
+        "improves": 1,
+        "managed_by": 6,
+        "measured_by": 4
+      },
+      "node_confidence_avg": 0.9444,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.9132,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P061_graph.json",
+      "patient_id": "P061",
+      "nodes": 22,
+      "edges": 50,
+      "edges_per_node": 2.2727,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 3,
+        "MEDICATION": 6,
+        "PATIENT": 1,
+        "SYMPTOM": 7
+      },
+      "relation_types": {
+        "has": 21,
+        "has_symptom": 17,
+        "managed_by": 5,
+        "measured_by": 4,
+        "worsens": 3
+      },
+      "node_confidence_avg": 0.6535,
+      "node_confidence_median": 0.65,
+      "edge_confidence_avg": 0.966,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P062_graph.json",
+      "patient_id": "P062",
+      "nodes": 22,
+      "edges": 45,
+      "edges_per_node": 2.0455,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 5,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "PROCEDURE": 1,
+        "SYMPTOM": 5
+      },
+      "relation_types": {
+        "has": 21,
+        "managed_by": 6,
+        "worsens": 18
+      },
+      "node_confidence_avg": 0.8127,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.8778,
+      "edge_confidence_median": 0.8,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P063_graph.json",
+      "patient_id": "P063",
+      "nodes": 21,
+      "edges": 43,
+      "edges_per_node": 2.0476,
+      "node_types": {
+        "CONDITION": 4,
+        "LAB_VALUE": 4,
+        "MEDICATION": 6,
+        "PATIENT": 1,
+        "SYMPTOM": 6
+      },
+      "relation_types": {
+        "contraindicated_with": 1,
+        "has": 20,
+        "has_symptom": 10,
+        "managed_by": 6,
+        "measured_by": 6
+      },
+      "node_confidence_avg": 0.5309,
+      "node_confidence_median": 0.425,
+      "edge_confidence_avg": 0.9837,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P064_graph.json",
+      "patient_id": "P064",
+      "nodes": 24,
+      "edges": 31,
+      "edges_per_node": 1.2917,
+      "node_types": {
+        "CONDITION": 4,
+        "LAB_VALUE": 10,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "SYMPTOM": 4
+      },
+      "relation_types": {
+        "has": 23,
+        "has_symptom": 3,
+        "managed_by": 5
+      },
+      "node_confidence_avg": 0.5864,
+      "node_confidence_median": 0.6033,
+      "edge_confidence_avg": 0.9613,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P065_graph.json",
+      "patient_id": "P065",
+      "nodes": 20,
+      "edges": 29,
+      "edges_per_node": 1.45,
+      "node_types": {
+        "CONDITION": 4,
+        "LAB_VALUE": 4,
+        "MEDICATION": 4,
+        "PATIENT": 1,
+        "SYMPTOM": 7
+      },
+      "relation_types": {
+        "contraindicated_with": 1,
+        "has": 19,
+        "has_symptom": 2,
+        "managed_by": 4,
+        "worsens": 3
+      },
+      "node_confidence_avg": 0.7279,
+      "node_confidence_median": 0.6983,
+      "edge_confidence_avg": 0.931,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P066_graph.json",
+      "patient_id": "P066",
+      "nodes": 20,
+      "edges": 40,
+      "edges_per_node": 2.0,
+      "node_types": {
+        "CONDITION": 6,
+        "LAB_VALUE": 5,
+        "MEDICATION": 3,
+        "PATIENT": 1,
+        "PROCEDURE": 1,
+        "SYMPTOM": 4
+      },
+      "relation_types": {
+        "has": 19,
+        "has_symptom": 2,
+        "managed_by": 11,
+        "measured_by": 5,
+        "worsens": 3
+      },
+      "node_confidence_avg": 0.7802,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.945,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P067_graph.json",
+      "patient_id": "P067",
+      "nodes": 30,
+      "edges": 48,
+      "edges_per_node": 1.6,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 10,
+        "MEDICATION": 6,
+        "PATIENT": 1,
+        "PROCEDURE": 1,
+        "SYMPTOM": 7
+      },
+      "relation_types": {
+        "has": 29,
+        "has_symptom": 2,
+        "managed_by": 8,
+        "measured_by": 6,
+        "worsens": 3
+      },
+      "node_confidence_avg": 0.5525,
+      "node_confidence_median": 0.4467,
+      "edge_confidence_avg": 0.9812,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P068_graph.json",
+      "patient_id": "P068",
+      "nodes": 21,
+      "edges": 31,
+      "edges_per_node": 1.4762,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 4,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "SYMPTOM": 6
+      },
+      "relation_types": {
+        "has": 20,
+        "has_symptom": 4,
+        "managed_by": 5,
+        "worsens": 2
+      },
+      "node_confidence_avg": 0.8938,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.9419,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P069_graph.json",
+      "patient_id": "P069",
+      "nodes": 25,
+      "edges": 40,
+      "edges_per_node": 1.6,
+      "node_types": {
+        "CONDITION": 6,
+        "LAB_VALUE": 5,
+        "MEDICATION": 7,
+        "PATIENT": 1,
+        "PROCEDURE": 1,
+        "SYMPTOM": 5
+      },
+      "relation_types": {
+        "has": 24,
+        "has_symptom": 2,
+        "managed_by": 6,
+        "measured_by": 8
+      },
+      "node_confidence_avg": 0.5616,
+      "node_confidence_median": 0.7217,
+      "edge_confidence_avg": 0.965,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P070_graph.json",
+      "patient_id": "P070",
+      "nodes": 22,
+      "edges": 44,
+      "edges_per_node": 2.0,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 5,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "PROCEDURE": 2,
+        "SYMPTOM": 4
+      },
+      "relation_types": {
+        "has": 21,
+        "has_symptom": 3,
+        "managed_by": 3,
+        "measured_by": 12,
+        "worsens": 5
+      },
+      "node_confidence_avg": 0.6034,
+      "node_confidence_median": 0.695,
+      "edge_confidence_avg": 0.9614,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P071_graph.json",
+      "patient_id": "P071",
+      "nodes": 16,
+      "edges": 33,
+      "edges_per_node": 2.0625,
+      "node_types": {
+        "CONDITION": 3,
+        "LAB_VALUE": 3,
+        "MEDICATION": 4,
+        "PATIENT": 1,
+        "SYMPTOM": 5
+      },
+      "relation_types": {
+        "contraindicated_with": 3,
+        "has": 15,
+        "improves": 2,
+        "managed_by": 6,
+        "measured_by": 3,
+        "worsens": 4
+      },
+      "node_confidence_avg": 0.7673,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.8515,
+      "edge_confidence_median": 0.9,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P072_graph.json",
+      "patient_id": "P072",
+      "nodes": 17,
+      "edges": 22,
+      "edges_per_node": 1.2941,
+      "node_types": {
+        "CONDITION": 4,
+        "LAB_VALUE": 5,
+        "MEDICATION": 4,
+        "PATIENT": 1,
+        "SYMPTOM": 3
+      },
+      "relation_types": {
+        "has": 16,
+        "managed_by": 6
+      },
+      "node_confidence_avg": 0.8297,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.9364,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P073_graph.json",
+      "patient_id": "P073",
+      "nodes": 23,
+      "edges": 46,
+      "edges_per_node": 2.0,
+      "node_types": {
+        "CONDITION": 4,
+        "LAB_VALUE": 4,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "PROCEDURE": 1,
+        "SYMPTOM": 8
+      },
+      "relation_types": {
+        "has": 22,
+        "has_symptom": 5,
+        "improves": 1,
+        "managed_by": 6,
+        "measured_by": 10,
+        "worsens": 2
+      },
+      "node_confidence_avg": 0.662,
+      "node_confidence_median": 0.6933,
+      "edge_confidence_avg": 0.9565,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P074_graph.json",
+      "patient_id": "P074",
+      "nodes": 20,
+      "edges": 36,
+      "edges_per_node": 1.8,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 4,
+        "MEDICATION": 6,
+        "PATIENT": 1,
+        "SYMPTOM": 4
+      },
+      "relation_types": {
+        "has": 19,
+        "has_symptom": 4,
+        "managed_by": 6,
+        "measured_by": 3,
+        "worsens": 4
+      },
+      "node_confidence_avg": 0.6395,
+      "node_confidence_median": 0.7975,
+      "edge_confidence_avg": 0.8944,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P075_graph.json",
+      "patient_id": "P075",
+      "nodes": 28,
+      "edges": 35,
+      "edges_per_node": 1.25,
+      "node_types": {
+        "CONDITION": 4,
+        "LAB_VALUE": 10,
+        "MEDICATION": 7,
+        "PATIENT": 1,
+        "SYMPTOM": 6
+      },
+      "relation_types": {
+        "has": 27,
+        "has_symptom": 2,
+        "managed_by": 6
+      },
+      "node_confidence_avg": 0.7281,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.9714,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P076_graph.json",
+      "patient_id": "P076",
+      "nodes": 27,
+      "edges": 53,
+      "edges_per_node": 1.963,
+      "node_types": {
+        "CONDITION": 6,
+        "LAB_VALUE": 5,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "PROCEDURE": 3,
+        "SYMPTOM": 7
+      },
+      "relation_types": {
+        "has": 26,
+        "has_symptom": 5,
+        "improves": 1,
+        "managed_by": 5,
+        "measured_by": 7,
+        "worsens": 9
+      },
+      "node_confidence_avg": 0.5659,
+      "node_confidence_median": 0.6967,
+      "edge_confidence_avg": 0.9547,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P077_graph.json",
+      "patient_id": "P077",
+      "nodes": 26,
+      "edges": 49,
+      "edges_per_node": 1.8846,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 10,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "SYMPTOM": 5
+      },
+      "relation_types": {
+        "has": 25,
+        "has_symptom": 9,
+        "improves": 2,
+        "managed_by": 5,
+        "measured_by": 2,
+        "worsens": 6
+      },
+      "node_confidence_avg": 0.8917,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.8306,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P078_graph.json",
+      "patient_id": "P078",
+      "nodes": 22,
+      "edges": 35,
+      "edges_per_node": 1.5909,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 4,
+        "MEDICATION": 6,
+        "PATIENT": 1,
+        "SYMPTOM": 6
+      },
+      "relation_types": {
+        "has": 21,
+        "managed_by": 6,
+        "measured_by": 7,
+        "worsens": 1
+      },
+      "node_confidence_avg": 0.6472,
+      "node_confidence_median": 0.685,
+      "edge_confidence_avg": 0.9314,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P079_graph.json",
+      "patient_id": "P079",
+      "nodes": 26,
+      "edges": 61,
+      "edges_per_node": 2.3462,
+      "node_types": {
+        "CONDITION": 8,
+        "LAB_VALUE": 4,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "SYMPTOM": 8
+      },
+      "relation_types": {
+        "has": 25,
+        "has_symptom": 12,
+        "improves": 1,
+        "managed_by": 10,
+        "measured_by": 12,
+        "worsens": 1
+      },
+      "node_confidence_avg": 0.4737,
+      "node_confidence_median": 0.2,
+      "edge_confidence_avg": 0.9852,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P080_graph.json",
+      "patient_id": "P080",
+      "nodes": 18,
+      "edges": 30,
+      "edges_per_node": 1.6667,
+      "node_types": {
+        "CONDITION": 4,
+        "LAB_VALUE": 4,
+        "MEDICATION": 4,
+        "PATIENT": 1,
+        "SYMPTOM": 5
+      },
+      "relation_types": {
+        "has": 17,
+        "improves": 4,
+        "managed_by": 7,
+        "worsens": 2
+      },
+      "node_confidence_avg": 0.6906,
+      "node_confidence_median": 0.605,
+      "edge_confidence_avg": 0.9233,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P081_graph.json",
+      "patient_id": "P081",
+      "nodes": 26,
+      "edges": 38,
+      "edges_per_node": 1.4615,
+      "node_types": {
+        "CONDITION": 4,
+        "LAB_VALUE": 10,
+        "MEDICATION": 4,
+        "PATIENT": 1,
+        "PROCEDURE": 2,
+        "SYMPTOM": 5
+      },
+      "relation_types": {
+        "has": 25,
+        "managed_by": 6,
+        "worsens": 7
+      },
+      "node_confidence_avg": 0.5681,
+      "node_confidence_median": 0.4817,
+      "edge_confidence_avg": 0.9053,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P082_graph.json",
+      "patient_id": "P082",
+      "nodes": 30,
+      "edges": 40,
+      "edges_per_node": 1.3333,
+      "node_types": {
+        "CONDITION": 6,
+        "LAB_VALUE": 5,
+        "MEDICATION": 7,
+        "PATIENT": 1,
+        "PROCEDURE": 2,
+        "SYMPTOM": 9
+      },
+      "relation_types": {
+        "has": 29,
+        "managed_by": 7,
+        "measured_by": 1,
+        "worsens": 3
+      },
+      "node_confidence_avg": 0.498,
+      "node_confidence_median": 0.2,
+      "edge_confidence_avg": 0.95,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P083_graph.json",
+      "patient_id": "P083",
+      "nodes": 27,
+      "edges": 44,
+      "edges_per_node": 1.6296,
+      "node_types": {
+        "CONDITION": 8,
+        "LAB_VALUE": 4,
+        "MEDICATION": 8,
+        "PATIENT": 1,
+        "SYMPTOM": 6
+      },
+      "relation_types": {
+        "contraindicated_with": 1,
+        "has": 26,
+        "has_symptom": 2,
+        "managed_by": 8,
+        "measured_by": 4,
+        "worsens": 3
+      },
+      "node_confidence_avg": 0.5928,
+      "node_confidence_median": 0.645,
+      "edge_confidence_avg": 0.9136,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P084_graph.json",
+      "patient_id": "P084",
+      "nodes": 25,
+      "edges": 40,
+      "edges_per_node": 1.6,
+      "node_types": {
+        "CONDITION": 7,
+        "LAB_VALUE": 4,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "SYMPTOM": 8
+      },
+      "relation_types": {
+        "has": 24,
+        "managed_by": 5,
+        "measured_by": 4,
+        "worsens": 7
+      },
+      "node_confidence_avg": 0.8787,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.915,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P085_graph.json",
+      "patient_id": "P085",
+      "nodes": 26,
+      "edges": 42,
+      "edges_per_node": 1.6154,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 10,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "SYMPTOM": 5
+      },
+      "relation_types": {
+        "contraindicated_with": 1,
+        "has": 25,
+        "has_symptom": 1,
+        "improves": 2,
+        "managed_by": 6,
+        "measured_by": 5,
+        "worsens": 2
+      },
+      "node_confidence_avg": 0.6518,
+      "node_confidence_median": 0.6133,
+      "edge_confidence_avg": 0.95,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P086_graph.json",
+      "patient_id": "P086",
+      "nodes": 24,
+      "edges": 64,
+      "edges_per_node": 2.6667,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 5,
+        "MEDICATION": 3,
+        "PATIENT": 1,
+        "SYMPTOM": 10
+      },
+      "relation_types": {
+        "has": 23,
+        "has_symptom": 12,
+        "managed_by": 10,
+        "measured_by": 15,
+        "worsens": 4
+      },
+      "node_confidence_avg": 0.6866,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.9797,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P087_graph.json",
+      "patient_id": "P087",
+      "nodes": 19,
+      "edges": 23,
+      "edges_per_node": 1.2105,
+      "node_types": {
+        "CONDITION": 3,
+        "LAB_VALUE": 4,
+        "MEDICATION": 6,
+        "PATIENT": 1,
+        "SYMPTOM": 5
+      },
+      "relation_types": {
+        "has": 18,
+        "managed_by": 5
+      },
+      "node_confidence_avg": 0.668,
+      "node_confidence_median": 0.535,
+      "edge_confidence_avg": 0.9783,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P088_graph.json",
+      "patient_id": "P088",
+      "nodes": 20,
+      "edges": 33,
+      "edges_per_node": 1.65,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 5,
+        "MEDICATION": 3,
+        "PATIENT": 1,
+        "PROCEDURE": 1,
+        "SYMPTOM": 5
+      },
+      "relation_types": {
+        "has": 19,
+        "has_symptom": 2,
+        "improves": 2,
+        "managed_by": 6,
+        "worsens": 4
+      },
+      "node_confidence_avg": 0.6838,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.9,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P089_graph.json",
+      "patient_id": "P089",
+      "nodes": 18,
+      "edges": 43,
+      "edges_per_node": 2.3889,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 4,
+        "MEDICATION": 2,
+        "PATIENT": 1,
+        "SYMPTOM": 6
+      },
+      "relation_types": {
+        "has": 17,
+        "has_symptom": 11,
+        "managed_by": 5,
+        "measured_by": 8,
+        "worsens": 2
+      },
+      "node_confidence_avg": 0.8146,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.9512,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P090_graph.json",
+      "patient_id": "P090",
+      "nodes": 20,
+      "edges": 44,
+      "edges_per_node": 2.2,
+      "node_types": {
+        "CONDITION": 3,
+        "LAB_VALUE": 5,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "SYMPTOM": 6
+      },
+      "relation_types": {
+        "has": 19,
+        "has_symptom": 4,
+        "managed_by": 8,
+        "measured_by": 11,
+        "worsens": 2
+      },
+      "node_confidence_avg": 0.8227,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.9841,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P091_graph.json",
+      "patient_id": "P091",
+      "nodes": 24,
+      "edges": 50,
+      "edges_per_node": 2.0833,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 5,
+        "MEDICATION": 4,
+        "PATIENT": 1,
+        "PROCEDURE": 1,
+        "SYMPTOM": 8
+      },
+      "relation_types": {
+        "contraindicated_with": 1,
+        "has": 23,
+        "has_symptom": 6,
+        "managed_by": 5,
+        "measured_by": 10,
+        "worsens": 5
+      },
+      "node_confidence_avg": 0.6956,
+      "node_confidence_median": 0.66,
+      "edge_confidence_avg": 0.942,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P092_graph.json",
+      "patient_id": "P092",
+      "nodes": 16,
+      "edges": 22,
+      "edges_per_node": 1.375,
+      "node_types": {
+        "CONDITION": 4,
+        "LAB_VALUE": 5,
+        "MEDICATION": 4,
+        "PATIENT": 1,
+        "SYMPTOM": 2
+      },
+      "relation_types": {
+        "has": 15,
+        "managed_by": 5,
+        "worsens": 2
+      },
+      "node_confidence_avg": 0.7203,
+      "node_confidence_median": 0.7925,
+      "edge_confidence_avg": 0.9364,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P093_graph.json",
+      "patient_id": "P093",
+      "nodes": 23,
+      "edges": 44,
+      "edges_per_node": 1.913,
+      "node_types": {
+        "CONDITION": 4,
+        "LAB_VALUE": 4,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "PROCEDURE": 2,
+        "SYMPTOM": 7
+      },
+      "relation_types": {
+        "has": 22,
+        "has_symptom": 8,
+        "managed_by": 2,
+        "measured_by": 8,
+        "worsens": 4
+      },
+      "node_confidence_avg": 0.7928,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.9682,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P094_graph.json",
+      "patient_id": "P094",
+      "nodes": 25,
+      "edges": 52,
+      "edges_per_node": 2.08,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 5,
+        "MEDICATION": 6,
+        "PATIENT": 1,
+        "SYMPTOM": 8
+      },
+      "relation_types": {
+        "has": 24,
+        "has_symptom": 6,
+        "managed_by": 6,
+        "measured_by": 15,
+        "worsens": 1
+      },
+      "node_confidence_avg": 0.6411,
+      "node_confidence_median": 0.74,
+      "edge_confidence_avg": 0.9865,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P095_graph.json",
+      "patient_id": "P095",
+      "nodes": 21,
+      "edges": 65,
+      "edges_per_node": 3.0952,
+      "node_types": {
+        "CONDITION": 4,
+        "LAB_VALUE": 6,
+        "MEDICATION": 3,
+        "PATIENT": 1,
+        "SYMPTOM": 7
+      },
+      "relation_types": {
+        "has": 20,
+        "has_symptom": 12,
+        "managed_by": 6,
+        "measured_by": 24,
+        "worsens": 3
+      },
+      "node_confidence_avg": 0.8429,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.9908,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P096_graph.json",
+      "patient_id": "P096",
+      "nodes": 21,
+      "edges": 37,
+      "edges_per_node": 1.7619,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 4,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "SYMPTOM": 6
+      },
+      "relation_types": {
+        "has": 20,
+        "has_symptom": 8,
+        "managed_by": 5,
+        "measured_by": 3,
+        "worsens": 1
+      },
+      "node_confidence_avg": 0.6067,
+      "node_confidence_median": 0.61,
+      "edge_confidence_avg": 0.9297,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P097_graph.json",
+      "patient_id": "P097",
+      "nodes": 21,
+      "edges": 34,
+      "edges_per_node": 1.619,
+      "node_types": {
+        "CONDITION": 4,
+        "LAB_VALUE": 4,
+        "MEDICATION": 3,
+        "PATIENT": 1,
+        "PROCEDURE": 1,
+        "SYMPTOM": 8
+      },
+      "relation_types": {
+        "contraindicated_with": 1,
+        "has": 20,
+        "has_symptom": 6,
+        "managed_by": 3,
+        "measured_by": 4
+      },
+      "node_confidence_avg": 0.7333,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.9824,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P098_graph.json",
+      "patient_id": "P098",
+      "nodes": 20,
+      "edges": 33,
+      "edges_per_node": 1.65,
+      "node_types": {
+        "CONDITION": 4,
+        "LAB_VALUE": 2,
+        "MEDICATION": 7,
+        "PATIENT": 1,
+        "PROCEDURE": 1,
+        "SYMPTOM": 5
+      },
+      "relation_types": {
+        "contraindicated_with": 1,
+        "has": 19,
+        "improves": 2,
+        "managed_by": 6,
+        "worsens": 5
+      },
+      "node_confidence_avg": 0.5437,
+      "node_confidence_median": 0.2,
+      "edge_confidence_avg": 0.9061,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P099_graph.json",
+      "patient_id": "P099",
+      "nodes": 31,
+      "edges": 41,
+      "edges_per_node": 1.3226,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 10,
+        "MEDICATION": 5,
+        "PATIENT": 1,
+        "PROCEDURE": 2,
+        "SYMPTOM": 8
+      },
+      "relation_types": {
+        "has": 30,
+        "has_symptom": 4,
+        "managed_by": 5,
+        "measured_by": 1,
+        "worsens": 1
+      },
+      "node_confidence_avg": 0.3553,
+      "node_confidence_median": 0.2,
+      "edge_confidence_avg": 0.961,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "P100_graph.json",
+      "patient_id": "P100",
+      "nodes": 27,
+      "edges": 47,
+      "edges_per_node": 1.7407,
+      "node_types": {
+        "CONDITION": 5,
+        "LAB_VALUE": 9,
+        "MEDICATION": 4,
+        "PATIENT": 1,
+        "SYMPTOM": 8
+      },
+      "relation_types": {
+        "contraindicated_with": 1,
+        "has": 26,
+        "has_symptom": 10,
+        "managed_by": 4,
+        "measured_by": 6
+      },
+      "node_confidence_avg": 1.0,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.9191,
+      "edge_confidence_median": 1.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 1,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    },
+    {
+      "file": "TREND_TEST_graph.json",
+      "patient_id": "TREND_TEST",
+      "nodes": 4,
+      "edges": 3,
+      "edges_per_node": 0.75,
+      "node_types": {
+        "CONDITION": 1,
+        "LAB_VALUE": 2,
+        "PATIENT": 1
+      },
+      "relation_types": {
+        "has": 3
+      },
+      "node_confidence_avg": 0.8,
+      "node_confidence_median": 1.0,
+      "edge_confidence_avg": 0.0,
+      "edge_confidence_median": 0.0,
+      "nodes_missing_temporal": 0,
+      "nodes_missing_observed_dates": 4,
+      "edges_missing_temporal": 0,
+      "dangling_edges": 0,
+      "isolated_non_patient_nodes": 0
+    }
+  ]
+}

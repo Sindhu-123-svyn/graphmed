@@ -13,12 +13,8 @@
         "LDL": 130
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Atorvastatin 20mg",
         "metformin",
-        "atorvastatin",
-        "20mg",
-        "1000mg"
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes Mellitus",
@@ -27,63 +23,52 @@
         "Type 2 Diabetes"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Fatigue"
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [
           "metformin",
-          "atorvastatin",
+          "atorvastatin"
+        ],
+        "dosages": [
           "20mg",
-          "1000mg"
+          "1000mg BID"
         ],
         "symptoms": [],
         "procedures": [],
         "relationships": [
           {
-            "subject": "atorvastatin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
             "object": "metformin",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "HbA1c",
-            "confidence": 0.7
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "LDL",
-            "confidence": 0.7
-          },
-          {
-            "subject": "metformin",
-            "predicate": "adjusted_to",
-            "object": "1000mg",
             "confidence": 0.9
           },
           {
-            "subject": "metformin",
-            "predicate": "contraindicated_with",
+            "subject": "Hyperlipidemia",
+            "predicate": "managed_by",
             "object": "atorvastatin",
-            "confidence": 0.6
+            "confidence": 0.9
           }
         ],
         "lab_values": {
+          "HbA1c": 7.2,
           "BP_systolic": 140,
           "BP_diastolic": 90,
-          "HbA1c": 7.2,
           "LDL": 130
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "20mg",
+        "1000mg BID"
+      ]
     },
     {
       "visit_id": "V2",
@@ -97,81 +82,53 @@
         "LDL": 150
       },
       "medications": [
-        "Metformin 1000mg BID",
-        "Atorvastatin 40mg",
-        "Lisinopril 10mg",
-        "lisinopril",
+        "metformin",
         "atorvastatin",
-        "40mg",
-        "10mg"
+        "lisinopril"
       ],
       "diagnoses": [
         "Type 2 Diabetes Mellitus",
         "Hypertension",
         "Hyperlipidemia",
-        "Coronary Artery Disease (new diagnosis)"
+        "Coronary Artery Disease (New Diagnosis)"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Fatigue",
         "Chest pain",
-        "worsening hypertension"
+        "Worsening hypertension"
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hypertension",
+          "Hyperlipidemia"
         ],
         "medications": [
           "lisinopril",
-          "atorvastatin",
+          "atorvastatin"
+        ],
+        "dosages": [
           "40mg",
           "10mg"
         ],
         "symptoms": [
-          "worsening hypertension"
+          "Worsening hypertension"
         ],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "Hypertension",
-            "predicate": "worsens",
-            "object": "BP 160/100",
-            "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "improves",
-            "object": "6.8",
-            "confidence": 0.8
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "150",
-            "confidence": 0.7
-          },
-          {
-            "subject": "atorvastatin",
-            "predicate": "managed_by",
-            "object": "40mg",
-            "confidence": 0.6
-          },
-          {
-            "subject": "lisinopril",
-            "predicate": "managed_by",
-            "object": "10mg",
-            "confidence": 0.6
-          }
-        ],
+        "relationships": [],
         "lab_values": {
           "BP_systolic": 160,
           "BP_diastolic": 100,
           "LDL": 150.0,
           "HbA1c": 6.8
         }
-      }
+      },
+      "dosages": [
+        "1000mg BID",
+        "40mg",
+        "10mg"
+      ]
     },
     {
       "visit_id": "V3",
@@ -185,13 +142,9 @@
         "LDL": 140
       },
       "medications": [
-        "Metformin 1000mg BID",
-        "Atorvastatin 40mg",
-        "Lisinopril 20mg",
-        "Furosemide 40mg",
+        "metformin",
+        "atorvastatin",
         "lisinopril",
-        "20mg",
-        "40mg",
         "furosemide"
       ],
       "diagnoses": [
@@ -200,44 +153,36 @@
         "Hyperlipidemia",
         "Coronary Artery Disease",
         "Chronic Kidney Disease",
-        "Kidney dysfunction"
+        "Kidney Dysfunction"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Fatigue",
         "Chest pain",
-        "Swelling",
-        "Worsening kidney function"
+        "Edema",
+        "Worsening kidney function",
+        "Hypertension"
       ],
       "extracted": {
         "conditions": [
           "Hypertension",
-          "Kidney dysfunction"
+          "Kidney Dysfunction"
         ],
         "medications": [
           "lisinopril",
-          "20mg",
-          "40mg",
           "furosemide"
         ],
+        "dosages": [
+          "20mg",
+          "40mg"
+        ],
         "symptoms": [
-          "Worsening kidney function"
+          "Worsening kidney function",
+          "Hypertension"
         ],
         "procedures": [],
         "relationships": [
-          {
-            "subject": "lisinopril",
-            "predicate": "increased_by",
-            "object": "plan",
-            "confidence": 1.0
-          },
-          {
-            "subject": "furosemide",
-            "predicate": "started_by",
-            "object": "plan",
-            "confidence": 1.0
-          },
           {
             "subject": "Hypertension",
             "predicate": "managed_by",
@@ -245,21 +190,15 @@
             "confidence": 0.9
           },
           {
-            "subject": "Kidney dysfunction",
-            "predicate": "worsened_by",
-            "object": "Worsening kidney function",
+            "subject": "Kidney Dysfunction",
+            "predicate": "managed_by",
+            "object": "furosemide",
             "confidence": 0.9
           },
           {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "BP_systolic and BP_diastolic",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "HbA1c",
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Kidney Dysfunction",
             "confidence": 0.8
           }
         ],
@@ -269,7 +208,12 @@
           "eGFR": 52.0,
           "HbA1c": 6.8
         }
-      }
+      },
+      "dosages": [
+        "1000mg BID",
+        "40mg",
+        "20mg"
+      ]
     },
     {
       "visit_id": "V4",
@@ -280,16 +224,17 @@
         "BP_systolic": 140,
         "BP_diastolic": 80,
         "eGFR": 60,
-        "LDL": 120
+        "LDL": 120,
+        "HDL": null,
+        "Creatinine": null,
+        "Glucose": null,
+        "Potassium": null,
+        "Sodium": null
       },
       "medications": [
-        "Metformin 1500mg BID",
-        "Atorvastatin 40mg",
-        "Lisinopril 20mg",
-        "Furosemide 80mg",
         "metformin",
-        "1500mg",
-        "80mg",
+        "atorvastatin",
+        "lisinopril",
         "furosemide"
       ],
       "diagnoses": [
@@ -298,69 +243,54 @@
         "Hyperlipidemia",
         "Coronary Artery Disease",
         "Chronic Kidney Disease",
-        "kidney dysfunction",
-        "diabetes"
+        "Type 2 Diabetes",
+        "Kidney Disease"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Fatigue",
         "Chest pain",
-        "Swelling",
-        "stable blood pressure"
+        "Edema",
+        "Kidney dysfunction"
       ],
       "extracted": {
         "conditions": [
-          "kidney dysfunction",
-          "diabetes"
+          "Type 2 Diabetes",
+          "Kidney Disease"
         ],
         "medications": [
           "metformin",
-          "1500mg",
-          "80mg",
           "furosemide"
         ],
+        "dosages": [
+          "1500mg BID",
+          "80mg"
+        ],
         "symptoms": [
-          "stable blood pressure"
+          "Kidney dysfunction"
         ],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "kidney function",
-            "predicate": "improves",
-            "object": "eGFR",
-            "confidence": 0.9
-          },
-          {
-            "subject": "kidney function",
-            "predicate": "worsens",
-            "object": "HbA1c",
-            "confidence": 0.8
-          },
-          {
-            "subject": "blood pressure",
-            "predicate": "stable",
-            "object": "stable blood pressure",
-            "confidence": 0.7
-          },
-          {
-            "subject": "metformin",
-            "predicate": "increased",
-            "object": "1500mg",
-            "confidence": 0.6
-          },
-          {
-            "subject": "furosemide",
-            "predicate": "adjusted",
-            "object": "80mg",
-            "confidence": 0.5
-          }
-        ],
+        "relationships": [],
         "lab_values": {
           "eGFR": 60.0,
-          "HbA1c": 7.2
+          "HbA1c": 7.2,
+          "BP_systolic": null,
+          "BP_diastolic": null,
+          "LDL": null,
+          "HDL": null,
+          "Creatinine": null,
+          "Glucose": null,
+          "Potassium": null,
+          "Sodium": null
         }
-      }
+      },
+      "dosages": [
+        "1500mg BID",
+        "40mg",
+        "20mg",
+        "80mg"
+      ]
     }
   ]
 }

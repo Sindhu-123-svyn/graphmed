@@ -13,57 +13,49 @@
         "LDL": 180
       },
       "medications": [
-        "Metformin 1000mg daily",
-        "Lisinopril 10mg daily",
         "metformin",
-        "lisinopril",
-        "1000mg",
-        "10mg"
+        "lisinopril"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia"
       ],
       "extracted": {
         "conditions": [
-          "Type 2 Diabetes",
-          "Hypertension"
+          "Hypertension",
+          "Type 2 Diabetes"
         ],
         "medications": [
           "metformin",
-          "lisinopril",
-          "1000mg",
-          "10mg"
+          "lisinopril"
+        ],
+        "dosages": [
+          "1000mg daily",
+          "10mg daily"
         ],
         "symptoms": [],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "Lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "lisinopril",
             "confidence": 0.9
           },
           {
-            "subject": "HbA1c",
+            "subject": "Type 2 Diabetes",
             "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Hypertension",
+            "object": "HbA1c",
             "confidence": 0.8
           }
         ],
@@ -72,7 +64,11 @@
           "BP_systolic": 150,
           "BP_diastolic": 95
         }
-      }
+      },
+      "dosages": [
+        "1000mg daily",
+        "10mg daily"
+      ]
     },
     {
       "visit_id": "V2",
@@ -86,13 +82,9 @@
         "LDL": 200
       },
       "medications": [
-        "Metformin 1000mg daily",
-        "Lisinopril 20mg daily",
-        "Amlodipine 5mg daily",
+        "metformin",
         "lisinopril",
-        "amlodipine",
-        "20mg",
-        "5mg"
+        "amlodipine"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -100,57 +92,37 @@
         "Hyperlipidemia"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Dyslipidemia",
-        "hypertension"
+        "Hypertension"
       ],
       "extracted": {
         "conditions": [
-          "hypertension"
+          "Hypertension"
         ],
         "medications": [
           "lisinopril",
-          "amlodipine",
-          "20mg",
-          "5mg"
+          "amlodipine"
+        ],
+        "dosages": [
+          "20mg daily",
+          "5mg daily"
         ],
         "symptoms": [
-          "hypertension"
+          "Hypertension"
         ],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "HbA1c",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "worsens",
-            "object": "hypertension",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "managed_by",
-            "object": "lisinopril",
-            "confidence": 0.7
-          },
-          {
-            "subject": "BP",
-            "predicate": "managed_by",
-            "object": "amlodipine",
-            "confidence": 0.6
-          }
-        ],
+        "relationships": [],
         "lab_values": {
-          "BP_systolic": 160,
-          "BP_diastolic": 100,
           "HbA1c": 9.2
         }
-      }
+      },
+      "dosages": [
+        "1000mg daily",
+        "20mg daily",
+        "5mg daily"
+      ]
     },
     {
       "visit_id": "V3",
@@ -164,62 +136,49 @@
         "LDL": 220
       },
       "medications": [
-        "Metformin 1000mg daily",
-        "Lisinopril 20mg daily",
-        "Amlodipine 5mg daily",
-        "Sitagliptin 100mg daily",
-        "100mg",
-        "Sitagliptin 100mg"
+        "metformin",
+        "lisinopril",
+        "amlodipine",
+        "sitagliptin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
         "Chronic Kidney Disease",
-        "elevated HbA1c"
+        "Elevated Hba1C"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Dyslipidemia",
         "Fatigue"
       ],
       "extracted": {
         "conditions": [
-          "elevated HbA1c"
+          "Elevated Hba1C"
         ],
         "medications": [
-          "100mg",
-          "Sitagliptin 100mg"
+          "sitagliptin"
+        ],
+        "dosages": [
+          "100mg daily"
         ],
         "symptoms": [],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "Sitagliptin 100mg",
-            "predicate": "managed_by",
-            "object": "glucose control",
-            "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "BP",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "improves",
-            "object": "HbA1c",
-            "confidence": 0.7
-          }
-        ],
+        "relationships": [],
         "lab_values": {
           "HbA1c": 8.8,
           "BP_systolic": 140,
           "BP_diastolic": 90
         }
-      }
+      },
+      "dosages": [
+        "1000mg daily",
+        "20mg daily",
+        "5mg daily",
+        "100mg daily"
+      ]
     },
     {
       "visit_id": "V4",
@@ -233,26 +192,21 @@
         "LDL": 250
       },
       "medications": [
-        "Metformin 1000mg daily",
-        "Lisinopril 40mg daily",
-        "Amlodipine 5mg daily",
-        "Sitagliptin 100mg daily",
-        "Atorvastatin 20mg daily",
+        "metformin",
         "lisinopril",
-        "atorvastatin",
-        "40mg",
-        "20mg"
+        "amlodipine",
+        "sitagliptin",
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
         "Chronic Kidney Disease",
-        "Coronary Artery Disease",
-        "Diabetes"
+        "Coronary Artery Disease"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Dyslipidemia",
         "Fatigue",
@@ -260,62 +214,46 @@
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia",
-          "Diabetes"
+          "Hyperlipidemia"
         ],
         "medications": [
           "lisinopril",
-          "atorvastatin",
-          "40mg",
-          "20mg"
+          "atorvastatin"
+        ],
+        "dosages": [
+          "40mg daily",
+          "20mg daily"
         ],
         "symptoms": [
-          "dyslipidemia"
+          "Dyslipidemia"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Lisinopril",
+            "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Diabetes",
+            "object": "atorvastatin",
             "confidence": 0.8
           },
           {
-            "subject": "Atorvastatin",
-            "predicate": "managed_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.8
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "55",
-            "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "9.0",
-            "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "worsens",
-            "object": "Diabetes",
-            "confidence": 0.7
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "worsens",
-            "object": "Diabetes",
-            "confidence": 0.7
+            "subject": "lisinopril",
+            "predicate": "contraindicated_with",
+            "object": "atorvastatin",
+            "confidence": 0.6
           }
         ],
         "lab_values": {
-          "eGFR": 55,
-          "HbA1c": 9.0
+          "HbA1c": 9.0,
+          "eGFR": 55
         }
-      }
+      },
+      "dosages": [
+        "1000mg daily",
+        "40mg daily",
+        "5mg daily",
+        "100mg daily",
+        "20mg daily"
+      ]
     },
     {
       "visit_id": "V5",
@@ -329,23 +267,22 @@
         "LDL": 280
       },
       "medications": [
-        "Metformin 1000mg daily",
-        "Lisinopril 40mg daily",
-        "Amlodipine 5mg daily",
-        "Sitagliptin 100mg daily",
-        "Atorvastatin 40mg daily",
-        "Lifestyle modifications"
+        "metformin",
+        "lisinopril",
+        "amlodipine",
+        "sitagliptin",
+        "atorvastatin",
+        "medications"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
         "Chronic Kidney Disease",
-        "Coronary Artery Disease",
-        "Diabetes"
+        "Coronary Artery Disease"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Dyslipidemia",
         "Fatigue",
@@ -353,38 +290,26 @@
       ],
       "extracted": {
         "conditions": [
-          "Diabetes"
+          "Type 2 Diabetes"
         ],
         "medications": [
-          "Lifestyle modifications"
+          "medications"
         ],
+        "dosages": [],
         "symptoms": [],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "HbA1c",
-            "predicate": "improves",
-            "object": "glucose control",
-            "confidence": 0.8
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "stabilized",
-            "object": "None",
-            "confidence": 0.9
-          },
-          {
-            "subject": "medications",
-            "predicate": "adjusted",
-            "object": "None",
-            "confidence": 0.7
-          }
-        ],
+        "relationships": [],
         "lab_values": {
           "HbA1c": 7.8,
           "eGFR": 60
         }
-      }
+      },
+      "dosages": [
+        "1000mg daily",
+        "40mg daily",
+        "5mg daily",
+        "100mg daily"
+      ]
     }
   ]
 }

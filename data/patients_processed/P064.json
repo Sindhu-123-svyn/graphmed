@@ -10,15 +10,16 @@
         "BP_systolic": 128,
         "BP_diastolic": 80,
         "eGFR": 80,
-        "LDL": 130
+        "LDL": 130,
+        "HDL": null,
+        "Creatinine": null,
+        "Glucose": null,
+        "Potassium": null,
+        "Sodium": null
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Atorvastatin 20mg daily",
         "metformin",
-        "atorvastatin",
-        "500mg",
-        "20mg"
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -27,7 +28,7 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria"
+        "Frequent urination"
       ],
       "extracted": {
         "conditions": [
@@ -37,71 +38,67 @@
         ],
         "medications": [
           "metformin",
-          "atorvastatin",
-          "500mg",
-          "20mg"
+          "atorvastatin"
+        ],
+        "dosages": [
+          "500mg twice daily",
+          "20mg daily"
         ],
         "symptoms": [
-          "Polyuria",
-          "Fatigue"
+          "Fatigue",
+          "Frequent urination"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "atorvastatin",
+            "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.9
-          },
-          {
-            "subject": "metformin",
-            "predicate": "contraindicated_with",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Blood work",
-            "confidence": 0.9
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "Blood work",
-            "confidence": 0.9
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "Blood work",
+            "object": "atorvastatin",
             "confidence": 0.9
           },
           {
             "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.7
+            "predicate": "has_symptom",
+            "object": "Fatigue",
+            "confidence": 0.8
           },
           {
-            "subject": "Fatigue",
+            "subject": "Type 2 Diabetes",
             "predicate": "has_symptom",
-            "object": "Polyuria",
-            "confidence": 0.6
+            "object": "Frequent urination",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "has_symptom",
+            "object": "Frequent urination",
+            "confidence": 0.8
           }
         ],
         "lab_values": {
           "HbA1c": 7.2,
           "eGFR": 80.0,
-          "LDL": 130.0
+          "LDL": 130.0,
+          "BP_systolic": null,
+          "BP_diastolic": null,
+          "HDL": null,
+          "Creatinine": null,
+          "Glucose": null,
+          "Potassium": null,
+          "Sodium": null
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "20mg daily",
+        "500mg twice daily"
+      ]
     },
     {
       "visit_id": "V2",
@@ -115,13 +112,9 @@
         "LDL": 120
       },
       "medications": [
-        "Metformin 500mg TID",
-        "Atorvastatin 20mg daily",
-        "Lisinopril 5mg daily",
         "metformin",
-        "lisinopril",
-        "500mg",
-        "5mg"
+        "atorvastatin",
+        "lisinopril"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -131,7 +124,7 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Headache"
       ],
       "extracted": {
@@ -140,70 +133,43 @@
         ],
         "medications": [
           "metformin",
-          "lisinopril",
-          "500mg",
-          "5mg"
+          "lisinopril"
+        ],
+        "dosages": [
+          "500mg TID",
+          "5mg daily"
         ],
         "symptoms": [
-          "Polyuria"
+          "Frequent urination"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.8
-          },
-          {
-            "subject": "lisinopril",
-            "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "metformin",
             "confidence": 0.8
           },
           {
             "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "Polyuria",
-            "confidence": 0.7
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Blood work",
-            "confidence": 0.9
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "Blood work",
-            "confidence": 0.9
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "Blood work",
-            "confidence": 0.9
-          },
-          {
-            "subject": "150/90",
-            "predicate": "measured_by",
-            "object": "Physical examination",
-            "confidence": 0.8
-          },
-          {
-            "subject": "metformin",
-            "predicate": "contraindicated_with",
+            "predicate": "managed_by",
             "object": "lisinopril",
-            "confidence": 0.6
+            "confidence": 0.8
           }
         ],
         "lab_values": {
           "HbA1c": 6.8,
           "eGFR": 72.0,
-          "LDL": 120.0
+          "LDL": 120.0,
+          "BP_systolic": 150,
+          "BP_diastolic": 90
         }
-      }
+      },
+      "dosages": [
+        "500mg TID",
+        "20mg daily",
+        "5mg daily"
+      ]
     },
     {
       "visit_id": "V3",
@@ -217,136 +183,80 @@
         "LDL": 140
       },
       "medications": [
-        "Metformin 1000mg BID",
-        "Atorvastatin 40mg daily",
-        "Lisinopril 10mg daily",
-        "Furosemide 20mg daily",
         "metformin",
         "atorvastatin",
-        "1000mg",
-        "40mg",
-        "20mg",
+        "lisinopril",
         "furosemide"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hyperlipidemia",
         "Chronic Kidney Disease",
-        "Hypertension",
-        "Diabetes Mellitus"
+        "Hypertension"
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Headache",
         "Edema",
-        "Increased Urination"
+        "Increased frequency of urination"
       ],
       "extracted": {
         "conditions": [
-          "Diabetes Mellitus",
-          "Hypertension"
+          "Type 2 Diabetes",
+          "Hyperlipidemia",
+          "Chronic Kidney Disease"
         ],
         "medications": [
           "metformin",
           "atorvastatin",
-          "1000mg",
-          "40mg",
-          "20mg",
           "furosemide"
         ],
+        "dosages": [
+          "1000mg BID",
+          "40mg daily",
+          "20mg daily"
+        ],
         "symptoms": [
-          "Edema",
           "Fatigue",
-          "Increased Urination"
+          "Edema",
+          "Increased frequency of urination"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Diabetes Mellitus",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "atorvastatin",
+            "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "atorvastatin",
             "confidence": 0.9
           },
           {
-            "subject": "furosemide",
+            "subject": "Chronic Kidney Disease",
             "predicate": "managed_by",
-            "object": "Hypertension",
-            "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Blood Work",
-            "confidence": 0.8
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "Blood Work",
-            "confidence": 0.8
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "Blood Work",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Edema",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Increased Urination",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Edema",
-            "predicate": "has_symptom",
-            "object": "Increased Urination",
-            "confidence": 0.7
-          },
-          {
-            "subject": "metformin",
-            "predicate": "contraindicated_with",
             "object": "furosemide",
-            "confidence": 0.6
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "worsens",
-            "object": "Diabetes Mellitus",
-            "confidence": 0.5
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "worsens",
-            "object": "Hypertension",
-            "confidence": 0.5
-          },
-          {
-            "subject": "LDL",
-            "predicate": "worsens",
-            "object": "Hypertension",
-            "confidence": 0.5
+            "confidence": 0.9
           }
         ],
         "lab_values": {
           "HbA1c": 7.5,
           "eGFR": 68.0,
-          "LDL": 140.0
+          "LDL": 140.0,
+          "BP_systolic": 160,
+          "BP_diastolic": 95
         }
-      }
+      },
+      "dosages": [
+        "1000mg BID",
+        "40mg daily",
+        "10mg daily",
+        "20mg daily"
+      ]
     },
     {
       "visit_id": "V4",
@@ -360,14 +270,10 @@
         "LDL": 110
       },
       "medications": [
-        "Metformin 1000mg BID",
-        "Atorvastatin 40mg daily",
-        "Lisinopril 10mg daily",
-        "Furosemide 20mg daily",
-        "Aspirin 81mg daily",
         "metformin",
-        "1000mg",
-        "81mg",
+        "atorvastatin",
+        "lisinopril",
+        "furosemide",
         "aspirin"
       ],
       "diagnoses": [
@@ -379,7 +285,7 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Edema"
       ],
       "extracted": {
@@ -388,51 +294,23 @@
         ],
         "medications": [
           "metformin",
-          "1000mg",
-          "81mg",
           "aspirin"
         ],
+        "dosages": [
+          "1000mg BID",
+          "81mg daily"
+        ],
         "symptoms": [
-          "Edema",
-          "Polyuria"
+          "Frequent urination",
+          "Edema"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "metformin",
+            "subject": "Diabetes Mellitus",
             "predicate": "managed_by",
-            "object": "Diabetes Mellitus",
+            "object": "metformin",
             "confidence": 0.9
-          },
-          {
-            "subject": "aspirin",
-            "predicate": "managed_by",
-            "object": "Diabetes Mellitus",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Polyuria",
-            "predicate": "has_symptom",
-            "object": "Edema",
-            "confidence": 0.7
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Blood work",
-            "confidence": 0.6
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "Blood work",
-            "confidence": 0.6
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "Blood work",
-            "confidence": 0.6
           }
         ],
         "lab_values": {
@@ -440,7 +318,14 @@
           "eGFR": 60.0,
           "LDL": 110.0
         }
-      }
+      },
+      "dosages": [
+        "1000mg BID",
+        "40mg daily",
+        "10mg daily",
+        "20mg daily",
+        "81mg daily"
+      ]
     }
   ]
 }

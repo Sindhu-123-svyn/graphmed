@@ -7,6 +7,7 @@ import json
 import re
 import spacy
 from typing import Dict, List, Any, Optional, Tuple
+import time
 from groq import Groq
 from dotenv import load_dotenv
 import os
@@ -380,6 +381,10 @@ class ClinicalExtractor:
         if not self._llm_available:
             return {}
 
+        max_retries = int(os.getenv("EXTRACTION_LLM_MAX_RETRIES", "3"))
+        base_sleep = float(os.getenv("EXTRACTION_LLM_BACKOFF_SECONDS", "1.5"))
+        debug_logs = os.getenv("EXTRACTION_DEBUG", "0") == "1"
+
         prompt = f"""You are a clinical information extraction engine.
 Given a clinical note and Stage 1 extracted entities, enrich extraction with contextual relations.
 
@@ -410,18 +415,37 @@ Stage 1 Extraction:
 {json.dumps(stage1, ensure_ascii=False)}
 """
 
-        try:
-            response = client.chat.completions.create(
-                model="llama-3.1-8b-instant",
-                messages=[{"role": "user", "content": prompt}],
-                temperature=0.1,
-                max_tokens=800
-            )
-            content = response.choices[0].message.content
-            parsed = self._safe_parse_llm_json(content)
-            return parsed if isinstance(parsed, dict) else {}
-        except Exception:
-            return {}
+        for attempt in range(max_retries):
+            try:
+                response = client.chat.completions.create(
+                    model="llama-3.1-8b-instant",
+                    messages=[{"role": "user", "content": prompt}],
+                    temperature=0.1,
+                    max_tokens=800
+                )
+                content = response.choices[0].message.content
+                parsed = self._safe_parse_llm_json(content)
+                if isinstance(parsed, dict) and parsed:
+                    return parsed
+                # If parse failed or empty object, retry once or twice before giving up.
+                if attempt < max_retries - 1:
+                    time.sleep(base_sleep * (attempt + 1))
+                    continue
+                return {}
+            except Exception as e:
+                msg = str(e).lower()
+                is_rate_limit = "429" in msg or "rate" in msg or "too many requests" in msg
+                if debug_logs:
+                    print(f"⚠️ LLM extraction attempt {attempt + 1}/{max_retries} failed: {e}")
+                if attempt < max_retries - 1 and is_rate_limit:
+                    time.sleep(base_sleep * (attempt + 1))
+                    continue
+                if attempt < max_retries - 1:
+                    time.sleep(base_sleep)
+                    continue
+                return {}
+
+        return {}
 
     def _merge_extractions(self, stage1: Dict[str, Any], llm_data: Dict[str, Any]) -> Dict[str, Any]:
         """Merge Stage 1 deterministic output with Stage 2 LLM enrichment."""

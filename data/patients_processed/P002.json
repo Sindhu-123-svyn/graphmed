@@ -13,9 +13,9 @@
         "LDL": 140
       },
       "medications": [
-        "Metformin 500mg BD",
-        "Losartan 50mg QD",
-        "Antihypertensive medication"
+        "metformin bd",
+        "losartan qd",
+        "antihypertensive medication"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -27,29 +27,36 @@
       ],
       "extracted": {
         "conditions": [
-          "Type 2 Diabetes",
-          "Hypertension"
+          "Hypertension",
+          "Type 2 Diabetes"
         ],
         "medications": [
-          "Antihypertensive medication"
+          "antihypertensive medication"
         ],
+        "dosages": [],
         "symptoms": [
-          "Shortness of breath",
-          "Fatigue"
+          "Fatigue",
+          "Shortness of breath"
         ],
         "procedures": [],
         "relationships": [
           {
             "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Antihypertensive medication",
+            "object": "antihypertensive medication",
             "confidence": 0.9
           },
           {
             "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Glycemic control",
+            "object": "antihypertensive medication",
             "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Fatigue",
+            "confidence": 0.7
           },
           {
             "subject": "Hypertension",
@@ -58,10 +65,34 @@
             "confidence": 0.7
           },
           {
-            "subject": "Hypertension",
+            "subject": "Type 2 Diabetes",
             "predicate": "has_symptom",
             "object": "Fatigue",
-            "confidence": 0.7
+            "confidence": 0.6
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "has_symptom",
+            "object": "Shortness of breath",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "measured_by",
+            "object": "HbA1c",
+            "confidence": 0.5
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "measured_by",
+            "object": "BP_systolic",
+            "confidence": 0.5
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "measured_by",
+            "object": "BP_diastolic",
+            "confidence": 0.5
           }
         ],
         "lab_values": {
@@ -69,7 +100,11 @@
           "BP_systolic": 150,
           "BP_diastolic": 90
         }
-      }
+      },
+      "dosages": [
+        "500mg",
+        "50mg"
+      ]
     },
     {
       "visit_id": "V2",
@@ -80,12 +115,17 @@
         "BP_systolic": 155,
         "BP_diastolic": 95,
         "eGFR": 70,
-        "LDL": 160
+        "LDL": 160,
+        "HDL": null,
+        "Creatinine": null,
+        "Glucose": null,
+        "Potassium": null,
+        "Sodium": null
       },
       "medications": [
-        "Metformin 1000mg BD",
-        "Losartan 50mg QD",
-        "Atorvastatin 20mg QD",
+        "metformin bd",
+        "losartan qd",
+        "atorvastatin qd",
         "antihypertensive medication",
         "statin"
       ],
@@ -98,59 +138,67 @@
         "Fatigue",
         "Shortness of breath",
         "Leg cramps",
-        "elevated BP"
+        "Elevated bp"
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [
           "antihypertensive medication",
           "statin"
         ],
+        "dosages": [],
         "symptoms": [
-          "elevated BP"
+          "Elevated bp"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "HbA1c",
-            "predicate": "improves",
-            "object": "Type 2 Diabetes",
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "antihypertensive medication",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "statin",
             "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Elevated bp",
+            "confidence": 0.7
           },
           {
             "subject": "LDL",
             "predicate": "worsens",
-            "object": "Hyperlipidemia",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "managed_by",
-            "object": "antihypertensive medication",
-            "confidence": 0.7
-          },
-          {
-            "subject": "BP",
-            "predicate": "managed_by",
-            "object": "statin",
-            "confidence": 0.7
-          },
-          {
-            "subject": "BP",
-            "predicate": "has_symptom",
-            "object": "elevated BP",
+            "object": "Hypertension",
             "confidence": 0.6
           }
         ],
         "lab_values": {
           "HbA1c": 7.8,
-          "LDL": 160
+          "BP_systolic": null,
+          "BP_diastolic": null,
+          "eGFR": null,
+          "LDL": 160,
+          "HDL": null,
+          "Creatinine": null,
+          "Glucose": null,
+          "Potassium": null,
+          "Sodium": null
         }
-      }
+      },
+      "dosages": [
+        "1000mg",
+        "50mg",
+        "20mg"
+      ]
     },
     {
       "visit_id": "V3",
@@ -161,12 +209,17 @@
         "BP_systolic": 160,
         "BP_diastolic": 100,
         "eGFR": 60,
-        "LDL": 140
+        "LDL": 140,
+        "HDL": null,
+        "Creatinine": null,
+        "Glucose": null,
+        "Potassium": null,
+        "Sodium": null
       },
       "medications": [
-        "Metformin 1500mg BD",
-        "Losartan 100mg QD",
-        "Atorvastatin 40mg QD",
+        "metformin bd",
+        "losartan qd",
+        "atorvastatin qd",
         "antihypertensive medication"
       ],
       "diagnoses": [
@@ -180,59 +233,49 @@
         "Shortness of breath",
         "Leg cramps",
         "Swelling in lower extremities",
-        "elevated BP"
+        "Elevated bp"
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Hypertension",
           "Chronic Kidney Disease"
         ],
         "medications": [
           "antihypertensive medication"
         ],
+        "dosages": [],
         "symptoms": [
-          "elevated BP"
+          "Elevated bp"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "HbA1c",
-            "predicate": "worsens",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "remains",
-            "object": "elevated",
-            "confidence": 0.8
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "decreased",
-            "object": "60",
-            "confidence": 0.7
-          },
-          {
-            "subject": "BP",
+            "subject": "Hypertension",
             "predicate": "managed_by",
             "object": "antihypertensive medication",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "improves",
-            "object": "intensify glycemic control",
-            "confidence": 0.5
+            "confidence": 0.8
           }
         ],
         "lab_values": {
           "HbA1c": 8.5,
-          "eGFR": 60
+          "BP_systolic": null,
+          "BP_diastolic": null,
+          "eGFR": 60,
+          "LDL": null,
+          "HDL": null,
+          "Creatinine": null,
+          "Glucose": null,
+          "Potassium": null,
+          "Sodium": null
         }
-      }
+      },
+      "dosages": [
+        "1500mg",
+        "100mg",
+        "40mg"
+      ]
     },
     {
       "visit_id": "V4",
@@ -246,10 +289,9 @@
         "LDL": 120
       },
       "medications": [
-        "Metformin 1500mg BD",
-        "Losartan 100mg QD",
-        "Atorvastatin 40mg QD",
-        "medication regimen"
+        "metformin bd",
+        "losartan qd",
+        "atorvastatin qd"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -266,48 +308,21 @@
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Hypertension",
           "Chronic Kidney Disease"
         ],
-        "medications": [
-          "medication regimen"
-        ],
+        "medications": [],
+        "dosages": [],
         "symptoms": [],
-        "procedures": [
-          "nephrology consult"
-        ],
+        "procedures": [],
         "relationships": [
           {
-            "subject": "Type 2 Diabetes",
-            "predicate": "managed_by",
-            "object": "medication regimen",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "improved_by",
-            "object": "medication regimen",
-            "confidence": 0.8
-          },
-          {
             "subject": "eGFR",
-            "predicate": "worsened_by",
-            "object": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
             "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "BP",
-            "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "HbA1c",
-            "confidence": 0.9
           }
         ],
         "lab_values": {
@@ -316,7 +331,12 @@
           "BP_diastolic": 80,
           "eGFR": "low"
         }
-      }
+      },
+      "dosages": [
+        "1500mg",
+        "100mg",
+        "40mg"
+      ]
     }
   ]
 }

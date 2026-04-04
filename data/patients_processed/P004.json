@@ -13,15 +13,11 @@
         "LDL": 150
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg daily",
         "metformin",
-        "lisinopril",
-        "500mg",
-        "10mg"
+        "lisinopril"
       ],
       "diagnoses": [
-        "Type 2 Diabetes mellitus",
+        "Type 2 Diabetes Mellitus",
         "Hypertension",
         "Hyperlipidemia",
         "Type 2 Diabetes"
@@ -29,32 +25,72 @@
       "symptoms": [
         "Increased thirst",
         "Increased urination",
-        "Polydipsia"
+        "Polydipsia",
+        "Urination"
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [
           "metformin",
-          "lisinopril",
-          "500mg",
-          "10mg"
+          "lisinopril"
+        ],
+        "dosages": [
+          "500mg BID",
+          "10mg daily"
         ],
         "symptoms": [
-          "Polydipsia"
+          "Polydipsia",
+          "Increased thirst",
+          "Urination"
         ],
         "procedures": [],
-        "relationships": [],
+        "relationships": [
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "metformin",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Increased thirst",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Urination",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "has_symptom",
+            "object": "Polydipsia",
+            "confidence": 0.8
+          }
+        ],
         "lab_values": {
           "HbA1c": 8.2,
           "BP_systolic": 140,
           "BP_diastolic": 90,
           "LDL": 150.0
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg daily"
+      ]
     },
     {
       "visit_id": "V2",
@@ -68,21 +104,15 @@
         "LDL": 140
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg daily",
-        "Atorvastatin 20mg daily",
         "metformin",
         "lisinopril",
-        "atorvastatin",
-        "500mg",
-        "10mg",
-        "20mg"
+        "atorvastatin"
       ],
       "diagnoses": [
-        "Type 2 Diabetes mellitus",
+        "Type 2 Diabetes Mellitus",
         "Hypertension",
         "Hyperlipidemia",
-        "Chronic Kidney Disease stage 3",
+        "Chronic Kidney Disease Stage 3",
         "Type 2 Diabetes",
         "Chronic Kidney Disease"
       ],
@@ -94,32 +124,106 @@
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Hypertension",
           "Chronic Kidney Disease"
         ],
         "medications": [
           "metformin",
           "lisinopril",
-          "atorvastatin",
-          "500mg",
-          "10mg",
-          "20mg"
+          "atorvastatin"
+        ],
+        "dosages": [
+          "500mg BID",
+          "10mg daily",
+          "20mg daily"
         ],
         "symptoms": [
-          "Shortness of breath",
-          "Fatigue"
+          "Fatigue",
+          "Shortness of breath"
         ],
         "procedures": [],
-        "relationships": [],
+        "relationships": [
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "metformin",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "managed_by",
+            "object": "atorvastatin",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
+            "confidence": 0.7
+          }
+        ],
         "lab_values": {
           "HbA1c": 7.5,
           "BP_systolic": 130,
           "BP_diastolic": 80,
           "LDL": 140.0
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg daily",
+        "20mg daily"
+      ]
     },
     {
       "visit_id": "V3",
@@ -133,56 +237,103 @@
         "LDL": 120
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 20mg daily",
-        "Atorvastatin 20mg daily",
-        "Furosemide 40mg daily",
         "metformin",
         "lisinopril",
         "atorvastatin",
-        "500mg",
-        "20mg",
-        "40mg"
+        "furosemide"
       ],
       "diagnoses": [
-        "Type 2 Diabetes mellitus",
+        "Type 2 Diabetes Mellitus",
         "Hypertension",
         "Hyperlipidemia",
-        "Chronic Kidney Disease stage 4",
-        "Congestive Heart Failure",
-        "Chronic Kidney Disease",
+        "Chronic Kidney Disease Stage 4",
         "Heart Failure",
-        "Type 2 Diabetes"
+        "Type 2 Diabetes",
+        "Chronic Kidney Disease"
       ],
       "symptoms": [
         "Increased thirst",
         "Increased urination",
         "Fatigue",
         "Shortness of breath",
-        "Dyspnea on exertion"
+        "Dyspnea on exertion",
+        "Crackles at lung bases"
       ],
       "extracted": {
         "conditions": [
-          "Chronic Kidney Disease",
-          "Heart Failure",
+          "Hypertension",
           "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Hypertension"
+          "Chronic Kidney Disease",
+          "Heart Failure"
         ],
         "medications": [
           "metformin",
           "lisinopril",
           "atorvastatin",
-          "500mg",
-          "20mg",
-          "40mg"
+          "furosemide"
+        ],
+        "dosages": [
+          "500mg BID",
+          "20mg daily",
+          "40mg daily"
         ],
         "symptoms": [
+          "Fatigue",
           "Shortness of breath",
-          "Fatigue"
+          "Crackles at lung bases"
         ],
         "procedures": [],
-        "relationships": [],
+        "relationships": [
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "metformin",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "managed_by",
+            "object": "atorvastatin",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Heart Failure",
+            "predicate": "managed_by",
+            "object": "furosemide",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
+            "confidence": 0.7
+          }
+        ],
         "lab_values": {
           "HbA1c": 7.8,
           "BP_systolic": 125,
@@ -190,7 +341,12 @@
           "eGFR": 52.0,
           "LDL": 120.0
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "20mg daily",
+        "40mg daily"
+      ]
     },
     {
       "visit_id": "V4",
@@ -204,29 +360,21 @@
         "LDL": 160
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 20mg daily",
-        "Atorvastatin 20mg daily",
-        "Furosemide 80mg daily",
-        "Enalapril 10mg daily",
         "metformin",
         "lisinopril",
         "atorvastatin",
-        "500mg",
-        "20mg",
-        "80mg",
-        "10mg"
+        "furosemide",
+        "enalapril"
       ],
       "diagnoses": [
-        "Type 2 Diabetes mellitus",
+        "Type 2 Diabetes Mellitus",
         "Hypertension",
         "Hyperlipidemia",
-        "Chronic Kidney Disease stage 5",
-        "Congestive Heart Failure with significant decompensation",
-        "Chronic Kidney Disease",
-        "Heart Failure",
+        "Chronic Kidney Disease Stage 5",
+        "Congestive Heart Failure With Significant Decompensation",
         "Type 2 Diabetes",
-        "Congestive Heart Failure"
+        "Chronic Kidney Disease",
+        "Heart Failure"
       ],
       "symptoms": [
         "Increased thirst",
@@ -239,107 +387,66 @@
       ],
       "extracted": {
         "conditions": [
-          "Chronic Kidney Disease",
-          "Heart Failure",
+          "Hypertension",
           "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Hypertension",
-          "Chronic Kidney Disease stage 5",
-          "Congestive Heart Failure",
-          "Type 2 Diabetes mellitus"
+          "Chronic Kidney Disease",
+          "Heart Failure"
         ],
         "medications": [
           "metformin",
           "lisinopril",
           "atorvastatin",
-          "500mg",
-          "20mg",
-          "80mg",
-          "10mg",
-          "Metformin 500mg BID",
-          "Lisinopril 20mg daily",
-          "Atorvastatin 20mg daily",
-          "Furosemide 80mg daily",
-          "Enalapril 10mg daily"
+          "furosemide"
+        ],
+        "dosages": [
+          "500mg BID",
+          "20mg daily",
+          "80mg daily",
+          "10mg daily"
         ],
         "symptoms": [
-          "Edema",
           "Shortness of breath",
+          "Edema",
           "Decreased mobility"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Metformin 500mg BID",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes mellitus",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "Lisinopril 20mg daily",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "lisinopril",
             "confidence": 0.9
           },
           {
-            "subject": "Atorvastatin 20mg daily",
+            "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Hyperlipidemia",
+            "object": "atorvastatin",
             "confidence": 0.9
           },
           {
-            "subject": "Furosemide 80mg daily",
+            "subject": "Chronic Kidney Disease",
             "predicate": "managed_by",
-            "object": "Congestive Heart Failure",
+            "object": "furosemide",
             "confidence": 0.9
           },
           {
-            "subject": "Enalapril 10mg daily",
-            "predicate": "managed_by",
-            "object": "Hypertension",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Shortness of breath",
-            "predicate": "has_symptom",
-            "object": "Congestive Heart Failure",
+            "subject": "Heart Failure",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
             "confidence": 0.8
           },
           {
-            "subject": "Decreased mobility",
-            "predicate": "has_symptom",
-            "object": "Congestive Heart Failure",
+            "subject": "Heart Failure",
+            "predicate": "worsens",
+            "object": "Edema",
             "confidence": 0.8
-          },
-          {
-            "subject": "Edema",
-            "predicate": "has_symptom",
-            "object": "Congestive Heart Failure",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c 8.5",
-            "predicate": "measured_by",
-            "object": "Type 2 Diabetes mellitus",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP 150/90",
-            "predicate": "measured_by",
-            "object": "Hypertension",
-            "confidence": 0.9
-          },
-          {
-            "subject": "eGFR 42",
-            "predicate": "measured_by",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.9
-          },
-          {
-            "subject": "LDL 160",
-            "predicate": "measured_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.9
           }
         ],
         "lab_values": {
@@ -349,7 +456,13 @@
           "eGFR": 42.0,
           "LDL": 160.0
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "20mg daily",
+        "80mg daily",
+        "10mg daily"
+      ]
     },
     {
       "visit_id": "V5",
@@ -363,29 +476,22 @@
         "LDL": 140
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 20mg daily",
-        "Atorvastatin 20mg daily",
-        "Furosemide 80mg daily",
-        "Enalapril 10mg daily",
-        "Home oxygen",
         "metformin",
         "lisinopril",
         "atorvastatin",
-        "500mg",
-        "20mg",
-        "80mg",
-        "10mg"
+        "furosemide",
+        "enalapril",
+        "home oxygen"
       ],
       "diagnoses": [
-        "Type 2 Diabetes mellitus",
+        "Type 2 Diabetes Mellitus",
         "Hypertension",
         "Hyperlipidemia",
-        "Chronic Kidney Disease stage 5",
-        "Congestive Heart Failure with moderate decompensation",
+        "Chronic Kidney Disease Stage 5",
+        "Congestive Heart Failure With Moderate Decompensation",
+        "Type 2 Diabetes",
         "Chronic Kidney Disease",
-        "Heart Failure",
-        "Type 2 Diabetes"
+        "Heart Failure"
       ],
       "symptoms": [
         "Increased thirst",
@@ -397,102 +503,67 @@
       ],
       "extracted": {
         "conditions": [
-          "Chronic Kidney Disease",
-          "Heart Failure",
+          "Hypertension",
           "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Hypertension",
-          "Chronic Kidney Disease stage 5",
-          "Congestive Heart Failure with moderate decompensation",
-          "Type 2 Diabetes mellitus"
+          "Chronic Kidney Disease",
+          "Heart Failure"
         ],
         "medications": [
           "metformin",
           "lisinopril",
           "atorvastatin",
-          "500mg",
-          "20mg",
-          "80mg",
-          "10mg",
-          "Metformin 500mg BID",
-          "Lisinopril 20mg daily",
-          "Atorvastatin 20mg daily",
-          "Furosemide 80mg daily",
-          "Enalapril 10mg daily"
+          "furosemide",
+          "enalapril"
+        ],
+        "dosages": [
+          "500mg BID",
+          "20mg daily",
+          "80mg daily",
+          "10mg daily"
         ],
         "symptoms": [
           "Shortness of breath"
         ],
         "procedures": [
-          "Physical therapy for mobility",
-          "Home oxygen"
+          "Physical therapy"
         ],
         "relationships": [
           {
-            "subject": "Metformin 500mg BID",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes mellitus",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "Lisinopril 20mg daily",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "lisinopril",
             "confidence": 0.9
           },
           {
-            "subject": "Atorvastatin 20mg daily",
+            "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Hyperlipidemia",
+            "object": "atorvastatin",
             "confidence": 0.9
           },
           {
-            "subject": "Furosemide 80mg daily",
+            "subject": "Chronic Kidney Disease",
             "predicate": "managed_by",
-            "object": "Chronic Kidney Disease stage 5",
+            "object": "furosemide",
             "confidence": 0.9
           },
           {
-            "subject": "Enalapril 10mg daily",
+            "subject": "Heart Failure",
             "predicate": "managed_by",
-            "object": "Congestive Heart Failure with moderate decompensation",
+            "object": "enalapril",
             "confidence": 0.9
           },
           {
-            "subject": "Home oxygen",
-            "predicate": "managed_by",
+            "subject": "Physical therapy",
+            "predicate": "improves",
             "object": "Shortness of breath",
             "confidence": 0.8
-          },
-          {
-            "subject": "Physical therapy for mobility",
-            "predicate": "managed_by",
-            "object": "Shortness of breath",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c 7.2",
-            "predicate": "measured_by",
-            "object": "Type 2 Diabetes mellitus",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP 130/80",
-            "predicate": "measured_by",
-            "object": "Hypertension",
-            "confidence": 0.9
-          },
-          {
-            "subject": "LDL 140",
-            "predicate": "measured_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.9
-          },
-          {
-            "subject": "eGFR 48",
-            "predicate": "measured_by",
-            "object": "Chronic Kidney Disease stage 5",
-            "confidence": 0.9
           }
         ],
         "lab_values": {
@@ -502,7 +573,13 @@
           "eGFR": 48.0,
           "LDL": 140.0
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "20mg daily",
+        "80mg daily",
+        "10mg daily"
+      ]
     }
   ]
 }

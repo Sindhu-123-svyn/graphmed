@@ -13,13 +13,8 @@
         "LDL": 130
       },
       "medications": [
-        "Lisinopril 20mg",
-        "Atorvastatin 40mg",
         "lisinopril",
-        "atorvastatin",
-        "130 mg",
-        "20mg",
-        "40mg"
+        "atorvastatin"
       ],
       "diagnoses": [
         "Hypertension",
@@ -31,13 +26,14 @@
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hypertension",
+          "Hyperlipidemia"
         ],
         "medications": [
           "lisinopril",
-          "atorvastatin",
-          "130 mg",
+          "atorvastatin"
+        ],
+        "dosages": [
           "20mg",
           "40mg"
         ],
@@ -45,28 +41,16 @@
         "procedures": [],
         "relationships": [
           {
-            "subject": "Lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "lisinopril",
             "confidence": 0.9
           },
           {
-            "subject": "Atorvastatin",
+            "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Hyperlipidemia",
+            "object": "atorvastatin",
             "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Lisinopril",
-            "confidence": 0.8
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "Atorvastatin",
-            "confidence": 0.8
           }
         ],
         "lab_values": {
@@ -74,7 +58,11 @@
           "BP_diastolic": 90,
           "LDL": 130.0
         }
-      }
+      },
+      "dosages": [
+        "20mg",
+        "40mg"
+      ]
     },
     {
       "visit_id": "V2",
@@ -88,16 +76,13 @@
         "LDL": 140
       },
       "medications": [
-        "Lisinopril 40mg",
-        "Atorvastatin 40mg",
         "lisinopril",
-        "140 mg",
-        "40mg"
+        "atorvastatin"
       ],
       "diagnoses": [
         "Hypertension",
         "Hyperlipidemia",
-        "Stage 1 CKD",
+        "Stage 1 Ckd",
         "Chronic Kidney Disease"
       ],
       "symptoms": [
@@ -108,27 +93,51 @@
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia",
           "Hypertension",
+          "Hyperlipidemia",
           "Chronic Kidney Disease"
         ],
         "medications": [
-          "lisinopril",
-          "140 mg",
+          "lisinopril"
+        ],
+        "dosages": [
           "40mg"
         ],
         "symptoms": [
-          "Shortness of breath",
-          "Fatigue"
+          "Fatigue",
+          "Shortness of breath"
         ],
         "procedures": [],
-        "relationships": [],
+        "relationships": [
+          {
+            "subject": "BP_systolic",
+            "predicate": "worsens",
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "LDL",
+            "predicate": "worsens",
+            "object": "Hyperlipidemia",
+            "confidence": 0.8
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.9
+          }
+        ],
         "lab_values": {
           "BP_systolic": 160,
           "BP_diastolic": 100,
-          "LDL": 140.0
+          "LDL": 140.0,
+          "eGFR": 60
         }
-      }
+      },
+      "dosages": [
+        "40mg"
+      ]
     },
     {
       "visit_id": "V3",
@@ -139,19 +148,18 @@
         "BP_systolic": 140,
         "BP_diastolic": 80,
         "eGFR": 45,
-        "LDL": 120
+        "LDL": 120,
+        "Glucose": "implied"
       },
       "medications": [
-        "Lisinopril 40mg",
-        "Atorvastatin 40mg",
-        "Losartan 50mg",
-        "losartan",
-        "50mg"
+        "lisinopril",
+        "atorvastatin",
+        "losartan"
       ],
       "diagnoses": [
         "Hypertension",
         "Hyperlipidemia",
-        "Stage 2 CKD",
+        "Stage 2 Ckd",
         "Chronic Kidney Disease"
       ],
       "symptoms": [
@@ -165,13 +173,15 @@
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia",
           "Hypertension",
+          "Hyperlipidemia",
           "Chronic Kidney Disease",
-          "Stage 2 CKD"
+          "Stage 2 Ckd"
         ],
         "medications": [
-          "losartan",
+          "losartan"
+        ],
+        "dosages": [
           "50mg"
         ],
         "symptoms": [
@@ -180,44 +190,20 @@
           "Nocturia"
         ],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "Losartan",
-            "predicate": "managed_by",
-            "object": "CKD",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "improved",
-            "object": "Losartan",
-            "confidence": 0.8
-          },
-          {
-            "subject": "LDL",
-            "predicate": "improved",
-            "object": "Losartan",
-            "confidence": 0.8
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "worsened",
-            "object": "CKD",
-            "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "decreased",
-            "object": "Losartan",
-            "confidence": 0.8
-          }
-        ],
+        "relationships": [],
         "lab_values": {
-          "LDL": "improved",
+          "HbA1c": 6.8,
+          "BP_systolic": "improved",
+          "BP_diastolic": "improved",
           "eGFR": 45,
-          "HbA1c": 6.8
+          "LDL": "improved",
+          "Glucose": "implied"
         }
-      }
+      },
+      "dosages": [
+        "40mg",
+        "50mg"
+      ]
     }
   ]
 }

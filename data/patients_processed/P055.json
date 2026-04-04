@@ -13,15 +13,11 @@
         "LDL": 140
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg QD",
-        "Atorvastatin 20mg QD",
         "metformin",
+        "lisinopril qd",
+        "atorvastatin qd",
         "lisinopril",
-        "atorvastatin",
-        "500mg",
-        "10mg",
-        "20mg"
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -34,24 +30,57 @@
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [
           "metformin",
           "lisinopril",
-          "atorvastatin",
-          "500mg",
-          "10mg",
-          "20mg"
+          "atorvastatin"
+        ],
+        "dosages": [
+          "500mg BID",
+          "10mg QD",
+          "20mg QD"
         ],
         "symptoms": [
-          "Edema",
-          "Fatigue"
+          "Fatigue",
+          "Edema"
         ],
         "procedures": [],
-        "relationships": [],
+        "relationships": [
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "metformin",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "managed_by",
+            "object": "atorvastatin",
+            "confidence": 0.9
+          },
+          {
+            "subject": "metformin",
+            "predicate": "contraindicated_with",
+            "object": "lisinopril",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Edema",
+            "confidence": 0.4
+          }
+        ],
         "lab_values": {
           "HbA1c": 7.5,
           "BP_systolic": 150,
@@ -59,7 +88,14 @@
           "eGFR": 75.0,
           "LDL": 140.0
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg",
+        "20mg",
+        "10mg QD",
+        "20mg QD"
+      ]
     },
     {
       "visit_id": "V2",
@@ -73,15 +109,11 @@
         "LDL": 180
       },
       "medications": [
-        "Metformin 1000mg BID",
-        "Lisinopril 20mg QD",
-        "Atorvastatin 40mg QD",
         "metformin",
+        "lisinopril qd",
+        "atorvastatin qd",
         "lisinopril",
-        "atorvastatin",
-        "1000mg",
-        "20mg",
-        "40mg"
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -96,26 +128,53 @@
       ],
       "extracted": {
         "conditions": [
-          "Coronary Artery Disease",
+          "Hypertension",
           "Type 2 Diabetes",
           "Hyperlipidemia",
-          "Hypertension"
+          "Coronary Artery Disease"
         ],
         "medications": [
           "metformin",
           "lisinopril",
-          "atorvastatin",
-          "1000mg",
-          "20mg",
-          "40mg"
+          "atorvastatin"
+        ],
+        "dosages": [
+          "1000mg BID",
+          "20mg QD",
+          "40mg QD"
         ],
         "symptoms": [
-          "Edema",
+          "Fatigue",
           "Shortness of breath",
-          "Fatigue"
+          "Edema"
         ],
         "procedures": [],
-        "relationships": [],
+        "relationships": [
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "metformin",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "managed_by",
+            "object": "atorvastatin",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Coronary Artery Disease",
+            "confidence": 0.8
+          }
+        ],
         "lab_values": {
           "HbA1c": 8.2,
           "BP_systolic": 160,
@@ -123,7 +182,14 @@
           "eGFR": 60.0,
           "LDL": 180.0
         }
-      }
+      },
+      "dosages": [
+        "1000mg BID",
+        "20mg",
+        "40mg",
+        "20mg QD",
+        "40mg QD"
+      ]
     },
     {
       "visit_id": "V3",
@@ -137,15 +203,11 @@
         "LDL": 200
       },
       "medications": [
-        "Metformin 2000mg BID",
-        "Lisinopril 40mg QD",
-        "Atorvastatin 80mg QD",
         "metformin",
+        "lisinopril qd",
+        "atorvastatin qd",
         "lisinopril",
-        "atorvastatin",
-        "2000mg",
-        "40mg",
-        "80mg"
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -162,27 +224,73 @@
       ],
       "extracted": {
         "conditions": [
-          "Chronic Kidney Disease",
+          "Hypertension",
           "Type 2 Diabetes",
-          "Coronary Artery Disease",
           "Hyperlipidemia",
-          "Hypertension"
+          "Chronic Kidney Disease",
+          "Coronary Artery Disease"
         ],
         "medications": [
           "metformin",
           "lisinopril",
-          "atorvastatin",
-          "2000mg",
-          "40mg",
-          "80mg"
+          "atorvastatin"
+        ],
+        "dosages": [
+          "2000mg BID",
+          "40mg QD",
+          "80mg QD"
         ],
         "symptoms": [
-          "Edema",
+          "Fatigue",
           "Shortness of breath",
-          "Fatigue"
+          "Edema",
+          "Orthopnea"
         ],
         "procedures": [],
-        "relationships": [],
+        "relationships": [
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "metformin",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "managed_by",
+            "object": "atorvastatin",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.7
+          }
+        ],
         "lab_values": {
           "HbA1c": 9.0,
           "BP_systolic": 170,
@@ -190,7 +298,14 @@
           "eGFR": 45.0,
           "LDL": 200.0
         }
-      }
+      },
+      "dosages": [
+        "2000mg BID",
+        "40mg",
+        "80mg",
+        "40mg QD",
+        "80mg QD"
+      ]
     }
   ]
 }

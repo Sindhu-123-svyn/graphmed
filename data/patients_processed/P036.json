@@ -13,12 +13,9 @@
         "LDL": 130
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg QD",
         "metformin",
-        "lisinopril",
-        "500mg",
-        "10mg"
+        "lisinopril qd",
+        "lisinopril"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -32,44 +29,34 @@
       ],
       "extracted": {
         "conditions": [
-          "Type 2 Diabetes",
-          "Hypertension"
+          "Hypertension",
+          "Type 2 Diabetes"
         ],
         "medications": [
           "metformin",
-          "lisinopril",
-          "500mg",
+          "lisinopril"
+        ],
+        "dosages": [
+          "500mg BID",
           "10mg"
         ],
         "symptoms": [
-          "Polydipsia",
-          "Fatigue"
+          "Fatigue",
+          "Polydipsia"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "Lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "lisinopril",
             "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Blood work",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Blood work",
-            "confidence": 0.8
           },
           {
             "subject": "Type 2 Diabetes",
@@ -80,7 +67,19 @@
           {
             "subject": "Hypertension",
             "predicate": "worsens",
-            "object": "Polydipsia",
+            "object": "Fatigue",
+            "confidence": 0.7
+          },
+          {
+            "subject": "metformin",
+            "predicate": "improves",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.7
+          },
+          {
+            "subject": "lisinopril",
+            "predicate": "improves",
+            "object": "Hypertension",
             "confidence": 0.7
           }
         ],
@@ -89,7 +88,11 @@
           "BP_systolic": 140,
           "BP_diastolic": 90
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg"
+      ]
     },
     {
       "visit_id": "V2",
@@ -103,14 +106,11 @@
         "LDL": 120
       },
       "medications": [
-        "Metformin 1000mg BID",
-        "Lisinopril 20mg QD",
-        "Atorvastatin 20mg QD",
-        "Enalapril 5mg BID",
-        "atorvastatin",
-        "20mg",
-        "5mg",
-        "Enalapril"
+        "metformin",
+        "lisinopril qd",
+        "atorvastatin qd",
+        "enalapril",
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -129,9 +129,11 @@
         ],
         "medications": [
           "atorvastatin",
-          "20mg",
-          "5mg",
-          "Enalapril"
+          "enalapril"
+        ],
+        "dosages": [
+          "20mg QD",
+          "5mg BID"
         ],
         "symptoms": [
           "Fatigue",
@@ -140,53 +142,29 @@
         "procedures": [],
         "relationships": [
           {
-            "subject": "Atorvastatin",
-            "predicate": "managed_by",
-            "object": "Statin",
-            "confidence": 1.0
-          },
-          {
-            "subject": "Enalapril",
-            "predicate": "managed_by",
-            "object": "ACE inhibitor",
-            "confidence": 1.0
-          },
-          {
-            "subject": "Enalapril",
-            "predicate": "contraindicated_with",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Blood work",
-            "confidence": 1.0
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "Blood work",
-            "confidence": 1.0
-          },
-          {
-            "subject": "Fatigue",
+            "subject": "Chronic Kidney Disease",
             "predicate": "has_symptom",
             "object": "Decreased mobility",
             "confidence": 0.8
           },
           {
             "subject": "Chronic Kidney Disease",
-            "predicate": "worsens",
+            "predicate": "has_symptom",
             "object": "Fatigue",
-            "confidence": 0.7
+            "confidence": 0.8
           }
         ],
         "lab_values": {
           "HbA1c": 8.1,
           "eGFR": 60
         }
-      }
+      },
+      "dosages": [
+        "1000mg BID",
+        "20mg",
+        "5mg BID",
+        "20mg QD"
+      ]
     },
     {
       "visit_id": "V3",
@@ -200,16 +178,12 @@
         "LDL": 110
       },
       "medications": [
-        "Metformin 1500mg BID",
-        "Lisinopril 40mg QD",
-        "Atorvastatin 40mg QD",
-        "Enalapril 10mg BID",
-        "Metoprolol 50mg BID",
-        "Isosorbide mononitrate 30mg BID",
+        "metformin",
+        "lisinopril qd",
+        "atorvastatin qd",
+        "enalapril",
         "metoprolol",
-        "50mg",
-        "30mg",
-        "Isosorbide mononitrate"
+        "isosorbide mononitrate"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -231,52 +205,43 @@
         ],
         "medications": [
           "metoprolol",
-          "50mg",
-          "30mg",
-          "Isosorbide mononitrate"
+          "isosorbide mononitrate"
+        ],
+        "dosages": [
+          "50mg BID",
+          "30mg BID"
         ],
         "symptoms": [
-          "Chest pain",
-          "Shortness of breath"
+          "Shortness of breath",
+          "Chest pain"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Metoprolol",
+            "subject": "Coronary Artery Disease",
             "predicate": "managed_by",
-            "object": "Coronary Artery Disease",
-            "confidence": 0.8
+            "object": "metoprolol",
+            "confidence": 0.9
           },
           {
-            "subject": "Isosorbide mononitrate",
+            "subject": "Coronary Artery Disease",
             "predicate": "managed_by",
-            "object": "Coronary Artery Disease",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Blood work",
-            "confidence": 0.7
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "Blood work",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Chest pain",
-            "predicate": "has_symptom",
-            "object": "Shortness of breath",
-            "confidence": 0.6
+            "object": "isosorbide mononitrate",
+            "confidence": 0.9
           }
         ],
         "lab_values": {
           "HbA1c": 9.0,
           "eGFR": 45
         }
-      }
+      },
+      "dosages": [
+        "1500mg BID",
+        "40mg",
+        "10mg BID",
+        "50mg BID",
+        "30mg BID"
+      ]
     }
   ]
 }

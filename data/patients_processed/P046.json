@@ -13,12 +13,9 @@
         "LDL": 130
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg OD",
         "metformin",
-        "lisinopril",
-        "500mg",
-        "10mg"
+        "lisinopril od",
+        "lisinopril"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -27,67 +24,93 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria"
+        "Frequent urination"
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [
           "metformin",
-          "lisinopril",
-          "500mg",
+          "lisinopril"
+        ],
+        "dosages": [
+          "500mg BID",
           "10mg"
         ],
         "symptoms": [
-          "Polyuria",
-          "Fatigue"
+          "Fatigue",
+          "Frequent urination"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "Lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "lisinopril",
             "confidence": 0.9
           },
           {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "Hyperlipidemia",
+            "subject": "metformin",
+            "predicate": "contraindicated_with",
+            "object": "lisinopril",
             "confidence": 0.8
           },
           {
             "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "Polyuria",
-            "confidence": 0.7
+            "predicate": "has_symptom",
+            "object": "Fatigue",
+            "confidence": 0.8
           },
           {
             "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
+            "predicate": "has_symptom",
+            "object": "Frequent urination",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
             "object": "Fatigue",
             "confidence": 0.7
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Frequent urination",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "measured_by",
+            "object": "HbA1c",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "measured_by",
+            "object": "BP_systolic",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "measured_by",
+            "object": "BP_diastolic",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "measured_by",
+            "object": "LDL",
+            "confidence": 0.9
           }
         ],
         "lab_values": {
@@ -96,7 +119,11 @@
           "BP_diastolic": 90,
           "LDL": 130.0
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg"
+      ]
     },
     {
       "visit_id": "V2",
@@ -110,13 +137,10 @@
         "LDL": 140
       },
       "medications": [
-        "Metformin 1000mg BID",
-        "Lisinopril 20mg OD",
-        "Simvastatin 20mg OD",
         "metformin",
-        "simvastatin",
-        "1000mg",
-        "20mg"
+        "lisinopril od",
+        "simvastatin od",
+        "simvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -125,18 +149,20 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Nocturia"
       ],
       "extracted": {
         "conditions": [
-          "Type 2 Diabetes",
-          "Hypertension"
+          "Hypertension",
+          "Type 2 Diabetes"
         ],
         "medications": [
           "metformin",
-          "simvastatin",
-          "1000mg",
+          "simvastatin"
+        ],
+        "dosages": [
+          "1000mg BID",
           "20mg"
         ],
         "symptoms": [
@@ -145,30 +171,6 @@
         ],
         "procedures": [],
         "relationships": [
-          {
-            "subject": "metformin",
-            "predicate": "increased",
-            "object": "1000mg",
-            "confidence": 0.9
-          },
-          {
-            "subject": "metformin",
-            "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.8
-          },
-          {
-            "subject": "simvastatin",
-            "predicate": "added",
-            "object": "20mg",
-            "confidence": 0.9
-          },
-          {
-            "subject": "simvastatin",
-            "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.8
-          },
           {
             "subject": "Type 2 Diabetes",
             "predicate": "worsens",
@@ -200,7 +202,11 @@
           "LDL": 140.0,
           "HbA1c": 8.1
         }
-      }
+      },
+      "dosages": [
+        "1000mg BID",
+        "20mg"
+      ]
     },
     {
       "visit_id": "V3",
@@ -214,12 +220,10 @@
         "LDL": 120
       },
       "medications": [
-        "Metformin 1000mg BID",
-        "Lisinopril 20mg OD",
-        "Simvastatin 20mg OD",
-        "Furosemide 20mg BID",
-        "20mg",
-        "Furosemide"
+        "metformin",
+        "lisinopril od",
+        "simvastatin od",
+        "furosemide"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -229,69 +233,71 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Nocturia",
         "Pedal edema",
         "Edema"
       ],
       "extracted": {
         "conditions": [
-          "Type 2 Diabetes",
           "Hypertension",
+          "Type 2 Diabetes",
           "Chronic Kidney Disease"
         ],
         "medications": [
-          "20mg",
-          "Furosemide"
+          "furosemide"
+        ],
+        "dosages": [
+          "20mg BID"
         ],
         "symptoms": [
-          "Edema",
-          "Polyuria",
-          "Fatigue"
+          "Fatigue",
+          "Frequent urination",
+          "Edema"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Furosemide",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Chronic Kidney Disease",
+            "object": "furosemide",
             "confidence": 0.8
           },
           {
-            "subject": "HbA1c",
+            "subject": "Chronic Kidney Disease",
+            "predicate": "managed_by",
+            "object": "furosemide",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
             "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
+            "object": "HbA1c",
             "confidence": 0.9
           },
           {
-            "subject": "BP",
+            "subject": "Hypertension",
             "predicate": "measured_by",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "Chronic Kidney Disease",
+            "object": "BP_systolic",
             "confidence": 0.9
           },
           {
-            "subject": "Furosemide",
-            "predicate": "contraindicated_with",
-            "object": "Hypertension",
-            "confidence": 0.7
+            "subject": "Hypertension",
+            "predicate": "measured_by",
+            "object": "BP_diastolic",
+            "confidence": 0.9
           },
           {
-            "subject": "Furosemide",
-            "predicate": "improves",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.8
+            "subject": "Chronic Kidney Disease",
+            "predicate": "measured_by",
+            "object": "eGFR",
+            "confidence": 0.9
           },
           {
             "subject": "Type 2 Diabetes",
             "predicate": "worsens",
             "object": "Chronic Kidney Disease",
-            "confidence": 0.9
+            "confidence": 0.8
           }
         ],
         "lab_values": {
@@ -300,7 +306,12 @@
           "eGFR": 50.0,
           "HbA1c": 7.5
         }
-      }
+      },
+      "dosages": [
+        "1000mg BID",
+        "20mg",
+        "20mg BID"
+      ]
     }
   ]
 }

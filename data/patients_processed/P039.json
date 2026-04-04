@@ -13,8 +13,8 @@
         "LDL": 130
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 20mg daily"
+        "metformin",
+        "lisinopril"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -23,85 +23,26 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Edema"
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [],
+        "dosages": [],
         "symptoms": [
-          "Polydipsia",
-          "Polyuria",
           "Fatigue",
+          "Frequent urination",
+          "Polydipsia",
           "Edema"
         ],
         "procedures": [],
         "relationships": [
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "managed_by",
-            "object": "lifestyle modifications",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "managed_by",
-            "object": "medication adherence",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "managed_by",
-            "object": "lifestyle modifications",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "managed_by",
-            "object": "medication adherence",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Hyperlipidemia",
-            "predicate": "managed_by",
-            "object": "lifestyle modifications",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Hyperlipidemia",
-            "predicate": "managed_by",
-            "object": "medication adherence",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Polyuria",
-            "predicate": "has_symptom",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Polydipsia",
-            "predicate": "has_symptom",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Edema",
-            "predicate": "has_symptom",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.7
-          },
           {
             "subject": "Type 2 Diabetes",
             "predicate": "worsens",
@@ -110,7 +51,11 @@
           }
         ],
         "lab_values": {}
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "20mg daily"
+      ]
     },
     {
       "visit_id": "V2",
@@ -122,86 +67,92 @@
         "BP_diastolic": 95,
         "eGFR": 55,
         "LDL": 160,
-        "ECG": "Left ventricular hypertrophy"
+        "HDL": "not mentioned",
+        "Creatinine": "not mentioned",
+        "Glucose": "not mentioned",
+        "Potassium": "not mentioned",
+        "Sodium": "not mentioned"
       },
       "medications": [
-        "Metformin 1000mg BID",
-        "Lisinopril 40mg daily",
-        "Furosemide 20mg daily",
-        "Diuretic"
+        "metformin",
+        "lisinopril",
+        "furosemide",
+        "diuretic"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
         "Coronary Artery Disease",
-        "Left ventricular hypertrophy"
+        "Left Ventricular Hypertrophy"
       ],
       "symptoms": [
         "Fatigue",
         "Shortness of breath",
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Increased edema",
         "Edema"
       ],
       "extracted": {
         "conditions": [
-          "Left ventricular hypertrophy"
+          "Left Ventricular Hypertrophy"
         ],
         "medications": [
-          "Diuretic"
+          "diuretic"
         ],
+        "dosages": [],
         "symptoms": [
-          "Edema",
+          "Fatigue",
           "Shortness of breath",
-          "Fatigue"
+          "Edema"
         ],
         "procedures": [
           "ECG"
         ],
         "relationships": [
           {
-            "subject": "Diuretic",
+            "subject": "Left Ventricular Hypertrophy",
             "predicate": "managed_by",
-            "object": "ECG",
+            "object": "diuretic",
             "confidence": 0.8
           },
           {
-            "subject": "ECG",
-            "predicate": "measured_by",
-            "object": "Left ventricular hypertrophy",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Diuretic",
+            "subject": "diuretic",
             "predicate": "improves",
             "object": "Edema",
             "confidence": 0.7
           },
           {
-            "subject": "Diuretic",
-            "predicate": "improves",
-            "object": "Shortness of breath",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Diuretic",
-            "predicate": "improves",
-            "object": "Fatigue",
-            "confidence": 0.7
-          },
-          {
-            "subject": "ECG",
+            "subject": "Left Ventricular Hypertrophy",
             "predicate": "worsens",
-            "object": "Left ventricular hypertrophy",
-            "confidence": 0.9
+            "object": "Fatigue",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Left Ventricular Hypertrophy",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
+            "confidence": 0.6
           }
         ],
         "lab_values": {
-          "ECG": "Left ventricular hypertrophy"
+          "BP_systolic": "not mentioned",
+          "BP_diastolic": "not mentioned",
+          "eGFR": "not mentioned",
+          "LDL": "not mentioned",
+          "HDL": "not mentioned",
+          "Creatinine": "not mentioned",
+          "Glucose": "not mentioned",
+          "Potassium": "not mentioned",
+          "Sodium": "not mentioned"
         }
-      }
+      },
+      "dosages": [
+        "1000mg BID",
+        "40mg daily",
+        "20mg daily"
+      ]
     },
     {
       "visit_id": "V3",
@@ -213,14 +164,17 @@
         "BP_diastolic": 100,
         "eGFR": 45,
         "LDL": 180,
-        "S3 heart sound": "2+"
+        "HDL": "not mentioned",
+        "Creatinine": "not mentioned",
+        "Glucose": "not mentioned",
+        "Potassium": "not mentioned",
+        "Sodium": "not mentioned"
       },
       "medications": [
-        "Metformin 1500mg BID",
-        "Lisinopril 80mg daily",
-        "Furosemide 40mg daily",
-        "Spironolactone 25mg daily",
-        "Spironolactone"
+        "metformin",
+        "lisinopril",
+        "furosemide",
+        "spironolactone"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -233,7 +187,7 @@
       "symptoms": [
         "Fatigue",
         "Shortness of breath",
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Increased edema",
         "Orthopnea",
@@ -244,50 +198,34 @@
           "Heart Failure"
         ],
         "medications": [
-          "Spironolactone"
+          "spironolactone"
         ],
+        "dosages": [],
         "symptoms": [
-          "Edema",
           "Shortness of breath",
+          "Edema",
           "Orthopnea"
         ],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "Spironolactone",
-            "predicate": "managed_by",
-            "object": "optimize current medications",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Spironolactone",
-            "predicate": "contraindicated_with",
-            "object": "unknown",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Shortness of breath",
-            "predicate": "has_symptom",
-            "object": "Orthopnea",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Shortness of breath",
-            "predicate": "worsens",
-            "object": "Edema",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Edema",
-            "predicate": "has_symptom",
-            "object": "S3 heart sound",
-            "confidence": 0.5
-          }
-        ],
+        "relationships": [],
         "lab_values": {
-          "S3 heart sound": "2+"
+          "BP_systolic": "not mentioned",
+          "BP_diastolic": "not mentioned",
+          "eGFR": "not mentioned",
+          "LDL": "not mentioned",
+          "HDL": "not mentioned",
+          "Creatinine": "not mentioned",
+          "Glucose": "not mentioned",
+          "Potassium": "not mentioned",
+          "Sodium": "not mentioned"
         }
-      }
+      },
+      "dosages": [
+        "1500mg BID",
+        "80mg daily",
+        "40mg daily",
+        "25mg daily"
+      ]
     }
   ]
 }

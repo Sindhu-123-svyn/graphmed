@@ -10,15 +10,16 @@
         "BP_systolic": 150,
         "BP_diastolic": 95,
         "eGFR": 60,
-        "LDL": 180
+        "LDL": 180,
+        "HDL": null,
+        "Creatinine": null,
+        "Glucose": null,
+        "Potassium": null,
+        "Sodium": null
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Atorvastatin 20mg daily",
         "metformin",
-        "atorvastatin",
-        "500mg",
-        "20mg"
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -27,45 +28,41 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Weight gain"
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [
           "metformin",
-          "atorvastatin",
-          "500mg",
-          "20mg"
+          "atorvastatin"
+        ],
+        "dosages": [
+          "500mg BID",
+          "20mg daily"
         ],
         "symptoms": [
-          "Polyuria",
           "Fatigue",
+          "Frequent urination",
           "Weight gain"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "atorvastatin",
+            "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Hyperlipidemia",
+            "object": "atorvastatin",
             "confidence": 0.9
-          },
-          {
-            "subject": "metformin",
-            "predicate": "contraindicated_with",
-            "object": "Weight gain",
-            "confidence": 0.8
           },
           {
             "subject": "metformin",
@@ -78,22 +75,25 @@
             "predicate": "improves",
             "object": "Hyperlipidemia",
             "confidence": 0.8
-          },
-          {
-            "subject": "metformin",
-            "predicate": "has_symptom",
-            "object": "Polyuria",
-            "confidence": 0.7
-          },
-          {
-            "subject": "metformin",
-            "predicate": "has_symptom",
-            "object": "Fatigue",
-            "confidence": 0.7
           }
         ],
-        "lab_values": {}
-      }
+        "lab_values": {
+          "HbA1c": null,
+          "BP_systolic": null,
+          "BP_diastolic": null,
+          "eGFR": null,
+          "LDL": null,
+          "HDL": null,
+          "Creatinine": null,
+          "Glucose": null,
+          "Potassium": null,
+          "Sodium": null
+        }
+      },
+      "dosages": [
+        "500mg BID",
+        "20mg daily"
+      ]
     },
     {
       "visit_id": "V2",
@@ -104,79 +104,63 @@
         "BP_systolic": 155,
         "BP_diastolic": 90,
         "eGFR": 55,
-        "LDL": 160
+        "LDL": 160,
+        "HDL": "not mentioned",
+        "Creatinine": "not mentioned",
+        "Glucose": "not mentioned",
+        "Potassium": "not mentioned",
+        "Sodium": "not mentioned"
       },
       "medications": [
-        "Metformin 750mg BID",
-        "Atorvastatin 20mg daily",
-        "Lisinopril 2.5mg daily",
         "metformin",
-        "lisinopril",
-        "750mg",
-        "2.5mg"
+        "atorvastatin",
+        "lisinopril"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
-        "Hyperlipidemia",
-        "Diabetes"
+        "Hyperlipidemia"
       ],
       "symptoms": [
         "Fatigue",
         "Polyuria reduced",
-        "Polyuria"
+        "Frequent urination"
       ],
       "extracted": {
         "conditions": [
-          "Diabetes"
+          "Type 2 Diabetes"
         ],
         "medications": [
           "metformin",
-          "lisinopril",
-          "750mg",
-          "2.5mg"
+          "lisinopril"
+        ],
+        "dosages": [
+          "750mg BID",
+          "2.5mg daily"
         ],
         "symptoms": [
-          "Polyuria",
-          "Fatigue"
+          "Frequent urination"
         ],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "metformin",
-            "predicate": "increased",
-            "object": "750mg",
-            "confidence": 0.9
-          },
-          {
-            "subject": "metformin",
-            "predicate": "contraindicated_with",
-            "object": "lisinopril",
-            "confidence": 0.8
-          },
-          {
-            "subject": "lisinopril",
-            "predicate": "started",
-            "object": "2.5mg",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "elevated",
-            "object": "None",
-            "confidence": 0.7
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "improved",
-            "object": "1.2% improvement",
-            "confidence": 0.9
-          }
-        ],
+        "relationships": [],
         "lab_values": {
-          "HbA1c": "1.2% improvement"
+          "HbA1c": 1.2,
+          "BP_systolic": "elevated",
+          "BP_diastolic": "not mentioned",
+          "eGFR": "not mentioned",
+          "LDL": "not mentioned",
+          "HDL": "not mentioned",
+          "Creatinine": "not mentioned",
+          "Glucose": "not mentioned",
+          "Potassium": "not mentioned",
+          "Sodium": "not mentioned"
         }
-      }
+      },
+      "dosages": [
+        "750mg BID",
+        "20mg daily",
+        "2.5mg daily"
+      ]
     },
     {
       "visit_id": "V3",
@@ -190,11 +174,9 @@
         "LDL": 140
       },
       "medications": [
-        "Metformin 750mg BID",
-        "Atorvastatin 20mg daily",
-        "Lisinopril 5mg daily",
-        "lisinopril",
-        "5mg"
+        "metformin",
+        "atorvastatin",
+        "lisinopril"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -205,7 +187,7 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Chest pain",
         "Shortness of breath"
       ],
@@ -215,52 +197,43 @@
           "Chronic Kidney Disease"
         ],
         "medications": [
-          "lisinopril",
-          "5mg"
+          "lisinopril"
+        ],
+        "dosages": [
+          "5mg daily"
         ],
         "symptoms": [
-          "Chest pain",
-          "Shortness of breath"
+          "Shortness of breath",
+          "Chest pain"
         ],
         "procedures": [
-          "cardiologist referral"
+          "cardiologist evaluation"
         ],
         "relationships": [
           {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "eGFR",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "worsens",
-            "object": "Chest pain",
-            "confidence": 0.7
-          },
-          {
-            "subject": "BP",
-            "predicate": "worsens",
-            "object": "Shortness of breath",
-            "confidence": 0.7
+            "subject": "lisinopril",
+            "predicate": "improves",
+            "object": "Hypertension",
+            "confidence": 0.6
           },
           {
             "subject": "lisinopril",
-            "predicate": "managed_by",
-            "object": "cardiologist referral",
-            "confidence": 0.9
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "declines",
+            "predicate": "improves",
             "object": "Chronic Kidney Disease",
             "confidence": 0.6
           }
         ],
         "lab_values": {
-          "eGFR": "decline"
+          "eGFR": "decline",
+          "BP_systolic": "elevated",
+          "BP_diastolic": "not mentioned"
         }
-      }
+      },
+      "dosages": [
+        "750mg BID",
+        "20mg daily",
+        "5mg daily"
+      ]
     },
     {
       "visit_id": "V4",
@@ -274,75 +247,52 @@
         "LDL": 120
       },
       "medications": [
-        "Metformin 750mg BID",
-        "Atorvastatin 20mg daily",
-        "Lisinopril 5mg daily",
-        "Current medications"
+        "metformin",
+        "atorvastatin",
+        "lisinopril",
+        "current medications"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
         "Coronary Artery Disease",
-        "Cardiac disease"
+        "Cardiac Disease"
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Chest pain reduced",
-        "Chest pain"
+        "Chest pain",
+        "Reduced energy levels"
       ],
       "extracted": {
         "conditions": [
-          "Cardiac disease"
+          "Cardiac Disease"
         ],
         "medications": [
-          "Current medications"
+          "current medications"
         ],
+        "dosages": [],
         "symptoms": [
           "Chest pain",
-          "Fatigue"
+          "Reduced energy levels"
         ],
         "procedures": [
           "Cardiac catheterization",
           "Stenting"
         ],
-        "relationships": [
-          {
-            "subject": "BP",
-            "predicate": "improves",
-            "object": "Cardiac catheterization and stenting",
-            "confidence": 0.8
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "remains",
-            "object": "stable",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Chest pain",
-            "predicate": "worsens",
-            "object": "BP shows a slight improvement",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Current medications",
-            "predicate": "managed_by",
-            "object": "continue current medications",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Current medications",
-            "predicate": "contraindicated_with",
-            "object": "schedule follow-up labs in 3 months",
-            "confidence": 0.5
-          }
-        ],
+        "relationships": [],
         "lab_values": {
+          "BP_systolic": "improved",
           "eGFR": "stable"
         }
-      }
+      },
+      "dosages": [
+        "750mg BID",
+        "20mg daily",
+        "5mg daily"
+      ]
     }
   ]
 }

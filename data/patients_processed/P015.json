@@ -10,12 +10,16 @@
         "BP_systolic": 140,
         "BP_diastolic": 80,
         "eGFR": 72,
-        "LDL": 130
+        "LDL": 130,
+        "HDL": null,
+        "Creatinine": null,
+        "Glucose": null,
+        "Potassium": null,
+        "Sodium": null
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg OD",
         "metformin",
+        "lisinopril od",
         "lisinopril"
       ],
       "diagnoses": [
@@ -24,70 +28,92 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia"
       ],
       "extracted": {
         "conditions": [
-          "Type 2 Diabetes",
-          "Hypertension"
+          "Hypertension",
+          "Type 2 Diabetes"
         ],
         "medications": [
           "metformin",
           "lisinopril"
         ],
+        "dosages": [],
         "symptoms": [
-          "Polydipsia",
-          "Polyuria",
-          "Fatigue"
+          "Fatigue",
+          "Frequent urination",
+          "Polydipsia"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
-            "confidence": 0.9
-          },
-          {
-            "subject": "metformin",
-            "predicate": "contraindicated_with",
             "object": "lisinopril",
             "confidence": 0.8
           },
           {
             "subject": "Type 2 Diabetes",
             "predicate": "has_symptom",
-            "object": "Polyuria",
-            "confidence": 0.8
+            "object": "Fatigue",
+            "confidence": 0.7
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "has_symptom",
+            "object": "Frequent urination",
+            "confidence": 0.7
           },
           {
             "subject": "Type 2 Diabetes",
             "predicate": "has_symptom",
             "object": "Polydipsia",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "has_symptom",
-            "object": "Fatigue",
-            "confidence": 0.8
+            "confidence": 0.7
           },
           {
             "subject": "Hypertension",
             "predicate": "has_symptom",
             "object": "Fatigue",
-            "confidence": 0.7
+            "confidence": 0.6
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Frequent urination",
+            "confidence": 0.6
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Polydipsia",
+            "confidence": 0.6
           }
         ],
-        "lab_values": {}
-      }
+        "lab_values": {
+          "HbA1c": null,
+          "BP_systolic": null,
+          "BP_diastolic": null,
+          "eGFR": null,
+          "LDL": null,
+          "HDL": null,
+          "Creatinine": null,
+          "Glucose": null,
+          "Potassium": null,
+          "Sodium": null
+        }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg"
+      ]
     },
     {
       "visit_id": "V2",
@@ -101,12 +127,10 @@
         "LDL": 160
       },
       "medications": [
-        "Metformin 1000mg BID",
-        "Lisinopril 10mg OD",
-        "Atorvastatin 20mg OD",
         "metformin",
-        "atorvastatin",
-        "1000mg"
+        "lisinopril od",
+        "atorvastatin od",
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -115,10 +139,10 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
-        "Dyspnea",
-        "increased urination"
+        "Shortness of breath",
+        "Increased urination"
       ],
       "extracted": {
         "conditions": [
@@ -126,63 +150,27 @@
         ],
         "medications": [
           "metformin",
-          "atorvastatin",
-          "1000mg"
+          "atorvastatin"
+        ],
+        "dosages": [
+          "1000mg BID"
         ],
         "symptoms": [
           "Fatigue",
-          "increased urination"
+          "Increased urination"
         ],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "metformin",
-            "predicate": "adjusted_to",
-            "object": "1000mg",
-            "confidence": 1.0
-          },
-          {
-            "subject": "metformin",
-            "predicate": "managed_by",
-            "object": "BP",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "physical examination",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "worsens",
-            "object": "Fatigue",
-            "confidence": 0.7
-          },
-          {
-            "subject": "BP",
-            "predicate": "worsens",
-            "object": "increased urination",
-            "confidence": 0.7
-          },
-          {
-            "subject": "metformin",
-            "predicate": "contraindicated_with",
-            "object": "BP",
-            "confidence": 0.6
-          },
-          {
-            "subject": "atorvastatin",
-            "predicate": "initiated_for",
-            "object": "Hyperlipidemia",
-            "confidence": 0.9
-          }
-        ],
+        "relationships": [],
         "lab_values": {
           "BP_systolic": 150,
           "BP_diastolic": 90
         }
-      }
+      },
+      "dosages": [
+        "1000mg BID",
+        "10mg",
+        "20mg"
+      ]
     },
     {
       "visit_id": "V3",
@@ -196,12 +184,12 @@
         "LDL": 140
       },
       "medications": [
-        "Metformin 1000mg BID",
-        "Lisinopril 20mg OD",
-        "Atorvastatin 20mg OD",
-        "Spironolactone 25mg OD",
+        "metformin",
+        "lisinopril od",
+        "atorvastatin od",
+        "spironolactone od",
         "lisinopril",
-        "20mg"
+        "spironolactone"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -211,11 +199,10 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
-        "Dyspnea",
-        "Orthopnea",
-        "Shortness of breath"
+        "Shortness of breath",
+        "Orthopnea"
       ],
       "extracted": {
         "conditions": [
@@ -223,16 +210,41 @@
         ],
         "medications": [
           "lisinopril",
+          "spironolactone"
+        ],
+        "dosages": [
           "20mg"
         ],
         "symptoms": [
-          "Shortness of breath",
-          "Fatigue"
+          "Fatigue",
+          "Shortness of breath"
         ],
         "procedures": [],
-        "relationships": [],
-        "lab_values": {}
-      }
+        "relationships": [
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "managed_by",
+            "object": "spironolactone",
+            "confidence": 0.9
+          },
+          {
+            "subject": "eGFR",
+            "predicate": "worsens",
+            "object": "Chronic Kidney Disease",
+            "confidence": 0.6
+          }
+        ],
+        "lab_values": {
+          "eGFR": 55,
+          "BP_systolic": 160,
+          "BP_diastolic": 95
+        }
+      },
+      "dosages": [
+        "1000mg BID",
+        "20mg",
+        "25mg"
+      ]
     },
     {
       "visit_id": "V4",
@@ -246,13 +258,11 @@
         "LDL": 120
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 20mg OD",
-        "Atorvastatin 20mg OD",
-        "Spironolactone 25mg OD",
-        "Enalapril 10mg OD",
         "metformin",
-        "500mg",
+        "lisinopril od",
+        "atorvastatin od",
+        "spironolactone od",
+        "enalapril od",
         "enalapril"
       ],
       "diagnoses": [
@@ -261,85 +271,65 @@
         "Hyperlipidemia",
         "Chronic Kidney Disease",
         "Coronary Artery Disease",
-        "Congestive Heart Failure",
-        "CHF"
+        "Heart Failure",
+        "Chf"
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
-        "Dyspnea",
+        "Shortness of breath",
         "Orthopnea",
         "Chest pain"
       ],
       "extracted": {
         "conditions": [
-          "CHF"
+          "Chf"
         ],
         "medications": [
           "metformin",
-          "500mg",
           "enalapril"
+        ],
+        "dosages": [
+          "500mg BID"
         ],
         "symptoms": [
           "Fatigue",
-          "orthopnea"
+          "Orthopnea"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "metformin",
-            "predicate": "adjusted_to",
-            "object": "500mg",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "physical examination",
-            "confidence": 0.8
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "physical examination",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "has_value",
-            "object": "165/100",
-            "confidence": 0.9
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "has_value",
-            "object": "45",
-            "confidence": 0.9
-          },
-          {
-            "subject": "CHF",
+            "subject": "Chf",
             "predicate": "managed_by",
             "object": "enalapril",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP_systolic",
+            "predicate": "worsens",
+            "object": "Chf",
             "confidence": 0.8
           },
           {
-            "subject": "CHF",
-            "predicate": "has_symptom",
-            "object": "orthopnea",
-            "confidence": 0.8
-          },
-          {
-            "subject": "CHF",
-            "predicate": "has_symptom",
-            "object": "fatigue",
+            "subject": "eGFR",
+            "predicate": "worsens",
+            "object": "Chf",
             "confidence": 0.8
           }
         ],
         "lab_values": {
+          "BP_systolic": 165,
+          "BP_diastolic": 100,
           "eGFR": 45
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "20mg",
+        "25mg",
+        "10mg"
+      ]
     }
   ]
 }

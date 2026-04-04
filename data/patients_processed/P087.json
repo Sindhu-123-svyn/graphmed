@@ -13,13 +13,10 @@
         "LDL": 130
       },
       "medications": [
-        "Metformin 500mg BD",
-        "Simvastatin 20mg QHS",
+        "metformin bd",
+        "simvastatin qhs",
         "metformin",
-        "simvastatin",
-        "130 mg",
-        "500mg",
-        "20mg"
+        "simvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -28,85 +25,56 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia"
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [
           "metformin",
-          "simvastatin",
-          "130 mg",
-          "500mg",
-          "20mg"
+          "simvastatin"
+        ],
+        "dosages": [
+          "500mg BD",
+          "20mg QHS"
         ],
         "symptoms": [
-          "Polydipsia",
-          "Polyuria",
-          "Fatigue"
+          "Fatigue",
+          "Frequent urination",
+          "Polydipsia"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.8
+            "object": "metformin",
+            "confidence": 0.9
           },
           {
-            "subject": "Simvastatin",
+            "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Hypertension",
-            "confidence": 0.7
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.7
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Polydipsia",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Polyuria",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Metformin",
-            "predicate": "contraindicated_with",
-            "object": "Simvastatin",
-            "confidence": 0.5
+            "object": "simvastatin",
+            "confidence": 0.9
           }
         ],
         "lab_values": {
           "HbA1c": 7.2,
-          "LDL": 130,
-          "BP_systolic": 140,
-          "BP_diastolic": 90
+          "BP_systolic": "140 mmHg",
+          "BP_diastolic": "90 mmHg",
+          "LDL": "130 mg/dL"
         }
-      }
+      },
+      "dosages": [
+        "500mg",
+        "20mg",
+        "500mg BD",
+        "20mg QHS"
+      ]
     },
     {
       "visit_id": "V2",
@@ -120,15 +88,12 @@
         "LDL": 140
       },
       "medications": [
-        "Metformin 500mg BD",
-        "Simvastatin 20mg QHS",
-        "Lisinopril 2.5mg QD",
-        "Atorvastatin 40mg QHS",
+        "metformin bd",
+        "simvastatin qhs",
+        "lisinopril qd",
+        "atorvastatin qhs",
         "lisinopril",
-        "atorvastatin",
-        "140 mg",
-        "2.5mg",
-        "40mg"
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -138,22 +103,23 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Edema",
         "Increased urination"
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hypertension",
+          "Hyperlipidemia"
         ],
         "medications": [
           "lisinopril",
-          "atorvastatin",
-          "140 mg",
-          "2.5mg",
-          "40mg"
+          "atorvastatin"
+        ],
+        "dosages": [
+          "2.5mg QD",
+          "40mg QHS"
         ],
         "symptoms": [
           "Fatigue",
@@ -162,49 +128,33 @@
         "procedures": [],
         "relationships": [
           {
-            "subject": "Lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "lisinopril",
             "confidence": 0.9
           },
           {
-            "subject": "Atorvastatin",
+            "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Hyperlipidemia",
+            "object": "atorvastatin",
             "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Lisinopril",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Lisinopril",
-            "confidence": 0.8
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "Atorvastatin",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Increased urination",
-            "confidence": 0.7
           }
         ],
         "lab_values": {
-          "BP_systolic": 150,
-          "BP_diastolic": 95,
           "HbA1c": 8.1,
+          "BP_systolic": "150 mmHg",
+          "BP_diastolic": "95 mmHg",
           "LDL": "140 mg/dL"
         }
-      }
+      },
+      "dosages": [
+        "500mg",
+        "20mg",
+        "2.5mg",
+        "40mg",
+        "2.5mg QD",
+        "40mg QHS"
+      ]
     },
     {
       "visit_id": "V3",
@@ -218,14 +168,13 @@
         "LDL": 120
       },
       "medications": [
-        "Metformin 500mg BD",
-        "Lisinopril 2.5mg QD",
-        "Atorvastatin 40mg QHS",
-        "Sitagliptin 100mg QD",
-        "Furosemide 40mg QD",
-        "120 mg",
-        "100mg",
-        "40mg"
+        "metformin bd",
+        "lisinopril qd",
+        "atorvastatin qhs",
+        "sitagliptin qd",
+        "furosemide qd",
+        "furosemide",
+        "sitagliptin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -235,7 +184,7 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Edema",
         "Shortness of breath"
@@ -245,17 +194,40 @@
           "Type 2 Diabetes"
         ],
         "medications": [
-          "120 mg",
-          "100mg",
-          "40mg"
+          "furosemide",
+          "sitagliptin"
+        ],
+        "dosages": [
+          "100mg QD",
+          "40mg QD"
         ],
         "symptoms": [
           "Edema"
         ],
         "procedures": [],
-        "relationships": [],
-        "lab_values": {}
-      }
+        "relationships": [
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "sitagliptin",
+            "confidence": 0.9
+          }
+        ],
+        "lab_values": {
+          "HbA1c": 8.8,
+          "BP_systolic": "160 mmHg",
+          "BP_diastolic": "100 mmHg",
+          "LDL": "120 mg/dL"
+        }
+      },
+      "dosages": [
+        "500mg",
+        "2.5mg",
+        "40mg",
+        "100mg",
+        "100mg QD",
+        "40mg QD"
+      ]
     }
   ]
 }

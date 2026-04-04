@@ -13,10 +13,9 @@
         "LDL": 130
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg daily",
-        "Atorvastatin 20mg daily",
-        "130 mg"
+        "metformin",
+        "lisinopril",
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -29,11 +28,12 @@
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
-        "medications": [
+        "medications": [],
+        "dosages": [
           "130 mg"
         ],
         "symptoms": [
@@ -44,59 +44,29 @@
         "relationships": [
           {
             "subject": "Type 2 Diabetes",
-            "predicate": "managed_by",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "managed_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "measured_by",
-            "object": "Blood pressure",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Blood pressure",
-            "predicate": "measured_at",
-            "object": "Physical examination",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Type 2 Diabetes",
             "predicate": "measured_by",
             "object": "HbA1c",
             "confidence": 0.9
           },
           {
-            "subject": "HbA1c",
-            "predicate": "measured_at",
-            "object": "Laboratory values",
+            "subject": "Hyperlipidemia",
+            "predicate": "measured_by",
+            "object": "LDL",
             "confidence": 0.9
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "contraindicated_with",
-            "object": "Increased urination",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "Fatigue",
-            "confidence": 0.8
           }
         ],
         "lab_values": {
           "HbA1c": 7.2,
-          "eGFR": 72,
-          "LDL": 130
+          "eGFR": "72 mL/min",
+          "LDL": "130 mg/dL"
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg daily",
+        "20mg daily",
+        "130 mg"
+      ]
     },
     {
       "visit_id": "V2",
@@ -110,18 +80,16 @@
         "LDL": 160
       },
       "medications": [
-        "Metformin 1000mg BID",
-        "Lisinopril 20mg daily",
-        "Atorvastatin 40mg daily",
-        "Furosemide 20mg daily",
-        "160 mg"
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "furosemide"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
-        "Chronic Kidney Disease",
-        "Diabetes"
+        "Chronic Kidney Disease"
       ],
       "symptoms": [
         "Shortness of breath",
@@ -133,66 +101,32 @@
       "extracted": {
         "conditions": [
           "Hypertension",
-          "Diabetes"
+          "Type 2 Diabetes"
         ],
-        "medications": [
+        "medications": [],
+        "dosages": [
           "160 mg"
         ],
         "symptoms": [
-          "Edema",
-          "Shortness of breath"
+          "Shortness of breath",
+          "Edema"
         ],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "Hypertension",
-            "predicate": "managed_by",
-            "object": "160 mg",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Diabetes",
-            "predicate": "managed_by",
-            "object": "160 mg",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Laboratory values",
-            "confidence": 0.9
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "Laboratory values",
-            "confidence": 0.9
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "Laboratory values",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Shortness of breath",
-            "predicate": "has_symptom",
-            "object": "Edema",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "worsens",
-            "object": "Shortness of breath",
-            "confidence": 0.6
-          }
-        ],
+        "relationships": [],
         "lab_values": {
           "HbA1c": 8.5,
-          "eGFR": 60,
-          "LDL": 160
+          "BP_systolic": "150 mmHg",
+          "BP_diastolic": "95 mmHg",
+          "eGFR": "60 mL/min",
+          "LDL": "160 mg/dL"
         }
-      }
+      },
+      "dosages": [
+        "1000mg BID",
+        "20mg daily",
+        "40mg daily",
+        "160 mg"
+      ]
     },
     {
       "visit_id": "V3",
@@ -206,20 +140,18 @@
         "LDL": 180
       },
       "medications": [
-        "Metformin 1500mg BID",
-        "Lisinopril 40mg daily",
-        "Atorvastatin 80mg daily",
-        "Furosemide 40mg daily",
-        "Aspirin 81mg daily",
-        "180 mg"
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "furosemide",
+        "aspirin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
         "Chronic Kidney Disease",
-        "Coronary Artery Disease",
-        "Diabetes"
+        "Coronary Artery Disease"
       ],
       "symptoms": [
         "Chest pain",
@@ -232,9 +164,10 @@
       "extracted": {
         "conditions": [
           "Hypertension",
-          "Diabetes"
+          "Type 2 Diabetes"
         ],
-        "medications": [
+        "medications": [],
+        "dosages": [
           "180 mg"
         ],
         "symptoms": [
@@ -244,52 +177,16 @@
         "procedures": [],
         "relationships": [
           {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Chest pain",
+            "confidence": 0.7
+          },
+          {
             "subject": "Hypertension",
-            "predicate": "managed_by",
-            "object": "180 mg",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Diabetes",
-            "predicate": "managed_by",
-            "object": "180 mg",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Chest pain",
-            "predicate": "has_symptom",
-            "object": "Palpitations",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Blood pressure",
-            "predicate": "measured_by",
-            "object": "160/100 mmHg",
+            "predicate": "worsens",
+            "object": "Chest pain",
             "confidence": 0.7
-          },
-          {
-            "subject": "BMI",
-            "predicate": "measured_by",
-            "object": "34 kg/m^2",
-            "confidence": 0.7
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "9.0%",
-            "confidence": 0.6
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "45 mL/min",
-            "confidence": 0.6
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "180 mg/dL",
-            "confidence": 0.6
           }
         ],
         "lab_values": {
@@ -297,7 +194,14 @@
           "eGFR": "45 mL/min",
           "LDL": "180 mg/dL"
         }
-      }
+      },
+      "dosages": [
+        "1500mg BID",
+        "40mg daily",
+        "80mg daily",
+        "81mg daily",
+        "180 mg"
+      ]
     }
   ]
 }

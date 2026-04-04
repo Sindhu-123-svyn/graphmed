@@ -13,12 +13,9 @@
         "LDL": 130
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg OD",
         "metformin",
-        "lisinopril",
-        "500mg",
-        "10mg"
+        "lisinopril od",
+        "lisinopril"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -26,75 +23,65 @@
         "Hyperlipidemia"
       ],
       "symptoms": [
-        "polyuria",
-        "polydipsia",
-        "fatigue"
+        "Frequent urination",
+        "Polydipsia",
+        "Fatigue"
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [
           "metformin",
-          "lisinopril",
-          "500mg",
+          "lisinopril"
+        ],
+        "dosages": [
+          "500mg BID",
           "10mg"
         ],
         "symptoms": [
-          "Polydipsia",
-          "Polyuria",
-          "Fatigue"
+          "Fatigue",
+          "Frequent urination",
+          "Polydipsia"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "Lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "lisinopril",
             "confidence": 0.9
           },
           {
-            "subject": "HbA1c",
+            "subject": "Type 2 Diabetes",
             "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
+            "object": "HbA1c",
             "confidence": 0.8
           },
           {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Polyuria",
-            "predicate": "has_symptom",
-            "object": "Type 2 Diabetes",
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Fatigue",
             "confidence": 0.7
           },
           {
-            "subject": "Polydipsia",
-            "predicate": "has_symptom",
-            "object": "Type 2 Diabetes",
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Frequent urination",
             "confidence": 0.7
           },
           {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Type 2 Diabetes",
+            "subject": "Hyperlipidemia",
+            "predicate": "worsens",
+            "object": "Polydipsia",
             "confidence": 0.7
           }
         ],
@@ -104,7 +91,11 @@
           "HbA1c": 7.2,
           "LDL": 130
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg"
+      ]
     },
     {
       "visit_id": "V2",
@@ -118,11 +109,10 @@
         "LDL": 145
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg OD",
-        "Atorvastatin 20mg OD",
-        "atorvastatin",
-        "20mg"
+        "metformin",
+        "lisinopril od",
+        "atorvastatin od",
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -130,61 +120,53 @@
         "Hyperlipidemia"
       ],
       "symptoms": [
-        "polyuria",
-        "polydipsia",
-        "fatigue",
-        "edema",
-        "shortness of breath"
+        "Frequent urination",
+        "Polydipsia",
+        "Fatigue",
+        "Edema",
+        "Shortness of breath",
+        "Worsening hypertension"
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hypertension",
+          "Hyperlipidemia"
         ],
         "medications": [
-          "atorvastatin",
+          "atorvastatin"
+        ],
+        "dosages": [
           "20mg"
         ],
         "symptoms": [
+          "Shortness of breath",
           "Edema",
-          "Shortness of breath"
+          "Worsening hypertension"
         ],
         "procedures": [],
         "relationships": [
           {
             "subject": "Hypertension",
-            "predicate": "worsens",
-            "object": "BP_systolic",
-            "confidence": 0.9
+            "predicate": "managed_by",
+            "object": "atorvastatin",
+            "confidence": 0.8
           },
           {
             "subject": "Hyperlipidemia",
+            "predicate": "managed_by",
+            "object": "atorvastatin",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
             "predicate": "worsens",
-            "object": "LDL",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Atorvastatin",
-            "predicate": "managed_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Atorvastatin",
-            "predicate": "managed_by",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP_systolic",
-            "predicate": "measured_by",
-            "object": "Hypertension",
+            "object": "Shortness of breath",
             "confidence": 0.7
           },
           {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "Hyperlipidemia",
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Edema",
             "confidence": 0.7
           }
         ],
@@ -194,7 +176,12 @@
           "HbA1c": 7.8,
           "LDL": 145
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg",
+        "20mg"
+      ]
     },
     {
       "visit_id": "V3",
@@ -208,13 +195,12 @@
         "LDL": 155
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg OD",
-        "Atorvastatin 20mg OD",
-        "Furosemide 40mg BID",
-        "Aspirin 81mg OD",
-        "40mg",
-        "81mg"
+        "metformin",
+        "lisinopril od",
+        "atorvastatin od",
+        "furosemide",
+        "aspirin od",
+        "aspirin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -224,77 +210,61 @@
         "Coronary Artery Disease"
       ],
       "symptoms": [
-        "polyuria",
-        "polydipsia",
-        "fatigue",
-        "edema",
-        "shortness of breath"
+        "Frequent urination",
+        "Polydipsia",
+        "Fatigue",
+        "Edema",
+        "Shortness of breath"
       ],
       "extracted": {
         "conditions": [
-          "Coronary Artery Disease",
-          "Chronic Kidney Disease"
+          "Chronic Kidney Disease",
+          "Coronary Artery Disease"
         ],
         "medications": [
-          "40mg",
-          "81mg",
+          "furosemide",
+          "aspirin"
+        ],
+        "dosages": [
           "Furosemide 40mg BID",
           "Aspirin 81mg OD"
         ],
         "symptoms": [
-          "Edema",
+          "Fatigue",
           "Shortness of breath",
-          "Fatigue"
+          "Edema"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Furosemide",
+            "subject": "Chronic Kidney Disease",
             "predicate": "managed_by",
-            "object": "Chronic Kidney Disease",
+            "object": "furosemide",
             "confidence": 0.9
           },
           {
-            "subject": "Aspirin",
+            "subject": "Coronary Artery Disease",
             "predicate": "managed_by",
-            "object": "Coronary Artery Disease",
+            "object": "aspirin",
             "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Coronary Artery Disease",
-            "confidence": 0.8
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "Coronary Artery Disease",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Furosemide",
-            "predicate": "contraindicated_with",
-            "object": "Coronary Artery Disease",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Aspirin",
-            "predicate": "contraindicated_with",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.7
           },
           {
             "subject": "Chronic Kidney Disease",
-            "predicate": "worsens",
-            "object": "Coronary Artery Disease",
-            "confidence": 0.6
+            "predicate": "measured_by",
+            "object": "HbA1c",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "measured_by",
+            "object": "BP_systolic",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "measured_by",
+            "object": "LDL",
+            "confidence": 0.8
           }
         ],
         "lab_values": {
@@ -303,7 +273,16 @@
           "HbA1c": 8.2,
           "LDL": 155
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg",
+        "20mg",
+        "40mg BID",
+        "81mg",
+        "Furosemide 40mg BID",
+        "Aspirin 81mg OD"
+      ]
     }
   ]
 }

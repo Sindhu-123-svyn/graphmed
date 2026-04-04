@@ -13,12 +13,9 @@
         "LDL": 130
       },
       "medications": [
-        "Metformin 500mg twice daily",
-        "Lisinopril 10mg daily",
-        "metformin",
+        "metformin twice daily",
         "lisinopril",
-        "500mg",
-        "10mg"
+        "metformin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -33,88 +30,54 @@
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [
           "metformin",
-          "lisinopril",
-          "500mg",
-          "10mg"
+          "lisinopril"
+        ],
+        "dosages": [
+          "500mg twice daily",
+          "10mg daily"
         ],
         "symptoms": [
-          "Polydipsia",
           "Fatigue",
-          "Weight Loss"
+          "Polydipsia",
+          "Weight loss"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Metformin",
-            "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Lisinopril",
-            "predicate": "managed_by",
-            "object": "Hypertension",
-            "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Metformin",
-            "predicate": "contraindicated_with",
-            "object": "Hyperlipidemia",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Lisinopril",
-            "predicate": "contraindicated_with",
-            "object": "Hyperlipidemia",
-            "confidence": 0.7
-          },
-          {
             "subject": "Type 2 Diabetes",
-            "predicate": "improves",
-            "object": "Metformin",
-            "confidence": 0.6
+            "predicate": "managed_by",
+            "object": "metformin",
+            "confidence": 0.9
           },
           {
             "subject": "Hypertension",
-            "predicate": "improves",
-            "object": "Lisinopril",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "Hyperlipidemia",
-            "confidence": 0.5
+            "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.9
           },
           {
             "subject": "Hypertension",
             "predicate": "worsens",
-            "object": "Hyperlipidemia",
-            "confidence": 0.5
+            "object": "Fatigue",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Weight loss",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "worsens",
+            "object": "Polydipsia",
+            "confidence": 0.8
           }
         ],
         "lab_values": {
@@ -123,7 +86,12 @@
           "BP_diastolic": 90,
           "eGFR": 72
         }
-      }
+      },
+      "dosages": [
+        "500mg",
+        "10mg daily",
+        "500mg twice daily"
+      ]
     },
     {
       "visit_id": "V2",
@@ -137,20 +105,15 @@
         "LDL": 160
       },
       "medications": [
-        "Metformin 500mg twice daily",
-        "Lisinopril 20mg daily",
-        "Atorvastatin 40mg daily",
+        "metformin twice daily",
         "lisinopril",
-        "atorvastatin",
-        "40mg",
-        "20mg"
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
-        "Chronic Kidney Disease",
-        "Diabetes Mellitus"
+        "Chronic Kidney Disease"
       ],
       "symptoms": [
         "Fatigue",
@@ -160,89 +123,48 @@
       ],
       "extracted": {
         "conditions": [
-          "Diabetes Mellitus",
+          "Type 2 Diabetes",
           "Hypertension"
         ],
         "medications": [
           "lisinopril",
-          "atorvastatin",
-          "40mg",
-          "20mg"
+          "atorvastatin"
+        ],
+        "dosages": [
+          "40mg daily",
+          "20mg daily"
         ],
         "symptoms": [
           "Fatigue",
-          "Weight Loss"
+          "Weight loss"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Atorvastatin",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Patient P012",
-            "confidence": 1.0
-          },
-          {
-            "subject": "Lisinopril",
-            "predicate": "managed_by",
-            "object": "Patient P012",
-            "confidence": 1.0
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Patient P012",
-            "confidence": 1.0
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "Patient P012",
-            "confidence": 1.0
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Patient P012",
-            "confidence": 1.0
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Weight Loss",
+            "object": "lisinopril",
             "confidence": 0.8
           },
           {
-            "subject": "Atorvastatin",
-            "predicate": "contraindicated_with",
-            "object": "Diabetes Mellitus",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Lisinopril",
-            "predicate": "contraindicated_with",
-            "object": "Diabetes Mellitus",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Diabetes Mellitus",
-            "predicate": "worsens",
-            "object": "Fatigue",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Diabetes Mellitus",
-            "predicate": "worsens",
-            "object": "Weight Loss",
-            "confidence": 0.9
+            "subject": "lisinopril",
+            "predicate": "improves",
+            "object": "Hypertension",
+            "confidence": 0.4
           }
         ],
         "lab_values": {
           "HbA1c": 8.1,
-          "eGFR": 60,
           "BP_systolic": 150,
-          "BP_diastolic": 95
+          "BP_diastolic": 95,
+          "eGFR": 60
         }
-      }
+      },
+      "dosages": [
+        "500mg",
+        "20mg daily",
+        "40mg daily"
+      ]
     },
     {
       "visit_id": "V3",
@@ -256,14 +178,10 @@
         "LDL": 180
       },
       "medications": [
-        "Metformin 500mg twice daily",
-        "Lisinopril 30mg daily",
-        "Atorvastatin 40mg daily",
-        "Empagliflozin 25mg daily",
+        "metformin twice daily",
         "lisinopril",
-        "25mg",
-        "30mg",
-        "Empagliflozin"
+        "atorvastatin",
+        "empagliflozin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -288,89 +206,32 @@
         ],
         "medications": [
           "lisinopril",
-          "25mg",
-          "30mg",
-          "Empagliflozin"
+          "empagliflozin"
+        ],
+        "dosages": [
+          "30mg daily",
+          "25mg daily"
         ],
         "symptoms": [
-          "Edema",
           "Fatigue",
-          "Weight Loss"
+          "Edema",
+          "Weight loss"
         ],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "Empagliflozin",
-            "predicate": "managed_by",
-            "object": "kidney function",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Lisinopril",
-            "predicate": "increased",
-            "object": "30mg",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "160/100",
-            "confidence": 0.7
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "9.0",
-            "confidence": 0.7
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "45",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Empagliflozin",
-            "predicate": "contraindicated_with",
-            "object": "none",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Lisinopril",
-            "predicate": "contraindicated_with",
-            "object": "none",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Empagliflozin",
-            "predicate": "improves",
-            "object": "kidney function",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Lisinopril",
-            "predicate": "improves",
-            "object": "BP",
-            "confidence": 0.7
-          },
-          {
-            "subject": "BP",
-            "predicate": "worsens",
-            "object": "kidney function",
-            "confidence": 0.6
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "worsens",
-            "object": "kidney function",
-            "confidence": 0.6
-          }
-        ],
+        "relationships": [],
         "lab_values": {
           "HbA1c": 9.0,
+          "BP_systolic": 160,
+          "BP_diastolic": 100,
           "eGFR": 45
         }
-      }
+      },
+      "dosages": [
+        "500mg",
+        "30mg daily",
+        "40mg daily",
+        "25mg daily"
+      ]
     }
   ]
 }

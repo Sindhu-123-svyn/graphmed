@@ -13,16 +13,10 @@
         "LDL": 130
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg daily",
-        "Simvastatin 20mg HS",
         "metformin",
         "lisinopril",
-        "simvastatin",
-        "130 mg",
-        "500mg",
-        "10mg",
-        "20mg"
+        "simvastatin hs",
+        "simvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -35,24 +29,57 @@
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [
           "metformin",
           "lisinopril",
-          "simvastatin",
-          "130 mg",
-          "500mg",
-          "10mg",
-          "20mg"
+          "simvastatin"
+        ],
+        "dosages": [
+          "500mg twice daily",
+          "10mg daily",
+          "20mg nightly"
         ],
         "symptoms": [
-          "Fatigue"
+          "Fatigue",
+          "Palpitations"
         ],
         "procedures": [],
-        "relationships": [],
+        "relationships": [
+          {
+            "subject": "Type 2 Diabetes",
+            "predicate": "managed_by",
+            "object": "metformin",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "managed_by",
+            "object": "simvastatin",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Palpitations",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "has_symptom",
+            "object": "Fatigue",
+            "confidence": 0.8
+          }
+        ],
         "lab_values": {
           "HbA1c": 7.2,
           "BP_systolic": 140,
@@ -60,7 +87,14 @@
           "eGFR": 72.0,
           "LDL": 130.0
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg daily",
+        "20mg",
+        "500mg twice daily",
+        "20mg nightly"
+      ]
     },
     {
       "visit_id": "V2",
@@ -74,12 +108,9 @@
         "LDL": 145
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 20mg daily",
-        "Simvastatin 20mg HS",
+        "metformin",
         "lisinopril",
-        "145 mg",
-        "20mg"
+        "simvastatin hs"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -97,11 +128,14 @@
           "Chronic Kidney Disease"
         ],
         "medications": [
-          "lisinopril",
-          "145 mg",
-          "20mg"
+          "lisinopril"
         ],
-        "symptoms": [],
+        "dosages": [
+          "20mg daily"
+        ],
+        "symptoms": [
+          "Nocturia"
+        ],
         "procedures": [],
         "relationships": [],
         "lab_values": {
@@ -111,7 +145,12 @@
           "eGFR": 70.0,
           "LDL": 145.0
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "20mg daily",
+        "20mg"
+      ]
     },
     {
       "visit_id": "V3",
@@ -125,14 +164,9 @@
         "LDL": 155
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 40mg daily",
-        "Simvastatin 20mg HS",
-        "Furosemide 20mg daily",
+        "metformin",
         "lisinopril",
-        "155 mg",
-        "40mg",
-        "20mg",
+        "simvastatin hs",
         "furosemide"
       ],
       "diagnoses": [
@@ -147,9 +181,9 @@
         "Palpitations",
         "Nocturia",
         "Ankle edema",
-        "Dyspnea",
+        "Shortness of breath",
         "Edema",
-        "obesity"
+        "Obesity"
       ],
       "extracted": {
         "conditions": [
@@ -157,65 +191,42 @@
         ],
         "medications": [
           "lisinopril",
-          "155 mg",
-          "40mg",
-          "20mg",
           "furosemide"
+        ],
+        "dosages": [
+          "40mg daily",
+          "20mg daily"
         ],
         "symptoms": [
           "Edema",
-          "ankle edema",
-          "obesity"
+          "Ankle edema",
+          "Obesity"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "lisinopril",
-            "predicate": "increased",
-            "object": "40mg",
-            "confidence": 0.9
+            "subject": "Coronary Artery Disease",
+            "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.8
           },
           {
-            "subject": "lisinopril",
-            "predicate": "contraindicated_with",
+            "subject": "Coronary Artery Disease",
+            "predicate": "managed_by",
             "object": "furosemide",
             "confidence": 0.8
           },
           {
-            "subject": "furosemide",
-            "predicate": "managed_by",
-            "object": "edema",
-            "confidence": 0.9
-          },
-          {
             "subject": "Coronary Artery Disease",
             "predicate": "worsens",
-            "object": "ankle edema",
+            "object": "Ankle edema",
             "confidence": 0.7
           },
           {
             "subject": "Coronary Artery Disease",
             "predicate": "worsens",
-            "object": "obesity",
+            "object": "Obesity",
             "confidence": 0.7
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "150/100 mmHg",
-            "confidence": 0.9
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "65 mL/min",
-            "confidence": 0.9
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "155 mg/dL",
-            "confidence": 0.9
           }
         ],
         "lab_values": {
@@ -225,7 +236,13 @@
           "eGFR": 65.0,
           "LDL": 155.0
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "40mg daily",
+        "20mg",
+        "20mg daily"
+      ]
     },
     {
       "visit_id": "V4",
@@ -239,16 +256,11 @@
         "LDL": 165
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 60mg daily",
-        "Simvastatin 20mg HS",
-        "Furosemide 20mg daily",
-        "Amlodipine 5mg daily",
+        "metformin",
         "lisinopril",
-        "amlodipine",
-        "165 mg",
-        "60mg",
-        "5mg"
+        "simvastatin hs",
+        "furosemide",
+        "amlodipine"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -256,100 +268,35 @@
         "Hyperlipidemia",
         "Chronic Kidney Disease",
         "Coronary Artery Disease",
-        "Retinopathy",
-        "Obesity",
-        "Diabetes"
+        "Retinopathy"
       ],
       "symptoms": [
         "Fatigue",
         "Palpitations",
         "Nocturia",
         "Ankle edema",
-        "Dyspnea",
+        "Shortness of breath",
         "Headaches",
         "Dizziness"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Obesity",
-          "Diabetes",
           "Retinopathy"
         ],
         "medications": [
           "lisinopril",
-          "amlodipine",
-          "165 mg",
-          "60mg",
-          "5mg"
+          "amlodipine"
+        ],
+        "dosages": [
+          "60mg daily",
+          "5mg daily"
         ],
         "symptoms": [
           "Dizziness",
           "Headaches"
         ],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "Lisinopril",
-            "predicate": "increased",
-            "object": "60mg",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Amlodipine",
-            "predicate": "started",
-            "object": "5mg",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "BP_systolic",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "BP_diastolic",
-            "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "HbA1c",
-            "confidence": 0.9
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "eGFR",
-            "confidence": 0.9
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "LDL",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Lisinopril",
-            "predicate": "contraindicated_with",
-            "object": "Retinopathy",
-            "confidence": 0.7
-          },
-          {
-            "subject": "BP",
-            "predicate": "worsens",
-            "object": "Headaches",
-            "confidence": 0.6
-          },
-          {
-            "subject": "BP",
-            "predicate": "worsens",
-            "object": "Dizziness",
-            "confidence": 0.6
-          }
-        ],
+        "relationships": [],
         "lab_values": {
           "HbA1c": 8.5,
           "BP_systolic": 155,
@@ -357,7 +304,14 @@
           "eGFR": 60.0,
           "LDL": 165.0
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "60mg daily",
+        "20mg",
+        "20mg daily",
+        "5mg daily"
+      ]
     },
     {
       "visit_id": "V5",
@@ -371,14 +325,11 @@
         "LDL": 175
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 60mg daily",
-        "Simvastatin 20mg HS",
-        "Furosemide 40mg daily",
-        "Amlodipine 5mg daily",
-        "175 mg",
-        "40mg",
-        "Furosemide"
+        "metformin",
+        "lisinopril",
+        "simvastatin hs",
+        "furosemide",
+        "amlodipine"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -394,10 +345,9 @@
         "Palpitations",
         "Nocturia",
         "Ankle edema",
-        "Dyspnea",
+        "Shortness of breath",
         "Headaches",
         "Dizziness",
-        "Shortness of breath",
         "Edema"
       ],
       "extracted": {
@@ -405,57 +355,22 @@
           "Heart Failure"
         ],
         "medications": [
-          "175 mg",
-          "40mg",
-          "Furosemide"
+          "furosemide"
+        ],
+        "dosages": [
+          "40mg daily"
         ],
         "symptoms": [
-          "Edema",
-          "Shortness of breath"
+          "Shortness of breath",
+          "Edema"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Furosemide",
-            "predicate": "managed_by",
-            "object": "edema",
-            "confidence": 0.9
-          },
-          {
             "subject": "Heart Failure",
             "predicate": "worsens",
-            "object": "shortness of breath",
+            "object": "Shortness of breath",
             "confidence": 0.8
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "lab results",
-            "confidence": 0.7
-          },
-          {
-            "subject": "BP_systolic",
-            "predicate": "measured_by",
-            "object": "lab results",
-            "confidence": 0.7
-          },
-          {
-            "subject": "BP_diastolic",
-            "predicate": "measured_by",
-            "object": "lab results",
-            "confidence": 0.7
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "lab results",
-            "confidence": 0.7
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "lab results",
-            "confidence": 0.7
           }
         ],
         "lab_values": {
@@ -465,7 +380,14 @@
           "eGFR": 55.0,
           "LDL": 175.0
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "60mg daily",
+        "20mg",
+        "40mg daily",
+        "5mg daily"
+      ]
     }
   ]
 }

@@ -13,12 +13,8 @@
         "LDL": 140
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg daily",
         "metformin",
-        "lisinopril",
-        "500mg",
-        "10mg"
+        "lisinopril"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -27,124 +23,58 @@
       "symptoms": [
         "Fatigue",
         "Weight gain",
-        "Polyuria",
-        "Edema",
-        "Obesity"
+        "Frequent urination",
+        "Edema"
       ],
       "extracted": {
         "conditions": [
-          "Type 2 Diabetes",
-          "Hypertension"
+          "Hypertension",
+          "Type 2 Diabetes"
         ],
         "medications": [
           "metformin",
-          "lisinopril",
-          "500mg",
-          "10mg"
+          "lisinopril"
+        ],
+        "dosages": [
+          "500mg BID",
+          "10mg daily"
         ],
         "symptoms": [
-          "Edema",
-          "Polyuria",
           "Fatigue",
-          "Obesity"
+          "Frequent urination",
+          "Edema"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "lisinopril",
             "confidence": 0.9
           },
           {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP_systolic",
-            "predicate": "measured_by",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP_systolic",
-            "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP_diastolic",
-            "predicate": "measured_by",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP_diastolic",
-            "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.8
-          },
-          {
             "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "Edema",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "Polyuria",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "Fatigue",
-            "confidence": 0.7
+            "predicate": "measured_by",
+            "object": "HbA1c",
+            "confidence": 0.8
           },
           {
             "subject": "Hypertension",
-            "predicate": "worsens",
-            "object": "Edema",
-            "confidence": 0.7
+            "predicate": "measured_by",
+            "object": "BP_systolic",
+            "confidence": 0.8
           },
           {
             "subject": "Hypertension",
-            "predicate": "worsens",
-            "object": "Polyuria",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "worsens",
-            "object": "Fatigue",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Obesity",
-            "predicate": "has_symptom",
-            "object": "Edema",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Obesity",
-            "predicate": "has_symptom",
-            "object": "Polyuria",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Obesity",
-            "predicate": "has_symptom",
-            "object": "Fatigue",
-            "confidence": 0.6
+            "predicate": "measured_by",
+            "object": "BP_diastolic",
+            "confidence": 0.8
           }
         ],
         "lab_values": {
@@ -152,7 +82,11 @@
           "BP_diastolic": 90,
           "HbA1c": 8.1
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg daily"
+      ]
     },
     {
       "visit_id": "V2",
@@ -166,11 +100,9 @@
         "LDL": 120
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg daily",
-        "Atorvastatin 20mg daily",
-        "atorvastatin",
-        "20mg"
+        "metformin",
+        "lisinopril",
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -188,49 +120,26 @@
           "Hyperlipidemia"
         ],
         "medications": [
-          "atorvastatin",
-          "20mg"
+          "atorvastatin"
+        ],
+        "dosages": [
+          "20mg daily"
         ],
         "symptoms": [
-          "Edema",
           "Fatigue",
-          "Decreased exercise tolerance"
+          "Edema"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "atorvastatin",
+            "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "BP",
+            "object": "atorvastatin",
             "confidence": 0.9
           },
           {
             "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "eGFR",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP",
             "predicate": "worsens",
-            "object": "Hyperlipidemia",
-            "confidence": 0.7
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "worsens",
-            "object": "Hyperlipidemia",
-            "confidence": 0.7
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "improves",
             "object": "Hyperlipidemia",
             "confidence": 0.8
           }
@@ -241,7 +150,12 @@
           "BP_diastolic": 95,
           "eGFR": 65
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg daily",
+        "20mg daily"
+      ]
     },
     {
       "visit_id": "V3",
@@ -255,15 +169,11 @@
         "LDL": 110
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg daily",
-        "Atorvastatin 20mg daily",
-        "Aspirin 81mg daily",
-        "Clopidogrel 75mg daily",
-        "clopidogrel",
-        "81mg",
-        "75mg",
-        "aspirin"
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "aspirin",
+        "clopidogrel"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -283,10 +193,12 @@
           "Coronary Artery Disease"
         ],
         "medications": [
-          "clopidogrel",
-          "81mg",
-          "75mg",
-          "aspirin"
+          "aspirin",
+          "clopidogrel"
+        ],
+        "dosages": [
+          "81mg daily",
+          "75mg daily"
         ],
         "symptoms": [
           "Shortness of breath",
@@ -305,48 +217,6 @@
             "predicate": "managed_by",
             "object": "clopidogrel",
             "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "lab_values",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "lab_values",
-            "confidence": 0.9
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "lab_values",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Shortness of breath",
-            "predicate": "has_symptom",
-            "object": "Orthopnea",
-            "confidence": 0.7
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "worsens",
-            "object": "Coronary Artery Disease",
-            "confidence": 0.6
-          },
-          {
-            "subject": "BP",
-            "predicate": "worsens",
-            "object": "Coronary Artery Disease",
-            "confidence": 0.6
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "worsens",
-            "object": "Coronary Artery Disease",
-            "confidence": 0.6
           }
         ],
         "lab_values": {
@@ -355,7 +225,14 @@
           "BP_diastolic": 100,
           "eGFR": 55
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg daily",
+        "20mg daily",
+        "81mg daily",
+        "75mg daily"
+      ]
     },
     {
       "visit_id": "V4",
@@ -369,13 +246,13 @@
         "LDL": 100
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg daily",
-        "Atorvastatin 20mg daily",
-        "Aspirin 81mg daily",
-        "Clopidogrel 75mg daily",
-        "Erythropoietin 5000 IU weekly",
-        "Erythropoietin"
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "aspirin",
+        "clopidogrel",
+        "erythropoietin 5000 iu weekly",
+        "erythropoietin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -397,74 +274,47 @@
           "Chronic Kidney Disease"
         ],
         "medications": [
-          "Erythropoietin"
+          "erythropoietin"
+        ],
+        "dosages": [
+          "5000 IU weekly"
         ],
         "symptoms": [
-          "Edema",
           "Fatigue",
+          "Edema",
           "Decreased exercise tolerance"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Erythropoietin",
+            "subject": "Chronic Kidney Disease",
             "predicate": "managed_by",
-            "object": "Chronic Kidney Disease",
+            "object": "erythropoietin",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "measured_by",
+            "object": "HbA1c",
             "confidence": 0.8
           },
           {
-            "subject": "HbA1c",
+            "subject": "Chronic Kidney Disease",
             "predicate": "measured_by",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.9
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Edema",
-            "predicate": "has_symptom",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Decreased exercise tolerance",
-            "predicate": "has_symptom",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.7
+            "object": "BP_systolic",
+            "confidence": 0.8
           },
           {
             "subject": "Chronic Kidney Disease",
-            "predicate": "worsens",
-            "object": "Fatigue",
-            "confidence": 0.6
+            "predicate": "measured_by",
+            "object": "BP_diastolic",
+            "confidence": 0.8
           },
           {
             "subject": "Chronic Kidney Disease",
-            "predicate": "worsens",
-            "object": "Edema",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Chronic Kidney Disease",
-            "predicate": "worsens",
-            "object": "Decreased exercise tolerance",
-            "confidence": 0.6
+            "predicate": "measured_by",
+            "object": "eGFR",
+            "confidence": 0.8
           }
         ],
         "lab_values": {
@@ -473,7 +323,15 @@
           "BP_diastolic": 105,
           "eGFR": 45
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg daily",
+        "20mg daily",
+        "81mg daily",
+        "75mg daily",
+        "5000 IU weekly"
+      ]
     }
   ]
 }

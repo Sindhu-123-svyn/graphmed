@@ -10,19 +10,22 @@
         "BP_systolic": 150,
         "BP_diastolic": 80,
         "eGFR": 80,
-        "LDL": 180
+        "LDL": 180,
+        "HDL": null,
+        "Creatinine": null,
+        "Glucose": null,
+        "Potassium": null,
+        "Sodium": null
       },
       "medications": [
-        "Metformin 500mg BID",
-        "metformin",
-        "500mg"
+        "metformin"
       ],
       "diagnoses": [
         "Type 2 Diabetes"
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia"
       ],
       "extracted": {
@@ -30,44 +33,59 @@
           "Type 2 Diabetes"
         ],
         "medications": [
-          "metformin",
-          "500mg",
-          "Metformin 500mg BID"
+          "metformin"
+        ],
+        "dosages": [
+          "500mg BID"
         ],
         "symptoms": [
-          "Polydipsia",
-          "Polyuria",
-          "Fatigue"
+          "Fatigue",
+          "Frequent urination",
+          "Polydipsia"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Metformin 500mg BID",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "Polyuria",
+            "subject": "Type 2 Diabetes",
             "predicate": "has_symptom",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.8
+            "object": "Fatigue",
+            "confidence": 0.7
           },
           {
-            "subject": "Polydipsia",
+            "subject": "Type 2 Diabetes",
             "predicate": "has_symptom",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.8
+            "object": "Frequent urination",
+            "confidence": 0.7
           },
           {
-            "subject": "Fatigue",
+            "subject": "Type 2 Diabetes",
             "predicate": "has_symptom",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.8
+            "object": "Polydipsia",
+            "confidence": 0.7
           }
         ],
-        "lab_values": {}
-      }
+        "lab_values": {
+          "HbA1c": null,
+          "BP_systolic": null,
+          "BP_diastolic": null,
+          "eGFR": null,
+          "LDL": null,
+          "HDL": null,
+          "Creatinine": null,
+          "Glucose": null,
+          "Potassium": null,
+          "Sodium": null
+        }
+      },
+      "dosages": [
+        "500mg BID"
+      ]
     },
     {
       "visit_id": "V2",
@@ -81,11 +99,9 @@
         "LDL": 160
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 2.5mg QD",
-        "lisinopril",
-        "2.5mg",
-        "Lisinopril 2.5mg"
+        "metformin",
+        "lisinopril qd",
+        "lisinopril"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -93,7 +109,7 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Lower extremity edema",
         "Edema"
@@ -103,37 +119,33 @@
           "Hypertension"
         ],
         "medications": [
-          "lisinopril",
-          "2.5mg",
-          "Lisinopril 2.5mg"
+          "lisinopril"
+        ],
+        "dosages": [
+          "2.5mg"
         ],
         "symptoms": [
-          "Edema",
-          "Fatigue"
+          "Fatigue",
+          "Edema"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "lisinopril",
             "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Lisinopril",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Lisinopril",
-            "predicate": "improves",
-            "object": "Hypertension",
-            "confidence": 0.7
           }
         ],
-        "lab_values": {}
-      }
+        "lab_values": {
+          "BP_systolic": "within goal range",
+          "BP_diastolic": "within goal range"
+        }
+      },
+      "dosages": [
+        "500mg BID",
+        "2.5mg"
+      ]
     },
     {
       "visit_id": "V3",
@@ -147,12 +159,10 @@
         "LDL": 130
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 2.5mg QD",
-        "Simvastatin 20mg QD",
-        "simvastatin",
-        "20mg",
-        "Simvastatin 20mg"
+        "metformin",
+        "lisinopril qd",
+        "simvastatin qd",
+        "simvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -162,7 +172,7 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Lower extremity edema",
         "Chest discomfort",
@@ -174,9 +184,10 @@
           "Coronary Artery Disease"
         ],
         "medications": [
-          "simvastatin",
-          "20mg",
-          "Simvastatin 20mg"
+          "simvastatin"
+        ],
+        "dosages": [
+          "20mg QD"
         ],
         "symptoms": [
           "Chest pain",
@@ -188,26 +199,20 @@
         ],
         "relationships": [
           {
-            "subject": "Simvastatin 20mg",
+            "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Hyperlipidemia",
+            "object": "simvastatin",
             "confidence": 0.9
-          },
-          {
-            "subject": "ECG",
-            "predicate": "measured_by",
-            "object": "Chest discomfort",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Stress test",
-            "predicate": "measured_by",
-            "object": "Chest discomfort",
-            "confidence": 0.8
           }
         ],
         "lab_values": {}
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "2.5mg",
+        "20mg",
+        "20mg QD"
+      ]
     },
     {
       "visit_id": "V4",
@@ -221,12 +226,11 @@
         "LDL": 140
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 2.5mg QD",
-        "Simvastatin 20mg QD",
-        "Furosemide 40mg QD",
-        "40mg",
-        "Furosemide 40mg"
+        "metformin",
+        "lisinopril qd",
+        "simvastatin qd",
+        "furosemide qd",
+        "furosemide"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -236,46 +240,53 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Lower extremity edema",
         "Chest discomfort",
-        "Edema"
+        "Edema",
+        "Worsening"
       ],
       "extracted": {
         "conditions": [
           "Chronic Kidney Disease"
         ],
         "medications": [
-          "40mg",
-          "Furosemide 40mg"
+          "furosemide"
+        ],
+        "dosages": [
+          "40mg QD"
         ],
         "symptoms": [
-          "Edema"
+          "Edema",
+          "Worsening"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Furosemide 40mg",
+            "subject": "Chronic Kidney Disease",
             "predicate": "managed_by",
-            "object": "Chronic Kidney Disease",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Furosemide 40mg",
-            "predicate": "treats",
-            "object": "Edema",
-            "confidence": 0.7
+            "object": "furosemide",
+            "confidence": 0.9
           },
           {
             "subject": "Chronic Kidney Disease",
             "predicate": "worsens",
             "object": "Edema",
-            "confidence": 0.9
+            "confidence": 0.7
           }
         ],
-        "lab_values": {}
-      }
+        "lab_values": {
+          "eGFR": "implied"
+        }
+      },
+      "dosages": [
+        "500mg BID",
+        "2.5mg",
+        "20mg",
+        "40mg",
+        "40mg QD"
+      ]
     },
     {
       "visit_id": "V5",
@@ -286,28 +297,25 @@
         "BP_systolic": 135,
         "BP_diastolic": 80,
         "eGFR": 50,
-        "LDL": 120,
-        "oxygen_saturation": 88
+        "LDL": 120
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 2.5mg QD",
-        "Simvastatin 20mg QD",
-        "Furosemide 40mg QD",
-        "Amlodipine 5mg QD",
-        "amlodipine",
-        "5mg"
+        "metformin",
+        "lisinopril qd",
+        "simvastatin qd",
+        "furosemide qd",
+        "amlodipine qd",
+        "amlodipine"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
-        "Chronic Kidney Disease",
-        "hypoxemia"
+        "Chronic Kidney Disease"
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Polydipsia",
         "Lower extremity edema",
         "Chest discomfort",
@@ -315,46 +323,31 @@
       ],
       "extracted": {
         "conditions": [
-          "hypoxemia"
+          "Hypertension"
         ],
         "medications": [
-          "amlodipine",
-          "5mg"
+          "amlodipine"
+        ],
+        "dosages": [
+          "5mg QD"
         ],
         "symptoms": [
           "Shortness of breath"
         ],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "amlodipine",
-            "predicate": "managed_by",
-            "object": "blood pressure control",
-            "confidence": 0.8
-          },
-          {
-            "subject": "amlodipine",
-            "predicate": "measured_by",
-            "object": "5mg",
-            "confidence": 0.9
-          },
-          {
-            "subject": "oxygen saturation",
-            "predicate": "measured_by",
-            "object": "88%",
-            "confidence": 0.9
-          },
-          {
-            "subject": "shortness of breath",
-            "predicate": "has_symptom",
-            "object": "hypoxemia",
-            "confidence": 0.7
-          }
-        ],
+        "relationships": [],
         "lab_values": {
-          "oxygen_saturation": 88
+          "BP_systolic": "not specified"
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "2.5mg",
+        "20mg",
+        "40mg",
+        "5mg",
+        "5mg QD"
+      ]
     }
   ]
 }

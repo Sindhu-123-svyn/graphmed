@@ -13,12 +13,8 @@
         "LDL": 130
       },
       "medications": [
-        "Amlodipine 5mg",
-        "Atorvastatin 20mg",
         "amlodipine",
-        "atorvastatin",
-        "5mg",
-        "20mg"
+        "atorvastatin"
       ],
       "diagnoses": [
         "Hypertension",
@@ -30,27 +26,47 @@
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hypertension",
+          "Hyperlipidemia"
         ],
         "medications": [
           "amlodipine",
-          "atorvastatin",
+          "atorvastatin"
+        ],
+        "dosages": [
           "5mg",
           "20mg"
         ],
         "symptoms": [
-          "Fatigue"
+          "Fatigue",
+          "Headaches"
         ],
         "procedures": [],
-        "relationships": [],
+        "relationships": [
+          {
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "amlodipine",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hyperlipidemia",
+            "predicate": "managed_by",
+            "object": "atorvastatin",
+            "confidence": 0.9
+          }
+        ],
         "lab_values": {
           "HbA1c": 7.2,
           "BP_systolic": 140,
           "BP_diastolic": 90,
           "LDL": 130.0
         }
-      }
+      },
+      "dosages": [
+        "5mg",
+        "20mg"
+      ]
     },
     {
       "visit_id": "V2",
@@ -64,13 +80,9 @@
         "LDL": 120
       },
       "medications": [
-        "Amlodipine 10mg",
-        "Atorvastatin 20mg",
-        "Metformin 500mg",
         "amlodipine",
-        "metformin",
-        "10mg",
-        "500mg"
+        "atorvastatin",
+        "metformin"
       ],
       "diagnoses": [
         "Hypertension",
@@ -80,7 +92,7 @@
       "symptoms": [
         "Fatigue",
         "Nausea",
-        "headaches"
+        "Headaches"
       ],
       "extracted": {
         "conditions": [
@@ -88,39 +100,23 @@
         ],
         "medications": [
           "amlodipine",
-          "metformin",
+          "metformin"
+        ],
+        "dosages": [
           "10mg",
           "500mg"
         ],
         "symptoms": [
           "Fatigue",
-          "headaches"
+          "Headaches"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "BP",
-            "predicate": "elevated",
-            "object": "amlodipine",
-            "confidence": 0.9
-          },
-          {
             "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
             "object": "metformin",
-            "confidence": 0.8
-          },
-          {
-            "subject": "headaches",
-            "predicate": "improves",
-            "object": "amlodipine",
             "confidence": 0.7
-          },
-          {
-            "subject": "fatigue",
-            "predicate": "worsens",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.6
           }
         ],
         "lab_values": {
@@ -129,7 +125,12 @@
           "BP_diastolic": 95,
           "LDL": 120.0
         }
-      }
+      },
+      "dosages": [
+        "10mg",
+        "20mg",
+        "500mg"
+      ]
     },
     {
       "visit_id": "V3",
@@ -143,23 +144,17 @@
         "LDL": 110
       },
       "medications": [
-        "Amlodipine 10mg",
-        "Lisinopril 2.5mg",
-        "Atorvastatin 40mg",
-        "Metformin 1000mg",
+        "amlodipine",
         "lisinopril",
-        "metformin",
         "atorvastatin",
-        "2.5mg",
-        "1000mg",
-        "40mg"
+        "metformin"
       ],
       "diagnoses": [
         "Hypertension",
         "Hyperlipidemia",
         "Type 2 Diabetes",
         "Chronic Kidney Disease",
-        "kidney disease"
+        "Kidney Dysfunction"
       ],
       "symptoms": [
         "Fatigue",
@@ -169,70 +164,41 @@
       ],
       "extracted": {
         "conditions": [
-          "hypertension",
-          "kidney disease"
+          "Kidney Dysfunction"
         ],
         "medications": [
           "lisinopril",
           "metformin",
-          "atorvastatin",
+          "atorvastatin"
+        ],
+        "dosages": [
           "2.5mg",
           "1000mg",
           "40mg"
         ],
         "symptoms": [
-          "Edema",
-          "Fatigue"
+          "Fatigue",
+          "Edema"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "BP 150/100",
-            "predicate": "measured_by",
-            "object": "BP_systolic 150",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP 150/100",
-            "predicate": "measured_by",
-            "object": "BP_diastolic 100",
-            "confidence": 0.9
-          },
-          {
-            "subject": "eGFR 58",
-            "predicate": "measured_by",
-            "object": "eGFR 58.0",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP 150/100",
-            "predicate": "worsens",
-            "object": "kidney disease",
-            "confidence": 0.8
-          },
-          {
-            "subject": "eGFR 58",
-            "predicate": "worsens",
-            "object": "kidney disease",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Lisinopril 2.5mg",
+            "subject": "Kidney Dysfunction",
             "predicate": "managed_by",
-            "object": "kidney disease",
+            "object": "lisinopril",
             "confidence": 0.7
           },
           {
-            "subject": "Metformin 1000mg",
+            "subject": "Kidney Dysfunction",
             "predicate": "managed_by",
-            "object": "diabetes",
-            "confidence": 0.6
+            "object": "metformin",
+            "confidence": 0.7
           },
           {
-            "subject": "Atorvastatin 40mg",
+            "subject": "Kidney Dysfunction",
             "predicate": "managed_by",
-            "object": "hyperlipidemia",
-            "confidence": 0.6
+            "object": "atorvastatin",
+            "confidence": 0.7
           }
         ],
         "lab_values": {
@@ -242,7 +208,13 @@
           "eGFR": 58.0,
           "LDL": 110.0
         }
-      }
+      },
+      "dosages": [
+        "10mg",
+        "2.5mg",
+        "40mg",
+        "1000mg"
+      ]
     }
   ]
 }

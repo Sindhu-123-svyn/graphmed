@@ -1,0 +1,1085 @@
+{
+  "patient_id": "P095",
+  "created_at": "2026-04-04T13:46:02.423455",
+  "nodes": [
+    {
+      "id": "P095",
+      "type": "PATIENT",
+      "name": "P095",
+      "added": "2026-04-04T13:46:02.423455",
+      "last_confirmed": "2026-04-04T13:46:02.423455",
+      "confidence": 1.0
+    },
+    {
+      "id": "CONDITION_hypertension",
+      "name": "hypertension",
+      "type": "CONDITION",
+      "added": "2022-07-15",
+      "last_confirmed": "2023-07-11",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2022-07-15",
+        "2023-01-12",
+        "2023-07-11"
+      ],
+      "decayed": true,
+      "history": [
+        {
+          "date": "2023-01-12",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2023-07-11",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "CONDITION_hyperlipidemia",
+      "name": "hyperlipidemia",
+      "type": "CONDITION",
+      "added": "2022-07-15",
+      "last_confirmed": "2023-07-11",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2022-07-15",
+        "2023-01-12",
+        "2023-07-11"
+      ],
+      "decayed": true,
+      "history": [
+        {
+          "date": "2023-01-12",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2023-07-11",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "MEDICATION_lisinopril",
+      "name": "lisinopril",
+      "type": "MEDICATION",
+      "added": "2022-07-15",
+      "last_confirmed": "2023-01-12",
+      "confidence": 0.7,
+      "observed_dates": [
+        "2022-07-15",
+        "2023-01-12"
+      ],
+      "decayed": true,
+      "history": [
+        {
+          "date": "2023-01-12",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "MEDICATION_atorvastatin",
+      "name": "atorvastatin",
+      "type": "MEDICATION",
+      "added": "2022-07-15",
+      "last_confirmed": "2022-07-15",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-07-15"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "LAB_VALUE_bp_systolic",
+      "name": "bp_systolic",
+      "type": "LAB_VALUE",
+      "added": "2022-07-15",
+      "last_confirmed": "2023-07-11",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2022-07-15",
+        "2023-01-12",
+        "2023-07-11"
+      ],
+      "value": "improved",
+      "decayed": true,
+      "history": [
+        {
+          "date": "2023-01-12",
+          "old": {
+            "value": 140,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2023-07-11",
+          "old": {
+            "value": 160,
+            "confidence": 1.0
+          },
+          "new": {}
+        }
+      ]
+    },
+    {
+      "id": "LAB_VALUE_bp_diastolic",
+      "name": "bp_diastolic",
+      "type": "LAB_VALUE",
+      "added": "2022-07-15",
+      "last_confirmed": "2023-07-11",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2022-07-15",
+        "2023-01-12",
+        "2023-07-11"
+      ],
+      "value": "improved",
+      "decayed": true,
+      "history": [
+        {
+          "date": "2023-01-12",
+          "old": {
+            "value": 90,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2023-07-11",
+          "old": {
+            "value": 100,
+            "confidence": 1.0
+          },
+          "new": {}
+        }
+      ]
+    },
+    {
+      "id": "LAB_VALUE_ldl",
+      "name": "ldl",
+      "type": "LAB_VALUE",
+      "added": "2022-07-15",
+      "last_confirmed": "2023-07-11",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2022-07-15",
+        "2023-01-12",
+        "2023-07-11"
+      ],
+      "value": "improved",
+      "decayed": true,
+      "history": [
+        {
+          "date": "2023-01-12",
+          "old": {
+            "value": 130.0,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2023-07-11",
+          "old": {
+            "value": 140.0,
+            "confidence": 1.0
+          },
+          "new": {}
+        }
+      ]
+    },
+    {
+      "id": "SYMPTOM_headache",
+      "name": "headache",
+      "type": "SYMPTOM",
+      "added": "2022-07-15",
+      "last_confirmed": "2022-07-15",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-07-15"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "SYMPTOM_palpitations",
+      "name": "palpitations",
+      "type": "SYMPTOM",
+      "added": "2022-07-15",
+      "last_confirmed": "2022-07-15",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-07-15"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "CONDITION_chronic_kidney_disease",
+      "name": "chronic kidney disease",
+      "type": "CONDITION",
+      "added": "2023-01-12",
+      "last_confirmed": "2023-07-11",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2023-01-12",
+        "2023-07-11"
+      ],
+      "decayed": true,
+      "history": [
+        {
+          "date": "2023-07-11",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "LAB_VALUE_egfr",
+      "name": "egfr",
+      "type": "LAB_VALUE",
+      "added": "2023-01-12",
+      "last_confirmed": "2023-07-11",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2023-01-12",
+        "2023-07-11"
+      ],
+      "value": 45,
+      "decayed": true,
+      "history": [
+        {
+          "date": "2023-07-11",
+          "old": {
+            "value": 60,
+            "confidence": 1.0
+          },
+          "new": {}
+        }
+      ]
+    },
+    {
+      "id": "SYMPTOM_fatigue",
+      "name": "fatigue",
+      "type": "SYMPTOM",
+      "added": "2023-01-12",
+      "last_confirmed": "2023-01-12",
+      "confidence": 0.7,
+      "observed_dates": [
+        "2023-01-12"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "SYMPTOM_shortness_of_breath",
+      "name": "shortness of breath",
+      "type": "SYMPTOM",
+      "added": "2023-01-12",
+      "last_confirmed": "2023-01-12",
+      "confidence": 0.7,
+      "observed_dates": [
+        "2023-01-12"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "CONDITION_stage_2_ckd",
+      "name": "stage 2 ckd",
+      "type": "CONDITION",
+      "added": "2023-07-11",
+      "last_confirmed": "2023-07-11",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "MEDICATION_losartan",
+      "name": "losartan",
+      "type": "MEDICATION",
+      "added": "2023-07-11",
+      "last_confirmed": "2023-07-11",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "LAB_VALUE_hba1c",
+      "name": "hba1c",
+      "type": "LAB_VALUE",
+      "added": "2023-07-11",
+      "last_confirmed": "2023-07-11",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "value": 6.8,
+      "decayed": true
+    },
+    {
+      "id": "LAB_VALUE_glucose",
+      "name": "glucose",
+      "type": "LAB_VALUE",
+      "added": "2023-07-11",
+      "last_confirmed": "2023-07-11",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "value": "implied",
+      "decayed": true
+    },
+    {
+      "id": "SYMPTOM_edema",
+      "name": "edema",
+      "type": "SYMPTOM",
+      "added": "2023-07-11",
+      "last_confirmed": "2023-07-11",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "SYMPTOM_swelling_in_legs",
+      "name": "swelling in legs",
+      "type": "SYMPTOM",
+      "added": "2023-07-11",
+      "last_confirmed": "2023-07-11",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "SYMPTOM_nocturia",
+      "name": "nocturia",
+      "type": "SYMPTOM",
+      "added": "2023-07-11",
+      "last_confirmed": "2023-07-11",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "decayed": true
+    }
+  ],
+  "edges": [
+    {
+      "source": "P095",
+      "target": "CONDITION_hypertension",
+      "relation": "has",
+      "established": "2022-07-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P095",
+      "target": "CONDITION_hyperlipidemia",
+      "relation": "has",
+      "established": "2022-07-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P095",
+      "target": "MEDICATION_lisinopril",
+      "relation": "has",
+      "established": "2022-07-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P095",
+      "target": "MEDICATION_atorvastatin",
+      "relation": "has",
+      "established": "2022-07-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P095",
+      "target": "LAB_VALUE_bp_systolic",
+      "relation": "has",
+      "established": "2022-07-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P095",
+      "target": "LAB_VALUE_bp_diastolic",
+      "relation": "has",
+      "established": "2022-07-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P095",
+      "target": "LAB_VALUE_ldl",
+      "relation": "has",
+      "established": "2022-07-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P095",
+      "target": "SYMPTOM_headache",
+      "relation": "has",
+      "established": "2022-07-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P095",
+      "target": "SYMPTOM_palpitations",
+      "relation": "has",
+      "established": "2022-07-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P095",
+      "target": "CONDITION_chronic_kidney_disease",
+      "relation": "has",
+      "established": "2023-01-12",
+      "confidence": 1.0
+    },
+    {
+      "source": "P095",
+      "target": "LAB_VALUE_egfr",
+      "relation": "has",
+      "established": "2023-01-12",
+      "confidence": 1.0
+    },
+    {
+      "source": "P095",
+      "target": "SYMPTOM_fatigue",
+      "relation": "has",
+      "established": "2023-01-12",
+      "confidence": 1.0
+    },
+    {
+      "source": "P095",
+      "target": "SYMPTOM_shortness_of_breath",
+      "relation": "has",
+      "established": "2023-01-12",
+      "confidence": 1.0
+    },
+    {
+      "source": "P095",
+      "target": "CONDITION_stage_2_ckd",
+      "relation": "has",
+      "established": "2023-07-11",
+      "confidence": 1.0
+    },
+    {
+      "source": "P095",
+      "target": "MEDICATION_losartan",
+      "relation": "has",
+      "established": "2023-07-11",
+      "confidence": 1.0
+    },
+    {
+      "source": "P095",
+      "target": "LAB_VALUE_hba1c",
+      "relation": "has",
+      "established": "2023-07-11",
+      "confidence": 1.0
+    },
+    {
+      "source": "P095",
+      "target": "LAB_VALUE_glucose",
+      "relation": "has",
+      "established": "2023-07-11",
+      "confidence": 1.0
+    },
+    {
+      "source": "P095",
+      "target": "SYMPTOM_edema",
+      "relation": "has",
+      "established": "2023-07-11",
+      "confidence": 1.0
+    },
+    {
+      "source": "P095",
+      "target": "SYMPTOM_swelling_in_legs",
+      "relation": "has",
+      "established": "2023-07-11",
+      "confidence": 1.0
+    },
+    {
+      "source": "P095",
+      "target": "SYMPTOM_nocturia",
+      "relation": "has",
+      "established": "2023-07-11",
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_hypertension",
+      "target": "MEDICATION_lisinopril",
+      "relation": "managed_by",
+      "established": "2022-07-15",
+      "last_observed": "2022-07-15",
+      "observed_dates": [
+        "2022-07-15"
+      ],
+      "observations": 1,
+      "confidence": 0.9
+    },
+    {
+      "source": "CONDITION_hypertension",
+      "target": "MEDICATION_losartan",
+      "relation": "managed_by",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_hypertension",
+      "target": "SYMPTOM_edema",
+      "relation": "has_symptom",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_hypertension",
+      "target": "SYMPTOM_swelling_in_legs",
+      "relation": "has_symptom",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_hypertension",
+      "target": "SYMPTOM_nocturia",
+      "relation": "has_symptom",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_hypertension",
+      "target": "LAB_VALUE_hba1c",
+      "relation": "measured_by",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_hypertension",
+      "target": "LAB_VALUE_bp_systolic",
+      "relation": "measured_by",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_hypertension",
+      "target": "LAB_VALUE_bp_diastolic",
+      "relation": "measured_by",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_hypertension",
+      "target": "LAB_VALUE_egfr",
+      "relation": "measured_by",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_hypertension",
+      "target": "LAB_VALUE_ldl",
+      "relation": "measured_by",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_hypertension",
+      "target": "LAB_VALUE_glucose",
+      "relation": "measured_by",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_hyperlipidemia",
+      "target": "MEDICATION_atorvastatin",
+      "relation": "managed_by",
+      "established": "2022-07-15",
+      "last_observed": "2022-07-15",
+      "observed_dates": [
+        "2022-07-15"
+      ],
+      "observations": 1,
+      "confidence": 0.9
+    },
+    {
+      "source": "CONDITION_hyperlipidemia",
+      "target": "MEDICATION_losartan",
+      "relation": "managed_by",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_hyperlipidemia",
+      "target": "SYMPTOM_edema",
+      "relation": "has_symptom",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_hyperlipidemia",
+      "target": "SYMPTOM_swelling_in_legs",
+      "relation": "has_symptom",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_hyperlipidemia",
+      "target": "SYMPTOM_nocturia",
+      "relation": "has_symptom",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_hyperlipidemia",
+      "target": "LAB_VALUE_hba1c",
+      "relation": "measured_by",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_hyperlipidemia",
+      "target": "LAB_VALUE_bp_systolic",
+      "relation": "measured_by",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_hyperlipidemia",
+      "target": "LAB_VALUE_bp_diastolic",
+      "relation": "measured_by",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_hyperlipidemia",
+      "target": "LAB_VALUE_egfr",
+      "relation": "measured_by",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_hyperlipidemia",
+      "target": "LAB_VALUE_ldl",
+      "relation": "measured_by",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_hyperlipidemia",
+      "target": "LAB_VALUE_glucose",
+      "relation": "measured_by",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "LAB_VALUE_bp_systolic",
+      "target": "CONDITION_hypertension",
+      "relation": "worsens",
+      "established": "2023-01-12",
+      "last_observed": "2023-01-12",
+      "observed_dates": [
+        "2023-01-12"
+      ],
+      "observations": 1,
+      "confidence": 0.9
+    },
+    {
+      "source": "LAB_VALUE_ldl",
+      "target": "CONDITION_hyperlipidemia",
+      "relation": "worsens",
+      "established": "2023-01-12",
+      "last_observed": "2023-01-12",
+      "observed_dates": [
+        "2023-01-12"
+      ],
+      "observations": 1,
+      "confidence": 0.8
+    },
+    {
+      "source": "CONDITION_chronic_kidney_disease",
+      "target": "MEDICATION_losartan",
+      "relation": "managed_by",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_chronic_kidney_disease",
+      "target": "SYMPTOM_edema",
+      "relation": "has_symptom",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_chronic_kidney_disease",
+      "target": "SYMPTOM_swelling_in_legs",
+      "relation": "has_symptom",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_chronic_kidney_disease",
+      "target": "SYMPTOM_nocturia",
+      "relation": "has_symptom",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_chronic_kidney_disease",
+      "target": "LAB_VALUE_hba1c",
+      "relation": "measured_by",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_chronic_kidney_disease",
+      "target": "LAB_VALUE_bp_systolic",
+      "relation": "measured_by",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_chronic_kidney_disease",
+      "target": "LAB_VALUE_bp_diastolic",
+      "relation": "measured_by",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_chronic_kidney_disease",
+      "target": "LAB_VALUE_egfr",
+      "relation": "measured_by",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_chronic_kidney_disease",
+      "target": "LAB_VALUE_ldl",
+      "relation": "measured_by",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_chronic_kidney_disease",
+      "target": "LAB_VALUE_glucose",
+      "relation": "measured_by",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "LAB_VALUE_egfr",
+      "target": "CONDITION_chronic_kidney_disease",
+      "relation": "worsens",
+      "established": "2023-01-12",
+      "last_observed": "2023-01-12",
+      "observed_dates": [
+        "2023-01-12"
+      ],
+      "observations": 1,
+      "confidence": 0.9
+    },
+    {
+      "source": "CONDITION_stage_2_ckd",
+      "target": "MEDICATION_losartan",
+      "relation": "managed_by",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_stage_2_ckd",
+      "target": "SYMPTOM_edema",
+      "relation": "has_symptom",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_stage_2_ckd",
+      "target": "SYMPTOM_swelling_in_legs",
+      "relation": "has_symptom",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_stage_2_ckd",
+      "target": "SYMPTOM_nocturia",
+      "relation": "has_symptom",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_stage_2_ckd",
+      "target": "LAB_VALUE_hba1c",
+      "relation": "measured_by",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_stage_2_ckd",
+      "target": "LAB_VALUE_bp_systolic",
+      "relation": "measured_by",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_stage_2_ckd",
+      "target": "LAB_VALUE_bp_diastolic",
+      "relation": "measured_by",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_stage_2_ckd",
+      "target": "LAB_VALUE_egfr",
+      "relation": "measured_by",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_stage_2_ckd",
+      "target": "LAB_VALUE_ldl",
+      "relation": "measured_by",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_stage_2_ckd",
+      "target": "LAB_VALUE_glucose",
+      "relation": "measured_by",
+      "established": "2023-07-11",
+      "last_observed": "2023-07-11",
+      "observed_dates": [
+        "2023-07-11"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    }
+  ]
+}

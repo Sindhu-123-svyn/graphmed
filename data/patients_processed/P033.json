@@ -10,16 +10,11 @@
         "BP_systolic": 140,
         "BP_diastolic": 90,
         "eGFR": 80,
-        "LDL": 160,
-        "Blood pressure": "140/90"
+        "LDL": 160
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg daily",
         "metformin",
-        "lisinopril",
-        "500mg",
-        "10mg"
+        "lisinopril"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -27,7 +22,7 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria"
+        "Frequent urination"
       ],
       "extracted": {
         "conditions": [
@@ -35,57 +30,46 @@
         ],
         "medications": [
           "metformin",
-          "lisinopril",
-          "500mg",
-          "10mg"
+          "lisinopril"
+        ],
+        "dosages": [
+          "500mg BID",
+          "10mg daily"
         ],
         "symptoms": [
-          "Polyuria",
-          "Fatigue"
+          "Fatigue",
+          "Frequent urination"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "Lisinopril",
-            "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.9
-          },
-          {
-            "subject": "140/90",
-            "predicate": "measured_by",
-            "object": "Blood pressure",
-            "confidence": 0.8
-          },
-          {
-            "subject": "140/90",
-            "predicate": "worsens",
-            "object": "Type 2 Diabetes",
+            "subject": "Type 2 Diabetes",
+            "predicate": "has_symptom",
+            "object": "Fatigue",
             "confidence": 0.7
           },
           {
-            "subject": "Polyuria",
+            "subject": "Type 2 Diabetes",
             "predicate": "has_symptom",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.6
+            "object": "Frequent urination",
+            "confidence": 0.7
           }
         ],
         "lab_values": {
-          "Blood pressure": "140/90"
+          "BP_systolic": 140,
+          "BP_diastolic": 90
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg daily"
+      ]
     },
     {
       "visit_id": "V2",
@@ -96,94 +80,51 @@
         "BP_systolic": 148,
         "BP_diastolic": 92,
         "eGFR": 76,
-        "LDL": 140,
-        "blood pressure": "148/92"
+        "LDL": 140
       },
       "medications": [
-        "Metformin 850mg BID",
-        "Lisinopril 20mg daily",
         "metformin",
-        "lisinopril",
-        "850mg",
-        "20mg"
+        "lisinopril"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
-        "Hypertension",
-        "diabetes"
+        "Hypertension"
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Lower extremity edema",
         "Edema"
       ],
       "extracted": {
         "conditions": [
-          "hypertension",
-          "diabetes"
+          "Type 2 Diabetes",
+          "Hypertension"
         ],
         "medications": [
           "metformin",
-          "lisinopril",
-          "850mg",
-          "20mg"
+          "lisinopril"
+        ],
+        "dosages": [
+          "850mg BID",
+          "20mg daily"
         ],
         "symptoms": [
-          "Edema",
           "Fatigue",
-          "lower extremity edema"
+          "Edema"
         ],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "metformin",
-            "predicate": "managed_by",
-            "object": "patient P033",
-            "confidence": 0.9
-          },
-          {
-            "subject": "lisinopril",
-            "predicate": "managed_by",
-            "object": "patient P033",
-            "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "blood test",
-            "confidence": 0.8
-          },
-          {
-            "subject": "blood pressure",
-            "predicate": "measured_by",
-            "object": "blood test",
-            "confidence": 0.8
-          },
-          {
-            "subject": "metformin",
-            "predicate": "contraindicated_with",
-            "object": "lisinopril",
-            "confidence": 0.7
-          },
-          {
-            "subject": "fatigue",
-            "predicate": "has_symptom",
-            "object": "lower extremity edema",
-            "confidence": 0.6
-          },
-          {
-            "subject": "blood pressure",
-            "predicate": "worsens",
-            "object": "lower extremity edema",
-            "confidence": 0.5
-          }
-        ],
+        "relationships": [],
         "lab_values": {
           "HbA1c": 7.2,
-          "blood pressure": "148/92"
+          "BP_systolic": 148,
+          "BP_diastolic": 92
         }
-      }
+      },
+      "dosages": [
+        "850mg BID",
+        "20mg daily"
+      ]
     },
     {
       "visit_id": "V3",
@@ -194,17 +135,12 @@
         "BP_systolic": 134,
         "BP_diastolic": 82,
         "eGFR": 74,
-        "LDL": 120,
-        "Blood Pressure": "134/82"
+        "LDL": 120
       },
       "medications": [
-        "Metformin 1000mg BID",
-        "Lisinopril 20mg daily",
-        "Atorvastatin 20mg daily",
         "metformin",
-        "atorvastatin",
-        "20mg",
-        "1000mg"
+        "lisinopril",
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -213,10 +149,10 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Dyspnea on exertion",
-        "Edema",
-        "Shortness of breath"
+        "Shortness of breath",
+        "Edema"
       ],
       "extracted": {
         "conditions": [
@@ -224,53 +160,41 @@
         ],
         "medications": [
           "metformin",
-          "atorvastatin",
-          "20mg",
-          "1000mg"
+          "atorvastatin"
+        ],
+        "dosages": [
+          "20mg daily",
+          "1000mg BID"
         ],
         "symptoms": [
-          "Edema",
           "Shortness of breath",
-          "Dyspnea on exertion"
+          "Edema"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Atorvastatin",
+            "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Hyperlipidemia",
-            "confidence": 1.0
+            "object": "atorvastatin",
+            "confidence": 0.9
           },
           {
-            "subject": "Metformin",
+            "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Hyperlipidemia",
-            "confidence": 1.0
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Blood Pressure",
-            "confidence": 1.0
-          },
-          {
-            "subject": "Edema",
-            "predicate": "resolved_by",
-            "object": "Atorvastatin",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Dyspnea on exertion",
-            "predicate": "contraindicated_with",
-            "object": "Atorvastatin",
-            "confidence": 0.6
+            "object": "metformin",
+            "confidence": 0.9
           }
         ],
         "lab_values": {
           "HbA1c": 7.8,
-          "Blood Pressure": "134/82"
+          "BP_systolic": 134,
+          "BP_diastolic": 82
         }
-      }
+      },
+      "dosages": [
+        "1000mg BID",
+        "20mg daily"
+      ]
     },
     {
       "visit_id": "V4",
@@ -281,18 +205,13 @@
         "BP_systolic": 128,
         "BP_diastolic": 76,
         "eGFR": 68,
-        "LDL": 100,
-        "Blood Pressure": "128/76"
+        "LDL": 100
       },
       "medications": [
-        "Metformin 1000mg BID",
-        "Lisinopril 40mg daily",
-        "Atorvastatin 20mg daily",
-        "Furosemide 20mg daily",
+        "metformin",
         "lisinopril",
-        "40mg",
-        "20mg",
-        "Furosemide"
+        "atorvastatin",
+        "furosemide"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -304,7 +223,7 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Dyspnea on exertion",
         "Orthopnea",
         "Shortness of breath"
@@ -315,9 +234,11 @@
         ],
         "medications": [
           "lisinopril",
-          "40mg",
-          "20mg",
-          "Furosemide"
+          "furosemide"
+        ],
+        "dosages": [
+          "40mg daily",
+          "20mg daily"
         ],
         "symptoms": [
           "Shortness of breath",
@@ -327,83 +248,35 @@
         "procedures": [],
         "relationships": [
           {
-            "subject": "Lisinopril",
-            "predicate": "managed_by",
-            "object": "Patient P033",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Furosemide",
-            "predicate": "managed_by",
-            "object": "Patient P033",
-            "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Patient P033",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Blood Pressure",
-            "predicate": "measured_by",
-            "object": "Patient P033",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Dyspnea on exertion",
-            "predicate": "has_symptom",
-            "object": "Orthopnea",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Dyspnea on exertion",
-            "predicate": "has_symptom",
-            "object": "Shortness of breath",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Lisinopril",
+            "subject": "lisinopril",
             "predicate": "contraindicated_with",
-            "object": "Furosemide",
-            "confidence": 0.6
+            "object": "furosemide",
+            "confidence": 0.8
           },
           {
-            "subject": "Lisinopril",
-            "predicate": "improves",
-            "object": "Blood Pressure",
-            "confidence": 0.6
+            "subject": "Heart Failure",
+            "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.8
           },
           {
-            "subject": "Furosemide",
-            "predicate": "improves",
-            "object": "Blood Pressure",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Furosemide",
-            "predicate": "improves",
-            "object": "HbA1c",
-            "confidence": 0.5
-          },
-          {
-            "subject": "Lisinopril",
-            "predicate": "worsens",
-            "object": "Dyspnea on exertion",
-            "confidence": 0.5
-          },
-          {
-            "subject": "Furosemide",
-            "predicate": "worsens",
-            "object": "Dyspnea on exertion",
-            "confidence": 0.5
+            "subject": "Heart Failure",
+            "predicate": "managed_by",
+            "object": "furosemide",
+            "confidence": 0.8
           }
         ],
         "lab_values": {
           "HbA1c": 7.0,
-          "Blood Pressure": "128/76"
+          "BP_systolic": 128,
+          "BP_diastolic": 76
         }
-      }
+      },
+      "dosages": [
+        "1000mg BID",
+        "40mg daily",
+        "20mg daily"
+      ]
     },
     {
       "visit_id": "V5",
@@ -414,39 +287,38 @@
         "BP_systolic": 152,
         "BP_diastolic": 94,
         "eGFR": 62,
-        "LDL": 110,
-        "Blood pressure": "152/94"
+        "LDL": 110
       },
       "medications": [
-        "Metformin 1500mg BID",
-        "Lisinopril 60mg daily",
-        "Atorvastatin 40mg daily",
-        "Furosemide 40mg daily",
-        "Adjustment of medications"
+        "metformin",
+        "lisinopril",
+        "atorvastatin",
+        "furosemide",
+        "adjust medication"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
         "Coronary Artery Disease",
-        "Chronic Kidney Disease",
-        "Diabetes"
+        "Chronic Kidney Disease"
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Dyspnea on exertion",
         "Orthopnea",
         "Chest pain"
       ],
       "extracted": {
         "conditions": [
-          "Diabetes",
+          "Type 2 Diabetes",
           "Hypertension"
         ],
         "medications": [
-          "Adjustment of medications"
+          "adjust medication"
         ],
+        "dosages": [],
         "symptoms": [
           "Chest pain",
           "Orthopnea"
@@ -454,47 +326,35 @@
         "procedures": [],
         "relationships": [
           {
-            "subject": "Adjustment of medications",
-            "predicate": "managed_by",
-            "object": "Patient P033",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Chest pain",
-            "predicate": "has_symptom",
-            "object": "Orthopnea",
-            "confidence": 0.7
-          },
-          {
             "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Blood pressure",
+            "predicate": "worsens",
+            "object": "Type 2 Diabetes",
             "confidence": 0.9
           },
           {
-            "subject": "Adjustment of medications",
-            "predicate": "contraindicated_with",
-            "object": "Referral to cardiology",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Adjustment of medications",
-            "predicate": "improves",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Adjustment of medications",
+            "subject": "BP_systolic",
             "predicate": "worsens",
-            "object": "Diabetes",
-            "confidence": 0.7
+            "object": "Hypertension",
+            "confidence": 0.9
+          },
+          {
+            "subject": "BP_systolic",
+            "predicate": "worsens",
+            "object": "Type 2 Diabetes",
+            "confidence": 0.8
           }
         ],
         "lab_values": {
           "HbA1c": 7.5,
-          "Blood pressure": "152/94"
+          "BP_systolic": 152,
+          "BP_diastolic": 94
         }
-      }
+      },
+      "dosages": [
+        "1500mg BID",
+        "60mg daily",
+        "40mg daily"
+      ]
     }
   ]
 }

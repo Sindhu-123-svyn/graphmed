@@ -13,12 +13,8 @@
         "LDL": 130
       },
       "medications": [
-        "Lisinopril 10mg",
-        "Simvastatin 20mg",
         "lisinopril",
-        "simvastatin",
-        "10mg",
-        "20mg"
+        "simvastatin"
       ],
       "diagnoses": [
         "Hypertension",
@@ -30,74 +26,34 @@
       ],
       "extracted": {
         "conditions": [
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hypertension",
+          "Hyperlipidemia"
         ],
         "medications": [
           "lisinopril",
-          "simvastatin",
+          "simvastatin"
+        ],
+        "dosages": [
           "10mg",
           "20mg"
         ],
         "symptoms": [
-          "Shortness of breath",
-          "Fatigue"
+          "Fatigue",
+          "Shortness of breath"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "lisinopril",
             "confidence": 0.9
           },
           {
-            "subject": "simvastatin",
+            "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Hyperlipidemia",
+            "object": "simvastatin",
             "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.8
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.8
-          },
-          {
-            "subject": "lisinopril",
-            "predicate": "contraindicated_with",
-            "object": "BP",
-            "confidence": 0.7
-          },
-          {
-            "subject": "BP",
-            "predicate": "worsens",
-            "object": "Shortness of breath",
-            "confidence": 0.6
-          },
-          {
-            "subject": "BP",
-            "predicate": "worsens",
-            "object": "Fatigue",
-            "confidence": 0.6
           }
         ],
         "lab_values": {
@@ -107,7 +63,11 @@
           "eGFR": 72.0,
           "LDL": 130.0
         }
-      }
+      },
+      "dosages": [
+        "10mg",
+        "20mg"
+      ]
     },
     {
       "visit_id": "V2",
@@ -121,18 +81,14 @@
         "LDL": 145
       },
       "medications": [
-        "Lisinopril 20mg",
-        "Simvastatin 40mg",
         "lisinopril",
-        "simvastatin",
-        "40mg",
-        "20mg"
+        "simvastatin"
       ],
       "diagnoses": [
         "Hypertension",
         "Hyperlipidemia",
         "Chronic Kidney Disease (Stage 3)",
-        "Diabetes"
+        "Type 2 Diabetes"
       ],
       "symptoms": [
         "Fatigue",
@@ -142,51 +98,22 @@
       ],
       "extracted": {
         "conditions": [
-          "Diabetes"
+          "Type 2 Diabetes"
         ],
         "medications": [
           "lisinopril",
-          "simvastatin",
+          "simvastatin"
+        ],
+        "dosages": [
           "40mg",
           "20mg"
         ],
         "symptoms": [
-          "Edema",
-          "Fatigue"
+          "Fatigue",
+          "Edema"
         ],
         "procedures": [],
-        "relationships": [
-          {
-            "subject": "HbA1c",
-            "predicate": "managed_by",
-            "object": "simvastatin",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "managed_by",
-            "object": "lisinopril",
-            "confidence": 0.8
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "lab trends",
-            "confidence": 0.7
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "worsens",
-            "object": "Fatigue",
-            "confidence": 0.6
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "worsens",
-            "object": "Edema",
-            "confidence": 0.6
-          }
-        ],
+        "relationships": [],
         "lab_values": {
           "HbA1c": 8.1,
           "BP_systolic": 145,
@@ -194,7 +121,11 @@
           "eGFR": 65.0,
           "LDL": 145.0
         }
-      }
+      },
+      "dosages": [
+        "20mg",
+        "40mg"
+      ]
     },
     {
       "visit_id": "V3",
@@ -208,18 +139,17 @@
         "LDL": 160
       },
       "medications": [
-        "Lisinopril 20mg",
-        "Simvastatin 40mg",
-        "Erythropoietin 5000 units weekly",
         "lisinopril",
-        "simvastatin"
+        "simvastatin",
+        "erythropoietin 5000 units weekly",
+        "erythropoietin"
       ],
       "diagnoses": [
         "Hypertension",
         "Hyperlipidemia",
         "Chronic Kidney Disease (Stage 4)",
-        "Anemia",
-        "Chronic Kidney Disease"
+        "Chronic Kidney Disease",
+        "Anemia"
       ],
       "symptoms": [
         "Fatigue",
@@ -229,20 +159,57 @@
       ],
       "extracted": {
         "conditions": [
-          "Anemia",
-          "Chronic Kidney Disease"
+          "Chronic Kidney Disease",
+          "Anemia"
         ],
         "medications": [
           "lisinopril",
-          "simvastatin"
+          "simvastatin",
+          "erythropoietin"
+        ],
+        "dosages": [
+          "lisinopril: unchanged",
+          "simvastatin: unchanged",
+          "erythropoietin: started"
         ],
         "symptoms": [
-          "Edema",
+          "Fatigue",
           "Shortness of breath",
-          "Fatigue"
+          "Edema"
         ],
         "procedures": [],
-        "relationships": [],
+        "relationships": [
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "managed_by",
+            "object": "erythropoietin",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "Shortness of breath",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "Edema",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Anemia",
+            "predicate": "managed_by",
+            "object": "erythropoietin",
+            "confidence": 0.9
+          }
+        ],
         "lab_values": {
           "HbA1c": 9.0,
           "BP_systolic": 150,
@@ -250,7 +217,14 @@
           "eGFR": 55.0,
           "LDL": 160.0
         }
-      }
+      },
+      "dosages": [
+        "20mg",
+        "40mg",
+        "lisinopril: unchanged",
+        "simvastatin: unchanged",
+        "erythropoietin: started"
+      ]
     }
   ]
 }

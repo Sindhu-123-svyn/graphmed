@@ -13,12 +13,9 @@
         "LDL": 130
       },
       "medications": [
-        "Metformin 500mg BID",
-        "Lisinopril 10mg OD",
         "metformin",
-        "lisinopril",
-        "500mg",
-        "10mg"
+        "lisinopril od",
+        "lisinopril"
       ],
       "diagnoses": [
         "Type 2 Diabetes Mellitus",
@@ -27,68 +24,50 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria"
+        "Frequent urination"
       ],
       "extracted": {
         "conditions": [
-          "Type 2 Diabetes",
-          "Hypertension"
+          "Hypertension",
+          "Type 2 Diabetes"
         ],
         "medications": [
           "metformin",
-          "lisinopril",
-          "500mg",
+          "lisinopril"
+        ],
+        "dosages": [
+          "500mg BID",
           "10mg"
         ],
         "symptoms": [
-          "Polyuria",
-          "Fatigue"
+          "Fatigue",
+          "Frequent urination"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Type 2 Diabetes",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "Lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Hypertension",
+            "object": "lisinopril",
             "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "Polyuria",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "Fatigue",
-            "confidence": 0.7
           }
         ],
         "lab_values": {
           "HbA1c": 7.2,
-          "BP_systolic": 140,
-          "BP_diastolic": 90
+          "BP_systolic": "140 mmHg",
+          "BP_diastolic": "90 mmHg"
         }
-      }
+      },
+      "dosages": [
+        "500mg BID",
+        "10mg"
+      ]
     },
     {
       "visit_id": "V2",
@@ -102,14 +81,11 @@
         "LDL": 140
       },
       "medications": [
-        "Metformin 1000mg BID",
-        "Lisinopril 20mg OD",
-        "Simvastatin 20mg OD",
         "metformin",
+        "lisinopril od",
+        "simvastatin od",
         "lisinopril",
-        "simvastatin",
-        "1000mg",
-        "20mg"
+        "simvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes Mellitus",
@@ -117,7 +93,7 @@
         "Hyperlipidemia"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Fatigue"
       ],
       "extracted": {
@@ -127,92 +103,34 @@
         "medications": [
           "metformin",
           "lisinopril",
-          "simvastatin",
-          "1000mg",
+          "simvastatin"
+        ],
+        "dosages": [
+          "1000mg BID",
           "20mg"
         ],
         "symptoms": [
-          "Polyuria",
-          "Fatigue"
+          "Fatigue",
+          "Frequent urination"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Metformin",
+            "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Hyperlipidemia",
+            "object": "metformin",
             "confidence": 0.8
           },
           {
-            "subject": "Lisinopril",
+            "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Hyperlipidemia",
+            "object": "lisinopril",
             "confidence": 0.8
           },
           {
-            "subject": "Simvastatin",
+            "subject": "Hyperlipidemia",
             "predicate": "managed_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Blood Test",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Blood Pressure Monitor",
-            "confidence": 0.9
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "Blood Test",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Polyuria",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Metformin",
-            "predicate": "contraindicated_with",
-            "object": "None",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Lisinopril",
-            "predicate": "contraindicated_with",
-            "object": "None",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Simvastatin",
-            "predicate": "contraindicated_with",
-            "object": "None",
-            "confidence": 0.6
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "improves",
-            "object": "Metformin",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "improves",
-            "object": "Lisinopril",
-            "confidence": 0.8
-          },
-          {
-            "subject": "LDL",
-            "predicate": "worsens",
-            "object": "Simvastatin",
+            "object": "simvastatin",
             "confidence": 0.8
           }
         ],
@@ -222,7 +140,11 @@
           "BP_diastolic": 85,
           "LDL": 140
         }
-      }
+      },
+      "dosages": [
+        "1000mg BID",
+        "20mg"
+      ]
     },
     {
       "visit_id": "V3",
@@ -236,15 +158,11 @@
         "LDL": 120
       },
       "medications": [
-        "Metformin 1500mg BID",
-        "Lisinopril 40mg OD",
-        "Simvastatin 20mg OD",
-        "Furosemide 20mg OD",
         "metformin",
+        "lisinopril od",
+        "simvastatin od",
+        "furosemide od",
         "lisinopril",
-        "1500mg",
-        "40mg",
-        "20mg",
         "furosemide"
       ],
       "diagnoses": [
@@ -252,92 +170,72 @@
         "Hypertension",
         "Hyperlipidemia",
         "Chronic Kidney Disease",
-        "diabetes"
+        "Type 2 Diabetes",
+        "Fluid Overload"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Fatigue",
         "Edema"
       ],
       "extracted": {
         "conditions": [
-          "diabetes",
-          "hypertension"
+          "Type 2 Diabetes",
+          "Hypertension",
+          "Fluid Overload"
         ],
         "medications": [
           "metformin",
           "lisinopril",
-          "1500mg",
-          "40mg",
-          "20mg",
           "furosemide"
         ],
+        "dosages": [
+          "1500mg BID",
+          "40mg",
+          "20mg"
+        ],
         "symptoms": [
-          "Edema",
-          "Polyuria",
-          "Fatigue"
+          "Fatigue",
+          "Frequent urination",
+          "Edema"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "diabetes",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "hypertension",
+            "object": "lisinopril",
             "confidence": 0.9
           },
           {
-            "subject": "furosemide",
+            "subject": "Fluid Overload",
             "predicate": "managed_by",
-            "object": "fluid overload",
-            "confidence": 0.8
+            "object": "furosemide",
+            "confidence": 0.9
           },
           {
-            "subject": "HbA1c",
+            "subject": "Type 2 Diabetes",
             "predicate": "measured_by",
-            "object": "lab_values",
+            "object": "HbA1c",
             "confidence": 0.7
           },
           {
-            "subject": "BP",
+            "subject": "Hypertension",
             "predicate": "measured_by",
-            "object": "lab_values",
+            "object": "BP_systolic",
             "confidence": 0.7
           },
           {
-            "subject": "eGFR",
+            "subject": "Fluid Overload",
             "predicate": "measured_by",
-            "object": "lab_values",
+            "object": "eGFR",
             "confidence": 0.7
-          },
-          {
-            "subject": "polyuria",
-            "predicate": "has_symptom",
-            "object": "diabetes",
-            "confidence": 0.6
-          },
-          {
-            "subject": "fatigue",
-            "predicate": "has_symptom",
-            "object": "diabetes",
-            "confidence": 0.6
-          },
-          {
-            "subject": "edema",
-            "predicate": "has_symptom",
-            "object": "fluid overload",
-            "confidence": 0.6
-          },
-          {
-            "subject": "fluid overload",
-            "predicate": "worsens",
-            "object": "edema",
-            "confidence": 0.5
           }
         ],
         "lab_values": {
@@ -346,7 +244,12 @@
           "BP_diastolic": 95,
           "eGFR": 65
         }
-      }
+      },
+      "dosages": [
+        "1500mg BID",
+        "40mg",
+        "20mg"
+      ]
     },
     {
       "visit_id": "V4",
@@ -360,16 +263,12 @@
         "LDL": 110
       },
       "medications": [
-        "Metformin 2000mg BID",
-        "Lisinopril 80mg OD",
-        "Simvastatin 20mg OD",
-        "Furosemide 40mg OD",
-        "Eplerenone 25mg OD",
         "metformin",
+        "lisinopril od",
+        "simvastatin od",
+        "furosemide od",
+        "eplerenone od",
         "lisinopril",
-        "2000mg",
-        "80mg",
-        "25mg",
         "eplerenone"
       ],
       "diagnoses": [
@@ -377,87 +276,69 @@
         "Hypertension",
         "Hyperlipidemia",
         "Chronic Kidney Disease",
-        "Chronic Heart Failure",
-        "Diabetes"
+        "Chronic Heart Failure"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Fatigue",
         "Edema"
       ],
       "extracted": {
         "conditions": [
-          "Hypertension",
-          "Diabetes"
+          "Hypertension"
         ],
         "medications": [
           "metformin",
           "lisinopril",
-          "2000mg",
-          "80mg",
-          "25mg",
           "eplerenone"
         ],
+        "dosages": [
+          "2000mg BID",
+          "80mg",
+          "25mg"
+        ],
         "symptoms": [
-          "Edema",
-          "Polyuria",
-          "Fatigue"
+          "Fatigue",
+          "Frequent urination",
+          "Edema"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "Metformin",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Diabetes",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Lisinopril",
-            "predicate": "managed_by",
-            "object": "Hypertension",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Eplerenone",
-            "predicate": "managed_by",
-            "object": "Hypertension",
-            "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Diabetes",
+            "object": "lisinopril",
             "confidence": 0.8
           },
           {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Hypertension",
+            "subject": "Hypertension",
+            "predicate": "managed_by",
+            "object": "eplerenone",
             "confidence": 0.8
           },
           {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "Kidney Disease",
+            "subject": "Hypertension",
+            "predicate": "worsens",
+            "object": "Fatigue",
             "confidence": 0.7
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Polyuria",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Edema",
-            "confidence": 0.6
           },
           {
             "subject": "Hypertension",
             "predicate": "worsens",
             "object": "Edema",
-            "confidence": 0.5
+            "confidence": 0.7
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "measured_by",
+            "object": "BP_systolic",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Hypertension",
+            "predicate": "measured_by",
+            "object": "BP_diastolic",
+            "confidence": 0.9
           }
         ],
         "lab_values": {
@@ -466,7 +347,14 @@
           "BP_diastolic": 105,
           "eGFR": 55
         }
-      }
+      },
+      "dosages": [
+        "2000mg BID",
+        "80mg",
+        "20mg",
+        "40mg",
+        "25mg"
+      ]
     },
     {
       "visit_id": "V5",
@@ -480,13 +368,12 @@
         "LDL": 100
       },
       "medications": [
-        "Hemodialysis",
-        "Losartan 100mg OD",
-        "Simvastatin 20mg OD",
-        "Furosemide 40mg OD",
-        "Eplerenone 25mg OD",
-        "losartan",
-        "100mg"
+        "hemodialysis",
+        "losartan od",
+        "simvastatin od",
+        "furosemide od",
+        "eplerenone od",
+        "losartan"
       ],
       "diagnoses": [
         "Type 2 Diabetes Mellitus",
@@ -494,71 +381,43 @@
         "Hyperlipidemia",
         "Chronic Kidney Disease Stage 5D",
         "Chronic Heart Failure",
-        "End-stage renal disease"
+        "End-Stage Renal Disease"
       ],
       "symptoms": [
-        "Polyuria",
+        "Frequent urination",
         "Fatigue",
         "Edema"
       ],
       "extracted": {
         "conditions": [
           "Hypertension",
-          "End-stage renal disease"
+          "End-Stage Renal Disease"
         ],
         "medications": [
-          "losartan",
+          "losartan"
+        ],
+        "dosages": [
           "100mg"
         ],
         "symptoms": [
-          "Polyuria",
-          "Fatigue"
+          "Fatigue",
+          "Frequent urination"
         ],
         "procedures": [
           "Hemodialysis"
         ],
         "relationships": [
           {
-            "subject": "Hemodialysis",
+            "subject": "Hypertension",
             "predicate": "managed_by",
-            "object": "Patient",
-            "confidence": 1.0
-          },
-          {
-            "subject": "losartan",
-            "predicate": "contraindicated_with",
-            "object": "End-stage renal disease",
+            "object": "losartan",
             "confidence": 0.9
           },
           {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Physical examination",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "worsens",
-            "object": "End-stage renal disease",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Polyuria",
+            "subject": "Hemodialysis",
+            "predicate": "improves",
+            "object": "End-Stage Renal Disease",
             "confidence": 0.6
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "stable",
-            "object": "None",
-            "confidence": 0.5
-          },
-          {
-            "subject": "BP",
-            "predicate": "elevated",
-            "object": "None",
-            "confidence": 0.4
           }
         ],
         "lab_values": {
@@ -567,7 +426,13 @@
           "BP_diastolic": 110,
           "eGFR": 20
         }
-      }
+      },
+      "dosages": [
+        "100mg",
+        "20mg",
+        "40mg",
+        "25mg"
+      ]
     }
   ]
 }

@@ -13,9 +13,9 @@
         "LDL": 145
       },
       "medications": [
-        "Metformin 500mg",
-        "Lisinopril 10mg",
-        "Atorvastatin 20mg"
+        "metformin",
+        "lisinopril",
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -28,11 +28,12 @@
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [],
+        "dosages": [],
         "symptoms": [
           "Fatigue",
           "Weight gain"
@@ -41,78 +42,12 @@
         "relationships": [
           {
             "subject": "Type 2 Diabetes",
-            "predicate": "managed_by",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "managed_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "managed_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Physical examination",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Labs",
-            "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Labs",
-            "confidence": 0.9
-          },
-          {
-            "subject": "eGFR",
-            "predicate": "measured_by",
-            "object": "Labs",
-            "confidence": 0.9
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "Labs",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "Fatigue",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Type 2 Diabetes",
-            "predicate": "worsens",
-            "object": "Weight gain",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Hypertension",
             "predicate": "worsens",
             "object": "Fatigue",
             "confidence": 0.7
           },
           {
             "subject": "Hypertension",
-            "predicate": "worsens",
-            "object": "Weight gain",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Hyperlipidemia",
             "predicate": "worsens",
             "object": "Fatigue",
             "confidence": 0.7
@@ -120,7 +55,7 @@
           {
             "subject": "Hyperlipidemia",
             "predicate": "worsens",
-            "object": "Weight gain",
+            "object": "Fatigue",
             "confidence": 0.7
           }
         ],
@@ -131,7 +66,12 @@
           "eGFR": 80.0,
           "LDL": 145.0
         }
-      }
+      },
+      "dosages": [
+        "500mg",
+        "10mg",
+        "20mg"
+      ]
     },
     {
       "visit_id": "V2",
@@ -145,15 +85,9 @@
         "LDL": 155
       },
       "medications": [
-        "Metformin 1000mg",
-        "Lisinopril 20mg",
-        "Atorvastatin 40mg",
         "metformin",
         "lisinopril",
-        "atorvastatin",
-        "1000mg",
-        "20mg",
-        "40mg"
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -173,16 +107,32 @@
         "medications": [
           "metformin",
           "lisinopril",
-          "atorvastatin",
+          "atorvastatin"
+        ],
+        "dosages": [
           "1000mg",
           "20mg",
           "40mg"
         ],
         "symptoms": [
-          "Fatigue"
+          "Fatigue",
+          "Increased urination"
         ],
         "procedures": [],
-        "relationships": [],
+        "relationships": [
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "managed_by",
+            "object": "metformin",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Chronic Kidney Disease",
+            "predicate": "worsens",
+            "object": "Fatigue",
+            "confidence": 0.6
+          }
+        ],
         "lab_values": {
           "HbA1c": 9.0,
           "BP_systolic": 150,
@@ -190,7 +140,12 @@
           "eGFR": 70.0,
           "LDL": 155.0
         }
-      }
+      },
+      "dosages": [
+        "1000mg",
+        "20mg",
+        "40mg"
+      ]
     },
     {
       "visit_id": "V3",
@@ -204,15 +159,9 @@
         "LDL": 160
       },
       "medications": [
-        "Metformin 1500mg",
-        "Lisinopril 30mg",
-        "Atorvastatin 60mg",
         "metformin",
         "lisinopril",
-        "atorvastatin",
-        "1500mg",
-        "30mg",
-        "60mg"
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -235,17 +184,50 @@
         "medications": [
           "metformin",
           "lisinopril",
-          "atorvastatin",
+          "atorvastatin"
+        ],
+        "dosages": [
           "1500mg",
           "30mg",
           "60mg"
         ],
         "symptoms": [
-          "Chest pain",
-          "Shortness of breath"
+          "Shortness of breath",
+          "Chest pain"
         ],
         "procedures": [],
-        "relationships": [],
+        "relationships": [
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "managed_by",
+            "object": "metformin",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "managed_by",
+            "object": "atorvastatin",
+            "confidence": 0.8
+          },
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "has_symptom",
+            "object": "Chest pain",
+            "confidence": 0.9
+          },
+          {
+            "subject": "Coronary Artery Disease",
+            "predicate": "has_symptom",
+            "object": "Shortness of breath",
+            "confidence": 0.9
+          }
+        ],
         "lab_values": {
           "HbA1c": 8.5,
           "BP_systolic": 160,
@@ -253,7 +235,12 @@
           "eGFR": 65.0,
           "LDL": 160.0
         }
-      }
+      },
+      "dosages": [
+        "1500mg",
+        "30mg",
+        "60mg"
+      ]
     },
     {
       "visit_id": "V4",
@@ -267,23 +254,16 @@
         "LDL": 165
       },
       "medications": [
-        "Metformin 2000mg",
-        "Lisinopril 40mg",
-        "Atorvastatin 80mg",
         "metformin",
         "lisinopril",
-        "atorvastatin",
-        "2000mg",
-        "40mg",
-        "80mg"
+        "atorvastatin"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
         "Chronic Kidney Disease",
-        "Coronary Artery Disease",
-        "Diabetes"
+        "Coronary Artery Disease"
       ],
       "symptoms": [
         "Fatigue",
@@ -294,14 +274,15 @@
       ],
       "extracted": {
         "conditions": [
-          "Diabetes",
           "Hypertension",
-          "Hyperlipidemia"
+          "Type 2 Diabetes"
         ],
         "medications": [
           "metformin",
           "lisinopril",
-          "atorvastatin",
+          "atorvastatin"
+        ],
+        "dosages": [
           "2000mg",
           "40mg",
           "80mg"
@@ -310,55 +291,31 @@
           "Shortness of breath"
         ],
         "procedures": [
-          "Cardiology referral"
+          "cardiology referral"
         ],
         "relationships": [
           {
-            "subject": "Metformin",
+            "subject": "Type 2 Diabetes",
             "predicate": "managed_by",
-            "object": "Diabetes",
+            "object": "metformin",
             "confidence": 0.9
           },
           {
-            "subject": "Lisinopril",
+            "subject": "Hypertension",
             "predicate": "managed_by",
+            "object": "lisinopril",
+            "confidence": 0.9
+          },
+          {
+            "subject": "cardiology referral",
+            "predicate": "improves",
             "object": "Hypertension",
-            "confidence": 0.9
+            "confidence": 0.6
           },
           {
-            "subject": "Atorvastatin",
-            "predicate": "managed_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP 155/105",
-            "predicate": "measured_by",
-            "object": "Lisinopril",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP 155/105",
-            "predicate": "measured_by",
-            "object": "Metformin",
-            "confidence": 0.8
-          },
-          {
-            "subject": "Shortness of breath",
-            "predicate": "has_symptom",
-            "object": "Hypertension",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Shortness of breath",
-            "predicate": "has_symptom",
-            "object": "Hyperlipidemia",
-            "confidence": 0.7
-          },
-          {
-            "subject": "BP 155/105",
-            "predicate": "worsens",
-            "object": "Shortness of breath",
+            "subject": "cardiology referral",
+            "predicate": "improves",
+            "object": "Type 2 Diabetes",
             "confidence": 0.6
           }
         ],
@@ -369,7 +326,12 @@
           "eGFR": 60.0,
           "LDL": 165.0
         }
-      }
+      },
+      "dosages": [
+        "2000mg",
+        "40mg",
+        "80mg"
+      ]
     }
   ]
 }

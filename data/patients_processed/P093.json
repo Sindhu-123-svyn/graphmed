@@ -13,9 +13,9 @@
         "LDL": 160
       },
       "medications": [
-        "Metformin 1000mg PO BID",
-        "Amlodipine 10mg PO QD",
-        "Atorvastatin 20mg PO QD"
+        "metformin po bid",
+        "amlodipine po qd",
+        "atorvastatin po qd"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -24,86 +24,33 @@
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria"
+        "Frequent urination"
       ],
       "extracted": {
         "conditions": [
+          "Hypertension",
           "Type 2 Diabetes",
-          "Hyperlipidemia",
-          "Hypertension"
+          "Hyperlipidemia"
         ],
         "medications": [],
+        "dosages": [],
         "symptoms": [
-          "Polyuria",
-          "Fatigue"
+          "Fatigue",
+          "Frequent urination"
         ],
         "procedures": [],
         "relationships": [
           {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "Hypertension",
-            "confidence": 0.9
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "Hyperlipidemia",
-            "confidence": 0.9
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP",
+            "subject": "Type 2 Diabetes",
             "predicate": "worsens",
-            "object": "Hypertension",
-            "confidence": 0.8
-          },
-          {
-            "subject": "LDL",
-            "predicate": "worsens",
-            "object": "Hyperlipidemia",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "worsens",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.8
+            "object": "Fatigue",
+            "confidence": 0.7
           },
           {
             "subject": "Type 2 Diabetes",
-            "predicate": "managed_by",
-            "object": "medications",
+            "predicate": "worsens",
+            "object": "Frequent urination",
             "confidence": 0.7
-          },
-          {
-            "subject": "Hypertension",
-            "predicate": "managed_by",
-            "object": "medications",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Hyperlipidemia",
-            "predicate": "managed_by",
-            "object": "medications",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Polyuria",
-            "predicate": "has_symptom",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.6
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Type 2 Diabetes",
-            "confidence": 0.6
           }
         ],
         "lab_values": {
@@ -112,7 +59,12 @@
           "BP_diastolic": 95,
           "LDL": 160
         }
-      }
+      },
+      "dosages": [
+        "1000mg",
+        "10mg",
+        "20mg"
+      ]
     },
     {
       "visit_id": "V2",
@@ -126,105 +78,56 @@
         "LDL": 140
       },
       "medications": [
-        "Metformin 1500mg PO BID",
-        "Amlodipine 5mg PO BID",
-        "Atorvastatin 40mg PO QD",
-        "Tadalafil 20mg PO QD",
-        "Adjustment of medications"
+        "metformin po bid",
+        "amlodipine po bid",
+        "atorvastatin po qd",
+        "tadalafil po qd",
+        "adjustment of medications"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
         "Hypertension",
         "Hyperlipidemia",
-        "Erectile Dysfunction",
-        "Diabetes"
+        "Erectile Dysfunction"
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Nocturia",
-        "Erectile Dysfunction"
+        "Erectile dysfunction"
       ],
       "extracted": {
         "conditions": [
-          "Diabetes",
+          "Type 2 Diabetes",
           "Hypertension"
         ],
         "medications": [
-          "Adjustment of medications"
+          "adjustment of medications"
         ],
+        "dosages": [],
         "symptoms": [
-          "Polyuria",
           "Fatigue",
+          "Frequent urination",
           "Nocturia",
           "Erectile dysfunction"
         ],
         "procedures": [
           "Follow-up in 4 months"
         ],
-        "relationships": [
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "LDL",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "worsens",
-            "object": "HbA1c",
-            "confidence": 0.7
-          },
-          {
-            "subject": "LDL",
-            "predicate": "improves",
-            "object": "HbA1c",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "contraindicated_with",
-            "object": "LDL",
-            "confidence": 0.6
-          },
-          {
-            "subject": "BP",
-            "predicate": "managed_by",
-            "object": "Adjustment of medications",
-            "confidence": 0.5
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "LDL",
-            "confidence": 0.8
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "HbA1c",
-            "confidence": 0.7
-          },
-          {
-            "subject": "BP",
-            "predicate": "has_symptom",
-            "object": "Nocturia",
-            "confidence": 0.4
-          },
-          {
-            "subject": "BP",
-            "predicate": "has_symptom",
-            "object": "Erectile dysfunction",
-            "confidence": 0.4
-          }
-        ],
+        "relationships": [],
         "lab_values": {
           "HbA1c": 7.5,
           "BP_systolic": 155,
           "BP_diastolic": 98,
           "LDL": 140
         }
-      }
+      },
+      "dosages": [
+        "1500mg",
+        "5mg",
+        "40mg",
+        "20mg"
+      ]
     },
     {
       "visit_id": "V3",
@@ -238,12 +141,12 @@
         "LDL": 150
       },
       "medications": [
-        "Metformin 2000mg PO BID",
-        "Amlodipine 10mg PO QD",
-        "Atorvastatin 80mg PO QD",
-        "Tadalafil 20mg PO QD",
-        "Gabapentin 300mg PO QD",
-        "Adjustment of existing medications"
+        "metformin po bid",
+        "amlodipine po qd",
+        "atorvastatin po qd",
+        "tadalafil po qd",
+        "gabapentin po qd",
+        "adjust medication"
       ],
       "diagnoses": [
         "Type 2 Diabetes",
@@ -251,30 +154,30 @@
         "Hyperlipidemia",
         "Erectile Dysfunction",
         "Chronic Kidney Disease",
-        "Diabetes",
         "Kidney Disease"
       ],
       "symptoms": [
         "Fatigue",
-        "Polyuria",
+        "Frequent urination",
         "Nocturia",
-        "Erectile Dysfunction",
+        "Erectile dysfunction",
         "Paresthesia",
         "Numbness",
         "Tingling"
       ],
       "extracted": {
         "conditions": [
-          "Diabetes",
+          "Type 2 Diabetes",
           "Hypertension",
           "Kidney Disease"
         ],
         "medications": [
-          "Adjustment of existing medications"
+          "adjust medication"
         ],
+        "dosages": [],
         "symptoms": [
-          "Polyuria",
           "Fatigue",
+          "Frequent urination",
           "Tingling",
           "Paresthesia",
           "Numbness"
@@ -284,42 +187,6 @@
         ],
         "relationships": [
           {
-            "subject": "Adjustment of existing medications",
-            "predicate": "managed_by",
-            "object": "Nephrologist",
-            "confidence": 0.8
-          },
-          {
-            "subject": "HbA1c",
-            "predicate": "measured_by",
-            "object": "Lab test",
-            "confidence": 0.9
-          },
-          {
-            "subject": "BP",
-            "predicate": "measured_by",
-            "object": "BP cuff",
-            "confidence": 0.9
-          },
-          {
-            "subject": "LDL",
-            "predicate": "measured_by",
-            "object": "Lab test",
-            "confidence": 0.9
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Paresthesia",
-            "confidence": 0.7
-          },
-          {
-            "subject": "Fatigue",
-            "predicate": "has_symptom",
-            "object": "Numbness",
-            "confidence": 0.7
-          },
-          {
             "subject": "Kidney Disease",
             "predicate": "worsens",
             "object": "Fatigue",
@@ -328,7 +195,7 @@
           {
             "subject": "Kidney Disease",
             "predicate": "worsens",
-            "object": "Polyuria",
+            "object": "Frequent urination",
             "confidence": 0.6
           }
         ],
@@ -338,7 +205,14 @@
           "BP_diastolic": 105,
           "LDL": 150
         }
-      }
+      },
+      "dosages": [
+        "2000mg",
+        "10mg",
+        "80mg",
+        "20mg",
+        "300mg"
+      ]
     }
   ]
 }

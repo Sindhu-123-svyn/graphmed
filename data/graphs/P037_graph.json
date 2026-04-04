@@ -1,0 +1,711 @@
+{
+  "patient_id": "P037",
+  "created_at": "2026-04-04T13:46:00.423782",
+  "nodes": [
+    {
+      "id": "P037",
+      "type": "PATIENT",
+      "name": "P037",
+      "added": "2026-04-04T13:46:00.423782",
+      "last_confirmed": "2026-04-04T13:46:00.423782",
+      "confidence": 1.0
+    },
+    {
+      "id": "CONDITION_hypertension",
+      "name": "hypertension",
+      "type": "CONDITION",
+      "added": "2022-06-15",
+      "last_confirmed": "2022-06-15",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-06-15"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "CONDITION_type_2_diabetes",
+      "name": "type 2 diabetes",
+      "type": "CONDITION",
+      "added": "2022-06-15",
+      "last_confirmed": "2023-12-20",
+      "confidence": 0.705,
+      "observed_dates": [
+        "2022-06-15",
+        "2022-12-20",
+        "2023-12-20"
+      ],
+      "decayed": true,
+      "history": [
+        {
+          "date": "2022-12-20",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2023-12-20",
+          "old": {
+            "confidence": 0.705
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "CONDITION_hyperlipidemia",
+      "name": "hyperlipidemia",
+      "type": "CONDITION",
+      "added": "2022-06-15",
+      "last_confirmed": "2022-06-15",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-06-15"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "MEDICATION_metformin",
+      "name": "metformin",
+      "type": "MEDICATION",
+      "added": "2022-06-15",
+      "last_confirmed": "2022-06-15",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-06-15"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "MEDICATION_lisinopril",
+      "name": "lisinopril",
+      "type": "MEDICATION",
+      "added": "2022-06-15",
+      "last_confirmed": "2022-06-15",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-06-15"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "LAB_VALUE_hba1c",
+      "name": "hba1c",
+      "type": "LAB_VALUE",
+      "added": "2022-06-15",
+      "last_confirmed": "2023-12-20",
+      "confidence": 0.705,
+      "observed_dates": [
+        "2022-06-15",
+        "2022-12-20",
+        "2023-12-20"
+      ],
+      "value": 9.1,
+      "decayed": true,
+      "history": [
+        {
+          "date": "2022-12-20",
+          "old": {
+            "value": 7.2,
+            "confidence": 1.0
+          },
+          "new": {}
+        },
+        {
+          "date": "2023-12-20",
+          "old": {
+            "value": 8.1,
+            "confidence": 0.705
+          },
+          "new": {}
+        }
+      ]
+    },
+    {
+      "id": "LAB_VALUE_bp_systolic",
+      "name": "bp_systolic",
+      "type": "LAB_VALUE",
+      "added": "2022-06-15",
+      "last_confirmed": "2022-06-15",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-06-15"
+      ],
+      "value": 140,
+      "decayed": true
+    },
+    {
+      "id": "LAB_VALUE_bp_diastolic",
+      "name": "bp_diastolic",
+      "type": "LAB_VALUE",
+      "added": "2022-06-15",
+      "last_confirmed": "2022-06-15",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-06-15"
+      ],
+      "value": 90,
+      "decayed": true
+    },
+    {
+      "id": "LAB_VALUE_ldl",
+      "name": "ldl",
+      "type": "LAB_VALUE",
+      "added": "2022-06-15",
+      "last_confirmed": "2022-06-15",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-06-15"
+      ],
+      "value": 130.0,
+      "decayed": true
+    },
+    {
+      "id": "SYMPTOM_frequent_urination",
+      "name": "frequent urination",
+      "type": "SYMPTOM",
+      "added": "2022-06-15",
+      "last_confirmed": "2022-06-15",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-06-15"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "SYMPTOM_polydipsia",
+      "name": "polydipsia",
+      "type": "SYMPTOM",
+      "added": "2022-06-15",
+      "last_confirmed": "2022-06-15",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-06-15"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "SYMPTOM_fatigue",
+      "name": "fatigue",
+      "type": "SYMPTOM",
+      "added": "2022-06-15",
+      "last_confirmed": "2022-12-20",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-06-15",
+        "2022-12-20"
+      ],
+      "decayed": true,
+      "history": [
+        {
+          "date": "2022-12-20",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "MEDICATION_sitagliptin",
+      "name": "sitagliptin",
+      "type": "MEDICATION",
+      "added": "2022-12-20",
+      "last_confirmed": "2023-06-15",
+      "confidence": 0.6866666666666666,
+      "observed_dates": [
+        "2022-12-20",
+        "2023-06-15"
+      ],
+      "decayed": true,
+      "history": [
+        {
+          "date": "2023-06-15",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "SYMPTOM_shortness_of_breath",
+      "name": "shortness of breath",
+      "type": "SYMPTOM",
+      "added": "2022-12-20",
+      "last_confirmed": "2022-12-20",
+      "confidence": 0.2,
+      "observed_dates": [
+        "2022-12-20"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "CONDITION_chronic_kidney_disease",
+      "name": "chronic kidney disease",
+      "type": "CONDITION",
+      "added": "2023-06-15",
+      "last_confirmed": "2023-06-15",
+      "confidence": 0.6866666666666666,
+      "observed_dates": [
+        "2023-06-15"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "CONDITION_mild_renal_impairment",
+      "name": "mild renal impairment",
+      "type": "CONDITION",
+      "added": "2023-06-15",
+      "last_confirmed": "2023-06-15",
+      "confidence": 0.6866666666666666,
+      "observed_dates": [
+        "2023-06-15"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "MEDICATION_amlodipine",
+      "name": "amlodipine",
+      "type": "MEDICATION",
+      "added": "2023-06-15",
+      "last_confirmed": "2023-06-15",
+      "confidence": 0.6866666666666666,
+      "observed_dates": [
+        "2023-06-15"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "LAB_VALUE_egfr",
+      "name": "egfr",
+      "type": "LAB_VALUE",
+      "added": "2023-06-15",
+      "last_confirmed": "2023-06-15",
+      "confidence": 0.6866666666666666,
+      "observed_dates": [
+        "2023-06-15"
+      ],
+      "value": 52.0,
+      "decayed": true
+    },
+    {
+      "id": "SYMPTOM_edema",
+      "name": "edema",
+      "type": "SYMPTOM",
+      "added": "2023-06-15",
+      "last_confirmed": "2023-06-15",
+      "confidence": 0.6866666666666666,
+      "observed_dates": [
+        "2023-06-15"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "SYMPTOM_swelling_in_lower_extremities",
+      "name": "swelling in lower extremities",
+      "type": "SYMPTOM",
+      "added": "2023-06-15",
+      "last_confirmed": "2023-06-15",
+      "confidence": 0.6866666666666666,
+      "observed_dates": [
+        "2023-06-15"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "PROCEDURE_renal_ultrasound",
+      "name": "renal ultrasound",
+      "type": "PROCEDURE",
+      "added": "2023-06-15",
+      "last_confirmed": "2023-06-15",
+      "confidence": 0.6866666666666666,
+      "observed_dates": [
+        "2023-06-15"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "MEDICATION_insulin",
+      "name": "insulin",
+      "type": "MEDICATION",
+      "added": "2023-12-20",
+      "last_confirmed": "2023-12-20",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2023-12-20"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "MEDICATION_insulin_glargine",
+      "name": "insulin glargine",
+      "type": "MEDICATION",
+      "added": "2023-12-20",
+      "last_confirmed": "2023-12-20",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2023-12-20"
+      ],
+      "decayed": true
+    },
+    {
+      "id": "LAB_VALUE_creatinine",
+      "name": "creatinine",
+      "type": "LAB_VALUE",
+      "added": "2023-12-20",
+      "last_confirmed": "2023-12-20",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2023-12-20"
+      ],
+      "value": "increasing",
+      "decayed": true
+    },
+    {
+      "id": "SYMPTOM_worsening_glycemic_control",
+      "name": "worsening glycemic control",
+      "type": "SYMPTOM",
+      "added": "2023-12-20",
+      "last_confirmed": "2023-12-20",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2023-12-20"
+      ],
+      "decayed": true
+    }
+  ],
+  "edges": [
+    {
+      "source": "P037",
+      "target": "CONDITION_hypertension",
+      "relation": "has",
+      "established": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P037",
+      "target": "CONDITION_type_2_diabetes",
+      "relation": "has",
+      "established": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P037",
+      "target": "CONDITION_hyperlipidemia",
+      "relation": "has",
+      "established": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P037",
+      "target": "MEDICATION_metformin",
+      "relation": "has",
+      "established": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P037",
+      "target": "MEDICATION_lisinopril",
+      "relation": "has",
+      "established": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P037",
+      "target": "LAB_VALUE_hba1c",
+      "relation": "has",
+      "established": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P037",
+      "target": "LAB_VALUE_bp_systolic",
+      "relation": "has",
+      "established": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P037",
+      "target": "LAB_VALUE_bp_diastolic",
+      "relation": "has",
+      "established": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P037",
+      "target": "LAB_VALUE_ldl",
+      "relation": "has",
+      "established": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P037",
+      "target": "SYMPTOM_frequent_urination",
+      "relation": "has",
+      "established": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P037",
+      "target": "SYMPTOM_polydipsia",
+      "relation": "has",
+      "established": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P037",
+      "target": "SYMPTOM_fatigue",
+      "relation": "has",
+      "established": "2022-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P037",
+      "target": "MEDICATION_sitagliptin",
+      "relation": "has",
+      "established": "2022-12-20",
+      "confidence": 1.0
+    },
+    {
+      "source": "P037",
+      "target": "SYMPTOM_shortness_of_breath",
+      "relation": "has",
+      "established": "2022-12-20",
+      "confidence": 1.0
+    },
+    {
+      "source": "P037",
+      "target": "CONDITION_chronic_kidney_disease",
+      "relation": "has",
+      "established": "2023-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P037",
+      "target": "CONDITION_mild_renal_impairment",
+      "relation": "has",
+      "established": "2023-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P037",
+      "target": "MEDICATION_amlodipine",
+      "relation": "has",
+      "established": "2023-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P037",
+      "target": "LAB_VALUE_egfr",
+      "relation": "has",
+      "established": "2023-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P037",
+      "target": "SYMPTOM_edema",
+      "relation": "has",
+      "established": "2023-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P037",
+      "target": "SYMPTOM_swelling_in_lower_extremities",
+      "relation": "has",
+      "established": "2023-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P037",
+      "target": "PROCEDURE_renal_ultrasound",
+      "relation": "has",
+      "established": "2023-06-15",
+      "confidence": 1.0
+    },
+    {
+      "source": "P037",
+      "target": "MEDICATION_insulin",
+      "relation": "has",
+      "established": "2023-12-20",
+      "confidence": 1.0
+    },
+    {
+      "source": "P037",
+      "target": "MEDICATION_insulin_glargine",
+      "relation": "has",
+      "established": "2023-12-20",
+      "confidence": 1.0
+    },
+    {
+      "source": "P037",
+      "target": "LAB_VALUE_creatinine",
+      "relation": "has",
+      "established": "2023-12-20",
+      "confidence": 1.0
+    },
+    {
+      "source": "P037",
+      "target": "SYMPTOM_worsening_glycemic_control",
+      "relation": "has",
+      "established": "2023-12-20",
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_hypertension",
+      "target": "MEDICATION_lisinopril",
+      "relation": "managed_by",
+      "established": "2022-06-15",
+      "last_observed": "2022-06-15",
+      "observed_dates": [
+        "2022-06-15"
+      ],
+      "observations": 1,
+      "confidence": 0.9
+    },
+    {
+      "source": "CONDITION_type_2_diabetes",
+      "target": "MEDICATION_metformin",
+      "relation": "managed_by",
+      "established": "2022-06-15",
+      "last_observed": "2022-06-15",
+      "observed_dates": [
+        "2022-06-15"
+      ],
+      "observations": 1,
+      "confidence": 0.9
+    },
+    {
+      "source": "CONDITION_type_2_diabetes",
+      "target": "CONDITION_hyperlipidemia",
+      "relation": "worsens",
+      "established": "2022-06-15",
+      "last_observed": "2022-06-15",
+      "observed_dates": [
+        "2022-06-15"
+      ],
+      "observations": 1,
+      "confidence": 0.7
+    },
+    {
+      "source": "CONDITION_type_2_diabetes",
+      "target": "MEDICATION_sitagliptin",
+      "relation": "managed_by",
+      "established": "2022-12-20",
+      "last_observed": "2022-12-20",
+      "observed_dates": [
+        "2022-12-20"
+      ],
+      "observations": 1,
+      "confidence": 0.9
+    },
+    {
+      "source": "CONDITION_type_2_diabetes",
+      "target": "LAB_VALUE_hba1c",
+      "relation": "measured_by",
+      "established": "2022-12-20",
+      "last_observed": "2023-12-20",
+      "observed_dates": [
+        "2022-12-20",
+        "2023-12-20"
+      ],
+      "observations": 2,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_type_2_diabetes",
+      "target": "MEDICATION_insulin",
+      "relation": "managed_by",
+      "established": "2023-12-20",
+      "last_observed": "2023-12-20",
+      "observed_dates": [
+        "2023-12-20"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_type_2_diabetes",
+      "target": "MEDICATION_insulin_glargine",
+      "relation": "managed_by",
+      "established": "2023-12-20",
+      "last_observed": "2023-12-20",
+      "observed_dates": [
+        "2023-12-20"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_type_2_diabetes",
+      "target": "SYMPTOM_worsening_glycemic_control",
+      "relation": "has_symptom",
+      "established": "2023-12-20",
+      "last_observed": "2023-12-20",
+      "observed_dates": [
+        "2023-12-20"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "CONDITION_type_2_diabetes",
+      "target": "LAB_VALUE_creatinine",
+      "relation": "measured_by",
+      "established": "2023-12-20",
+      "last_observed": "2023-12-20",
+      "observed_dates": [
+        "2023-12-20"
+      ],
+      "observations": 1,
+      "confidence": 1.0
+    },
+    {
+      "source": "MEDICATION_metformin",
+      "target": "MEDICATION_lisinopril",
+      "relation": "contraindicated_with",
+      "established": "2022-06-15",
+      "last_observed": "2022-06-15",
+      "observed_dates": [
+        "2022-06-15"
+      ],
+      "observations": 1,
+      "confidence": 0.8
+    },
+    {
+      "source": "MEDICATION_sitagliptin",
+      "target": "MEDICATION_amlodipine",
+      "relation": "contraindicated_with",
+      "established": "2023-06-15",
+      "last_observed": "2023-06-15",
+      "observed_dates": [
+        "2023-06-15"
+      ],
+      "observations": 1,
+      "confidence": 0.8
+    },
+    {
+      "source": "LAB_VALUE_egfr",
+      "target": "CONDITION_chronic_kidney_disease",
+      "relation": "worsens",
+      "established": "2023-06-15",
+      "last_observed": "2023-06-15",
+      "observed_dates": [
+        "2023-06-15"
+      ],
+      "observations": 1,
+      "confidence": 0.6
+    }
+  ]
+}
