@@ -1,0 +1,43 @@
+{
+  "experiment_1_factual_accuracy": {
+    "mode": "fallback",
+    "graphmed_mode": "fallback",
+    "baseline_mode": "fallback",
+    "num_questions": 50,
+    "graphmed_factscore_mean": 0.62,
+    "baseline_factscore_mean": 0.42,
+    "graphmed_multi_visit_factscore_mean": 0.0,
+    "baseline_multi_visit_factscore_mean": 0.0,
+    "expected_finding_supported": false,
+    "manual_binary_review_samples": 20,
+    "manual_template_file": "evaluation\\results\\phase9\\experiment1_manual_review_20.json"
+  },
+  "experiment_2_longitudinal_memory": {
+    "mode": "fallback",
+    "graphmed_mode": "fallback",
+    "baseline_mode": "fallback",
+    "num_cases": 50,
+    "graphmed_bertscore_mean": 0.7896539682539683,
+    "baseline_bertscore_mean": 0.7896539682539683,
+    "graphmed_consistency_mean": 0.8305292063492062,
+    "baseline_consistency_mean": 0.8305292063492062,
+    "expected_finding_supported": false
+  },
+  "experiment_3_conflict_detection": {
+    "mode": "fallback",
+    "graphmed_mode": "fallback",
+    "baseline_mode": "full_stack",
+    "llm_prompt_mode": "fallback",
+    "num_cases": 30,
+    "graphmed_precision": 1.0,
+    "graphmed_recall": 0.3,
+    "graphmed_f1": 0.46153846153846156,
+    "llm_prompt_precision": 0.0,
+    "llm_prompt_recall": 0.0,
+    "llm_prompt_f1": 0.0,
+    "baseline_precision": 0.0,
+    "baseline_recall": 0.0,
+    "baseline_f1": 0.0,
+    "expected_finding_supported": true
+  }
+}

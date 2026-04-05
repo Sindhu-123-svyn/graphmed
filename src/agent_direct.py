@@ -38,8 +38,21 @@ class DirectReActAgent:
         """
         self.persist_dir = Path(persist_dir)
         self.max_steps = max_steps
-        self.api_key = os.getenv("GROQ_API_KEY")
-        self.api_url = "https://api.groq.com/openai/v1/chat/completions"
+        # LLM provider selection:
+        # 1) GRAPHMED_LLM_PROVIDER if set
+        # 2) BASELINE_LLM_PROVIDER fallback (user convenience)
+        # 3) default to groq
+        self.llm_provider = (
+            os.getenv("GRAPHMED_LLM_PROVIDER")
+            or os.getenv("BASELINE_LLM_PROVIDER")
+            or "groq"
+        ).strip().lower()
+
+        self.groq_api_key = os.getenv("GROQ_API_KEY")
+        self.groq_api_url = "https://api.groq.com/openai/v1/chat/completions"
+
+        self.google_api_key = os.getenv("GOOGLE_API_KEY")
+        self.google_model = os.getenv("GRAPHMED_GOOGLE_MODEL", "gemini-2.5-flash")
         
         # Initialize components
         self.graphs_dir = self.persist_dir / "graphs"
@@ -51,6 +64,7 @@ class DirectReActAgent:
         
         print("✅ Direct ReAct Agent initialized (no LangChain)")
         print(f"   Max reasoning steps: {max_steps}")
+        print(f"   LLM provider: {self.llm_provider}")
 
 
     def _evolve_graph(self, patient_id: str, new_visit: Dict) -> str:
@@ -71,17 +85,12 @@ class DirectReActAgent:
             return f"Error evolving graph: {e}"
     
     def _call_groq(self, messages: List[Dict]) -> str:
-        """
-        Call Groq API directly.
-        
-        Args:
-            messages: List of message dicts with 'role' and 'content'
-        
-        Returns:
-            Assistant's response text
-        """
+        """Call Groq API directly."""
+        if not self.groq_api_key:
+            return "Error calling Groq API: GROQ_API_KEY is not configured"
+
         headers = {
-            "Authorization": f"Bearer {self.api_key}",
+            "Authorization": f"Bearer {self.groq_api_key}",
             "Content-Type": "application/json"
         }
         
@@ -93,13 +102,114 @@ class DirectReActAgent:
         }
         
         try:
-            response = requests.post(self.api_url, headers=headers, json=data)
+            response = requests.post(self.groq_api_url, headers=headers, json=data, timeout=45)
             response.raise_for_status()
             result = response.json()
             return result['choices'][0]['message']['content']
         except Exception as e:
             print(f"   ❌ API Error: {e}")
             return f"Error calling Groq API: {e}"
+
+    def _call_google(self, messages: List[Dict]) -> str:
+        """Call Google Generative Language API (Gemini) using chat transcript as prompt."""
+        if not self.google_api_key:
+            return "Error calling Google API: GOOGLE_API_KEY is not configured"
+
+        transcript = []
+        for msg in messages:
+            role = str(msg.get("role", "user")).upper()
+            content = str(msg.get("content", ""))
+            transcript.append(f"{role}: {content}")
+        prompt = "\n\n".join(transcript)
+
+        payload = {
+            "contents": [{"parts": [{"text": prompt}]}],
+            "generationConfig": {
+                "temperature": 0.1,
+                "maxOutputTokens": 1000,
+            },
+        }
+
+        try:
+            for model in [self.google_model, self._resolve_google_model()]:
+                if not model:
+                    continue
+                url = (
+                    "https://generativelanguage.googleapis.com/v1beta/models/"
+                    f"{model}:generateContent?key={self.google_api_key}"
+                )
+                response = requests.post(url, json=payload, timeout=45)
+                if response.status_code == 404:
+                    continue
+                response.raise_for_status()
+                data = response.json()
+                candidates = data.get("candidates", [])
+                if not candidates:
+                    return "Error calling Google API: empty response"
+                parts = candidates[0].get("content", {}).get("parts", [])
+                text = "".join(str(p.get("text", "")) for p in parts).strip()
+                if not text:
+                    return "Error calling Google API: empty text"
+                self.google_model = model
+                return text
+
+            return (
+                "Error calling Google API: no supported model found for generateContent "
+                "(all candidate models returned 404)"
+            )
+        except Exception as e:
+            print(f"   ❌ API Error: {e}")
+            return f"Error calling Google API: {e}"
+
+    def _resolve_google_model(self) -> Optional[str]:
+        """Resolve a supported Gemini model name for generateContent."""
+        if not self.google_api_key:
+            return None
+        try:
+            list_url = "https://generativelanguage.googleapis.com/v1beta/models"
+            resp = requests.get(list_url, params={"key": self.google_api_key}, timeout=30)
+            resp.raise_for_status()
+            models = resp.json().get("models", [])
+            supported = []
+            for m in models:
+                methods = m.get("supportedGenerationMethods", []) or []
+                if "generateContent" in methods:
+                    name = str(m.get("name", ""))
+                    if name.startswith("models/"):
+                        name = name.split("/", 1)[1]
+                    if name:
+                        supported.append(name)
+
+            priority = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash"]
+            for p in priority:
+                if p in supported:
+                    return p
+            return supported[0] if supported else None
+        except Exception:
+            return None
+
+    def _call_llm(self, messages: List[Dict]) -> str:
+        """Dispatch LLM call to selected provider with Groq fallback."""
+        provider = self.llm_provider
+        if provider == "google":
+            google_result = self._call_google(messages)
+            if not google_result.lower().startswith("error calling google api"):
+                return google_result
+            # Strict mode by default: stay on Google if selected.
+            fallback_enabled = os.getenv("GRAPHMED_GOOGLE_FALLBACK_TO_GROQ", "0").strip() == "1"
+            if fallback_enabled:
+                return self._call_groq(messages)
+            return google_result
+
+        # default groq
+        groq_result = self._call_groq(messages)
+        # Optional fallback to Google when Groq rate-limits (opt-in only).
+        fallback_enabled = os.getenv("GRAPHMED_GROQ_FALLBACK_TO_GOOGLE", "0").strip() == "1"
+        if fallback_enabled and (
+            "429" in groq_result.lower() or "too many requests" in groq_result.lower()
+        ) and self.google_api_key:
+            return self._call_google(messages)
+        return groq_result
     
     def _load_patient_graph(self, patient_id: str) -> PatientKnowledgeGraph:
         """Load a patient's knowledge graph."""
@@ -332,7 +442,7 @@ Now, answer the user's question by thinking step by step and using actions."""
             print(f"\n🔹 Step {step + 1}")
             
             # Get agent response
-            response_text = self._call_groq(messages)
+            response_text = self._call_llm(messages)
             print(f"   💭 Agent: {response_text[:200]}...")
             
             # Check for final answer
@@ -380,7 +490,7 @@ Now, answer the user's question by thinking step by step and using actions."""
         
         # Max steps reached
         messages.append({"role": "user", "content": "Please provide your final answer now based on available information."})
-        final_answer = self._call_groq(messages)
+        final_answer = self._call_llm(messages)
         
         print(f"\n{'='*60}")
         print(f"🤖 GraphMed Response (max steps):")

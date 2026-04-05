@@ -1,0 +1,1997 @@
+{
+  "mode": "fallback",
+  "graphmed_mode": "fallback",
+  "baseline_mode": "fallback",
+  "num_questions": 50,
+  "graphmed_factscore_mean": 0.5866666666666667,
+  "baseline_factscore_mean": 0.0,
+  "graphmed_multi_visit_factscore_mean": 0.03333333333333333,
+  "baseline_multi_visit_factscore_mean": 0.0,
+  "expected_finding_supported": true,
+  "graphmed_latency_mean": 0.6678036975860596,
+  "baseline_latency_mean": 0.6838184165954589,
+  "rows": [
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "full_stack",
+      "patient_id": "P001",
+      "question": "What are the key diagnosed conditions for patient P001?",
+      "question_type": "history",
+      "expected_keywords": [
+        "hypertension",
+        "hyperlipidemia",
+        "renal failure"
+      ],
+      "expected_answer": "Key conditions include Hypertension, Hyperlipidemia, Renal Failure.",
+      "answer": "** The key diagnosed conditions for patient P001 are Hypertension, Hyperlipidemia, and Type 2 Diabetes. The patient is currently experiencing symptoms of fatigue, dizziness, and shortness of breath. Recent lab results indicate elevated HbA1c, high LDL cholesterol, and slightly elevated blood pressure.\n\n**Medical Disclaimer:** This information is based on the patient's current medical record and may not reflect the patient's complete medical history or current health status. A healthcare professional should be consulted for accurate diagnosis and treatment.",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 1.3656229972839355
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "full_stack",
+      "patient_id": "P001",
+      "question": "What are the key diagnosed conditions for patient P001?",
+      "question_type": "history",
+      "expected_keywords": [
+        "hypertension",
+        "hyperlipidemia",
+        "renal failure"
+      ],
+      "expected_answer": "Key conditions include Hypertension, Hyperlipidemia, Renal Failure.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.5662305355072021
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "full_stack",
+      "patient_id": "P001",
+      "question": "Which medications is patient P001 taking currently or recently?",
+      "question_type": "history",
+      "expected_keywords": [
+        "lisinopril",
+        "atorvastatin",
+        "metoprolol"
+      ],
+      "expected_answer": "Key medications include lisinopril, atorvastatin, metoprolol.",
+      "answer": "** \nPatient P001 is currently taking Lisinopril (10mg, once daily), Amlodipine (5mg, once daily), Simvastatin (20mg, once daily), and Metformin (500mg, twice daily).\n\n**Medical Disclaimer:** This information is based on the patient's current medication list and may not reflect any changes or updates since the last medical visit. Always consult a healthcare professional for the most accurate and up-to-date information.",
+      "factscore": 0.3333333333333333,
+      "latency_sec": 1.53755521774292
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "full_stack",
+      "patient_id": "P001",
+      "question": "Which medications is patient P001 taking currently or recently?",
+      "question_type": "history",
+      "expected_keywords": [
+        "lisinopril",
+        "atorvastatin",
+        "metoprolol"
+      ],
+      "expected_answer": "Key medications include lisinopril, atorvastatin, metoprolol.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6561787128448486
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "full_stack",
+      "patient_id": "P001",
+      "question": "What symptoms have been documented for patient P001?",
+      "question_type": "history",
+      "expected_keywords": [
+        "shortness of breath",
+        "chest pain",
+        "renal function"
+      ],
+      "expected_answer": "Documented symptoms include Shortness of breath, Chest pain, Renal function.",
+      "answer": "**\nPatient P001 has documented symptoms of fatigue, dizziness, and headaches. These symptoms may be related to the patient's Hypertension and potential side effects of Lisinopril. The elevated blood pressure and creatinine levels suggest that the patient's Hypertension is not well-controlled, and further evaluation is necessary to determine the underlying cause of these symptoms. **Medical Disclaimer: This answer is based on the information provided and should not be used for diagnostic or treatment purposes. A healthcare professional should be consulted for an accurate diagnosis and treatment plan.**",
+      "factscore": 0.0,
+      "latency_sec": 1.1468875408172607
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "full_stack",
+      "patient_id": "P001",
+      "question": "What symptoms have been documented for patient P001?",
+      "question_type": "history",
+      "expected_keywords": [
+        "shortness of breath",
+        "chest pain",
+        "renal function"
+      ],
+      "expected_answer": "Documented symptoms include Shortness of breath, Chest pain, Renal function.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6148386001586914
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "full_stack",
+      "patient_id": "P001",
+      "question": "Using all visits, what changed between the first and most recent visit for patient P001?",
+      "question_type": "multi_visit_context",
+      "expected_keywords": [
+        "hypertension",
+        "anemia",
+        "visit"
+      ],
+      "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Anemia.",
+      "answer": "**\n\nBased on the patient's medical history, the following changes have occurred between the first and most recent visit:\n- Improved blood pressure control\n- Improved fasting glucose control\n- Improved LDL cholesterol control\n\n**Medical Disclaimer:** This information is for educational purposes only and should not be used as a substitute for professional medical advice. Patients should consult their healthcare provider for personalized advice and treatment.",
+      "factscore": 0.3333333333333333,
+      "latency_sec": 1.6003975868225098
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "full_stack",
+      "patient_id": "P001",
+      "question": "Using all visits, what changed between the first and most recent visit for patient P001?",
+      "question_type": "multi_visit_context",
+      "expected_keywords": [
+        "hypertension",
+        "anemia",
+        "visit"
+      ],
+      "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Anemia.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6746010780334473
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P001",
+      "question": "Is the combination of lisinopril and atorvastatin safe for patient P001?",
+      "question_type": "drug_safety",
+      "expected_keywords": [
+        "lisinopril",
+        "atorvastatin",
+        "interaction"
+      ],
+      "expected_answer": "Assess safety and potential interaction risk between lisinopril and atorvastatin.",
+      "answer": "Patient history reviewed with available structured records.",
+      "factscore": 0.0,
+      "latency_sec": 27.69503140449524
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P001",
+      "question": "Is the combination of lisinopril and atorvastatin safe for patient P001?",
+      "question_type": "drug_safety",
+      "expected_keywords": [
+        "lisinopril",
+        "atorvastatin",
+        "interaction"
+      ],
+      "expected_answer": "Assess safety and potential interaction risk between lisinopril and atorvastatin.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6648268699645996
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P002",
+      "question": "What are the key diagnosed conditions for patient P002?",
+      "question_type": "history",
+      "expected_keywords": [
+        "hypertension",
+        "type 2 diabetes",
+        "hyperlipidemia"
+      ],
+      "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
+      "answer": "Conditions: Hypertension, Type 2 Diabetes, Hyperlipidemia, Chronic Kidney Disease.",
+      "factscore": 1.0,
+      "latency_sec": 0.001005411148071289
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P002",
+      "question": "What are the key diagnosed conditions for patient P002?",
+      "question_type": "history",
+      "expected_keywords": [
+        "hypertension",
+        "type 2 diabetes",
+        "hyperlipidemia"
+      ],
+      "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6719048023223877
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P002",
+      "question": "Which medications is patient P002 taking currently or recently?",
+      "question_type": "history",
+      "expected_keywords": [
+        "antihypertensive medication",
+        "statin",
+        "metformin bd"
+      ],
+      "expected_answer": "Key medications include antihypertensive medication, statin, metformin bd.",
+      "answer": "Medications: antihypertensive medication, statin, metformin bd, losartan qd, atorvastatin qd.",
+      "factscore": 1.0,
+      "latency_sec": 0.0010378360748291016
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P002",
+      "question": "Which medications is patient P002 taking currently or recently?",
+      "question_type": "history",
+      "expected_keywords": [
+        "antihypertensive medication",
+        "statin",
+        "metformin bd"
+      ],
+      "expected_answer": "Key medications include antihypertensive medication, statin, metformin bd.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6945037841796875
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P002",
+      "question": "What symptoms have been documented for patient P002?",
+      "question_type": "history",
+      "expected_keywords": [
+        "fatigue",
+        "shortness of breath",
+        "elevated bp"
+      ],
+      "expected_answer": "Documented symptoms include Fatigue, Shortness of breath, Elevated bp.",
+      "answer": "Symptoms: Fatigue, Shortness of breath, Elevated bp, Leg cramps, Swelling in lower extremities.",
+      "factscore": 1.0,
+      "latency_sec": 0.0010221004486083984
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P002",
+      "question": "What symptoms have been documented for patient P002?",
+      "question_type": "history",
+      "expected_keywords": [
+        "fatigue",
+        "shortness of breath",
+        "elevated bp"
+      ],
+      "expected_answer": "Documented symptoms include Fatigue, Shortness of breath, Elevated bp.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6366622447967529
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P002",
+      "question": "Using all visits, what changed between the first and most recent visit for patient P002?",
+      "question_type": "multi_visit_context",
+      "expected_keywords": [
+        "hypertension",
+        "hypertension",
+        "visit"
+      ],
+      "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Hypertension.",
+      "answer": "Patient history reviewed with available structured records.",
+      "factscore": 0.0,
+      "latency_sec": 0.0020058155059814453
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P002",
+      "question": "Using all visits, what changed between the first and most recent visit for patient P002?",
+      "question_type": "multi_visit_context",
+      "expected_keywords": [
+        "hypertension",
+        "hypertension",
+        "visit"
+      ],
+      "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Hypertension.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6432669162750244
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P002",
+      "question": "Is the combination of antihypertensive medication and statin safe for patient P002?",
+      "question_type": "drug_safety",
+      "expected_keywords": [
+        "antihypertensive medication",
+        "statin",
+        "interaction"
+      ],
+      "expected_answer": "Assess safety and potential interaction risk between antihypertensive medication and statin.",
+      "answer": "Medication safety note: review interaction risk between antihypertensive medication and statin.",
+      "factscore": 1.0,
+      "latency_sec": 0.0010149478912353516
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P002",
+      "question": "Is the combination of antihypertensive medication and statin safe for patient P002?",
+      "question_type": "drug_safety",
+      "expected_keywords": [
+        "antihypertensive medication",
+        "statin",
+        "interaction"
+      ],
+      "expected_answer": "Assess safety and potential interaction risk between antihypertensive medication and statin.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6742849349975586
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P003",
+      "question": "What are the key diagnosed conditions for patient P003?",
+      "question_type": "history",
+      "expected_keywords": [
+        "hypertension",
+        "type 2 diabetes",
+        "chronic kidney disease"
+      ],
+      "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Chronic Kidney Disease.",
+      "answer": "Conditions: Hypertension, Type 2 Diabetes, Chronic Kidney Disease.",
+      "factscore": 1.0,
+      "latency_sec": 0.0011453628540039062
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P003",
+      "question": "What are the key diagnosed conditions for patient P003?",
+      "question_type": "history",
+      "expected_keywords": [
+        "hypertension",
+        "type 2 diabetes",
+        "chronic kidney disease"
+      ],
+      "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Chronic Kidney Disease.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6647641658782959
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P003",
+      "question": "Which medications is patient P003 taking currently or recently?",
+      "question_type": "history",
+      "expected_keywords": [
+        "metformin",
+        "losartan",
+        "statin"
+      ],
+      "expected_answer": "Key medications include metformin, losartan, statin.",
+      "answer": "Medications: metformin, losartan, statin, ace inhibitor.",
+      "factscore": 1.0,
+      "latency_sec": 0.001005411148071289
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P003",
+      "question": "Which medications is patient P003 taking currently or recently?",
+      "question_type": "history",
+      "expected_keywords": [
+        "metformin",
+        "losartan",
+        "statin"
+      ],
+      "expected_answer": "Key medications include metformin, losartan, statin.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6453168392181396
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P003",
+      "question": "What symptoms have been documented for patient P003?",
+      "question_type": "history",
+      "expected_keywords": [
+        "fatigue",
+        "polydipsia",
+        "increased urination"
+      ],
+      "expected_answer": "Documented symptoms include Fatigue, Polydipsia, Increased urination.",
+      "answer": "Symptoms: Fatigue, Polydipsia, Increased urination, Shortness of breath.",
+      "factscore": 1.0,
+      "latency_sec": 0.0010979175567626953
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P003",
+      "question": "What symptoms have been documented for patient P003?",
+      "question_type": "history",
+      "expected_keywords": [
+        "fatigue",
+        "polydipsia",
+        "increased urination"
+      ],
+      "expected_answer": "Documented symptoms include Fatigue, Polydipsia, Increased urination.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6225190162658691
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P003",
+      "question": "Using all visits, what changed between the first and most recent visit for patient P003?",
+      "question_type": "multi_visit_context",
+      "expected_keywords": [
+        "hypertension",
+        "chronic kidney disease",
+        "visit"
+      ],
+      "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Chronic Kidney Disease.",
+      "answer": "Patient history reviewed with available structured records.",
+      "factscore": 0.0,
+      "latency_sec": 0.0010008811950683594
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P003",
+      "question": "Using all visits, what changed between the first and most recent visit for patient P003?",
+      "question_type": "multi_visit_context",
+      "expected_keywords": [
+        "hypertension",
+        "chronic kidney disease",
+        "visit"
+      ],
+      "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Chronic Kidney Disease.",
+      "answer": "Error: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))",
+      "factscore": 0.0,
+      "latency_sec": 0.7163777351379395
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P003",
+      "question": "Is the combination of metformin and losartan safe for patient P003?",
+      "question_type": "drug_safety",
+      "expected_keywords": [
+        "metformin",
+        "losartan",
+        "interaction"
+      ],
+      "expected_answer": "Assess safety and potential interaction risk between metformin and losartan.",
+      "answer": "Patient history reviewed with available structured records.",
+      "factscore": 0.0,
+      "latency_sec": 0.0
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P003",
+      "question": "Is the combination of metformin and losartan safe for patient P003?",
+      "question_type": "drug_safety",
+      "expected_keywords": [
+        "metformin",
+        "losartan",
+        "interaction"
+      ],
+      "expected_answer": "Assess safety and potential interaction risk between metformin and losartan.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6564886569976807
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P004",
+      "question": "What are the key diagnosed conditions for patient P004?",
+      "question_type": "history",
+      "expected_keywords": [
+        "hypertension",
+        "type 2 diabetes",
+        "hyperlipidemia"
+      ],
+      "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
+      "answer": "Conditions: Hypertension, Type 2 Diabetes, Hyperlipidemia, Chronic Kidney Disease, Heart Failure.",
+      "factscore": 1.0,
+      "latency_sec": 0.0
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P004",
+      "question": "What are the key diagnosed conditions for patient P004?",
+      "question_type": "history",
+      "expected_keywords": [
+        "hypertension",
+        "type 2 diabetes",
+        "hyperlipidemia"
+      ],
+      "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.5942800045013428
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P004",
+      "question": "Which medications is patient P004 taking currently or recently?",
+      "question_type": "history",
+      "expected_keywords": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin"
+      ],
+      "expected_answer": "Key medications include metformin, lisinopril, atorvastatin.",
+      "answer": "Medications: metformin, lisinopril, atorvastatin, furosemide, enalapril.",
+      "factscore": 1.0,
+      "latency_sec": 0.0
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P004",
+      "question": "Which medications is patient P004 taking currently or recently?",
+      "question_type": "history",
+      "expected_keywords": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin"
+      ],
+      "expected_answer": "Key medications include metformin, lisinopril, atorvastatin.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.8777995109558105
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P004",
+      "question": "What symptoms have been documented for patient P004?",
+      "question_type": "history",
+      "expected_keywords": [
+        "polydipsia",
+        "increased thirst",
+        "urination"
+      ],
+      "expected_answer": "Documented symptoms include Polydipsia, Increased thirst, Urination.",
+      "answer": "Symptoms: Polydipsia, Increased thirst, Urination, Fatigue, Shortness of breath.",
+      "factscore": 1.0,
+      "latency_sec": 0.0005075931549072266
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P004",
+      "question": "What symptoms have been documented for patient P004?",
+      "question_type": "history",
+      "expected_keywords": [
+        "polydipsia",
+        "increased thirst",
+        "urination"
+      ],
+      "expected_answer": "Documented symptoms include Polydipsia, Increased thirst, Urination.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.8793001174926758
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P004",
+      "question": "Using all visits, what changed between the first and most recent visit for patient P004?",
+      "question_type": "multi_visit_context",
+      "expected_keywords": [
+        "hypertension",
+        "hypertension",
+        "visit"
+      ],
+      "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Hypertension.",
+      "answer": "Patient history reviewed with available structured records.",
+      "factscore": 0.0,
+      "latency_sec": 0.0010023117065429688
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P004",
+      "question": "Using all visits, what changed between the first and most recent visit for patient P004?",
+      "question_type": "multi_visit_context",
+      "expected_keywords": [
+        "hypertension",
+        "hypertension",
+        "visit"
+      ],
+      "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Hypertension.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.8736693859100342
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P004",
+      "question": "Is the combination of metformin and lisinopril safe for patient P004?",
+      "question_type": "drug_safety",
+      "expected_keywords": [
+        "metformin",
+        "lisinopril",
+        "interaction"
+      ],
+      "expected_answer": "Assess safety and potential interaction risk between metformin and lisinopril.",
+      "answer": "Patient history reviewed with available structured records.",
+      "factscore": 0.0,
+      "latency_sec": 0.0010404586791992188
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P004",
+      "question": "Is the combination of metformin and lisinopril safe for patient P004?",
+      "question_type": "drug_safety",
+      "expected_keywords": [
+        "metformin",
+        "lisinopril",
+        "interaction"
+      ],
+      "expected_answer": "Assess safety and potential interaction risk between metformin and lisinopril.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.813347339630127
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P005",
+      "question": "What are the key diagnosed conditions for patient P005?",
+      "question_type": "history",
+      "expected_keywords": [
+        "hypertension",
+        "type 2 diabetes",
+        "hyperlipidemia"
+      ],
+      "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
+      "answer": "Conditions: Hypertension, Type 2 Diabetes, Hyperlipidemia, Chronic Kidney Disease.",
+      "factscore": 1.0,
+      "latency_sec": 0.00101470947265625
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P005",
+      "question": "What are the key diagnosed conditions for patient P005?",
+      "question_type": "history",
+      "expected_keywords": [
+        "hypertension",
+        "type 2 diabetes",
+        "hyperlipidemia"
+      ],
+      "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.8377764225006104
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P005",
+      "question": "Which medications is patient P005 taking currently or recently?",
+      "question_type": "history",
+      "expected_keywords": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin"
+      ],
+      "expected_answer": "Key medications include metformin, lisinopril, atorvastatin.",
+      "answer": "Medications: metformin, lisinopril, atorvastatin, furosemide.",
+      "factscore": 1.0,
+      "latency_sec": 0.001010894775390625
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P005",
+      "question": "Which medications is patient P005 taking currently or recently?",
+      "question_type": "history",
+      "expected_keywords": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin"
+      ],
+      "expected_answer": "Key medications include metformin, lisinopril, atorvastatin.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.5761888027191162
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P005",
+      "question": "What symptoms have been documented for patient P005?",
+      "question_type": "history",
+      "expected_keywords": [
+        "fatigue",
+        "polydipsia",
+        "increased thirst"
+      ],
+      "expected_answer": "Documented symptoms include Fatigue, Polydipsia, Increased thirst.",
+      "answer": "Symptoms: Fatigue, Polydipsia, Increased thirst, Weight gain, Shortness of breath.",
+      "factscore": 1.0,
+      "latency_sec": 0.001039266586303711
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P005",
+      "question": "What symptoms have been documented for patient P005?",
+      "question_type": "history",
+      "expected_keywords": [
+        "fatigue",
+        "polydipsia",
+        "increased thirst"
+      ],
+      "expected_answer": "Documented symptoms include Fatigue, Polydipsia, Increased thirst.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6587984561920166
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P005",
+      "question": "Using all visits, what changed between the first and most recent visit for patient P005?",
+      "question_type": "multi_visit_context",
+      "expected_keywords": [
+        "hypertension",
+        "hypertension",
+        "visit"
+      ],
+      "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Hypertension.",
+      "answer": "Patient history reviewed with available structured records.",
+      "factscore": 0.0,
+      "latency_sec": 0.0010385513305664062
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P005",
+      "question": "Using all visits, what changed between the first and most recent visit for patient P005?",
+      "question_type": "multi_visit_context",
+      "expected_keywords": [
+        "hypertension",
+        "hypertension",
+        "visit"
+      ],
+      "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Hypertension.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.8782057762145996
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P005",
+      "question": "Is the combination of metformin and lisinopril safe for patient P005?",
+      "question_type": "drug_safety",
+      "expected_keywords": [
+        "metformin",
+        "lisinopril",
+        "interaction"
+      ],
+      "expected_answer": "Assess safety and potential interaction risk between metformin and lisinopril.",
+      "answer": "Patient history reviewed with available structured records.",
+      "factscore": 0.0,
+      "latency_sec": 0.002036571502685547
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P005",
+      "question": "Is the combination of metformin and lisinopril safe for patient P005?",
+      "question_type": "drug_safety",
+      "expected_keywords": [
+        "metformin",
+        "lisinopril",
+        "interaction"
+      ],
+      "expected_answer": "Assess safety and potential interaction risk between metformin and lisinopril.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6290073394775391
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P006",
+      "question": "What are the key diagnosed conditions for patient P006?",
+      "question_type": "history",
+      "expected_keywords": [
+        "hypertension",
+        "type 2 diabetes",
+        "hyperlipidemia"
+      ],
+      "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
+      "answer": "Conditions: Hypertension, Type 2 Diabetes, Hyperlipidemia, Chronic Kidney Disease, Coronary Artery Disease.",
+      "factscore": 1.0,
+      "latency_sec": 0.0010371208190917969
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P006",
+      "question": "What are the key diagnosed conditions for patient P006?",
+      "question_type": "history",
+      "expected_keywords": [
+        "hypertension",
+        "type 2 diabetes",
+        "hyperlipidemia"
+      ],
+      "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6637330055236816
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P006",
+      "question": "Which medications is patient P006 taking currently or recently?",
+      "question_type": "history",
+      "expected_keywords": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin"
+      ],
+      "expected_answer": "Key medications include metformin, lisinopril, atorvastatin.",
+      "answer": "Medications: metformin, lisinopril, atorvastatin.",
+      "factscore": 1.0,
+      "latency_sec": 0.0010406970977783203
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P006",
+      "question": "Which medications is patient P006 taking currently or recently?",
+      "question_type": "history",
+      "expected_keywords": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin"
+      ],
+      "expected_answer": "Key medications include metformin, lisinopril, atorvastatin.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6483674049377441
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P006",
+      "question": "What symptoms have been documented for patient P006?",
+      "question_type": "history",
+      "expected_keywords": [
+        "fatigue",
+        "frequent urination",
+        "polydipsia"
+      ],
+      "expected_answer": "Documented symptoms include Fatigue, Frequent urination, Polydipsia.",
+      "answer": "Symptoms: Fatigue, Frequent urination, Polydipsia, Improvement in symptoms, Shortness of breath.",
+      "factscore": 1.0,
+      "latency_sec": 0.0010416507720947266
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P006",
+      "question": "What symptoms have been documented for patient P006?",
+      "question_type": "history",
+      "expected_keywords": [
+        "fatigue",
+        "frequent urination",
+        "polydipsia"
+      ],
+      "expected_answer": "Documented symptoms include Fatigue, Frequent urination, Polydipsia.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6707015037536621
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P006",
+      "question": "Using all visits, what changed between the first and most recent visit for patient P006?",
+      "question_type": "multi_visit_context",
+      "expected_keywords": [
+        "hypertension",
+        "type 2 diabetes",
+        "visit"
+      ],
+      "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Type 2 Diabetes.",
+      "answer": "Patient history reviewed with available structured records.",
+      "factscore": 0.0,
+      "latency_sec": 0.0010030269622802734
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P006",
+      "question": "Using all visits, what changed between the first and most recent visit for patient P006?",
+      "question_type": "multi_visit_context",
+      "expected_keywords": [
+        "hypertension",
+        "type 2 diabetes",
+        "visit"
+      ],
+      "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Type 2 Diabetes.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6402938365936279
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P006",
+      "question": "Is the combination of metformin and lisinopril safe for patient P006?",
+      "question_type": "drug_safety",
+      "expected_keywords": [
+        "metformin",
+        "lisinopril",
+        "interaction"
+      ],
+      "expected_answer": "Assess safety and potential interaction risk between metformin and lisinopril.",
+      "answer": "Patient history reviewed with available structured records.",
+      "factscore": 0.0,
+      "latency_sec": 0.0019986629486083984
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P006",
+      "question": "Is the combination of metformin and lisinopril safe for patient P006?",
+      "question_type": "drug_safety",
+      "expected_keywords": [
+        "metformin",
+        "lisinopril",
+        "interaction"
+      ],
+      "expected_answer": "Assess safety and potential interaction risk between metformin and lisinopril.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6612658500671387
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P007",
+      "question": "What are the key diagnosed conditions for patient P007?",
+      "question_type": "history",
+      "expected_keywords": [
+        "hypertension",
+        "type 2 diabetes",
+        "hyperlipidemia"
+      ],
+      "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
+      "answer": "Conditions: Hypertension, Type 2 Diabetes, Hyperlipidemia, Fluid Overload, Coronary Artery Disease.",
+      "factscore": 1.0,
+      "latency_sec": 0.0010378360748291016
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P007",
+      "question": "What are the key diagnosed conditions for patient P007?",
+      "question_type": "history",
+      "expected_keywords": [
+        "hypertension",
+        "type 2 diabetes",
+        "hyperlipidemia"
+      ],
+      "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6526086330413818
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P007",
+      "question": "Which medications is patient P007 taking currently or recently?",
+      "question_type": "history",
+      "expected_keywords": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin"
+      ],
+      "expected_answer": "Key medications include metformin, lisinopril, atorvastatin.",
+      "answer": "Medications: metformin, lisinopril, atorvastatin, amlodipine, simvastatin.",
+      "factscore": 1.0,
+      "latency_sec": 0.0019965171813964844
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P007",
+      "question": "Which medications is patient P007 taking currently or recently?",
+      "question_type": "history",
+      "expected_keywords": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin"
+      ],
+      "expected_answer": "Key medications include metformin, lisinopril, atorvastatin.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.7880330085754395
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P007",
+      "question": "What symptoms have been documented for patient P007?",
+      "question_type": "history",
+      "expected_keywords": [
+        "fatigue",
+        "polydipsia",
+        "weight loss"
+      ],
+      "expected_answer": "Documented symptoms include Fatigue, Polydipsia, Weight loss.",
+      "answer": "Symptoms: Fatigue, Polydipsia, Weight loss, Decreased urine output, Shortness of breath.",
+      "factscore": 1.0,
+      "latency_sec": 0.0
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P007",
+      "question": "What symptoms have been documented for patient P007?",
+      "question_type": "history",
+      "expected_keywords": [
+        "fatigue",
+        "polydipsia",
+        "weight loss"
+      ],
+      "expected_answer": "Documented symptoms include Fatigue, Polydipsia, Weight loss.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6693036556243896
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P007",
+      "question": "Using all visits, what changed between the first and most recent visit for patient P007?",
+      "question_type": "multi_visit_context",
+      "expected_keywords": [
+        "hypertension",
+        "coronary artery disease",
+        "visit"
+      ],
+      "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Coronary Artery Disease.",
+      "answer": "Patient history reviewed with available structured records.",
+      "factscore": 0.0,
+      "latency_sec": 0.0010154247283935547
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P007",
+      "question": "Using all visits, what changed between the first and most recent visit for patient P007?",
+      "question_type": "multi_visit_context",
+      "expected_keywords": [
+        "hypertension",
+        "coronary artery disease",
+        "visit"
+      ],
+      "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Coronary Artery Disease.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6948652267456055
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P007",
+      "question": "Is the combination of metformin and lisinopril safe for patient P007?",
+      "question_type": "drug_safety",
+      "expected_keywords": [
+        "metformin",
+        "lisinopril",
+        "interaction"
+      ],
+      "expected_answer": "Assess safety and potential interaction risk between metformin and lisinopril.",
+      "answer": "Patient history reviewed with available structured records.",
+      "factscore": 0.0,
+      "latency_sec": 0.0011115074157714844
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P007",
+      "question": "Is the combination of metformin and lisinopril safe for patient P007?",
+      "question_type": "drug_safety",
+      "expected_keywords": [
+        "metformin",
+        "lisinopril",
+        "interaction"
+      ],
+      "expected_answer": "Assess safety and potential interaction risk between metformin and lisinopril.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6454799175262451
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P008",
+      "question": "What are the key diagnosed conditions for patient P008?",
+      "question_type": "history",
+      "expected_keywords": [
+        "hypertension",
+        "type 2 diabetes",
+        "hyperlipidemia"
+      ],
+      "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
+      "answer": "Conditions: Hypertension, Type 2 Diabetes, Hyperlipidemia, Chronic Kidney Disease, Heart Failure.",
+      "factscore": 1.0,
+      "latency_sec": 0.0010378360748291016
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P008",
+      "question": "What are the key diagnosed conditions for patient P008?",
+      "question_type": "history",
+      "expected_keywords": [
+        "hypertension",
+        "type 2 diabetes",
+        "hyperlipidemia"
+      ],
+      "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6837074756622314
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P008",
+      "question": "Which medications is patient P008 taking currently or recently?",
+      "question_type": "history",
+      "expected_keywords": [
+        "metformin",
+        "lisinopril od",
+        "atorvastatin od"
+      ],
+      "expected_answer": "Key medications include metformin, lisinopril od, atorvastatin od.",
+      "answer": "Medications: metformin, lisinopril od, atorvastatin od, furosemide od, losartan od.",
+      "factscore": 1.0,
+      "latency_sec": 0.0010018348693847656
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P008",
+      "question": "Which medications is patient P008 taking currently or recently?",
+      "question_type": "history",
+      "expected_keywords": [
+        "metformin",
+        "lisinopril od",
+        "atorvastatin od"
+      ],
+      "expected_answer": "Key medications include metformin, lisinopril od, atorvastatin od.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.7615633010864258
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P008",
+      "question": "What symptoms have been documented for patient P008?",
+      "question_type": "history",
+      "expected_keywords": [
+        "fatigue",
+        "frequent urination",
+        "nocturia"
+      ],
+      "expected_answer": "Documented symptoms include Fatigue, Frequent urination, Nocturia.",
+      "answer": "Symptoms: Fatigue, Frequent urination, Nocturia, Increased urination, Edema.",
+      "factscore": 1.0,
+      "latency_sec": 0.0010371208190917969
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P008",
+      "question": "What symptoms have been documented for patient P008?",
+      "question_type": "history",
+      "expected_keywords": [
+        "fatigue",
+        "frequent urination",
+        "nocturia"
+      ],
+      "expected_answer": "Documented symptoms include Fatigue, Frequent urination, Nocturia.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6766035556793213
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P008",
+      "question": "Using all visits, what changed between the first and most recent visit for patient P008?",
+      "question_type": "multi_visit_context",
+      "expected_keywords": [
+        "hypertension",
+        "heart failure",
+        "visit"
+      ],
+      "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Heart Failure.",
+      "answer": "Patient history reviewed with available structured records.",
+      "factscore": 0.0,
+      "latency_sec": 0.0010383129119873047
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P008",
+      "question": "Using all visits, what changed between the first and most recent visit for patient P008?",
+      "question_type": "multi_visit_context",
+      "expected_keywords": [
+        "hypertension",
+        "heart failure",
+        "visit"
+      ],
+      "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Heart Failure.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6461484432220459
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P008",
+      "question": "Is the combination of metformin and lisinopril od safe for patient P008?",
+      "question_type": "drug_safety",
+      "expected_keywords": [
+        "metformin",
+        "lisinopril od",
+        "interaction"
+      ],
+      "expected_answer": "Assess safety and potential interaction risk between metformin and lisinopril od.",
+      "answer": "Patient history reviewed with available structured records.",
+      "factscore": 0.0,
+      "latency_sec": 0.0010211467742919922
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P008",
+      "question": "Is the combination of metformin and lisinopril od safe for patient P008?",
+      "question_type": "drug_safety",
+      "expected_keywords": [
+        "metformin",
+        "lisinopril od",
+        "interaction"
+      ],
+      "expected_answer": "Assess safety and potential interaction risk between metformin and lisinopril od.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6363658905029297
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P009",
+      "question": "What are the key diagnosed conditions for patient P009?",
+      "question_type": "history",
+      "expected_keywords": [
+        "hypertension",
+        "type 2 diabetes",
+        "hyperlipidemia"
+      ],
+      "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
+      "answer": "Conditions: Hypertension, Type 2 Diabetes, Hyperlipidemia, Chronic Kidney Disease, Coronary Artery Disease.",
+      "factscore": 1.0,
+      "latency_sec": 0.002031087875366211
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P009",
+      "question": "What are the key diagnosed conditions for patient P009?",
+      "question_type": "history",
+      "expected_keywords": [
+        "hypertension",
+        "type 2 diabetes",
+        "hyperlipidemia"
+      ],
+      "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6714363098144531
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P009",
+      "question": "Which medications is patient P009 taking currently or recently?",
+      "question_type": "history",
+      "expected_keywords": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin"
+      ],
+      "expected_answer": "Key medications include metformin, lisinopril, atorvastatin.",
+      "answer": "Medications: metformin, lisinopril, atorvastatin, furosemide, aspirin.",
+      "factscore": 1.0,
+      "latency_sec": 0.0005090236663818359
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P009",
+      "question": "Which medications is patient P009 taking currently or recently?",
+      "question_type": "history",
+      "expected_keywords": [
+        "metformin",
+        "lisinopril",
+        "atorvastatin"
+      ],
+      "expected_answer": "Key medications include metformin, lisinopril, atorvastatin.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6371486186981201
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P009",
+      "question": "What symptoms have been documented for patient P009?",
+      "question_type": "history",
+      "expected_keywords": [
+        "fatigue",
+        "frequent urination",
+        "polydipsia"
+      ],
+      "expected_answer": "Documented symptoms include Fatigue, Frequent urination, Polydipsia.",
+      "answer": "Symptoms: Fatigue, Frequent urination, Polydipsia, Shortness of breath, Edema.",
+      "factscore": 1.0,
+      "latency_sec": 0.0
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P009",
+      "question": "What symptoms have been documented for patient P009?",
+      "question_type": "history",
+      "expected_keywords": [
+        "fatigue",
+        "frequent urination",
+        "polydipsia"
+      ],
+      "expected_answer": "Documented symptoms include Fatigue, Frequent urination, Polydipsia.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6662182807922363
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P009",
+      "question": "Using all visits, what changed between the first and most recent visit for patient P009?",
+      "question_type": "multi_visit_context",
+      "expected_keywords": [
+        "hypertension",
+        "chronic kidney disease",
+        "visit"
+      ],
+      "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Chronic Kidney Disease.",
+      "answer": "Patient history reviewed with available structured records.",
+      "factscore": 0.0,
+      "latency_sec": 0.0010170936584472656
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P009",
+      "question": "Using all visits, what changed between the first and most recent visit for patient P009?",
+      "question_type": "multi_visit_context",
+      "expected_keywords": [
+        "hypertension",
+        "chronic kidney disease",
+        "visit"
+      ],
+      "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Chronic Kidney Disease.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6880207061767578
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P009",
+      "question": "Is the combination of metformin and lisinopril safe for patient P009?",
+      "question_type": "drug_safety",
+      "expected_keywords": [
+        "metformin",
+        "lisinopril",
+        "interaction"
+      ],
+      "expected_answer": "Assess safety and potential interaction risk between metformin and lisinopril.",
+      "answer": "Patient history reviewed with available structured records.",
+      "factscore": 0.0,
+      "latency_sec": 0.001100301742553711
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P009",
+      "question": "Is the combination of metformin and lisinopril safe for patient P009?",
+      "question_type": "drug_safety",
+      "expected_keywords": [
+        "metformin",
+        "lisinopril",
+        "interaction"
+      ],
+      "expected_answer": "Assess safety and potential interaction risk between metformin and lisinopril.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6765542030334473
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P010",
+      "question": "What are the key diagnosed conditions for patient P010?",
+      "question_type": "history",
+      "expected_keywords": [
+        "hypertension",
+        "type 2 diabetes",
+        "hyperlipidemia"
+      ],
+      "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
+      "answer": "Conditions: Hypertension, Type 2 Diabetes, Hyperlipidemia.",
+      "factscore": 1.0,
+      "latency_sec": 0.0010020732879638672
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P010",
+      "question": "What are the key diagnosed conditions for patient P010?",
+      "question_type": "history",
+      "expected_keywords": [
+        "hypertension",
+        "type 2 diabetes",
+        "hyperlipidemia"
+      ],
+      "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6529314517974854
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P010",
+      "question": "Which medications is patient P010 taking currently or recently?",
+      "question_type": "history",
+      "expected_keywords": [
+        "metformin",
+        "amlodipine",
+        "lisinopril"
+      ],
+      "expected_answer": "Key medications include metformin, amlodipine, lisinopril.",
+      "answer": "Medications: metformin, amlodipine, lisinopril, simvastatin, losartan.",
+      "factscore": 1.0,
+      "latency_sec": 0.0015368461608886719
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P010",
+      "question": "Which medications is patient P010 taking currently or recently?",
+      "question_type": "history",
+      "expected_keywords": [
+        "metformin",
+        "amlodipine",
+        "lisinopril"
+      ],
+      "expected_answer": "Key medications include metformin, amlodipine, lisinopril.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6572206020355225
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P010",
+      "question": "What symptoms have been documented for patient P010?",
+      "question_type": "history",
+      "expected_keywords": [
+        "fatigue",
+        "frequent urination",
+        "polydipsia"
+      ],
+      "expected_answer": "Documented symptoms include Fatigue, Frequent urination, Polydipsia.",
+      "answer": "Symptoms: Fatigue, Frequent urination, Polydipsia, Shortness of breath, Edema.",
+      "factscore": 1.0,
+      "latency_sec": 0.0010132789611816406
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P010",
+      "question": "What symptoms have been documented for patient P010?",
+      "question_type": "history",
+      "expected_keywords": [
+        "fatigue",
+        "frequent urination",
+        "polydipsia"
+      ],
+      "expected_answer": "Documented symptoms include Fatigue, Frequent urination, Polydipsia.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6709244251251221
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P010",
+      "question": "Using all visits, what changed between the first and most recent visit for patient P010?",
+      "question_type": "multi_visit_context",
+      "expected_keywords": [
+        "hypertension",
+        "hypertension",
+        "visit"
+      ],
+      "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Hypertension.",
+      "answer": "Patient history reviewed with available structured records.",
+      "factscore": 0.0,
+      "latency_sec": 0.0
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P010",
+      "question": "Using all visits, what changed between the first and most recent visit for patient P010?",
+      "question_type": "multi_visit_context",
+      "expected_keywords": [
+        "hypertension",
+        "hypertension",
+        "visit"
+      ],
+      "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Hypertension.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6407699584960938
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "fallback",
+      "patient_id": "P010",
+      "question": "Is the combination of metformin and amlodipine safe for patient P010?",
+      "question_type": "drug_safety",
+      "expected_keywords": [
+        "metformin",
+        "amlodipine",
+        "interaction"
+      ],
+      "expected_answer": "Assess safety and potential interaction risk between metformin and amlodipine.",
+      "answer": "Patient history reviewed with available structured records.",
+      "factscore": 0.0,
+      "latency_sec": 0.0010356903076171875
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "fallback",
+      "patient_id": "P010",
+      "question": "Is the combination of metformin and amlodipine safe for patient P010?",
+      "question_type": "drug_safety",
+      "expected_keywords": [
+        "metformin",
+        "amlodipine",
+        "interaction"
+      ],
+      "expected_answer": "Assess safety and potential interaction risk between metformin and amlodipine.",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "factscore": 0.0,
+      "latency_sec": 0.6695175170898438
+    }
+  ],
+  "manual_review_20_template": [
+    {
+      "sample_id": 1,
+      "system": "baseline",
+      "patient_id": "P009",
+      "question": "What are the key diagnosed conditions for patient P009?",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
+      "expected_keywords": [
+        "hypertension",
+        "type 2 diabetes",
+        "hyperlipidemia"
+      ],
+      "manual_label": null
+    },
+    {
+      "sample_id": 2,
+      "system": "graphmed",
+      "patient_id": "P002",
+      "question": "What symptoms have been documented for patient P002?",
+      "answer": "Symptoms: Fatigue, Shortness of breath, Elevated bp, Leg cramps, Swelling in lower extremities.",
+      "expected_answer": "Documented symptoms include Fatigue, Shortness of breath, Elevated bp.",
+      "expected_keywords": [
+        "fatigue",
+        "shortness of breath",
+        "elevated bp"
+      ],
+      "manual_label": null
+    },
+    {
+      "sample_id": 3,
+      "system": "baseline",
+      "patient_id": "P001",
+      "question": "Which medications is patient P001 taking currently or recently?",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "expected_answer": "Key medications include lisinopril, atorvastatin, metoprolol.",
+      "expected_keywords": [
+        "lisinopril",
+        "atorvastatin",
+        "metoprolol"
+      ],
+      "manual_label": null
+    },
+    {
+      "sample_id": 4,
+      "system": "graphmed",
+      "patient_id": "P010",
+      "question": "What symptoms have been documented for patient P010?",
+      "answer": "Symptoms: Fatigue, Frequent urination, Polydipsia, Shortness of breath, Edema.",
+      "expected_answer": "Documented symptoms include Fatigue, Frequent urination, Polydipsia.",
+      "expected_keywords": [
+        "fatigue",
+        "frequent urination",
+        "polydipsia"
+      ],
+      "manual_label": null
+    },
+    {
+      "sample_id": 5,
+      "system": "baseline",
+      "patient_id": "P004",
+      "question": "What symptoms have been documented for patient P004?",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "expected_answer": "Documented symptoms include Polydipsia, Increased thirst, Urination.",
+      "expected_keywords": [
+        "polydipsia",
+        "increased thirst",
+        "urination"
+      ],
+      "manual_label": null
+    },
+    {
+      "sample_id": 6,
+      "system": "baseline",
+      "patient_id": "P004",
+      "question": "What are the key diagnosed conditions for patient P004?",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
+      "expected_keywords": [
+        "hypertension",
+        "type 2 diabetes",
+        "hyperlipidemia"
+      ],
+      "manual_label": null
+    },
+    {
+      "sample_id": 7,
+      "system": "graphmed",
+      "patient_id": "P003",
+      "question": "Is the combination of metformin and losartan safe for patient P003?",
+      "answer": "Patient history reviewed with available structured records.",
+      "expected_answer": "Assess safety and potential interaction risk between metformin and losartan.",
+      "expected_keywords": [
+        "metformin",
+        "losartan",
+        "interaction"
+      ],
+      "manual_label": null
+    },
+    {
+      "sample_id": 8,
+      "system": "baseline",
+      "patient_id": "P002",
+      "question": "Using all visits, what changed between the first and most recent visit for patient P002?",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Hypertension.",
+      "expected_keywords": [
+        "hypertension",
+        "hypertension",
+        "visit"
+      ],
+      "manual_label": null
+    },
+    {
+      "sample_id": 9,
+      "system": "baseline",
+      "patient_id": "P002",
+      "question": "Which medications is patient P002 taking currently or recently?",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "expected_answer": "Key medications include antihypertensive medication, statin, metformin bd.",
+      "expected_keywords": [
+        "antihypertensive medication",
+        "statin",
+        "metformin bd"
+      ],
+      "manual_label": null
+    },
+    {
+      "sample_id": 10,
+      "system": "graphmed",
+      "patient_id": "P009",
+      "question": "Using all visits, what changed between the first and most recent visit for patient P009?",
+      "answer": "Patient history reviewed with available structured records.",
+      "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Chronic Kidney Disease.",
+      "expected_keywords": [
+        "hypertension",
+        "chronic kidney disease",
+        "visit"
+      ],
+      "manual_label": null
+    },
+    {
+      "sample_id": 11,
+      "system": "baseline",
+      "patient_id": "P007",
+      "question": "Is the combination of metformin and lisinopril safe for patient P007?",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "expected_answer": "Assess safety and potential interaction risk between metformin and lisinopril.",
+      "expected_keywords": [
+        "metformin",
+        "lisinopril",
+        "interaction"
+      ],
+      "manual_label": null
+    },
+    {
+      "sample_id": 12,
+      "system": "baseline",
+      "patient_id": "P002",
+      "question": "What are the key diagnosed conditions for patient P002?",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
+      "expected_keywords": [
+        "hypertension",
+        "type 2 diabetes",
+        "hyperlipidemia"
+      ],
+      "manual_label": null
+    },
+    {
+      "sample_id": 13,
+      "system": "baseline",
+      "patient_id": "P008",
+      "question": "What symptoms have been documented for patient P008?",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "expected_answer": "Documented symptoms include Fatigue, Frequent urination, Nocturia.",
+      "expected_keywords": [
+        "fatigue",
+        "frequent urination",
+        "nocturia"
+      ],
+      "manual_label": null
+    },
+    {
+      "sample_id": 14,
+      "system": "graphmed",
+      "patient_id": "P006",
+      "question": "What symptoms have been documented for patient P006?",
+      "answer": "Symptoms: Fatigue, Frequent urination, Polydipsia, Improvement in symptoms, Shortness of breath.",
+      "expected_answer": "Documented symptoms include Fatigue, Frequent urination, Polydipsia.",
+      "expected_keywords": [
+        "fatigue",
+        "frequent urination",
+        "polydipsia"
+      ],
+      "manual_label": null
+    },
+    {
+      "sample_id": 15,
+      "system": "graphmed",
+      "patient_id": "P001",
+      "question": "What symptoms have been documented for patient P001?",
+      "answer": "**\nPatient P001 has documented symptoms of fatigue, dizziness, and headaches. These symptoms may be related to the patient's Hypertension and potential side effects of Lisinopril. The elevated blood pressure and creatinine levels suggest that the patient's Hypertension is not well-controlled, and further evaluation is necessary to determine the underlying cause of these symptoms. **Medical Disclaimer: This answer is based on the information provided and should not be used for diagnostic or treatment purposes. A healthcare professional should be consulted for an accurate diagnosis and treatment plan.**",
+      "expected_answer": "Documented symptoms include Shortness of breath, Chest pain, Renal function.",
+      "expected_keywords": [
+        "shortness of breath",
+        "chest pain",
+        "renal function"
+      ],
+      "manual_label": null
+    },
+    {
+      "sample_id": 16,
+      "system": "baseline",
+      "patient_id": "P003",
+      "question": "Using all visits, what changed between the first and most recent visit for patient P003?",
+      "answer": "Error: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))",
+      "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Chronic Kidney Disease.",
+      "expected_keywords": [
+        "hypertension",
+        "chronic kidney disease",
+        "visit"
+      ],
+      "manual_label": null
+    },
+    {
+      "sample_id": 17,
+      "system": "baseline",
+      "patient_id": "P003",
+      "question": "Is the combination of metformin and losartan safe for patient P003?",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "expected_answer": "Assess safety and potential interaction risk between metformin and losartan.",
+      "expected_keywords": [
+        "metformin",
+        "losartan",
+        "interaction"
+      ],
+      "manual_label": null
+    },
+    {
+      "sample_id": 18,
+      "system": "graphmed",
+      "patient_id": "P007",
+      "question": "What symptoms have been documented for patient P007?",
+      "answer": "Symptoms: Fatigue, Polydipsia, Weight loss, Decreased urine output, Shortness of breath.",
+      "expected_answer": "Documented symptoms include Fatigue, Polydipsia, Weight loss.",
+      "expected_keywords": [
+        "fatigue",
+        "polydipsia",
+        "weight loss"
+      ],
+      "manual_label": null
+    },
+    {
+      "sample_id": 19,
+      "system": "baseline",
+      "patient_id": "P008",
+      "question": "Using all visits, what changed between the first and most recent visit for patient P008?",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Heart Failure.",
+      "expected_keywords": [
+        "hypertension",
+        "heart failure",
+        "visit"
+      ],
+      "manual_label": null
+    },
+    {
+      "sample_id": 20,
+      "system": "baseline",
+      "patient_id": "P008",
+      "question": "What are the key diagnosed conditions for patient P008?",
+      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
+      "expected_keywords": [
+        "hypertension",
+        "type 2 diabetes",
+        "hyperlipidemia"
+      ],
+      "manual_label": null
+    }
+  ]
+}
