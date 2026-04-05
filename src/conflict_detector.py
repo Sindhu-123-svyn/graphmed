@@ -4,6 +4,7 @@ Uses trained LoRA model to detect clinical contradictions
 """
 
 import torch
+import os
 from pathlib import Path
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from peft import PeftModel
@@ -23,6 +24,12 @@ class ConflictDetector:
         """
         self.model_path = Path(model_path)
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+        if not self.model_path.exists() or not self.model_path.is_dir():
+            print(f"[ConflictDetector] LoRA model path not found: {self.model_path}")
+            print("[ConflictDetector] Falling back to rule-based detection")
+            self.is_loaded = False
+            return
         
         try:
             # Load tokenizer
@@ -31,7 +38,7 @@ class ConflictDetector:
                 self.tokenizer.pad_token = self.tokenizer.eos_token
             
             # Load base model
-            base_model_name = "microsoft/BiomedNLP-BiomedBERT-base-uncased"
+            base_model_name = os.getenv("CONFLICT_BASE_MODEL", "google-bert/bert-base-uncased")
             self.base_model = AutoModelForSequenceClassification.from_pretrained(
                 base_model_name,
                 num_labels=2
@@ -43,11 +50,11 @@ class ConflictDetector:
             self.model.eval()
             
             self.is_loaded = True
-            print("✅ Conflict Detector loaded successfully")
+            print("[ConflictDetector] Loaded successfully")
             
         except Exception as e:
-            print(f"⚠️ Could not load trained model: {e}")
-            print("   Using fallback rule-based detection")
+            print(f"[ConflictDetector] Could not load trained model: {e}")
+            print("[ConflictDetector] Using fallback rule-based detection")
             self.is_loaded = False
     
     def predict(self, statement_a: str, statement_b: str) -> dict:
@@ -196,7 +203,7 @@ if __name__ == "__main__":
         ("No history of diabetes.", "Diagnosed with Type 2 Diabetes."),
     ]
     
-    print("\n🧪 Testing Conflict Detector:")
+    print("\nTesting Conflict Detector:")
     for stmt_a, stmt_b in test_pairs:
         result = detector.predict(stmt_a, stmt_b)
         print(f"\n{result['prediction']} (conf: {result['confidence']:.3f})")

@@ -1,106 +1,131 @@
 {
   "patient_id": "CONFLICT_TEST",
-  "created_at": "2026-04-02T18:24:32.259058",
+  "created_at": "2026-04-05T15:30:36.884702",
   "nodes": [
     {
       "id": "CONFLICT_TEST",
       "type": "PATIENT",
-      "added": "2026-04-02T18:24:32.259058",
-      "last_confirmed": "2026-04-02T18:24:32.259058",
+      "name": "CONFLICT_TEST",
+      "added": "2026-04-05T15:30:36.884702",
+      "last_confirmed": "2026-04-05T15:30:36.884702",
       "confidence": 1.0
     },
     {
-      "id": "CONDITION_Type 2 Diabetes_2024-01-15",
+      "id": "CONDITION_type_2_diabetes",
       "name": "type 2 diabetes",
       "type": "CONDITION",
       "added": "2024-01-15",
       "last_confirmed": "2024-01-15",
       "confidence": 0.7466666666666666,
+      "observed_dates": [
+        "2024-01-15"
+      ],
       "decayed": true
     },
     {
-      "id": "MEDICATION_Metformin 500mg_2024-01-15",
+      "id": "MEDICATION_metformin_500mg",
       "name": "metformin 500mg",
       "type": "MEDICATION",
       "added": "2024-01-15",
       "last_confirmed": "2024-01-15",
       "confidence": 0.7466666666666666,
+      "observed_dates": [
+        "2024-01-15"
+      ],
       "decayed": true
     },
     {
-      "id": "SYMPTOM_Fatigue_2024-01-15",
+      "id": "SYMPTOM_fatigue",
       "name": "fatigue",
       "type": "SYMPTOM",
       "added": "2024-01-15",
       "last_confirmed": "2024-01-15",
       "confidence": 0.7466666666666666,
+      "observed_dates": [
+        "2024-01-15"
+      ],
       "decayed": true
     },
     {
-      "id": "LAB_VALUE_HbA1c_2024-01-15",
+      "id": "LAB_VALUE_hba1c",
       "name": "hba1c",
       "type": "LAB_VALUE",
       "added": "2024-01-15",
       "last_confirmed": "2024-01-15",
       "confidence": 0.7466666666666666,
+      "observed_dates": [
+        "2024-01-15"
+      ],
       "value": 7.2,
       "decayed": true
     },
     {
-      "id": "CONDITION_No diabetes_2024-06-15",
+      "id": "CONDITION_no_diabetes",
       "name": "no diabetes",
       "type": "CONDITION",
       "added": "2024-06-15",
       "last_confirmed": "2024-06-15",
       "confidence": 1.0,
+      "observed_dates": [
+        "2024-06-15"
+      ],
       "decayed": true
     },
     {
-      "id": "MEDICATION_No medications_2024-06-15",
+      "id": "MEDICATION_no_medications",
       "name": "no medications",
       "type": "MEDICATION",
       "added": "2024-06-15",
       "last_confirmed": "2024-06-15",
       "confidence": 1.0,
+      "observed_dates": [
+        "2024-06-15"
+      ],
       "decayed": true
     }
   ],
   "edges": [
     {
       "source": "CONFLICT_TEST",
-      "target": "CONDITION_Type 2 Diabetes_2024-01-15",
+      "target": "CONDITION_type_2_diabetes",
       "relation": "has",
-      "established": "2024-01-15"
+      "established": "2024-01-15",
+      "confidence": 1.0
     },
     {
       "source": "CONFLICT_TEST",
-      "target": "MEDICATION_Metformin 500mg_2024-01-15",
+      "target": "MEDICATION_metformin_500mg",
       "relation": "has",
-      "established": "2024-01-15"
+      "established": "2024-01-15",
+      "confidence": 1.0
     },
     {
       "source": "CONFLICT_TEST",
-      "target": "SYMPTOM_Fatigue_2024-01-15",
+      "target": "SYMPTOM_fatigue",
       "relation": "has",
-      "established": "2024-01-15"
+      "established": "2024-01-15",
+      "confidence": 1.0
     },
     {
       "source": "CONFLICT_TEST",
-      "target": "LAB_VALUE_HbA1c_2024-01-15",
+      "target": "LAB_VALUE_hba1c",
       "relation": "has",
-      "established": "2024-01-15"
+      "established": "2024-01-15",
+      "confidence": 1.0
     },
     {
       "source": "CONFLICT_TEST",
-      "target": "CONDITION_No diabetes_2024-06-15",
+      "target": "CONDITION_no_diabetes",
       "relation": "has",
-      "established": "2024-06-15"
+      "established": "2024-06-15",
+      "confidence": 1.0
     },
     {
       "source": "CONFLICT_TEST",
-      "target": "MEDICATION_No medications_2024-06-15",
+      "target": "MEDICATION_no_medications",
       "relation": "has",
-      "established": "2024-06-15"
+      "established": "2024-06-15",
+      "confidence": 1.0
     }
   ]
 }

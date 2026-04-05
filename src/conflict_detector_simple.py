@@ -29,11 +29,11 @@ class SimpleConflictDetector:
                 self.classifier = pickle.load(f)
             
             self.is_loaded = True
-            print("✅ Simple Conflict Detector loaded successfully")
+            print("[SimpleConflictDetector] Loaded successfully")
             
         except Exception as e:
-            print(f"⚠️ Could not load model: {e}")
-            print("   Using rule-based detection")
+            print(f"[SimpleConflictDetector] Could not load model: {e}")
+            print("[SimpleConflictDetector] Using rule-based detection")
             self.is_loaded = False
     
     def predict(self, statement_a: str, statement_b: str) -> dict:
@@ -131,7 +131,7 @@ if __name__ == "__main__":
         ("No history of diabetes.", "Diagnosed with Type 2 Diabetes."),
     ]
     
-    print("\n🧪 Testing Conflict Detector:")
+    print("\nTesting Conflict Detector:")
     for stmt_a, stmt_b in test_pairs:
         result = detector.predict(stmt_a, stmt_b)
         print(f"\n{result['prediction']} (conf: {result['confidence']:.3f})")

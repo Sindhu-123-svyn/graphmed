@@ -1,0 +1,170 @@
+{
+  "patient_id": "CORE_OPS_TEST",
+  "created_at": "2026-04-05T15:42:19.130134",
+  "nodes": [
+    {
+      "id": "CORE_OPS_TEST",
+      "type": "PATIENT",
+      "name": "CORE_OPS_TEST",
+      "added": "2026-04-05T15:42:19.130134",
+      "last_confirmed": "2026-04-05T15:42:19.130134",
+      "confidence": 1.0
+    },
+    {
+      "id": "CONDITION_type_2_diabetes",
+      "name": "type 2 diabetes",
+      "type": "CONDITION",
+      "added": "2024-01-10",
+      "last_confirmed": "2024-06-10",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2024-01-10",
+        "2024-03-10",
+        "2024-06-10"
+      ],
+      "decayed": true,
+      "history": [
+        {
+          "date": "2024-03-10",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2024-06-10",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true,
+      "status": "CONFLICTED",
+      "conflict_note": "Contradictory condition statements for concept 'diabetes'"
+    },
+    {
+      "id": "MEDICATION_metformin_500mg",
+      "name": "metformin 500mg",
+      "type": "MEDICATION",
+      "added": "2024-01-10",
+      "last_confirmed": "2024-06-10",
+      "confidence": 1.0,
+      "observed_dates": [
+        "2024-01-10",
+        "2024-03-10",
+        "2024-06-10"
+      ],
+      "decayed": true,
+      "history": [
+        {
+          "date": "2024-03-10",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2024-06-10",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true,
+      "status": "CONFLICTED",
+      "conflict_note": "'No medications' conflicts with active medication history"
+    },
+    {
+      "id": "SYMPTOM_fatigue",
+      "name": "fatigue",
+      "type": "SYMPTOM",
+      "added": "2024-01-10",
+      "last_confirmed": "2024-03-10",
+      "confidence": 0.8466666666666667,
+      "observed_dates": [
+        "2024-01-10",
+        "2024-03-10"
+      ],
+      "decayed": true,
+      "history": [
+        {
+          "date": "2024-03-10",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "LAB_VALUE_hba1c",
+      "name": "hba1c",
+      "type": "LAB_VALUE",
+      "added": "2024-01-10",
+      "last_confirmed": "2024-03-10",
+      "confidence": 0.8466666666666667,
+      "observed_dates": [
+        "2024-01-10",
+        "2024-03-10"
+      ],
+      "value": 8.0,
+      "decayed": true,
+      "history": [
+        {
+          "date": "2024-03-10",
+          "old": {
+            "value": 7.2,
+            "confidence": 1.0
+          },
+          "new": {
+            "trend": "INSUFFICIENT_DATA"
+          }
+        }
+      ],
+      "trend": "INSUFFICIENT_DATA"
+    }
+  ],
+  "edges": [
+    {
+      "source": "CORE_OPS_TEST",
+      "target": "CONDITION_type_2_diabetes",
+      "relation": "has",
+      "established": "2024-01-10",
+      "confidence": 1.0
+    },
+    {
+      "source": "CORE_OPS_TEST",
+      "target": "MEDICATION_metformin_500mg",
+      "relation": "has",
+      "established": "2024-01-10",
+      "confidence": 1.0
+    },
+    {
+      "source": "CORE_OPS_TEST",
+      "target": "SYMPTOM_fatigue",
+      "relation": "has",
+      "established": "2024-01-10",
+      "confidence": 1.0
+    },
+    {
+      "source": "CORE_OPS_TEST",
+      "target": "LAB_VALUE_hba1c",
+      "relation": "has",
+      "established": "2024-01-10",
+      "confidence": 1.0
+    }
+  ]
+}

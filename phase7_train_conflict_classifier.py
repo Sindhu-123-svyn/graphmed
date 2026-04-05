@@ -1,302 +1,286 @@
 """
-Phase 7: Train LoRA Conflict Classifier for Clinical Contradictions
-Uses BioMedBERT with LoRA for efficient fine-tuning
+Phase 7: Train LoRA Conflict Classifier
+Fine-tunes a compact BERT model with LoRA for CONFLICT vs CONSISTENT.
 """
 
 import json
 import os
-import torch
+import random
 from pathlib import Path
-from torch.utils.data import Dataset, DataLoader
-from transformers import (
-    AutoTokenizer,
-    AutoModelForSequenceClassification,
-    TrainingArguments,
-    Trainer,
-    EarlyStoppingCallback
-)
-from peft import LoraConfig, get_peft_model, TaskType, PeftModel
-from sklearn.metrics import accuracy_score, f1_score, precision_recall_fscore_support
-import numpy as np
-from tqdm import tqdm
+from typing import Dict, List, Tuple
 
-# Suppress warnings
-import warnings
-warnings.filterwarnings("ignore")
+import numpy as np
+import torch
+from peft import LoraConfig, TaskType, get_peft_model
+from sklearn.metrics import accuracy_score, precision_recall_fscore_support
+from torch.utils.data import Dataset
+from transformers import (
+    AutoModelForSequenceClassification,
+    AutoTokenizer,
+    EarlyStoppingCallback,
+    Trainer,
+    TrainingArguments,
+)
+
+
+SEED = 42
+MODEL_NAME = os.getenv("CONFLICT_BASE_MODEL", "google-bert/bert-base-uncased")
+
+
+def set_seed(seed: int = SEED):
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(seed)
 
 
 class ClinicalConflictDataset(Dataset):
-    """Dataset for clinical conflict classification."""
-    
-    def __init__(self, data, tokenizer, max_length=128):
-        self.data = data
+    def __init__(self, rows: List[Dict], tokenizer, max_length: int = 128):
+        self.rows = rows
         self.tokenizer = tokenizer
         self.max_length = max_length
-    
+
     def __len__(self):
-        return len(self.data)
-    
+        return len(self.rows)
+
     def __getitem__(self, idx):
-        item = self.data[idx]
-        
-        # Combine statements with [SEP] token
-        text = f"{item['statement_a']} [SEP] {item['statement_b']}"
-        
-        encoding = self.tokenizer(
-            text,
+        item = self.rows[idx]
+        enc = self.tokenizer(
+            item["statement_a"],
+            item["statement_b"],
             truncation=True,
-            padding='max_length',
+            padding="max_length",
             max_length=self.max_length,
-            return_tensors='pt'
+            return_tensors="pt",
         )
-        
         return {
-            'input_ids': encoding['input_ids'].flatten(),
-            'attention_mask': encoding['attention_mask'].flatten(),
-            'labels': torch.tensor(item['label'], dtype=torch.long)
+            "input_ids": enc["input_ids"].squeeze(0),
+            "attention_mask": enc["attention_mask"].squeeze(0),
+            "labels": torch.tensor(int(item["label"]), dtype=torch.long),
         }
 
 
-def load_data(data_dir: str = "data/conflict_data"):
-    """Load training, validation, and test data."""
-    
-    data_dir = Path(data_dir)
-    
-    with open(data_dir / "train.json", "r") as f:
-        train_data = json.load(f)
-    
-    with open(data_dir / "val.json", "r") as f:
-        val_data = json.load(f)
-    
-    with open(data_dir / "test.json", "r") as f:
-        test_data = json.load(f)
-    
-    print(f"✅ Loaded {len(train_data)} training, {len(val_data)} validation, {len(test_data)} test samples")
-    
-    return train_data, val_data, test_data
+def load_data(data_dir: str = "data/conflict_data") -> Tuple[List[Dict], List[Dict], List[Dict]]:
+    p = Path(data_dir)
+    with open(p / "train.json", "r", encoding="utf-8") as f:
+        train = json.load(f)
+    with open(p / "val.json", "r", encoding="utf-8") as f:
+        val = json.load(f)
+    with open(p / "test.json", "r", encoding="utf-8") as f:
+        test = json.load(f)
+    print(f"Loaded train/val/test: {len(train)}/{len(val)}/{len(test)}")
+    return train, val, test
 
 
 def compute_metrics(eval_pred):
-    """Compute metrics for evaluation."""
-    predictions, labels = eval_pred
-    predictions = np.argmax(predictions, axis=1)
-    
-    accuracy = accuracy_score(labels, predictions)
-    precision, recall, f1, _ = precision_recall_fscore_support(labels, predictions, average='binary')
-    
+    logits, labels = eval_pred
+    preds = np.argmax(logits, axis=1)
+
+    accuracy = accuracy_score(labels, preds)
+    precision, recall, f1, _ = precision_recall_fscore_support(labels, preds, average="binary", zero_division=0)
+
     return {
-        'accuracy': accuracy,
-        'f1': f1,
-        'precision': precision,
-        'recall': recall
+        "accuracy": accuracy,
+        "f1": f1,
+        "precision": precision,
+        "recall": recall,
     }
 
 
-def train_model(train_data, val_data, test_data, output_dir: str = "models/conflict_classifier"):
-    """Train the LoRA fine-tuned model."""
-    
-    print("\n" + "="*60)
-    print("🏥 PHASE 7: TRAINING CONFLICT CLASSIFIER")
-    print("="*60)
-    
-    # Model configuration
-    model_name = "microsoft/BiomedNLP-BiomedBERT-base-uncased"
-    
-    print(f"\n📚 Loading model: {model_name}")
-    
-    # Load tokenizer
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
-    
-    # Add padding token if not present
-    if tokenizer.pad_token is None:
-        tokenizer.pad_token = tokenizer.eos_token
-    
-    # Load base model
-    base_model = AutoModelForSequenceClassification.from_pretrained(
-        model_name,
-        num_labels=2,  # CONFLICT (1) vs CONSISTENT (0)
-        torch_dtype=torch.float32
+class WeightedTrainer(Trainer):
+    def __init__(self, class_weights: torch.Tensor, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.class_weights = class_weights
+
+    def compute_loss(self, model, inputs, return_outputs=False, **kwargs):
+        labels = inputs.pop("labels")
+        outputs = model(**inputs)
+        logits = outputs.logits
+        loss_fct = torch.nn.CrossEntropyLoss(weight=self.class_weights.to(logits.device))
+        loss = loss_fct(logits, labels)
+        return (loss, outputs) if return_outputs else loss
+
+
+def train_model(
+    train_rows: List[Dict],
+    val_rows: List[Dict],
+    test_rows: List[Dict],
+    output_dir: str = "models/conflict_classifier",
+    num_train_epochs: int = 3,
+    learning_rate: float = 3e-5,
+    train_batch_size: int = 16,
+):
+    set_seed(SEED)
+
+    print("\n" + "=" * 60)
+    print("GRAPHMED PHASE 7 - LORA TRAINING")
+    print("=" * 60)
+    print(f"Base model: {MODEL_NAME}")
+
+    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+
+    model = AutoModelForSequenceClassification.from_pretrained(
+        MODEL_NAME,
+        num_labels=2,
+        torch_dtype=torch.float32,
     )
-    
-    # Configure LoRA
-    lora_config = LoraConfig(
+
+    lora_cfg = LoraConfig(
         task_type=TaskType.SEQ_CLS,
-        r=8,  # Rank
+        r=8,
         lora_alpha=16,
-        target_modules=["query", "value", "key", "dense"],
         lora_dropout=0.1,
-        bias="none"
+        target_modules=["query", "key", "value"],
+        modules_to_save=["classifier"],
+        bias="none",
     )
-    
-    # Apply LoRA
-    model = get_peft_model(base_model, lora_config)
-    
-    # Print trainable parameters
-    trainable_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
-    total_params = sum(p.numel() for p in model.parameters())
-    print(f"\n📊 Model Parameters:")
-    print(f"   Trainable: {trainable_params:,} ({100 * trainable_params / total_params:.2f}%)")
-    print(f"   Total: {total_params:,}")
-    
-    # Create datasets
-    train_dataset = ClinicalConflictDataset(train_data, tokenizer)
-    val_dataset = ClinicalConflictDataset(val_data, tokenizer)
-    test_dataset = ClinicalConflictDataset(test_data, tokenizer)
-    
-    # Training arguments
-    output_path = Path(output_dir)
-    output_path.mkdir(parents=True, exist_ok=True)
-    
-    training_args = TrainingArguments(
-        output_dir=str(output_path),
-        num_train_epochs=10,
-        per_device_train_batch_size=16,
+
+    model = get_peft_model(model, lora_cfg)
+
+    trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
+    total = sum(p.numel() for p in model.parameters())
+    print(f"Trainable params: {trainable:,} / {total:,} ({100.0 * trainable / total:.2f}%)")
+
+    train_ds = ClinicalConflictDataset(train_rows, tokenizer)
+    val_ds = ClinicalConflictDataset(val_rows, tokenizer)
+    test_ds = ClinicalConflictDataset(test_rows, tokenizer)
+
+    labels = np.array([int(r["label"]) for r in train_rows])
+    neg = max(1, int((labels == 0).sum()))
+    pos = max(1, int((labels == 1).sum()))
+    class_weights = torch.tensor([1.0, float(neg) / float(pos)], dtype=torch.float32)
+
+    out = Path(output_dir)
+    out.mkdir(parents=True, exist_ok=True)
+
+    args = TrainingArguments(
+        output_dir=str(out),
+        num_train_epochs=num_train_epochs,
+        per_device_train_batch_size=train_batch_size,
         per_device_eval_batch_size=32,
-        warmup_steps=50,
+        gradient_accumulation_steps=1,
+        learning_rate=learning_rate,
         weight_decay=0.01,
-        logging_dir=str(output_path / "logs"),
-        logging_steps=20,
+        warmup_ratio=0.06,
         evaluation_strategy="epoch",
         save_strategy="epoch",
         load_best_model_at_end=True,
         metric_for_best_model="f1",
         greater_is_better=True,
-        push_to_hub=False,
+        logging_steps=50,
         report_to="none",
         fp16=torch.cuda.is_available(),
-        gradient_accumulation_steps=1
+        seed=SEED,
+        save_total_limit=2,
     )
-    
-    # Create trainer
-    trainer = Trainer(
+
+    trainer = WeightedTrainer(
+        class_weights=class_weights,
         model=model,
-        args=training_args,
-        train_dataset=train_dataset,
-        eval_dataset=val_dataset,
+        args=args,
+        train_dataset=train_ds,
+        eval_dataset=val_ds,
         compute_metrics=compute_metrics,
-        callbacks=[EarlyStoppingCallback(early_stopping_patience=3)]
+        callbacks=[EarlyStoppingCallback(early_stopping_patience=1)],
     )
-    
-    # Train
-    print("\n🚀 Starting training...")
+
     trainer.train()
-    
-    # Save model
-    model.save_pretrained(str(output_path))
-    tokenizer.save_pretrained(str(output_path))
-    
-    print(f"\n✅ Model saved to: {output_path}")
-    
-    # Evaluate on test set
-    print("\n📊 Evaluating on test set...")
-    test_results = trainer.evaluate(test_dataset)
-    print(f"\nTest Results:")
-    print(f"   Accuracy: {test_results['eval_accuracy']:.4f}")
-    print(f"   F1 Score: {test_results['eval_f1']:.4f}")
-    print(f"   Precision: {test_results['eval_precision']:.4f}")
-    print(f"   Recall: {test_results['eval_recall']:.4f}")
-    
-    return model, tokenizer, test_results
+
+    model.save_pretrained(str(out))
+    tokenizer.save_pretrained(str(out))
+
+    eval_test = trainer.evaluate(test_ds)
+
+    meta = {
+        "seed": SEED,
+        "model_name": MODEL_NAME,
+        "num_train_epochs": num_train_epochs,
+        "learning_rate": learning_rate,
+        "train_batch_size": train_batch_size,
+        "train_size": len(train_rows),
+        "val_size": len(val_rows),
+        "test_size": len(test_rows),
+        "class_weights": class_weights.tolist(),
+        "test_metrics": {
+            "accuracy": float(eval_test.get("eval_accuracy", 0.0)),
+            "f1": float(eval_test.get("eval_f1", 0.0)),
+            "precision": float(eval_test.get("eval_precision", 0.0)),
+            "recall": float(eval_test.get("eval_recall", 0.0)),
+        },
+    }
+
+    with open(out / "training_metadata.json", "w", encoding="utf-8") as f:
+        json.dump(meta, f, indent=2)
+
+    print("\nTraining complete")
+    print(json.dumps(meta["test_metrics"], indent=2))
+
+    return model, tokenizer, meta
 
 
-def test_model(model_path: str = "models/conflict_classifier"):
-    """Test the trained model on sample pairs."""
-    
-    print("\n" + "="*60)
-    print("🧪 TESTING CONFLICT CLASSIFIER")
-    print("="*60)
-    
-    # Load model and tokenizer
+def test_model(model_dir: str = "models/conflict_classifier"):
     from peft import PeftModel
-    
-    base_model_name = "microsoft/BiomedNLP-BiomedBERT-base-uncased"
-    tokenizer = AutoTokenizer.from_pretrained(model_path)
-    
-    if tokenizer.pad_token is None:
-        tokenizer.pad_token = tokenizer.eos_token
-    
-    base_model = AutoModelForSequenceClassification.from_pretrained(
-        base_model_name,
-        num_labels=2
-    )
-    
-    model = PeftModel.from_pretrained(base_model, model_path)
+
+    model_path = Path(model_dir)
+    tokenizer = AutoTokenizer.from_pretrained(str(model_path))
+
+    base = AutoModelForSequenceClassification.from_pretrained(MODEL_NAME, num_labels=2)
+    model = PeftModel.from_pretrained(base, str(model_path))
     model.eval()
-    
-    # Test cases
-    test_cases = [
-        ("Patient has no known drug allergies.", "Patient has penicillin allergy.", "CONFLICT"),
-        ("Patient is on Metformin for diabetes.", "Taking Metformin 500mg daily.", "CONSISTENT"),
-        ("No history of hypertension.", "Blood pressure 150/95, diagnosed with hypertension.", "CONFLICT"),
-        ("Patient reports chest pain.", "Complains of chest pain on exertion.", "CONSISTENT"),
-        ("Discontinued Warfarin.", "Still taking Warfarin 5mg daily.", "CONFLICT"),
-        ("HbA1c within normal range.", "Diabetes well-controlled.", "CONSISTENT"),
+
+    examples = [
+        ("No known drug allergies", "Allergy to penicillin", "CONFLICT"),
+        ("Taking metformin", "On metformin 500mg BID", "CONSISTENT"),
+        ("No hypertension", "BP 160/100 uncontrolled", "CONFLICT"),
+        ("Chest pain on exertion", "Exertional chest discomfort", "CONSISTENT"),
     ]
-    
-    print("\n📋 Test Results:")
-    print("-" * 70)
-    
-    for statement_a, statement_b, expected in test_cases:
-        text = f"{statement_a} [SEP] {statement_b}"
-        
-        inputs = tokenizer(text, return_tensors="pt", truncation=True, max_length=128)
-        
+
+    print("\nQuick test")
+    for a, b, expected in examples:
+        inp = tokenizer(a, b, return_tensors="pt", truncation=True, max_length=192)
         with torch.no_grad():
-            outputs = model(**inputs)
-            predictions = torch.softmax(outputs.logits, dim=-1)
-            predicted_class = torch.argmax(predictions, dim=-1).item()
-            confidence = predictions[0][predicted_class].item()
-        
-        predicted = "CONFLICT" if predicted_class == 1 else "CONSISTENT"
-        status = "✅" if predicted == expected else "❌"
-        
-        print(f"\n{status} Expected: {expected} | Predicted: {predicted} | Confidence: {confidence:.3f}")
-        print(f"   A: {statement_a}")
-        print(f"   B: {statement_b}")
-    
-    return model, tokenizer
+            logits = model(**inp).logits
+            probs = torch.softmax(logits, dim=-1)[0]
+            pred = int(torch.argmax(probs).item())
+        name = "CONFLICT" if pred == 1 else "CONSISTENT"
+        conf = float(probs[pred].item())
+        ok = "OK" if name == expected else "ERR"
+        print(f"{ok} expected={expected} predicted={name} confidence={conf:.3f}")
+        print(f"  A: {a}")
+        print(f"  B: {b}")
 
 
 def main():
-    """Main execution for Phase 7."""
-    
-    print("\n" + "="*60)
-    print("🏥 GRAPHMED - PHASE 7: LORA CONFLICT CLASSIFIER")
-    print("="*60)
-    
-    print("\nOptions:")
-    print("  1. Generate training data")
-    print("  2. Train model (requires GPU recommended)")
-    print("  3. Test trained model")
-    print("  4. Generate data + Train + Test (full pipeline)")
-    print("  5. Exit")
-    
+    print("\n" + "=" * 60)
+    print("GRAPHMED - PHASE 7 LORA CONFLICT CLASSIFIER")
+    print("=" * 60)
+    print("1. Generate training data")
+    print("2. Train LoRA classifier")
+    print("3. Test LoRA classifier")
+    print("4. Full pipeline")
+    print("5. Exit")
+
     choice = input("\nEnter choice (1-5): ").strip()
-    
+
     if choice == "1":
         from phase7_generate_training_data import generate_training_data
+
         generate_training_data()
-        
     elif choice == "2":
-        train_data, val_data, test_data = load_data()
-        train_model(train_data, val_data, test_data)
-        
+        train, val, test = load_data()
+        train_model(train, val, test)
     elif choice == "3":
         test_model()
-        
     elif choice == "4":
-        print("\n🚀 Running full pipeline...")
         from phase7_generate_training_data import generate_training_data
+
         generate_training_data()
-        train_data, val_data, test_data = load_data()
-        train_model(train_data, val_data, test_data)
+        train, val, test = load_data()
+        train_model(train, val, test)
         test_model()
-        
-    elif choice == "5":
-        print("Exiting...")
-        
     else:
-        print("Invalid choice.")
+        print("Exiting")
 
 
 if __name__ == "__main__":

@@ -8,11 +8,12 @@ from datetime import datetime
 from typing import Dict, List, Any, Optional, Tuple
 from pathlib import Path
 import sys
+import re
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from src.graph import PatientKnowledgeGraph
-from src.conflict_detector_simple import get_conflict_detector, detect_conflict
+from src.conflict_runtime import get_conflict_detector, detect_conflict
 
 
 class GraphEvolution:
@@ -31,6 +32,66 @@ class GraphEvolution:
         self.graph = graph
         self.conflict_detector = get_conflict_detector()
         self.evolution_log = []
+
+    def _parse_polarity(self, text: str) -> Tuple[str, str]:
+        """Return (base_concept, polarity) where polarity is AFFIRMED or NEGATED."""
+        value = str(text or "").strip().lower()
+        value = re.sub(r"\s+", " ", value)
+
+        negation_prefixes = (
+            "no ",
+            "not ",
+            "without ",
+            "denies ",
+            "denied ",
+            "none ",
+        )
+        for prefix in negation_prefixes:
+            if value.startswith(prefix):
+                return value[len(prefix):].strip(), "NEGATED"
+        return value, "AFFIRMED"
+
+    def _concepts_match(self, left: str, right: str) -> bool:
+        """Heuristic concept matcher for clinical phrases."""
+        a = str(left or "").strip().lower()
+        b = str(right or "").strip().lower()
+        if not a or not b:
+            return False
+        if a == b:
+            return True
+        if a in b or b in a:
+            return True
+
+        stop = {"type", "stage", "chronic", "acute", "the", "a", "an"}
+        ta = {t for t in re.findall(r"[a-z0-9]+", a) if t not in stop}
+        tb = {t for t in re.findall(r"[a-z0-9]+", b) if t not in stop}
+        if not ta or not tb:
+            return False
+        overlap = len(ta.intersection(tb))
+        min_size = min(len(ta), len(tb))
+        return overlap >= 1 and (overlap / float(min_size)) >= 0.5
+
+    def _find_concept_match(self, entity_type: str, concept: str) -> Optional[str]:
+        """Find existing node id with matching base concept for a given entity type."""
+        target = str(concept or "").strip().lower()
+        if not target:
+            return None
+
+        for node_id, data in self.graph.G.nodes(data=True):
+            if data.get("type") != entity_type:
+                continue
+            existing_name = str(data.get("name", ""))
+            existing_concept, _ = self._parse_polarity(existing_name)
+            if self._concepts_match(existing_concept, target):
+                return node_id
+        return None
+
+    def _mark_conflict(self, node_id: str, note: str, date: str):
+        """Mark node as conflicted and preserve latest timestamp."""
+        self.graph.G.nodes[node_id]["status"] = "CONFLICTED"
+        self.graph.G.nodes[node_id]["conflict_note"] = note
+        self.graph.update_entity(node_id, date, confirmed=True)
+        self._log_evolution("CONFLICT_DETECTED", self.graph.G.nodes[node_id].get("name", node_id), self.graph.G.nodes[node_id].get("type", "UNKNOWN"), date)
     
     def add_new_entity(self, entity_name: str, entity_type: str, 
                        date: str, value: Any = None) -> Tuple[str, str]:
@@ -151,7 +212,8 @@ class GraphEvolution:
     
     def _process_condition(self, condition: str, date: str) -> Dict:
         """Process a condition entity."""
-        existing = self.graph.get_entity(condition, "CONDITION")
+        concept, polarity = self._parse_polarity(condition)
+        existing = self._find_concept_match("CONDITION", concept)
         
         new_entity = {
             "name": condition,
@@ -162,55 +224,98 @@ class GraphEvolution:
         
         if existing:
             existing_data = self.graph.G.nodes[existing]
-            conflict = self.detect_and_resolve_conflicts(new_entity, existing_data)
-            
-            if conflict["is_conflict"]:
-                self.graph.G.nodes[existing]["status"] = "CONFLICTED"
-                self.graph.G.nodes[existing]["conflict_note"] = conflict["recommendation"]
+            _, existing_polarity = self._parse_polarity(existing_data.get("name", ""))
+
+            if existing_polarity != polarity:
+                recommendation = f"Contradictory condition statements for concept '{concept}'"
+                self._mark_conflict(existing, recommendation, date)
                 return {
                     "entity": condition,
                     "type": "CONDITION",
+                    "operation": "CONFLICT",
                     "action": "CONFLICT_DETECTED",
-                    "resolution": conflict["resolution"],
-                    "recommendation": conflict["recommendation"]
+                    "resolution": "FLAG_FOR_REVIEW",
+                    "recommendation": recommendation,
                 }
-            else:
-                self.graph.update_entity(existing, date, confirmed=True)
-                return {
-                    "entity": condition,
-                    "type": "CONDITION",
-                    "action": "UPDATED",
-                    "resolution": "CONSISTENT"
-                }
-        else:
-            self.graph.add_entity(condition, "CONDITION", date)
+
+            self.graph.update_entity(existing, date, confirmed=True)
+            self._log_evolution("UPDATED", condition, "CONDITION", date)
             return {
                 "entity": condition,
                 "type": "CONDITION",
+                "operation": "UPDATE",
+                "action": "UPDATED",
+                "resolution": "CONSISTENT",
+            }
+        else:
+            self.graph.add_entity(condition, "CONDITION", date)
+            self._log_evolution("ADDED", condition, "CONDITION", date)
+            return {
+                "entity": condition,
+                "type": "CONDITION",
+                "operation": "ADD",
                 "action": "ADDED",
                 "resolution": "NEW_ENTITY"
             }
     
     def _process_medication(self, medication: str, date: str) -> Dict:
         """Process a medication entity."""
-        # Clean medication name (remove dosage if present)
-        clean_name = medication.split()[0] if ' ' in medication else medication
-        
-        existing = self.graph.get_entity(clean_name, "MEDICATION")
+        concept, polarity = self._parse_polarity(medication)
+
+        # "No medications" should conflict with existing affirmed medications.
+        if concept in {"medication", "medications"} and polarity == "NEGATED":
+            affirmed_meds = []
+            for node_id, data in self.graph.G.nodes(data=True):
+                if data.get("type") != "MEDICATION":
+                    continue
+                _, med_polarity = self._parse_polarity(data.get("name", ""))
+                if med_polarity == "AFFIRMED":
+                    affirmed_meds.append(node_id)
+            if affirmed_meds:
+                for node_id in affirmed_meds:
+                    self._mark_conflict(node_id, "'No medications' conflicts with active medication history", date)
+                return {
+                    "entity": medication,
+                    "type": "MEDICATION",
+                    "operation": "CONFLICT",
+                    "action": "CONFLICT_DETECTED",
+                    "resolution": "FLAG_FOR_REVIEW",
+                    "recommendation": "Negated medication statement conflicts with prior medication facts",
+                }
+
+        existing = self._find_concept_match("MEDICATION", concept)
         
         if existing:
+            existing_data = self.graph.G.nodes[existing]
+            _, existing_polarity = self._parse_polarity(existing_data.get("name", ""))
+            if existing_polarity != polarity:
+                recommendation = f"Contradictory medication statements for concept '{concept}'"
+                self._mark_conflict(existing, recommendation, date)
+                return {
+                    "entity": medication,
+                    "type": "MEDICATION",
+                    "operation": "CONFLICT",
+                    "action": "CONFLICT_DETECTED",
+                    "resolution": "FLAG_FOR_REVIEW",
+                    "recommendation": recommendation,
+                }
+
             self.graph.update_entity(existing, date, confirmed=True)
+            self._log_evolution("UPDATED", medication, "MEDICATION", date)
             return {
-                "entity": clean_name,
+                "entity": medication,
                 "type": "MEDICATION",
-                "action": "CONFIRMED",
+                "operation": "UPDATE",
+                "action": "UPDATED",
                 "resolution": "EXISTING"
             }
         else:
             self.graph.add_entity(medication, "MEDICATION", date)
+            self._log_evolution("ADDED", medication, "MEDICATION", date)
             return {
                 "entity": medication,
                 "type": "MEDICATION",
+                "operation": "ADD",
                 "action": "ADDED",
                 "resolution": "NEW_ENTITY"
             }
@@ -221,17 +326,21 @@ class GraphEvolution:
         
         if existing:
             self.graph.update_entity(existing, date, confirmed=True)
+            self._log_evolution("UPDATED", symptom, "SYMPTOM", date)
             return {
                 "entity": symptom,
                 "type": "SYMPTOM",
-                "action": "CONFIRMED",
+                "operation": "UPDATE",
+                "action": "UPDATED",
                 "resolution": "EXISTING"
             }
         else:
             self.graph.add_entity(symptom, "SYMPTOM", date)
+            self._log_evolution("ADDED", symptom, "SYMPTOM", date)
             return {
                 "entity": symptom,
                 "type": "SYMPTOM",
+                "operation": "ADD",
                 "action": "ADDED",
                 "resolution": "NEW_ENTITY"
             }
@@ -250,10 +359,12 @@ class GraphEvolution:
                 # Track trend
                 trend = self._calculate_trend(lab_name, lab_value)
                 self.graph.update_entity(existing, date, new_value=lab_value, trend=trend)
+                self._log_evolution("UPDATED", lab_name, "LAB_VALUE", date)
                 
                 return {
                     "entity": lab_name,
                     "type": "LAB_VALUE",
+                    "operation": "UPDATE",
                     "action": "UPDATED",
                     "old_value": existing_value,
                     "new_value": lab_value,
@@ -261,17 +372,21 @@ class GraphEvolution:
                 }
             else:
                 self.graph.update_entity(existing, date, confirmed=True)
+                self._log_evolution("UPDATED", lab_name, "LAB_VALUE", date)
                 return {
                     "entity": lab_name,
                     "type": "LAB_VALUE",
-                    "action": "CONFIRMED",
+                    "operation": "UPDATE",
+                    "action": "UPDATED",
                     "value": lab_value
                 }
         else:
             self.graph.add_entity(lab_name, "LAB_VALUE", date, value=lab_value)
+            self._log_evolution("ADDED", lab_name, "LAB_VALUE", date)
             return {
                 "entity": lab_name,
                 "type": "LAB_VALUE",
+                "operation": "ADD",
                 "action": "ADDED",
                 "value": lab_value
             }
@@ -398,7 +513,7 @@ def simulate_patient_evolution(patient_id: str, visits: List[Dict]) -> List[Dict
     history = []
     
     for i, visit in enumerate(visits, 1):
-        print(f"\n📅 Processing Visit {i}: {visit.get('date', 'Unknown')}")
+        print(f"\nProcessing Visit {i}: {visit.get('date', 'Unknown')}")
         
         results = evolution.evolve_with_visit(visit)
         
@@ -409,12 +524,22 @@ def simulate_patient_evolution(patient_id: str, visits: List[Dict]) -> List[Dict
             "summary": evolution.get_evolution_summary()
         })
         
-        # Show key changes
+        # Show key operations for ADD / UPDATE / CONFLICT verification.
+        op_counts = {"ADD": 0, "UPDATE": 0, "CONFLICT": 0}
         for result in results:
-            if result.get('action') in ['ADDED', 'UPDATED', 'CONFLICT_DETECTED']:
-                print(f"   {result['action']}: {result.get('entity')} ({result.get('type')})")
+            operation = str(result.get("operation", "")).upper()
+            if operation in op_counts:
+                op_counts[operation] += 1
+                print(f"   OP={operation} | action={result.get('action')} | entity={result.get('entity')} | type={result.get('type')}")
+                if result.get('recommendation'):
+                    print(f"      note: {result.get('recommendation')}")
                 if result.get('trend'):
-                    print(f"      Trend: {result['trend']}")
+                    print(f"      trend: {result.get('trend')}")
+
+        print(
+            "   Visit operation summary: "
+            f"ADD={op_counts['ADD']} UPDATE={op_counts['UPDATE']} CONFLICT={op_counts['CONFLICT']}"
+        )
     
     # Save final graph
     graph.save(str(graphs_path / f"{patient_id}_graph.json"))

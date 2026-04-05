@@ -19,7 +19,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from src.agent_direct import DirectReActAgent
 from src.baseline_rag import BaselineRAG
-from src.conflict_detector_simple import get_conflict_detector
+from src.conflict_runtime import get_conflict_detector
 
 
 class Evaluator:

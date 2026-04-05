@@ -12,6 +12,73 @@ from src.graph_evolution import simulate_patient_evolution, evolve_patient_graph
 from src.graph import PatientKnowledgeGraph
 
 
+def test_core_operations():
+    """Verify Addition, Update, and Conflict operations in one scenario."""
+
+    print("\n" + "=" * 60)
+    print("TESTING CORE OPERATIONS (ADD / UPDATE / CONFLICT)")
+    print("=" * 60)
+
+    visits = [
+        {
+            "date": "2024-01-10",
+            "extracted": {
+                "conditions": ["Type 2 Diabetes"],
+                "medications": ["Metformin 500mg"],
+                "symptoms": ["Fatigue"],
+                "lab_values": {"HbA1c": 7.2},
+            },
+        },
+        {
+            "date": "2024-03-10",
+            "extracted": {
+                "conditions": ["Type 2 Diabetes"],
+                "medications": ["Metformin 1000mg"],
+                "symptoms": ["Fatigue"],
+                "lab_values": {"HbA1c": 8.0},
+            },
+        },
+        {
+            "date": "2024-06-10",
+            "extracted": {
+                "conditions": ["No diabetes"],
+                "medications": ["No medications"],
+                "symptoms": [],
+                "lab_values": {},
+            },
+        },
+    ]
+
+    history = simulate_patient_evolution("CORE_OPS_TEST", visits)
+    graph = PatientKnowledgeGraph.load("data/graphs/CORE_OPS_TEST_graph.json")
+
+    add_count = 0
+    update_count = 0
+    conflict_count = 0
+    for visit in history:
+        for result in visit.get("results", []):
+            op = str(result.get("operation", "")).upper()
+            if op == "ADD":
+                add_count += 1
+            elif op == "UPDATE":
+                update_count += 1
+            elif op == "CONFLICT":
+                conflict_count += 1
+
+    print("\nCore operation totals:")
+    print(f"  ADD: {add_count}")
+    print(f"  UPDATE: {update_count}")
+    print(f"  CONFLICT: {conflict_count}")
+    print(f"  Graph conflicts flagged: {len(graph.get_conflicts())}")
+
+    return {
+        "add": add_count,
+        "update": update_count,
+        "conflict": conflict_count,
+        "graph_conflicts": len(graph.get_conflicts()),
+    }
+
+
 def test_conflict_detection():
     """Test conflict detection during evolution."""
     
@@ -160,34 +227,40 @@ def main():
     print("="*60)
     
     print("\nOptions:")
-    print("  1. Test conflict detection")
-    print("  2. Test lab trend tracking")
-    print("  3. Test real patient evolution (P001)")
-    print("  4. Run all tests")
-    print("  5. Exit")
+    print("  1. Test core operations (ADD/UPDATE/CONFLICT)")
+    print("  2. Test conflict detection")
+    print("  3. Test lab trend tracking")
+    print("  4. Test real patient evolution (P001)")
+    print("  5. Run all tests")
+    print("  6. Exit")
     
-    choice = input("\nEnter choice (1-5): ").strip()
+    choice = input("\nEnter choice (1-6): ").strip()
     
     if choice == "1":
-        test_conflict_detection()
-        
+        test_core_operations()
+
     elif choice == "2":
-        test_lab_trend_tracking()
+        test_conflict_detection()
         
     elif choice == "3":
-        test_real_patient_evolution()
+        test_lab_trend_tracking()
         
     elif choice == "4":
-        print("\n🚀 Running all tests...")
-        test_conflict_detection()
-        test_lab_trend_tracking()
         test_real_patient_evolution()
         
     elif choice == "5":
+        print("\nRunning all tests...")
+        test_core_operations()
+        test_conflict_detection()
+        test_lab_trend_tracking()
+        test_real_patient_evolution()
+        
+    elif choice == "6":
         print("Exiting...")
         
     else:
         print("Invalid choice. Running all tests...")
+        test_core_operations()
         test_conflict_detection()
         test_lab_trend_tracking()
         test_real_patient_evolution()

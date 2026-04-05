@@ -1,0 +1,27 @@
+{
+  "seed": 42,
+  "requested_consistent": 4000,
+  "requested_conflict": 4000,
+  "min_after_dedupe": 5000,
+  "total_after_dedupe": 8000,
+  "attempts_for_min_size": 0,
+  "train_size": 6400,
+  "val_size": 800,
+  "test_size": 800,
+  "all_labels": {
+    "conflict": 4000,
+    "consistent": 4000
+  },
+  "train_labels": {
+    "conflict": 3200,
+    "consistent": 3200
+  },
+  "val_labels": {
+    "conflict": 400,
+    "consistent": 400
+  },
+  "test_labels": {
+    "conflict": 400,
+    "consistent": 400
+  }
+}
