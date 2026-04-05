@@ -71,6 +71,12 @@ class BaselineRAG:
         self.openrouter_api_url = "https://openrouter.ai/api/v1/chat/completions"
         self.openrouter_model = os.getenv("BASELINE_OPENROUTER_MODEL", "meta-llama/llama-3.1-8b-instruct")
         self.baseline_provider = (llm_provider or os.getenv("BASELINE_LLM_PROVIDER") or "groq").strip().lower()
+        eval_mode = os.getenv("GRAPHMED_EVAL_MODE", "").strip().lower()
+        default_temp = "0.0" if eval_mode in {"e1", "phase9", "eval", "factual"} else "0.1"
+        try:
+            self.llm_temperature = float(os.getenv("BASELINE_LLM_TEMPERATURE", default_temp))
+        except Exception:
+            self.llm_temperature = 0.0 if default_temp == "0.0" else 0.1
         
         # Store for patient data
         self.patient_data = {}
@@ -78,6 +84,7 @@ class BaselineRAG:
         
         print("[OK] Baseline RAG initialized (no graph, no memory evolution)")
         print(f"[OK] Baseline LLM provider preference: {self.baseline_provider}")
+        print(f"[OK] Baseline LLM temperature: {self.llm_temperature}")
     
     def _load_patient_data(self):
         """Load all patient data."""
@@ -169,7 +176,7 @@ Answer (be concise and cite the source if possible):"""
             response = self.llm.chat.completions.create(
                 model="llama-3.1-8b-instant",
                 messages=[{"role": "user", "content": prompt}],
-                temperature=0.1,
+                temperature=self.llm_temperature,
                 max_tokens=500,
             )
             return response.choices[0].message.content
@@ -187,7 +194,7 @@ Answer (be concise and cite the source if possible):"""
         payload = {
             "model": self.openrouter_model,
             "messages": [{"role": "user", "content": prompt}],
-            "temperature": 0.1,
+            "temperature": self.llm_temperature,
             "max_tokens": 500,
         }
         try:

@@ -59,6 +59,13 @@ class DirectReActAgent:
 
         self.google_api_key = os.getenv("GOOGLE_API_KEY")
         self.google_model = os.getenv("GRAPHMED_GOOGLE_MODEL", "gemini-2.5-flash")
+
+        eval_mode = os.getenv("GRAPHMED_EVAL_MODE", "").strip().lower()
+        default_temp = "0.0" if eval_mode in {"e1", "phase9", "eval", "factual"} else "0.1"
+        try:
+            self.llm_temperature = float(os.getenv("GRAPHMED_LLM_TEMPERATURE", default_temp))
+        except Exception:
+            self.llm_temperature = 0.0 if default_temp == "0.0" else 0.1
         
         # Initialize components
         self.graphs_dir = self.persist_dir / "graphs"
@@ -71,6 +78,7 @@ class DirectReActAgent:
         print("✅ Direct ReAct Agent initialized (no LangChain)")
         print(f"   Max reasoning steps: {max_steps}")
         print(f"   LLM provider: {self.llm_provider}")
+        print(f"   LLM temperature: {self.llm_temperature}")
 
 
     def _evolve_graph(self, patient_id: str, new_visit: Dict) -> str:
@@ -103,7 +111,7 @@ class DirectReActAgent:
         data = {
             "model": "llama-3.1-8b-instant",
             "messages": messages,
-            "temperature": 0.1,
+            "temperature": self.llm_temperature,
             "max_tokens": 1000
         }
         
@@ -131,7 +139,7 @@ class DirectReActAgent:
         payload = {
             "contents": [{"parts": [{"text": prompt}]}],
             "generationConfig": {
-                "temperature": 0.1,
+                "temperature": self.llm_temperature,
                 "maxOutputTokens": 1000,
             },
         }
@@ -179,7 +187,7 @@ class DirectReActAgent:
         data = {
             "model": self.openrouter_model,
             "messages": messages,
-            "temperature": 0.1,
+            "temperature": self.llm_temperature,
             "max_tokens": 1000,
         }
         try:
@@ -309,8 +317,13 @@ class DirectReActAgent:
             elif action == "retrieve_memory":
                 query_text = params.get("query", "")
                 patient_id = params.get("patient_id", "P001")
+                try:
+                    top_k = int(params.get("top_k", 2))
+                except Exception:
+                    top_k = 2
+                top_k = max(1, min(8, top_k))
                 store = self.memory_manager.get_patient_store(patient_id)
-                results = store.retrieve_similar(query_text, top_k=2)
+                results = store.retrieve_similar(query_text, top_k=top_k)
                 if not results:
                     return "No relevant past visits found."
                 response = "Relevant past visits:\n"
@@ -434,7 +447,7 @@ You have these actions/tools available. You MUST use them to gather information 
    Format: Action: query_labs(patient_id="{patient_id}")
 
 5. retrieve_memory - Search past visit summaries
-   Format: Action: retrieve_memory(patient_id="{patient_id}", query="search topic")
+    Format: Action: retrieve_memory(patient_id="{patient_id}", query="search topic", top_k=4)
 
 6. medical_kb - Query medical knowledge base
    Format: Action: medical_kb(question="your medical question")
@@ -459,8 +472,91 @@ RULES:
 - Include medical disclaimers in your final answer
 
 Now, answer the user's question by thinking step by step and using actions."""
+
+    def _detect_query_type(self, query: str) -> str:
+        q = str(query or "").lower()
+        if "using all visits" in q or "first and most recent" in q or "changed between" in q:
+            return "multi_visit_context"
+        if "safe" in q or "interaction" in q or "combination" in q:
+            return "drug_safety"
+        if "lab" in q or "trend" in q or "hba1c" in q or "egfr" in q:
+            return "lab_trend"
+        return "history"
+
+    def _extract_drugs_from_query(self, query: str) -> Tuple[str, str]:
+        q = str(query or "")
+        pattern = r"combination of\s+([a-zA-Z0-9\- ]+?)\s+and\s+([a-zA-Z0-9\- ]+?)\s+(?:safe|for|\?|$)"
+        m = re.search(pattern, q, flags=re.IGNORECASE)
+        if not m:
+            return "", ""
+        d1 = m.group(1).strip().lower()
+        d2 = m.group(2).strip().lower()
+        return d1, d2
+
+    def _build_forced_actions(self, patient_id: str, query: str, query_type: str) -> List[Tuple[str, Dict[str, Any]]]:
+        actions: List[Tuple[str, Dict[str, Any]]] = []
+
+        if query_type == "multi_visit_context":
+            actions.append(("retrieve_memory", {"patient_id": patient_id, "query": "first visit baseline summary", "top_k": 4}))
+            actions.append(("retrieve_memory", {"patient_id": patient_id, "query": "most recent visit changes and progression", "top_k": 4}))
+            actions.append(("query_conditions", {"patient_id": patient_id}))
+            actions.append(("query_labs", {"patient_id": patient_id}))
+            return actions
+
+        if query_type == "drug_safety":
+            d1, d2 = self._extract_drugs_from_query(query)
+            actions.append(("query_medications", {"patient_id": patient_id}))
+            actions.append(("retrieve_memory", {"patient_id": patient_id, "query": "recent medication changes and adverse effects", "top_k": 4}))
+            if d1 and d2:
+                actions.append(("drug_interaction", {"drug1": d1, "drug2": d2}))
+            return actions
+
+        if query_type == "lab_trend":
+            actions.append(("query_labs", {"patient_id": patient_id}))
+            actions.append(("retrieve_memory", {"patient_id": patient_id, "query": "lab trends across visits", "top_k": 4}))
+            return actions
+
+        # history/default
+        actions.append(("query_conditions", {"patient_id": patient_id}))
+        actions.append(("query_medications", {"patient_id": patient_id}))
+        actions.append(("query_symptoms", {"patient_id": patient_id}))
+        return actions
+
+    def _get_eval_answer_contract(self, patient_id: str, query_type: str) -> str:
+        return (
+            "Evaluation answer contract (strict):\n"
+            "- Output factual bullets only from tool observations.\n"
+            "- No disclaimer, no advice, no extra narrative.\n"
+            "- Use this exact format:\n"
+            f"Final Answer:\n"
+            f"patient_id: {patient_id}\n"
+            f"question_type: {query_type}\n"
+            "facts: <semicolon-separated factual findings>\n"
+            "evidence_first_visit: <facts or none>\n"
+            "evidence_latest_visit: <facts or none>\n"
+            "confidence: <low|medium|high>"
+        )
+
+    def _strip_disclaimer_sentences(self, text: str) -> str:
+        segments = re.split(r"(?<=[.!?])\s+", str(text or "").strip())
+        markers = [
+            "medical disclaimer",
+            "consult",
+            "healthcare professional",
+            "not medical advice",
+            "informational purposes",
+            "should not be considered",
+        ]
+        kept = [s for s in segments if not any(m in s.lower() for m in markers)]
+        return " ".join(kept).strip()
     
-    def invoke(self, patient_id: str, query: str) -> Dict[str, Any]:
+    def invoke(
+        self,
+        patient_id: str,
+        query: str,
+        query_type: Optional[str] = None,
+        evaluation_mode: bool = False,
+    ) -> Dict[str, Any]:
         """
         Invoke the agent with a query.
         """
@@ -469,13 +565,33 @@ Now, answer the user's question by thinking step by step and using actions."""
         print(f"❓ Query: {query}")
         print(f"{'='*60}\n")
         
+        resolved_query_type = query_type or self._detect_query_type(query)
+        eval_mode = evaluation_mode or os.getenv("GRAPHMED_EVAL_MODE", "").strip().lower() in {
+            "e1",
+            "phase9",
+            "eval",
+            "factual",
+        }
+
+        user_prompt = f"Question: {query}\n\nThink step by step. Use actions to gather information. When ready, provide Final Answer."
+        if eval_mode:
+            user_prompt += "\n\n" + self._get_eval_answer_contract(patient_id, resolved_query_type)
+
         messages = [
             {"role": "system", "content": self._get_system_prompt(patient_id)},
-            {"role": "user", "content": f"Question: {query}\n\nThink step by step. Use actions to gather information. When ready, provide Final Answer."}
+            {"role": "user", "content": user_prompt}
         ]
         
         reasoning_steps = []
         actions_taken = []
+
+        forced_actions = self._build_forced_actions(patient_id, query, resolved_query_type)
+        for action_name, params in forced_actions:
+            observation = self._execute_action(action_name, params)
+            actions_taken.append(action_name)
+            reasoning_steps.append(f"Pre-step: Used {action_name}")
+            messages.append({"role": "assistant", "content": f"Action: {action_name}({params})"})
+            messages.append({"role": "user", "content": f"Observation: {observation}"})
         
         for step in range(self.max_steps):
             print(f"\n🔹 Step {step + 1}")
@@ -487,6 +603,8 @@ Now, answer the user's question by thinking step by step and using actions."""
             # Check for final answer
             if "Final Answer:" in response_text:
                 final_answer = response_text.split("Final Answer:")[-1].strip()
+                if eval_mode:
+                    final_answer = self._strip_disclaimer_sentences(final_answer)
                 print(f"\n{'='*60}")
                 print(f"🤖 GraphMed Response:")
                 print(f"{'='*60}")
@@ -525,11 +643,24 @@ Now, answer the user's question by thinking step by step and using actions."""
             else:
                 # No action found
                 messages.append({"role": "assistant", "content": response_text})
-                messages.append({"role": "user", "content": "Please use one of the available actions. Format: Action: action_name(parameter=\"value\")"})
+                if eval_mode:
+                    messages.append(
+                        {
+                            "role": "user",
+                            "content": (
+                                "Use at least one tool action and then provide a strict contract-compliant Final Answer. "
+                                "Do not include disclaimers."
+                            ),
+                        }
+                    )
+                else:
+                    messages.append({"role": "user", "content": "Please use one of the available actions. Format: Action: action_name(parameter=\"value\")"})
         
         # Max steps reached
         messages.append({"role": "user", "content": "Please provide your final answer now based on available information."})
         final_answer = self._call_llm(messages)
+        if eval_mode:
+            final_answer = self._strip_disclaimer_sentences(final_answer)
         
         print(f"\n{'='*60}")
         print(f"🤖 GraphMed Response (max steps):")

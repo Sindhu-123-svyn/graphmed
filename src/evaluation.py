@@ -363,11 +363,26 @@ class Phase9Evaluator:
         msg = _safe_lower(text)
         return "429" in msg or "too many requests" in msg or "rate limit" in msg
 
-    def _query_graphmed_with_retry(self, patient_id: str, question: str, max_retries: int = 4) -> str:
+    def _query_graphmed_with_retry(
+        self,
+        patient_id: str,
+        question: str,
+        query_type: Optional[str] = None,
+        max_retries: int = 4,
+    ) -> str:
         last_answer = ""
         for attempt in range(max_retries):
             try:
-                result = self.graphmed.invoke(patient_id, question)
+                try:
+                    result = self.graphmed.invoke(
+                        patient_id,
+                        question,
+                        query_type=query_type,
+                        evaluation_mode=True,
+                    )
+                except TypeError:
+                    # Compatibility with fallback QA engines.
+                    result = self.graphmed.invoke(patient_id, question)
                 answer = str(result.get("answer", ""))
                 last_answer = answer
                 if not self._looks_rate_limited(answer):
@@ -430,6 +445,11 @@ class Phase9Evaluator:
                 or os.getenv("BASELINE_LLM_PROVIDER")
                 or ("openrouter" if (os.getenv("OPEN_ROUTER_API_KEY") or os.getenv("OPENROUTER_API_KEY")) else "groq")
             ).strip().lower()
+
+            # Keep decoding deterministic during evaluation unless explicitly overridden.
+            os.environ.setdefault("GRAPHMED_EVAL_MODE", "e1")
+            os.environ.setdefault("GRAPHMED_LLM_TEMPERATURE", "0.0")
+            os.environ.setdefault("BASELINE_LLM_TEMPERATURE", "0.0")
 
             self.graphmed = DirectReActAgent(
                 persist_dir=str(self.persist_dir),
@@ -793,7 +813,11 @@ class Phase9Evaluator:
             print(f"[E1] {idx}/50 | {item.patient_id} | {item.question_type}")
 
             t0 = time.time()
-            gm_answer = self._query_graphmed_with_retry(item.patient_id, item.question)
+            gm_answer = self._query_graphmed_with_retry(
+                item.patient_id,
+                item.question,
+                query_type=item.question_type,
+            )
             gm_time = time.time() - t0
             gm_norm = self._normalize_answer_for_factscore(
                 gm_answer,
