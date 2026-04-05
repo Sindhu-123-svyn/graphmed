@@ -1,20 +1,23 @@
 {
-  "mode": "fallback",
-  "graphmed_mode": "fallback",
-  "baseline_mode": "fallback",
+  "mode": "full_stack",
+  "graphmed_mode": "full_stack",
+  "baseline_mode": "full_stack",
+  "graphmed_runtime_mode": "full_stack_openrouter",
+  "baseline_runtime_mode": "full_stack_openrouter",
   "num_questions": 50,
-  "graphmed_factscore_mean": 0.5866666666666667,
-  "baseline_factscore_mean": 0.0,
-  "graphmed_multi_visit_factscore_mean": 0.03333333333333333,
-  "baseline_multi_visit_factscore_mean": 0.0,
-  "expected_finding_supported": true,
-  "graphmed_latency_mean": 0.6678036975860596,
-  "baseline_latency_mean": 0.6838184165954589,
+  "graphmed_factscore_mean": 0.5599999999999999,
+  "baseline_factscore_mean": 0.6466666666666666,
+  "graphmed_multi_visit_factscore_mean": 0.5,
+  "baseline_multi_visit_factscore_mean": 0.5666666666666667,
+  "expected_finding_supported": false,
+  "graphmed_latency_mean": 7.709916296005249,
+  "baseline_latency_mean": 3.7285181856155396,
   "rows": [
     {
       "experiment": "E1",
       "system": "graphmed",
       "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P001",
       "question": "What are the key diagnosed conditions for patient P001?",
       "question_type": "history",
@@ -24,14 +27,16 @@
         "renal failure"
       ],
       "expected_answer": "Key conditions include Hypertension, Hyperlipidemia, Renal Failure.",
-      "answer": "** The key diagnosed conditions for patient P001 are Hypertension, Hyperlipidemia, and Type 2 Diabetes. The patient is currently experiencing symptoms of fatigue, dizziness, and shortness of breath. Recent lab results indicate elevated HbA1c, high LDL cholesterol, and slightly elevated blood pressure.\n\n**Medical Disclaimer:** This information is based on the patient's current medical record and may not reflect the patient's complete medical history or current health status. A healthcare professional should be consulted for accurate diagnosis and treatment.",
+      "answer": "The key diagnosed conditions for patient P001 are Hypertension, Hyperlipidemia, and Type 2 Diabetes Mellitus.\n\nMedical Disclaimer: This answer is based on the information provided by the `query_conditions` action and may not be a comprehensive or up-to-date assessment of the patient's condition. A healthcare professional should always consult with the patient's medical records and perform a thorough evaluation to determine the most accurate diagnosis and treatment plan.",
+      "normalized_answer": "facts: the key diagnosed conditions for patient p001 are hypertension, hyperlipidemia, and type 2 diabetes mellitus",
       "factscore": 0.6666666666666666,
-      "latency_sec": 1.3656229972839355
+      "latency_sec": 12.211134195327759
     },
     {
       "experiment": "E1",
       "system": "baseline",
       "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P001",
       "question": "What are the key diagnosed conditions for patient P001?",
       "question_type": "history",
@@ -41,14 +46,16 @@
         "renal failure"
       ],
       "expected_answer": "Key conditions include Hypertension, Hyperlipidemia, Renal Failure.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.5662305355072021
+      "answer": "Based on the provided patient context, the key diagnosed conditions for patient P001 are:\n\n1. Hypertension (elevated blood pressure readings on multiple dates)\n2. Hyperlipidemia (initiation of atorvastatin 20mg daily)\n3. Chronic Kidney Disease (CKD) or End-Stage Renal Disease (ESRD) (decreasing eGFR values and initiation of dialysis)\n\nSource: Patient medical history and treatment plans documented on multiple dates.",
+      "normalized_answer": "facts: based on the provided patient context, the key diagnosed conditions for patient p001 are: 1 | hypertension (elevated blood pressure readings on multiple dates) 2 | hyperlipidemia (initiation of atorvastatin 20mg daily) 3",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 7.91891884803772
     },
     {
       "experiment": "E1",
       "system": "graphmed",
       "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P001",
       "question": "Which medications is patient P001 taking currently or recently?",
       "question_type": "history",
@@ -58,14 +65,16 @@
         "metoprolol"
       ],
       "expected_answer": "Key medications include lisinopril, atorvastatin, metoprolol.",
-      "answer": "** \nPatient P001 is currently taking Lisinopril (10mg, once daily), Amlodipine (5mg, once daily), Simvastatin (20mg, once daily), and Metformin (500mg, twice daily).\n\n**Medical Disclaimer:** This information is based on the patient's current medication list and may not reflect any changes or updates since the last medical visit. Always consult a healthcare professional for the most accurate and up-to-date information.",
+      "answer": "Patient P001 is currently taking Lisinopril (20mg, daily), Amlodipine (5mg, daily), Simvastatin (20mg, daily), and Metformin (500mg, twice daily).\n\nMedical Disclaimer: This information is based on the patient's current medication list and may not reflect any changes or updates since the last medical visit. Always consult a healthcare professional for the most accurate and up-to-date information.",
+      "normalized_answer": "facts: patient p001 is currently taking lisinopril (20mg, daily), amlodipine (5mg, daily), simvastatin (20mg, daily), and metformin (500mg, twice daily)",
       "factscore": 0.3333333333333333,
-      "latency_sec": 1.53755521774292
+      "latency_sec": 3.9961414337158203
     },
     {
       "experiment": "E1",
       "system": "baseline",
       "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P001",
       "question": "Which medications is patient P001 taking currently or recently?",
       "question_type": "history",
@@ -75,14 +84,16 @@
         "metoprolol"
       ],
       "expected_answer": "Key medications include lisinopril, atorvastatin, metoprolol.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6561787128448486
+      "answer": "Based on the provided patient context, the patient P001 is currently taking:\n\n* Erythropoietin (as of 2024-06-15)\n* Metoprolol 150mg daily (as of 2024-06-15)\n* Lisinopril 20mg daily (as of 2022-12-20)\n* Amlodipine 10mg daily (as of 2023-12-20)\n\nNote: The patient was also taking metoprolol 50mg daily as of 2022-12-20, but the dose was increased to 150mg daily as of 2024-06-15.",
+      "normalized_answer": "facts: based on the provided patient context, the patient p001 is currently taking: * erythropoietin (as of 2024-06-15) * metoprolol 150mg daily (as of 2024-06-15) * lisinopril 20mg daily (as of 2022-12-20) * amlodipine 10mg daily (as of 2023-12-20) note: the patient was also taking metoprolol 50mg daily as of 2022-12-20, but the dose was increased to 150mg daily as of 2024-06-15",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 2.8897292613983154
     },
     {
       "experiment": "E1",
       "system": "graphmed",
       "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P001",
       "question": "What symptoms have been documented for patient P001?",
       "question_type": "history",
@@ -92,48 +103,35 @@
         "renal function"
       ],
       "expected_answer": "Documented symptoms include Shortness of breath, Chest pain, Renal function.",
-      "answer": "**\nPatient P001 has documented symptoms of fatigue, dizziness, and headaches. These symptoms may be related to the patient's Hypertension and potential side effects of Lisinopril. The elevated blood pressure and creatinine levels suggest that the patient's Hypertension is not well-controlled, and further evaluation is necessary to determine the underlying cause of these symptoms. **Medical Disclaimer: This answer is based on the information provided and should not be used for diagnostic or treatment purposes. A healthcare professional should be consulted for an accurate diagnosis and treatment plan.**",
-      "factscore": 0.0,
-      "latency_sec": 1.1468875408172607
-    },
-    {
-      "experiment": "E1",
-      "system": "baseline",
-      "mode": "full_stack",
-      "patient_id": "P001",
-      "question": "What symptoms have been documented for patient P001?",
-      "question_type": "history",
-      "expected_keywords": [
-        "shortness of breath",
-        "chest pain",
-        "renal function"
-      ],
-      "expected_answer": "Documented symptoms include Shortness of breath, Chest pain, Renal function.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6148386001586914
-    },
-    {
-      "experiment": "E1",
-      "system": "graphmed",
-      "mode": "full_stack",
-      "patient_id": "P001",
-      "question": "Using all visits, what changed between the first and most recent visit for patient P001?",
-      "question_type": "multi_visit_context",
-      "expected_keywords": [
-        "hypertension",
-        "anemia",
-        "visit"
-      ],
-      "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Anemia.",
-      "answer": "**\n\nBased on the patient's medical history, the following changes have occurred between the first and most recent visit:\n- Improved blood pressure control\n- Improved fasting glucose control\n- Improved LDL cholesterol control\n\n**Medical Disclaimer:** This information is for educational purposes only and should not be used as a substitute for professional medical advice. Patients should consult their healthcare provider for personalized advice and treatment.",
+      "answer": "** Based on the patient's medical conditions, medications, symptoms, lab values, and past visit summaries, the documented symptoms for patient P001 include fatigue, muscle weakness, and shortness of breath, which are likely related to statin-induced myopathy.\n\n**Medical Disclaimer:** This answer is based on the information provided and should not be considered a definitive diagnosis. A healthcare professional should be consulted for a comprehensive evaluation and diagnosis.",
+      "normalized_answer": "facts: based on the patient's medical conditions, medications, symptoms, lab values, and past visit summaries, the documented symptoms for patient p001 include fatigue, muscle weakness, and shortness of breath, which are likely related to statin-induced myopathy",
       "factscore": 0.3333333333333333,
-      "latency_sec": 1.6003975868225098
+      "latency_sec": 8.233354330062866
     },
     {
       "experiment": "E1",
       "system": "baseline",
       "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
+      "patient_id": "P001",
+      "question": "What symptoms have been documented for patient P001?",
+      "question_type": "history",
+      "expected_keywords": [
+        "shortness of breath",
+        "chest pain",
+        "renal function"
+      ],
+      "expected_answer": "Documented symptoms include Shortness of breath, Chest pain, Renal function.",
+      "answer": "According to the patient context, the symptoms documented for patient P001 are:\n\n* Shortness of breath on exertion\n* Occasional chest pain\n\nThese symptoms were first documented on 2022-06-15.",
+      "normalized_answer": "facts: according to the patient context, the symptoms documented for patient p001 are: * shortness of breath on exertion * occasional chest pain these symptoms were first documented on 2022-06-15",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 1.7419908046722412
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P001",
       "question": "Using all visits, what changed between the first and most recent visit for patient P001?",
       "question_type": "multi_visit_context",
@@ -143,14 +141,35 @@
         "visit"
       ],
       "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Anemia.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6746010780334473
+      "answer": "** Based on the patient's current conditions, medications, symptoms, and lab values compared to the previous visit, the changes between the first and most recent visit for patient P001 are:\n- Increased blood pressure\n- Increased fasting glucose\n- Increased LDL cholesterol\n- Increased Hemoglobin A1c.\n\n**Medical Disclaimer:** This information is for educational purposes only and should not be used as a substitute for a professional medical diagnosis or treatment. Please consult a qualified healthcare professional for personalized advice.",
+      "normalized_answer": "visit_change: based on the patient's current conditions, medications, symptoms, and lab values compared to the previous visit, the changes between the first and most recent visit for patient p001 are: - increased blood pressure - increased fasting glucose - increased ldl cholesterol - increased hemoglobin a1c",
+      "factscore": 0.3333333333333333,
+      "latency_sec": 11.009336709976196
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
+      "patient_id": "P001",
+      "question": "Using all visits, what changed between the first and most recent visit for patient P001?",
+      "question_type": "multi_visit_context",
+      "expected_keywords": [
+        "hypertension",
+        "anemia",
+        "visit"
+      ],
+      "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Anemia.",
+      "answer": "Based on the provided patient context, the following changes occurred between the first and most recent visit for patient P001:\n\n* Initiation of erythropoietin (2024-06-15)\n* Increase in metoprolol dose from 50mg to 150mg daily (2024-06-15)\n* Initiation of amlodipine 10mg daily (2023-12-20)\n* Referral to nephrology (2023-12-20)\n* Increase in lisinopril dose from 20mg to an unspecified higher dose (not explicitly stated, but implied as the patient's blood pressure remained elevated)\n* Referral to cardiology (2022-12-20)\n* Blood pressure increased from 145/85 mmHg to 160/100 mmHg (2022-12-20) and further to 155/95 mmHg (2023-12-20)\n* eGFR decreased from an unspecified value to 50 (2023-12-20)\n\nNote: The exact changes in medication doses and blood pressure values are not explicitly stated for all visits, but the above changes are inferred based on the provided information.",
+      "normalized_answer": "visit_change: based on the provided patient context, the following changes occurred between the first and most recent visit for patient p001: * initiation of erythropoietin (2024-06-15) * increase in metoprolol dose from 50mg to 150mg daily (2024-06-15) * initiation of amlodipine 10mg daily (2023-12-20) * referral to nephrology (2023-12-20) * increase in lisinopril dose from 20mg to an unspecified higher dose (not explicitly stated, but implied as the patient's blood pressure remained elevated) * referral to cardiology (2022-12-20) * blood pressure increased from 145/85 mmhg to 160/100 mmhg (2022-12-20) and further to 155/95 mmhg (2023-12-20) * egfr decreased from an unspecified value to 50 (2023-12-20) note: the exact changes in medication doses and blood pressure values are not explicitly stated for all visits, but the above changes are inferred based on the provided information",
+      "factscore": 0.3333333333333333,
+      "latency_sec": 4.575305461883545
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P001",
       "question": "Is the combination of lisinopril and atorvastatin safe for patient P001?",
       "question_type": "drug_safety",
@@ -160,14 +179,16 @@
         "interaction"
       ],
       "expected_answer": "Assess safety and potential interaction risk between lisinopril and atorvastatin.",
-      "answer": "Patient history reviewed with available structured records.",
-      "factscore": 0.0,
-      "latency_sec": 27.69503140449524
+      "answer": "** The combination of lisinopril and atorvastatin may be safe for patient P001, but with caution and close monitoring of kidney function, particularly given the patient's elevated creatinine levels. It is essential to regularly check creatinine levels and adjust medication doses as needed to minimize the risk of kidney damage. **Please consult a healthcare professional for personalized advice.**",
+      "normalized_answer": "drug_safety: the combination of lisinopril and atorvastatin may be safe for patient p001, but with caution and close monitoring of kidney function, particularly given the patient's elevated creatinine levels | it is essential to regularly check creatinine levels and adjust medication doses as needed to minimize the risk of kidney damage",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 9.4237642288208
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P001",
       "question": "Is the combination of lisinopril and atorvastatin safe for patient P001?",
       "question_type": "drug_safety",
@@ -177,14 +198,16 @@
         "interaction"
       ],
       "expected_answer": "Assess safety and potential interaction risk between lisinopril and atorvastatin.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6648268699645996
+      "answer": "Based on the provided patient context, the combination of lisinopril and atorvastatin is generally considered safe for patient P001.\n\nLisinopril is an ACE inhibitor, and atorvastatin is a statin. There is no contraindication or interaction between these two medications that would suggest they are not safe together.\n\nIn fact, the combination of an ACE inhibitor (lisinopril) and a statin (atorvastatin) is a common and evidence-based treatment for patients with hypertension and hyperlipidemia, as seen in the patient's initial treatment plan.\n\nSource: American Heart Association and American College of Cardiology guidelines for the management of hypertension and hyperlipidemia.",
+      "normalized_answer": "drug_safety: based on the provided patient context, the combination of lisinopril and atorvastatin is generally considered safe for patient p001 | lisinopril is an ace inhibitor, and atorvastatin is a statin | there is no contraindication or interaction between these two medications that would suggest they are not safe together",
+      "factscore": 1.0,
+      "latency_sec": 3.7284388542175293
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P002",
       "question": "What are the key diagnosed conditions for patient P002?",
       "question_type": "history",
@@ -194,14 +217,16 @@
         "hyperlipidemia"
       ],
       "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
-      "answer": "Conditions: Hypertension, Type 2 Diabetes, Hyperlipidemia, Chronic Kidney Disease.",
-      "factscore": 1.0,
-      "latency_sec": 0.001005411148071289
+      "answer": "The key diagnosed conditions for patient P002 are Hypertension and Hyperlipidemia. **Please consult a medical professional for accurate diagnosis and treatment.**",
+      "normalized_answer": "facts: the key diagnosed conditions for patient p002 are hypertension and hyperlipidemia",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 2.645653247833252
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P002",
       "question": "What are the key diagnosed conditions for patient P002?",
       "question_type": "history",
@@ -211,14 +236,16 @@
         "hyperlipidemia"
       ],
       "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6719048023223877
+      "answer": "The key diagnosed conditions for patient P002 are:\n\n1. Type 2 Diabetes\n2. Hypertension\n3. Hyperlipidemia\n4. Chronic Kidney Disease (CKD)\n\nSource: Patient's medical notes, specifically the notes from 2023-01-20 and 2023-08-25.",
+      "normalized_answer": "facts: the key diagnosed conditions for patient p002 are: 1 | type 2 diabetes 2 | hypertension 3",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 1.9653401374816895
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P002",
       "question": "Which medications is patient P002 taking currently or recently?",
       "question_type": "history",
@@ -228,14 +255,16 @@
         "metformin bd"
       ],
       "expected_answer": "Key medications include antihypertensive medication, statin, metformin bd.",
-      "answer": "Medications: antihypertensive medication, statin, metformin bd, losartan qd, atorvastatin qd.",
-      "factscore": 1.0,
-      "latency_sec": 0.0010378360748291016
+      "answer": "** The patient P002 is currently taking Lisinopril (20mg, daily), Amlodipine (5mg, daily), Simvastatin (20mg, daily), and Metformin (500mg, twice daily). These medications are commonly used to treat hypertension, heart failure, high cholesterol, and type 2 diabetes, respectively. However, it is essential to note that this information is based on the patient's current medication list and may not reflect any changes or updates since the last visit. Always consult a healthcare professional for personalized medical advice.",
+      "normalized_answer": "facts: the patient p002 is currently taking lisinopril (20mg, daily), amlodipine (5mg, daily), simvastatin (20mg, daily), and metformin (500mg, twice daily) | these medications are commonly used to treat hypertension, heart failure, high cholesterol, and type 2 diabetes, respectively | however, it is essential to note that this information is based on the patient's current medication list and may not reflect any changes or updates since the last visit",
+      "factscore": 0.3333333333333333,
+      "latency_sec": 10.603466272354126
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P002",
       "question": "Which medications is patient P002 taking currently or recently?",
       "question_type": "history",
@@ -245,14 +274,16 @@
         "metformin bd"
       ],
       "expected_answer": "Key medications include antihypertensive medication, statin, metformin bd.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6945037841796875
+      "answer": "Based on the provided patient context, I can infer that the patient is taking the following medications:\n\n* Antihypertensive medication (initiated on 2022-01-15, adjusted on 2023-01-20)\n* Medications for intensifying glycemic control (initiated on 2022-01-15, intensified on 2023-01-20)\n* Medications for hyperlipidemia (diagnosed on 2023-08-25)\n\nUnfortunately, the specific medication names are not mentioned in the provided patient context.",
+      "normalized_answer": "facts: based on the provided patient context, i can infer that the patient is taking the following medications: * antihypertensive medication (initiated on 2022-01-15, adjusted on 2023-01-20) * medications for intensifying glycemic control (initiated on 2022-01-15, intensified on 2023-01-20) * medications for hyperlipidemia (diagnosed on 2023-08-25) unfortunately, the specific medication names are not mentioned in the provided patient context",
+      "factscore": 0.3333333333333333,
+      "latency_sec": 5.082853078842163
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P002",
       "question": "What symptoms have been documented for patient P002?",
       "question_type": "history",
@@ -262,14 +293,16 @@
         "elevated bp"
       ],
       "expected_answer": "Documented symptoms include Fatigue, Shortness of breath, Elevated bp.",
-      "answer": "Symptoms: Fatigue, Shortness of breath, Elevated bp, Leg cramps, Swelling in lower extremities.",
-      "factscore": 1.0,
-      "latency_sec": 0.0010221004486083984
+      "answer": "** Patient P002 has reported symptoms of headache, fatigue, and difficulty sleeping. They have been diagnosed with hypertension and hyperlipidemia, and are currently taking lisinopril and atorvastatin. Their recent lab results show elevated blood pressure and LDL cholesterol. **Please consult a healthcare professional for proper diagnosis and treatment.**\n\nMedical Disclaimer: This response is for informational purposes only and should not be considered a substitute for professional medical advice. Always consult a qualified healthcare professional for accurate diagnosis and treatment.",
+      "normalized_answer": "facts: patient p002 has reported symptoms of headache, fatigue, and difficulty sleeping | they have been diagnosed with hypertension and hyperlipidemia, and are currently taking lisinopril and atorvastatin",
+      "factscore": 0.3333333333333333,
+      "latency_sec": 5.662133455276489
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P002",
       "question": "What symptoms have been documented for patient P002?",
       "question_type": "history",
@@ -279,14 +312,16 @@
         "elevated bp"
       ],
       "expected_answer": "Documented symptoms include Fatigue, Shortness of breath, Elevated bp.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6366622447967529
+      "answer": "According to the patient context, the documented symptoms are:\n\n* Fatigue\n* Shortness of breath\n\nSource: Initial presentation on 2022-01-15.",
+      "normalized_answer": "facts: according to the patient context, the documented symptoms are: * fatigue * shortness of breath source: initial presentation on 2022-01-15",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 1.605954885482788
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P002",
       "question": "Using all visits, what changed between the first and most recent visit for patient P002?",
       "question_type": "multi_visit_context",
@@ -296,14 +331,16 @@
         "visit"
       ],
       "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Hypertension.",
-      "answer": "Patient history reviewed with available structured records.",
-      "factscore": 0.0,
-      "latency_sec": 0.0020058155059814453
+      "answer": "** Based on the patient's medical history and lab results, it appears that patient P002 has developed Diabetes Mellitus, started on Metformin, and has shown improvements in blood pressure and LDL cholesterol levels. However, the patient's HbA1c is elevated, indicating poor glycemic control. Further evaluation and management of the patient's diabetes is recommended. **Please consult a qualified healthcare professional for a comprehensive evaluation and treatment plan.**",
+      "normalized_answer": "visit_change: based on the patient's medical history and lab results, it appears that patient p002 has developed diabetes mellitus, started on metformin, and has shown improvements in blood pressure and ldl cholesterol levels | however, the patient's hba1c is elevated, indicating poor glycemic control | further evaluation and management of the patient's diabetes is recommended",
+      "factscore": 0.3333333333333333,
+      "latency_sec": 12.209229469299316
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P002",
       "question": "Using all visits, what changed between the first and most recent visit for patient P002?",
       "question_type": "multi_visit_context",
@@ -313,14 +350,16 @@
         "visit"
       ],
       "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Hypertension.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6432669162750244
+      "answer": "Between the first visit (2022-01-15) and the most recent visit (2023-08-25), the following changes occurred:\n\n* HbA1c improved from 8.2 to 7.5 (Source: 2022-01-15 and 2023-08-25)\n* BP improved from 150/90 to 140/80 (Source: 2022-01-15 and 2023-08-25)\n* eGFR remained low, but no change in value is specified (Source: 2023-08-25)\n* Diagnoses remained the same, but Hyperlipidemia was added as a diagnosis (Source: 2022-07-22)\n* Medications were adjusted to add a statin (Source: 2022-07-22)\n* A nephrology consult was scheduled (Source: 2023-08-25)",
+      "normalized_answer": "visit_change: between the first visit (2022-01-15) and the most recent visit (2023-08-25), the following changes occurred: * hba1c improved from 8",
+      "factscore": 0.3333333333333333,
+      "latency_sec": 4.093991279602051
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P002",
       "question": "Is the combination of antihypertensive medication and statin safe for patient P002?",
       "question_type": "drug_safety",
@@ -330,14 +369,16 @@
         "interaction"
       ],
       "expected_answer": "Assess safety and potential interaction risk between antihypertensive medication and statin.",
-      "answer": "Medication safety note: review interaction risk between antihypertensive medication and statin.",
-      "factscore": 1.0,
-      "latency_sec": 0.0010149478912353516
+      "answer": "** Based on the patient's medical history, current medications, and lab values, the combination of lisinopril and atorvastatin appears to be safe for patient P002. However, it is essential to continue monitoring the patient's blood pressure and lipid profile to ensure that the medications are effective and well-tolerated. **Medical Disclaimer:** This answer is based on the information provided and should not be considered a substitute for professional medical advice. Patients should always consult their healthcare provider before starting or changing medications.",
+      "normalized_answer": "drug_safety: based on the patient's medical history, current medications, and lab values, the combination of lisinopril and atorvastatin appears to be safe for patient p002 | however, it is essential to continue monitoring the patient's blood pressure and lipid profile to ensure that the medications are effective and well-tolerated",
+      "factscore": 0.3333333333333333,
+      "latency_sec": 7.58301854133606
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P002",
       "question": "Is the combination of antihypertensive medication and statin safe for patient P002?",
       "question_type": "drug_safety",
@@ -347,14 +388,16 @@
         "interaction"
       ],
       "expected_answer": "Assess safety and potential interaction risk between antihypertensive medication and statin.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6742849349975586
+      "answer": "Based on the provided patient context, the combination of antihypertensive medication and statin appears to be safe for patient P002. The patient's BP has improved to 140/80 (2023-08-25) and HbA1c has improved to 7.5 (2023-08-25), indicating effective management of hypertension and diabetes.\n\nHowever, it is essential to continue monitoring the patient's kidney function, as the eGFR remains low (2023-08-25). The patient's LDL level was previously increased to 160 (2022-07-22), but it is not mentioned if the statin has been adjusted or if the patient's LDL level has improved since then.\n\nIn general, the combination of antihypertensive medication and statin is considered safe and effective for managing hypertension and hyperlipidemia in patients with type 2 diabetes. However, it is crucial to regularly monitor the patient's kidney function, as statins can have a potential nephrotoxic effect, especially in patients with pre-existing kidney disease.",
+      "normalized_answer": "drug_safety: based on the provided patient context, the combination of antihypertensive medication and statin appears to be safe for patient p002 | however, it is essential to continue monitoring the patient's kidney function, as the egfr remains low (2023-08-25) | the patient's ldl level was previously increased to 160 (2022-07-22), but it is not mentioned if the statin has been adjusted or if the patient's ldl level has improved since then",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 4.569493532180786
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P003",
       "question": "What are the key diagnosed conditions for patient P003?",
       "question_type": "history",
@@ -364,14 +407,16 @@
         "chronic kidney disease"
       ],
       "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Chronic Kidney Disease.",
-      "answer": "Conditions: Hypertension, Type 2 Diabetes, Chronic Kidney Disease.",
-      "factscore": 1.0,
-      "latency_sec": 0.0011453628540039062
+      "answer": "The key diagnosed conditions for patient P003 are Hypertension and Hyperlipidemia. **Please consult a medical professional for accurate diagnosis and treatment.**",
+      "normalized_answer": "facts: the key diagnosed conditions for patient p003 are hypertension and hyperlipidemia",
+      "factscore": 0.3333333333333333,
+      "latency_sec": 2.974478244781494
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P003",
       "question": "What are the key diagnosed conditions for patient P003?",
       "question_type": "history",
@@ -381,14 +426,16 @@
         "chronic kidney disease"
       ],
       "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Chronic Kidney Disease.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6647641658782959
+      "answer": "Based on the provided patient context, the key diagnosed conditions for patient P003 are:\n\n1. Type 2 Diabetes (Source: Note from 2022-06-15)\n2. Hypertension (Source: Note from 2022-06-15)\n\nAdditionally, the patient has developed worsening kidney function, which may indicate a secondary condition such as diabetic nephropathy.",
+      "normalized_answer": "facts: based on the provided patient context, the key diagnosed conditions for patient p003 are: 1 | type 2 diabetes (source: note from 2022-06-15) 2 | hypertension (source: note from 2022-06-15) additionally, the patient has developed worsening kidney function, which may indicate a secondary condition such as diabetic nephropathy",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 4.499288558959961
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P003",
       "question": "Which medications is patient P003 taking currently or recently?",
       "question_type": "history",
@@ -398,14 +445,16 @@
         "statin"
       ],
       "expected_answer": "Key medications include metformin, losartan, statin.",
-      "answer": "Medications: metformin, losartan, statin, ace inhibitor.",
+      "answer": "Patient P003 is currently taking metformin, losartan, simvastatin, and lisinopril. There is a potential interaction between losartan and lisopril that may increase the risk of hyperkalemia. **Please consult a healthcare professional for proper evaluation and management of this patient's medications.**",
+      "normalized_answer": "facts: patient p003 is currently taking metformin, losartan, simvastatin, and lisinopril | there is a potential interaction between losartan and lisopril that may increase the risk of hyperkalemia",
       "factscore": 1.0,
-      "latency_sec": 0.001005411148071289
+      "latency_sec": 7.807787656784058
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P003",
       "question": "Which medications is patient P003 taking currently or recently?",
       "question_type": "history",
@@ -415,14 +464,16 @@
         "statin"
       ],
       "expected_answer": "Key medications include metformin, losartan, statin.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6453168392181396
+      "answer": "Based on the patient context, the patient is currently taking:\n\n* ACE inhibitor (started on an unknown date, but likely after 2022-06-15)\n* Losartan (dose increased, started on an unknown date, but likely after 2023-01-10)\n* Statin (started on 2023-01-10)\n* Metformin (dose increased, started on 2023-01-10)\n\nSource: Patient Context notes from 2022-06-15, 2023-01-10, and 2023-08-02.",
+      "normalized_answer": "facts: based on the patient context, the patient is currently taking: * ace inhibitor (started on an unknown date, but likely after 2022-06-15) * losartan (dose increased, started on an unknown date, but likely after 2023-01-10) * statin (started on 2023-01-10) * metformin (dose increased, started on 2023-01-10) source: patient context notes from 2022-06-15, 2023-01-10, and 2023-08-02",
+      "factscore": 1.0,
+      "latency_sec": 5.443485736846924
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P003",
       "question": "What symptoms have been documented for patient P003?",
       "question_type": "history",
@@ -432,14 +483,16 @@
         "increased urination"
       ],
       "expected_answer": "Documented symptoms include Fatigue, Polydipsia, Increased urination.",
-      "answer": "Symptoms: Fatigue, Polydipsia, Increased urination, Shortness of breath.",
-      "factscore": 1.0,
-      "latency_sec": 0.0010979175567626953
+      "answer": "The patient P003 has documented symptoms of fatigue, headache, muscle pain, shortness of breath, and worsening symptoms over the past week. Medical Disclaimer: This information is based on the patient's reported symptoms and medical history, and a thorough medical evaluation by a healthcare professional is necessary to determine the underlying cause of these symptoms.",
+      "normalized_answer": "facts: the patient p003 has documented symptoms of fatigue, headache, muscle pain, shortness of breath, and worsening symptoms over the past week",
+      "factscore": 0.3333333333333333,
+      "latency_sec": 4.356110095977783
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P003",
       "question": "What symptoms have been documented for patient P003?",
       "question_type": "history",
@@ -449,14 +502,16 @@
         "increased urination"
       ],
       "expected_answer": "Documented symptoms include Fatigue, Polydipsia, Increased urination.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6225190162658691
+      "answer": "The symptoms documented for patient P003 are:\n\n* Fatigue (2022-06-15, 2023-01-10)\n* Increased urination (2022-06-15, 2023-01-10)\n* Shortness of breath on exertion (2023-08-02)\n* Increased thirst (2022-06-15)\n\nSource: Patient notes from 2022-06-15, 2023-01-10, and 2023-08-02.",
+      "normalized_answer": "facts: the symptoms documented for patient p003 are: * fatigue (2022-06-15, 2023-01-10) * increased urination (2022-06-15, 2023-01-10) * shortness of breath on exertion (2023-08-02) * increased thirst (2022-06-15) source: patient notes from 2022-06-15, 2023-01-10, and 2023-08-02",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 3.2267489433288574
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P003",
       "question": "Using all visits, what changed between the first and most recent visit for patient P003?",
       "question_type": "multi_visit_context",
@@ -466,14 +521,16 @@
         "visit"
       ],
       "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Chronic Kidney Disease.",
-      "answer": "Patient history reviewed with available structured records.",
-      "factscore": 0.0,
-      "latency_sec": 0.0010008811950683594
+      "answer": "** Based on the analysis of patient P003's visit summaries, medical conditions, medications, symptoms, and lab values, the changes between the first and most recent visit include:\n\n* Medication change: Lisinopril to Losartan for blood pressure management\n* Improvement in symptoms: Shortness of breath improved\n\n**Medical Disclaimer:** This analysis is based on the information provided and may not be comprehensive or up-to-date. It is essential to consult with a healthcare professional for accurate and personalized medical advice.",
+      "normalized_answer": "visit_change: based on the analysis of patient p003's visit summaries, medical conditions, medications, symptoms, and lab values, the changes between the first and most recent visit include: * medication change: lisinopril to losartan for blood pressure management * improvement in symptoms: shortness of breath improved medical disclaimer: this analysis is based on the information provided and may not be comprehensive or up-to-date | it is essential to consult with a healthcare professional for accurate and personalized medical advice",
+      "factscore": 0.3333333333333333,
+      "latency_sec": 10.213000535964966
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P003",
       "question": "Using all visits, what changed between the first and most recent visit for patient P003?",
       "question_type": "multi_visit_context",
@@ -483,14 +540,16 @@
         "visit"
       ],
       "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Chronic Kidney Disease.",
-      "answer": "Error: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))",
-      "factscore": 0.0,
-      "latency_sec": 0.7163777351379395
+      "answer": "Based on the patient's notes, the following changes occurred between the first visit (2022-06-15) and the most recent visit (2023-08-02):\n\n* The patient's blood glucose control worsened (as evidenced by the note on 2023-01-10 stating \"worsening blood glucose control\").\n* The patient's kidney function worsened (as evidenced by the note on 2023-08-02 stating \"worsening kidney function\").\n* The patient's blood pressure increased (as evidenced by the note on 2022-06-15 stating \"mildly elevated systolic blood pressure\" and the note on 2023-08-02 stating \"elevated blood pressure\").\n* The patient's LDL level is now elevated (as evidenced by the note on 2023-01-10).\n* The patient's medication regimen was changed to include a statin (started on 2023-01-10) and an ACE inhibitor (started on 2023-08-02), and the dose of losartan was increased (on 2023-08-02).\n\nThese changes suggest that the patient's condition has progressed, with worsening metabolic control, kidney function, and blood pressure, and the addition of new medications to manage these issues.",
+      "normalized_answer": "visit_change: based on the patient's notes, the following changes occurred between the first visit (2022-06-15) and the most recent visit (2023-08-02): * the patient's blood glucose control worsened (as evidenced by the note on 2023-01-10 stating \"worsening blood glucose control\") | * the patient's medication regimen was changed to include a statin (started on 2023-01-10) and an ace inhibitor (started on 2023-08-02), and the dose of losartan was increased (on 2023-08-02) | these changes suggest that the patient's condition has progressed, with worsening metabolic control, kidney function, and blood pressure, and the addition of new medications to manage these issues",
+      "factscore": 0.3333333333333333,
+      "latency_sec": 5.263440370559692
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P003",
       "question": "Is the combination of metformin and losartan safe for patient P003?",
       "question_type": "drug_safety",
@@ -500,14 +559,16 @@
         "interaction"
       ],
       "expected_answer": "Assess safety and potential interaction risk between metformin and losartan.",
-      "answer": "Patient history reviewed with available structured records.",
-      "factscore": 0.0,
-      "latency_sec": 0.0
+      "answer": "** The combination of metformin and losartan may not be safe for patient P003 due to the potential risk of hyperkalemia, especially given their impaired kidney function. However, this decision should be made in consultation with a healthcare professional, as they can assess the individual patient's risk factors and adjust treatment plans accordingly. **Please consult a healthcare professional for personalized advice.**",
+      "normalized_answer": "drug_safety: the combination of metformin and losartan may not be safe for patient p003 due to the potential risk of hyperkalemia, especially given their impaired kidney function",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 9.968106508255005
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P003",
       "question": "Is the combination of metformin and losartan safe for patient P003?",
       "question_type": "drug_safety",
@@ -517,14 +578,16 @@
         "interaction"
       ],
       "expected_answer": "Assess safety and potential interaction risk between metformin and losartan.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6564886569976807
+      "answer": "Based on the patient's medical history, the combination of metformin and losartan may not be safe for patient P003.\n\nMetformin is a medication that can cause lactic acidosis, a potentially life-threatening condition, especially in patients with kidney disease. The patient's worsening kidney function (2023-08-02) may increase the risk of lactic acidosis with metformin.\n\nLosartan, an ACE inhibitor, can also cause hyperkalemia (elevated potassium levels), which can be problematic in patients with kidney disease. The patient's elevated blood pressure and worsening kidney function (2023-08-02) may increase the risk of hyperkalemia with losartan.\n\nA study published in the Journal of Clinical Hypertension (2018) suggests that the combination of ACE inhibitors and metformin may increase the risk of hyperkalemia and lactic acidosis in patients with kidney disease.\n\nTherefore, the combination of metformin and losartan may not be safe for patient P003, and alternative medications should be considered to manage their blood glucose and blood pressure.",
+      "normalized_answer": "drug_safety: based on the patient's medical history, the combination of metformin and losartan may not be safe for patient p003 | metformin is a medication that can cause lactic acidosis, a potentially life-threatening condition, especially in patients with kidney disease | the patient's worsening kidney function (2023-08-02) may increase the risk of lactic acidosis with metformin",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 4.8701653480529785
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P004",
       "question": "What are the key diagnosed conditions for patient P004?",
       "question_type": "history",
@@ -534,14 +597,16 @@
         "hyperlipidemia"
       ],
       "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
-      "answer": "Conditions: Hypertension, Type 2 Diabetes, Hyperlipidemia, Chronic Kidney Disease, Heart Failure.",
-      "factscore": 1.0,
-      "latency_sec": 0.0
+      "answer": "The key diagnosed conditions for patient P004 are Hypertension and Hyperlipidemia. Additionally, the patient has a history of smoking and a family history of cardiovascular disease, which may be relevant to their overall health status.\n\nDisclaimer: This information is based on the available data and may not be a comprehensive or definitive diagnosis. A healthcare professional should be consulted for a thorough evaluation and diagnosis.",
+      "normalized_answer": "facts: the key diagnosed conditions for patient p004 are hypertension and hyperlipidemia | disclaimer: this information is based on the available data and may not be a comprehensive or definitive diagnosis",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 5.324028730392456
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P004",
       "question": "What are the key diagnosed conditions for patient P004?",
       "question_type": "history",
@@ -551,14 +616,16 @@
         "hyperlipidemia"
       ],
       "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.5942800045013428
+      "answer": "Based on the provided patient context, the key diagnosed conditions for patient P004 are:\n\n1. Type 2 Diabetes mellitus (all dates)\n2. Hypertension (all dates)\n3. Hyperlipidemia (all dates)\n4. Chronic Kidney Disease (CKD) stage 5 (2025-02-18), stage 3 (2023-10-20), and stage 4 (2024-03-15)\n5. Congestive Heart Failure (CHF) with moderate decompensation (2025-02-18) and possible CHF (2024-03-15)\n\nThese conditions are based on the patient's lab results, physical exams, and medication lists across the three dates.",
+      "normalized_answer": "facts: based on the provided patient context, the key diagnosed conditions for patient p004 are: 1 | type 2 diabetes mellitus (all dates) 2 | hypertension (all dates) 3",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 3.5654211044311523
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P004",
       "question": "Which medications is patient P004 taking currently or recently?",
       "question_type": "history",
@@ -568,14 +635,16 @@
         "atorvastatin"
       ],
       "expected_answer": "Key medications include metformin, lisinopril, atorvastatin.",
-      "answer": "Medications: metformin, lisinopril, atorvastatin, furosemide, enalapril.",
-      "factscore": 1.0,
-      "latency_sec": 0.0
+      "answer": "Patient P004 is currently taking Lisinopril 20mg daily, Amlodipine 10mg daily, Simvastatin 40mg daily, and Metformin 500mg twice daily. There have been no recent changes to their medication list.\n\nDisclaimer: This information is based on the patient's current and recent medication list, which may not reflect any changes made after the last update. It is essential to verify the patient's medication list with the healthcare provider or pharmacist for accuracy.",
+      "normalized_answer": "facts: patient p004 is currently taking lisinopril 20mg daily, amlodipine 10mg daily, simvastatin 40mg daily, and metformin 500mg twice daily | there have been no recent changes to their medication list | disclaimer: this information is based on the patient's current and recent medication list, which may not reflect any changes made after the last update",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 0.7333085536956787
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P004",
       "question": "Which medications is patient P004 taking currently or recently?",
       "question_type": "history",
@@ -585,14 +654,16 @@
         "atorvastatin"
       ],
       "expected_answer": "Key medications include metformin, lisinopril, atorvastatin.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.8777995109558105
+      "answer": "Based on the provided patient context, the patient P004 is currently taking the following medications:\n\n* Metformin 500mg BID (as of 2024-03-15)\n* Lisinopril 20mg daily (as of 2024-03-15)\n* Atorvastatin 20mg daily (as of 2024-03-15)\n* Furosemide 40mg daily (as of 2024-03-15)\n\nNote: The patient was previously taking Enalapril 10mg daily, but it is not mentioned as part of their current medication regimen.",
+      "normalized_answer": "facts: based on the provided patient context, the patient p004 is currently taking the following medications: * metformin 500mg bid (as of 2024-03-15) * lisinopril 20mg daily (as of 2024-03-15) * atorvastatin 20mg daily (as of 2024-03-15) * furosemide 40mg daily (as of 2024-03-15) note: the patient was previously taking enalapril 10mg daily, but it is not mentioned as part of their current medication regimen",
+      "factscore": 1.0,
+      "latency_sec": 3.073265314102173
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P004",
       "question": "What symptoms have been documented for patient P004?",
       "question_type": "history",
@@ -602,14 +673,16 @@
         "urination"
       ],
       "expected_answer": "Documented symptoms include Polydipsia, Increased thirst, Urination.",
-      "answer": "Symptoms: Polydipsia, Increased thirst, Urination, Fatigue, Shortness of breath.",
-      "factscore": 1.0,
-      "latency_sec": 0.0005075931549072266
+      "answer": "The patient P004 has documented symptoms of headache, fatigue, and difficulty concentrating. The patient has a medical history of hypertension and hyperlipidemia and is currently taking lisinopril and atorvastatin. **Please note that this information is based on the patient's medical record and may not reflect the patient's current condition. A thorough medical evaluation by a healthcare professional is necessary to determine the underlying cause of the symptoms.**",
+      "normalized_answer": "facts: the patient p004 has documented symptoms of headache, fatigue, and difficulty concentrating | please note that this information is based on the patient's medical record and may not reflect the patient's current condition",
+      "factscore": 0.0,
+      "latency_sec": 6.484854698181152
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P004",
       "question": "What symptoms have been documented for patient P004?",
       "question_type": "history",
@@ -619,14 +692,16 @@
         "urination"
       ],
       "expected_answer": "Documented symptoms include Polydipsia, Increased thirst, Urination.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "answer": "According to the patient context, the documented symptoms for patient P004 are:\n\n* Worsening fatigue (2023-10-20, 2024-03-15)\n* Shortness of breath (2023-10-20, 2024-09-01, 2024-03-15)\n* Decreased mobility (2024-09-01)\n* Significant weight gain and edema (2024-09-01)\n* Increased crackles at lung bases (2024-03-15)\n\nSource: Patient Context notes for each date.",
+      "normalized_answer": "facts: according to the patient context, the documented symptoms for patient p004 are: * worsening fatigue (2023-10-20, 2024-03-15) * shortness of breath (2023-10-20, 2024-09-01, 2024-03-15) * decreased mobility (2024-09-01) * significant weight gain and edema (2024-09-01) * increased crackles at lung bases (2024-03-15) source: patient context notes for each date",
       "factscore": 0.0,
-      "latency_sec": 0.8793001174926758
+      "latency_sec": 3.398483991622925
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P004",
       "question": "Using all visits, what changed between the first and most recent visit for patient P004?",
       "question_type": "multi_visit_context",
@@ -636,14 +711,16 @@
         "visit"
       ],
       "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Hypertension.",
-      "answer": "Patient history reviewed with available structured records.",
-      "factscore": 0.0,
-      "latency_sec": 0.0010023117065429688
+      "answer": "** Based on the patient's medical history, the changes between the first and most recent visit include the resolution of Hyperlipidemia, a decrease in LDL cholesterol level, and the resolution of fatigue symptoms. **Please note that this analysis is based on the information provided and should not be considered a definitive diagnosis or treatment plan. A healthcare professional should be consulted for personalized advice.**",
+      "normalized_answer": "visit_change: based on the patient's medical history, the changes between the first and most recent visit include the resolution of hyperlipidemia, a decrease in ldl cholesterol level, and the resolution of fatigue symptoms",
+      "factscore": 0.3333333333333333,
+      "latency_sec": 13.53145456314087
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P004",
       "question": "Using all visits, what changed between the first and most recent visit for patient P004?",
       "question_type": "multi_visit_context",
@@ -653,14 +730,16 @@
         "visit"
       ],
       "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Hypertension.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.8736693859100342
+      "answer": "Between the first visit (2023-04-15) and the most recent visit (2023-10-20), the following changes were noted:\n\n* HbA1c decreased from 8.2 to 7.5 (Source: Lab results)\n* BP decreased from 140/90 to 130/80 (Source: Lab results)\n* LDL decreased from 150 to 140 (Source: Lab results)\n* eGFR decreased from 48 to unknown (Source: Lab results)\n* Diagnoses added: Congestive heart failure with moderate decompensation (Source: Note from 2025-02-18)\n* Medications added: Furosemide 80mg daily, Enalapril 10mg daily (Source: Note from 2025-02-18)\n* Medications increased: Lisinopril 20mg daily (Source: Note from 2025-02-18)\n* Patient started home oxygen and physical therapy (Source: Note from 2025-02-18)",
+      "normalized_answer": "visit_change: between the first visit (2023-04-15) and the most recent visit (2023-10-20), the following changes were noted: * hba1c decreased from 8",
+      "factscore": 0.3333333333333333,
+      "latency_sec": 1.6442615985870361
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P004",
       "question": "Is the combination of metformin and lisinopril safe for patient P004?",
       "question_type": "drug_safety",
@@ -670,14 +749,16 @@
         "interaction"
       ],
       "expected_answer": "Assess safety and potential interaction risk between metformin and lisinopril.",
-      "answer": "Patient history reviewed with available structured records.",
-      "factscore": 0.0,
-      "latency_sec": 0.0010404586791992188
+      "answer": "The combination of metformin and lisinopril may not be safe for patient P004 due to the potential for increased risk of lactic acidosis and kidney injury. The patient's impaired kidney function and current medication regimen require careful consideration and monitoring. **Please consult with a healthcare professional for personalized advice.**",
+      "normalized_answer": "drug_safety: the combination of metformin and lisinopril may not be safe for patient p004 due to the potential for increased risk of lactic acidosis and kidney injury | the patient's impaired kidney function and current medication regimen require careful consideration and monitoring",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 12.196806907653809
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P004",
       "question": "Is the combination of metformin and lisinopril safe for patient P004?",
       "question_type": "drug_safety",
@@ -687,14 +768,16 @@
         "interaction"
       ],
       "expected_answer": "Assess safety and potential interaction risk between metformin and lisinopril.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.813347339630127
+      "answer": "Based on the provided patient context, the combination of metformin and lisinopril appears to be safe for patient P004.\n\nThere is no indication of lactic acidosis or other adverse effects associated with the combination of metformin and lisinopril in the provided notes. In fact, the patient's kidney function, as indicated by eGFR, has shown a slight improvement from 42 to 48 (2024-09-01 to 2025-02-18).\n\nAccording to the American Diabetes Association (ADA) and the American College of Cardiology (ACC), the combination of metformin and ACE inhibitors (such as lisinopril) is generally considered safe and effective for patients with type 2 diabetes and hypertension (1, 2).\n\nHowever, it is essential to monitor the patient's kidney function and adjust the medication regimen as needed to prevent further kidney damage.\n\nReferences:\n\n1. American Diabetes Association. (2022). Standards of Medical Care in Diabetes-2022. Diabetes Care, 45(Supplement 1), S1-S224.\n2. American College of Cardiology/American Heart Association Task Force on Practice Guidelines. (2017). 2017 ACC/AHA/AAPA/ABC/ACPM/AGS/APhA/ASH/ASPC/NMA/PCNA Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults: Executive Summary. Journal of the American College of Cardiology, 70(19), 2315-2367.",
+      "normalized_answer": "drug_safety: based on the provided patient context, the combination of metformin and lisinopril appears to be safe for patient p004 | there is no indication of lactic acidosis or other adverse effects associated with the combination of metformin and lisinopril in the provided notes | according to the american diabetes association (ada) and the american college of cardiology (acc), the combination of metformin and ace inhibitors (such as lisinopril) is generally considered safe and effective for patients with type 2 diabetes and hypertension (1, 2)",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 6.282403469085693
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P005",
       "question": "What are the key diagnosed conditions for patient P005?",
       "question_type": "history",
@@ -704,14 +787,16 @@
         "hyperlipidemia"
       ],
       "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
-      "answer": "Conditions: Hypertension, Type 2 Diabetes, Hyperlipidemia, Chronic Kidney Disease.",
+      "answer": "The key diagnosed conditions for patient P005 are Hypertension, Hyperlipidemia, and Type 2 Diabetes Mellitus. **Please note that this information is based on the patient's medical record and may not reflect the patient's current or complete medical status. A healthcare professional should be consulted for accurate and up-to-date information.**",
+      "normalized_answer": "facts: the key diagnosed conditions for patient p005 are hypertension, hyperlipidemia, and type 2 diabetes mellitus",
       "factscore": 1.0,
-      "latency_sec": 0.00101470947265625
+      "latency_sec": 4.53552508354187
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P005",
       "question": "What are the key diagnosed conditions for patient P005?",
       "question_type": "history",
@@ -721,14 +806,16 @@
         "hyperlipidemia"
       ],
       "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.8377764225006104
+      "answer": "Based on the patient context, the key diagnosed conditions for patient P005 are:\n\n1. Type 2 Diabetes (Source: All three patient notes)\n2. Hypertension (Source: All three patient notes)\n3. Hyperlipidemia (Source: All three patient notes)\n4. Chronic Kidney Disease (CKD) with progression from moderate to severe to end-stage (Source: Patient notes dated 2023-06-15, 2023-12-20, and 2024-06-15)\n\nNote: The progression of CKD is evident from the decreasing eGFR values over time.",
+      "normalized_answer": "facts: based on the patient context, the key diagnosed conditions for patient p005 are: 1 | type 2 diabetes (source: all three patient notes) 2 | hypertension (source: all three patient notes) 3",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 5.003012657165527
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P005",
       "question": "Which medications is patient P005 taking currently or recently?",
       "question_type": "history",
@@ -738,14 +825,16 @@
         "atorvastatin"
       ],
       "expected_answer": "Key medications include metformin, lisinopril, atorvastatin.",
-      "answer": "Medications: metformin, lisinopril, atorvastatin, furosemide.",
-      "factscore": 1.0,
-      "latency_sec": 0.001010894775390625
+      "answer": "Patient P005 is currently taking Lisinopril 20mg daily, Amlodipine 10mg daily, Simvastatin 40mg daily, Metformin 500mg twice daily, and Aspirin 81mg daily. There have been no recent changes to their medications.\n\nDisclaimer: This information is based on the patient's current and recent medical record and may not reflect any changes or updates that may have occurred since the last visit.",
+      "normalized_answer": "facts: patient p005 is currently taking lisinopril 20mg daily, amlodipine 10mg daily, simvastatin 40mg daily, metformin 500mg twice daily, and aspirin 81mg daily | there have been no recent changes to their medications",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 4.137299060821533
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P005",
       "question": "Which medications is patient P005 taking currently or recently?",
       "question_type": "history",
@@ -755,14 +844,16 @@
         "atorvastatin"
       ],
       "expected_answer": "Key medications include metformin, lisinopril, atorvastatin.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.5761888027191162
+      "answer": "Based on the provided patient context, the patient is currently taking the following medications:\n\n* Metformin 2500mg bid\n* Lisinopril 80mg qd\n* Atorvastatin 160mg qd\n* Furosemide 120mg qd\n* Albuterol 2 puffs q4h\n* Epoetin alfa 12000 units qw\n* Hemodialysis 3x/week\n\nSource: Date: 2024-06-15",
+      "normalized_answer": "facts: based on the provided patient context, the patient is currently taking the following medications: * metformin 2500mg bid * lisinopril 80mg qd * atorvastatin 160mg qd * furosemide 120mg qd * albuterol 2 puffs q4h * epoetin alfa 12000 units qw * hemodialysis 3x/week source: date: 2024-06-15",
+      "factscore": 1.0,
+      "latency_sec": 4.029721260070801
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P005",
       "question": "What symptoms have been documented for patient P005?",
       "question_type": "history",
@@ -772,14 +863,16 @@
         "increased thirst"
       ],
       "expected_answer": "Documented symptoms include Fatigue, Polydipsia, Increased thirst.",
-      "answer": "Symptoms: Fatigue, Polydipsia, Increased thirst, Weight gain, Shortness of breath.",
-      "factscore": 1.0,
-      "latency_sec": 0.001039266586303711
+      "answer": "The patient P005 has documented symptoms of fatigue, headache, muscle pain, and fever.\n\nMedical Disclaimer: This information is based on the patient's reported symptoms and medical history. A thorough medical evaluation by a healthcare professional is necessary to determine the underlying cause of these symptoms and develop an appropriate treatment plan.",
+      "normalized_answer": "facts: the patient p005 has documented symptoms of fatigue, headache, muscle pain, and fever",
+      "factscore": 0.3333333333333333,
+      "latency_sec": 3.711487054824829
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P005",
       "question": "What symptoms have been documented for patient P005?",
       "question_type": "history",
@@ -789,14 +882,16 @@
         "increased thirst"
       ],
       "expected_answer": "Documented symptoms include Fatigue, Polydipsia, Increased thirst.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6587984561920166
+      "answer": "Based on the provided patient context, the symptoms documented for patient P005 are:\n\n* Fatigue (all three visits)\n* Increased thirst (all three visits)\n* Weight gain (all three visits)\n* Shortness of breath (2023-06-15 and 2023-12-20)\n* Edema (2023-12-20)\n\nSource: Patient notes from 2023-06-15, 2023-12-20, and 2022-12-20.",
+      "normalized_answer": "facts: based on the provided patient context, the symptoms documented for patient p005 are: * fatigue (all three visits) * increased thirst (all three visits) * weight gain (all three visits) * shortness of breath (2023-06-15 and 2023-12-20) * edema (2023-12-20) source: patient notes from 2023-06-15, 2023-12-20, and 2022-12-20",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 2.7375168800354004
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P005",
       "question": "Using all visits, what changed between the first and most recent visit for patient P005?",
       "question_type": "multi_visit_context",
@@ -806,14 +901,16 @@
         "visit"
       ],
       "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Hypertension.",
-      "answer": "Patient history reviewed with available structured records.",
-      "factscore": 0.0,
-      "latency_sec": 0.0010385513305664062
+      "answer": "** Based on the patient's past visit summaries, I observed that between the first and most recent visit, patient P005's blood pressure has increased slightly, and their LDL cholesterol has decreased. Their medication regimen has remained the same, with lisinopril and atorvastatin. They have also reported mild shortness of breath and fatigue, which may be related to their hypertension. **Please note that this is a summary of the patient's medical history and should not be used for diagnostic purposes. A healthcare professional should be consulted for accurate diagnosis and treatment.**",
+      "normalized_answer": "visit_change: based on the patient's past visit summaries, i observed that between the first and most recent visit, patient p005's blood pressure has increased slightly, and their ldl cholesterol has decreased | they have also reported mild shortness of breath and fatigue, which may be related to their hypertension",
+      "factscore": 1.0,
+      "latency_sec": 13.057768821716309
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P005",
       "question": "Using all visits, what changed between the first and most recent visit for patient P005?",
       "question_type": "multi_visit_context",
@@ -823,14 +920,16 @@
         "visit"
       ],
       "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Hypertension.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.8782057762145996
+      "answer": "Based on the patient's visits, the following changes are noted between the first visit (2023-06-15) and the most recent visit (2024-06-15):\n\n1. **HbA1c increased**: 9.0 to 9.8 (Source: Patient Context, 2023-06-15 and 2024-06-15)\n2. **BP increased**: 155/100 to 165/110 (Source: Patient Context, 2023-06-15 and 2024-06-15)\n3. **eGFR decreased**: 65 to 40 (Source: Patient Context, 2023-06-15 and 2024-06-15)\n4. **LDL increased**: 180 to 220 (Source: Patient Context, 2023-06-15 and 2024-06-15)\n5. **Medications increased**:\n\t* Metformin dose increased from 1500mg bid to 2500mg bid\n\t* Lisinopril dose increased from 40mg qd to 80mg qd\n\t* Atorvastatin dose increased from 80mg qd to 160mg qd\n\t* Furosemide dose increased from 40mg qd to 120mg qd\n\t* Epoetin alfa dose increased from 6000 units qw to 12000 units qw\n\t* Hemodialysis frequency increased from 0 to 3x/week (Source: Patient Context, 2023-06-15 and 2024-06-15)\n6. **Symptoms worsened**: Fatigue, Increased thirst, Weight gain, Shortness of breath, Edema, and Nausea were present at the most recent visit, but not all were present at the first visit (Source: Patient Context, 2023-06-15 and 2024-06-15)\n\nThese changes indicate a worsening of the patient's condition, with increasing severity of diabetes, hypertension, hyperlipidemia, and chronic kidney disease, as well as the development of new symptoms and the need for more aggressive treatment.",
+      "normalized_answer": "visit_change: based on the patient's visits, the following changes are noted between the first visit (2023-06-15) and the most recent visit (2024-06-15): 1 | symptoms worsened : fatigue, increased thirst, weight gain, shortness of breath, edema, and nausea were present at the most recent visit, but not all were present at the first visit (source: patient context, 2023-06-15 and 2024-06-15) these changes indicate a worsening of the patient's condition, with increasing severity of diabetes, hypertension, hyperlipidemia, and chronic kidney disease, as well as the development of new symptoms and the need for more aggressive treatment",
+      "factscore": 1.0,
+      "latency_sec": 6.686810731887817
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P005",
       "question": "Is the combination of metformin and lisinopril safe for patient P005?",
       "question_type": "drug_safety",
@@ -840,14 +939,16 @@
         "interaction"
       ],
       "expected_answer": "Assess safety and potential interaction risk between metformin and lisinopril.",
-      "answer": "Patient history reviewed with available structured records.",
-      "factscore": 0.0,
-      "latency_sec": 0.002036571502685547
+      "answer": "** The combination of metformin and lisinopril may be safe for patient P005, but with caution. Patient P005 has chronic kidney disease (CKD) with an eGFR of 45 mL/min/1.73m^2, which is a contraindication for metformin use due to the risk of lactic acidosis. However, since patient P005 is already on metformin, it is essential to closely monitor their kidney function and adjust the medication regimen as needed.\n\n**Medical Disclaimer:** This response is for informational purposes only and should not be considered as medical advice. Patient P005's specific situation should be evaluated by a qualified healthcare professional to determine the best course of action.",
+      "normalized_answer": "drug_safety: the combination of metformin and lisinopril may be safe for patient p005, but with caution | 73m^2, which is a contraindication for metformin use due to the risk of lactic acidosis | however, since patient p005 is already on metformin, it is essential to closely monitor their kidney function and adjust the medication regimen as needed",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 19.144593000411987
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P005",
       "question": "Is the combination of metformin and lisinopril safe for patient P005?",
       "question_type": "drug_safety",
@@ -857,14 +958,16 @@
         "interaction"
       ],
       "expected_answer": "Assess safety and potential interaction risk between metformin and lisinopril.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6290073394775391
+      "answer": "Based on the provided patient context, the combination of metformin and lisinopril is generally considered safe for patient P005.\n\nHowever, I would like to note that the patient's kidney function is worsening, with an eGFR of 40 on 2024-06-15. According to the American Diabetes Association (ADA) and the American College of Cardiology (ACC), patients with kidney disease should be monitored closely for signs of metformin toxicity, such as lactic acidosis, which can be exacerbated by renal impairment (1).\n\nIn this case, the patient's eGFR is 40, which is below the threshold for metformin use in patients with kidney disease. However, the patient is already on hemodialysis, which may help to reduce the risk of metformin toxicity.\n\nTherefore, while the combination of metformin and lisinopril may not be ideal for patient P005, it is not necessarily contraindicated. Close monitoring of the patient's kidney function and blood work is essential to ensure the safe use of these medications.\n\nReference:\n1. American Diabetes Association. (2022). Standards of Medical Care in Diabetes. Diabetes Care, 45(Supplement 1), S1-S224. doi: 10.2337/dc22-S001",
+      "normalized_answer": "drug_safety: based on the provided patient context, the combination of metformin and lisinopril is generally considered safe for patient p005 | according to the american diabetes association (ada) and the american college of cardiology (acc), patients with kidney disease should be monitored closely for signs of metformin toxicity, such as lactic acidosis, which can be exacerbated by renal impairment (1) | in this case, the patient's egfr is 40, which is below the threshold for metformin use in patients with kidney disease",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 6.896921873092651
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P006",
       "question": "What are the key diagnosed conditions for patient P006?",
       "question_type": "history",
@@ -874,14 +977,16 @@
         "hyperlipidemia"
       ],
       "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
-      "answer": "Conditions: Hypertension, Type 2 Diabetes, Hyperlipidemia, Chronic Kidney Disease, Coronary Artery Disease.",
+      "answer": "The key diagnosed conditions for patient P006 are Hypertension, Hyperlipidemia, and Type 2 Diabetes Mellitus. Medical Disclaimer: This information is based on the patient's medical record and should not be used for diagnostic purposes. A healthcare professional should be consulted for accurate diagnosis and treatment.",
+      "normalized_answer": "facts: the key diagnosed conditions for patient p006 are hypertension, hyperlipidemia, and type 2 diabetes mellitus",
       "factscore": 1.0,
-      "latency_sec": 0.0010371208190917969
+      "latency_sec": 2.449847459793091
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P006",
       "question": "What are the key diagnosed conditions for patient P006?",
       "question_type": "history",
@@ -891,14 +996,16 @@
         "hyperlipidemia"
       ],
       "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6637330055236816
+      "answer": "Based on the provided patient context, the key diagnosed conditions for patient P006 are:\n\n1. Type 2 Diabetes (initially diagnosed with elevated HbA1c of 8.5)\n2. Hypertension (elevated BP readings throughout the patient's history)\n3. Hyperlipidemia (elevated LDL levels throughout the patient's history)\n4. Chronic Kidney Disease (CKD) (declining eGFR values from 70 to 45, and further to 55)\n5. Coronary Artery Disease (CAD) (diagnosed on 2023-03-15 with symptoms of chest pain and shortness of breath)\n\nThese diagnoses are supported by the patient's lab results, medication adjustments, and clinical notes throughout their history.",
+      "normalized_answer": "facts: based on the provided patient context, the key diagnosed conditions for patient p006 are: 1 | type 2 diabetes (initially diagnosed with elevated hba1c of 8 | hypertension (elevated bp readings throughout the patient's history) 3",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 3.3884377479553223
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P006",
       "question": "Which medications is patient P006 taking currently or recently?",
       "question_type": "history",
@@ -908,14 +1015,16 @@
         "atorvastatin"
       ],
       "expected_answer": "Key medications include metformin, lisinopril, atorvastatin.",
-      "answer": "Medications: metformin, lisinopril, atorvastatin.",
-      "factscore": 1.0,
-      "latency_sec": 0.0010406970977783203
+      "answer": "The patient P006 is currently taking Lisinopril 20mg daily, Amlodipine 10mg daily, Simvastatin 40mg daily, and Metformin 500mg twice daily.\n\nMedical Disclaimer: This information is based on the patient's current or recent medications and may not reflect any changes to their medication regimen. It is essential to consult with the patient's healthcare provider for the most up-to-date and accurate information.",
+      "normalized_answer": "facts: the patient p006 is currently taking lisinopril 20mg daily, amlodipine 10mg daily, simvastatin 40mg daily, and metformin 500mg twice daily",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 7.069461822509766
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P006",
       "question": "Which medications is patient P006 taking currently or recently?",
       "question_type": "history",
@@ -925,14 +1034,16 @@
         "atorvastatin"
       ],
       "expected_answer": "Key medications include metformin, lisinopril, atorvastatin.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6483674049377441
+      "answer": "The patient is currently taking:\n\n* Metformin 1000mg daily (as of 2022-02-15, no change mentioned in subsequent notes)\n* Lisinopril 10mg daily (as of 2022-02-15, no change mentioned in subsequent notes)\n* Atorvastatin 20mg daily (as of 2022-02-15, no change mentioned in subsequent notes)\n\nSource: Initial lab results and medication initiation on 2022-02-15, and lack of change in medication notes on 2023-09-19.",
+      "normalized_answer": "facts: the patient is currently taking: * metformin 1000mg daily (as of 2022-02-15, no change mentioned in subsequent notes) * lisinopril 10mg daily (as of 2022-02-15, no change mentioned in subsequent notes) * atorvastatin 20mg daily (as of 2022-02-15, no change mentioned in subsequent notes) source: initial lab results and medication initiation on 2022-02-15, and lack of change in medication notes on 2023-09-19",
+      "factscore": 1.0,
+      "latency_sec": 1.3362953662872314
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P006",
       "question": "What symptoms have been documented for patient P006?",
       "question_type": "history",
@@ -942,14 +1053,16 @@
         "polydipsia"
       ],
       "expected_answer": "Documented symptoms include Fatigue, Frequent urination, Polydipsia.",
-      "answer": "Symptoms: Fatigue, Frequent urination, Polydipsia, Improvement in symptoms, Shortness of breath.",
-      "factscore": 1.0,
-      "latency_sec": 0.0010416507720947266
+      "answer": "** Patient P006 has reported symptoms of headache, fatigue, and difficulty sleeping. They have been diagnosed with hypertension and hyperlipidemia, and are currently taking lisinopril and atorvastatin. Their recent lab results show elevated blood pressure and LDL cholesterol. **Please consult a healthcare professional for proper diagnosis and treatment.**\n\nMedical Disclaimer: This response is for informational purposes only and should not be considered a substitute for professional medical advice. Always consult a qualified healthcare professional for accurate diagnosis and treatment.",
+      "normalized_answer": "facts: patient p006 has reported symptoms of headache, fatigue, and difficulty sleeping | they have been diagnosed with hypertension and hyperlipidemia, and are currently taking lisinopril and atorvastatin",
+      "factscore": 0.3333333333333333,
+      "latency_sec": 7.3713226318359375
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P006",
       "question": "What symptoms have been documented for patient P006?",
       "question_type": "history",
@@ -959,14 +1072,16 @@
         "polydipsia"
       ],
       "expected_answer": "Documented symptoms include Fatigue, Frequent urination, Polydipsia.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6707015037536621
+      "answer": "The documented symptoms for patient P006 are:\n\n* Fatigue (2022-02-15)\n* Polyuria and polydipsia (2022-02-15)\n* Chest pain (2023-03-15)\n* Shortness of breath (2023-03-15)\n\nSource: Patient notes dated 2022-02-15 and 2023-03-15.",
+      "normalized_answer": "facts: the documented symptoms for patient p006 are: * fatigue (2022-02-15) * polyuria and polydipsia (2022-02-15) * chest pain (2023-03-15) * shortness of breath (2023-03-15) source: patient notes dated 2022-02-15 and 2023-03-15",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 2.0044925212860107
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P006",
       "question": "Using all visits, what changed between the first and most recent visit for patient P006?",
       "question_type": "multi_visit_context",
@@ -976,14 +1091,16 @@
         "visit"
       ],
       "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Type 2 Diabetes.",
-      "answer": "Patient history reviewed with available structured records.",
-      "factscore": 0.0,
-      "latency_sec": 0.0010030269622802734
+      "answer": "** Between the first and most recent visit, patient P006's blood pressure increased from 140/90 mmHg to 180/100 mmHg, and LDL cholesterol increased from 120 mg/dL to 160 mg/dL. **Please consult a healthcare professional for interpretation and further evaluation.**\n\nDisclaimer: This response is based on the information provided and should not be used for diagnostic or treatment purposes. A healthcare professional should be consulted for accurate diagnosis and treatment.",
+      "normalized_answer": "visit_change: between the first and most recent visit, patient p006's blood pressure increased from 140/90 mmhg to 180/100 mmhg, and ldl cholesterol increased from 120 mg/dl to 160 mg/dl",
+      "factscore": 0.3333333333333333,
+      "latency_sec": 11.87175178527832
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P006",
       "question": "Using all visits, what changed between the first and most recent visit for patient P006?",
       "question_type": "multi_visit_context",
@@ -993,14 +1110,16 @@
         "visit"
       ],
       "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Type 2 Diabetes.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6402938365936279
+      "answer": "Between the first visit (2022-02-15) and the most recent visit (2023-09-19), the following changes occurred:\n\n* eGFR decreased from 70 to 45 (Source: 2022-09-20 and 2023-09-19 notes)\n* HbA1c increased from 8.5 to 7.5 (Source: 2022-02-15 and 2023-09-19 notes)\n* BP increased from 142/92 to 150/100 (Source: 2022-02-15 and 2023-09-19 notes)\n* Medications remained unchanged for Metformin, Lisinopril, and Atorvastatin (Source: all three visits)\n\nNote: The patient's symptoms improved, but lab results showed worsening kidney function and blood pressure.",
+      "normalized_answer": "visit_change: between the first visit (2022-02-15) and the most recent visit (2023-09-19), the following changes occurred: * egfr decreased from 70 to 45 (source: 2022-09-20 and 2023-09-19 notes) * hba1c increased from 8 | 5 (source: 2022-02-15 and 2023-09-19 notes) * bp increased from 142/92 to 150/100 (source: 2022-02-15 and 2023-09-19 notes) * medications remained unchanged for metformin, lisinopril, and atorvastatin (source: all three visits) note: the patient's symptoms improved, but lab results showed worsening kidney function and blood pressure",
+      "factscore": 0.3333333333333333,
+      "latency_sec": 3.657496452331543
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P006",
       "question": "Is the combination of metformin and lisinopril safe for patient P006?",
       "question_type": "drug_safety",
@@ -1010,14 +1129,16 @@
         "interaction"
       ],
       "expected_answer": "Assess safety and potential interaction risk between metformin and lisinopril.",
-      "answer": "Patient history reviewed with available structured records.",
-      "factscore": 0.0,
-      "latency_sec": 0.0019986629486083984
+      "answer": "**Final Answer:**\n\nBased on the patient's conditions (hypertension, type 2 diabetes, hyperlipidemia, chronic kidney disease, coronary artery disease) and current medications (metformin, lisinopril, atorvastatin), I would like to provide the following assessment:\n\nThe combination of metformin and lisinopril is generally considered safe for patients with type 2 diabetes and hypertension. However, given the patient's chronic kidney disease, it is essential to monitor their kidney function closely.\n\nMetformin is a safe medication for patients with kidney disease, but it can increase the risk of lactic acidosis, especially in patients with severe kidney impairment. Lisinopril, an ACE inhibitor, is also generally safe for patients with kidney disease, but it can cause hyperkalemia (elevated potassium levels) in some cases.\n\nGiven the patient's symptoms, such as fatigue, frequent urination, and polydipsia, it is possible that their kidney function is being affected by their medications. However, the improvement in symptoms suggests that the current treatment regimen is effective.\n\nTo ensure the safe combination of metformin and lisinopril, I recommend the following:\n\n1. **Regular kidney function monitoring**: Regularly check the patient's creatinine and eGFR levels to monitor their kidney function.\n2. **Potassium level monitoring**: Monitor the patient's potassium levels to prevent hyperkalemia.\n3. **Dose adjustment**: Adjust the patient's medication doses as needed to prevent kidney function decline and hyperkalemia.\n4. **Regular follow-up**: Schedule regular follow-up appointments to monitor the patient's symptoms and adjust their treatment plan as needed.\n\n**Medical Disclaimer:** This assessment is based on the available information and should not be considered a definitive medical opinion. A healthcare professional should always consult with a patient's medical history, current medications, and laboratory results before making any treatment decisions.\n\nPlease consult with a healthcare professional for a comprehensive evaluation and treatment plan.",
+      "normalized_answer": "drug_safety: final answer: based on the patient's conditions (hypertension, type 2 diabetes, hyperlipidemia, chronic kidney disease, coronary artery disease) and current medications (metformin, lisinopril, atorvastatin), i would like to provide the following assessment: the combination of metformin and lisinopril is generally considered safe for patients with type 2 diabetes and hypertension | however, given the patient's chronic kidney disease, it is essential to monitor their kidney function closely | metformin is a safe medication for patients with kidney disease, but it can increase the risk of lactic acidosis, especially in patients with severe kidney impairment",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 18.286771774291992
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P006",
       "question": "Is the combination of metformin and lisinopril safe for patient P006?",
       "question_type": "drug_safety",
@@ -1027,14 +1148,16 @@
         "interaction"
       ],
       "expected_answer": "Assess safety and potential interaction risk between metformin and lisinopril.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6612658500671387
+      "answer": "Based on the provided patient context, the combination of metformin and lisinopril is generally considered safe for patient P006.\n\nMetformin is a commonly used medication for type 2 diabetes, and lisinopril is an ACE inhibitor used to treat hypertension. The combination of these two medications is not contraindicated and is often used together in patients with diabetes and hypertension.\n\nHowever, it's worth noting that the patient's eGFR has decreased to 45, which is a concern for kidney function. The use of metformin in patients with eGFR < 45 is generally contraindicated due to the risk of lactic acidosis. However, in this case, the patient's eGFR was 70 on the initial visit, and the decrease to 45 occurred over time. The patient's kidney function should be closely monitored, and the use of metformin should be reassessed.\n\nSource: American Diabetes Association. (2022). Standards of Medical Care in Diabetes-2022. Diabetes Care, 45(Supplement 1), S1-S212.",
+      "normalized_answer": "drug_safety: based on the provided patient context, the combination of metformin and lisinopril is generally considered safe for patient p006 | metformin is a commonly used medication for type 2 diabetes, and lisinopril is an ace inhibitor used to treat hypertension | the use of metformin in patients with egfr < 45 is generally contraindicated due to the risk of lactic acidosis",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 5.7172229290008545
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P007",
       "question": "What are the key diagnosed conditions for patient P007?",
       "question_type": "history",
@@ -1044,14 +1167,16 @@
         "hyperlipidemia"
       ],
       "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
-      "answer": "Conditions: Hypertension, Type 2 Diabetes, Hyperlipidemia, Fluid Overload, Coronary Artery Disease.",
+      "answer": "The key diagnosed conditions for patient P007 are Hypertension, Hyperlipidemia, and Type 2 Diabetes Mellitus. **Medical Disclaimer: This information is based on the patient's medical record and may not be a comprehensive list of all diagnosed conditions. A thorough medical evaluation by a qualified healthcare professional is necessary to confirm the accuracy of this information.**",
+      "normalized_answer": "facts: the key diagnosed conditions for patient p007 are hypertension, hyperlipidemia, and type 2 diabetes mellitus",
       "factscore": 1.0,
-      "latency_sec": 0.0010378360748291016
+      "latency_sec": 4.890111923217773
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P007",
       "question": "What are the key diagnosed conditions for patient P007?",
       "question_type": "history",
@@ -1061,14 +1186,16 @@
         "hyperlipidemia"
       ],
       "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6526086330413818
+      "answer": "Based on the provided patient context, the key diagnosed conditions for patient P007 are:\n\n1. Type 2 Diabetes (10-year history)\n2. Hypertension (elevated blood pressure readings on multiple occasions)\n3. Hyperlipidemia (elevated LDL levels on multiple occasions)\n4. Possible Fluid Overload (diagnosed based on symptoms of shortness of breath, decreased urine output, and prescription of diuretics such as furosemide)\n5. Possible Coronary Artery Disease (CAD) (diagnosed based on prescription of metoprolol, a beta-blocker commonly used to treat CAD)\n\nNote: These conditions are inferred based on the patient's symptoms, laboratory results, and medication prescriptions.",
+      "normalized_answer": "facts: based on the provided patient context, the key diagnosed conditions for patient p007 are: 1 | type 2 diabetes (10-year history) 2 | hypertension (elevated blood pressure readings on multiple occasions) 3",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 2.646045446395874
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P007",
       "question": "Which medications is patient P007 taking currently or recently?",
       "question_type": "history",
@@ -1078,14 +1205,16 @@
         "atorvastatin"
       ],
       "expected_answer": "Key medications include metformin, lisinopril, atorvastatin.",
-      "answer": "Medications: metformin, lisinopril, atorvastatin, amlodipine, simvastatin.",
-      "factscore": 1.0,
-      "latency_sec": 0.0019965171813964844
+      "answer": "Patient P007 is currently taking Lisinopril 20mg daily, Amlodipine 5mg daily, Simvastatin 40mg daily, and Metformin 500mg twice daily. There have been no recent changes to their medications.\n\nDisclaimer: This information is based on the patient's current and recent medical record and may not reflect any changes or updates that may have occurred since the last visit.",
+      "normalized_answer": "facts: patient p007 is currently taking lisinopril 20mg daily, amlodipine 5mg daily, simvastatin 40mg daily, and metformin 500mg twice daily | there have been no recent changes to their medications",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 4.001357078552246
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P007",
       "question": "Which medications is patient P007 taking currently or recently?",
       "question_type": "history",
@@ -1095,14 +1224,16 @@
         "atorvastatin"
       ],
       "expected_answer": "Key medications include metformin, lisinopril, atorvastatin.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "answer": "Based on the provided patient context, the patient is currently taking the following medications:\n\n* Losartan 50mg QD\n* Aspirin 81mg QD\n* Enalapril 10mg QD\n* Metoprolol 50mg BID\n\nThese medications were prescribed on 2023-11-15.",
+      "normalized_answer": "facts: based on the provided patient context, the patient is currently taking the following medications: * losartan 50mg qd * aspirin 81mg qd * enalapril 10mg qd * metoprolol 50mg bid these medications were prescribed on 2023-11-15",
       "factscore": 0.0,
-      "latency_sec": 0.7880330085754395
+      "latency_sec": 1.1061179637908936
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P007",
       "question": "What symptoms have been documented for patient P007?",
       "question_type": "history",
@@ -1112,14 +1243,16 @@
         "weight loss"
       ],
       "expected_answer": "Documented symptoms include Fatigue, Polydipsia, Weight loss.",
-      "answer": "Symptoms: Fatigue, Polydipsia, Weight loss, Decreased urine output, Shortness of breath.",
-      "factscore": 1.0,
-      "latency_sec": 0.0
+      "answer": "** Patient P007 has documented symptoms of fatigue, muscle weakness, and shortness of breath.\n\n**Medical Disclaimer:** This information is based on the patient's reported symptoms and medical history. A thorough medical evaluation by a healthcare professional is necessary to determine the underlying cause of these symptoms and develop an appropriate treatment plan.",
+      "normalized_answer": "facts: patient p007 has documented symptoms of fatigue, muscle weakness, and shortness of breath",
+      "factscore": 0.3333333333333333,
+      "latency_sec": 6.482740879058838
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P007",
       "question": "What symptoms have been documented for patient P007?",
       "question_type": "history",
@@ -1129,14 +1262,16 @@
         "weight loss"
       ],
       "expected_answer": "Documented symptoms include Fatigue, Polydipsia, Weight loss.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6693036556243896
+      "answer": "Based on the provided patient context, the symptoms documented for patient P007 are:\n\n* Fatigue (2022-06-15, 2023-02-20, 2023-11-15)\n* Weight loss (2022-06-15, 2023-11-15)\n* Shortness of breath (2023-11-15)\n* Increased thirst (2022-06-15)\n* Decreased urine output (2023-02-20)",
+      "normalized_answer": "facts: based on the provided patient context, the symptoms documented for patient p007 are: * fatigue (2022-06-15, 2023-02-20, 2023-11-15) * weight loss (2022-06-15, 2023-11-15) * shortness of breath (2023-11-15) * increased thirst (2022-06-15) * decreased urine output (2023-02-20)",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 2.818613052368164
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P007",
       "question": "Using all visits, what changed between the first and most recent visit for patient P007?",
       "question_type": "multi_visit_context",
@@ -1146,14 +1281,16 @@
         "visit"
       ],
       "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Coronary Artery Disease.",
-      "answer": "Patient history reviewed with available structured records.",
-      "factscore": 0.0,
-      "latency_sec": 0.0010154247283935547
+      "answer": "** Based on the information gathered, the changes between the first and most recent visit for patient P007 include:\n\n* Resolution of hyperlipidemia\n* Replacement of atorvastatin with rosuvastatin\n* Improved fatigue and no shortness of breath\n* Improved blood pressure (from 160/90 mmHg to 140/80 mmHg)\n* Improved LDL cholesterol (from 120 mg/dL to 80 mg/dL)\n\n**Medical Disclaimer:** This answer is based on the information gathered from the patient's visit summaries and lab results. It is essential to consult with a healthcare professional for a comprehensive understanding of the patient's condition and to determine the best course of treatment.",
+      "normalized_answer": "visit_change: based on the information gathered, the changes between the first and most recent visit for patient p007 include: * resolution of hyperlipidemia * replacement of atorvastatin with rosuvastatin * improved fatigue and no shortness of breath * improved blood pressure (from 160/90 mmhg to 140/80 mmhg) * improved ldl cholesterol (from 120 mg/dl to 80 mg/dl) medical disclaimer: this answer is based on the information gathered from the patient's visit summaries and lab results | it is essential to consult with a healthcare professional for a comprehensive understanding of the patient's condition and to determine the best course of treatment",
+      "factscore": 0.3333333333333333,
+      "latency_sec": 9.851008415222168
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P007",
       "question": "Using all visits, what changed between the first and most recent visit for patient P007?",
       "question_type": "multi_visit_context",
@@ -1163,14 +1300,16 @@
         "visit"
       ],
       "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Coronary Artery Disease.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6948652267456055
+      "answer": "Between the first visit (2022-06-15) and the most recent visit (2023-11-15), the following changes occurred:\n\n1. Blood pressure increased from 140/90 mmHg to 160/100 mmHg.\n2. HbA1c increased from 7.2% to 9.0%.\n3. LDL increased from 130 mg/dL to 155 mg/dL.\n4. The patient was prescribed losartan 50mg QD (added for hypertension), enalapril 10mg QD (added for possible fluid overload), and metoprolol 50mg BID (added for possible CAD).\n5. The patient was switched from lisinopril 10mg QD to enalapril 10mg QD for possible fluid overload.\n6. The patient was switched from amlodipine 5mg QD to losartan 50mg QD for hypertension.\n7. The patient was prescribed aspirin 81mg QD (added for cardiovascular protection).\n\nThese changes suggest worsening hypertension, diabetes, and hyperlipidemia, as well as the development of possible CAD and fluid overload.",
+      "normalized_answer": "visit_change: between the first visit (2022-06-15) and the most recent visit (2023-11-15), the following changes occurred: 1 | the patient was prescribed losartan 50mg qd (added for hypertension), enalapril 10mg qd (added for possible fluid overload), and metoprolol 50mg bid (added for possible cad) | the patient was switched from amlodipine 5mg qd to losartan 50mg qd for hypertension",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 1.3885729312896729
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P007",
       "question": "Is the combination of metformin and lisinopril safe for patient P007?",
       "question_type": "drug_safety",
@@ -1180,14 +1319,16 @@
         "interaction"
       ],
       "expected_answer": "Assess safety and potential interaction risk between metformin and lisinopril.",
-      "answer": "Patient history reviewed with available structured records.",
-      "factscore": 0.0,
-      "latency_sec": 0.0011115074157714844
+      "answer": "** The combination of metformin and lisinopril may not be safe for patient P007 due to the potential for lactic acidosis and renal impairment. It is essential to closely monitor patient P007's renal function and serum creatinine levels while taking this medication combination. **Please consult a healthcare professional for further evaluation and guidance.**",
+      "normalized_answer": "drug_safety: the combination of metformin and lisinopril may not be safe for patient p007 due to the potential for lactic acidosis and renal impairment | it is essential to closely monitor patient p007's renal function and serum creatinine levels while taking this medication combination",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 12.115466117858887
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P007",
       "question": "Is the combination of metformin and lisinopril safe for patient P007?",
       "question_type": "drug_safety",
@@ -1197,14 +1338,16 @@
         "interaction"
       ],
       "expected_answer": "Assess safety and potential interaction risk between metformin and lisinopril.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6454799175262451
+      "answer": "Based on the provided patient context, the combination of metformin and lisinopril is generally considered safe for patient P007.\n\nAccording to the FDA, there is no contraindication or significant interaction between metformin and lisinopril. However, it's essential to monitor the patient's renal function, as both medications can affect kidney function.\n\nIn 2016, the FDA issued a warning about the risk of lactic acidosis associated with metformin use in patients with renal impairment. Lisinopril, an ACE inhibitor, can also cause renal impairment, particularly in patients with pre-existing kidney disease.\n\nGiven the patient's history of Type 2 Diabetes, hypertension, and hyperlipidemia, it's crucial to closely monitor the patient's renal function, serum creatinine levels, and urine output while on this combination therapy.\n\nSource:\n- FDA. (2016). Metformin Hydrochloride Tablets. [Label]. Retrieved from https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/020638s046lbl.pdf\n- FDA. (2015). Lisinopril Tablets. [Label]. Retrieved from https://www.accessdata.fda.gov/drugsatfda_docs/label/2015/020633s046lbl.pdf",
+      "normalized_answer": "drug_safety: based on the provided patient context, the combination of metformin and lisinopril is generally considered safe for patient p007 | according to the fda, there is no contraindication or significant interaction between metformin and lisinopril | however, it's essential to monitor the patient's renal function, as both medications can affect kidney function",
+      "factscore": 1.0,
+      "latency_sec": 4.907953977584839
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P008",
       "question": "What are the key diagnosed conditions for patient P008?",
       "question_type": "history",
@@ -1214,14 +1357,16 @@
         "hyperlipidemia"
       ],
       "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
-      "answer": "Conditions: Hypertension, Type 2 Diabetes, Hyperlipidemia, Chronic Kidney Disease, Heart Failure.",
-      "factscore": 1.0,
-      "latency_sec": 0.0010378360748291016
+      "answer": "The key diagnosed conditions for patient P008 are hypertension, hyperlipidemia, coronary artery disease, and possible cardiac damage indicated by elevated troponin levels. **Please note that this information is based on the provided actions and observations, and a thorough medical evaluation by a qualified healthcare professional is necessary for an accurate diagnosis and treatment plan.**",
+      "normalized_answer": "facts: the key diagnosed conditions for patient p008 are hypertension, hyperlipidemia, coronary artery disease, and possible cardiac damage indicated by elevated troponin levels",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 10.150304079055786
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P008",
       "question": "What are the key diagnosed conditions for patient P008?",
       "question_type": "history",
@@ -1231,14 +1376,16 @@
         "hyperlipidemia"
       ],
       "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6837074756622314
+      "answer": "Based on the provided patient context, the key diagnosed conditions for patient P008 are:\n\n1. **Chronic Type 2 Diabetes** (HbA1c 7.8, 8.2, 8.2)\n2. **Hypertension** (BP 140/90, 158/102, 148/92)\n3. **Hyperlipidemia** (LDL 150, 165, 170)\n4. **Coronary Artery Disease (CAD)** (progression of CAD requiring hospitalization for heart failure)\n5. **Heart Failure** (requiring hospitalization)\n\nNote: These conditions are based on the provided patient notes and lab results.",
+      "normalized_answer": "facts: based on the provided patient context, the key diagnosed conditions for patient p008 are: 1 | chronic type 2 diabetes (hba1c 7 | hypertension (bp 140/90, 158/102, 148/92) 3",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 3.279618501663208
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P008",
       "question": "Which medications is patient P008 taking currently or recently?",
       "question_type": "history",
@@ -1248,14 +1395,16 @@
         "atorvastatin od"
       ],
       "expected_answer": "Key medications include metformin, lisinopril od, atorvastatin od.",
-      "answer": "Medications: metformin, lisinopril od, atorvastatin od, furosemide od, losartan od.",
-      "factscore": 1.0,
-      "latency_sec": 0.0010018348693847656
+      "answer": "Patient P008 is currently taking Lisinopril 20mg daily, Amlodipine 10mg daily, Simvastatin 40mg daily, Metformin 500mg twice daily, and Aspirin 81mg daily. There have been no recent changes to their medications.\n\nDisclaimer: This information is based on the patient's current and recent medication list, which may not reflect any changes made after the last visit or update. It is essential to verify the patient's medication list with the patient or their caregiver to ensure accuracy.",
+      "normalized_answer": "facts: patient p008 is currently taking lisinopril 20mg daily, amlodipine 10mg daily, simvastatin 40mg daily, metformin 500mg twice daily, and aspirin 81mg daily | there have been no recent changes to their medications | disclaimer: this information is based on the patient's current and recent medication list, which may not reflect any changes made after the last visit or update",
+      "factscore": 0.3333333333333333,
+      "latency_sec": 5.058619499206543
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P008",
       "question": "Which medications is patient P008 taking currently or recently?",
       "question_type": "history",
@@ -1265,14 +1414,16 @@
         "atorvastatin od"
       ],
       "expected_answer": "Key medications include metformin, lisinopril od, atorvastatin od.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.7615633010864258
+      "answer": "Based on the patient's medical history and progression, it is likely that patient P008 is taking the following medications:\n\n* Metformin (for Type 2 Diabetes)\n* Amlodipine or another calcium channel blocker (for Hypertension)\n* Atorvastatin or another statin (for Hyperlipidemia)\n* Possibly an ACE inhibitor or ARB (for CKD progression)\n\nNote: The exact medications are not specified in the patient context, but these are common treatments for the conditions mentioned.",
+      "normalized_answer": "facts: based on the patient's medical history and progression, it is likely that patient p008 is taking the following medications: * metformin (for type 2 diabetes) * amlodipine or another calcium channel blocker (for hypertension) * atorvastatin or another statin (for hyperlipidemia) * possibly an ace inhibitor or arb (for ckd progression) note: the exact medications are not specified in the patient context, but these are common treatments for the conditions mentioned",
+      "factscore": 0.3333333333333333,
+      "latency_sec": 1.177314043045044
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P008",
       "question": "What symptoms have been documented for patient P008?",
       "question_type": "history",
@@ -1282,14 +1433,16 @@
         "nocturia"
       ],
       "expected_answer": "Documented symptoms include Fatigue, Frequent urination, Nocturia.",
-      "answer": "Symptoms: Fatigue, Frequent urination, Nocturia, Increased urination, Edema.",
-      "factscore": 1.0,
-      "latency_sec": 0.0010371208190917969
+      "answer": "** Patient P008 has documented symptoms of fatigue, muscle weakness, and shortness of breath, which may be related to muscle damage indicated by elevated creatine kinase (CK) levels. These symptoms may be a side effect of the patient's medications, such as atorvastatin, or may be related to an underlying condition. Further evaluation and monitoring are necessary to determine the cause of these symptoms. **Medical Disclaimer:** This answer is based on the information gathered from the patient's medical history and lab values. A thorough evaluation by a healthcare professional is necessary to determine the underlying cause of the patient's symptoms and to develop an appropriate treatment plan.",
+      "normalized_answer": "facts: patient p008 has documented symptoms of fatigue, muscle weakness, and shortness of breath, which may be related to muscle damage indicated by elevated creatine kinase (ck) levels | these symptoms may be a side effect of the patient's medications, such as atorvastatin, or may be related to an underlying condition | further evaluation and monitoring are necessary to determine the cause of these symptoms",
+      "factscore": 0.3333333333333333,
+      "latency_sec": 10.695697546005249
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P008",
       "question": "What symptoms have been documented for patient P008?",
       "question_type": "history",
@@ -1299,14 +1452,16 @@
         "nocturia"
       ],
       "expected_answer": "Documented symptoms include Fatigue, Frequent urination, Nocturia.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6766035556793213
+      "answer": "According to the patient context, the following symptoms have been documented for patient P008:\n\n1. Fatigue (Source: Date: 2022-09-01)\n2. Polyuria (Source: Date: 2022-09-01)\n3. Nocturia (Source: Date: 2023-03-01)\n4. Increased urination during the day (Source: Date: 2023-03-01)\n5. Worsening edema (Source: Date: 2024-03-01)\n6. Shortness of breath (Source: Date: 2024-03-01)",
+      "normalized_answer": "facts: according to the patient context, the following symptoms have been documented for patient p008: 1 | fatigue (source: date: 2022-09-01) 2 | nocturia (source: date: 2023-03-01) 4",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 2.818704843521118
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P008",
       "question": "Using all visits, what changed between the first and most recent visit for patient P008?",
       "question_type": "multi_visit_context",
@@ -1316,14 +1471,16 @@
         "visit"
       ],
       "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Heart Failure.",
-      "answer": "Patient history reviewed with available structured records.",
-      "factscore": 0.0,
-      "latency_sec": 0.0010383129119873047
+      "answer": "** Based on the patient's past visit summaries, the changes between the first and most recent visit for patient P008 include:\n\n* The patient's hypertension was managed with medication changes (from losartan to valsartan).\n* The patient's symptoms of fatigue and shortness of breath improved with the addition of oxygen therapy.\n* The patient's lab results showed an improvement in hemoglobin levels (from 10.5 g/dL to 12.5 g/dL) and a decrease in creatinine levels (from 1.2 mg/dL to 0.8 mg/dL).\n\n**Medical Disclaimer:** This answer is based on the information provided by the patient's past visit summaries and should not be considered a definitive diagnosis or treatment plan. A healthcare professional should be consulted for personalized advice and care.",
+      "normalized_answer": "visit_change: based on the patient's past visit summaries, the changes between the first and most recent visit for patient p008 include: * the patient's hypertension was managed with medication changes (from losartan to valsartan)",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 8.983523845672607
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P008",
       "question": "Using all visits, what changed between the first and most recent visit for patient P008?",
       "question_type": "multi_visit_context",
@@ -1333,14 +1490,16 @@
         "visit"
       ],
       "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Heart Failure.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6461484432220459
+      "answer": "Between the first visit (2022-09-01) and the most recent visit (2024-09-01), the following changes were observed for patient P008:\n\n* HbA1c increased from 7.8 to 8.2 (Source: 2022-09-01 and 2024-09-01 notes)\n* BP increased from 140/90 to 158/102 (Source: 2022-09-01 and 2024-09-01 notes)\n* LDL increased from 150 to 165 (Source: 2022-09-01 and 2024-09-01 notes)\n* CAD progressed, requiring hospitalization for heart failure (Source: 2024-09-01 note)\n* New symptoms of nocturia and increased urination during the day were reported (Source: 2023-03-01 note)\n\nThese changes indicate a worsening of patient P008's condition over time.",
+      "normalized_answer": "visit_change: between the first visit (2022-09-01) and the most recent visit (2024-09-01), the following changes were observed for patient p008: * hba1c increased from 7 | 2 (source: 2022-09-01 and 2024-09-01 notes) * bp increased from 140/90 to 158/102 (source: 2022-09-01 and 2024-09-01 notes) * ldl increased from 150 to 165 (source: 2022-09-01 and 2024-09-01 notes) * cad progressed, requiring hospitalization for heart failure (source: 2024-09-01 note) * new symptoms of nocturia and increased urination during the day were reported (source: 2023-03-01 note) these changes indicate a worsening of patient p008's condition over time",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 2.1821043491363525
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P008",
       "question": "Is the combination of metformin and lisinopril od safe for patient P008?",
       "question_type": "drug_safety",
@@ -1350,14 +1509,16 @@
         "interaction"
       ],
       "expected_answer": "Assess safety and potential interaction risk between metformin and lisinopril od.",
-      "answer": "Patient history reviewed with available structured records.",
-      "factscore": 0.0,
-      "latency_sec": 0.0010211467742919922
+      "answer": "The combination of metformin and lisinopril may be safe for patient P008, but it requires careful monitoring of kidney function and potential side effects. Metformin can increase the risk of lactic acidosis in patients with chronic kidney disease, and lisinopril can exacerbate kidney function decline. However, in this patient's case, the benefits of metformin for glycemic control may outweigh the risks. It is essential to closely monitor the patient's kidney function, serum creatinine, and eGFR levels regularly. Additionally, the patient's symptoms of fatigue, shortness of breath, and swelling in the legs should be closely monitored for potential signs of worsening heart failure or kidney function. **Please consult with a healthcare professional for personalized advice.**",
+      "normalized_answer": "drug_safety: the combination of metformin and lisinopril may be safe for patient p008, but it requires careful monitoring of kidney function and potential side effects | metformin can increase the risk of lactic acidosis in patients with chronic kidney disease, and lisinopril can exacerbate kidney function decline | however, in this patient's case, the benefits of metformin for glycemic control may outweigh the risks",
+      "factscore": 0.3333333333333333,
+      "latency_sec": 10.584933280944824
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P008",
       "question": "Is the combination of metformin and lisinopril od safe for patient P008?",
       "question_type": "drug_safety",
@@ -1367,14 +1528,16 @@
         "interaction"
       ],
       "expected_answer": "Assess safety and potential interaction risk between metformin and lisinopril od.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6363658905029297
+      "answer": "Based on the provided patient context, the combination of metformin and lisinopril od may not be safe for patient P008.\n\nMetformin is contraindicated in patients with severe renal impairment (GFR < 30 mL/min/1.73 m^2) due to the risk of lactic acidosis. Although patient P008's CKD has stabilized, his kidney function is not explicitly mentioned. However, considering his worsening edema and shortness of breath, it is likely that his kidney function has deteriorated.\n\nAdditionally, lisinopril is an ACE inhibitor, which can cause hyperkalemia, especially in patients with renal impairment. This combination may increase the risk of hyperkalemia and lactic acidosis in patient P008.\n\nA more detailed assessment of patient P008's kidney function and electrolyte levels is necessary before making any medication adjustments.",
+      "normalized_answer": "drug_safety: based on the provided patient context, the combination of metformin and lisinopril od may not be safe for patient p008 | metformin is contraindicated in patients with severe renal impairment (gfr < 30 ml/min/1 | 73 m^2) due to the risk of lactic acidosis",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 0.719395637512207
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P009",
       "question": "What are the key diagnosed conditions for patient P009?",
       "question_type": "history",
@@ -1384,14 +1547,16 @@
         "hyperlipidemia"
       ],
       "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
-      "answer": "Conditions: Hypertension, Type 2 Diabetes, Hyperlipidemia, Chronic Kidney Disease, Coronary Artery Disease.",
+      "answer": "The key diagnosed conditions for patient P009 are hypertension, hyperlipidemia, and type 2 diabetes mellitus.\n\nMedical Disclaimer: This information is based on the patient's medical history and may not reflect the patient's current medical status. A healthcare professional should be consulted for accurate and up-to-date information.",
+      "normalized_answer": "facts: the key diagnosed conditions for patient p009 are hypertension, hyperlipidemia, and type 2 diabetes mellitus",
       "factscore": 1.0,
-      "latency_sec": 0.002031087875366211
+      "latency_sec": 4.862139940261841
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P009",
       "question": "What are the key diagnosed conditions for patient P009?",
       "question_type": "history",
@@ -1401,14 +1566,16 @@
         "hyperlipidemia"
       ],
       "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6714363098144531
+      "answer": "Based on the provided patient context, the key diagnosed conditions for patient P009 are:\n\n1. Chronic Kidney Disease (CKD) (Source: Note dated 2023-10-15)\n2. Type 2 Diabetes (Source: Note dated 2022-06-15)\n3. Hypertension (Source: Note dated 2022-06-15)\n4. Hyperlipidemia (Source: Note dated 2022-06-15)\n\nNote: Coronary Artery Disease is also mentioned in the 2023-10-15 note, but it is not explicitly listed as a diagnosed condition in the earlier notes.",
+      "normalized_answer": "facts: based on the provided patient context, the key diagnosed conditions for patient p009 are: 1 | type 2 diabetes (source: note dated 2022-06-15) 3 | hypertension (source: note dated 2022-06-15) 4",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 5.233572006225586
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P009",
       "question": "Which medications is patient P009 taking currently or recently?",
       "question_type": "history",
@@ -1418,14 +1585,16 @@
         "atorvastatin"
       ],
       "expected_answer": "Key medications include metformin, lisinopril, atorvastatin.",
-      "answer": "Medications: metformin, lisinopril, atorvastatin, furosemide, aspirin.",
-      "factscore": 1.0,
-      "latency_sec": 0.0005090236663818359
+      "answer": "The patient P009 is currently taking Lisinopril 20mg daily, Amlodipine 10mg daily, Simvastatin 40mg daily, and Metformin 500mg twice daily. There have been no recent changes to their medication list.\n\nDisclaimer: This information is based on the patient's current and recent medication list, which may not reflect any changes made after the last update. It is essential to verify the patient's medication list with the healthcare provider or pharmacist for accuracy.",
+      "normalized_answer": "facts: the patient p009 is currently taking lisinopril 20mg daily, amlodipine 10mg daily, simvastatin 40mg daily, and metformin 500mg twice daily | there have been no recent changes to their medication list | disclaimer: this information is based on the patient's current and recent medication list, which may not reflect any changes made after the last update",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 5.408344984054565
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P009",
       "question": "Which medications is patient P009 taking currently or recently?",
       "question_type": "history",
@@ -1435,14 +1604,16 @@
         "atorvastatin"
       ],
       "expected_answer": "Key medications include metformin, lisinopril, atorvastatin.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6371486186981201
+      "answer": "Based on the provided patient context, the patient P009 is currently taking:\n\n* Furosemide 40mg BID (as of 2023-10-15)\n* Aspirin 81mg OD (as of 2023-10-15)\n* Metformin 500mg BID (as of 2022-06-15)\n* Lisinopril 10mg OD (as of 2022-06-15)\n* Atorvastatin 20mg OD (as of 2023-02-20)\n\nSource: Patient notes dated 2023-10-15, 2022-06-15, and 2023-02-20.",
+      "normalized_answer": "facts: based on the provided patient context, the patient p009 is currently taking: * furosemide 40mg bid (as of 2023-10-15) * aspirin 81mg od (as of 2023-10-15) * metformin 500mg bid (as of 2022-06-15) * lisinopril 10mg od (as of 2022-06-15) * atorvastatin 20mg od (as of 2023-02-20) source: patient notes dated 2023-10-15, 2022-06-15, and 2023-02-20",
+      "factscore": 1.0,
+      "latency_sec": 4.182783842086792
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P009",
       "question": "What symptoms have been documented for patient P009?",
       "question_type": "history",
@@ -1452,14 +1623,16 @@
         "polydipsia"
       ],
       "expected_answer": "Documented symptoms include Fatigue, Frequent urination, Polydipsia.",
-      "answer": "Symptoms: Fatigue, Frequent urination, Polydipsia, Shortness of breath, Edema.",
-      "factscore": 1.0,
-      "latency_sec": 0.0
+      "answer": "The patient P009 has been documented to have headaches and fatigue as symptoms.\n\nDisclaimer: This information is based on the available data and may not be comprehensive or up-to-date. A thorough medical evaluation by a healthcare professional is necessary for an accurate diagnosis and treatment plan.",
+      "normalized_answer": "facts: the patient p009 has been documented to have headaches and fatigue as symptoms",
+      "factscore": 0.3333333333333333,
+      "latency_sec": 0.7723367214202881
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P009",
       "question": "What symptoms have been documented for patient P009?",
       "question_type": "history",
@@ -1469,14 +1642,16 @@
         "polydipsia"
       ],
       "expected_answer": "Documented symptoms include Fatigue, Frequent urination, Polydipsia.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6662182807922363
+      "answer": "The documented symptoms for patient P009 are:\n\n* Fatigue (2023-10-15)\n* Edema (2023-02-20, 2023-10-15)\n* Shortness of breath (2023-10-15, 2023-02-20)\n\nSource: Patient notes from 2023-10-15, 2023-02-20, and 2022-06-15.",
+      "normalized_answer": "facts: the documented symptoms for patient p009 are: * fatigue (2023-10-15) * edema (2023-02-20, 2023-10-15) * shortness of breath (2023-10-15, 2023-02-20) source: patient notes from 2023-10-15, 2023-02-20, and 2022-06-15",
+      "factscore": 0.3333333333333333,
+      "latency_sec": 1.7737393379211426
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P009",
       "question": "Using all visits, what changed between the first and most recent visit for patient P009?",
       "question_type": "multi_visit_context",
@@ -1486,14 +1661,16 @@
         "visit"
       ],
       "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Chronic Kidney Disease.",
-      "answer": "Patient history reviewed with available structured records.",
-      "factscore": 0.0,
-      "latency_sec": 0.0010170936584472656
+      "answer": "** Between the first and most recent visit, patient P009's blood pressure decreased, creatinine levels increased, and hemoglobin levels decreased. The patient's symptoms of shortness of breath and fatigue persisted. These changes may indicate a potential decline in kidney function and anemia. **Medical Disclaimer: This analysis is based on the provided information and should not be used for diagnostic purposes. A healthcare professional should be consulted for a comprehensive evaluation and diagnosis.**",
+      "normalized_answer": "visit_change: between the first and most recent visit, patient p009's blood pressure decreased, creatinine levels increased, and hemoglobin levels decreased | these changes may indicate a potential decline in kidney function and anemia",
+      "factscore": 0.3333333333333333,
+      "latency_sec": 1.4486751556396484
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P009",
       "question": "Using all visits, what changed between the first and most recent visit for patient P009?",
       "question_type": "multi_visit_context",
@@ -1503,14 +1680,16 @@
         "visit"
       ],
       "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Chronic Kidney Disease.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6880207061767578
+      "answer": "Between the first visit (2022-06-15) and the most recent visit (2023-10-15), the following changes were observed:\n\n* HbA1c increased from 7.2% to 8.2% (Source: 2022-06-15 and 2023-10-15 notes)\n* BP increased from 140/90 to 160/100 (Source: 2022-06-15 and 2023-10-15 notes)\n* LDL increased from 130 to 155 (Source: 2022-06-15 and 2023-10-15 notes)\n* Medications were added: Atorvastatin, Furosemide, and Aspirin (Source: 2023-02-20 and 2023-10-15 notes)\n* Diagnoses were updated to include Chronic Kidney Disease (Source: 2023-10-15 note)\n* Symptoms worsened, including increased fatigue, edema, and shortness of breath (Source: 2023-10-15 note)",
+      "normalized_answer": "visit_change: between the first visit (2022-06-15) and the most recent visit (2023-10-15), the following changes were observed: * hba1c increased from 7 | 2% (source: 2022-06-15 and 2023-10-15 notes) * bp increased from 140/90 to 160/100 (source: 2022-06-15 and 2023-10-15 notes) * ldl increased from 130 to 155 (source: 2022-06-15 and 2023-10-15 notes) * medications were added: atorvastatin, furosemide, and aspirin (source: 2023-02-20 and 2023-10-15 notes) * diagnoses were updated to include chronic kidney disease (source: 2023-10-15 note) * symptoms worsened, including increased fatigue, edema, and shortness of breath (source: 2023-10-15 note)",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 12.491787672042847
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P009",
       "question": "Is the combination of metformin and lisinopril safe for patient P009?",
       "question_type": "drug_safety",
@@ -1520,14 +1699,16 @@
         "interaction"
       ],
       "expected_answer": "Assess safety and potential interaction risk between metformin and lisinopril.",
-      "answer": "Patient history reviewed with available structured records.",
-      "factscore": 0.0,
-      "latency_sec": 0.001100301742553711
+      "answer": "** The combination of metformin and lisinopril may not be safe for patient P009 due to the potential risk of lactic acidosis and renal impairment. A healthcare professional should be consulted to reassess the patient's medication regimen and adjust as necessary. **Please consult a healthcare professional for a personalized evaluation.**",
+      "normalized_answer": "drug_safety: the combination of metformin and lisinopril may not be safe for patient p009 due to the potential risk of lactic acidosis and renal impairment",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 7.983263969421387
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P009",
       "question": "Is the combination of metformin and lisinopril safe for patient P009?",
       "question_type": "drug_safety",
@@ -1537,14 +1718,16 @@
         "interaction"
       ],
       "expected_answer": "Assess safety and potential interaction risk between metformin and lisinopril.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6765542030334473
+      "answer": "Based on the patient's current medication regimen and diagnoses, the combination of metformin and lisinopril is generally considered safe.\n\nHowever, it is worth noting that the patient has developed worsening kidney function (CKD) and is now on Furosemide, a loop diuretic, which may be a concern for metformin use. According to the FDA, metformin is contraindicated in patients with severe renal impairment (eGFR < 30 mL/min/1.73 m^2) due to the risk of lactic acidosis (FDA, 2020). However, the patient's eGFR is not explicitly stated, but it is likely decreased given the worsening kidney function.\n\nIn the absence of specific eGFR values, it is recommended to use caution when prescribing metformin in patients with kidney disease. A more conservative approach may be to consider alternative antidiabetic agents that do not require dose adjustment in renal impairment, such as sulfonylureas or GLP-1 receptor agonists.\n\nReference:\nFDA. (2020). Metformin Hydrochloride Tablets. Retrieved from <https://www.accessdata.fda.gov/drugsatfda_docs/label/2020/020638s040lbl.pdf>",
+      "normalized_answer": "drug_safety: based on the patient's current medication regimen and diagnoses, the combination of metformin and lisinopril is generally considered safe | however, it is worth noting that the patient has developed worsening kidney function (ckd) and is now on furosemide, a loop diuretic, which may be a concern for metformin use | according to the fda, metformin is contraindicated in patients with severe renal impairment (egfr < 30 ml/min/1",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 5.0174994468688965
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P010",
       "question": "What are the key diagnosed conditions for patient P010?",
       "question_type": "history",
@@ -1554,14 +1737,16 @@
         "hyperlipidemia"
       ],
       "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
-      "answer": "Conditions: Hypertension, Type 2 Diabetes, Hyperlipidemia.",
-      "factscore": 1.0,
-      "latency_sec": 0.0010020732879638672
+      "answer": "The key diagnosed conditions for patient P010 are Hypertension and Hyperlipidemia. **Please note that this information is based on the current data available and may not reflect the patient's complete medical history. A thorough medical evaluation by a healthcare professional is necessary for an accurate diagnosis and treatment plan.**",
+      "normalized_answer": "facts: the key diagnosed conditions for patient p010 are hypertension and hyperlipidemia",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 3.4481022357940674
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P010",
       "question": "What are the key diagnosed conditions for patient P010?",
       "question_type": "history",
@@ -1571,14 +1756,16 @@
         "hyperlipidemia"
       ],
       "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6529314517974854
+      "answer": "Based on the patient's medical history and lab values, the key diagnosed conditions for patient P010 are:\n\n1. **Type 2 Diabetes Mellitus** (HbA1c 7.2, 7.5, and 7.8)\n2. **Hypertension** (BP 140/90, 145/95, and 150/100)\n3. **Chronic Kidney Disease (CKD)** (eGFR 65 and 55)\n4. **Hyperlipidemia** (LDL 130 and 140, 145)\n\nThese conditions are consistent with the patient's symptoms and lab values over the past year.",
+      "normalized_answer": "facts: based on the patient's medical history and lab values, the key diagnosed conditions for patient p010 are: 1 | type 2 diabetes mellitus (hba1c 7 | hypertension (bp 140/90, 145/95, and 150/100) 3",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 3.23502516746521
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P010",
       "question": "Which medications is patient P010 taking currently or recently?",
       "question_type": "history",
@@ -1588,14 +1775,16 @@
         "lisinopril"
       ],
       "expected_answer": "Key medications include metformin, amlodipine, lisinopril.",
-      "answer": "Medications: metformin, amlodipine, lisinopril, simvastatin, losartan.",
+      "answer": "Patient P010 is currently taking Lisinopril (20mg, daily), Amlodipine (5mg, daily), Simvastatin (20mg, daily), Metformin (500mg, twice daily), and Furosemide (40mg, daily). **Please note that this information is subject to change and may not reflect the patient's current medication list if there have been recent changes.**",
+      "normalized_answer": "facts: patient p010 is currently taking lisinopril (20mg, daily), amlodipine (5mg, daily), simvastatin (20mg, daily), metformin (500mg, twice daily), and furosemide (40mg, daily) | please note that this information is subject to change and may not reflect the patient's current medication list if there have been recent changes",
       "factscore": 1.0,
-      "latency_sec": 0.0015368461608886719
+      "latency_sec": 4.8681724071502686
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P010",
       "question": "Which medications is patient P010 taking currently or recently?",
       "question_type": "history",
@@ -1605,14 +1794,16 @@
         "lisinopril"
       ],
       "expected_answer": "Key medications include metformin, amlodipine, lisinopril.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6572206020355225
+      "answer": "Based on the patient's notes, the patient P010 is currently taking:\n\n* Metformin 500mg BID\n* Amlodipine 15mg daily\n* Simvastatin 40mg daily\n* Losartan 50mg daily\n\nSource: Patient notes dated 2023-12-15.",
+      "normalized_answer": "facts: based on the patient's notes, the patient p010 is currently taking: * metformin 500mg bid * amlodipine 15mg daily * simvastatin 40mg daily * losartan 50mg daily source: patient notes dated 2023-12-15",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 3.0468339920043945
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P010",
       "question": "What symptoms have been documented for patient P010?",
       "question_type": "history",
@@ -1622,31 +1813,54 @@
         "polydipsia"
       ],
       "expected_answer": "Documented symptoms include Fatigue, Frequent urination, Polydipsia.",
-      "answer": "Symptoms: Fatigue, Frequent urination, Polydipsia, Shortness of breath, Edema.",
+      "answer": "** Patient P010 has documented symptoms of fatigue, dizziness, and shortness of breath.\n\n**Medical Disclaimer:** This answer is based on the information gathered from the patient's medical record and should not be considered a definitive diagnosis or treatment plan. A healthcare professional should be consulted for a comprehensive evaluation and management of the patient's symptoms.",
+      "normalized_answer": "facts: patient p010 has documented symptoms of fatigue, dizziness, and shortness of breath",
+      "factscore": 0.3333333333333333,
+      "latency_sec": 6.985959529876709
+    },
+    {
+      "experiment": "E1",
+      "system": "baseline",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
+      "patient_id": "P010",
+      "question": "What symptoms have been documented for patient P010?",
+      "question_type": "history",
+      "expected_keywords": [
+        "fatigue",
+        "frequent urination",
+        "polydipsia"
+      ],
+      "expected_answer": "Documented symptoms include Fatigue, Frequent urination, Polydipsia.",
+      "answer": "The symptoms documented for patient P010 are:\n\n* Fatigue\n* Shortness of breath\n* Swelling in his legs\n\nThese symptoms are documented in the following notes:\n\n* 2022-12-15: \"worsening symptoms of fatigue and shortness of breath\"\n* 2023-06-20: \"continued symptoms of fatigue and shortness of breath\"\n* 2023-12-15: \"worsening symptoms of fatigue, shortness of breath, and swelling in his legs\"",
+      "normalized_answer": "facts: the symptoms documented for patient p010 are: * fatigue * shortness of breath * swelling in his legs these symptoms are documented in the following notes: * 2022-12-15: \"worsening symptoms of fatigue and shortness of breath\" * 2023-06-20: \"continued symptoms of fatigue and shortness of breath\" * 2023-12-15: \"worsening symptoms of fatigue, shortness of breath, and swelling in his legs\"",
+      "factscore": 0.3333333333333333,
+      "latency_sec": 2.581482172012329
+    },
+    {
+      "experiment": "E1",
+      "system": "graphmed",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
+      "patient_id": "P010",
+      "question": "Using all visits, what changed between the first and most recent visit for patient P010?",
+      "question_type": "multi_visit_context",
+      "expected_keywords": [
+        "hypertension",
+        "hypertension",
+        "visit"
+      ],
+      "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Hypertension.",
+      "answer": "** Based on the patient's medical conditions, medications, lab values, and past visit summaries, it appears that the patient's blood pressure and glucose levels have increased significantly over the past 6 months. This may be related to the patient's medication regimen and lifestyle factors. It is essential to review the patient's medication adherence and consider adjusting the treatment plan to better manage their hypertension and diabetes. **Please consult a healthcare professional for further evaluation and guidance.**",
+      "normalized_answer": "visit_change: based on the patient's medical conditions, medications, lab values, and past visit summaries, it appears that the patient's blood pressure and glucose levels have increased significantly over the past 6 months | it is essential to review the patient's medication adherence and consider adjusting the treatment plan to better manage their hypertension and diabetes",
       "factscore": 1.0,
-      "latency_sec": 0.0010132789611816406
+      "latency_sec": 8.837478876113892
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
-      "patient_id": "P010",
-      "question": "What symptoms have been documented for patient P010?",
-      "question_type": "history",
-      "expected_keywords": [
-        "fatigue",
-        "frequent urination",
-        "polydipsia"
-      ],
-      "expected_answer": "Documented symptoms include Fatigue, Frequent urination, Polydipsia.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6709244251251221
-    },
-    {
-      "experiment": "E1",
-      "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P010",
       "question": "Using all visits, what changed between the first and most recent visit for patient P010?",
       "question_type": "multi_visit_context",
@@ -1656,31 +1870,16 @@
         "visit"
       ],
       "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Hypertension.",
-      "answer": "Patient history reviewed with available structured records.",
-      "factscore": 0.0,
-      "latency_sec": 0.0
-    },
-    {
-      "experiment": "E1",
-      "system": "baseline",
-      "mode": "fallback",
-      "patient_id": "P010",
-      "question": "Using all visits, what changed between the first and most recent visit for patient P010?",
-      "question_type": "multi_visit_context",
-      "expected_keywords": [
-        "hypertension",
-        "hypertension",
-        "visit"
-      ],
-      "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Hypertension.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6407699584960938
+      "answer": "Between the first and most recent visit, the following changes were observed:\n\n* HbA1c increased from 7.8 to 8.0 (Source: 2022-12-15 and 2023-12-15 notes)\n* BP increased from 145/95 to 155/105 (Source: 2022-12-15 and 2023-12-15 notes)\n* eGFR decreased from 65 to 45 (Source: 2022-12-15 and 2023-12-15 notes)\n* LDL remained elevated, but increased from 140 to 150 (Source: 2022-12-15 and 2023-12-15 notes)\n* Medications were adjusted to include Losartan 50mg daily for hypertension and amlodipine was increased to 15mg daily (Source: 2023-12-15 note)",
+      "normalized_answer": "visit_change: between the first and most recent visit, the following changes were observed: * hba1c increased from 7 | 0 (source: 2022-12-15 and 2023-12-15 notes) * bp increased from 145/95 to 155/105 (source: 2022-12-15 and 2023-12-15 notes) * egfr decreased from 65 to 45 (source: 2022-12-15 and 2023-12-15 notes) * ldl remained elevated, but increased from 140 to 150 (source: 2022-12-15 and 2023-12-15 notes) * medications were adjusted to include losartan 50mg daily for hypertension and amlodipine was increased to 15mg daily (source: 2023-12-15 note)",
+      "factscore": 1.0,
+      "latency_sec": 1.6736392974853516
     },
     {
       "experiment": "E1",
       "system": "graphmed",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P010",
       "question": "Is the combination of metformin and amlodipine safe for patient P010?",
       "question_type": "drug_safety",
@@ -1690,14 +1889,16 @@
         "interaction"
       ],
       "expected_answer": "Assess safety and potential interaction risk between metformin and amlodipine.",
-      "answer": "Patient history reviewed with available structured records.",
-      "factscore": 0.0,
-      "latency_sec": 0.0010356903076171875
+      "answer": "** The combination of metformin and amlodipine is not safe for patient P010 due to the risk of lactic acidosis and worsening kidney function. Please consult with a healthcare professional for alternative treatment options.",
+      "normalized_answer": "drug_safety: the combination of metformin and amlodipine is not safe for patient p010 due to the risk of lactic acidosis and worsening kidney function",
+      "factscore": 0.6666666666666666,
+      "latency_sec": 9.264581441879272
     },
     {
       "experiment": "E1",
       "system": "baseline",
-      "mode": "fallback",
+      "mode": "full_stack",
+      "runtime_mode": "full_stack_openrouter",
       "patient_id": "P010",
       "question": "Is the combination of metformin and amlodipine safe for patient P010?",
       "question_type": "drug_safety",
@@ -1707,9 +1908,10 @@
         "interaction"
       ],
       "expected_answer": "Assess safety and potential interaction risk between metformin and amlodipine.",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
-      "factscore": 0.0,
-      "latency_sec": 0.6695175170898438
+      "answer": "Based on the provided patient context, the combination of metformin and amlodipine appears to be safe for patient P010.\n\nThere is no indication of lactic acidosis, a known side effect of metformin, which is a contraindication for its use. Additionally, there is no mention of hypotension or other adverse effects that would suggest an interaction between metformin and amlodipine.\n\nSource: American Diabetes Association. (2022). Standards of Medical Care in Diabetes-2022. Diabetes Care, 45(Supplement 1), S1-S224. doi: 10.2337/dc22-S001",
+      "normalized_answer": "drug_safety: based on the provided patient context, the combination of metformin and amlodipine appears to be safe for patient p010 | there is no indication of lactic acidosis, a known side effect of metformin, which is a contraindication for its use | additionally, there is no mention of hypotension or other adverse effects that would suggest an interaction between metformin and amlodipine",
+      "factscore": 1.0,
+      "latency_sec": 3.248196601867676
     }
   ],
   "manual_review_20_template": [
@@ -1718,7 +1920,7 @@
       "system": "baseline",
       "patient_id": "P009",
       "question": "What are the key diagnosed conditions for patient P009?",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "answer": "Based on the provided patient context, the key diagnosed conditions for patient P009 are:\n\n1. Chronic Kidney Disease (CKD) (Source: Note dated 2023-10-15)\n2. Type 2 Diabetes (Source: Note dated 2022-06-15)\n3. Hypertension (Source: Note dated 2022-06-15)\n4. Hyperlipidemia (Source: Note dated 2022-06-15)\n\nNote: Coronary Artery Disease is also mentioned in the 2023-10-15 note, but it is not explicitly listed as a diagnosed condition in the earlier notes.",
       "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
       "expected_keywords": [
         "hypertension",
@@ -1732,7 +1934,7 @@
       "system": "graphmed",
       "patient_id": "P002",
       "question": "What symptoms have been documented for patient P002?",
-      "answer": "Symptoms: Fatigue, Shortness of breath, Elevated bp, Leg cramps, Swelling in lower extremities.",
+      "answer": "** Patient P002 has reported symptoms of headache, fatigue, and difficulty sleeping. They have been diagnosed with hypertension and hyperlipidemia, and are currently taking lisinopril and atorvastatin. Their recent lab results show elevated blood pressure and LDL cholesterol. **Please consult a healthcare professional for proper diagnosis and treatment.**\n\nMedical Disclaimer: This response is for informational purposes only and should not be considered a substitute for professional medical advice. Always consult a qualified healthcare professional for accurate diagnosis and treatment.",
       "expected_answer": "Documented symptoms include Fatigue, Shortness of breath, Elevated bp.",
       "expected_keywords": [
         "fatigue",
@@ -1746,7 +1948,7 @@
       "system": "baseline",
       "patient_id": "P001",
       "question": "Which medications is patient P001 taking currently or recently?",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "answer": "Based on the provided patient context, the patient P001 is currently taking:\n\n* Erythropoietin (as of 2024-06-15)\n* Metoprolol 150mg daily (as of 2024-06-15)\n* Lisinopril 20mg daily (as of 2022-12-20)\n* Amlodipine 10mg daily (as of 2023-12-20)\n\nNote: The patient was also taking metoprolol 50mg daily as of 2022-12-20, but the dose was increased to 150mg daily as of 2024-06-15.",
       "expected_answer": "Key medications include lisinopril, atorvastatin, metoprolol.",
       "expected_keywords": [
         "lisinopril",
@@ -1760,7 +1962,7 @@
       "system": "graphmed",
       "patient_id": "P010",
       "question": "What symptoms have been documented for patient P010?",
-      "answer": "Symptoms: Fatigue, Frequent urination, Polydipsia, Shortness of breath, Edema.",
+      "answer": "** Patient P010 has documented symptoms of fatigue, dizziness, and shortness of breath.\n\n**Medical Disclaimer:** This answer is based on the information gathered from the patient's medical record and should not be considered a definitive diagnosis or treatment plan. A healthcare professional should be consulted for a comprehensive evaluation and management of the patient's symptoms.",
       "expected_answer": "Documented symptoms include Fatigue, Frequent urination, Polydipsia.",
       "expected_keywords": [
         "fatigue",
@@ -1774,7 +1976,7 @@
       "system": "baseline",
       "patient_id": "P004",
       "question": "What symptoms have been documented for patient P004?",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "answer": "According to the patient context, the documented symptoms for patient P004 are:\n\n* Worsening fatigue (2023-10-20, 2024-03-15)\n* Shortness of breath (2023-10-20, 2024-09-01, 2024-03-15)\n* Decreased mobility (2024-09-01)\n* Significant weight gain and edema (2024-09-01)\n* Increased crackles at lung bases (2024-03-15)\n\nSource: Patient Context notes for each date.",
       "expected_answer": "Documented symptoms include Polydipsia, Increased thirst, Urination.",
       "expected_keywords": [
         "polydipsia",
@@ -1788,7 +1990,7 @@
       "system": "baseline",
       "patient_id": "P004",
       "question": "What are the key diagnosed conditions for patient P004?",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "answer": "Based on the provided patient context, the key diagnosed conditions for patient P004 are:\n\n1. Type 2 Diabetes mellitus (all dates)\n2. Hypertension (all dates)\n3. Hyperlipidemia (all dates)\n4. Chronic Kidney Disease (CKD) stage 5 (2025-02-18), stage 3 (2023-10-20), and stage 4 (2024-03-15)\n5. Congestive Heart Failure (CHF) with moderate decompensation (2025-02-18) and possible CHF (2024-03-15)\n\nThese conditions are based on the patient's lab results, physical exams, and medication lists across the three dates.",
       "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
       "expected_keywords": [
         "hypertension",
@@ -1802,7 +2004,7 @@
       "system": "graphmed",
       "patient_id": "P003",
       "question": "Is the combination of metformin and losartan safe for patient P003?",
-      "answer": "Patient history reviewed with available structured records.",
+      "answer": "** The combination of metformin and losartan may not be safe for patient P003 due to the potential risk of hyperkalemia, especially given their impaired kidney function. However, this decision should be made in consultation with a healthcare professional, as they can assess the individual patient's risk factors and adjust treatment plans accordingly. **Please consult a healthcare professional for personalized advice.**",
       "expected_answer": "Assess safety and potential interaction risk between metformin and losartan.",
       "expected_keywords": [
         "metformin",
@@ -1816,7 +2018,7 @@
       "system": "baseline",
       "patient_id": "P002",
       "question": "Using all visits, what changed between the first and most recent visit for patient P002?",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "answer": "Between the first visit (2022-01-15) and the most recent visit (2023-08-25), the following changes occurred:\n\n* HbA1c improved from 8.2 to 7.5 (Source: 2022-01-15 and 2023-08-25)\n* BP improved from 150/90 to 140/80 (Source: 2022-01-15 and 2023-08-25)\n* eGFR remained low, but no change in value is specified (Source: 2023-08-25)\n* Diagnoses remained the same, but Hyperlipidemia was added as a diagnosis (Source: 2022-07-22)\n* Medications were adjusted to add a statin (Source: 2022-07-22)\n* A nephrology consult was scheduled (Source: 2023-08-25)",
       "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Hypertension.",
       "expected_keywords": [
         "hypertension",
@@ -1830,7 +2032,7 @@
       "system": "baseline",
       "patient_id": "P002",
       "question": "Which medications is patient P002 taking currently or recently?",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "answer": "Based on the provided patient context, I can infer that the patient is taking the following medications:\n\n* Antihypertensive medication (initiated on 2022-01-15, adjusted on 2023-01-20)\n* Medications for intensifying glycemic control (initiated on 2022-01-15, intensified on 2023-01-20)\n* Medications for hyperlipidemia (diagnosed on 2023-08-25)\n\nUnfortunately, the specific medication names are not mentioned in the provided patient context.",
       "expected_answer": "Key medications include antihypertensive medication, statin, metformin bd.",
       "expected_keywords": [
         "antihypertensive medication",
@@ -1844,7 +2046,7 @@
       "system": "graphmed",
       "patient_id": "P009",
       "question": "Using all visits, what changed between the first and most recent visit for patient P009?",
-      "answer": "Patient history reviewed with available structured records.",
+      "answer": "** Between the first and most recent visit, patient P009's blood pressure decreased, creatinine levels increased, and hemoglobin levels decreased. The patient's symptoms of shortness of breath and fatigue persisted. These changes may indicate a potential decline in kidney function and anemia. **Medical Disclaimer: This analysis is based on the provided information and should not be used for diagnostic purposes. A healthcare professional should be consulted for a comprehensive evaluation and diagnosis.**",
       "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Chronic Kidney Disease.",
       "expected_keywords": [
         "hypertension",
@@ -1858,7 +2060,7 @@
       "system": "baseline",
       "patient_id": "P007",
       "question": "Is the combination of metformin and lisinopril safe for patient P007?",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "answer": "Based on the provided patient context, the combination of metformin and lisinopril is generally considered safe for patient P007.\n\nAccording to the FDA, there is no contraindication or significant interaction between metformin and lisinopril. However, it's essential to monitor the patient's renal function, as both medications can affect kidney function.\n\nIn 2016, the FDA issued a warning about the risk of lactic acidosis associated with metformin use in patients with renal impairment. Lisinopril, an ACE inhibitor, can also cause renal impairment, particularly in patients with pre-existing kidney disease.\n\nGiven the patient's history of Type 2 Diabetes, hypertension, and hyperlipidemia, it's crucial to closely monitor the patient's renal function, serum creatinine levels, and urine output while on this combination therapy.\n\nSource:\n- FDA. (2016). Metformin Hydrochloride Tablets. [Label]. Retrieved from https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/020638s046lbl.pdf\n- FDA. (2015). Lisinopril Tablets. [Label]. Retrieved from https://www.accessdata.fda.gov/drugsatfda_docs/label/2015/020633s046lbl.pdf",
       "expected_answer": "Assess safety and potential interaction risk between metformin and lisinopril.",
       "expected_keywords": [
         "metformin",
@@ -1872,7 +2074,7 @@
       "system": "baseline",
       "patient_id": "P002",
       "question": "What are the key diagnosed conditions for patient P002?",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "answer": "The key diagnosed conditions for patient P002 are:\n\n1. Type 2 Diabetes\n2. Hypertension\n3. Hyperlipidemia\n4. Chronic Kidney Disease (CKD)\n\nSource: Patient's medical notes, specifically the notes from 2023-01-20 and 2023-08-25.",
       "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
       "expected_keywords": [
         "hypertension",
@@ -1886,7 +2088,7 @@
       "system": "baseline",
       "patient_id": "P008",
       "question": "What symptoms have been documented for patient P008?",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "answer": "According to the patient context, the following symptoms have been documented for patient P008:\n\n1. Fatigue (Source: Date: 2022-09-01)\n2. Polyuria (Source: Date: 2022-09-01)\n3. Nocturia (Source: Date: 2023-03-01)\n4. Increased urination during the day (Source: Date: 2023-03-01)\n5. Worsening edema (Source: Date: 2024-03-01)\n6. Shortness of breath (Source: Date: 2024-03-01)",
       "expected_answer": "Documented symptoms include Fatigue, Frequent urination, Nocturia.",
       "expected_keywords": [
         "fatigue",
@@ -1900,7 +2102,7 @@
       "system": "graphmed",
       "patient_id": "P006",
       "question": "What symptoms have been documented for patient P006?",
-      "answer": "Symptoms: Fatigue, Frequent urination, Polydipsia, Improvement in symptoms, Shortness of breath.",
+      "answer": "** Patient P006 has reported symptoms of headache, fatigue, and difficulty sleeping. They have been diagnosed with hypertension and hyperlipidemia, and are currently taking lisinopril and atorvastatin. Their recent lab results show elevated blood pressure and LDL cholesterol. **Please consult a healthcare professional for proper diagnosis and treatment.**\n\nMedical Disclaimer: This response is for informational purposes only and should not be considered a substitute for professional medical advice. Always consult a qualified healthcare professional for accurate diagnosis and treatment.",
       "expected_answer": "Documented symptoms include Fatigue, Frequent urination, Polydipsia.",
       "expected_keywords": [
         "fatigue",
@@ -1914,7 +2116,7 @@
       "system": "graphmed",
       "patient_id": "P001",
       "question": "What symptoms have been documented for patient P001?",
-      "answer": "**\nPatient P001 has documented symptoms of fatigue, dizziness, and headaches. These symptoms may be related to the patient's Hypertension and potential side effects of Lisinopril. The elevated blood pressure and creatinine levels suggest that the patient's Hypertension is not well-controlled, and further evaluation is necessary to determine the underlying cause of these symptoms. **Medical Disclaimer: This answer is based on the information provided and should not be used for diagnostic or treatment purposes. A healthcare professional should be consulted for an accurate diagnosis and treatment plan.**",
+      "answer": "** Based on the patient's medical conditions, medications, symptoms, lab values, and past visit summaries, the documented symptoms for patient P001 include fatigue, muscle weakness, and shortness of breath, which are likely related to statin-induced myopathy.\n\n**Medical Disclaimer:** This answer is based on the information provided and should not be considered a definitive diagnosis. A healthcare professional should be consulted for a comprehensive evaluation and diagnosis.",
       "expected_answer": "Documented symptoms include Shortness of breath, Chest pain, Renal function.",
       "expected_keywords": [
         "shortness of breath",
@@ -1928,7 +2130,7 @@
       "system": "baseline",
       "patient_id": "P003",
       "question": "Using all visits, what changed between the first and most recent visit for patient P003?",
-      "answer": "Error: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))",
+      "answer": "Based on the patient's notes, the following changes occurred between the first visit (2022-06-15) and the most recent visit (2023-08-02):\n\n* The patient's blood glucose control worsened (as evidenced by the note on 2023-01-10 stating \"worsening blood glucose control\").\n* The patient's kidney function worsened (as evidenced by the note on 2023-08-02 stating \"worsening kidney function\").\n* The patient's blood pressure increased (as evidenced by the note on 2022-06-15 stating \"mildly elevated systolic blood pressure\" and the note on 2023-08-02 stating \"elevated blood pressure\").\n* The patient's LDL level is now elevated (as evidenced by the note on 2023-01-10).\n* The patient's medication regimen was changed to include a statin (started on 2023-01-10) and an ACE inhibitor (started on 2023-08-02), and the dose of losartan was increased (on 2023-08-02).\n\nThese changes suggest that the patient's condition has progressed, with worsening metabolic control, kidney function, and blood pressure, and the addition of new medications to manage these issues.",
       "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Chronic Kidney Disease.",
       "expected_keywords": [
         "hypertension",
@@ -1942,7 +2144,7 @@
       "system": "baseline",
       "patient_id": "P003",
       "question": "Is the combination of metformin and losartan safe for patient P003?",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "answer": "Based on the patient's medical history, the combination of metformin and losartan may not be safe for patient P003.\n\nMetformin is a medication that can cause lactic acidosis, a potentially life-threatening condition, especially in patients with kidney disease. The patient's worsening kidney function (2023-08-02) may increase the risk of lactic acidosis with metformin.\n\nLosartan, an ACE inhibitor, can also cause hyperkalemia (elevated potassium levels), which can be problematic in patients with kidney disease. The patient's elevated blood pressure and worsening kidney function (2023-08-02) may increase the risk of hyperkalemia with losartan.\n\nA study published in the Journal of Clinical Hypertension (2018) suggests that the combination of ACE inhibitors and metformin may increase the risk of hyperkalemia and lactic acidosis in patients with kidney disease.\n\nTherefore, the combination of metformin and losartan may not be safe for patient P003, and alternative medications should be considered to manage their blood glucose and blood pressure.",
       "expected_answer": "Assess safety and potential interaction risk between metformin and losartan.",
       "expected_keywords": [
         "metformin",
@@ -1956,7 +2158,7 @@
       "system": "graphmed",
       "patient_id": "P007",
       "question": "What symptoms have been documented for patient P007?",
-      "answer": "Symptoms: Fatigue, Polydipsia, Weight loss, Decreased urine output, Shortness of breath.",
+      "answer": "** Patient P007 has documented symptoms of fatigue, muscle weakness, and shortness of breath.\n\n**Medical Disclaimer:** This information is based on the patient's reported symptoms and medical history. A thorough medical evaluation by a healthcare professional is necessary to determine the underlying cause of these symptoms and develop an appropriate treatment plan.",
       "expected_answer": "Documented symptoms include Fatigue, Polydipsia, Weight loss.",
       "expected_keywords": [
         "fatigue",
@@ -1970,7 +2172,7 @@
       "system": "baseline",
       "patient_id": "P008",
       "question": "Using all visits, what changed between the first and most recent visit for patient P008?",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "answer": "Between the first visit (2022-09-01) and the most recent visit (2024-09-01), the following changes were observed for patient P008:\n\n* HbA1c increased from 7.8 to 8.2 (Source: 2022-09-01 and 2024-09-01 notes)\n* BP increased from 140/90 to 158/102 (Source: 2022-09-01 and 2024-09-01 notes)\n* LDL increased from 150 to 165 (Source: 2022-09-01 and 2024-09-01 notes)\n* CAD progressed, requiring hospitalization for heart failure (Source: 2024-09-01 note)\n* New symptoms of nocturia and increased urination during the day were reported (Source: 2023-03-01 note)\n\nThese changes indicate a worsening of patient P008's condition over time.",
       "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Heart Failure.",
       "expected_keywords": [
         "hypertension",
@@ -1984,7 +2186,7 @@
       "system": "baseline",
       "patient_id": "P008",
       "question": "What are the key diagnosed conditions for patient P008?",
-      "answer": "Error: 404 Client Error: Not Found for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCUSmOIx4QvG9CO4g4Hsm4UCn1CNsAgDXw",
+      "answer": "Based on the provided patient context, the key diagnosed conditions for patient P008 are:\n\n1. **Chronic Type 2 Diabetes** (HbA1c 7.8, 8.2, 8.2)\n2. **Hypertension** (BP 140/90, 158/102, 148/92)\n3. **Hyperlipidemia** (LDL 150, 165, 170)\n4. **Coronary Artery Disease (CAD)** (progression of CAD requiring hospitalization for heart failure)\n5. **Heart Failure** (requiring hospitalization)\n\nNote: These conditions are based on the provided patient notes and lab results.",
       "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
       "expected_keywords": [
         "hypertension",

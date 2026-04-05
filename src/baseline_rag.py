@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import List, Dict, Any
 from sentence_transformers import SentenceTransformer
 import os
+import requests
 import warnings
 import logging
 
@@ -51,7 +52,7 @@ class BaselineRAG:
     Used for comparison experiments.
     """
     
-    def __init__(self, persist_dir: str = "data"):
+    def __init__(self, persist_dir: str = "data", llm_provider: str = None):
         self.persist_dir = Path(persist_dir)
         
         # Initialize embedding model
@@ -63,14 +64,20 @@ class BaselineRAG:
             settings=Settings(anonymized_telemetry=False)
         )
         
-        # Initialize LLM
-        self.llm = Groq(api_key=os.getenv("GROQ_API_KEY"))
+        # Initialize LLM providers
+        self.groq_api_key = os.getenv("GROQ_API_KEY")
+        self.llm = Groq(api_key=self.groq_api_key) if self.groq_api_key else None
+        self.openrouter_api_key = os.getenv("OPEN_ROUTER_API_KEY") or os.getenv("OPENROUTER_API_KEY")
+        self.openrouter_api_url = "https://openrouter.ai/api/v1/chat/completions"
+        self.openrouter_model = os.getenv("BASELINE_OPENROUTER_MODEL", "meta-llama/llama-3.1-8b-instruct")
+        self.baseline_provider = (llm_provider or os.getenv("BASELINE_LLM_PROVIDER") or "groq").strip().lower()
         
         # Store for patient data
         self.patient_data = {}
         self._load_patient_data()
         
         print("[OK] Baseline RAG initialized (no graph, no memory evolution)")
+        print(f"[OK] Baseline LLM provider preference: {self.baseline_provider}")
     
     def _load_patient_data(self):
         """Load all patient data."""
@@ -144,14 +151,50 @@ Question: {query}
 
 Answer (be concise and cite the source if possible):"""
         
+        if self.baseline_provider == "openrouter":
+            out = self._answer_with_openrouter(prompt)
+            if not out.lower().startswith("error:"):
+                return out
+            fallback = os.getenv("BASELINE_OPENROUTER_FALLBACK_TO_GROQ", "1").strip() == "1"
+            if fallback:
+                return self._answer_with_groq(prompt)
+            return out
+
+        return self._answer_with_groq(prompt)
+
+    def _answer_with_groq(self, prompt: str) -> str:
+        if self.llm is None:
+            return "Error: GROQ_API_KEY is not configured"
         try:
             response = self.llm.chat.completions.create(
                 model="llama-3.1-8b-instant",
                 messages=[{"role": "user", "content": prompt}],
                 temperature=0.1,
-                max_tokens=500
+                max_tokens=500,
             )
             return response.choices[0].message.content
+        except Exception as e:
+            return f"Error: {e}"
+
+    def _answer_with_openrouter(self, prompt: str) -> str:
+        if not self.openrouter_api_key:
+            return "Error: OPEN_ROUTER_API_KEY is not configured"
+
+        headers = {
+            "Authorization": f"Bearer {self.openrouter_api_key}",
+            "Content-Type": "application/json",
+        }
+        payload = {
+            "model": self.openrouter_model,
+            "messages": [{"role": "user", "content": prompt}],
+            "temperature": 0.1,
+            "max_tokens": 500,
+        }
+        try:
+            resp = requests.post(self.openrouter_api_url, headers=headers, json=payload, timeout=45)
+            resp.raise_for_status()
+            data = resp.json()
+            return data["choices"][0]["message"]["content"]
         except Exception as e:
             return f"Error: {e}"
     

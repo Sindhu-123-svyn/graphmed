@@ -13,6 +13,7 @@ import csv
 import json
 import os
 import random
+import re
 import statistics
 import time
 from dataclasses import dataclass
@@ -85,12 +86,38 @@ class LLMConflictPromptBaseline:
     """Pure LLM-prompt conflict baseline (no classifier) for Experiment 3."""
 
     def __init__(self):
-        self.api_key = os.getenv("GROQ_API_KEY")
-        self.api_url = "https://api.groq.com/openai/v1/chat/completions"
-        self.model = "llama-3.1-8b-instant"
+        # Prefer OpenRouter for better evaluation quota, fallback to Groq.
+        self.provider = (
+            os.getenv("PHASE9_LLM_PROVIDER")
+            or os.getenv("GRAPHMED_LLM_PROVIDER")
+            or os.getenv("BASELINE_LLM_PROVIDER")
+            or ("openrouter" if (os.getenv("OPEN_ROUTER_API_KEY") or os.getenv("OPENROUTER_API_KEY")) else "groq")
+        ).strip().lower()
+
+        self.groq_api_key = os.getenv("GROQ_API_KEY")
+        self.groq_api_url = "https://api.groq.com/openai/v1/chat/completions"
+        self.groq_model = os.getenv("PHASE9_GROQ_MODEL", "llama-3.1-8b-instant")
+
+        self.openrouter_api_key = os.getenv("OPEN_ROUTER_API_KEY") or os.getenv("OPENROUTER_API_KEY")
+        self.openrouter_api_url = "https://openrouter.ai/api/v1/chat/completions"
+        self.openrouter_model = os.getenv("PHASE9_OPENROUTER_MODEL", "meta-llama/llama-3.1-8b-instruct")
+
+    def _provider_config(self, preferred_provider: Optional[str] = None) -> Tuple[Optional[str], Optional[str], Optional[str], str]:
+        provider = (preferred_provider or self.provider or "").strip().lower()
+        if provider == "openrouter":
+            return self.openrouter_api_key, self.openrouter_api_url, self.openrouter_model, "openrouter"
+        if provider == "groq":
+            return self.groq_api_key, self.groq_api_url, self.groq_model, "groq"
+        # Unknown provider: best-effort fallback order.
+        if self.openrouter_api_key:
+            return self.openrouter_api_key, self.openrouter_api_url, self.openrouter_model, "openrouter"
+        return self.groq_api_key, self.groq_api_url, self.groq_model, "groq"
 
     def predict(self, statement_a: str, statement_b: str) -> Dict[str, Any]:
-        if not self.api_key:
+        api_key, api_url, model, resolved_provider = self._provider_config()
+        fallback_order = ["openrouter", "groq"] if resolved_provider == "openrouter" else ["groq", "openrouter"]
+
+        if not api_key:
             return {
                 "is_conflict": False,
                 "confidence": 0.0,
@@ -108,13 +135,13 @@ class LLMConflictPromptBaseline:
 
         try:
             resp = requests.post(
-                self.api_url,
+                api_url,
                 headers={
-                    "Authorization": f"Bearer {self.api_key}",
+                    "Authorization": f"Bearer {api_key}",
                     "Content-Type": "application/json",
                 },
                 json={
-                    "model": self.model,
+                    "model": model,
                     "messages": [{"role": "user", "content": prompt}],
                     "temperature": 0.0,
                     "max_tokens": 160,
@@ -132,10 +159,46 @@ class LLMConflictPromptBaseline:
                 "is_conflict": is_conflict,
                 "confidence": max(0.0, min(1.0, conf)),
                 "prediction": "CONFLICT" if is_conflict else "CONSISTENT",
-                "runtime_mode": "llm_prompt",
+                "runtime_mode": f"llm_prompt_{resolved_provider}",
             }
         except Exception:
-            # Deterministic fallback if LLM call or JSON parse fails.
+            # Try one provider fallback before deterministic baseline.
+            for provider in fallback_order:
+                if provider == resolved_provider:
+                    continue
+                f_key, f_url, f_model, f_provider = self._provider_config(provider)
+                if not f_key:
+                    continue
+                try:
+                    resp = requests.post(
+                        f_url,
+                        headers={
+                            "Authorization": f"Bearer {f_key}",
+                            "Content-Type": "application/json",
+                        },
+                        json={
+                            "model": f_model,
+                            "messages": [{"role": "user", "content": prompt}],
+                            "temperature": 0.0,
+                            "max_tokens": 160,
+                        },
+                        timeout=30,
+                    )
+                    resp.raise_for_status()
+                    content = resp.json()["choices"][0]["message"]["content"].strip()
+                    payload = json.loads(content)
+                    is_conflict = bool(payload.get("is_conflict", False))
+                    conf = float(payload.get("confidence", 0.5))
+                    return {
+                        "is_conflict": is_conflict,
+                        "confidence": max(0.0, min(1.0, conf)),
+                        "prediction": "CONFLICT" if is_conflict else "CONSISTENT",
+                        "runtime_mode": f"llm_prompt_{f_provider}",
+                    }
+                except Exception:
+                    pass
+
+            # Deterministic fallback if all LLM paths fail.
             return {
                 "is_conflict": False,
                 "confidence": 0.0,
@@ -283,6 +346,7 @@ class Phase9Evaluator:
         self.graphmed = None
         self.baseline = None
         self.qa_mode = "unknown"
+        self.qa_provider = "unknown"
         self.conflict_mode = "unknown"
         self.graphmed_conflict = self._build_graphmed_conflict_detector()
         self.baseline_conflict = NoClassifierBaseline()
@@ -360,15 +424,31 @@ class Phase9Evaluator:
             from src.agent_direct import DirectReActAgent
             from src.baseline_rag import BaselineRAG
 
-            self.graphmed = DirectReActAgent(max_steps=3)
-            self.baseline = BaselineRAG(persist_dir=str(self.persist_dir))
+            preferred_provider = (
+                os.getenv("PHASE9_LLM_PROVIDER")
+                or os.getenv("GRAPHMED_LLM_PROVIDER")
+                or os.getenv("BASELINE_LLM_PROVIDER")
+                or ("openrouter" if (os.getenv("OPEN_ROUTER_API_KEY") or os.getenv("OPENROUTER_API_KEY")) else "groq")
+            ).strip().lower()
+
+            self.graphmed = DirectReActAgent(
+                persist_dir=str(self.persist_dir),
+                max_steps=3,
+                llm_provider=preferred_provider,
+            )
+            self.baseline = BaselineRAG(
+                persist_dir=str(self.persist_dir),
+                llm_provider=preferred_provider,
+            )
             self.qa_mode = "full_stack"
+            self.qa_provider = preferred_provider
             return
         except Exception as e:
             print(f"[Phase9] QA systems unavailable, using JSON fallback engines: {e}")
             self.graphmed = JsonQAFallback(self.persist_dir, mode="graphmed")
             self.baseline = JsonQAFallback(self.persist_dir, mode="baseline")
             self.qa_mode = "fallback"
+            self.qa_provider = "json_fallback"
 
     # ------------------------------------------------------------------
     # Common helpers
@@ -390,12 +470,113 @@ class Phase9Evaluator:
         return ids
 
     def _factscore(self, answer: str, expected_keywords: Sequence[str]) -> float:
+        def _variants_for_keyword(keyword: str) -> List[str]:
+            kw = _safe_lower(keyword)
+            variants = {kw}
+
+            # Canonical synonym aliases used for fair keyword matching.
+            alias_map = {
+                "hypertension": ["high blood pressure"],
+                "hyperlipidemia": ["high cholesterol", "dyslipidemia"],
+                "type 2 diabetes": ["type ii diabetes", "t2dm", "diabetes"],
+                "renal failure": ["kidney failure", "renal disease", "kidney disease", "ckd"],
+                "interaction": ["interactions", "interact", "drug interaction"],
+                "visit": ["visits", "first visit", "most recent visit", "latest visit"],
+            }
+
+            for canonical, aliases in alias_map.items():
+                if kw == canonical:
+                    variants.update(aliases)
+
+            # Basic punctuation/spacing normalization variants.
+            variants.add(kw.replace("-", " "))
+            variants.add(re.sub(r"\s+", " ", kw))
+            return [v for v in variants if v]
+
         kws = [k for k in expected_keywords if k]
         if not kws:
             return 0.0
         ans = _safe_lower(answer)
-        hit = sum(1 for kw in kws if _safe_lower(kw) in ans)
+        hit = 0
+        for kw in kws:
+            variants = _variants_for_keyword(kw)
+            if any(v in ans for v in variants):
+                hit += 1
         return float(hit) / float(len(kws))
+
+    def _normalize_answer_for_factscore(
+        self,
+        answer: str,
+        question_type: str,
+        expected_keywords: Sequence[str],
+    ) -> str:
+        """Normalize free-form answers into a shared, concise template for fairer scoring."""
+        text = str(answer or "")
+        if not text:
+            return ""
+
+        # Remove markdown emphasis and collapse whitespace/newlines.
+        text = text.replace("**", " ")
+        text = re.sub(r"\s+", " ", text).strip()
+
+        # Drop disclaimer-style sentences equally for both systems.
+        disclaimer_markers = [
+            "medical disclaimer",
+            "informational purposes only",
+            "consult",
+            "healthcare professional",
+            "not medical advice",
+            "should not be considered as medical advice",
+        ]
+
+        parts = [p.strip() for p in re.split(r"[.!?;]+", text) if p.strip()]
+        filtered_parts = [
+            p
+            for p in parts
+            if not any(marker in _safe_lower(p) for marker in disclaimer_markers)
+        ]
+
+        # Keep evidence-bearing spans: expected keywords (or aliases), plus question-type cues.
+        cues_by_type = {
+            "history": ["condition", "diagnos", "medication", "symptom"],
+            "multi_visit_context": ["visit", "first", "recent", "change", "trend"],
+            "drug_safety": ["safe", "interaction", "risk", "monitor"],
+            "lab_trend": ["lab", "trend", "hba1c", "egfr", "ldl", "creatinine"],
+        }
+        cues = cues_by_type.get(question_type, [])
+
+        keyword_variants: List[str] = []
+        for kw in expected_keywords:
+            kw_l = _safe_lower(kw)
+            keyword_variants.append(kw_l)
+            if kw_l == "hypertension":
+                keyword_variants.append("high blood pressure")
+            elif kw_l == "hyperlipidemia":
+                keyword_variants.append("high cholesterol")
+            elif kw_l == "type 2 diabetes":
+                keyword_variants.extend(["t2dm", "diabetes"])
+            elif kw_l == "renal failure":
+                keyword_variants.extend(["kidney", "ckd", "renal disease"])
+
+        evidence_parts = []
+        for p in filtered_parts:
+            lp = _safe_lower(p)
+            if any(k in lp for k in keyword_variants) or any(c in lp for c in cues):
+                evidence_parts.append(p)
+
+        if not evidence_parts:
+            evidence_parts = filtered_parts[:3] or parts[:3]
+
+        # Shared output template for both systems.
+        template_prefix = {
+            "history": "facts",
+            "multi_visit_context": "visit_change",
+            "drug_safety": "drug_safety",
+            "lab_trend": "lab_trend",
+        }.get(question_type, "facts")
+
+        canonical = f"{template_prefix}: " + " | ".join(evidence_parts[:3])
+        return _safe_lower(canonical)
 
     def _bertscore_f1(self, candidate: str, reference: str) -> float:
         if not candidate or not reference:
@@ -614,12 +795,22 @@ class Phase9Evaluator:
             t0 = time.time()
             gm_answer = self._query_graphmed_with_retry(item.patient_id, item.question)
             gm_time = time.time() - t0
-            gm_fact = self._factscore(gm_answer, item.expected_keywords)
+            gm_norm = self._normalize_answer_for_factscore(
+                gm_answer,
+                question_type=item.question_type,
+                expected_keywords=item.expected_keywords,
+            )
+            gm_fact = self._factscore(gm_norm, item.expected_keywords)
 
             t0 = time.time()
             bl_answer = self._query_baseline_with_retry(item.patient_id, item.question)
             bl_time = time.time() - t0
-            bl_fact = self._factscore(bl_answer, item.expected_keywords)
+            bl_norm = self._normalize_answer_for_factscore(
+                bl_answer,
+                question_type=item.question_type,
+                expected_keywords=item.expected_keywords,
+            )
+            bl_fact = self._factscore(bl_norm, item.expected_keywords)
 
             # Small pacing delay reduces burst 429s during long evaluation loops.
             time.sleep(0.35)
@@ -629,12 +820,14 @@ class Phase9Evaluator:
                     "experiment": "E1",
                     "system": "graphmed",
                     "mode": self.qa_mode,
+                    "runtime_mode": f"{self.qa_mode}_{self.qa_provider}",
                     "patient_id": item.patient_id,
                     "question": item.question,
                     "question_type": item.question_type,
                     "expected_keywords": item.expected_keywords,
                     "expected_answer": item.expected_answer,
                     "answer": gm_answer,
+                    "normalized_answer": gm_norm,
                     "factscore": gm_fact,
                     "latency_sec": gm_time,
                 }
@@ -644,12 +837,14 @@ class Phase9Evaluator:
                     "experiment": "E1",
                     "system": "baseline",
                     "mode": self.qa_mode,
+                    "runtime_mode": f"{self.qa_mode}_{self.qa_provider}",
                     "patient_id": item.patient_id,
                     "question": item.question,
                     "question_type": item.question_type,
                     "expected_keywords": item.expected_keywords,
                     "expected_answer": item.expected_answer,
                     "answer": bl_answer,
+                    "normalized_answer": bl_norm,
                     "factscore": bl_fact,
                     "latency_sec": bl_time,
                 }
@@ -678,6 +873,8 @@ class Phase9Evaluator:
             "mode": self._experiment_mode(self.qa_mode, self.qa_mode),
             "graphmed_mode": self.qa_mode,
             "baseline_mode": self.qa_mode,
+            "graphmed_runtime_mode": f"{self.qa_mode}_{self.qa_provider}",
+            "baseline_runtime_mode": f"{self.qa_mode}_{self.qa_provider}",
             "num_questions": len(qa_items),
             "graphmed_factscore_mean": float(statistics.mean(gm_scores)) if gm_scores else 0.0,
             "baseline_factscore_mean": float(statistics.mean(bl_scores)) if bl_scores else 0.0,

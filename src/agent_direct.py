@@ -28,7 +28,7 @@ class DirectReActAgent:
     Implements Thought -> Action -> Observation loop.
     """
     
-    def __init__(self, persist_dir: str = "data", max_steps: int = 5):
+    def __init__(self, persist_dir: str = "data", max_steps: int = 5, llm_provider: Optional[str] = None):
         """
         Initialize the ReAct agent.
         
@@ -39,17 +39,23 @@ class DirectReActAgent:
         self.persist_dir = Path(persist_dir)
         self.max_steps = max_steps
         # LLM provider selection:
-        # 1) GRAPHMED_LLM_PROVIDER if set
-        # 2) BASELINE_LLM_PROVIDER fallback (user convenience)
-        # 3) default to groq
+        # 1) explicit constructor arg
+        # 2) GRAPHMED_LLM_PROVIDER
+        # 3) BASELINE_LLM_PROVIDER fallback
+        # 4) default to groq
         self.llm_provider = (
-            os.getenv("GRAPHMED_LLM_PROVIDER")
+            llm_provider
+            or os.getenv("GRAPHMED_LLM_PROVIDER")
             or os.getenv("BASELINE_LLM_PROVIDER")
             or "groq"
         ).strip().lower()
 
         self.groq_api_key = os.getenv("GROQ_API_KEY")
         self.groq_api_url = "https://api.groq.com/openai/v1/chat/completions"
+
+        self.openrouter_api_key = os.getenv("OPEN_ROUTER_API_KEY") or os.getenv("OPENROUTER_API_KEY")
+        self.openrouter_api_url = "https://openrouter.ai/api/v1/chat/completions"
+        self.openrouter_model = os.getenv("GRAPHMED_OPENROUTER_MODEL", "meta-llama/llama-3.1-8b-instruct")
 
         self.google_api_key = os.getenv("GOOGLE_API_KEY")
         self.google_model = os.getenv("GRAPHMED_GOOGLE_MODEL", "gemini-2.5-flash")
@@ -161,6 +167,30 @@ class DirectReActAgent:
             print(f"   ❌ API Error: {e}")
             return f"Error calling Google API: {e}"
 
+    def _call_openrouter(self, messages: List[Dict]) -> str:
+        """Call OpenRouter using OpenAI-compatible chat-completions API."""
+        if not self.openrouter_api_key:
+            return "Error calling OpenRouter API: OPEN_ROUTER_API_KEY is not configured"
+
+        headers = {
+            "Authorization": f"Bearer {self.openrouter_api_key}",
+            "Content-Type": "application/json",
+        }
+        data = {
+            "model": self.openrouter_model,
+            "messages": messages,
+            "temperature": 0.1,
+            "max_tokens": 1000,
+        }
+        try:
+            response = requests.post(self.openrouter_api_url, headers=headers, json=data, timeout=45)
+            response.raise_for_status()
+            result = response.json()
+            return result["choices"][0]["message"]["content"]
+        except Exception as e:
+            print(f"   ❌ API Error: {e}")
+            return f"Error calling OpenRouter API: {e}"
+
     def _resolve_google_model(self) -> Optional[str]:
         """Resolve a supported Gemini model name for generateContent."""
         if not self.google_api_key:
@@ -189,8 +219,17 @@ class DirectReActAgent:
             return None
 
     def _call_llm(self, messages: List[Dict]) -> str:
-        """Dispatch LLM call to selected provider with Groq fallback."""
+        """Dispatch LLM call to selected provider with optional fallbacks."""
         provider = self.llm_provider
+        if provider == "openrouter":
+            openrouter_result = self._call_openrouter(messages)
+            if not openrouter_result.lower().startswith("error calling openrouter api"):
+                return openrouter_result
+            fallback_to_groq = os.getenv("GRAPHMED_OPENROUTER_FALLBACK_TO_GROQ", "1").strip() == "1"
+            if fallback_to_groq:
+                return self._call_groq(messages)
+            return openrouter_result
+
         if provider == "google":
             google_result = self._call_google(messages)
             if not google_result.lower().startswith("error calling google api"):
