@@ -276,43 +276,116 @@ class DirectReActAgent:
         Execute a tool/action and return observation.
         """
         print(f"   🔧 Executing: {action}")
+
+        def _format_dual_channel_response(payload: Dict[str, Any], label: str) -> str:
+            current = payload.get("current_likely_state", [])
+            historical = payload.get("critical_historical_facts", [])
+            conflicts = payload.get("conflict_candidates", [])
+
+            lines = [
+                f"{label} (confidence-aware):",
+                "  Confidence semantics: freshness/trust signal, not truth probability.",
+                "  Current likely state:",
+            ]
+
+            if current:
+                for item in current[:5]:
+                    lines.append(
+                        "   - "
+                        f"{item.get('name')} [{item.get('type')}] "
+                        f"score={item.get('hybrid_score', 0.0):.3f} "
+                        f"conf={item.get('confidence', 0.0):.2f} "
+                        f"recency={item.get('recency', 0.0):.2f}"
+                    )
+            else:
+                lines.append("   - none")
+
+            lines.append("  Critical historical facts:")
+            if historical:
+                for item in historical[:5]:
+                    lines.append(
+                        "   - "
+                        f"{item.get('name')} [{item.get('type')}] "
+                        f"conf={item.get('confidence', 0.0):.2f}"
+                    )
+            else:
+                lines.append("   - none")
+
+            lines.append("  Conflict candidates:")
+            if conflicts:
+                for item in conflicts[:5]:
+                    lines.append(
+                        "   - "
+                        f"{item.get('name')} [{item.get('type')}] "
+                        f"conf={item.get('confidence', 0.0):.2f} "
+                        f"note={item.get('status', 'CONFLICTED')}"
+                    )
+            else:
+                lines.append("   - none")
+
+            return "\n".join(lines)
         
         try:
             if action == "query_conditions":
                 pkg = self._load_patient_graph(params.get("patient_id", "P001"))
-                entities = pkg.get_entities_by_type("CONDITION")
-                if not entities:
+                payload = pkg.retrieve_dual_channel_facts(
+                    query="active conditions and diagnosis status",
+                    current_top_k=6,
+                    historical_top_k=6,
+                )
+                has_any = payload.get("current_likely_state") or payload.get("critical_historical_facts")
+                if not has_any:
                     return "No conditions found in patient record."
-                return f"Patient's conditions: {', '.join([data.get('name') for _, data in entities])}"
+                return _format_dual_channel_response(payload, "Patient conditions")
             
             elif action == "query_medications":
                 pkg = self._load_patient_graph(params.get("patient_id", "P001"))
-                entities = pkg.get_entities_by_type("MEDICATION")
-                # Filter out dosage-only entries
-                med_names = []
-                for _, data in entities:
-                    name = data.get('name', '')
-                    # Skip if it's just a number (dosage)
-                    if not name.replace('.', '').replace('mg', '').strip().isdigit():
-                        med_names.append(name)
-                if not med_names:
+                payload = pkg.retrieve_dual_channel_facts(
+                    query="current medications and treatment history",
+                    current_top_k=6,
+                    historical_top_k=5,
+                )
+                filtered_current = []
+                for item in payload.get("current_likely_state", []):
+                    if item.get("type") != "MEDICATION":
+                        continue
+                    name = str(item.get("name", ""))
+                    if name.replace('.', '').replace('mg', '').strip().isdigit():
+                        continue
+                    filtered_current.append(item)
+                payload["current_likely_state"] = filtered_current
+
+                if not payload.get("current_likely_state") and not payload.get("critical_historical_facts"):
                     return "No medications found in patient record."
-                return f"Patient's medications: {', '.join(med_names)}"
+                return _format_dual_channel_response(payload, "Patient medications")
             
             elif action == "query_symptoms":
                 pkg = self._load_patient_graph(params.get("patient_id", "P001"))
-                entities = pkg.get_entities_by_type("SYMPTOM")
-                if not entities:
+                payload = pkg.retrieve_dual_channel_facts(
+                    query="current symptoms and symptom history",
+                    current_top_k=6,
+                    historical_top_k=4,
+                )
+                payload["current_likely_state"] = [
+                    x for x in payload.get("current_likely_state", []) if x.get("type") == "SYMPTOM"
+                ]
+                if not payload.get("current_likely_state") and not payload.get("critical_historical_facts"):
                     return "No symptoms documented."
-                return f"Patient's symptoms: {', '.join([data.get('name') for _, data in entities])}"
+                return _format_dual_channel_response(payload, "Patient symptoms")
             
             elif action == "query_labs":
                 pkg = self._load_patient_graph(params.get("patient_id", "P001"))
-                entities = pkg.get_entities_by_type("LAB_VALUE")
-                if not entities:
+                payload = pkg.retrieve_dual_channel_facts(
+                    query="latest lab values and meaningful lab history",
+                    current_top_k=7,
+                    historical_top_k=4,
+                )
+                payload["current_likely_state"] = [
+                    x for x in payload.get("current_likely_state", []) if x.get("type") == "LAB_VALUE"
+                ]
+                if not payload.get("current_likely_state"):
                     return "No lab values found."
-                labs_info = [f"{data.get('name')}: {data.get('value', 'N/A')}" for _, data in entities]
-                return f"Patient's lab values: {', '.join(labs_info)}"
+                return _format_dual_channel_response(payload, "Patient labs")
             
             elif action == "retrieve_memory":
                 query_text = params.get("query", "")

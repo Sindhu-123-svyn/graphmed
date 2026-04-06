@@ -1,13 +1,13 @@
 {
   "patient_id": "P093",
-  "created_at": "2026-04-04T13:46:02.360541",
+  "created_at": "2026-04-06T19:49:33.642808",
   "nodes": [
     {
       "id": "P093",
       "type": "PATIENT",
       "name": "P093",
-      "added": "2026-04-04T13:46:02.360541",
-      "last_confirmed": "2026-04-04T13:46:02.360541",
+      "added": "2026-04-06T19:49:33.642808",
+      "last_confirmed": "2026-04-06T19:49:33.642808",
       "confidence": 1.0
     },
     {
@@ -23,6 +23,8 @@
         "2023-01-10"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45,
       "history": [
         {
           "date": "2022-05-20",
@@ -58,6 +60,8 @@
         "2023-01-10"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45,
       "history": [
         {
           "date": "2022-05-20",
@@ -86,11 +90,13 @@
       "type": "CONDITION",
       "added": "2022-01-15",
       "last_confirmed": "2022-01-15",
-      "confidence": 0.2,
+      "confidence": 0.8383333333333334,
       "observed_dates": [
         "2022-01-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "MEDICATION_metformin_po_bid",
@@ -98,11 +104,13 @@
       "type": "MEDICATION",
       "added": "2022-01-15",
       "last_confirmed": "2022-01-15",
-      "confidence": 0.2,
+      "confidence": 0.3533333333333333,
       "observed_dates": [
         "2022-01-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "MEDICATION_amlodipine_po_qd",
@@ -110,11 +118,13 @@
       "type": "MEDICATION",
       "added": "2022-01-15",
       "last_confirmed": "2022-01-15",
-      "confidence": 0.2,
+      "confidence": 0.3533333333333333,
       "observed_dates": [
         "2022-01-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "MEDICATION_atorvastatin_po_qd",
@@ -122,11 +132,13 @@
       "type": "MEDICATION",
       "added": "2022-01-15",
       "last_confirmed": "2022-01-15",
-      "confidence": 0.2,
+      "confidence": 0.3533333333333333,
       "observed_dates": [
         "2022-01-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "LAB_VALUE_hba1c",
@@ -142,6 +154,8 @@
       ],
       "value": 8.5,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-05-20",
@@ -175,6 +189,8 @@
       ],
       "value": 160,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-05-20",
@@ -208,6 +224,8 @@
       ],
       "value": 105,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-05-20",
@@ -241,6 +259,8 @@
       ],
       "value": 150,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-05-20",
@@ -273,6 +293,8 @@
         "2023-01-10"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2022-05-20",
@@ -308,6 +330,8 @@
         "2023-01-10"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2022-05-20",
@@ -336,11 +360,13 @@
       "type": "MEDICATION",
       "added": "2022-05-20",
       "last_confirmed": "2022-05-20",
-      "confidence": 0.6083333333333334,
+      "confidence": 0.6866666666666666,
       "observed_dates": [
         "2022-05-20"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "SYMPTOM_nocturia",
@@ -348,11 +374,13 @@
       "type": "SYMPTOM",
       "added": "2022-05-20",
       "last_confirmed": "2022-05-20",
-      "confidence": 0.6083333333333334,
+      "confidence": 0.3733333333333333,
       "observed_dates": [
         "2022-05-20"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "SYMPTOM_erectile_dysfunction",
@@ -360,11 +388,13 @@
       "type": "SYMPTOM",
       "added": "2022-05-20",
       "last_confirmed": "2022-05-20",
-      "confidence": 0.6083333333333334,
+      "confidence": 0.3733333333333333,
       "observed_dates": [
         "2022-05-20"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "PROCEDURE_follow_up_in_4_months",
@@ -372,11 +402,13 @@
       "type": "PROCEDURE",
       "added": "2022-05-20",
       "last_confirmed": "2022-05-20",
-      "confidence": 0.6083333333333334,
+      "confidence": 0.765,
       "observed_dates": [
         "2022-05-20"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.03,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "CONDITION_kidney_disease",
@@ -388,7 +420,9 @@
       "observed_dates": [
         "2023-01-10"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "MEDICATION_adjust_medication",
@@ -400,7 +434,9 @@
       "observed_dates": [
         "2023-01-10"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "SYMPTOM_tingling",
@@ -412,7 +448,9 @@
       "observed_dates": [
         "2023-01-10"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "SYMPTOM_paresthesia",
@@ -424,7 +462,9 @@
       "observed_dates": [
         "2023-01-10"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "SYMPTOM_numbness",
@@ -436,7 +476,9 @@
       "observed_dates": [
         "2023-01-10"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "PROCEDURE_referral_to_nephrologist",
@@ -448,7 +490,9 @@
       "observed_dates": [
         "2023-01-10"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.03,
+      "confidence_floor_applied": 0.2
     }
   ],
   "edges": [

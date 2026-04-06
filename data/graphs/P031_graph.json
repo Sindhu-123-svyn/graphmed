@@ -1,13 +1,13 @@
 {
   "patient_id": "P031",
-  "created_at": "2026-04-04T13:46:00.144452",
+  "created_at": "2026-04-06T19:49:32.348808",
   "nodes": [
     {
       "id": "P031",
       "type": "PATIENT",
       "name": "P031",
-      "added": "2026-04-04T13:46:00.144452",
-      "last_confirmed": "2026-04-04T13:46:00.144452",
+      "added": "2026-04-06T19:49:32.348808",
+      "last_confirmed": "2026-04-06T19:49:32.348808",
       "confidence": 1.0
     },
     {
@@ -16,17 +16,19 @@
       "type": "CONDITION",
       "added": "2022-02-15",
       "last_confirmed": "2023-02-22",
-      "confidence": 0.38499999999999995,
+      "confidence": 0.877,
       "observed_dates": [
         "2022-02-15",
         "2023-02-22"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45,
       "history": [
         {
           "date": "2023-02-22",
           "old": {
-            "confidence": 0.6916666666666667
+            "confidence": 0.9383333333333334
           },
           "new": {
             "confirmed": true
@@ -41,11 +43,13 @@
       "type": "CONDITION",
       "added": "2022-02-15",
       "last_confirmed": "2022-02-15",
-      "confidence": 0.2,
+      "confidence": 0.629,
       "observed_dates": [
         "2022-02-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "MEDICATION_metformin",
@@ -61,6 +65,8 @@
         "2023-08-25"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-08-19",
@@ -106,6 +112,8 @@
         "2023-08-25"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-08-19",
@@ -152,6 +160,8 @@
       ],
       "value": 7.5,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-08-19",
@@ -194,6 +204,8 @@
       ],
       "value": 155,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-08-19",
@@ -236,6 +248,8 @@
       ],
       "value": 90,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-08-19",
@@ -269,11 +283,13 @@
       "type": "SYMPTOM",
       "added": "2022-02-15",
       "last_confirmed": "2022-02-15",
-      "confidence": 0.2,
+      "confidence": 0.15,
       "observed_dates": [
         "2022-02-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "CONDITION_hyperlipidemia",
@@ -281,11 +297,13 @@
       "type": "CONDITION",
       "added": "2022-08-19",
       "last_confirmed": "2022-08-19",
-      "confidence": 0.2,
+      "confidence": 0.814,
       "observed_dates": [
         "2022-08-19"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "SYMPTOM_frequent_urination",
@@ -293,17 +311,19 @@
       "type": "SYMPTOM",
       "added": "2022-08-19",
       "last_confirmed": "2023-08-25",
-      "confidence": 0.6883333333333332,
+      "confidence": 0.5013333333333333,
       "observed_dates": [
         "2022-08-19",
         "2023-08-25"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2023-08-25",
           "old": {
-            "confidence": 0.6883333333333332
+            "confidence": 0.5013333333333333
           },
           "new": {
             "confirmed": true
@@ -318,17 +338,19 @@
       "type": "SYMPTOM",
       "added": "2022-08-19",
       "last_confirmed": "2023-08-25",
-      "confidence": 0.6883333333333332,
+      "confidence": 0.5013333333333333,
       "observed_dates": [
         "2022-08-19",
         "2023-08-25"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2023-08-25",
           "old": {
-            "confidence": 0.6883333333333332
+            "confidence": 0.5013333333333333
           },
           "new": {
             "confirmed": true
@@ -343,17 +365,19 @@
       "type": "SYMPTOM",
       "added": "2022-08-19",
       "last_confirmed": "2023-08-25",
-      "confidence": 0.6883333333333332,
+      "confidence": 0.5013333333333333,
       "observed_dates": [
         "2022-08-19",
         "2023-08-25"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2023-08-25",
           "old": {
-            "confidence": 0.6883333333333332
+            "confidence": 0.5013333333333333
           },
           "new": {
             "confirmed": true
@@ -374,6 +398,8 @@
         "2023-08-25"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-08-25",
@@ -393,11 +419,13 @@
       "type": "SYMPTOM",
       "added": "2023-02-22",
       "last_confirmed": "2023-02-22",
-      "confidence": 0.6933333333333334,
+      "confidence": 0.5093333333333333,
       "observed_dates": [
         "2023-02-22"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "CONDITION_kidney_dysfunction",
@@ -409,7 +437,9 @@
       "observed_dates": [
         "2023-08-25"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.015,
+      "confidence_floor_applied": 0.35
     }
   ],
   "edges": [

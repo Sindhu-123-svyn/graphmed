@@ -1,20 +1,25 @@
 {
-  "run_id": "2026-04-06T14-01-27Z",
-  "timestamp": "2026-04-06T14:01:32Z",
+  "run_id": "2026-04-06T14-52-20Z",
+  "timestamp": "2026-04-06T14:52:22Z",
   "auto_update_enabled": true,
-  "patients_evaluated_for_circumstances": 10,
-  "patients_updated": 10,
-  "total_update_events": 20,
+  "patients_evaluated_for_circumstances": 11,
+  "patients_updated": 11,
+  "total_update_events": 21,
   "audit_log_path": "evaluation\\results\\phase9\\evaluation_graph_update_audit.jsonl",
   "circumstances": {
     "P001": [
-      "low_longitudinal_consistency"
+      "low_factscore",
+      "factscore_underperform_vs_baseline",
+      "low_longitudinal_consistency",
+      "consistency_underperform_vs_baseline"
     ],
     "P002": [
+      "low_factscore",
       "low_longitudinal_consistency",
       "consistency_underperform_vs_baseline"
     ],
     "P004": [
+      "low_factscore",
       "low_longitudinal_consistency"
     ],
     "P005": [
@@ -25,9 +30,17 @@
       "consistency_underperform_vs_baseline"
     ],
     "P008": [
-      "low_longitudinal_consistency"
+      "low_factscore",
+      "factscore_underperform_vs_baseline",
+      "low_longitudinal_consistency",
+      "consistency_underperform_vs_baseline"
+    ],
+    "P009": [
+      "factscore_underperform_vs_baseline"
     ],
     "P010": [
+      "low_factscore",
+      "factscore_underperform_vs_baseline",
       "low_longitudinal_consistency"
     ],
     "P011": [
@@ -35,7 +48,8 @@
       "consistency_underperform_vs_baseline"
     ],
     "P013": [
-      "low_longitudinal_consistency"
+      "low_longitudinal_consistency",
+      "consistency_underperform_vs_baseline"
     ],
     "P015": [
       "low_longitudinal_consistency",

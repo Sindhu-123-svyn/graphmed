@@ -1,13 +1,13 @@
 {
   "patient_id": "P041",
-  "created_at": "2026-04-04T13:46:00.599282",
+  "created_at": "2026-04-06T19:49:32.552808",
   "nodes": [
     {
       "id": "P041",
       "type": "PATIENT",
       "name": "P041",
-      "added": "2026-04-04T13:46:00.599282",
-      "last_confirmed": "2026-04-04T13:46:00.599282",
+      "added": "2026-04-06T19:49:32.552808",
+      "last_confirmed": "2026-04-06T19:49:32.552808",
       "confidence": 1.0
     },
     {
@@ -16,7 +16,7 @@
       "type": "CONDITION",
       "added": "2022-01-15",
       "last_confirmed": "2024-02-14",
-      "confidence": 0.7433333333333333,
+      "confidence": 0.9486666666666667,
       "observed_dates": [
         "2022-01-15",
         "2023-01-10",
@@ -24,11 +24,13 @@
         "2024-02-14"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45,
       "history": [
         {
           "date": "2023-01-10",
           "old": {
-            "confidence": 0.7433333333333333
+            "confidence": 0.9486666666666667
           },
           "new": {
             "confirmed": true
@@ -37,7 +39,7 @@
         {
           "date": "2023-08-25",
           "old": {
-            "confidence": 0.7433333333333333
+            "confidence": 0.9486666666666667
           },
           "new": {
             "confirmed": true
@@ -46,7 +48,7 @@
         {
           "date": "2024-02-14",
           "old": {
-            "confidence": 0.7433333333333333
+            "confidence": 0.9486666666666667
           },
           "new": {
             "confirmed": true
@@ -61,17 +63,19 @@
       "type": "CONDITION",
       "added": "2022-01-15",
       "last_confirmed": "2023-01-10",
-      "confidence": 0.2,
+      "confidence": 0.7396666666666667,
       "observed_dates": [
         "2022-01-15",
         "2023-01-10"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45,
       "history": [
         {
           "date": "2023-01-10",
           "old": {
-            "confidence": 0.7433333333333333
+            "confidence": 0.9486666666666667
           },
           "new": {
             "confirmed": true
@@ -86,7 +90,7 @@
       "type": "MEDICATION",
       "added": "2022-01-15",
       "last_confirmed": "2023-08-25",
-      "confidence": 0.7116666666666667,
+      "confidence": 0.7693333333333333,
       "observed_dates": [
         "2022-01-15",
         "2022-06-18",
@@ -94,6 +98,8 @@
         "2023-08-25"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-06-18",
@@ -131,7 +137,7 @@
       "type": "MEDICATION",
       "added": "2022-01-15",
       "last_confirmed": "2023-08-25",
-      "confidence": 0.7116666666666667,
+      "confidence": 0.7693333333333333,
       "observed_dates": [
         "2022-01-15",
         "2022-06-18",
@@ -139,6 +145,8 @@
         "2023-08-25"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-06-18",
@@ -186,6 +194,8 @@
       ],
       "value": 8.2,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-06-18",
@@ -237,6 +247,8 @@
       ],
       "value": 160,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-06-18",
@@ -288,6 +300,8 @@
       ],
       "value": 110,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-06-18",
@@ -338,6 +352,8 @@
         "2024-02-14"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2022-06-18",
@@ -393,6 +409,8 @@
         "2024-02-14"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2022-06-18",
@@ -439,11 +457,13 @@
       "type": "CONDITION",
       "added": "2022-06-18",
       "last_confirmed": "2022-06-18",
-      "confidence": 0.2,
+      "confidence": 0.5850000000000001,
       "observed_dates": [
         "2022-06-18"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "MEDICATION_simvastatin",
@@ -455,7 +475,9 @@
       "observed_dates": [
         "2022-06-18"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "LAB_VALUE_ldl",
@@ -468,7 +490,9 @@
         "2022-06-18"
       ],
       "value": 140,
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "CONDITION_fluid_overload",
@@ -476,11 +500,13 @@
       "type": "CONDITION",
       "added": "2023-01-10",
       "last_confirmed": "2023-01-10",
-      "confidence": 0.2,
+      "confidence": 0.6865000000000001,
       "observed_dates": [
         "2023-01-10"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.015,
+      "confidence_floor_applied": 0.35
     },
     {
       "id": "MEDICATION_furosemide",
@@ -492,7 +518,9 @@
       "observed_dates": [
         "2023-01-10"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "LAB_VALUE_egfr",
@@ -508,6 +536,8 @@
       ],
       "value": 20,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-08-25",
@@ -533,12 +563,14 @@
       "type": "SYMPTOM",
       "added": "2023-01-10",
       "last_confirmed": "2023-08-25",
-      "confidence": 0.7116666666666667,
+      "confidence": 0.5386666666666666,
       "observed_dates": [
         "2023-01-10",
         "2023-08-25"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2023-08-25",
@@ -558,11 +590,13 @@
       "type": "MEDICATION",
       "added": "2023-08-25",
       "last_confirmed": "2023-08-25",
-      "confidence": 0.7116666666666667,
+      "confidence": 0.7693333333333333,
       "observed_dates": [
         "2023-08-25"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "CONDITION_end_stage_renal_disease",
@@ -574,7 +608,9 @@
       "observed_dates": [
         "2024-02-14"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.015,
+      "confidence_floor_applied": 0.35
     },
     {
       "id": "MEDICATION_losartan",
@@ -586,7 +622,9 @@
       "observed_dates": [
         "2024-02-14"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "PROCEDURE_hemodialysis",
@@ -598,7 +636,9 @@
       "observed_dates": [
         "2024-02-14"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.03,
+      "confidence_floor_applied": 0.2
     }
   ],
   "edges": [

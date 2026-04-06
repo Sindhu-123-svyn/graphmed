@@ -1,13 +1,13 @@
 {
   "patient_id": "P073",
-  "created_at": "2026-04-04T13:46:01.666742",
+  "created_at": "2026-04-06T19:49:33.202810",
   "nodes": [
     {
       "id": "P073",
       "type": "PATIENT",
       "name": "P073",
-      "added": "2026-04-04T13:46:01.666742",
-      "last_confirmed": "2026-04-04T13:46:01.666742",
+      "added": "2026-04-06T19:49:33.202810",
+      "last_confirmed": "2026-04-06T19:49:33.202810",
       "confidence": 1.0
     },
     {
@@ -16,12 +16,14 @@
       "type": "CONDITION",
       "added": "2022-06-01",
       "last_confirmed": "2022-11-01",
-      "confidence": 0.29333333333333333,
+      "confidence": 0.8586666666666667,
       "observed_dates": [
         "2022-06-01",
         "2022-11-01"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45,
       "history": [
         {
           "date": "2022-11-01",
@@ -41,13 +43,15 @@
       "type": "CONDITION",
       "added": "2022-06-01",
       "last_confirmed": "2023-09-01",
-      "confidence": 0.8,
+      "confidence": 0.96,
       "observed_dates": [
         "2022-06-01",
         "2022-11-01",
         "2023-09-01"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45,
       "history": [
         {
           "date": "2022-11-01",
@@ -61,7 +65,7 @@
         {
           "date": "2023-09-01",
           "old": {
-            "confidence": 0.8
+            "confidence": 0.96
           },
           "new": {
             "confirmed": true
@@ -76,11 +80,13 @@
       "type": "CONDITION",
       "added": "2022-06-01",
       "last_confirmed": "2022-06-01",
-      "confidence": 0.2,
+      "confidence": 0.7056666666666667,
       "observed_dates": [
         "2022-06-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "MEDICATION_metformin_twice_daily",
@@ -96,6 +102,8 @@
         "2023-09-01"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-11-01",
@@ -137,7 +145,9 @@
       "observed_dates": [
         "2022-06-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "LAB_VALUE_hba1c",
@@ -154,6 +164,8 @@
       ],
       "value": 7.5,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-11-01",
@@ -196,6 +208,8 @@
       ],
       "value": 140,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-11-01",
@@ -238,6 +252,8 @@
       ],
       "value": 90,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-11-01",
@@ -271,13 +287,15 @@
       "type": "SYMPTOM",
       "added": "2022-06-01",
       "last_confirmed": "2023-09-01",
-      "confidence": 0.8,
+      "confidence": 0.6799999999999999,
       "observed_dates": [
         "2022-06-01",
         "2022-11-01",
         "2023-09-01"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2022-11-01",
@@ -291,7 +309,7 @@
         {
           "date": "2023-09-01",
           "old": {
-            "confidence": 0.8
+            "confidence": 0.6799999999999999
           },
           "new": {
             "confirmed": true
@@ -313,6 +331,8 @@
         "2023-09-01"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-03-01",
@@ -348,6 +368,8 @@
         "2023-09-01"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-03-01",
@@ -376,11 +398,13 @@
       "type": "SYMPTOM",
       "added": "2022-11-01",
       "last_confirmed": "2022-11-01",
-      "confidence": 0.29333333333333333,
+      "confidence": 0.15,
       "observed_dates": [
         "2022-11-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "SYMPTOM_chest_pain",
@@ -388,11 +412,13 @@
       "type": "SYMPTOM",
       "added": "2022-11-01",
       "last_confirmed": "2022-11-01",
-      "confidence": 0.29333333333333333,
+      "confidence": 0.15,
       "observed_dates": [
         "2022-11-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "SYMPTOM_edema",
@@ -400,11 +426,13 @@
       "type": "SYMPTOM",
       "added": "2022-11-01",
       "last_confirmed": "2022-11-01",
-      "confidence": 0.29333333333333333,
+      "confidence": 0.15,
       "observed_dates": [
         "2022-11-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "SYMPTOM_chest_discomfort",
@@ -412,11 +440,13 @@
       "type": "SYMPTOM",
       "added": "2022-11-01",
       "last_confirmed": "2022-11-01",
-      "confidence": 0.29333333333333333,
+      "confidence": 0.15,
       "observed_dates": [
         "2022-11-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "SYMPTOM_swelling_in_the_legs",
@@ -424,11 +454,13 @@
       "type": "SYMPTOM",
       "added": "2022-11-01",
       "last_confirmed": "2022-11-01",
-      "confidence": 0.29333333333333333,
+      "confidence": 0.15,
       "observed_dates": [
         "2022-11-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "CONDITION_kidney_dysfunction",
@@ -436,11 +468,13 @@
       "type": "CONDITION",
       "added": "2023-03-01",
       "last_confirmed": "2023-03-01",
-      "confidence": 0.6933333333333334,
+      "confidence": 0.908,
       "observed_dates": [
         "2023-03-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.015,
+      "confidence_floor_applied": 0.35
     },
     {
       "id": "MEDICATION_enalapril",
@@ -448,11 +482,13 @@
       "type": "MEDICATION",
       "added": "2023-03-01",
       "last_confirmed": "2023-03-01",
-      "confidence": 0.6933333333333334,
+      "confidence": 0.7546666666666666,
       "observed_dates": [
         "2023-03-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "LAB_VALUE_egfr",
@@ -465,7 +501,9 @@
         "2023-03-01"
       ],
       "value": 50,
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "SYMPTOM_confusion",
@@ -473,11 +511,13 @@
       "type": "SYMPTOM",
       "added": "2023-03-01",
       "last_confirmed": "2023-03-01",
-      "confidence": 0.6933333333333334,
+      "confidence": 0.5093333333333333,
       "observed_dates": [
         "2023-03-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "SYMPTOM_difficulty_concentrating",
@@ -485,11 +525,13 @@
       "type": "SYMPTOM",
       "added": "2023-03-01",
       "last_confirmed": "2023-03-01",
-      "confidence": 0.6933333333333334,
+      "confidence": 0.5093333333333333,
       "observed_dates": [
         "2023-03-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "PROCEDURE_lifestyle_changes",
@@ -501,7 +543,9 @@
       "observed_dates": [
         "2023-09-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.03,
+      "confidence_floor_applied": 0.2
     }
   ],
   "edges": [

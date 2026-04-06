@@ -37,6 +37,23 @@ class PatientKnowledgeGraph:
                         last_confirmed=self.created_at,
                         confidence=1.0)
 
+        # Confidence policy: confidence is a freshness/trust signal, not truth probability.
+        self.decay_rate_by_type = {
+            "CONDITION": 0.015,
+            "MEDICATION": 0.04,
+            "LAB_VALUE": 0.05,
+            "SYMPTOM": 0.08,
+            "PROCEDURE": 0.03,
+        }
+        self.confidence_floor_by_type = {
+            "CONDITION": 0.35,
+            "MEDICATION": 0.2,
+            "LAB_VALUE": 0.2,
+            "SYMPTOM": 0.15,
+            "PROCEDURE": 0.2,
+        }
+        self.global_floor = 0.2
+
     def _normalize_name(self, name: str) -> str:
         """Normalize entity names for stable node identity."""
         value = str(name).strip().lower()
@@ -71,6 +88,225 @@ class PatientKnowledgeGraph:
                 pass
         # If parsing fails, keep first 10 chars (common ISO date prefix).
         return value[:10]
+
+    def _parse_date(self, date: str) -> datetime:
+        value = self._as_date_str(date)
+        return datetime.strptime(value, "%Y-%m-%d")
+
+    def _is_allergy_or_adverse_event(self, name: str, entity_type: str) -> bool:
+        text = self._normalize_name(name)
+        if entity_type != "CONDITION":
+            return False
+        allergy_markers = [
+            "allergy",
+            "allergic",
+            "anaphylaxis",
+            "adverse reaction",
+            "drug reaction",
+            "penicillin",
+            "sulfa",
+        ]
+        return any(marker in text for marker in allergy_markers)
+
+    def _is_chronic_condition(self, name: str, entity_type: str) -> bool:
+        if entity_type != "CONDITION":
+            return False
+        text = self._normalize_name(name)
+        chronic_markers = [
+            "chronic",
+            "diabetes",
+            "hypertension",
+            "ckd",
+            "kidney disease",
+            "coronary artery disease",
+            "cad",
+            "heart failure",
+            "copd",
+            "asthma",
+            "hyperlipidemia",
+            "hypothyroidism",
+        ]
+        return any(marker in text for marker in chronic_markers)
+
+    def _type_decay_rate(self, node_data: Dict, default_decay_rate: float) -> float:
+        entity_type = str(node_data.get("type", "")).upper()
+        base_rate = self.decay_rate_by_type.get(entity_type, default_decay_rate)
+
+        if self._is_allergy_or_adverse_event(node_data.get("name", ""), entity_type):
+            return min(base_rate, 0.005)
+        if self._is_chronic_condition(node_data.get("name", ""), entity_type):
+            return min(base_rate, 0.01)
+        return base_rate
+
+    def _type_confidence_floor(self, node_data: Dict) -> float:
+        entity_type = str(node_data.get("type", "")).upper()
+        floor = self.confidence_floor_by_type.get(entity_type, self.global_floor)
+
+        if self._is_allergy_or_adverse_event(node_data.get("name", ""), entity_type):
+            return max(floor, 0.55)
+        if self._is_chronic_condition(node_data.get("name", ""), entity_type):
+            return max(floor, 0.45)
+        return floor
+
+    def _is_conflicted(self, node_data: Dict) -> bool:
+        return str(node_data.get("status", "")).upper() == "CONFLICTED"
+
+    def _recency_score(self, node_data: Dict, as_of_date: str) -> float:
+        try:
+            as_of = self._parse_date(as_of_date)
+            last = self._parse_date(node_data.get("last_confirmed", as_of_date))
+            months_old = max(0.0, (as_of - last).days / 30.0)
+            return 1.0 / (1.0 + months_old)
+        except Exception:
+            return 0.5
+
+    def _semantic_overlap_score(self, query: str, name: str) -> float:
+        q_terms = {t for t in re.findall(r"[a-z0-9]+", self._normalize_name(query)) if t}
+        n_terms = {t for t in re.findall(r"[a-z0-9]+", self._normalize_name(name)) if t}
+        if not q_terms or not n_terms:
+            return 0.0
+        overlap = len(q_terms.intersection(n_terms))
+        return overlap / float(max(len(q_terms), 1))
+
+    def _source_reliability(self, node_data: Dict) -> float:
+        if "source_reliability" in node_data:
+            try:
+                return max(0.0, min(1.0, float(node_data.get("source_reliability", 0.7))))
+            except Exception:
+                pass
+
+        source = str(node_data.get("source", "")).lower()
+        if "structured" in source or "ehr" in source:
+            return 0.9
+        if "manual" in source:
+            return 0.75
+        if "llm" in source or "inferred" in source:
+            return 0.6
+        return 0.7
+
+    def _hybrid_score(
+        self,
+        query: str,
+        node_data: Dict,
+        as_of_date: str,
+        semantic_weight: float = 0.45,
+        confidence_weight: float = 0.25,
+        recency_weight: float = 0.2,
+        source_weight: float = 0.1,
+    ) -> Dict[str, float]:
+        semantic = self._semantic_overlap_score(query, node_data.get("name", ""))
+        confidence = max(0.0, min(1.0, float(node_data.get("confidence", 1.0))))
+        recency = self._recency_score(node_data, as_of_date)
+        source_reliability = self._source_reliability(node_data)
+
+        total = (
+            semantic_weight * semantic
+            + confidence_weight * confidence
+            + recency_weight * recency
+            + source_weight * source_reliability
+        )
+        return {
+            "hybrid_score": total,
+            "semantic": semantic,
+            "confidence": confidence,
+            "recency": recency,
+            "source_reliability": source_reliability,
+        }
+
+    def retrieve_hybrid_facts(
+        self,
+        query: str,
+        entity_types: Optional[List[str]] = None,
+        top_k: int = 8,
+        as_of_date: Optional[str] = None,
+    ) -> Dict[str, Any]:
+        """
+        Hybrid retrieval combining semantic relevance, confidence, recency,
+        and source reliability.
+        """
+        if as_of_date is None:
+            as_of_date = datetime.now().strftime("%Y-%m-%d")
+
+        scored: List[Dict[str, Any]] = []
+        for node_id, data in self.G.nodes(data=True):
+            node_type = str(data.get("type", "")).upper()
+            if node_type == "PATIENT":
+                continue
+            if entity_types and node_type not in {t.upper() for t in entity_types}:
+                continue
+
+            comp = self._hybrid_score(query, data, as_of_date)
+            scored.append(
+                {
+                    "node_id": node_id,
+                    "name": data.get("name", ""),
+                    "type": node_type,
+                    "last_confirmed": data.get("last_confirmed"),
+                    "status": data.get("status", ""),
+                    **comp,
+                }
+            )
+
+        scored.sort(key=lambda x: x["hybrid_score"], reverse=True)
+        top = scored[: max(1, top_k)]
+
+        conflicts = [
+            x
+            for x in scored
+            if str(x.get("status", "")).upper() == "CONFLICTED"
+        ]
+
+        return {
+            "query": query,
+            "scoring_formula": "semantic_relevance + confidence + recency + source_reliability",
+            "confidence_semantics": "Confidence is a freshness/trust signal, not truth probability.",
+            "top_facts": top,
+            "conflict_candidates": conflicts,
+        }
+
+    def _is_critical_historical(self, node_data: Dict) -> bool:
+        entity_type = str(node_data.get("type", "")).upper()
+        name = str(node_data.get("name", ""))
+        return (
+            self._is_allergy_or_adverse_event(name, entity_type)
+            or self._is_chronic_condition(name, entity_type)
+            or self._is_conflicted(node_data)
+        )
+
+    def retrieve_dual_channel_facts(
+        self,
+        query: str,
+        current_top_k: int = 6,
+        historical_top_k: int = 6,
+        as_of_date: Optional[str] = None,
+    ) -> Dict[str, Any]:
+        """
+        Dual channel retrieval:
+        - current_likely_state: what is most relevant and fresh now
+        - critical_historical_facts: allergies/chronic/conflicts even if older
+        """
+        hybrid = self.retrieve_hybrid_facts(query, top_k=max(current_top_k, historical_top_k) * 3, as_of_date=as_of_date)
+        all_scored = list(hybrid.get("top_facts", []))
+
+        # retrieve_hybrid_facts returns only top_k; for dual-channel we need all nodes.
+        # Recompute with very high top_k bounded by node count.
+        total_nodes = max(1, self.G.number_of_nodes() - 1)
+        full = self.retrieve_hybrid_facts(query, top_k=total_nodes, as_of_date=as_of_date)
+        all_scored = list(full.get("top_facts", []))
+
+        current_likely_state = all_scored[: max(1, current_top_k)]
+        critical_historical = [x for x in all_scored if self._is_critical_historical(self.G.nodes[x["node_id"]])]
+        critical_historical = critical_historical[: max(1, historical_top_k)]
+
+        conflict_candidates = full.get("conflict_candidates", [])
+
+        return {
+            "query": query,
+            "confidence_semantics": "Confidence is a freshness/trust signal, not truth probability.",
+            "current_likely_state": current_likely_state,
+            "critical_historical_facts": critical_historical,
+            "conflict_candidates": conflict_candidates,
+        }
     
     def add_entity(self, name: str, entity_type: str, date: str, 
                    confidence: float = 1.0, **kwargs) -> str:
@@ -227,12 +463,16 @@ class PatientKnowledgeGraph:
             last_confirmed = datetime.strptime(self._as_date_str(node_data.get('last_confirmed', current_date)), '%Y-%m-%d')
             months_old = (cur_date - last_confirmed).days / 30.0
             
-            # Calculate new confidence
+            # Type-specific decay with category safety floors.
             old_conf = node_data.get('confidence', 1.0)
-            new_conf = max(0.2, old_conf - months_old * decay_rate)
+            type_decay_rate = self._type_decay_rate(node_data, decay_rate)
+            floor = self._type_confidence_floor(node_data)
+            new_conf = max(floor, old_conf - months_old * type_decay_rate)
             
             node_data['confidence'] = new_conf
             node_data['decayed'] = True
+            node_data['decay_rate_applied'] = type_decay_rate
+            node_data['confidence_floor_applied'] = floor
     
     def get_entity(self, name: str, entity_type: str = None) -> Optional[str]:
         """

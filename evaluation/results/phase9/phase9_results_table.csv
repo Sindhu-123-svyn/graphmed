@@ -1,9 +1,9 @@
 experiment,mode,metric,graphmed,baseline
-E1 factual QA (50),fallback,FactScore,0.62,0.42
-E1 multi-visit subset,fallback,FactScore,0.0,0.0
-E2 longitudinal (50),fallback,BERTScore,0.7896539682539683,0.7896539682539683
-E2 longitudinal (50),fallback,ConsistencyScore,0.8305292063492062,0.8305292063492062
-E3 conflicts (30),fallback,Precision,1.0,0.0
-E3 conflicts (30),fallback,Recall,0.3,0.0
-E3 conflicts (30),fallback,F1,0.46153846153846156,0.0
-E3 conflicts (30),fallback,F1_vs_pure_llm_prompt,0.46153846153846156,0.0
+E1 factual QA (50),full_stack,FactScore,0.6066666666666667,0.6533333333333333
+E1 multi-visit subset,full_stack,FactScore,0.7333333333333333,0.5333333333333333
+E2 longitudinal (50),full_stack,BERTScore,-0.0935364160593599,0.04641052544116974
+E2 longitudinal (50),full_stack,ConsistencyScore,0.05382450875844806,0.16671593923739023
+E3 conflicts (30),full_stack,Precision,1.0,0.0
+E3 conflicts (30),full_stack,Recall,1.0,0.0
+E3 conflicts (30),full_stack,F1,1.0,0.0
+E3 conflicts (30),full_stack,F1_vs_pure_llm_prompt,1.0,0.0

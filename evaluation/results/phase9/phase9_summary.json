@@ -1,37 +1,37 @@
 {
   "experiment_1_factual_accuracy": {
-    "mode": "fallback",
-    "graphmed_mode": "fallback",
-    "baseline_mode": "fallback",
+    "mode": "full_stack",
+    "graphmed_mode": "full_stack",
+    "baseline_mode": "full_stack",
     "num_questions": 50,
-    "graphmed_factscore_mean": 0.62,
-    "baseline_factscore_mean": 0.42,
-    "graphmed_multi_visit_factscore_mean": 0.0,
-    "baseline_multi_visit_factscore_mean": 0.0,
-    "expected_finding_supported": false,
+    "graphmed_factscore_mean": 0.6066666666666667,
+    "baseline_factscore_mean": 0.6533333333333333,
+    "graphmed_multi_visit_factscore_mean": 0.7333333333333333,
+    "baseline_multi_visit_factscore_mean": 0.5333333333333333,
+    "expected_finding_supported": true,
     "manual_binary_review_samples": 20,
     "manual_template_file": "evaluation\\results\\phase9\\experiment1_manual_review_20.json"
   },
   "experiment_2_longitudinal_memory": {
-    "mode": "fallback",
-    "graphmed_mode": "fallback",
-    "baseline_mode": "fallback",
+    "mode": "full_stack",
+    "graphmed_mode": "full_stack",
+    "baseline_mode": "full_stack",
     "num_cases": 50,
-    "graphmed_bertscore_mean": 0.7896539682539683,
-    "baseline_bertscore_mean": 0.7896539682539683,
-    "graphmed_consistency_mean": 0.8305292063492062,
-    "baseline_consistency_mean": 0.8305292063492062,
+    "graphmed_bertscore_mean": -0.0935364160593599,
+    "baseline_bertscore_mean": 0.04641052544116974,
+    "graphmed_consistency_mean": 0.05382450875844806,
+    "baseline_consistency_mean": 0.16671593923739023,
     "expected_finding_supported": false
   },
   "experiment_3_conflict_detection": {
-    "mode": "fallback",
-    "graphmed_mode": "fallback",
+    "mode": "full_stack",
+    "graphmed_mode": "full_stack",
     "baseline_mode": "full_stack",
     "llm_prompt_mode": "fallback",
     "num_cases": 30,
     "graphmed_precision": 1.0,
-    "graphmed_recall": 0.3,
-    "graphmed_f1": 0.46153846153846156,
+    "graphmed_recall": 1.0,
+    "graphmed_f1": 1.0,
     "llm_prompt_precision": 0.0,
     "llm_prompt_recall": 0.0,
     "llm_prompt_f1": 0.0,
@@ -39,5 +39,78 @@
     "baseline_recall": 0.0,
     "baseline_f1": 0.0,
     "expected_finding_supported": true
+  },
+  "evaluation_driven_graph_updates": {
+    "run_id": "2026-04-06T14-50-47Z",
+    "timestamp": "2026-04-06T14:50:49Z",
+    "auto_update_enabled": true,
+    "patients_evaluated_for_circumstances": 11,
+    "patients_updated": 11,
+    "total_update_events": 21,
+    "audit_log_path": "evaluation\\results\\phase9\\evaluation_graph_update_audit.jsonl",
+    "circumstances": {
+      "P001": [
+        "low_factscore",
+        "factscore_underperform_vs_baseline",
+        "low_longitudinal_consistency",
+        "consistency_underperform_vs_baseline"
+      ],
+      "P002": [
+        "low_factscore",
+        "low_longitudinal_consistency",
+        "consistency_underperform_vs_baseline"
+      ],
+      "P004": [
+        "low_factscore",
+        "low_longitudinal_consistency"
+      ],
+      "P005": [
+        "low_longitudinal_consistency"
+      ],
+      "P006": [
+        "low_longitudinal_consistency",
+        "consistency_underperform_vs_baseline"
+      ],
+      "P008": [
+        "low_factscore",
+        "factscore_underperform_vs_baseline",
+        "low_longitudinal_consistency",
+        "consistency_underperform_vs_baseline"
+      ],
+      "P009": [
+        "factscore_underperform_vs_baseline"
+      ],
+      "P010": [
+        "low_factscore",
+        "factscore_underperform_vs_baseline",
+        "low_longitudinal_consistency"
+      ],
+      "P011": [
+        "low_longitudinal_consistency",
+        "consistency_underperform_vs_baseline"
+      ],
+      "P013": [
+        "low_longitudinal_consistency",
+        "consistency_underperform_vs_baseline"
+      ],
+      "P015": [
+        "low_longitudinal_consistency",
+        "consistency_underperform_vs_baseline"
+      ]
+    },
+    "status": "applied"
+  },
+  "guardrail_metrics": {
+    "confidence_semantics": "Confidence is tracked as freshness/trust signal, not truth probability.",
+    "factual_freshness_proxy": 0.7333333333333333,
+    "longitudinal_consistency_proxy": 0.05382450875844806,
+    "chronic_fact_recall_proxy": 0.7666666666666667,
+    "allergy_fact_recall_proxy": null,
+    "conflict_detection_recall": 1.0,
+    "coverage": {
+      "chronic_rows_used": 20,
+      "allergy_rows_used": 0,
+      "e1_graphmed_rows": 50
+    }
   }
 }

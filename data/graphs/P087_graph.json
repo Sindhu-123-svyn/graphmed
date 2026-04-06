@@ -1,13 +1,13 @@
 {
   "patient_id": "P087",
-  "created_at": "2026-04-04T13:46:02.171048",
+  "created_at": "2026-04-06T19:49:33.511818",
   "nodes": [
     {
       "id": "P087",
       "type": "PATIENT",
       "name": "P087",
-      "added": "2026-04-04T13:46:02.171048",
-      "last_confirmed": "2026-04-04T13:46:02.171048",
+      "added": "2026-04-06T19:49:33.511818",
+      "last_confirmed": "2026-04-06T19:49:33.511818",
       "confidence": 1.0
     },
     {
@@ -16,12 +16,14 @@
       "type": "CONDITION",
       "added": "2022-08-15",
       "last_confirmed": "2023-02-22",
-      "confidence": 0.5349999999999999,
+      "confidence": 0.907,
       "observed_dates": [
         "2022-08-15",
         "2023-02-22"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45,
       "history": [
         {
           "date": "2023-02-22",
@@ -41,17 +43,19 @@
       "type": "CONDITION",
       "added": "2022-08-15",
       "last_confirmed": "2023-11-28",
-      "confidence": 0.6816666666666666,
+      "confidence": 0.9363333333333334,
       "observed_dates": [
         "2022-08-15",
         "2023-11-28"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45,
       "history": [
         {
           "date": "2023-11-28",
           "old": {
-            "confidence": 0.6816666666666666
+            "confidence": 0.9363333333333334
           },
           "new": {
             "confirmed": true
@@ -66,12 +70,14 @@
       "type": "CONDITION",
       "added": "2022-08-15",
       "last_confirmed": "2023-02-22",
-      "confidence": 0.5349999999999999,
+      "confidence": 0.907,
       "observed_dates": [
         "2022-08-15",
         "2023-02-22"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45,
       "history": [
         {
           "date": "2023-02-22",
@@ -95,7 +101,9 @@
       "observed_dates": [
         "2022-08-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "MEDICATION_simvastatin",
@@ -107,7 +115,9 @@
       "observed_dates": [
         "2022-08-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "LAB_VALUE_hba1c",
@@ -123,6 +133,8 @@
       ],
       "value": 8.8,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-02-22",
@@ -156,6 +168,8 @@
       ],
       "value": "160 mmHg",
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-02-22",
@@ -189,6 +203,8 @@
       ],
       "value": "100 mmHg",
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-02-22",
@@ -222,6 +238,8 @@
       ],
       "value": "120 mg/dL",
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-02-22",
@@ -247,12 +265,14 @@
       "type": "SYMPTOM",
       "added": "2022-08-15",
       "last_confirmed": "2023-02-22",
-      "confidence": 0.5349999999999999,
+      "confidence": 0.2559999999999999,
       "observed_dates": [
         "2022-08-15",
         "2023-02-22"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2023-02-22",
@@ -272,11 +292,13 @@
       "type": "SYMPTOM",
       "added": "2022-08-15",
       "last_confirmed": "2022-08-15",
-      "confidence": 0.2,
+      "confidence": 0.15,
       "observed_dates": [
         "2022-08-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "SYMPTOM_polydipsia",
@@ -284,11 +306,13 @@
       "type": "SYMPTOM",
       "added": "2022-08-15",
       "last_confirmed": "2022-08-15",
-      "confidence": 0.2,
+      "confidence": 0.15,
       "observed_dates": [
         "2022-08-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "MEDICATION_lisinopril",
@@ -296,11 +320,13 @@
       "type": "MEDICATION",
       "added": "2023-02-22",
       "last_confirmed": "2023-02-22",
-      "confidence": 0.5349999999999999,
+      "confidence": 0.6279999999999999,
       "observed_dates": [
         "2023-02-22"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "MEDICATION_atorvastatin",
@@ -308,11 +334,13 @@
       "type": "MEDICATION",
       "added": "2023-02-22",
       "last_confirmed": "2023-02-22",
-      "confidence": 0.5349999999999999,
+      "confidence": 0.6279999999999999,
       "observed_dates": [
         "2023-02-22"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "SYMPTOM_increased_urination",
@@ -320,11 +348,13 @@
       "type": "SYMPTOM",
       "added": "2023-02-22",
       "last_confirmed": "2023-02-22",
-      "confidence": 0.5349999999999999,
+      "confidence": 0.2559999999999999,
       "observed_dates": [
         "2023-02-22"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "MEDICATION_furosemide",
@@ -336,7 +366,9 @@
       "observed_dates": [
         "2023-11-28"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "MEDICATION_sitagliptin",
@@ -348,7 +380,9 @@
       "observed_dates": [
         "2023-11-28"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "SYMPTOM_edema",
@@ -360,7 +394,9 @@
       "observed_dates": [
         "2023-11-28"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     }
   ],
   "edges": [

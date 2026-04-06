@@ -1,13 +1,13 @@
 {
   "patient_id": "P057",
-  "created_at": "2026-04-04T13:46:01.119495",
+  "created_at": "2026-04-06T19:49:32.870814",
   "nodes": [
     {
       "id": "P057",
       "type": "PATIENT",
       "name": "P057",
-      "added": "2026-04-04T13:46:01.119495",
-      "last_confirmed": "2026-04-04T13:46:01.119495",
+      "added": "2026-04-06T19:49:32.870814",
+      "last_confirmed": "2026-04-06T19:49:32.870814",
       "confidence": 1.0
     },
     {
@@ -16,7 +16,7 @@
       "type": "CONDITION",
       "added": "2022-03-14",
       "last_confirmed": "2023-08-01",
-      "confidence": 0.685,
+      "confidence": 0.937,
       "observed_dates": [
         "2022-03-14",
         "2022-09-12",
@@ -24,6 +24,8 @@
         "2023-08-01"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45,
       "history": [
         {
           "date": "2022-09-12",
@@ -61,7 +63,7 @@
       "type": "CONDITION",
       "added": "2022-03-14",
       "last_confirmed": "2024-02-06",
-      "confidence": 0.73,
+      "confidence": 0.946,
       "observed_dates": [
         "2022-03-14",
         "2022-09-12",
@@ -69,6 +71,8 @@
         "2024-02-06"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45,
       "history": [
         {
           "date": "2022-09-12",
@@ -82,7 +86,7 @@
         {
           "date": "2023-08-01",
           "old": {
-            "confidence": 0.73
+            "confidence": 0.946
           },
           "new": {
             "confirmed": true
@@ -91,7 +95,7 @@
         {
           "date": "2024-02-06",
           "old": {
-            "confidence": 0.73
+            "confidence": 0.946
           },
           "new": {
             "confirmed": true
@@ -112,6 +116,8 @@
         "2022-09-12"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-09-12",
@@ -137,11 +143,13 @@
         "2023-08-01"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-08-01",
           "old": {
-            "confidence": 0.2
+            "confidence": 0.29866666666666664
           },
           "new": {
             "confirmed": true
@@ -166,6 +174,8 @@
       ],
       "value": "elevated",
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-09-12",
@@ -217,6 +227,8 @@
       ],
       "value": "elevated",
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-09-12",
@@ -268,6 +280,8 @@
       ],
       "value": "elevated",
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-09-12",
@@ -318,6 +332,8 @@
       ],
       "value": "decreased",
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-02-21",
@@ -359,6 +375,8 @@
       ],
       "value": "unknown",
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-02-21",
@@ -384,7 +402,7 @@
       "type": "SYMPTOM",
       "added": "2022-03-14",
       "last_confirmed": "2024-02-06",
-      "confidence": 0.73,
+      "confidence": 0.568,
       "observed_dates": [
         "2022-03-14",
         "2022-09-12",
@@ -392,6 +410,8 @@
         "2024-02-06"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2022-09-12",
@@ -405,7 +425,7 @@
         {
           "date": "2023-08-01",
           "old": {
-            "confidence": 0.73
+            "confidence": 0.568
           },
           "new": {
             "confirmed": true
@@ -414,7 +434,7 @@
         {
           "date": "2024-02-06",
           "old": {
-            "confidence": 0.73
+            "confidence": 0.568
           },
           "new": {
             "confirmed": true
@@ -429,17 +449,19 @@
       "type": "SYMPTOM",
       "added": "2022-03-14",
       "last_confirmed": "2023-08-01",
-      "confidence": 0.2,
+      "confidence": 0.15,
       "observed_dates": [
         "2022-03-14",
         "2023-08-01"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2023-08-01",
           "old": {
-            "confidence": 0.2
+            "confidence": 0.15
           },
           "new": {
             "confirmed": true
@@ -454,7 +476,7 @@
       "type": "SYMPTOM",
       "added": "2022-03-14",
       "last_confirmed": "2024-02-06",
-      "confidence": 0.73,
+      "confidence": 0.568,
       "observed_dates": [
         "2022-03-14",
         "2022-09-12",
@@ -462,6 +484,8 @@
         "2024-02-06"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2022-09-12",
@@ -475,7 +499,7 @@
         {
           "date": "2023-08-01",
           "old": {
-            "confidence": 0.73
+            "confidence": 0.568
           },
           "new": {
             "confirmed": true
@@ -484,7 +508,7 @@
         {
           "date": "2024-02-06",
           "old": {
-            "confidence": 0.73
+            "confidence": 0.568
           },
           "new": {
             "confirmed": true
@@ -499,12 +523,14 @@
       "type": "MEDICATION",
       "added": "2022-09-12",
       "last_confirmed": "2023-02-21",
-      "confidence": 0.2,
+      "confidence": 0.31866666666666665,
       "observed_dates": [
         "2022-09-12",
         "2023-02-21"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-02-21",
@@ -524,11 +550,13 @@
       "type": "CONDITION",
       "added": "2023-02-21",
       "last_confirmed": "2023-02-21",
-      "confidence": 0.2,
+      "confidence": 0.8296666666666667,
       "observed_dates": [
         "2023-02-21"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "MEDICATION_metoprolol",
@@ -536,11 +564,13 @@
       "type": "MEDICATION",
       "added": "2023-02-21",
       "last_confirmed": "2023-02-21",
-      "confidence": 0.2,
+      "confidence": 0.31866666666666665,
       "observed_dates": [
         "2023-02-21"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "LAB_VALUE_hdl",
@@ -555,6 +585,8 @@
       ],
       "value": "unknown",
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-08-01",
@@ -579,6 +611,8 @@
       ],
       "value": "unknown",
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-08-01",
@@ -604,6 +638,8 @@
       ],
       "value": "elevated",
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-08-01",
@@ -636,6 +672,8 @@
       ],
       "value": "unknown",
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-08-01",
@@ -660,6 +698,8 @@
       ],
       "value": "unknown",
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-08-01",
@@ -677,11 +717,13 @@
       "type": "SYMPTOM",
       "added": "2023-02-21",
       "last_confirmed": "2023-02-21",
-      "confidence": 0.2,
+      "confidence": 0.15,
       "observed_dates": [
         "2023-02-21"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "SYMPTOM_palpitations",
@@ -689,11 +731,13 @@
       "type": "SYMPTOM",
       "added": "2023-02-21",
       "last_confirmed": "2023-02-21",
-      "confidence": 0.2,
+      "confidence": 0.15,
       "observed_dates": [
         "2023-02-21"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "SYMPTOM_jugular_venous_distension",
@@ -701,11 +745,13 @@
       "type": "SYMPTOM",
       "added": "2023-02-21",
       "last_confirmed": "2023-02-21",
-      "confidence": 0.2,
+      "confidence": 0.15,
       "observed_dates": [
         "2023-02-21"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "PROCEDURE_physical_examination",
@@ -713,11 +759,13 @@
       "type": "PROCEDURE",
       "added": "2023-02-21",
       "last_confirmed": "2023-02-21",
-      "confidence": 0.2,
+      "confidence": 0.489,
       "observed_dates": [
         "2023-02-21"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.03,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "CONDITION_chronic_kidney_disease",
@@ -725,11 +773,13 @@
       "type": "CONDITION",
       "added": "2023-08-01",
       "last_confirmed": "2023-08-01",
-      "confidence": 0.685,
+      "confidence": 0.937,
       "observed_dates": [
         "2023-08-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "MEDICATION_eplerenone",
@@ -743,6 +793,8 @@
         "2024-02-06"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2024-02-06",
@@ -766,7 +818,9 @@
       "observed_dates": [
         "2024-02-06"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "SYMPTOM_decreased_exercise_tolerance",
@@ -778,7 +832,9 @@
       "observed_dates": [
         "2024-02-06"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "PROCEDURE_hemodialysis",
@@ -790,7 +846,9 @@
       "observed_dates": [
         "2024-02-06"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.03,
+      "confidence_floor_applied": 0.2
     }
   ],
   "edges": [

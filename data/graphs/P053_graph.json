@@ -1,13 +1,13 @@
 {
   "patient_id": "P053",
-  "created_at": "2026-04-04T13:46:00.988740",
+  "created_at": "2026-04-06T19:49:32.794811",
   "nodes": [
     {
       "id": "P053",
       "type": "PATIENT",
       "name": "P053",
-      "added": "2026-04-04T13:46:00.988740",
-      "last_confirmed": "2026-04-04T13:46:00.988740",
+      "added": "2026-04-06T19:49:32.794811",
+      "last_confirmed": "2026-04-06T19:49:32.794811",
       "confidence": 1.0
     },
     {
@@ -16,11 +16,13 @@
       "type": "CONDITION",
       "added": "2022-06-15",
       "last_confirmed": "2022-06-15",
-      "confidence": 0.2,
+      "confidence": 0.47600000000000003,
       "observed_dates": [
         "2022-06-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "CONDITION_type_2_diabetes",
@@ -28,11 +30,13 @@
       "type": "CONDITION",
       "added": "2022-06-15",
       "last_confirmed": "2022-06-15",
-      "confidence": 0.2,
+      "confidence": 0.47600000000000003,
       "observed_dates": [
         "2022-06-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "CONDITION_hyperlipidemia",
@@ -40,11 +44,13 @@
       "type": "CONDITION",
       "added": "2022-06-15",
       "last_confirmed": "2022-06-15",
-      "confidence": 0.2,
+      "confidence": 0.47600000000000003,
       "observed_dates": [
         "2022-06-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "MEDICATION_metformin",
@@ -56,7 +62,9 @@
       "observed_dates": [
         "2022-06-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "MEDICATION_lisinopril",
@@ -64,7 +72,7 @@
       "type": "MEDICATION",
       "added": "2022-06-15",
       "last_confirmed": "2023-09-19",
-      "confidence": 0.7533333333333333,
+      "confidence": 0.8026666666666666,
       "observed_dates": [
         "2022-06-15",
         "2022-12-20",
@@ -72,6 +80,8 @@
         "2023-09-19"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-12-20",
@@ -113,7 +123,9 @@
       "observed_dates": [
         "2022-06-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "LAB_VALUE_hba1c",
@@ -131,6 +143,8 @@
       ],
       "value": 9.0,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-12-20",
@@ -182,6 +196,8 @@
       ],
       "value": 160,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-12-20",
@@ -233,6 +249,8 @@
       ],
       "value": 110,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-12-20",
@@ -284,6 +302,8 @@
       ],
       "value": 55.0,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-12-20",
@@ -335,6 +355,8 @@
       ],
       "value": 175.0,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-12-20",
@@ -376,11 +398,13 @@
       "type": "SYMPTOM",
       "added": "2022-06-15",
       "last_confirmed": "2022-06-15",
-      "confidence": 0.2,
+      "confidence": 0.15,
       "observed_dates": [
         "2022-06-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "SYMPTOM_palpitations",
@@ -388,11 +412,13 @@
       "type": "SYMPTOM",
       "added": "2022-06-15",
       "last_confirmed": "2022-06-15",
-      "confidence": 0.2,
+      "confidence": 0.15,
       "observed_dates": [
         "2022-06-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "CONDITION_chronic_kidney_disease",
@@ -400,11 +426,13 @@
       "type": "CONDITION",
       "added": "2022-12-20",
       "last_confirmed": "2022-12-20",
-      "confidence": 0.2,
+      "confidence": 0.7266666666666667,
       "observed_dates": [
         "2022-12-20"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "SYMPTOM_nocturia",
@@ -412,11 +440,13 @@
       "type": "SYMPTOM",
       "added": "2022-12-20",
       "last_confirmed": "2022-12-20",
-      "confidence": 0.2,
+      "confidence": 0.15,
       "observed_dates": [
         "2022-12-20"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "CONDITION_coronary_artery_disease",
@@ -424,11 +454,13 @@
       "type": "CONDITION",
       "added": "2023-04-25",
       "last_confirmed": "2023-04-25",
-      "confidence": 0.2633333333333333,
+      "confidence": 0.8526666666666666,
       "observed_dates": [
         "2023-04-25"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "MEDICATION_furosemide",
@@ -436,17 +468,19 @@
       "type": "MEDICATION",
       "added": "2023-04-25",
       "last_confirmed": "2024-02-14",
-      "confidence": 0.755,
+      "confidence": 0.804,
       "observed_dates": [
         "2023-04-25",
         "2024-02-14"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2024-02-14",
           "old": {
-            "confidence": 0.755
+            "confidence": 0.804
           },
           "new": {
             "confirmed": true
@@ -461,17 +495,19 @@
       "type": "SYMPTOM",
       "added": "2023-04-25",
       "last_confirmed": "2024-02-14",
-      "confidence": 0.755,
+      "confidence": 0.608,
       "observed_dates": [
         "2023-04-25",
         "2024-02-14"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2024-02-14",
           "old": {
-            "confidence": 0.755
+            "confidence": 0.608
           },
           "new": {
             "confirmed": true
@@ -486,11 +522,13 @@
       "type": "SYMPTOM",
       "added": "2023-04-25",
       "last_confirmed": "2023-04-25",
-      "confidence": 0.2633333333333333,
+      "confidence": 0.15,
       "observed_dates": [
         "2023-04-25"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "SYMPTOM_obesity",
@@ -498,11 +536,13 @@
       "type": "SYMPTOM",
       "added": "2023-04-25",
       "last_confirmed": "2023-04-25",
-      "confidence": 0.2633333333333333,
+      "confidence": 0.15,
       "observed_dates": [
         "2023-04-25"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "CONDITION_retinopathy",
@@ -510,11 +550,13 @@
       "type": "CONDITION",
       "added": "2023-09-19",
       "last_confirmed": "2023-09-19",
-      "confidence": 0.7533333333333333,
+      "confidence": 0.926,
       "observed_dates": [
         "2023-09-19"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.015,
+      "confidence_floor_applied": 0.35
     },
     {
       "id": "MEDICATION_amlodipine",
@@ -522,11 +564,13 @@
       "type": "MEDICATION",
       "added": "2023-09-19",
       "last_confirmed": "2023-09-19",
-      "confidence": 0.7533333333333333,
+      "confidence": 0.8026666666666666,
       "observed_dates": [
         "2023-09-19"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "SYMPTOM_dizziness",
@@ -534,11 +578,13 @@
       "type": "SYMPTOM",
       "added": "2023-09-19",
       "last_confirmed": "2023-09-19",
-      "confidence": 0.7533333333333333,
+      "confidence": 0.6053333333333333,
       "observed_dates": [
         "2023-09-19"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "SYMPTOM_headaches",
@@ -546,11 +592,13 @@
       "type": "SYMPTOM",
       "added": "2023-09-19",
       "last_confirmed": "2023-09-19",
-      "confidence": 0.7533333333333333,
+      "confidence": 0.6053333333333333,
       "observed_dates": [
         "2023-09-19"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "CONDITION_heart_failure",
@@ -562,7 +610,9 @@
       "observed_dates": [
         "2024-02-14"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "SYMPTOM_shortness_of_breath",
@@ -574,7 +624,9 @@
       "observed_dates": [
         "2024-02-14"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     }
   ],
   "edges": [

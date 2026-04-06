@@ -1,13 +1,13 @@
 {
   "patient_id": "P076",
-  "created_at": "2026-04-04T13:46:01.765324",
+  "created_at": "2026-04-06T19:49:33.267811",
   "nodes": [
     {
       "id": "P076",
       "type": "PATIENT",
       "name": "P076",
-      "added": "2026-04-04T13:46:01.765324",
-      "last_confirmed": "2026-04-04T13:46:01.765324",
+      "added": "2026-04-06T19:49:33.267811",
+      "last_confirmed": "2026-04-06T19:49:33.267811",
       "confidence": 1.0
     },
     {
@@ -16,11 +16,13 @@
       "type": "CONDITION",
       "added": "2022-03-01",
       "last_confirmed": "2022-03-01",
-      "confidence": 0.2,
+      "confidence": 0.45,
       "observed_dates": [
         "2022-03-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "CONDITION_hyperlipidemia",
@@ -28,11 +30,13 @@
       "type": "CONDITION",
       "added": "2022-03-01",
       "last_confirmed": "2022-03-01",
-      "confidence": 0.2,
+      "confidence": 0.45,
       "observed_dates": [
         "2022-03-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "MEDICATION_statin",
@@ -46,6 +50,8 @@
         "2022-09-01"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-09-01",
@@ -69,7 +75,9 @@
       "observed_dates": [
         "2022-03-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "LAB_VALUE_bp_systolic",
@@ -87,6 +95,8 @@
       ],
       "value": 110,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-09-01",
@@ -138,6 +148,8 @@
       ],
       "value": 60,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-09-01",
@@ -179,13 +191,15 @@
       "type": "SYMPTOM",
       "added": "2022-03-01",
       "last_confirmed": "2024-03-01",
-      "confidence": 0.2,
+      "confidence": 0.15,
       "observed_dates": [
         "2022-03-01",
         "2022-09-01",
         "2024-03-01"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2022-09-01",
@@ -199,7 +213,7 @@
         {
           "date": "2024-03-01",
           "old": {
-            "confidence": 0.2
+            "confidence": 0.15
           },
           "new": {
             "confirmed": true
@@ -214,13 +228,15 @@
       "type": "SYMPTOM",
       "added": "2022-03-01",
       "last_confirmed": "2023-03-01",
-      "confidence": 0.2,
+      "confidence": 0.15,
       "observed_dates": [
         "2022-03-01",
         "2022-09-01",
         "2023-03-01"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2022-09-01",
@@ -249,11 +265,13 @@
       "type": "SYMPTOM",
       "added": "2022-03-01",
       "last_confirmed": "2022-03-01",
-      "confidence": 0.2,
+      "confidence": 0.15,
       "observed_dates": [
         "2022-03-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "CONDITION_type_2_diabetes",
@@ -261,18 +279,20 @@
       "type": "CONDITION",
       "added": "2022-09-01",
       "last_confirmed": "2024-03-01",
-      "confidence": 0.6983333333333333,
+      "confidence": 0.9396666666666667,
       "observed_dates": [
         "2022-09-01",
         "2023-09-01",
         "2024-03-01"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45,
       "history": [
         {
           "date": "2023-09-01",
           "old": {
-            "confidence": 0.6983333333333333
+            "confidence": 0.9396666666666667
           },
           "new": {
             "confirmed": true
@@ -281,7 +301,7 @@
         {
           "date": "2024-03-01",
           "old": {
-            "confidence": 0.6983333333333333
+            "confidence": 0.9396666666666667
           },
           "new": {
             "confirmed": true
@@ -305,6 +325,8 @@
       ],
       "value": 6.8,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-03-01",
@@ -343,7 +365,9 @@
         "2022-09-01"
       ],
       "value": 180,
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "CONDITION_diabetes_mellitus",
@@ -351,11 +375,13 @@
       "type": "CONDITION",
       "added": "2023-03-01",
       "last_confirmed": "2023-03-01",
-      "confidence": 0.2,
+      "confidence": 0.8166666666666667,
       "observed_dates": [
         "2023-03-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "CONDITION_chronic_kidney_disease",
@@ -363,12 +389,14 @@
       "type": "CONDITION",
       "added": "2023-03-01",
       "last_confirmed": "2023-09-01",
-      "confidence": 0.6966666666666667,
+      "confidence": 0.9393333333333334,
       "observed_dates": [
         "2023-03-01",
         "2023-09-01"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45,
       "history": [
         {
           "date": "2023-09-01",
@@ -388,11 +416,13 @@
       "type": "MEDICATION",
       "added": "2023-03-01",
       "last_confirmed": "2023-03-01",
-      "confidence": 0.2,
+      "confidence": 0.2666666666666666,
       "observed_dates": [
         "2023-03-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "LAB_VALUE_egfr",
@@ -407,6 +437,8 @@
       ],
       "value": 45,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-09-01",
@@ -424,11 +456,13 @@
       "type": "SYMPTOM",
       "added": "2023-03-01",
       "last_confirmed": "2023-03-01",
-      "confidence": 0.2,
+      "confidence": 0.15,
       "observed_dates": [
         "2023-03-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "PROCEDURE_referral_to_nephrologist",
@@ -436,11 +470,13 @@
       "type": "PROCEDURE",
       "added": "2023-03-01",
       "last_confirmed": "2023-03-01",
-      "confidence": 0.2,
+      "confidence": 0.45000000000000007,
       "observed_dates": [
         "2023-03-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.03,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "MEDICATION_diuretic",
@@ -448,11 +484,13 @@
       "type": "MEDICATION",
       "added": "2023-09-01",
       "last_confirmed": "2023-09-01",
-      "confidence": 0.6966666666666667,
+      "confidence": 0.7573333333333333,
       "observed_dates": [
         "2023-09-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "SYMPTOM_shortness_of_breath",
@@ -460,11 +498,13 @@
       "type": "SYMPTOM",
       "added": "2023-09-01",
       "last_confirmed": "2023-09-01",
-      "confidence": 0.6966666666666667,
+      "confidence": 0.5146666666666666,
       "observed_dates": [
         "2023-09-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "SYMPTOM_edema",
@@ -472,11 +512,13 @@
       "type": "SYMPTOM",
       "added": "2023-09-01",
       "last_confirmed": "2023-09-01",
-      "confidence": 0.6966666666666667,
+      "confidence": 0.5146666666666666,
       "observed_dates": [
         "2023-09-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "PROCEDURE_dialysis",
@@ -484,11 +526,13 @@
       "type": "PROCEDURE",
       "added": "2023-09-01",
       "last_confirmed": "2023-09-01",
-      "confidence": 0.6966666666666667,
+      "confidence": 0.8180000000000001,
       "observed_dates": [
         "2023-09-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.03,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "CONDITION_kidney_failure",
@@ -500,7 +544,9 @@
       "observed_dates": [
         "2024-03-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.015,
+      "confidence_floor_applied": 0.35
     },
     {
       "id": "MEDICATION_fluid_balance_medication",
@@ -512,7 +558,9 @@
       "observed_dates": [
         "2024-03-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "SYMPTOM_muscle_cramps",
@@ -524,7 +572,9 @@
       "observed_dates": [
         "2024-03-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "PROCEDURE_in_center_hemodialysis",
@@ -536,7 +586,9 @@
       "observed_dates": [
         "2024-03-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.03,
+      "confidence_floor_applied": 0.2
     }
   ],
   "edges": [

@@ -1,13 +1,13 @@
 {
   "patient_id": "P007",
-  "created_at": "2026-04-04T13:45:59.418690",
+  "created_at": "2026-04-06T19:49:31.907989",
   "nodes": [
     {
       "id": "P007",
       "type": "PATIENT",
       "name": "P007",
-      "added": "2026-04-04T13:45:59.418690",
-      "last_confirmed": "2026-04-04T13:45:59.418690",
+      "added": "2026-04-06T19:49:31.907989",
+      "last_confirmed": "2026-04-06T19:49:31.907989",
       "confidence": 1.0
     },
     {
@@ -16,11 +16,13 @@
       "type": "CONDITION",
       "added": "2022-06-15",
       "last_confirmed": "2022-06-15",
-      "confidence": 0.2,
+      "confidence": 0.744,
       "observed_dates": [
         "2022-06-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "CONDITION_type_2_diabetes",
@@ -28,12 +30,14 @@
       "type": "CONDITION",
       "added": "2022-06-15",
       "last_confirmed": "2023-02-20",
-      "confidence": 0.5533333333333332,
+      "confidence": 0.9106666666666666,
       "observed_dates": [
         "2022-06-15",
         "2023-02-20"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45,
       "history": [
         {
           "date": "2023-02-20",
@@ -53,11 +57,13 @@
       "type": "CONDITION",
       "added": "2022-06-15",
       "last_confirmed": "2022-06-15",
-      "confidence": 0.2,
+      "confidence": 0.744,
       "observed_dates": [
         "2022-06-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "MEDICATION_metformin",
@@ -69,7 +75,9 @@
       "observed_dates": [
         "2022-06-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "MEDICATION_lisinopril",
@@ -81,7 +89,9 @@
       "observed_dates": [
         "2022-06-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "MEDICATION_atorvastatin",
@@ -93,7 +103,9 @@
       "observed_dates": [
         "2022-06-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "LAB_VALUE_hba1c",
@@ -109,6 +121,8 @@
       ],
       "value": 9.0,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-02-20",
@@ -142,6 +156,8 @@
       ],
       "value": 160,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-02-20",
@@ -175,6 +191,8 @@
       ],
       "value": 100,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-02-20",
@@ -208,6 +226,8 @@
       ],
       "value": "155 mg/dL",
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-02-20",
@@ -240,6 +260,8 @@
         "2023-11-15"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2023-02-20",
@@ -268,11 +290,13 @@
       "type": "SYMPTOM",
       "added": "2022-06-15",
       "last_confirmed": "2022-06-15",
-      "confidence": 0.2,
+      "confidence": 0.15,
       "observed_dates": [
         "2022-06-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "SYMPTOM_weight_loss",
@@ -280,17 +304,19 @@
       "type": "SYMPTOM",
       "added": "2022-06-15",
       "last_confirmed": "2023-11-15",
-      "confidence": 0.5833333333333333,
+      "confidence": 0.33333333333333326,
       "observed_dates": [
         "2022-06-15",
         "2023-11-15"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2023-11-15",
           "old": {
-            "confidence": 0.5833333333333333
+            "confidence": 0.33333333333333326
           },
           "new": {
             "confirmed": true
@@ -305,11 +331,13 @@
       "type": "CONDITION",
       "added": "2023-02-20",
       "last_confirmed": "2023-02-20",
-      "confidence": 0.5533333333333332,
+      "confidence": 0.866,
       "observed_dates": [
         "2023-02-20"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.015,
+      "confidence_floor_applied": 0.35
     },
     {
       "id": "MEDICATION_amlodipine",
@@ -317,11 +345,13 @@
       "type": "MEDICATION",
       "added": "2023-02-20",
       "last_confirmed": "2023-02-20",
-      "confidence": 0.5533333333333332,
+      "confidence": 0.6426666666666667,
       "observed_dates": [
         "2023-02-20"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "MEDICATION_simvastatin",
@@ -329,11 +359,13 @@
       "type": "MEDICATION",
       "added": "2023-02-20",
       "last_confirmed": "2023-02-20",
-      "confidence": 0.5533333333333332,
+      "confidence": 0.6426666666666667,
       "observed_dates": [
         "2023-02-20"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "MEDICATION_furosemide",
@@ -341,11 +373,13 @@
       "type": "MEDICATION",
       "added": "2023-02-20",
       "last_confirmed": "2023-02-20",
-      "confidence": 0.5533333333333332,
+      "confidence": 0.6426666666666667,
       "observed_dates": [
         "2023-02-20"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "SYMPTOM_decreased_urine_output",
@@ -353,11 +387,13 @@
       "type": "SYMPTOM",
       "added": "2023-02-20",
       "last_confirmed": "2023-02-20",
-      "confidence": 0.5533333333333332,
+      "confidence": 0.2853333333333333,
       "observed_dates": [
         "2023-02-20"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "CONDITION_coronary_artery_disease",
@@ -369,7 +405,9 @@
       "observed_dates": [
         "2023-11-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "MEDICATION_losartan",
@@ -381,7 +419,9 @@
       "observed_dates": [
         "2023-11-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "MEDICATION_metoprolol",
@@ -393,7 +433,9 @@
       "observed_dates": [
         "2023-11-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "MEDICATION_aspirin",
@@ -405,7 +447,9 @@
       "observed_dates": [
         "2023-11-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "MEDICATION_enalapril",
@@ -417,7 +461,9 @@
       "observed_dates": [
         "2023-11-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "SYMPTOM_shortness_of_breath",
@@ -429,7 +475,9 @@
       "observed_dates": [
         "2023-11-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     }
   ],
   "edges": [

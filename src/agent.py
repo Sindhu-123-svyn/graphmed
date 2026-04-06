@@ -91,31 +91,85 @@ class GraphMedAgent:
         try:
             pkg = self._load_patient_graph(patient_id)
 
+            query_map = {
+                "conditions": "active conditions and diagnosis status",
+                "medications": "current medications and treatment history",
+                "symptoms": "current symptoms and symptom history",
+                "labs": "latest lab values and meaningful lab history",
+                "all": "overall patient current status and major history",
+            }
+
+            dual = pkg.retrieve_dual_channel_facts(
+                query=query_map.get(query_type, query_map["all"]),
+                current_top_k=6,
+                historical_top_k=6,
+            )
+
+            def _render(channel_payload: Dict[str, Any], label: str, type_filter: Optional[str] = None) -> str:
+                current = channel_payload.get("current_likely_state", [])
+                historical = channel_payload.get("critical_historical_facts", [])
+                conflicts = channel_payload.get("conflict_candidates", [])
+
+                if type_filter:
+                    current = [x for x in current if x.get("type") == type_filter]
+                    historical = [x for x in historical if x.get("type") == type_filter or x in conflicts]
+
+                lines = [
+                    f"{label} (confidence-aware)",
+                    "Confidence semantics: freshness/trust signal, not truth probability.",
+                    "Current likely state:",
+                ]
+
+                if current:
+                    for item in current[:5]:
+                        lines.append(
+                            "- "
+                            f"{item.get('name')} [{item.get('type')}] "
+                            f"score={item.get('hybrid_score', 0.0):.3f} "
+                            f"conf={item.get('confidence', 0.0):.2f}"
+                        )
+                else:
+                    lines.append("- none")
+
+                lines.append("Critical historical facts:")
+                if historical:
+                    for item in historical[:5]:
+                        lines.append(
+                            "- "
+                            f"{item.get('name')} [{item.get('type')}] conf={item.get('confidence', 0.0):.2f}"
+                        )
+                else:
+                    lines.append("- none")
+
+                lines.append("Conflict candidates:")
+                if conflicts:
+                    for item in conflicts[:5]:
+                        lines.append(
+                            "- "
+                            f"{item.get('name')} [{item.get('type')}] conf={item.get('confidence', 0.0):.2f}"
+                        )
+                else:
+                    lines.append("- none")
+                return "\n".join(lines)
+
             if query_type == "conditions":
-                entities = pkg.get_entities_by_type("CONDITION")
-                names = [data.get("name", "") for _, data in entities if data.get("name")]
-                return f"Conditions: {', '.join(names)}" if names else "No conditions found in patient record."
+                return _render(dual, "Conditions", type_filter="CONDITION")
 
             if query_type == "medications":
-                entities = pkg.get_entities_by_type("MEDICATION")
-                names = [data.get("name", "") for _, data in entities if data.get("name")]
-                return f"Medications: {', '.join(names)}" if names else "No medications found in patient record."
+                return _render(dual, "Medications", type_filter="MEDICATION")
 
             if query_type == "symptoms":
-                entities = pkg.get_entities_by_type("SYMPTOM")
-                names = [data.get("name", "") for _, data in entities if data.get("name")]
-                return f"Symptoms: {', '.join(names)}" if names else "No symptoms documented."
+                return _render(dual, "Symptoms", type_filter="SYMPTOM")
 
             if query_type == "labs":
-                entities = pkg.get_entities_by_type("LAB_VALUE")
-                labs_info = [f"{data.get('name')}: {data.get('value', 'N/A')}" for _, data in entities]
-                return f"Lab values: {', '.join(labs_info)}" if labs_info else "No lab values found."
+                return _render(dual, "Lab values", type_filter="LAB_VALUE")
 
             summary = pkg.summary()
             return (
                 f"Graph summary: nodes={summary['total_nodes']}, edges={summary['total_edges']}, "
                 f"conditions={summary['node_types'].get('CONDITION', 0)}, "
-                f"medications={summary['node_types'].get('MEDICATION', 0)}"
+                f"medications={summary['node_types'].get('MEDICATION', 0)}\n"
+                + _render(dual, "Top facts")
             )
         except Exception as e:
             return f"Error querying patient graph: {e}"

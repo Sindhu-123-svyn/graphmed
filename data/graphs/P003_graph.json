@@ -1,13 +1,13 @@
 {
   "patient_id": "P003",
-  "created_at": "2026-04-04T13:45:59.328859",
+  "created_at": "2026-04-06T19:49:31.837183",
   "nodes": [
     {
       "id": "P003",
       "type": "PATIENT",
       "name": "P003",
-      "added": "2026-04-04T13:45:59.328859",
-      "last_confirmed": "2026-04-04T13:45:59.328859",
+      "added": "2026-04-06T19:49:31.837183",
+      "last_confirmed": "2026-04-06T19:49:31.837183",
       "confidence": 1.0
     },
     {
@@ -23,6 +23,8 @@
         "2023-08-02"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45,
       "history": [
         {
           "date": "2023-01-10",
@@ -51,12 +53,14 @@
       "type": "CONDITION",
       "added": "2022-06-15",
       "last_confirmed": "2023-01-10",
-      "confidence": 0.6599999999999999,
+      "confidence": 0.9319999999999999,
       "observed_dates": [
         "2022-06-15",
         "2023-01-10"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45,
       "history": [
         {
           "date": "2023-01-10",
@@ -76,12 +80,14 @@
       "type": "MEDICATION",
       "added": "2022-06-15",
       "last_confirmed": "2023-01-10",
-      "confidence": 0.6599999999999999,
+      "confidence": 0.728,
       "observed_dates": [
         "2022-06-15",
         "2023-01-10"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-01-10",
@@ -101,17 +107,19 @@
       "type": "MEDICATION",
       "added": "2022-06-15",
       "last_confirmed": "2023-08-02",
-      "confidence": 0.6516666666666666,
+      "confidence": 0.7213333333333334,
       "observed_dates": [
         "2022-06-15",
         "2023-08-02"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-08-02",
           "old": {
-            "confidence": 0.6516666666666666
+            "confidence": 0.7213333333333334
           },
           "new": {
             "confirmed": true
@@ -133,6 +141,8 @@
       ],
       "value": "elevated",
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-01-10",
@@ -158,6 +168,8 @@
       ],
       "value": "elevated",
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-01-10",
@@ -183,12 +195,14 @@
       "type": "SYMPTOM",
       "added": "2022-06-15",
       "last_confirmed": "2023-01-10",
-      "confidence": 0.6599999999999999,
+      "confidence": 0.45599999999999996,
       "observed_dates": [
         "2022-06-15",
         "2023-01-10"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2023-01-10",
@@ -208,11 +222,13 @@
       "type": "SYMPTOM",
       "added": "2022-06-15",
       "last_confirmed": "2022-06-15",
-      "confidence": 0.2,
+      "confidence": 0.15,
       "observed_dates": [
         "2022-06-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "MEDICATION_statin",
@@ -220,11 +236,13 @@
       "type": "MEDICATION",
       "added": "2023-01-10",
       "last_confirmed": "2023-01-10",
-      "confidence": 0.6599999999999999,
+      "confidence": 0.728,
       "observed_dates": [
         "2023-01-10"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "LAB_VALUE_bp_diastolic",
@@ -239,6 +257,8 @@
       ],
       "value": "elevated",
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-08-02",
@@ -261,7 +281,9 @@
         "2023-01-10"
       ],
       "value": "elevated",
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "SYMPTOM_increased_urination",
@@ -269,11 +291,13 @@
       "type": "SYMPTOM",
       "added": "2023-01-10",
       "last_confirmed": "2023-01-10",
-      "confidence": 0.6599999999999999,
+      "confidence": 0.45599999999999996,
       "observed_dates": [
         "2023-01-10"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "CONDITION_chronic_kidney_disease",
@@ -285,7 +309,9 @@
       "observed_dates": [
         "2023-08-02"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "MEDICATION_ace_inhibitor",
@@ -297,7 +323,9 @@
       "observed_dates": [
         "2023-08-02"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "LAB_VALUE_egfr",
@@ -310,7 +338,9 @@
         "2023-08-02"
       ],
       "value": "worsening",
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "SYMPTOM_shortness_of_breath",
@@ -322,7 +352,9 @@
       "observed_dates": [
         "2023-08-02"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     }
   ],
   "edges": [

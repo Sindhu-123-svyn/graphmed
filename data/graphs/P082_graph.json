@@ -1,13 +1,13 @@
 {
   "patient_id": "P082",
-  "created_at": "2026-04-04T13:46:01.998696",
+  "created_at": "2026-04-06T19:49:33.393806",
   "nodes": [
     {
       "id": "P082",
       "type": "PATIENT",
       "name": "P082",
-      "added": "2026-04-04T13:46:01.998696",
-      "last_confirmed": "2026-04-04T13:46:01.998696",
+      "added": "2026-04-06T19:49:33.393806",
+      "last_confirmed": "2026-04-06T19:49:33.393806",
       "confidence": 1.0
     },
     {
@@ -16,17 +16,19 @@
       "type": "CONDITION",
       "added": "2022-01-15",
       "last_confirmed": "2023-09-13",
-      "confidence": 0.2,
+      "confidence": 0.7413333333333333,
       "observed_dates": [
         "2022-01-15",
         "2023-09-13"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45,
       "history": [
         {
           "date": "2023-09-13",
           "old": {
-            "confidence": 0.2
+            "confidence": 0.8036666666666666
           },
           "new": {
             "confirmed": true
@@ -41,11 +43,13 @@
       "type": "CONDITION",
       "added": "2022-01-15",
       "last_confirmed": "2022-01-15",
-      "confidence": 0.2,
+      "confidence": 0.45,
       "observed_dates": [
         "2022-01-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "CONDITION_hyperlipidemia",
@@ -53,12 +57,14 @@
       "type": "CONDITION",
       "added": "2022-01-15",
       "last_confirmed": "2022-07-20",
-      "confidence": 0.2,
+      "confidence": 0.5853333333333333,
       "observed_dates": [
         "2022-01-15",
         "2022-07-20"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45,
       "history": [
         {
           "date": "2022-07-20",
@@ -82,7 +88,9 @@
       "observed_dates": [
         "2022-01-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "MEDICATION_lisinopril",
@@ -94,7 +102,9 @@
       "observed_dates": [
         "2022-01-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "LAB_VALUE_hba1c",
@@ -111,6 +121,8 @@
       ],
       "value": 6.8,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-07-20",
@@ -144,18 +156,20 @@
       "type": "SYMPTOM",
       "added": "2022-01-15",
       "last_confirmed": "2024-03-18",
-      "confidence": 0.35166666666666657,
+      "confidence": 0.15,
       "observed_dates": [
         "2022-01-15",
         "2023-02-22",
         "2024-03-18"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2023-02-22",
           "old": {
-            "confidence": 0.69
+            "confidence": 0.504
           },
           "new": {
             "confirmed": true
@@ -164,7 +178,7 @@
         {
           "date": "2024-03-18",
           "old": {
-            "confidence": 0.35166666666666657
+            "confidence": 0.15
           },
           "new": {
             "confirmed": true
@@ -179,17 +193,19 @@
       "type": "SYMPTOM",
       "added": "2022-01-15",
       "last_confirmed": "2024-03-18",
-      "confidence": 0.2,
+      "confidence": 0.15,
       "observed_dates": [
         "2022-01-15",
         "2024-03-18"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2024-03-18",
           "old": {
-            "confidence": 0.2
+            "confidence": 0.15
           },
           "new": {
             "confirmed": true
@@ -204,17 +220,19 @@
       "type": "SYMPTOM",
       "added": "2022-01-15",
       "last_confirmed": "2024-03-18",
-      "confidence": 0.2,
+      "confidence": 0.15,
       "observed_dates": [
         "2022-01-15",
         "2024-03-18"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2024-03-18",
           "old": {
-            "confidence": 0.2
+            "confidence": 0.15
           },
           "new": {
             "confirmed": true
@@ -233,7 +251,9 @@
       "observed_dates": [
         "2022-07-20"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "SYMPTOM_chest_pain",
@@ -241,11 +261,13 @@
       "type": "SYMPTOM",
       "added": "2022-07-20",
       "last_confirmed": "2022-07-20",
-      "confidence": 0.2,
+      "confidence": 0.15,
       "observed_dates": [
         "2022-07-20"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "PROCEDURE_ecg",
@@ -253,12 +275,14 @@
       "type": "PROCEDURE",
       "added": "2022-07-20",
       "last_confirmed": "2023-02-22",
-      "confidence": 0.2,
+      "confidence": 0.40700000000000003,
       "observed_dates": [
         "2022-07-20",
         "2023-02-22"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.03,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-02-22",
@@ -278,11 +302,13 @@
       "type": "CONDITION",
       "added": "2023-02-22",
       "last_confirmed": "2023-02-22",
-      "confidence": 0.2,
+      "confidence": 0.8023333333333333,
       "observed_dates": [
         "2023-02-22"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "MEDICATION_aspirin",
@@ -290,11 +316,13 @@
       "type": "MEDICATION",
       "added": "2023-02-22",
       "last_confirmed": "2023-02-22",
-      "confidence": 0.2,
+      "confidence": 0.20933333333333337,
       "observed_dates": [
         "2023-02-22"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "LAB_VALUE_bp_systolic",
@@ -307,7 +335,9 @@
         "2023-02-22"
       ],
       "value": 150,
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "LAB_VALUE_bp_diastolic",
@@ -320,7 +350,9 @@
         "2023-02-22"
       ],
       "value": 100,
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "LAB_VALUE_egfr",
@@ -336,6 +368,8 @@
       ],
       "value": 30.0,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-09-13",
@@ -366,7 +400,9 @@
         "2023-02-22"
       ],
       "value": 180,
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "SYMPTOM_shortness_of_breath",
@@ -374,17 +410,19 @@
       "type": "SYMPTOM",
       "added": "2023-02-22",
       "last_confirmed": "2024-03-18",
-      "confidence": 0.6616666666666666,
+      "confidence": 0.45866666666666667,
       "observed_dates": [
         "2023-02-22",
         "2024-03-18"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2024-03-18",
           "old": {
-            "confidence": 0.6616666666666666
+            "confidence": 0.45866666666666667
           },
           "new": {
             "confirmed": true
@@ -399,11 +437,13 @@
       "type": "SYMPTOM",
       "added": "2023-02-22",
       "last_confirmed": "2023-02-22",
-      "confidence": 0.2,
+      "confidence": 0.15,
       "observed_dates": [
         "2023-02-22"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "CONDITION_chronic_kidney_disease",
@@ -417,6 +457,8 @@
         "2024-03-18"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45,
       "history": [
         {
           "date": "2024-03-18",
@@ -436,11 +478,13 @@
       "type": "MEDICATION",
       "added": "2023-09-13",
       "last_confirmed": "2023-09-13",
-      "confidence": 0.6883333333333332,
+      "confidence": 0.7506666666666666,
       "observed_dates": [
         "2023-09-13"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "MEDICATION_amlodipine",
@@ -448,11 +492,13 @@
       "type": "MEDICATION",
       "added": "2023-09-13",
       "last_confirmed": "2023-09-13",
-      "confidence": 0.6883333333333332,
+      "confidence": 0.7506666666666666,
       "observed_dates": [
         "2023-09-13"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "SYMPTOM_worsening_renal_function",
@@ -460,11 +506,13 @@
       "type": "SYMPTOM",
       "added": "2023-09-13",
       "last_confirmed": "2023-09-13",
-      "confidence": 0.6883333333333332,
+      "confidence": 0.5013333333333333,
       "observed_dates": [
         "2023-09-13"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "CONDITION_anemia",
@@ -476,7 +524,9 @@
       "observed_dates": [
         "2024-03-18"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.015,
+      "confidence_floor_applied": 0.35
     },
     {
       "id": "MEDICATION_erythropoietin",
@@ -488,7 +538,9 @@
       "observed_dates": [
         "2024-03-18"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "SYMPTOM_intermittent_chest_pain",
@@ -500,7 +552,9 @@
       "observed_dates": [
         "2024-03-18"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "SYMPTOM_anemia",
@@ -512,7 +566,9 @@
       "observed_dates": [
         "2024-03-18"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "PROCEDURE_dialysis_referral",
@@ -524,7 +580,9 @@
       "observed_dates": [
         "2024-03-18"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.03,
+      "confidence_floor_applied": 0.2
     }
   ],
   "edges": [

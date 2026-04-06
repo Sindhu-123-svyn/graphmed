@@ -1,13 +1,13 @@
 {
   "patient_id": "P083",
-  "created_at": "2026-04-04T13:46:02.031621",
+  "created_at": "2026-04-06T19:49:33.413806",
   "nodes": [
     {
       "id": "P083",
       "type": "PATIENT",
       "name": "P083",
-      "added": "2026-04-04T13:46:02.031621",
-      "last_confirmed": "2026-04-04T13:46:02.031621",
+      "added": "2026-04-06T19:49:33.413806",
+      "last_confirmed": "2026-04-06T19:49:33.413806",
       "confidence": 1.0
     },
     {
@@ -16,11 +16,13 @@
       "type": "CONDITION",
       "added": "2022-09-01",
       "last_confirmed": "2022-09-01",
-      "confidence": 0.2,
+      "confidence": 0.544,
       "observed_dates": [
         "2022-09-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "CONDITION_type_2_diabetes",
@@ -28,11 +30,13 @@
       "type": "CONDITION",
       "added": "2022-09-01",
       "last_confirmed": "2022-09-01",
-      "confidence": 0.2,
+      "confidence": 0.544,
       "observed_dates": [
         "2022-09-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "CONDITION_hyperlipidemia",
@@ -40,11 +44,13 @@
       "type": "CONDITION",
       "added": "2022-09-01",
       "last_confirmed": "2022-09-01",
-      "confidence": 0.2,
+      "confidence": 0.544,
       "observed_dates": [
         "2022-09-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "MEDICATION_metformin",
@@ -56,7 +62,9 @@
       "observed_dates": [
         "2022-09-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "MEDICATION_lisinopril",
@@ -68,7 +76,9 @@
       "observed_dates": [
         "2022-09-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "LAB_VALUE_hba1c",
@@ -85,6 +95,8 @@
       ],
       "value": 9.0,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-03-01",
@@ -127,6 +139,8 @@
       ],
       "value": 165,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-03-01",
@@ -169,6 +183,8 @@
       ],
       "value": 105,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-03-01",
@@ -211,6 +227,8 @@
       ],
       "value": 150,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-03-01",
@@ -244,13 +262,15 @@
       "type": "SYMPTOM",
       "added": "2022-09-01",
       "last_confirmed": "2024-08-01",
-      "confidence": 0.49,
+      "confidence": 0.18400000000000005,
       "observed_dates": [
         "2022-09-01",
         "2023-03-01",
         "2024-08-01"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2023-03-01",
@@ -264,7 +284,7 @@
         {
           "date": "2024-08-01",
           "old": {
-            "confidence": 0.49
+            "confidence": 0.18400000000000005
           },
           "new": {
             "confirmed": true
@@ -279,11 +299,13 @@
       "type": "SYMPTOM",
       "added": "2022-09-01",
       "last_confirmed": "2022-09-01",
-      "confidence": 0.2,
+      "confidence": 0.15,
       "observed_dates": [
         "2022-09-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "CONDITION_chronic_kidney_disease",
@@ -291,11 +313,13 @@
       "type": "CONDITION",
       "added": "2023-03-01",
       "last_confirmed": "2023-03-01",
-      "confidence": 0.2,
+      "confidence": 0.725,
       "observed_dates": [
         "2023-03-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "CONDITION_coronary_artery_disease",
@@ -303,11 +327,13 @@
       "type": "CONDITION",
       "added": "2023-03-01",
       "last_confirmed": "2023-03-01",
-      "confidence": 0.2,
+      "confidence": 0.725,
       "observed_dates": [
         "2023-03-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "MEDICATION_simvastatin",
@@ -319,7 +345,9 @@
       "observed_dates": [
         "2023-03-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "MEDICATION_empagliflozin",
@@ -331,7 +359,9 @@
       "observed_dates": [
         "2023-03-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "SYMPTOM_shortness_of_breath",
@@ -339,12 +369,14 @@
       "type": "SYMPTOM",
       "added": "2023-03-01",
       "last_confirmed": "2024-01-01",
-      "confidence": 0.645,
+      "confidence": 0.43200000000000005,
       "observed_dates": [
         "2023-03-01",
         "2024-01-01"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2024-01-01",
@@ -364,11 +396,13 @@
       "type": "CONDITION",
       "added": "2024-01-01",
       "last_confirmed": "2024-01-01",
-      "confidence": 0.645,
+      "confidence": 0.929,
       "observed_dates": [
         "2024-01-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "CONDITION_gout",
@@ -376,11 +410,13 @@
       "type": "CONDITION",
       "added": "2024-01-01",
       "last_confirmed": "2024-01-01",
-      "confidence": 0.645,
+      "confidence": 0.8935,
       "observed_dates": [
         "2024-01-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.015,
+      "confidence_floor_applied": 0.35
     },
     {
       "id": "MEDICATION_sacubitril_valsartan",
@@ -388,11 +424,13 @@
       "type": "MEDICATION",
       "added": "2024-01-01",
       "last_confirmed": "2024-01-01",
-      "confidence": 0.645,
+      "confidence": 0.716,
       "observed_dates": [
         "2024-01-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "MEDICATION_allopurinol",
@@ -400,11 +438,13 @@
       "type": "MEDICATION",
       "added": "2024-01-01",
       "last_confirmed": "2024-01-01",
-      "confidence": 0.645,
+      "confidence": 0.716,
       "observed_dates": [
         "2024-01-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "SYMPTOM_edema",
@@ -412,11 +452,13 @@
       "type": "SYMPTOM",
       "added": "2024-01-01",
       "last_confirmed": "2024-01-01",
-      "confidence": 0.645,
+      "confidence": 0.43200000000000005,
       "observed_dates": [
         "2024-01-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "SYMPTOM_swelling_in_the_legs",
@@ -424,11 +466,13 @@
       "type": "SYMPTOM",
       "added": "2024-01-01",
       "last_confirmed": "2024-01-01",
-      "confidence": 0.645,
+      "confidence": 0.43200000000000005,
       "observed_dates": [
         "2024-01-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "CONDITION_diabetic_nephropathy",
@@ -440,7 +484,9 @@
       "observed_dates": [
         "2024-08-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.015,
+      "confidence_floor_applied": 0.35
     },
     {
       "id": "MEDICATION_tolvaptan",
@@ -452,7 +498,9 @@
       "observed_dates": [
         "2024-08-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "MEDICATION_pioglitazone",
@@ -464,7 +512,9 @@
       "observed_dates": [
         "2024-08-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "SYMPTOM_difficulty_breathing",
@@ -476,7 +526,9 @@
       "observed_dates": [
         "2024-08-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     }
   ],
   "edges": [

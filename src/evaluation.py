@@ -672,6 +672,98 @@ class Phase9Evaluator:
             writer.writeheader()
             writer.writerows(rows)
 
+    def _keyword_hit_ratio(self, answer: str, keywords: List[str]) -> float:
+        if not keywords:
+            return 0.0
+        text = _safe_lower(answer)
+        hits = 0
+        for kw in keywords:
+            k = _safe_lower(kw)
+            if k and k in text:
+                hits += 1
+        return float(hits) / float(len(keywords))
+
+    def _extract_marker_keywords(self, row: Dict[str, Any], markers: List[str]) -> List[str]:
+        keywords = []
+        for kw in row.get("expected_keywords", []) or []:
+            low = _safe_lower(kw)
+            if any(marker in low for marker in markers):
+                keywords.append(str(kw))
+
+        # If expected keywords do not contain explicit markers, use question/expected hints.
+        if keywords:
+            return keywords
+
+        hint_blob = " ".join(
+            [
+                _safe_lower(row.get("question", "")),
+                _safe_lower(row.get("expected_answer", "")),
+                _safe_lower(row.get("question_type", "")),
+            ]
+        )
+        if any(marker in hint_blob for marker in markers):
+            return [m for m in markers if m in hint_blob][:3]
+        return []
+
+    def _compute_guardrail_metrics(
+        self,
+        e1_result: Dict[str, Any],
+        e2_result: Dict[str, Any],
+        e3_result: Dict[str, Any],
+    ) -> Dict[str, Any]:
+        e1_rows = [r for r in (e1_result.get("rows", []) or []) if r.get("system") == "graphmed"]
+        chronic_markers = [
+            "diabetes",
+            "hypertension",
+            "chronic",
+            "ckd",
+            "heart failure",
+            "cad",
+            "coronary",
+            "asthma",
+            "copd",
+            "hyperlipidemia",
+        ]
+        allergy_markers = [
+            "allergy",
+            "allergies",
+            "anaphylaxis",
+            "penicillin",
+            "sulfa",
+            "adverse reaction",
+        ]
+
+        chronic_scores: List[float] = []
+        allergy_scores: List[float] = []
+        for row in e1_rows:
+            answer = row.get("normalized_answer") or row.get("answer", "")
+
+            chronic_targets = self._extract_marker_keywords(row, chronic_markers)
+            if chronic_targets:
+                chronic_scores.append(self._keyword_hit_ratio(answer, chronic_targets))
+
+            allergy_targets = self._extract_marker_keywords(row, allergy_markers)
+            if allergy_targets:
+                allergy_scores.append(self._keyword_hit_ratio(answer, allergy_targets))
+
+        freshness_proxy = float(e1_result.get("graphmed_multi_visit_factscore_mean", 0.0))
+        consistency_proxy = float(e2_result.get("graphmed_consistency_mean", 0.0))
+        conflict_recall = float(e3_result.get("graphmed", {}).get("recall", 0.0))
+
+        return {
+            "confidence_semantics": "Confidence is tracked as freshness/trust signal, not truth probability.",
+            "factual_freshness_proxy": freshness_proxy,
+            "longitudinal_consistency_proxy": consistency_proxy,
+            "chronic_fact_recall_proxy": float(statistics.mean(chronic_scores)) if chronic_scores else None,
+            "allergy_fact_recall_proxy": float(statistics.mean(allergy_scores)) if allergy_scores else None,
+            "conflict_detection_recall": conflict_recall,
+            "coverage": {
+                "chronic_rows_used": len(chronic_scores),
+                "allergy_rows_used": len(allergy_scores),
+                "e1_graphmed_rows": len(e1_rows),
+            },
+        }
+
     # ------------------------------------------------------------------
     # Experiment 1: factual accuracy on 50 clinical QA
     # ------------------------------------------------------------------
@@ -1289,6 +1381,8 @@ class Phase9Evaluator:
                         "error": str(e),
                     }
 
+        guardrail_metrics = self._compute_guardrail_metrics(e1, e2, e3)
+
         summary = {
             "experiment_1_factual_accuracy": {
                 "mode": e1["mode"],
@@ -1332,9 +1426,11 @@ class Phase9Evaluator:
                 "expected_finding_supported": e3["expected_finding_supported"],
             },
             "evaluation_driven_graph_updates": update_summary,
+            "guardrail_metrics": guardrail_metrics,
         }
 
         self._save_json(self.output_dir / "phase9_summary.json", summary)
+        self._save_json(self.output_dir / "phase9_guardrail_metrics.json", guardrail_metrics)
 
         # Save paper-style compact result table.
         table_rows = [

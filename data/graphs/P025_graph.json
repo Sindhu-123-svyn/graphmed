@@ -1,13 +1,13 @@
 {
   "patient_id": "P025",
-  "created_at": "2026-04-04T13:45:59.948407",
+  "created_at": "2026-04-06T19:49:32.231806",
   "nodes": [
     {
       "id": "P025",
       "type": "PATIENT",
       "name": "P025",
-      "added": "2026-04-04T13:45:59.948407",
-      "last_confirmed": "2026-04-04T13:45:59.948407",
+      "added": "2026-04-06T19:49:32.231806",
+      "last_confirmed": "2026-04-06T19:49:32.231806",
       "confidence": 1.0
     },
     {
@@ -23,6 +23,8 @@
         "2024-05-01"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45,
       "history": [
         {
           "date": "2023-09-01",
@@ -58,6 +60,8 @@
         "2024-05-01"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45,
       "history": [
         {
           "date": "2023-09-01",
@@ -93,6 +97,8 @@
         "2024-05-01"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-09-01",
@@ -129,6 +135,8 @@
       ],
       "value": "elevated",
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-09-01",
@@ -162,6 +170,8 @@
       ],
       "value": "high",
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-09-01",
@@ -187,11 +197,13 @@
       "type": "SYMPTOM",
       "added": "2022-03-01",
       "last_confirmed": "2022-03-01",
-      "confidence": 0.2,
+      "confidence": 0.15,
       "observed_dates": [
         "2022-03-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "SYMPTOM_high_ldl_level",
@@ -206,6 +218,8 @@
         "2024-05-01"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2023-09-01",
@@ -234,11 +248,13 @@
       "type": "MEDICATION",
       "added": "2023-09-01",
       "last_confirmed": "2023-09-01",
-      "confidence": 0.595,
+      "confidence": 0.6759999999999999,
       "observed_dates": [
         "2023-09-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "LAB_VALUE_bp_diastolic",
@@ -253,6 +269,8 @@
       ],
       "value": "elevated",
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2024-05-01",
@@ -277,6 +295,8 @@
       ],
       "value": "decreased",
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2024-05-01",
@@ -301,6 +321,8 @@
       ],
       "value": "to be monitored",
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2024-05-01",
@@ -324,6 +346,8 @@
         "2024-05-01"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2024-05-01",
@@ -343,11 +367,13 @@
       "type": "SYMPTOM",
       "added": "2023-09-01",
       "last_confirmed": "2023-09-01",
-      "confidence": 0.595,
+      "confidence": 0.352,
       "observed_dates": [
         "2023-09-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "CONDITION_coronary_artery_disease",
@@ -359,7 +385,9 @@
       "observed_dates": [
         "2024-05-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "MEDICATION_ace_inhibitor",
@@ -371,7 +399,9 @@
       "observed_dates": [
         "2024-05-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     }
   ],
   "edges": [

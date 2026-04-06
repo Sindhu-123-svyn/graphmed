@@ -1,13 +1,13 @@
 {
   "patient_id": "P085",
-  "created_at": "2026-04-04T13:46:02.101631",
+  "created_at": "2026-04-06T19:49:33.460863",
   "nodes": [
     {
       "id": "P085",
       "type": "PATIENT",
       "name": "P085",
-      "added": "2026-04-04T13:46:02.101631",
-      "last_confirmed": "2026-04-04T13:46:02.101631",
+      "added": "2026-04-06T19:49:33.460863",
+      "last_confirmed": "2026-04-06T19:49:33.460863",
       "confidence": 1.0
     },
     {
@@ -16,11 +16,13 @@
       "type": "CONDITION",
       "added": "2022-02-15",
       "last_confirmed": "2022-02-15",
-      "confidence": 0.2,
+      "confidence": 0.778,
       "observed_dates": [
         "2022-02-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "CONDITION_type_2_diabetes",
@@ -28,11 +30,13 @@
       "type": "CONDITION",
       "added": "2022-02-15",
       "last_confirmed": "2022-02-15",
-      "confidence": 0.2,
+      "confidence": 0.778,
       "observed_dates": [
         "2022-02-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "MEDICATION_metformin",
@@ -44,7 +48,9 @@
       "observed_dates": [
         "2022-02-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "MEDICATION_lisinopril",
@@ -56,7 +62,9 @@
       "observed_dates": [
         "2022-02-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "LAB_VALUE_hba1c",
@@ -72,6 +80,8 @@
       ],
       "value": 7.5,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-09-20",
@@ -105,6 +115,8 @@
       ],
       "value": "elevated",
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-09-20",
@@ -138,6 +150,8 @@
       ],
       "value": "unknown",
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-09-20",
@@ -163,12 +177,14 @@
       "type": "SYMPTOM",
       "added": "2022-02-15",
       "last_confirmed": "2022-09-20",
-      "confidence": 0.6133333333333333,
+      "confidence": 0.3813333333333333,
       "observed_dates": [
         "2022-02-15",
         "2022-09-20"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2022-09-20",
@@ -188,11 +204,13 @@
       "type": "SYMPTOM",
       "added": "2022-02-15",
       "last_confirmed": "2022-02-15",
-      "confidence": 0.2,
+      "confidence": 0.15,
       "observed_dates": [
         "2022-02-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "SYMPTOM_polydipsia",
@@ -200,11 +218,13 @@
       "type": "SYMPTOM",
       "added": "2022-02-15",
       "last_confirmed": "2022-02-15",
-      "confidence": 0.2,
+      "confidence": 0.15,
       "observed_dates": [
         "2022-02-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "CONDITION_hyperlipidemia",
@@ -212,11 +232,13 @@
       "type": "CONDITION",
       "added": "2022-09-20",
       "last_confirmed": "2022-09-20",
-      "confidence": 0.6133333333333333,
+      "confidence": 0.9226666666666666,
       "observed_dates": [
         "2022-09-20"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "CONDITION_glycemic_control",
@@ -224,11 +246,13 @@
       "type": "CONDITION",
       "added": "2022-09-20",
       "last_confirmed": "2022-09-20",
-      "confidence": 0.6133333333333333,
+      "confidence": 0.884,
       "observed_dates": [
         "2022-09-20"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.015,
+      "confidence_floor_applied": 0.35
     },
     {
       "id": "MEDICATION_simvastatin",
@@ -236,11 +260,13 @@
       "type": "MEDICATION",
       "added": "2022-09-20",
       "last_confirmed": "2022-09-20",
-      "confidence": 0.6133333333333333,
+      "confidence": 0.6906666666666667,
       "observed_dates": [
         "2022-09-20"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "MEDICATION_sitagliptin",
@@ -254,6 +280,8 @@
         "2023-05-10"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-05-10",
@@ -280,6 +308,8 @@
       ],
       "value": 45,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-05-10",
@@ -302,7 +332,9 @@
         "2022-09-20"
       ],
       "value": "unknown",
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "LAB_VALUE_hdl",
@@ -315,7 +347,9 @@
         "2022-09-20"
       ],
       "value": "unknown",
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "LAB_VALUE_creatinine",
@@ -328,7 +362,9 @@
         "2022-09-20"
       ],
       "value": "unknown",
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "LAB_VALUE_glucose",
@@ -341,7 +377,9 @@
         "2022-09-20"
       ],
       "value": "unknown",
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "LAB_VALUE_potassium",
@@ -354,7 +392,9 @@
         "2022-09-20"
       ],
       "value": "unknown",
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "LAB_VALUE_sodium",
@@ -367,7 +407,9 @@
         "2022-09-20"
       ],
       "value": "unknown",
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "SYMPTOM_shortness_of_breath",
@@ -375,11 +417,13 @@
       "type": "SYMPTOM",
       "added": "2022-09-20",
       "last_confirmed": "2022-09-20",
-      "confidence": 0.6133333333333333,
+      "confidence": 0.3813333333333333,
       "observed_dates": [
         "2022-09-20"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "CONDITION_kidney_function",
@@ -391,7 +435,9 @@
       "observed_dates": [
         "2023-05-10"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.015,
+      "confidence_floor_applied": 0.35
     },
     {
       "id": "MEDICATION_aliskiren",
@@ -403,7 +449,9 @@
       "observed_dates": [
         "2023-05-10"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "SYMPTOM_worsening_kidney_function",
@@ -415,7 +463,9 @@
       "observed_dates": [
         "2023-05-10"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     }
   ],
   "edges": [

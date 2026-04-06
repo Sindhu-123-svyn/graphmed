@@ -1,13 +1,13 @@
 {
   "patient_id": "P079",
-  "created_at": "2026-04-04T13:46:01.882000",
+  "created_at": "2026-04-06T19:49:33.331807",
   "nodes": [
     {
       "id": "P079",
       "type": "PATIENT",
       "name": "P079",
-      "added": "2026-04-04T13:46:01.882000",
-      "last_confirmed": "2026-04-04T13:46:01.882000",
+      "added": "2026-04-06T19:49:33.331807",
+      "last_confirmed": "2026-04-06T19:49:33.331807",
       "confidence": 1.0
     },
     {
@@ -16,17 +16,19 @@
       "type": "CONDITION",
       "added": "2022-01-15",
       "last_confirmed": "2023-08-22",
-      "confidence": 0.2,
+      "confidence": 0.7473333333333333,
       "observed_dates": [
         "2022-01-15",
         "2023-08-22"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45,
       "history": [
         {
           "date": "2023-08-22",
           "old": {
-            "confidence": 0.2
+            "confidence": 0.8063333333333333
           },
           "new": {
             "confirmed": true
@@ -41,11 +43,13 @@
       "type": "CONDITION",
       "added": "2022-01-15",
       "last_confirmed": "2022-01-15",
-      "confidence": 0.2,
+      "confidence": 0.45,
       "observed_dates": [
         "2022-01-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "CONDITION_hyperlipidemia",
@@ -53,11 +57,13 @@
       "type": "CONDITION",
       "added": "2022-01-15",
       "last_confirmed": "2022-01-15",
-      "confidence": 0.2,
+      "confidence": 0.45,
       "observed_dates": [
         "2022-01-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "MEDICATION_metformin_po_bid",
@@ -69,7 +75,9 @@
       "observed_dates": [
         "2022-01-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "MEDICATION_lisinopril_po_daily",
@@ -81,7 +89,9 @@
       "observed_dates": [
         "2022-01-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "LAB_VALUE_bp_systolic",
@@ -99,6 +109,8 @@
       ],
       "value": 165,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-07-20",
@@ -150,6 +162,8 @@
       ],
       "value": 105,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-07-20",
@@ -191,12 +205,14 @@
       "type": "SYMPTOM",
       "added": "2022-01-15",
       "last_confirmed": "2022-07-20",
-      "confidence": 0.2,
+      "confidence": 0.15,
       "observed_dates": [
         "2022-01-15",
         "2022-07-20"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2022-07-20",
@@ -216,11 +232,13 @@
       "type": "SYMPTOM",
       "added": "2022-01-15",
       "last_confirmed": "2022-01-15",
-      "confidence": 0.2,
+      "confidence": 0.15,
       "observed_dates": [
         "2022-01-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "CONDITION_chronic_kidney_disease",
@@ -228,11 +246,13 @@
       "type": "CONDITION",
       "added": "2022-07-20",
       "last_confirmed": "2022-07-20",
-      "confidence": 0.2,
+      "confidence": 0.606,
       "observed_dates": [
         "2022-07-20"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "MEDICATION_lisinopril",
@@ -246,6 +266,8 @@
         "2024-02-15"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2024-02-15",
@@ -272,6 +294,8 @@
       ],
       "value": "decreased",
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2024-02-15",
@@ -289,12 +313,14 @@
       "type": "SYMPTOM",
       "added": "2022-07-20",
       "last_confirmed": "2023-02-14",
-      "confidence": 0.2,
+      "confidence": 0.15,
       "observed_dates": [
         "2022-07-20",
         "2023-02-14"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2023-02-14",
@@ -314,11 +340,13 @@
       "type": "CONDITION",
       "added": "2023-02-14",
       "last_confirmed": "2023-02-14",
-      "confidence": 0.2,
+      "confidence": 0.7224999999999999,
       "observed_dates": [
         "2023-02-14"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.015,
+      "confidence_floor_applied": 0.35
     },
     {
       "id": "CONDITION_dyspnea",
@@ -326,11 +354,13 @@
       "type": "CONDITION",
       "added": "2023-02-14",
       "last_confirmed": "2023-02-14",
-      "confidence": 0.2,
+      "confidence": 0.7224999999999999,
       "observed_dates": [
         "2023-02-14"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.015,
+      "confidence_floor_applied": 0.35
     },
     {
       "id": "MEDICATION_metformin",
@@ -338,11 +368,13 @@
       "type": "MEDICATION",
       "added": "2023-02-14",
       "last_confirmed": "2023-02-14",
-      "confidence": 0.2,
+      "confidence": 0.26,
       "observed_dates": [
         "2023-02-14"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "LAB_VALUE_creatinine",
@@ -355,7 +387,9 @@
         "2023-02-14"
       ],
       "value": 160,
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "SYMPTOM_edema",
@@ -363,11 +397,13 @@
       "type": "SYMPTOM",
       "added": "2023-02-14",
       "last_confirmed": "2023-02-14",
-      "confidence": 0.2,
+      "confidence": 0.15,
       "observed_dates": [
         "2023-02-14"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "MEDICATION_atorvastatin",
@@ -375,11 +411,13 @@
       "type": "MEDICATION",
       "added": "2023-08-22",
       "last_confirmed": "2023-08-22",
-      "confidence": 0.705,
+      "confidence": 0.764,
       "observed_dates": [
         "2023-08-22"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "SYMPTOM_chest_pain",
@@ -387,11 +425,13 @@
       "type": "SYMPTOM",
       "added": "2023-08-22",
       "last_confirmed": "2023-08-22",
-      "confidence": 0.705,
+      "confidence": 0.528,
       "observed_dates": [
         "2023-08-22"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "SYMPTOM_decreased_exercise_tolerance",
@@ -399,11 +439,13 @@
       "type": "SYMPTOM",
       "added": "2023-08-22",
       "last_confirmed": "2023-08-22",
-      "confidence": 0.705,
+      "confidence": 0.528,
       "observed_dates": [
         "2023-08-22"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "CONDITION_renal_failure",
@@ -415,7 +457,9 @@
       "observed_dates": [
         "2024-02-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.015,
+      "confidence_floor_applied": 0.35
     },
     {
       "id": "CONDITION_electrolyte_imbalance",
@@ -427,7 +471,9 @@
       "observed_dates": [
         "2024-02-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.015,
+      "confidence_floor_applied": 0.35
     },
     {
       "id": "SYMPTOM_worsening_renal_function",
@@ -439,7 +485,9 @@
       "observed_dates": [
         "2024-02-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "SYMPTOM_electrolyte_imbalance",
@@ -451,7 +499,9 @@
       "observed_dates": [
         "2024-02-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     }
   ],
   "edges": [

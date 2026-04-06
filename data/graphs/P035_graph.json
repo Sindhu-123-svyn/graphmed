@@ -1,13 +1,13 @@
 {
   "patient_id": "P035",
-  "created_at": "2026-04-04T13:46:00.294991",
+  "created_at": "2026-04-06T19:49:32.422813",
   "nodes": [
     {
       "id": "P035",
       "type": "PATIENT",
       "name": "P035",
-      "added": "2026-04-04T13:46:00.294991",
-      "last_confirmed": "2026-04-04T13:46:00.294991",
+      "added": "2026-04-06T19:49:32.422813",
+      "last_confirmed": "2026-04-06T19:49:32.422813",
       "confidence": 1.0
     },
     {
@@ -16,11 +16,13 @@
       "type": "CONDITION",
       "added": "2022-01-10",
       "last_confirmed": "2022-01-10",
-      "confidence": 0.2,
+      "confidence": 0.45,
       "observed_dates": [
         "2022-01-10"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "CONDITION_hyperlipidemia",
@@ -37,6 +39,8 @@
         "2024-04-10"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45,
       "history": [
         {
           "date": "2022-07-15",
@@ -92,6 +96,8 @@
         "2024-04-10"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-07-15",
@@ -147,6 +153,8 @@
         "2024-04-10"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-07-15",
@@ -202,6 +210,8 @@
         "2024-04-10"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-07-15",
@@ -258,6 +268,8 @@
       ],
       "value": "elevated",
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2022-07-15",
@@ -304,7 +316,9 @@
         "2022-01-10"
       ],
       "value": "elevated",
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "LAB_VALUE_bp_systolic",
@@ -319,6 +333,8 @@
       ],
       "value": "controlled",
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-02-10",
@@ -343,6 +359,8 @@
       ],
       "value": "controlled",
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-02-10",
@@ -360,12 +378,14 @@
       "type": "SYMPTOM",
       "added": "2022-01-10",
       "last_confirmed": "2022-07-15",
-      "confidence": 0.2,
+      "confidence": 0.15,
       "observed_dates": [
         "2022-01-10",
         "2022-07-15"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2022-07-15",
@@ -385,13 +405,15 @@
       "type": "SYMPTOM",
       "added": "2022-01-10",
       "last_confirmed": "2023-02-10",
-      "confidence": 0.2,
+      "confidence": 0.15,
       "observed_dates": [
         "2022-01-10",
         "2022-07-15",
         "2023-02-10"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2022-07-15",
@@ -428,6 +450,8 @@
         "2024-04-10"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-02-10",
@@ -474,6 +498,8 @@
       ],
       "value": "worsening",
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-02-10",
@@ -507,11 +533,13 @@
       "type": "CONDITION",
       "added": "2023-02-10",
       "last_confirmed": "2023-02-10",
-      "confidence": 0.2,
+      "confidence": 0.776,
       "observed_dates": [
         "2023-02-10"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "MEDICATION_furosemide",
@@ -526,6 +554,8 @@
         "2024-04-10"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-10-15",
@@ -561,6 +591,8 @@
         "2024-04-10"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2023-10-15",
@@ -595,6 +627,8 @@
         "2024-04-10"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2024-04-10",
@@ -614,11 +648,13 @@
       "type": "SYMPTOM",
       "added": "2023-10-15",
       "last_confirmed": "2023-10-15",
-      "confidence": 0.7033333333333334,
+      "confidence": 0.5253333333333333,
       "observed_dates": [
         "2023-10-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     },
     {
       "id": "CONDITION_heart_failure",
@@ -630,7 +666,9 @@
       "observed_dates": [
         "2024-04-10"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "MEDICATION_spironolactone",
@@ -642,7 +680,9 @@
       "observed_dates": [
         "2024-04-10"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "SYMPTOM_orthopnea",
@@ -654,7 +694,9 @@
       "observed_dates": [
         "2024-04-10"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     }
   ],
   "edges": [

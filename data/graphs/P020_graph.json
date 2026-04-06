@@ -1,13 +1,13 @@
 {
   "patient_id": "P020",
-  "created_at": "2026-04-04T13:45:59.774521",
+  "created_at": "2026-04-06T19:49:32.139812",
   "nodes": [
     {
       "id": "P020",
       "type": "PATIENT",
       "name": "P020",
-      "added": "2026-04-04T13:45:59.774521",
-      "last_confirmed": "2026-04-04T13:45:59.774521",
+      "added": "2026-04-06T19:49:32.139812",
+      "last_confirmed": "2026-04-06T19:49:32.139812",
       "confidence": 1.0
     },
     {
@@ -16,11 +16,13 @@
       "type": "CONDITION",
       "added": "2022-03-15",
       "last_confirmed": "2022-03-15",
-      "confidence": 0.2,
+      "confidence": 0.6263333333333333,
       "observed_dates": [
         "2022-03-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "CONDITION_type_2_diabetes",
@@ -28,11 +30,13 @@
       "type": "CONDITION",
       "added": "2022-03-15",
       "last_confirmed": "2022-03-15",
-      "confidence": 0.2,
+      "confidence": 0.6263333333333333,
       "observed_dates": [
         "2022-03-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "CONDITION_hyperlipidemia",
@@ -40,11 +44,13 @@
       "type": "CONDITION",
       "added": "2022-03-15",
       "last_confirmed": "2022-03-15",
-      "confidence": 0.2,
+      "confidence": 0.6263333333333333,
       "observed_dates": [
         "2022-03-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45
     },
     {
       "id": "MEDICATION_metformin",
@@ -59,6 +65,8 @@
         "2024-01-03"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-06-20",
@@ -94,6 +102,8 @@
         "2024-01-03"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-06-20",
@@ -130,6 +140,8 @@
       ],
       "value": 9.0,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-06-20",
@@ -163,6 +175,8 @@
       ],
       "value": 145,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-06-20",
@@ -196,6 +210,8 @@
       ],
       "value": 95,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-06-20",
@@ -229,6 +245,8 @@
       ],
       "value": 140.0,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2023-06-20",
@@ -254,12 +272,14 @@
       "type": "SYMPTOM",
       "added": "2022-03-15",
       "last_confirmed": "2023-06-20",
-      "confidence": 0.6716666666666666,
+      "confidence": 0.4746666666666667,
       "observed_dates": [
         "2022-03-15",
         "2023-06-20"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2023-06-20",
@@ -279,12 +299,14 @@
       "type": "SYMPTOM",
       "added": "2022-03-15",
       "last_confirmed": "2023-06-20",
-      "confidence": 0.6716666666666666,
+      "confidence": 0.4746666666666667,
       "observed_dates": [
         "2022-03-15",
         "2023-06-20"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2023-06-20",
@@ -310,6 +332,8 @@
         "2024-01-03"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45,
       "history": [
         {
           "date": "2024-01-03",
@@ -335,6 +359,8 @@
         "2024-01-03"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2024-01-03",
@@ -361,6 +387,8 @@
       ],
       "value": 55,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2024-01-03",
@@ -384,6 +412,8 @@
         "2024-01-03"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2024-01-03",
@@ -407,7 +437,9 @@
       "observed_dates": [
         "2024-01-03"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.015,
+      "confidence_floor_applied": 0.35
     },
     {
       "id": "MEDICATION_epoetin_alfa",
@@ -419,7 +451,9 @@
       "observed_dates": [
         "2024-01-03"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "SYMPTOM_weight_loss",
@@ -431,7 +465,9 @@
       "observed_dates": [
         "2024-01-03"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     }
   ],
   "edges": [

@@ -1,13 +1,13 @@
 {
   "patient_id": "P060",
-  "created_at": "2026-04-04T13:46:01.216980",
+  "created_at": "2026-04-06T19:49:32.928815",
   "nodes": [
     {
       "id": "P060",
       "type": "PATIENT",
       "name": "P060",
-      "added": "2026-04-04T13:46:01.216980",
-      "last_confirmed": "2026-04-04T13:46:01.216980",
+      "added": "2026-04-06T19:49:32.928815",
+      "last_confirmed": "2026-04-06T19:49:32.928815",
       "confidence": 1.0
     },
     {
@@ -23,6 +23,8 @@
         "2024-09-01"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45,
       "history": [
         {
           "date": "2024-01-15",
@@ -58,6 +60,8 @@
         "2024-09-01"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45,
       "history": [
         {
           "date": "2024-01-15",
@@ -93,6 +97,8 @@
         "2024-09-01"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45,
       "history": [
         {
           "date": "2024-01-15",
@@ -128,6 +134,8 @@
         "2024-09-01"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45,
       "history": [
         {
           "date": "2024-01-15",
@@ -160,7 +168,9 @@
       "observed_dates": [
         "2023-03-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "MEDICATION_lisinopril",
@@ -175,6 +185,8 @@
         "2024-09-01"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2024-01-15",
@@ -203,17 +215,19 @@
       "type": "MEDICATION",
       "added": "2023-03-01",
       "last_confirmed": "2024-09-01",
-      "confidence": 0.4666666666666667,
+      "confidence": 0.5733333333333334,
       "observed_dates": [
         "2023-03-01",
         "2024-09-01"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2024-09-01",
           "old": {
-            "confidence": 0.4666666666666667
+            "confidence": 0.5733333333333334
           },
           "new": {
             "confirmed": true
@@ -236,6 +250,8 @@
       ],
       "value": 8.5,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2024-01-15",
@@ -269,6 +285,8 @@
       ],
       "value": 155,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2024-01-15",
@@ -302,6 +320,8 @@
       ],
       "value": 100,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2024-01-15",
@@ -335,6 +355,8 @@
       ],
       "value": 180,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2024-01-15",
@@ -367,6 +389,8 @@
         "2024-09-01"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2024-01-15",
@@ -402,6 +426,8 @@
         "2024-09-01"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2024-01-15",
@@ -437,6 +463,8 @@
         "2024-09-01"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2024-01-15",
@@ -471,6 +499,8 @@
         "2024-09-01"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.01,
+      "confidence_floor_applied": 0.45,
       "history": [
         {
           "date": "2024-09-01",
@@ -496,6 +526,8 @@
         "2024-09-01"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.04,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2024-09-01",
@@ -522,6 +554,8 @@
       ],
       "value": 50,
       "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2,
       "history": [
         {
           "date": "2024-09-01",
@@ -545,6 +579,8 @@
         "2024-09-01"
       ],
       "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15,
       "history": [
         {
           "date": "2024-09-01",
@@ -569,7 +605,9 @@
         "2024-09-01"
       ],
       "value": null,
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "LAB_VALUE_glucose",
@@ -582,7 +620,9 @@
         "2024-09-01"
       ],
       "value": null,
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "LAB_VALUE_potassium",
@@ -595,7 +635,9 @@
         "2024-09-01"
       ],
       "value": null,
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "LAB_VALUE_sodium",
@@ -608,7 +650,9 @@
         "2024-09-01"
       ],
       "value": null,
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.05,
+      "confidence_floor_applied": 0.2
     },
     {
       "id": "SYMPTOM_shortness_of_breath",
@@ -620,7 +664,9 @@
       "observed_dates": [
         "2024-09-01"
       ],
-      "decayed": true
+      "decayed": true,
+      "decay_rate_applied": 0.08,
+      "confidence_floor_applied": 0.15
     }
   ],
   "edges": [
