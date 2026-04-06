@@ -431,6 +431,14 @@ class Phase9Evaluator:
             return "full_stack"
         return "fallback"
 
+    def _provider_from_runtime_mode(self, runtime_mode: str, default: str = "unknown") -> str:
+        """Extract provider suffix from runtime_mode tags like 'full_stack_openrouter'."""
+        tag = _safe_lower(runtime_mode)
+        for provider in ("openrouter", "groq", "google", "json_fallback"):
+            if tag.endswith(f"_{provider}"):
+                return provider
+        return default
+
     def _ensure_qa_systems(self):
         """Lazy init systems needed for E1 and E2 (LLM+RAG pipelines)."""
         if self.graphmed is not None and self.baseline is not None:
@@ -1035,6 +1043,8 @@ class Phase9Evaluator:
                         "experiment": "E2",
                         "system": "graphmed",
                         "mode": self.qa_mode,
+                        "provider": self.qa_provider,
+                        "runtime_mode": f"{self.qa_mode}_{self.qa_provider}",
                         "patient_id": pid,
                         "question": q["question"],
                         "expected": q["expected"],
@@ -1048,6 +1058,8 @@ class Phase9Evaluator:
                         "experiment": "E2",
                         "system": "baseline",
                         "mode": self.qa_mode,
+                        "provider": self.qa_provider,
+                        "runtime_mode": f"{self.qa_mode}_{self.qa_provider}",
                         "patient_id": pid,
                         "question": q["question"],
                         "expected": q["expected"],
@@ -1178,11 +1190,24 @@ class Phase9Evaluator:
                     "graphmed_pred": gm_pred,
                     "graphmed_confidence": float(gm.get("confidence", 0.0)),
                     "graphmed_mode": gm.get("runtime_mode", "unknown"),
+                    "graphmed_runtime_mode": gm.get("runtime_mode", "unknown"),
+                    "graphmed_provider": self._provider_from_runtime_mode(
+                        str(gm.get("runtime_mode", "unknown"))
+                    ),
                     "baseline_pred": bl_pred,
                     "baseline_confidence": float(bl.get("confidence", 0.0)),
+                    "baseline_runtime_mode": bl.get("runtime_mode", "unknown"),
+                    "baseline_provider": self._provider_from_runtime_mode(
+                        str(bl.get("runtime_mode", "unknown")),
+                        default="none",
+                    ),
                     "llm_prompt_pred": llm_pred,
                     "llm_prompt_confidence": float(llm_prompt.get("confidence", 0.0)),
                     "llm_prompt_mode": llm_prompt.get("runtime_mode", "unknown"),
+                    "llm_prompt_runtime_mode": llm_prompt.get("runtime_mode", "unknown"),
+                    "llm_prompt_provider": self._provider_from_runtime_mode(
+                        str(llm_prompt.get("runtime_mode", "unknown"))
+                    ),
                 }
             )
 

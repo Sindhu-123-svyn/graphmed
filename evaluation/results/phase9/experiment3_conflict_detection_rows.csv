@@ -1,31 +1,31 @@
-experiment,mode,statement_a,statement_b,category,label,graphmed_pred,graphmed_confidence,graphmed_mode,baseline_pred,baseline_confidence,llm_prompt_pred,llm_prompt_confidence,llm_prompt_mode
-E3,fallback,Currently taking warfarin daily,No anticoagulants are being taken,drug_conflict,1,0,0.5,heuristic_fallback,0,0.5,0,0.0,llm_prompt_unavailable
-E3,fallback,Metformin 1000mg BID,Metformin was never prescribed,drug_conflict,1,1,0.6,heuristic_fallback,0,0.5,0,0.0,llm_prompt_unavailable
-E3,fallback,Patient started insulin glargine,Patient is not on insulin,drug_conflict,1,1,0.6,heuristic_fallback,0,0.5,0,0.0,llm_prompt_unavailable
-E3,fallback,Uses lisinopril 10mg,Lisinopril discontinued and never restarted,drug_conflict,1,1,0.6,heuristic_fallback,0,0.5,0,0.0,llm_prompt_unavailable
-E3,fallback,On aspirin 81mg,No antiplatelet medications,drug_conflict,1,0,0.5,heuristic_fallback,0,0.5,0,0.0,llm_prompt_unavailable
-E3,fallback,Taking atorvastatin,No lipid-lowering therapy,drug_conflict,1,0,0.5,heuristic_fallback,0,0.5,0,0.0,llm_prompt_unavailable
-E3,fallback,Receiving heparin prophylaxis,No heparin exposure,drug_conflict,1,1,0.6,heuristic_fallback,0,0.5,0,0.0,llm_prompt_unavailable
-E3,fallback,Prednisone currently active,No steroid treatment,drug_conflict,1,0,0.5,heuristic_fallback,0,0.5,0,0.0,llm_prompt_unavailable
-E3,fallback,Uses amlodipine daily,No antihypertensive medication,drug_conflict,1,0,0.5,heuristic_fallback,0,0.5,0,0.0,llm_prompt_unavailable
-E3,fallback,On levothyroxine,No thyroid medication,drug_conflict,1,0,0.5,heuristic_fallback,0,0.5,0,0.0,llm_prompt_unavailable
-E3,fallback,Prescribed clopidogrel,No blood thinner prescriptions,drug_conflict,1,0,0.5,heuristic_fallback,0,0.5,0,0.0,llm_prompt_unavailable
-E3,fallback,Takes furosemide,No diuretic in medication list,drug_conflict,1,0,0.5,heuristic_fallback,0,0.5,0,0.0,llm_prompt_unavailable
-E3,fallback,Started gabapentin,No neuropathy medication,drug_conflict,1,0,0.5,heuristic_fallback,0,0.5,0,0.0,llm_prompt_unavailable
-E3,fallback,On metoprolol,No beta blocker therapy,drug_conflict,1,0,0.5,heuristic_fallback,0,0.5,0,0.0,llm_prompt_unavailable
-E3,fallback,Using omeprazole,No GI acid suppression meds,drug_conflict,1,0,0.5,heuristic_fallback,0,0.5,0,0.0,llm_prompt_unavailable
-E3,fallback,Active nitroglycerin prescription,No nitrate medications,drug_conflict,1,0,0.5,heuristic_fallback,0,0.5,0,0.0,llm_prompt_unavailable
-E3,fallback,On losartan,No ARB treatment,drug_conflict,1,0,0.5,heuristic_fallback,0,0.5,0,0.0,llm_prompt_unavailable
-E3,fallback,Taking sertraline,No antidepressant use,drug_conflict,1,0,0.5,heuristic_fallback,0,0.5,0,0.0,llm_prompt_unavailable
-E3,fallback,Insulin lispro with meals,No rapid-acting insulin,drug_conflict,1,1,0.6,heuristic_fallback,0,0.5,0,0.0,llm_prompt_unavailable
-E3,fallback,Apixaban currently prescribed,No anticoagulation plan,drug_conflict,1,0,0.5,heuristic_fallback,0,0.5,0,0.0,llm_prompt_unavailable
-E3,fallback,No known drug allergies,Allergy to penicillin with rash,allergy_or_diagnosis,1,0,0.5,heuristic_fallback,0,0.5,0,0.0,llm_prompt_unavailable
-E3,fallback,Denies peanut allergy,Severe peanut anaphylaxis history,allergy_or_diagnosis,1,1,0.6,heuristic_fallback,0,0.5,0,0.0,llm_prompt_unavailable
-E3,fallback,No history of diabetes,Diagnosed with type 2 diabetes,allergy_or_diagnosis,1,1,0.6,heuristic_fallback,0,0.5,0,0.0,llm_prompt_unavailable
-E3,fallback,No chronic kidney disease,Stage 3 CKD documented,allergy_or_diagnosis,1,0,0.5,heuristic_fallback,0,0.5,0,0.0,llm_prompt_unavailable
-E3,fallback,Denies asthma,Persistent asthma diagnosis,allergy_or_diagnosis,1,1,0.6,heuristic_fallback,0,0.5,0,0.0,llm_prompt_unavailable
-E3,fallback,No hypertension,Hypertension remains uncontrolled,allergy_or_diagnosis,1,1,0.6,heuristic_fallback,0,0.5,0,0.0,llm_prompt_unavailable
-E3,fallback,No coronary artery disease,Known CAD with prior stent,allergy_or_diagnosis,1,0,0.5,heuristic_fallback,0,0.5,0,0.0,llm_prompt_unavailable
-E3,fallback,No thyroid disease,Hypothyroidism diagnosis present,allergy_or_diagnosis,1,0,0.5,heuristic_fallback,0,0.5,0,0.0,llm_prompt_unavailable
-E3,fallback,No heart failure,HFrEF listed in active problems,allergy_or_diagnosis,1,0,0.5,heuristic_fallback,0,0.5,0,0.0,llm_prompt_unavailable
-E3,fallback,No medication allergies,Allergic reaction to sulfa drugs,allergy_or_diagnosis,1,0,0.5,heuristic_fallback,0,0.5,0,0.0,llm_prompt_unavailable
+experiment,mode,statement_a,statement_b,category,label,graphmed_pred,graphmed_confidence,graphmed_mode,graphmed_runtime_mode,graphmed_provider,baseline_pred,baseline_confidence,baseline_runtime_mode,baseline_provider,llm_prompt_pred,llm_prompt_confidence,llm_prompt_mode,llm_prompt_runtime_mode,llm_prompt_provider
+E3,full_stack,Currently taking warfarin daily,No anticoagulants are being taken,drug_conflict,1,1,0.9908512234687805,lora,lora,unknown,0,0.5,no_classifier_baseline,none,0,0.0,llm_prompt_unavailable,llm_prompt_unavailable,unknown
+E3,full_stack,Metformin 1000mg BID,Metformin was never prescribed,drug_conflict,1,1,0.9915170669555664,lora,lora,unknown,0,0.5,no_classifier_baseline,none,0,0.0,llm_prompt_unavailable,llm_prompt_unavailable,unknown
+E3,full_stack,Patient started insulin glargine,Patient is not on insulin,drug_conflict,1,1,0.936625063419342,lora,lora,unknown,0,0.5,no_classifier_baseline,none,0,0.0,llm_prompt_unavailable,llm_prompt_unavailable,unknown
+E3,full_stack,Uses lisinopril 10mg,Lisinopril discontinued and never restarted,drug_conflict,1,1,0.998414158821106,lora,lora,unknown,0,0.5,no_classifier_baseline,none,0,0.0,llm_prompt_unavailable,llm_prompt_unavailable,unknown
+E3,full_stack,On aspirin 81mg,No antiplatelet medications,drug_conflict,1,1,0.9892998933792114,lora,lora,unknown,0,0.5,no_classifier_baseline,none,0,0.0,llm_prompt_unavailable,llm_prompt_unavailable,unknown
+E3,full_stack,Taking atorvastatin,No lipid-lowering therapy,drug_conflict,1,1,0.99410480260849,lora,lora,unknown,0,0.5,no_classifier_baseline,none,0,0.0,llm_prompt_unavailable,llm_prompt_unavailable,unknown
+E3,full_stack,Receiving heparin prophylaxis,No heparin exposure,drug_conflict,1,1,0.9908061623573303,lora,lora,unknown,0,0.5,no_classifier_baseline,none,0,0.0,llm_prompt_unavailable,llm_prompt_unavailable,unknown
+E3,full_stack,Prednisone currently active,No steroid treatment,drug_conflict,1,1,0.9725985527038574,lora,lora,unknown,0,0.5,no_classifier_baseline,none,0,0.0,llm_prompt_unavailable,llm_prompt_unavailable,unknown
+E3,full_stack,Uses amlodipine daily,No antihypertensive medication,drug_conflict,1,1,0.9876189231872559,lora,lora,unknown,0,0.5,no_classifier_baseline,none,0,0.0,llm_prompt_unavailable,llm_prompt_unavailable,unknown
+E3,full_stack,On levothyroxine,No thyroid medication,drug_conflict,1,1,0.9969754219055176,lora,lora,unknown,0,0.5,no_classifier_baseline,none,0,0.0,llm_prompt_unavailable,llm_prompt_unavailable,unknown
+E3,full_stack,Prescribed clopidogrel,No blood thinner prescriptions,drug_conflict,1,1,0.9942779541015625,lora,lora,unknown,0,0.5,no_classifier_baseline,none,0,0.0,llm_prompt_unavailable,llm_prompt_unavailable,unknown
+E3,full_stack,Takes furosemide,No diuretic in medication list,drug_conflict,1,1,0.9972594976425171,lora,lora,unknown,0,0.5,no_classifier_baseline,none,0,0.0,llm_prompt_unavailable,llm_prompt_unavailable,unknown
+E3,full_stack,Started gabapentin,No neuropathy medication,drug_conflict,1,1,0.991048276424408,lora,lora,unknown,0,0.5,no_classifier_baseline,none,0,0.0,llm_prompt_unavailable,llm_prompt_unavailable,unknown
+E3,full_stack,On metoprolol,No beta blocker therapy,drug_conflict,1,1,0.9702693223953247,lora,lora,unknown,0,0.5,no_classifier_baseline,none,0,0.0,llm_prompt_unavailable,llm_prompt_unavailable,unknown
+E3,full_stack,Using omeprazole,No GI acid suppression meds,drug_conflict,1,1,0.9713440537452698,lora,lora,unknown,0,0.5,no_classifier_baseline,none,0,0.0,llm_prompt_unavailable,llm_prompt_unavailable,unknown
+E3,full_stack,Active nitroglycerin prescription,No nitrate medications,drug_conflict,1,1,0.9977312684059143,lora,lora,unknown,0,0.5,no_classifier_baseline,none,0,0.0,llm_prompt_unavailable,llm_prompt_unavailable,unknown
+E3,full_stack,On losartan,No ARB treatment,drug_conflict,1,1,0.9309704303741455,lora,lora,unknown,0,0.5,no_classifier_baseline,none,0,0.0,llm_prompt_unavailable,llm_prompt_unavailable,unknown
+E3,full_stack,Taking sertraline,No antidepressant use,drug_conflict,1,1,0.9757840037345886,lora,lora,unknown,0,0.5,no_classifier_baseline,none,0,0.0,llm_prompt_unavailable,llm_prompt_unavailable,unknown
+E3,full_stack,Insulin lispro with meals,No rapid-acting insulin,drug_conflict,1,1,0.9917200803756714,lora,lora,unknown,0,0.5,no_classifier_baseline,none,0,0.0,llm_prompt_unavailable,llm_prompt_unavailable,unknown
+E3,full_stack,Apixaban currently prescribed,No anticoagulation plan,drug_conflict,1,1,0.9935158491134644,lora,lora,unknown,0,0.5,no_classifier_baseline,none,0,0.0,llm_prompt_unavailable,llm_prompt_unavailable,unknown
+E3,full_stack,No known drug allergies,Allergy to penicillin with rash,allergy_or_diagnosis,1,1,0.9907158613204956,lora,lora,unknown,0,0.5,no_classifier_baseline,none,0,0.0,llm_prompt_unavailable,llm_prompt_unavailable,unknown
+E3,full_stack,Denies peanut allergy,Severe peanut anaphylaxis history,allergy_or_diagnosis,1,1,0.9970965385437012,lora,lora,unknown,0,0.5,no_classifier_baseline,none,0,0.0,llm_prompt_unavailable,llm_prompt_unavailable,unknown
+E3,full_stack,No history of diabetes,Diagnosed with type 2 diabetes,allergy_or_diagnosis,1,1,0.9972467422485352,lora,lora,unknown,0,0.5,no_classifier_baseline,none,0,0.0,llm_prompt_unavailable,llm_prompt_unavailable,unknown
+E3,full_stack,No chronic kidney disease,Stage 3 CKD documented,allergy_or_diagnosis,1,1,0.9716414213180542,lora,lora,unknown,0,0.5,no_classifier_baseline,none,0,0.0,llm_prompt_unavailable,llm_prompt_unavailable,unknown
+E3,full_stack,Denies asthma,Persistent asthma diagnosis,allergy_or_diagnosis,1,1,0.9769119620323181,lora,lora,unknown,0,0.5,no_classifier_baseline,none,0,0.0,llm_prompt_unavailable,llm_prompt_unavailable,unknown
+E3,full_stack,No hypertension,Hypertension remains uncontrolled,allergy_or_diagnosis,1,1,0.9708379507064819,lora,lora,unknown,0,0.5,no_classifier_baseline,none,0,0.0,llm_prompt_unavailable,llm_prompt_unavailable,unknown
+E3,full_stack,No coronary artery disease,Known CAD with prior stent,allergy_or_diagnosis,1,1,0.9914385080337524,lora,lora,unknown,0,0.5,no_classifier_baseline,none,0,0.0,llm_prompt_unavailable,llm_prompt_unavailable,unknown
+E3,full_stack,No thyroid disease,Hypothyroidism diagnosis present,allergy_or_diagnosis,1,1,0.9839112758636475,lora,lora,unknown,0,0.5,no_classifier_baseline,none,0,0.0,llm_prompt_unavailable,llm_prompt_unavailable,unknown
+E3,full_stack,No heart failure,HFrEF listed in active problems,allergy_or_diagnosis,1,1,0.994716227054596,lora,lora,unknown,0,0.5,no_classifier_baseline,none,0,0.0,llm_prompt_unavailable,llm_prompt_unavailable,unknown
+E3,full_stack,No medication allergies,Allergic reaction to sulfa drugs,allergy_or_diagnosis,1,1,0.9794089198112488,lora,lora,unknown,0,0.5,no_classifier_baseline,none,0,0.0,llm_prompt_unavailable,llm_prompt_unavailable,unknown
