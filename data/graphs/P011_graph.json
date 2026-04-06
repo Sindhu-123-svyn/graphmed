@@ -20,7 +20,19 @@
       "observed_dates": [
         "2022-06-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "history": [
+        {
+          "date": "2022-06-15",
+          "old": {
+            "confidence": 0.2
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
     },
     {
       "id": "CONDITION_type_2_diabetes",
@@ -32,7 +44,19 @@
       "observed_dates": [
         "2022-06-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "history": [
+        {
+          "date": "2022-06-15",
+          "old": {
+            "confidence": 0.2
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
     },
     {
       "id": "MEDICATION_metformin",
@@ -44,7 +68,19 @@
       "observed_dates": [
         "2022-06-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "history": [
+        {
+          "date": "2022-06-15",
+          "old": {
+            "confidence": 0.2
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
     },
     {
       "id": "MEDICATION_lisinopril",
@@ -56,14 +92,26 @@
       "observed_dates": [
         "2022-06-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "history": [
+        {
+          "date": "2022-06-15",
+          "old": {
+            "confidence": 0.2
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
     },
     {
       "id": "LAB_VALUE_hba1c",
       "name": "hba1c",
       "type": "LAB_VALUE",
       "added": "2022-06-15",
-      "last_confirmed": "2024-02-20",
+      "last_confirmed": "2022-06-15",
       "confidence": 1.0,
       "observed_dates": [
         "2022-06-15",
@@ -71,7 +119,7 @@
         "2023-06-15",
         "2024-02-20"
       ],
-      "value": 6.8,
+      "value": 8.4,
       "decayed": true,
       "history": [
         {
@@ -97,15 +145,37 @@
             "confidence": 1.0
           },
           "new": {}
+        },
+        {
+          "date": "2024-02-20",
+          "old": {
+            "value": 6.8,
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2022-06-15",
+          "old": {
+            "value": 6.8,
+            "confidence": 1.0
+          },
+          "new": {
+            "trend": "INSUFFICIENT_DATA"
+          }
         }
-      ]
+      ],
+      "confirmed": true,
+      "trend": "INSUFFICIENT_DATA"
     },
     {
       "id": "LAB_VALUE_bp_systolic",
       "name": "bp_systolic",
       "type": "LAB_VALUE",
       "added": "2022-06-15",
-      "last_confirmed": "2024-02-20",
+      "last_confirmed": "2022-06-15",
       "confidence": 1.0,
       "observed_dates": [
         "2022-06-15",
@@ -113,7 +183,7 @@
         "2023-06-15",
         "2024-02-20"
       ],
-      "value": 138,
+      "value": 148,
       "decayed": true,
       "history": [
         {
@@ -139,15 +209,37 @@
             "confidence": 1.0
           },
           "new": {}
+        },
+        {
+          "date": "2024-02-20",
+          "old": {
+            "value": 138,
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2022-06-15",
+          "old": {
+            "value": 138,
+            "confidence": 1.0
+          },
+          "new": {
+            "trend": "INSUFFICIENT_DATA"
+          }
         }
-      ]
+      ],
+      "confirmed": true,
+      "trend": "INSUFFICIENT_DATA"
     },
     {
       "id": "LAB_VALUE_bp_diastolic",
       "name": "bp_diastolic",
       "type": "LAB_VALUE",
       "added": "2022-06-15",
-      "last_confirmed": "2024-02-20",
+      "last_confirmed": "2022-06-15",
       "confidence": 1.0,
       "observed_dates": [
         "2022-06-15",
@@ -155,7 +247,7 @@
         "2023-06-15",
         "2024-02-20"
       ],
-      "value": 88,
+      "value": 92,
       "decayed": true,
       "history": [
         {
@@ -181,15 +273,37 @@
             "confidence": 1.0
           },
           "new": {}
+        },
+        {
+          "date": "2024-02-20",
+          "old": {
+            "value": 88,
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2022-06-15",
+          "old": {
+            "value": 88,
+            "confidence": 1.0
+          },
+          "new": {
+            "trend": "INSUFFICIENT_DATA"
+          }
         }
-      ]
+      ],
+      "confirmed": true,
+      "trend": "INSUFFICIENT_DATA"
     },
     {
       "id": "SYMPTOM_fatigue",
       "name": "fatigue",
       "type": "SYMPTOM",
       "added": "2022-06-15",
-      "last_confirmed": "2022-12-20",
+      "last_confirmed": "2022-06-15",
       "confidence": 0.2,
       "observed_dates": [
         "2022-06-15",
@@ -201,6 +315,15 @@
           "date": "2022-12-20",
           "old": {
             "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2022-06-15",
+          "old": {
+            "confidence": 0.2
           },
           "new": {
             "confirmed": true
@@ -219,7 +342,19 @@
       "observed_dates": [
         "2022-06-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "history": [
+        {
+          "date": "2022-06-15",
+          "old": {
+            "confidence": 0.2
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
     },
     {
       "id": "CONDITION_hyperlipidemia",
@@ -227,7 +362,7 @@
       "type": "CONDITION",
       "added": "2022-12-20",
       "last_confirmed": "2022-12-20",
-      "confidence": 0.2,
+      "confidence": 0.5133333333333334,
       "observed_dates": [
         "2022-12-20"
       ],
@@ -239,7 +374,7 @@
       "type": "MEDICATION",
       "added": "2022-12-20",
       "last_confirmed": "2022-12-20",
-      "confidence": 0.2,
+      "confidence": 0.5133333333333334,
       "observed_dates": [
         "2022-12-20"
       ],
@@ -251,7 +386,7 @@
       "type": "SYMPTOM",
       "added": "2022-12-20",
       "last_confirmed": "2022-12-20",
-      "confidence": 0.2,
+      "confidence": 0.5133333333333334,
       "observed_dates": [
         "2022-12-20"
       ],
@@ -262,12 +397,25 @@
       "name": "chronic kidney disease",
       "type": "CONDITION",
       "added": "2023-06-15",
-      "last_confirmed": "2023-06-15",
-      "confidence": 0.5833333333333333,
+      "last_confirmed": "2024-02-20",
+      "confidence": 1.6083333333333334,
       "observed_dates": [
-        "2023-06-15"
+        "2023-06-15",
+        "2024-02-20"
       ],
-      "decayed": true
+      "decayed": true,
+      "history": [
+        {
+          "date": "2024-02-20",
+          "old": {
+            "confidence": 0.5833333333333333
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
     },
     {
       "id": "MEDICATION_furosemide",
@@ -275,7 +423,7 @@
       "type": "MEDICATION",
       "added": "2023-06-15",
       "last_confirmed": "2023-06-15",
-      "confidence": 0.5833333333333333,
+      "confidence": 0.8083333333333333,
       "observed_dates": [
         "2023-06-15"
       ],
@@ -287,7 +435,7 @@
       "type": "SYMPTOM",
       "added": "2023-06-15",
       "last_confirmed": "2023-06-15",
-      "confidence": 0.5833333333333333,
+      "confidence": 0.8083333333333333,
       "observed_dates": [
         "2023-06-15"
       ],
@@ -299,7 +447,7 @@
       "type": "CONDITION",
       "added": "2024-02-20",
       "last_confirmed": "2024-02-20",
-      "confidence": 1.0,
+      "confidence": 2.0250000000000004,
       "observed_dates": [
         "2024-02-20"
       ],
@@ -311,11 +459,23 @@
       "type": "MEDICATION",
       "added": "2024-02-20",
       "last_confirmed": "2024-02-20",
-      "confidence": 1.0,
+      "confidence": 2.0250000000000004,
       "observed_dates": [
         "2024-02-20"
       ],
-      "decayed": true
+      "decayed": true,
+      "history": [
+        {
+          "date": "2024-02-20",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
     },
     {
       "id": "MEDICATION_clopidogrel",
@@ -323,11 +483,23 @@
       "type": "MEDICATION",
       "added": "2024-02-20",
       "last_confirmed": "2024-02-20",
-      "confidence": 1.0,
+      "confidence": 2.0250000000000004,
       "observed_dates": [
         "2024-02-20"
       ],
-      "decayed": true
+      "decayed": true,
+      "history": [
+        {
+          "date": "2024-02-20",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
     },
     {
       "id": "SYMPTOM_chest_pain",
@@ -335,11 +507,23 @@
       "type": "SYMPTOM",
       "added": "2024-02-20",
       "last_confirmed": "2024-02-20",
-      "confidence": 1.0,
+      "confidence": 2.0250000000000004,
       "observed_dates": [
         "2024-02-20"
       ],
-      "decayed": true
+      "decayed": true,
+      "history": [
+        {
+          "date": "2024-02-20",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
     }
   ],
   "edges": [

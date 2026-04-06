@@ -33,6 +33,11 @@ try:
 except Exception:
     BERTScorer = None
 
+try:
+    from src.knowledge_updater import EvaluationDrivenGraphUpdater
+except Exception:
+    EvaluationDrivenGraphUpdater = None
+
 
 def _safe_lower(value: Any) -> str:
     return str(value or "").strip().lower()
@@ -358,6 +363,17 @@ class Phase9Evaluator:
                 self.bertscorer = BERTScorer(lang="en", rescale_with_baseline=True)
             except Exception:
                 self.bertscorer = None
+
+        self.graph_updater = None
+        if EvaluationDrivenGraphUpdater is not None:
+            try:
+                self.graph_updater = EvaluationDrivenGraphUpdater(
+                    persist_dir=str(self.persist_dir),
+                    audit_dir=str(self.output_dir),
+                )
+            except Exception as e:
+                print(f"[Phase9] Graph updater unavailable: {e}")
+                self.graph_updater = None
 
     def _looks_rate_limited(self, text: str) -> bool:
         msg = _safe_lower(text)
@@ -1250,6 +1266,29 @@ class Phase9Evaluator:
         e2 = self.experiment2_longitudinal_consistency()
         e3 = self.experiment3_conflict_detection()
 
+        auto_update_enabled = os.getenv("PHASE9_AUTO_GRAPH_UPDATE", "1").strip() == "1"
+        update_summary: Dict[str, Any] = {
+            "auto_update_enabled": auto_update_enabled,
+            "status": "skipped",
+        }
+        if auto_update_enabled:
+            if self.graph_updater is None:
+                update_summary = {
+                    "auto_update_enabled": True,
+                    "status": "unavailable",
+                    "error": "EvaluationDrivenGraphUpdater could not be initialized.",
+                }
+            else:
+                try:
+                    update_summary = self.graph_updater.apply_updates(e1_result=e1, e2_result=e2)
+                    update_summary["status"] = "applied"
+                except Exception as e:
+                    update_summary = {
+                        "auto_update_enabled": True,
+                        "status": "failed",
+                        "error": str(e),
+                    }
+
         summary = {
             "experiment_1_factual_accuracy": {
                 "mode": e1["mode"],
@@ -1292,6 +1331,7 @@ class Phase9Evaluator:
                 "baseline_f1": e3["baseline_no_classifier"]["f1"],
                 "expected_finding_supported": e3["expected_finding_supported"],
             },
+            "evaluation_driven_graph_updates": update_summary,
         }
 
         self._save_json(self.output_dir / "phase9_summary.json", summary)

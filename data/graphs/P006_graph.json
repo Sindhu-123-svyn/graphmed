@@ -15,7 +15,7 @@
       "name": "hypertension",
       "type": "CONDITION",
       "added": "2022-02-15",
-      "last_confirmed": "2023-09-19",
+      "last_confirmed": "2022-02-15",
       "confidence": 0.2,
       "observed_dates": [
         "2022-02-15",
@@ -31,6 +31,24 @@
           "new": {
             "confirmed": true
           }
+        },
+        {
+          "date": "2023-09-19",
+          "old": {
+            "confidence": 0.2
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2022-02-15",
+          "old": {
+            "confidence": 0.2
+          },
+          "new": {
+            "confirmed": true
+          }
         }
       ],
       "confirmed": true
@@ -40,7 +58,7 @@
       "name": "type 2 diabetes",
       "type": "CONDITION",
       "added": "2022-02-15",
-      "last_confirmed": "2023-09-19",
+      "last_confirmed": "2022-02-15",
       "confidence": 0.2,
       "observed_dates": [
         "2022-02-15",
@@ -50,6 +68,24 @@
       "history": [
         {
           "date": "2023-09-19",
+          "old": {
+            "confidence": 0.2
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2023-09-19",
+          "old": {
+            "confidence": 0.2
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2022-02-15",
           "old": {
             "confidence": 0.2
           },
@@ -70,14 +106,26 @@
       "observed_dates": [
         "2022-02-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "history": [
+        {
+          "date": "2022-02-15",
+          "old": {
+            "confidence": 0.2
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
     },
     {
       "id": "MEDICATION_metformin",
       "name": "metformin",
       "type": "MEDICATION",
       "added": "2022-02-15",
-      "last_confirmed": "2023-09-19",
+      "last_confirmed": "2022-02-15",
       "confidence": 1.0,
       "observed_dates": [
         "2022-02-15",
@@ -107,6 +155,24 @@
         },
         {
           "date": "2023-09-19",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2023-09-19",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2022-02-15",
           "old": {
             "confidence": 1.0
           },
@@ -122,7 +188,7 @@
       "name": "lisinopril",
       "type": "MEDICATION",
       "added": "2022-02-15",
-      "last_confirmed": "2023-09-19",
+      "last_confirmed": "2022-02-15",
       "confidence": 1.0,
       "observed_dates": [
         "2022-02-15",
@@ -152,6 +218,24 @@
         },
         {
           "date": "2023-09-19",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2023-09-19",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2022-02-15",
           "old": {
             "confidence": 1.0
           },
@@ -167,7 +251,7 @@
       "name": "atorvastatin",
       "type": "MEDICATION",
       "added": "2022-02-15",
-      "last_confirmed": "2023-09-19",
+      "last_confirmed": "2022-02-15",
       "confidence": 1.0,
       "observed_dates": [
         "2022-02-15",
@@ -203,6 +287,24 @@
           "new": {
             "confirmed": true
           }
+        },
+        {
+          "date": "2023-09-19",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2022-02-15",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
         }
       ],
       "confirmed": true
@@ -212,7 +314,7 @@
       "name": "bp_systolic",
       "type": "LAB_VALUE",
       "added": "2022-02-15",
-      "last_confirmed": "2023-09-19",
+      "last_confirmed": "2022-02-15",
       "confidence": 1.0,
       "observed_dates": [
         "2022-02-15",
@@ -220,7 +322,7 @@
         "2023-03-15",
         "2023-09-19"
       ],
-      "value": 150,
+      "value": 142,
       "decayed": true,
       "history": [
         {
@@ -246,15 +348,37 @@
             "confidence": 1.0
           },
           "new": {}
+        },
+        {
+          "date": "2023-09-19",
+          "old": {
+            "value": 150,
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2022-02-15",
+          "old": {
+            "value": 150,
+            "confidence": 1.0
+          },
+          "new": {
+            "trend": "INSUFFICIENT_DATA"
+          }
         }
-      ]
+      ],
+      "confirmed": true,
+      "trend": "INSUFFICIENT_DATA"
     },
     {
       "id": "LAB_VALUE_bp_diastolic",
       "name": "bp_diastolic",
       "type": "LAB_VALUE",
       "added": "2022-02-15",
-      "last_confirmed": "2023-09-19",
+      "last_confirmed": "2022-02-15",
       "confidence": 1.0,
       "observed_dates": [
         "2022-02-15",
@@ -262,7 +386,7 @@
         "2023-03-15",
         "2023-09-19"
       ],
-      "value": 100,
+      "value": 92,
       "decayed": true,
       "history": [
         {
@@ -288,15 +412,37 @@
             "confidence": 1.0
           },
           "new": {}
+        },
+        {
+          "date": "2023-09-19",
+          "old": {
+            "value": 100,
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2022-02-15",
+          "old": {
+            "value": 100,
+            "confidence": 1.0
+          },
+          "new": {
+            "trend": "INSUFFICIENT_DATA"
+          }
         }
-      ]
+      ],
+      "confirmed": true,
+      "trend": "INSUFFICIENT_DATA"
     },
     {
       "id": "LAB_VALUE_egfr",
       "name": "egfr",
       "type": "LAB_VALUE",
       "added": "2022-02-15",
-      "last_confirmed": "2023-09-19",
+      "last_confirmed": "2022-02-15",
       "confidence": 1.0,
       "observed_dates": [
         "2022-02-15",
@@ -304,7 +450,7 @@
         "2023-03-15",
         "2023-09-19"
       ],
-      "value": 45,
+      "value": 70.0,
       "decayed": true,
       "history": [
         {
@@ -330,8 +476,30 @@
             "confidence": 1.0
           },
           "new": {}
+        },
+        {
+          "date": "2023-09-19",
+          "old": {
+            "value": 45,
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2022-02-15",
+          "old": {
+            "value": 45,
+            "confidence": 1.0
+          },
+          "new": {
+            "trend": "INSUFFICIENT_DATA"
+          }
         }
-      ]
+      ],
+      "confirmed": true,
+      "trend": "INSUFFICIENT_DATA"
     },
     {
       "id": "LAB_VALUE_ldl",
@@ -344,14 +512,27 @@
         "2022-02-15"
       ],
       "value": 150.0,
-      "decayed": true
+      "decayed": true,
+      "history": [
+        {
+          "date": "2022-02-15",
+          "old": {
+            "value": 150.0,
+            "confidence": 0.2
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
     },
     {
       "id": "LAB_VALUE_hba1c",
       "name": "hba1c",
       "type": "LAB_VALUE",
       "added": "2022-02-15",
-      "last_confirmed": "2023-09-19",
+      "last_confirmed": "2022-02-15",
       "confidence": 1.0,
       "observed_dates": [
         "2022-02-15",
@@ -359,7 +540,7 @@
         "2023-03-15",
         "2023-09-19"
       ],
-      "value": 7.5,
+      "value": 8.5,
       "decayed": true,
       "history": [
         {
@@ -385,8 +566,30 @@
             "confidence": 1.0
           },
           "new": {}
+        },
+        {
+          "date": "2023-09-19",
+          "old": {
+            "value": 7.5,
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2022-02-15",
+          "old": {
+            "value": 7.5,
+            "confidence": 1.0
+          },
+          "new": {
+            "trend": "INSUFFICIENT_DATA"
+          }
         }
-      ]
+      ],
+      "confirmed": true,
+      "trend": "INSUFFICIENT_DATA"
     },
     {
       "id": "SYMPTOM_fatigue",
@@ -398,7 +601,19 @@
       "observed_dates": [
         "2022-02-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "history": [
+        {
+          "date": "2022-02-15",
+          "old": {
+            "confidence": 0.2
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
     },
     {
       "id": "SYMPTOM_frequent_urination",
@@ -410,7 +625,19 @@
       "observed_dates": [
         "2022-02-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "history": [
+        {
+          "date": "2022-02-15",
+          "old": {
+            "confidence": 0.2
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
     },
     {
       "id": "SYMPTOM_polydipsia",
@@ -422,7 +649,19 @@
       "observed_dates": [
         "2022-02-15"
       ],
-      "decayed": true
+      "decayed": true,
+      "history": [
+        {
+          "date": "2022-02-15",
+          "old": {
+            "confidence": 0.2
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
     },
     {
       "id": "CONDITION_chronic_kidney_disease",
@@ -430,13 +669,22 @@
       "type": "CONDITION",
       "added": "2022-09-20",
       "last_confirmed": "2023-09-19",
-      "confidence": 0.7066666666666667,
+      "confidence": 1.675,
       "observed_dates": [
         "2022-09-20",
         "2023-09-19"
       ],
       "decayed": true,
       "history": [
+        {
+          "date": "2023-09-19",
+          "old": {
+            "confidence": 0.7066666666666667
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
         {
           "date": "2023-09-19",
           "old": {
@@ -455,7 +703,7 @@
       "type": "SYMPTOM",
       "added": "2022-09-20",
       "last_confirmed": "2022-09-20",
-      "confidence": 0.2,
+      "confidence": 0.5616666666666668,
       "observed_dates": [
         "2022-09-20"
       ],
@@ -467,7 +715,7 @@
       "type": "CONDITION",
       "added": "2023-03-15",
       "last_confirmed": "2023-03-15",
-      "confidence": 0.6866666666666666,
+      "confidence": 1.0283333333333333,
       "observed_dates": [
         "2023-03-15"
       ],
@@ -479,7 +727,7 @@
       "type": "SYMPTOM",
       "added": "2023-03-15",
       "last_confirmed": "2023-03-15",
-      "confidence": 0.6866666666666666,
+      "confidence": 1.0283333333333333,
       "observed_dates": [
         "2023-03-15"
       ],
@@ -491,7 +739,7 @@
       "type": "SYMPTOM",
       "added": "2023-03-15",
       "last_confirmed": "2023-03-15",
-      "confidence": 0.6866666666666666,
+      "confidence": 1.0283333333333333,
       "observed_dates": [
         "2023-03-15"
       ],
@@ -503,11 +751,23 @@
       "type": "SYMPTOM",
       "added": "2023-09-19",
       "last_confirmed": "2023-09-19",
-      "confidence": 1.0,
+      "confidence": 1.9683333333333333,
       "observed_dates": [
         "2023-09-19"
       ],
-      "decayed": true
+      "decayed": true,
+      "history": [
+        {
+          "date": "2023-09-19",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
     },
     {
       "id": "PROCEDURE_nephrology_referral",
@@ -515,7 +775,7 @@
       "type": "PROCEDURE",
       "added": "2023-09-19",
       "last_confirmed": "2023-09-19",
-      "confidence": 1.0,
+      "confidence": 1.9683333333333333,
       "observed_dates": [
         "2023-09-19"
       ],

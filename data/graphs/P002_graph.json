@@ -15,7 +15,7 @@
       "name": "hypertension",
       "type": "CONDITION",
       "added": "2022-01-15",
-      "last_confirmed": "2023-08-25",
+      "last_confirmed": "2022-01-15",
       "confidence": 1.0,
       "observed_dates": [
         "2022-01-15",
@@ -45,6 +45,24 @@
         },
         {
           "date": "2023-08-25",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2023-08-25",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2022-01-15",
           "old": {
             "confidence": 1.0
           },
@@ -60,7 +78,7 @@
       "name": "type 2 diabetes",
       "type": "CONDITION",
       "added": "2022-01-15",
-      "last_confirmed": "2023-08-25",
+      "last_confirmed": "2022-01-15",
       "confidence": 1.0,
       "observed_dates": [
         "2022-01-15",
@@ -96,6 +114,24 @@
           "new": {
             "confirmed": true
           }
+        },
+        {
+          "date": "2023-08-25",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2022-01-15",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
         }
       ],
       "confirmed": true
@@ -105,8 +141,8 @@
       "name": "antihypertensive medication",
       "type": "MEDICATION",
       "added": "2022-01-15",
-      "last_confirmed": "2023-01-20",
-      "confidence": 0.6383333333333333,
+      "last_confirmed": "2022-01-15",
+      "confidence": 0.2766666666666666,
       "observed_dates": [
         "2022-01-15",
         "2022-07-22",
@@ -131,6 +167,15 @@
           "new": {
             "confirmed": true
           }
+        },
+        {
+          "date": "2022-01-15",
+          "old": {
+            "confidence": 0.2766666666666666
+          },
+          "new": {
+            "confirmed": true
+          }
         }
       ],
       "confirmed": true
@@ -140,7 +185,7 @@
       "name": "hba1c",
       "type": "LAB_VALUE",
       "added": "2022-01-15",
-      "last_confirmed": "2023-08-25",
+      "last_confirmed": "2022-01-15",
       "confidence": 1.0,
       "observed_dates": [
         "2022-01-15",
@@ -148,7 +193,7 @@
         "2023-01-20",
         "2023-08-25"
       ],
-      "value": 7.5,
+      "value": 8.2,
       "decayed": true,
       "history": [
         {
@@ -174,15 +219,37 @@
             "confidence": 1.0
           },
           "new": {}
+        },
+        {
+          "date": "2023-08-25",
+          "old": {
+            "value": 7.5,
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2022-01-15",
+          "old": {
+            "value": 7.5,
+            "confidence": 1.0
+          },
+          "new": {
+            "trend": "INSUFFICIENT_DATA"
+          }
         }
-      ]
+      ],
+      "confirmed": true,
+      "trend": "INSUFFICIENT_DATA"
     },
     {
       "id": "LAB_VALUE_bp_systolic",
       "name": "bp_systolic",
       "type": "LAB_VALUE",
       "added": "2022-01-15",
-      "last_confirmed": "2023-08-25",
+      "last_confirmed": "2022-01-15",
       "confidence": 1.0,
       "observed_dates": [
         "2022-01-15",
@@ -190,7 +257,7 @@
         "2023-01-20",
         "2023-08-25"
       ],
-      "value": 140,
+      "value": 150,
       "decayed": true,
       "history": [
         {
@@ -216,15 +283,37 @@
             "confidence": 1.0
           },
           "new": {}
+        },
+        {
+          "date": "2023-08-25",
+          "old": {
+            "value": 140,
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2022-01-15",
+          "old": {
+            "value": 140,
+            "confidence": 1.0
+          },
+          "new": {
+            "trend": "INSUFFICIENT_DATA"
+          }
         }
-      ]
+      ],
+      "confirmed": true,
+      "trend": "INSUFFICIENT_DATA"
     },
     {
       "id": "LAB_VALUE_bp_diastolic",
       "name": "bp_diastolic",
       "type": "LAB_VALUE",
       "added": "2022-01-15",
-      "last_confirmed": "2023-08-25",
+      "last_confirmed": "2022-01-15",
       "confidence": 1.0,
       "observed_dates": [
         "2022-01-15",
@@ -232,7 +321,7 @@
         "2023-01-20",
         "2023-08-25"
       ],
-      "value": 80,
+      "value": 90,
       "decayed": true,
       "history": [
         {
@@ -258,15 +347,37 @@
             "confidence": 1.0
           },
           "new": {}
+        },
+        {
+          "date": "2023-08-25",
+          "old": {
+            "value": 80,
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2022-01-15",
+          "old": {
+            "value": 80,
+            "confidence": 1.0
+          },
+          "new": {
+            "trend": "INSUFFICIENT_DATA"
+          }
         }
-      ]
+      ],
+      "confirmed": true,
+      "trend": "INSUFFICIENT_DATA"
     },
     {
       "id": "SYMPTOM_fatigue",
       "name": "fatigue",
       "type": "SYMPTOM",
       "added": "2022-01-15",
-      "last_confirmed": "2023-08-25",
+      "last_confirmed": "2022-01-15",
       "confidence": 0.2,
       "observed_dates": [
         "2022-01-15",
@@ -282,6 +393,15 @@
           "new": {
             "confirmed": true
           }
+        },
+        {
+          "date": "2022-01-15",
+          "old": {
+            "confidence": 0.2
+          },
+          "new": {
+            "confirmed": true
+          }
         }
       ],
       "confirmed": true
@@ -291,7 +411,7 @@
       "name": "shortness of breath",
       "type": "SYMPTOM",
       "added": "2022-01-15",
-      "last_confirmed": "2023-08-25",
+      "last_confirmed": "2022-01-15",
       "confidence": 0.2,
       "observed_dates": [
         "2022-01-15",
@@ -301,6 +421,15 @@
       "history": [
         {
           "date": "2023-08-25",
+          "old": {
+            "confidence": 0.2
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2022-01-15",
           "old": {
             "confidence": 0.2
           },
@@ -317,7 +446,7 @@
       "type": "CONDITION",
       "added": "2022-07-22",
       "last_confirmed": "2023-08-25",
-      "confidence": 1.0,
+      "confidence": 1.9783333333333335,
       "observed_dates": [
         "2022-07-22",
         "2023-01-20",
@@ -327,6 +456,15 @@
       "history": [
         {
           "date": "2023-01-20",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2023-08-25",
           "old": {
             "confidence": 1.0
           },
@@ -352,7 +490,7 @@
       "type": "MEDICATION",
       "added": "2022-07-22",
       "last_confirmed": "2022-07-22",
-      "confidence": 0.2,
+      "confidence": 0.5133333333333334,
       "observed_dates": [
         "2022-07-22"
       ],
@@ -364,7 +502,7 @@
       "type": "LAB_VALUE",
       "added": "2022-07-22",
       "last_confirmed": "2023-08-25",
-      "confidence": 1.0,
+      "confidence": 1.9783333333333335,
       "observed_dates": [
         "2022-07-22",
         "2023-01-20",
@@ -388,8 +526,19 @@
             "confidence": 1.0
           },
           "new": {}
+        },
+        {
+          "date": "2023-08-25",
+          "old": {
+            "value": "low",
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
         }
-      ]
+      ],
+      "confirmed": true
     },
     {
       "id": "LAB_VALUE_ldl",
@@ -397,7 +546,7 @@
       "type": "LAB_VALUE",
       "added": "2022-07-22",
       "last_confirmed": "2023-01-20",
-      "confidence": 0.6383333333333333,
+      "confidence": 0.8933333333333333,
       "observed_dates": [
         "2022-07-22",
         "2023-01-20"
@@ -421,7 +570,7 @@
       "type": "LAB_VALUE",
       "added": "2022-07-22",
       "last_confirmed": "2023-01-20",
-      "confidence": 0.6383333333333333,
+      "confidence": 0.8933333333333333,
       "observed_dates": [
         "2022-07-22",
         "2023-01-20"
@@ -445,7 +594,7 @@
       "type": "LAB_VALUE",
       "added": "2022-07-22",
       "last_confirmed": "2023-01-20",
-      "confidence": 0.6383333333333333,
+      "confidence": 0.8933333333333333,
       "observed_dates": [
         "2022-07-22",
         "2023-01-20"
@@ -469,7 +618,7 @@
       "type": "LAB_VALUE",
       "added": "2022-07-22",
       "last_confirmed": "2023-01-20",
-      "confidence": 0.6383333333333333,
+      "confidence": 0.8933333333333333,
       "observed_dates": [
         "2022-07-22",
         "2023-01-20"
@@ -493,7 +642,7 @@
       "type": "LAB_VALUE",
       "added": "2022-07-22",
       "last_confirmed": "2023-01-20",
-      "confidence": 0.6383333333333333,
+      "confidence": 0.8933333333333333,
       "observed_dates": [
         "2022-07-22",
         "2023-01-20"
@@ -517,7 +666,7 @@
       "type": "LAB_VALUE",
       "added": "2022-07-22",
       "last_confirmed": "2023-01-20",
-      "confidence": 0.6383333333333333,
+      "confidence": 0.8933333333333333,
       "observed_dates": [
         "2022-07-22",
         "2023-01-20"
@@ -541,7 +690,7 @@
       "type": "SYMPTOM",
       "added": "2022-07-22",
       "last_confirmed": "2023-01-20",
-      "confidence": 0.6383333333333333,
+      "confidence": 0.8933333333333333,
       "observed_dates": [
         "2022-07-22",
         "2023-01-20"
@@ -566,13 +715,22 @@
       "type": "CONDITION",
       "added": "2023-01-20",
       "last_confirmed": "2023-08-25",
-      "confidence": 1.0,
+      "confidence": 1.9783333333333335,
       "observed_dates": [
         "2023-01-20",
         "2023-08-25"
       ],
       "decayed": true,
       "history": [
+        {
+          "date": "2023-08-25",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
         {
           "date": "2023-08-25",
           "old": {
@@ -591,7 +749,7 @@
       "type": "MEDICATION",
       "added": "2023-08-25",
       "last_confirmed": "2023-08-25",
-      "confidence": 1.0,
+      "confidence": 1.9783333333333335,
       "observed_dates": [
         "2023-08-25"
       ],
@@ -603,7 +761,7 @@
       "type": "MEDICATION",
       "added": "2023-08-25",
       "last_confirmed": "2023-08-25",
-      "confidence": 1.0,
+      "confidence": 1.9783333333333335,
       "observed_dates": [
         "2023-08-25"
       ],
@@ -615,7 +773,7 @@
       "type": "MEDICATION",
       "added": "2023-08-25",
       "last_confirmed": "2023-08-25",
-      "confidence": 1.0,
+      "confidence": 1.9783333333333335,
       "observed_dates": [
         "2023-08-25"
       ],
@@ -627,7 +785,7 @@
       "type": "SYMPTOM",
       "added": "2023-08-25",
       "last_confirmed": "2023-08-25",
-      "confidence": 1.0,
+      "confidence": 1.9783333333333335,
       "observed_dates": [
         "2023-08-25"
       ],
@@ -639,7 +797,7 @@
       "type": "SYMPTOM",
       "added": "2023-08-25",
       "last_confirmed": "2023-08-25",
-      "confidence": 1.0,
+      "confidence": 1.9783333333333335,
       "observed_dates": [
         "2023-08-25"
       ],
@@ -651,7 +809,7 @@
       "type": "SYMPTOM",
       "added": "2023-08-25",
       "last_confirmed": "2023-08-25",
-      "confidence": 1.0,
+      "confidence": 1.9783333333333335,
       "observed_dates": [
         "2023-08-25"
       ],
