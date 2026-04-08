@@ -1,8 +1,8 @@
 {
   "confidence_semantics": "Confidence is tracked as freshness/trust signal, not truth probability.",
-  "factual_freshness_proxy": 0.7333333333333333,
-  "longitudinal_consistency_proxy": 0.05382450875844806,
-  "chronic_fact_recall_proxy": 0.7666666666666667,
+  "factual_freshness_proxy": 0.6333333333333333,
+  "longitudinal_consistency_proxy": -0.012663564878994863,
+  "chronic_fact_recall_proxy": 0.6916666666666667,
   "allergy_fact_recall_proxy": null,
   "conflict_detection_recall": 1.0,
   "coverage": {

@@ -16,7 +16,7 @@
       "type": "CONDITION",
       "added": "2022-06-15",
       "last_confirmed": "2022-06-15",
-      "confidence": 0.5786666666666666,
+      "confidence": 0.45,
       "observed_dates": [
         "2022-06-15",
         "2022-12-20",
@@ -61,6 +61,15 @@
           "new": {
             "confirmed": true
           }
+        },
+        {
+          "date": "2022-06-15",
+          "old": {
+            "confidence": 0.45
+          },
+          "new": {
+            "confirmed": true
+          }
         }
       ],
       "confirmed": true
@@ -79,6 +88,15 @@
       "decay_rate_applied": 0.01,
       "confidence_floor_applied": 0.45,
       "history": [
+        {
+          "date": "2022-06-15",
+          "old": {
+            "confidence": 0.45
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
         {
           "date": "2022-06-15",
           "old": {
@@ -141,6 +159,15 @@
           "new": {
             "confirmed": true
           }
+        },
+        {
+          "date": "2022-06-15",
+          "old": {
+            "confidence": 0.2
+          },
+          "new": {
+            "confirmed": true
+          }
         }
       ],
       "confirmed": true
@@ -159,6 +186,15 @@
       "decay_rate_applied": 0.04,
       "confidence_floor_applied": 0.2,
       "history": [
+        {
+          "date": "2022-06-15",
+          "old": {
+            "confidence": 0.2
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
         {
           "date": "2022-06-15",
           "old": {
@@ -239,6 +275,26 @@
           },
           "new": {
             "confirmed": true
+          }
+        },
+        {
+          "date": "2022-06-15",
+          "old": {
+            "value": 145,
+            "confidence": 1.0
+          },
+          "new": {
+            "trend": "INSUFFICIENT_DATA"
+          }
+        },
+        {
+          "date": "2024-06-15",
+          "old": {
+            "value": 140,
+            "confidence": 1.0
+          },
+          "new": {
+            "trend": "INSUFFICIENT_DATA"
           }
         },
         {
@@ -365,6 +421,26 @@
           "new": {
             "trend": "INSUFFICIENT_DATA"
           }
+        },
+        {
+          "date": "2024-06-15",
+          "old": {
+            "value": 90,
+            "confidence": 1.0
+          },
+          "new": {
+            "trend": "INSUFFICIENT_DATA"
+          }
+        },
+        {
+          "date": "2022-06-15",
+          "old": {
+            "value": 85,
+            "confidence": 1.0
+          },
+          "new": {
+            "trend": "INSUFFICIENT_DATA"
+          }
         }
       ],
       "confirmed": true,
@@ -397,6 +473,24 @@
         },
         {
           "date": "2024-06-15",
+          "old": {
+            "confidence": 0.15
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2024-06-15",
+          "old": {
+            "confidence": 0.15
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2022-06-15",
           "old": {
             "confidence": 0.15
           },
@@ -484,6 +578,15 @@
           "new": {
             "confirmed": true
           }
+        },
+        {
+          "date": "2022-06-15",
+          "old": {
+            "confidence": 0.15
+          },
+          "new": {
+            "confirmed": true
+          }
         }
       ],
       "confirmed": true
@@ -494,7 +597,7 @@
       "type": "MEDICATION",
       "added": "2022-12-20",
       "last_confirmed": "2024-06-15",
-      "confidence": 2.698666666666667,
+      "confidence": 3.673333333333334,
       "observed_dates": [
         "2022-12-20",
         "2023-06-15",
@@ -539,6 +642,15 @@
           "new": {
             "confirmed": true
           }
+        },
+        {
+          "date": "2024-06-15",
+          "old": {
+            "confidence": 2.698666666666667
+          },
+          "new": {
+            "confirmed": true
+          }
         }
       ],
       "confirmed": true
@@ -563,7 +675,7 @@
       "type": "CONDITION",
       "added": "2023-06-15",
       "last_confirmed": "2023-06-15",
-      "confidence": 0.7220000000000001,
+      "confidence": 0.7215000000000001,
       "observed_dates": [
         "2023-06-15"
       ],
@@ -591,7 +703,7 @@
       "type": "LAB_VALUE",
       "added": "2023-06-15",
       "last_confirmed": "2023-12-20",
-      "confidence": 1.9533333333333336,
+      "confidence": 2.5783333333333336,
       "observed_dates": [
         "2023-06-15",
         "2023-12-20"
@@ -631,7 +743,7 @@
       "type": "MEDICATION",
       "added": "2023-12-20",
       "last_confirmed": "2023-12-20",
-      "confidence": 1.7626666666666666,
+      "confidence": 2.2626666666666666,
       "observed_dates": [
         "2023-12-20"
       ],
@@ -645,7 +757,7 @@
       "type": "SYMPTOM",
       "added": "2023-12-20",
       "last_confirmed": "2023-12-20",
-      "confidence": 2.6246666666666667,
+      "confidence": 3.6246666666666667,
       "observed_dates": [
         "2023-12-20"
       ],
@@ -659,7 +771,7 @@
       "type": "PROCEDURE",
       "added": "2023-12-20",
       "last_confirmed": "2023-12-20",
-      "confidence": 1.572,
+      "confidence": 1.947,
       "observed_dates": [
         "2023-12-20"
       ],
@@ -673,7 +785,7 @@
       "type": "CONDITION",
       "added": "2024-06-15",
       "last_confirmed": "2024-06-15",
-      "confidence": 1.7309999999999999,
+      "confidence": 2.0965,
       "observed_dates": [
         "2024-06-15"
       ],
@@ -698,6 +810,15 @@
           "new": {
             "confirmed": true
           }
+        },
+        {
+          "date": "2024-06-15",
+          "old": {
+            "confidence": 1.7309999999999999
+          },
+          "new": {
+            "confirmed": true
+          }
         }
       ],
       "confirmed": true
@@ -708,7 +829,7 @@
       "type": "MEDICATION",
       "added": "2024-06-15",
       "last_confirmed": "2024-06-15",
-      "confidence": 2.9493333333333336,
+      "confidence": 3.9240000000000004,
       "observed_dates": [
         "2024-06-15"
       ],
@@ -733,6 +854,15 @@
           "new": {
             "confirmed": true
           }
+        },
+        {
+          "date": "2024-06-15",
+          "old": {
+            "confidence": 2.9493333333333336
+          },
+          "new": {
+            "confirmed": true
+          }
         }
       ],
       "confirmed": true
@@ -743,7 +873,7 @@
       "type": "SYMPTOM",
       "added": "2024-06-15",
       "last_confirmed": "2024-06-15",
-      "confidence": 4.898666666666667,
+      "confidence": 6.848000000000001,
       "observed_dates": [
         "2024-06-15"
       ],
@@ -768,6 +898,15 @@
           "new": {
             "confirmed": true
           }
+        },
+        {
+          "date": "2024-06-15",
+          "old": {
+            "confidence": 4.898666666666667
+          },
+          "new": {
+            "confirmed": true
+          }
         }
       ],
       "confirmed": true
@@ -778,7 +917,7 @@
       "type": "PROCEDURE",
       "added": "2024-06-15",
       "last_confirmed": "2024-06-15",
-      "confidence": 2.4619999999999997,
+      "confidence": 3.1929999999999996,
       "observed_dates": [
         "2024-06-15"
       ],

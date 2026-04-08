@@ -43,6 +43,15 @@
           "new": {
             "confirmed": true
           }
+        },
+        {
+          "date": "2023-08-02",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
         }
       ],
       "confirmed": true
@@ -53,7 +62,7 @@
       "type": "CONDITION",
       "added": "2022-06-15",
       "last_confirmed": "2023-01-10",
-      "confidence": 0.9319999999999999,
+      "confidence": 0.8639999999999999,
       "observed_dates": [
         "2022-06-15",
         "2023-01-10"
@@ -80,7 +89,7 @@
       "type": "MEDICATION",
       "added": "2022-06-15",
       "last_confirmed": "2023-01-10",
-      "confidence": 0.728,
+      "confidence": 0.45599999999999996,
       "observed_dates": [
         "2022-06-15",
         "2023-01-10"
@@ -124,6 +133,15 @@
           "new": {
             "confirmed": true
           }
+        },
+        {
+          "date": "2023-08-02",
+          "old": {
+            "confidence": 0.7213333333333334
+          },
+          "new": {
+            "confirmed": true
+          }
         }
       ],
       "confirmed": true
@@ -134,7 +152,7 @@
       "type": "LAB_VALUE",
       "added": "2022-06-15",
       "last_confirmed": "2023-01-10",
-      "confidence": 0.6599999999999999,
+      "confidence": 0.3199999999999999,
       "observed_dates": [
         "2022-06-15",
         "2023-01-10"
@@ -186,8 +204,19 @@
             "confidence": 1.0
           },
           "new": {}
+        },
+        {
+          "date": "2023-08-02",
+          "old": {
+            "value": "elevated",
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
         }
-      ]
+      ],
+      "confirmed": true
     },
     {
       "id": "SYMPTOM_fatigue",
@@ -195,7 +224,7 @@
       "type": "SYMPTOM",
       "added": "2022-06-15",
       "last_confirmed": "2023-01-10",
-      "confidence": 0.45599999999999996,
+      "confidence": 0.15,
       "observed_dates": [
         "2022-06-15",
         "2023-01-10"
@@ -236,7 +265,7 @@
       "type": "MEDICATION",
       "added": "2023-01-10",
       "last_confirmed": "2023-01-10",
-      "confidence": 0.728,
+      "confidence": 0.45599999999999996,
       "observed_dates": [
         "2023-01-10"
       ],
@@ -267,8 +296,19 @@
             "confidence": 1.0
           },
           "new": {}
+        },
+        {
+          "date": "2023-08-02",
+          "old": {
+            "value": "elevated",
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
         }
-      ]
+      ],
+      "confirmed": true
     },
     {
       "id": "LAB_VALUE_ldl",
@@ -276,7 +316,7 @@
       "type": "LAB_VALUE",
       "added": "2023-01-10",
       "last_confirmed": "2023-01-10",
-      "confidence": 0.6599999999999999,
+      "confidence": 0.3199999999999999,
       "observed_dates": [
         "2023-01-10"
       ],
@@ -291,7 +331,7 @@
       "type": "SYMPTOM",
       "added": "2023-01-10",
       "last_confirmed": "2023-01-10",
-      "confidence": 0.45599999999999996,
+      "confidence": 0.15,
       "observed_dates": [
         "2023-01-10"
       ],
@@ -311,7 +351,19 @@
       ],
       "decayed": true,
       "decay_rate_applied": 0.01,
-      "confidence_floor_applied": 0.45
+      "confidence_floor_applied": 0.45,
+      "history": [
+        {
+          "date": "2023-08-02",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
     },
     {
       "id": "MEDICATION_ace_inhibitor",
@@ -325,7 +377,19 @@
       ],
       "decayed": true,
       "decay_rate_applied": 0.04,
-      "confidence_floor_applied": 0.2
+      "confidence_floor_applied": 0.2,
+      "history": [
+        {
+          "date": "2023-08-02",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
     },
     {
       "id": "LAB_VALUE_egfr",
@@ -340,7 +404,20 @@
       "value": "worsening",
       "decayed": true,
       "decay_rate_applied": 0.05,
-      "confidence_floor_applied": 0.2
+      "confidence_floor_applied": 0.2,
+      "history": [
+        {
+          "date": "2023-08-02",
+          "old": {
+            "value": "worsening",
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
     },
     {
       "id": "SYMPTOM_shortness_of_breath",
@@ -354,7 +431,19 @@
       ],
       "decayed": true,
       "decay_rate_applied": 0.08,
-      "confidence_floor_applied": 0.15
+      "confidence_floor_applied": 0.15,
+      "history": [
+        {
+          "date": "2023-08-02",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        }
+      ],
+      "confirmed": true
     }
   ],
   "edges": [

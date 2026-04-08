@@ -1083,21 +1083,25 @@ class Phase9Evaluator:
                 "question": f"After the latest visit updates, what conditions were recorded in visit 1 ({d}) for patient {patient_id}?",
                 "expected": f"Visit 1 conditions were: {exp['conditions']}",
                 "keywords": exp["conditions"],
+                "query_type": "multi_visit_context",
             },
             {
                 "question": f"After visit 4, what medications were documented in visit 1 ({d}) for patient {patient_id}?",
                 "expected": f"Visit 1 medications were: {exp['medications']}",
                 "keywords": exp["medications"],
+                "query_type": "multi_visit_context",
             },
             {
                 "question": f"After later visits, what symptoms were present in visit 1 ({d}) for patient {patient_id}?",
                 "expected": f"Visit 1 symptoms were: {exp['symptoms']}",
                 "keywords": exp["symptoms"],
+                "query_type": "multi_visit_context",
             },
             {
                 "question": f"State the key lab values from visit 1 ({d}) for patient {patient_id}.",
                 "expected": f"Visit 1 labs were: {exp['labs']}",
                 "keywords": exp["labs"],
+                "query_type": "lab_trend",
             },
             {
                 "question": f"Give a concise factual summary of visit 1 ({d}) only for patient {patient_id}.",
@@ -1106,6 +1110,7 @@ class Phase9Evaluator:
                     f"symptoms {exp['symptoms']}; labs {exp['labs']}."
                 ),
                 "keywords": f"{exp['conditions']} {exp['medications']} {exp['symptoms']}",
+                "query_type": "multi_visit_context",
             },
         ]
 
@@ -1118,6 +1123,53 @@ class Phase9Evaluator:
             ans = _safe_lower(answer)
             kw_cov = sum(1 for kw in kws if kw in ans) / float(len(kws))
         return 0.7 * bert + 0.3 * kw_cov
+
+    def _canonicalize_e2_answer(self, answer: str, expected: str, question: str) -> str:
+        """Symmetric deterministic rendering for E2 scoring across both systems."""
+        raw = str(answer or "").strip()
+        if not raw:
+            return raw
+
+        first = ""
+        facts = ""
+        for line in raw.splitlines():
+            if ":" not in line:
+                continue
+            key, value = line.split(":", 1)
+            k = _safe_lower(key)
+            v = value.strip()
+            if k == "evidence_first_visit":
+                first = v
+            elif k == "facts":
+                facts = v
+
+        source = first if _safe_lower(first) not in {"", "none", "none documented"} else facts
+        if not source:
+            # For free-form answers (typically baseline), fall back to normalized raw text.
+            source = raw
+
+        # Remove contract-style metadata keys that should not influence lexical scoring.
+        source = re.sub(r"\bpatient_id\s*:\s*[^\n;,.]+", "", source, flags=re.IGNORECASE)
+        source = re.sub(r"\bquestion_type\s*:\s*[^\n;,.]+", "", source, flags=re.IGNORECASE)
+        source = re.sub(r"\bevidence_first_visit\s*:\s*", "", source, flags=re.IGNORECASE)
+        source = re.sub(r"\bevidence_latest_visit\s*:\s*", "", source, flags=re.IGNORECASE)
+        source = re.sub(r"\bfacts\s*:\s*", "", source, flags=re.IGNORECASE)
+        source = re.sub(r"\bconfidence\s*:\s*(low|medium|high)\b", "", source, flags=re.IGNORECASE)
+
+        source = source.replace(";", ", ")
+        source = source.replace("\n", " ")
+        source = re.sub(r"\s+", " ", source).strip(" ,")
+        source = re.sub(r"\[?LAB_VALUE\]?", "unknown", source, flags=re.IGNORECASE)
+
+        if not source:
+            return raw
+
+        expected_prefix = str(expected or "").split(":", 1)[0].strip()
+        if not expected_prefix:
+            return source
+
+        canonical = f"{expected_prefix}: {source}"
+        return canonical
 
     def experiment2_longitudinal_consistency(self) -> Dict[str, Any]:
         self._ensure_qa_systems()
@@ -1137,14 +1189,29 @@ class Phase9Evaluator:
                 case_idx += 1
                 print(f"[E2] {case_idx}/50 | {pid}")
 
-                gm_resp = self._query_graphmed_with_retry(pid, q["question"])
+                gm_resp = self._query_graphmed_with_retry(
+                    pid,
+                    q["question"],
+                    query_type=q.get("query_type"),
+                )
                 bl_resp = self._query_baseline_with_retry(pid, q["question"])
 
-                gm_bert = self._bertscore_f1(gm_resp, q["expected"])
-                bl_bert = self._bertscore_f1(bl_resp, q["expected"])
+                gm_resp_scored = self._canonicalize_e2_answer(
+                    gm_resp,
+                    expected=q["expected"],
+                    question=q["question"],
+                )
+                bl_resp_scored = self._canonicalize_e2_answer(
+                    bl_resp,
+                    expected=q["expected"],
+                    question=q["question"],
+                )
 
-                gm_cons = self._custom_consistency_score(gm_resp, q["expected"], q["keywords"])
-                bl_cons = self._custom_consistency_score(bl_resp, q["expected"], q["keywords"])
+                gm_bert = self._bertscore_f1(gm_resp_scored, q["expected"])
+                bl_bert = self._bertscore_f1(bl_resp_scored, q["expected"])
+
+                gm_cons = self._custom_consistency_score(gm_resp_scored, q["expected"], q["keywords"])
+                bl_cons = self._custom_consistency_score(bl_resp_scored, q["expected"], q["keywords"])
 
                 rows.append(
                     {
@@ -1156,7 +1223,8 @@ class Phase9Evaluator:
                         "patient_id": pid,
                         "question": q["question"],
                         "expected": q["expected"],
-                        "answer": gm_resp,
+                        "answer": gm_resp_scored,
+                        "raw_answer": gm_resp,
                         "bertscore_f1": gm_bert,
                         "consistency_score": gm_cons,
                     }
@@ -1171,7 +1239,8 @@ class Phase9Evaluator:
                         "patient_id": pid,
                         "question": q["question"],
                         "expected": q["expected"],
-                        "answer": bl_resp,
+                        "answer": bl_resp_scored,
+                        "raw_answer": bl_resp,
                         "bertscore_f1": bl_bert,
                         "consistency_score": bl_cons,
                     }

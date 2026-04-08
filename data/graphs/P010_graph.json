@@ -79,6 +79,24 @@
           "new": {
             "confirmed": true
           }
+        },
+        {
+          "date": "2023-12-15",
+          "old": {
+            "confidence": 0.9376666666666666
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2022-06-10",
+          "old": {
+            "confidence": 0.9376666666666666
+          },
+          "new": {
+            "confirmed": true
+          }
         }
       ],
       "confirmed": true
@@ -114,6 +132,15 @@
           "new": {
             "confirmed": true
           }
+        },
+        {
+          "date": "2022-06-10",
+          "old": {
+            "confidence": 0.45
+          },
+          "new": {
+            "confirmed": true
+          }
         }
       ],
       "confirmed": true
@@ -124,7 +151,7 @@
       "type": "CONDITION",
       "added": "2022-06-10",
       "last_confirmed": "2022-06-10",
-      "confidence": 0.6343333333333333,
+      "confidence": 0.45,
       "observed_dates": [
         "2022-06-10",
         "2023-06-20"
@@ -159,6 +186,15 @@
           "new": {
             "confirmed": true
           }
+        },
+        {
+          "date": "2022-06-10",
+          "old": {
+            "confidence": 0.45
+          },
+          "new": {
+            "confirmed": true
+          }
         }
       ],
       "confirmed": true
@@ -177,6 +213,15 @@
       "decay_rate_applied": 0.04,
       "confidence_floor_applied": 0.2,
       "history": [
+        {
+          "date": "2022-06-10",
+          "old": {
+            "confidence": 0.2
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
         {
           "date": "2022-06-10",
           "old": {
@@ -225,6 +270,24 @@
         },
         {
           "date": "2023-12-15",
+          "old": {
+            "confidence": 0.7493333333333334
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2023-12-15",
+          "old": {
+            "confidence": 0.7493333333333334
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2022-06-10",
           "old": {
             "confidence": 0.7493333333333334
           },
@@ -352,6 +415,26 @@
           "new": {
             "trend": "INSUFFICIENT_DATA"
           }
+        },
+        {
+          "date": "2023-12-15",
+          "old": {
+            "value": 7.2,
+            "confidence": 1.0
+          },
+          "new": {
+            "trend": "INSUFFICIENT_DATA"
+          }
+        },
+        {
+          "date": "2022-06-10",
+          "old": {
+            "value": 8.0,
+            "confidence": 1.0
+          },
+          "new": {
+            "trend": "INSUFFICIENT_DATA"
+          }
         }
       ],
       "confirmed": true,
@@ -407,6 +490,26 @@
           },
           "new": {
             "confirmed": true
+          }
+        },
+        {
+          "date": "2022-06-10",
+          "old": {
+            "value": 155,
+            "confidence": 1.0
+          },
+          "new": {
+            "trend": "INSUFFICIENT_DATA"
+          }
+        },
+        {
+          "date": "2023-12-15",
+          "old": {
+            "value": 140,
+            "confidence": 1.0
+          },
+          "new": {
+            "trend": "INSUFFICIENT_DATA"
           }
         },
         {
@@ -524,6 +627,26 @@
           "new": {
             "trend": "INSUFFICIENT_DATA"
           }
+        },
+        {
+          "date": "2023-12-15",
+          "old": {
+            "value": 90,
+            "confidence": 1.0
+          },
+          "new": {
+            "trend": "INSUFFICIENT_DATA"
+          }
+        },
+        {
+          "date": "2022-06-10",
+          "old": {
+            "value": 105,
+            "confidence": 1.0
+          },
+          "new": {
+            "trend": "INSUFFICIENT_DATA"
+          }
         }
       ],
       "confirmed": true,
@@ -610,6 +733,26 @@
           "new": {
             "trend": "INSUFFICIENT_DATA"
           }
+        },
+        {
+          "date": "2023-12-15",
+          "old": {
+            "value": 72,
+            "confidence": 1.0
+          },
+          "new": {
+            "trend": "INSUFFICIENT_DATA"
+          }
+        },
+        {
+          "date": "2022-06-10",
+          "old": {
+            "value": 45,
+            "confidence": 1.0
+          },
+          "new": {
+            "trend": "INSUFFICIENT_DATA"
+          }
         }
       ],
       "confirmed": true,
@@ -647,6 +790,16 @@
           },
           "new": {
             "trend": "INSUFFICIENT_DATA"
+          }
+        },
+        {
+          "date": "2022-06-10",
+          "old": {
+            "value": 130,
+            "confidence": 0.2
+          },
+          "new": {
+            "confirmed": true
           }
         },
         {
@@ -742,6 +895,24 @@
           "new": {
             "confirmed": true
           }
+        },
+        {
+          "date": "2023-12-15",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2022-06-10",
+          "old": {
+            "confidence": 1.0
+          },
+          "new": {
+            "confirmed": true
+          }
         }
       ],
       "confirmed": true
@@ -760,6 +931,15 @@
       "decay_rate_applied": 0.08,
       "confidence_floor_applied": 0.15,
       "history": [
+        {
+          "date": "2022-06-10",
+          "old": {
+            "confidence": 0.15
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
         {
           "date": "2022-06-10",
           "old": {
@@ -812,6 +992,15 @@
           "new": {
             "confirmed": true
           }
+        },
+        {
+          "date": "2022-06-10",
+          "old": {
+            "confidence": 0.15
+          },
+          "new": {
+            "confirmed": true
+          }
         }
       ],
       "confirmed": true
@@ -836,7 +1025,7 @@
       "type": "SYMPTOM",
       "added": "2022-12-15",
       "last_confirmed": "2023-12-15",
-      "confidence": 3.9493333333333336,
+      "confidence": 5.424,
       "observed_dates": [
         "2022-12-15",
         "2023-06-20",
@@ -881,6 +1070,15 @@
           "new": {
             "confirmed": true
           }
+        },
+        {
+          "date": "2023-12-15",
+          "old": {
+            "confidence": 3.9493333333333336
+          },
+          "new": {
+            "confirmed": true
+          }
         }
       ],
       "confirmed": true
@@ -891,7 +1089,7 @@
       "type": "MEDICATION",
       "added": "2023-06-20",
       "last_confirmed": "2023-06-20",
-      "confidence": 1.2879999999999998,
+      "confidence": 1.5506666666666664,
       "observed_dates": [
         "2023-06-20"
       ],
@@ -905,7 +1103,7 @@
       "type": "MEDICATION",
       "added": "2023-12-15",
       "last_confirmed": "2023-12-15",
-      "confidence": 2.474666666666667,
+      "confidence": 3.212,
       "observed_dates": [
         "2023-12-15"
       ],
@@ -930,6 +1128,15 @@
           "new": {
             "confirmed": true
           }
+        },
+        {
+          "date": "2023-12-15",
+          "old": {
+            "confidence": 2.474666666666667
+          },
+          "new": {
+            "confirmed": true
+          }
         }
       ],
       "confirmed": true
@@ -940,7 +1147,7 @@
       "type": "SYMPTOM",
       "added": "2023-12-15",
       "last_confirmed": "2023-12-15",
-      "confidence": 3.9493333333333336,
+      "confidence": 5.424,
       "observed_dates": [
         "2023-12-15"
       ],
@@ -961,6 +1168,15 @@
           "date": "2023-12-15",
           "old": {
             "confidence": 2.474666666666667
+          },
+          "new": {
+            "confirmed": true
+          }
+        },
+        {
+          "date": "2023-12-15",
+          "old": {
+            "confidence": 3.9493333333333336
           },
           "new": {
             "confirmed": true

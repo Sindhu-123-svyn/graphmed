@@ -5,7 +5,7 @@
       "system": "baseline",
       "patient_id": "P009",
       "question": "What are the key diagnosed conditions for patient P009?",
-      "answer": "Based on the provided patient context, the key diagnosed conditions for patient P009 are:\n\n1. Chronic Kidney Disease (CKD) (2023-10-15)\n2. Type 2 Diabetes (2022-06-15)\n3. Hypertension (2022-06-15)\n4. Hyperlipidemia (2022-06-15)\n\nThese conditions are supported by the patient's lab results and medication lists across the different dates.",
+      "answer": "Based on the provided patient context, the key diagnosed conditions for patient P009 are:\n\n1. Chronic Kidney Disease (CKD) (Source: Note dated 2023-10-15)\n2. Type 2 Diabetes (Source: Note dated 2022-06-15 and 2023-02-20)\n3. Hypertension (Source: Note dated 2022-06-15, 2023-02-20, and 2023-10-15)\n4. Hyperlipidemia (Source: Note dated 2022-06-15, 2023-02-20, and 2023-10-15)\n5. Coronary Artery Disease (Source: Note dated 2023-10-15)",
       "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
       "expected_keywords": [
         "hypertension",
@@ -19,7 +19,7 @@
       "system": "graphmed",
       "patient_id": "P002",
       "question": "What symptoms have been documented for patient P002?",
-      "answer": "patient_id: P002\nquestion_type: history\nfacts: fatigue; weakness; numbness in hands and feet; frequent urination; blurred vision\nevidence_first_visit: none\nevidence_latest_visit: fatigue; weakness; numbness in hands and feet; frequent urination; blurred vision\nconfidence: medium",
+      "answer": "patient_id: P002\nquestion_type: history\nfacts: hypertension; type 2 diabetes; chronic kidney disease; hyperlipidemia; HbA1c 8.2; HbA1c 7.5; HbA1c 7.8; HbA1c 8.5; eGFR 60; LDL 160; BP 150/90; BP 140/80; BP elevated\nevidence_first_visit: none\nevidence_latest_visit: V4\nconfidence: high",
       "expected_answer": "Documented symptoms include Fatigue, Shortness of breath, Elevated bp.",
       "expected_keywords": [
         "fatigue",
@@ -47,7 +47,7 @@
       "system": "graphmed",
       "patient_id": "P010",
       "question": "What symptoms have been documented for patient P010?",
-      "answer": "patient_id: P010\nquestion_type: history\nfacts: fatigue; shortness of breath; hba1c score=0.327; hypertension; hyperlipidemia; type 2 diabetes\nevidence_first_visit: none\nevidence_latest_visit: fatigue; shortness of breath; hba1c score=0.327\nconfidence: high",
+      "answer": "patient_id: P010\nquestion_type: history\nfacts: shortness of breath; edema; fatigue; hba1c; type 2 diabetes; hypertension; hyperlipidemia\nevidence_first_visit: none\nevidence_latest_visit: shortness of breath; edema; fatigue; hba1c; type 2 diabetes; hypertension; hyperlipidemia\nconfidence: high",
       "expected_answer": "Documented symptoms include Fatigue, Frequent urination, Polydipsia.",
       "expected_keywords": [
         "fatigue",
@@ -61,7 +61,7 @@
       "system": "baseline",
       "patient_id": "P004",
       "question": "What symptoms have been documented for patient P004?",
-      "answer": "Based on the provided patient context, the symptoms that have been documented for patient P004 are:\n\n* Worsening shortness of breath (2024-09-01, 2024-03-15)\n* Fatigue (2023-10-20, 2024-03-15)\n* Decreased mobility (2024-09-01)\n* Weight gain and edema (2024-09-01)\n* Crackles at lung bases (2024-03-15)\n\nSource: Patient notes from 2023-10-20, 2024-03-15, and 2024-09-01.",
+      "answer": "Based on the provided patient context, the symptoms that have been documented for patient P004 are:\n\n* Worsening shortness of breath (documented on 2024-09-01, 2024-03-15)\n* Fatigue (documented on 2023-10-20, 2024-03-15)\n* Decreased mobility (documented on 2024-09-01)\n* Weight gain and edema (documented on 2024-09-01)\n* Crackles at lung bases (documented on 2024-03-15)",
       "expected_answer": "Documented symptoms include Polydipsia, Increased thirst, Urination.",
       "expected_keywords": [
         "polydipsia",
@@ -75,7 +75,7 @@
       "system": "baseline",
       "patient_id": "P004",
       "question": "What are the key diagnosed conditions for patient P004?",
-      "answer": "Based on the provided patient context, the key diagnosed conditions for patient P004 are:\n\n1. Type 2 Diabetes mellitus (HbA1c 7.2, 7.5, 7.8)\n2. Hypertension (BP 130/80, 130/80, 125/75)\n3. Hyperlipidemia (LDL 140, 140, 120)\n4. Chronic Kidney Disease stage 5 (2025-02-18), stage 3 (2023-10-20), and stage 4 (2024-03-15) (eGFR 48, 52)\n5. Congestive heart failure with moderate decompensation (2025-02-18) and possible congestive heart failure (2024-03-15)",
+      "answer": "Based on the provided patient context, the key diagnosed conditions for patient P004 are:\n\n1. Type 2 Diabetes mellitus (all dates)\n2. Hypertension (all dates)\n3. Hyperlipidemia (all dates)\n4. Chronic Kidney Disease (CKD) stage 5 (2025-02-18), stage 3 (2023-10-20), and stage 4 (2024-03-15)\n5. Congestive heart failure with moderate decompensation (2025-02-18) and possible congestive heart failure (2024-03-15)\n\nThese diagnoses are based on the patient's lab results, physical exams, and medication lists across the three dates.",
       "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
       "expected_keywords": [
         "hypertension",
@@ -89,7 +89,7 @@
       "system": "graphmed",
       "patient_id": "P003",
       "question": "Is the combination of metformin and losartan safe for patient P003?",
-      "answer": "patient_id: P003\nquestion_type: drug_safety\nfacts: metformin is contraindicated in patients with severe renal impairment; losartan is an ACE inhibitor which is not contraindicated with metformin; patient has chronic kidney disease with eGFR not specified\nevidence_first_visit: none\nevidence_latest_visit: patient has chronic kidney disease with eGFR not specified\nconfidence: low",
+      "answer": "patient_id: P003\nquestion_type: drug_safety\nfacts: metformin and losartan combination is generally safe; losartan is safe for mild to moderate chronic kidney disease; patient has chronic kidney disease; patient has hypertension; patient has type 2 diabetes\nevidence_first_visit: none\nevidence_latest_visit: patient returns with worsening shortness of breath on exertion; patient returns with worsening fatigue and increased urination; patient presents with symptoms of fatigue and increased thirst\nconfidence: medium",
       "expected_answer": "Assess safety and potential interaction risk between metformin and losartan.",
       "expected_keywords": [
         "metformin",
@@ -103,7 +103,7 @@
       "system": "baseline",
       "patient_id": "P002",
       "question": "Using all visits, what changed between the first and most recent visit for patient P002?",
-      "answer": "Between the first and most recent visit, the following changes occurred for patient P002:\n\n* HbA1c improved from 8.2 to 7.5 (Source: 2022-01-15 and 2023-08-25)\n* BP improved from 150/90 to 140/80 (Source: 2022-01-15 and 2023-08-25)\n* LDL increased from 160 to (no change, as it was not mentioned in the most recent visit)\n* eGFR remained low, but no change in value was mentioned (Source: 2023-08-25)\n* Diagnoses were updated to include Hyperlipidemia on 2022-07-22, but no change in diagnosis was mentioned on the most recent visit.",
+      "answer": "Between the first visit (2022-01-15) and the most recent visit (2023-08-25), the following changes were observed:\n\n* HbA1c improved from 8.2 to 7.5 (Source: 2022-01-15 and 2023-08-25 notes)\n* BP improved from 150/90 to 140/80 (Source: 2022-01-15 and 2023-08-25 notes)\n* LDL increased from 160 to (no change, as it was not mentioned in the most recent visit)\n* eGFR remained low, but no change in value was mentioned (Source: 2023-08-25 note)\n* Diagnoses remained the same, but Hyperlipidemia was added in 2022-07-22 (Source: 2022-07-22 note)\n\nNote: The patient's eGFR was not mentioned in the first visit, so it's not possible to compare the values.",
       "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Hypertension.",
       "expected_keywords": [
         "hypertension",
@@ -131,7 +131,7 @@
       "system": "graphmed",
       "patient_id": "P009",
       "question": "Using all visits, what changed between the first and most recent visit for patient P009?",
-      "answer": "patient_id: P009\nquestion_type: multi_visit_context\nfacts: worsening glycemic control; increased blood pressure; elevated lipid levels; worsening kidney function; coronary artery disease progression\nevidence_first_visit: Type 2 Diabetes, Hypertension, and Hyperlipidemia\nevidence_latest_visit: worsening hypertension and hyperlipidemia; worsening kidney function and coronary artery disease\nconfidence: high",
+      "answer": "patient_id: P009\nquestion_type: multi_visit_context\nfacts: worsening hypertension and hyperlipidemia, poor glycemic control (HbA1c 7.8%), worsening kidney function, shortness of breath, increased risk of cardiovascular events and mortality\nevidence_first_visit: Type 2 Diabetes, Hypertension, Hyperlipidemia\nevidence_latest_visit: chronic kidney disease, coronary artery disease, hypertension, hyperlipidemia\nconfidence: high",
       "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Chronic Kidney Disease.",
       "expected_keywords": [
         "hypertension",
@@ -145,7 +145,7 @@
       "system": "baseline",
       "patient_id": "P007",
       "question": "Is the combination of metformin and lisinopril safe for patient P007?",
-      "answer": "Based on the provided patient context, the combination of metformin and lisinopril is generally considered safe for patient P007.\n\nMetformin is a biguanide antidiabetic agent, and lisinopril is an ACE inhibitor. There is no known significant interaction between these two medications that would contraindicate their use together.\n\nIn fact, the combination of metformin and an ACE inhibitor like lisinopril is a common and recommended treatment approach for patients with type 2 diabetes and hypertension (1).\n\nHowever, it's worth noting that the patient's blood pressure has been increasing over time, and the addition of losartan and enalapril (another ACE inhibitor) in 2023 may indicate a need for closer monitoring of blood pressure and renal function.\n\nReference:\n1. American Diabetes Association. (2022). Pharmacologic Approaches to Glycemic Control in Type 2 Diabetes. Diabetes Care, 45(Supplement 1), S143-S155. doi: 10.2337/dc22-S013",
+      "answer": "Based on the provided patient context, the combination of metformin and lisinopril is generally considered safe for patient P007.\n\nMetformin is a biguanide antidiabetic agent, and lisinopril is an ACE inhibitor. There is no known significant interaction between these two medications that would contraindicate their use together.\n\nIn fact, the combination of metformin and an ACE inhibitor like lisinopril is a common and recommended treatment approach for patients with type 2 diabetes and hypertension (1).\n\nHowever, it's worth noting that the patient's blood pressure has been increasing over time, and the addition of losartan and enalapril (another ACE inhibitor) in 2023 may indicate a need for closer monitoring of blood pressure and potential adjustments to the medication regimen.\n\nReference:\n1. American Diabetes Association. (2022). Pharmacologic Approaches to Glycemic Control in Diabetes: 2022. Diabetes Care, 45(Supplement 1), S143-S173. doi: 10.2337/dc22-S013",
       "expected_answer": "Assess safety and potential interaction risk between metformin and lisinopril.",
       "expected_keywords": [
         "metformin",
@@ -159,7 +159,7 @@
       "system": "baseline",
       "patient_id": "P002",
       "question": "What are the key diagnosed conditions for patient P002?",
-      "answer": "The key diagnosed conditions for patient P002 are:\n\n1. Type 2 Diabetes\n2. Hypertension\n3. Hyperlipidemia\n4. Chronic Kidney Disease (CKD)\n\nSource: Patient's updated diagnoses on 2023-01-20 and 2023-08-25.",
+      "answer": "The key diagnosed conditions for patient P002 are:\n\n1. Type 2 Diabetes\n2. Hypertension\n3. Hyperlipidemia\n4. Chronic Kidney Disease (CKD)\n\nSource: Patient's medical notes, specifically the notes from 2023-01-20 and 2023-08-25.",
       "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
       "expected_keywords": [
         "hypertension",
@@ -173,7 +173,7 @@
       "system": "baseline",
       "patient_id": "P008",
       "question": "What symptoms have been documented for patient P008?",
-      "answer": "According to the patient context, the following symptoms have been documented for patient P008:\n\n1. Fatigue (2022-09-01)\n2. Polyuria (2022-09-01)\n3. Nocturia (2023-03-01)\n4. Increased urination during the day (2023-03-01)\n5. Worsening edema (2024-03-01)\n6. Shortness of breath (2024-03-01)",
+      "answer": "The symptoms documented for patient P008 are:\n\n* Fatigue (Source: Note dated 2022-09-01)\n* Polyuria (Source: Note dated 2022-09-01)\n* Nocturia (Source: Note dated 2023-03-01)\n* Increased urination during the day (Source: Note dated 2023-03-01)\n* Worsening edema (Source: Note dated 2024-03-01)\n* Shortness of breath (Source: Note dated 2024-03-01)",
       "expected_answer": "Documented symptoms include Fatigue, Frequent urination, Nocturia.",
       "expected_keywords": [
         "fatigue",
@@ -187,7 +187,7 @@
       "system": "graphmed",
       "patient_id": "P006",
       "question": "What symptoms have been documented for patient P006?",
-      "answer": "patient_id: P006\nquestion_type: history\nfacts: improved symptoms; worsening eGFR to 45; HbA1c of 9; fatigue; polyuria; polydipsia; chest pain; shortness of breath\nevidence_first_visit: none\nevidence_latest_visit: 2023-09-19\nconfidence: medium",
+      "answer": "patient_id: P006\nquestion_type: history\nfacts: chronic kidney disease; coronary artery disease; hypertension; type 2 diabetes; improved symptoms; improvement in symptoms; shortness of breath; elevated creatinine\nevidence_first_visit: chronic kidney disease; coronary artery disease; hypertension; type 2 diabetes\nevidence_latest_visit: improved symptoms; improvement in symptoms; shortness of breath; elevated creatinine\nconfidence: high",
       "expected_answer": "Documented symptoms include Fatigue, Frequent urination, Polydipsia.",
       "expected_keywords": [
         "fatigue",
@@ -201,7 +201,7 @@
       "system": "graphmed",
       "patient_id": "P001",
       "question": "What symptoms have been documented for patient P001?",
-      "answer": "patient_id: P001\nquestion_type: history\nfacts: anemia; hypertension; hyperlipidemia; elevated bp_systolic; elevated bp_diastolic; decreased eGFR; on dialysis\nevidence_first_visit: none\nevidence_latest_visit: anemia; on dialysis\nconfidence: high",
+      "answer": "patient_id: P001\nquestion_type: history\nfacts: anemia [CONDITION]; anemia [SYMPTOM]; metoprolol [MEDICATION]; erythropoietin [MEDICATION]; hemoglobin 12.0 g/dL\nevidence_first_visit: anemia [CONDITION]; anemia [SYMPTOM]; metoprolol [MEDICATION]; erythropoietin [MEDICATION]\nevidence_latest_visit: anemia [CONDITION]; anemia [SYMPTOM]; metoprolol [MEDICATION]; erythropoietin [MEDICATION]; hemoglobin 12.0 g/dL\nconfidence: high",
       "expected_answer": "Documented symptoms include Shortness of breath, Chest pain, Renal function.",
       "expected_keywords": [
         "shortness of breath",
@@ -215,7 +215,7 @@
       "system": "baseline",
       "patient_id": "P003",
       "question": "Using all visits, what changed between the first and most recent visit for patient P003?",
-      "answer": "Between the first visit (2022-06-15) and the most recent visit (2023-08-02), the following changes were noted:\n\n* The patient's blood glucose control worsened (as evidenced by worsening blood glucose levels and increased dose of metformin).\n* The patient's kidney function worsened (as evidenced by worsening kidney function).\n* The patient's blood pressure worsened (as evidenced by elevated blood pressure and increased dose of losartan).\n* The patient's shortness of breath on exertion worsened (as evidenced by worsening symptoms).\n\nSource: Patient notes from all three visits.",
+      "answer": "Between the first visit (2022-06-15) and the most recent visit (2023-08-02), the following changes were observed:\n\n* The patient's blood glucose control worsened, as evidenced by the increased dose of metformin.\n* The patient's kidney function worsened, as evidenced by the lab results.\n* The patient's blood pressure worsened, as evidenced by the increased dose of losartan.\n* The patient was started on an ACE inhibitor, indicating a change in treatment for hypertension.\n\nSource: Patient notes from all three visits.",
       "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Chronic Kidney Disease.",
       "expected_keywords": [
         "hypertension",
@@ -229,7 +229,7 @@
       "system": "baseline",
       "patient_id": "P003",
       "question": "Is the combination of metformin and losartan safe for patient P003?",
-      "answer": "Based on the provided patient context, the combination of metformin and losartan is generally safe for patient P003.\n\nMetformin is a commonly used medication for type 2 diabetes, and losartan is an angiotensin II receptor antagonist (ARB) used to treat hypertension. There is no known contraindication or significant interaction between these two medications.\n\nIn fact, the combination of metformin and an ARB like losartan is often used in clinical practice to manage hypertension and type 2 diabetes in patients with kidney disease (1).\n\nHowever, it's essential to monitor the patient's kidney function and blood pressure closely, as the patient's kidney function is already worsening.\n\nReference:\n1. American Diabetes Association. (2022). Standards of Medical Care in Diabetes. Diabetes Care, 45(Supplement 1), S1-S233. doi: 10.2337/dc22-S001",
+      "answer": "Based on the patient's medical history, the combination of metformin and losartan is generally considered safe. However, there is a potential interaction between metformin and ACE inhibitors (such as losartan) that may increase the risk of lactic acidosis, a rare but serious side effect.\n\nAccording to the FDA, \"Concomitant administration of metformin with a drug that inhibits metformin transport (e.g., ranolazine, cationic drugs like cimetidine, digoxin, morphine, procainamide, quinidine, quinine, quinidine, and vancomycin) may increase the risk of metformin-associated lactic acidosis\" (FDA, 2020).\n\nHowever, losartan is not a cationic drug, and there is no evidence to suggest that it significantly inhibits metformin transport. Therefore, the combination of metformin and losartan is likely safe in this patient.\n\nSource:\nFDA. (2020). Metformin Hydrochloride Tablets. Retrieved from https://www.accessdata.fda.gov/drugsatfda_docs/label/2020/020638s045lbl.pdf",
       "expected_answer": "Assess safety and potential interaction risk between metformin and losartan.",
       "expected_keywords": [
         "metformin",
@@ -243,7 +243,7 @@
       "system": "graphmed",
       "patient_id": "P007",
       "question": "What symptoms have been documented for patient P007?",
-      "answer": "patient_id: P007\nquestion_type: history\nfacts: hba1c=6.2%; hba1c=6.5%; hba1c=6.8%; hba1c=7.1%; fatigue; coronary artery disease; type 2 diabetes; hypertension; hyperlipidemia\nevidence_first_visit: hba1c=6.2%\nevidence_latest_visit: hba1c=7.1%\nconfidence: high",
+      "answer": "Final Answer:\npatient_id: P007\nquestion_type: history\nfacts: fatigue;coronary artery disease;type 2 diabetes;hypertension;hyperlipidemia\nevidence_first_visit: none\nevidence_latest_visit: worsening fatigue and decreased urine output;persistent fatigue, weight loss, and shortness of breath\nconfidence: medium",
       "expected_answer": "Documented symptoms include Fatigue, Polydipsia, Weight loss.",
       "expected_keywords": [
         "fatigue",
@@ -257,7 +257,7 @@
       "system": "baseline",
       "patient_id": "P008",
       "question": "Using all visits, what changed between the first and most recent visit for patient P008?",
-      "answer": "Between the first visit (2022-09-01) and the most recent visit (2024-09-01), the following changes were observed:\n\n* BP increased from 140/90 to 158/102 (Source: 2022-09-01 and 2024-09-01 notes)\n* LDL increased from 150 to 165 (Source: 2022-09-01 and 2024-09-01 notes)\n* HbA1c increased from 7.8 to 8.2 (Source: 2022-09-01 and 2024-09-01 notes)\n* Patient's condition progressed to heart failure, requiring hospitalization (Source: 2024-09-01 note)\n* New symptoms of nocturia and increased urination during the day were reported (Source: 2023-03-01 note)",
+      "answer": "Based on the provided patient context, the following changes are observed between the first visit (2022-09-01) and the most recent visit (2024-09-01):\n\n1. **Increased Blood Pressure**: BP increased from 140/90 to 158/102 (Source: 2022-09-01 and 2024-09-01).\n2. **Increased LDL**: LDL increased from 150 to 165 (Source: 2022-09-01 and 2024-09-01).\n3. **No change in HbA1c**: Although the patient's HbA1c decreased slightly from 7.8 to 8.2, it is still an increase from the initial visit (Source: 2022-09-01 and 2024-09-01).\n4. **New symptoms**: The patient now reports nocturia and increased urination during the day, which were not mentioned in the initial visit (Source: 2023-03-01).\n5. **Progression of CAD**: The patient's CAD has progressed, requiring hospitalization for heart failure (Source: 2024-09-01).\n\nThese changes indicate a worsening of the patient's cardiovascular risk factors and symptoms, which may require adjustments to his treatment plan.",
       "expected_answer": "Across visits, patient moved from first-visit context including Hypertension to most-recent context including Heart Failure.",
       "expected_keywords": [
         "hypertension",
@@ -271,7 +271,7 @@
       "system": "baseline",
       "patient_id": "P008",
       "question": "What are the key diagnosed conditions for patient P008?",
-      "answer": "Based on the provided patient context, the key diagnosed conditions for patient P008 are:\n\n1. **Chronic Type 2 Diabetes** (HbA1c 7.8, 8.2, 8.2)\n2. **Hypertension** (BP 140/90, 158/102, 148/92)\n3. **Hyperlipidemia** (LDL 150, 165, 170)\n4. **Coronary Artery Disease (CAD)** (progression to heart failure)\n5. **Heart Failure** (requiring hospitalization)\n\nNote: These conditions are based on the provided patient notes and medical history.",
+      "answer": "Based on the provided patient context, the key diagnosed conditions for patient P008 are:\n\n1. Chronic Type 2 Diabetes (HbA1c 7.8, 8.2, 8.2)\n2. Hypertension (BP 140/90, 158/102, 148/92)\n3. Hyperlipidemia (LDL 150, 165, 170)\n4. Coronary Artery Disease (CAD) with progression to heart failure (requiring hospitalization)\n\nThese conditions are supported by the patient's laboratory results and clinical notes.",
       "expected_answer": "Key conditions include Hypertension, Type 2 Diabetes, Hyperlipidemia.",
       "expected_keywords": [
         "hypertension",

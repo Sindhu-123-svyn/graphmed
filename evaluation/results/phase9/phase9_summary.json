@@ -4,10 +4,10 @@
     "graphmed_mode": "full_stack",
     "baseline_mode": "full_stack",
     "num_questions": 50,
-    "graphmed_factscore_mean": 0.6066666666666667,
+    "graphmed_factscore_mean": 0.5533333333333333,
     "baseline_factscore_mean": 0.6533333333333333,
-    "graphmed_multi_visit_factscore_mean": 0.7333333333333333,
-    "baseline_multi_visit_factscore_mean": 0.5333333333333333,
+    "graphmed_multi_visit_factscore_mean": 0.6333333333333333,
+    "baseline_multi_visit_factscore_mean": 0.5,
     "expected_finding_supported": true,
     "manual_binary_review_samples": 20,
     "manual_template_file": "evaluation\\results\\phase9\\experiment1_manual_review_20.json"
@@ -17,10 +17,10 @@
     "graphmed_mode": "full_stack",
     "baseline_mode": "full_stack",
     "num_cases": 50,
-    "graphmed_bertscore_mean": -0.0935364160593599,
-    "baseline_bertscore_mean": 0.04641052544116974,
-    "graphmed_consistency_mean": 0.05382450875844806,
-    "baseline_consistency_mean": 0.16671593923739023,
+    "graphmed_bertscore_mean": -0.13392754166387022,
+    "baseline_bertscore_mean": 0.057962282886728646,
+    "graphmed_consistency_mean": -0.012663564878994863,
+    "baseline_consistency_mean": 0.18430216944928146,
     "expected_finding_supported": false
   },
   "experiment_3_conflict_detection": {
@@ -41,8 +41,8 @@
     "expected_finding_supported": true
   },
   "evaluation_driven_graph_updates": {
-    "run_id": "2026-04-06T14-50-47Z",
-    "timestamp": "2026-04-06T14:50:49Z",
+    "run_id": "2026-04-07T04-07-41Z",
+    "timestamp": "2026-04-07T04:07:45Z",
     "auto_update_enabled": true,
     "patients_evaluated_for_circumstances": 11,
     "patients_updated": 11,
@@ -57,17 +57,27 @@
       ],
       "P002": [
         "low_factscore",
+        "factscore_underperform_vs_baseline",
         "low_longitudinal_consistency",
         "consistency_underperform_vs_baseline"
       ],
+      "P003": [
+        "low_factscore",
+        "factscore_underperform_vs_baseline"
+      ],
       "P004": [
         "low_factscore",
+        "factscore_underperform_vs_baseline",
         "low_longitudinal_consistency"
       ],
       "P005": [
+        "low_factscore",
+        "factscore_underperform_vs_baseline",
         "low_longitudinal_consistency"
       ],
       "P006": [
+        "low_factscore",
+        "factscore_underperform_vs_baseline",
         "low_longitudinal_consistency",
         "consistency_underperform_vs_baseline"
       ],
@@ -77,13 +87,11 @@
         "low_longitudinal_consistency",
         "consistency_underperform_vs_baseline"
       ],
-      "P009": [
-        "factscore_underperform_vs_baseline"
-      ],
       "P010": [
         "low_factscore",
         "factscore_underperform_vs_baseline",
-        "low_longitudinal_consistency"
+        "low_longitudinal_consistency",
+        "consistency_underperform_vs_baseline"
       ],
       "P011": [
         "low_longitudinal_consistency",
@@ -102,9 +110,9 @@
   },
   "guardrail_metrics": {
     "confidence_semantics": "Confidence is tracked as freshness/trust signal, not truth probability.",
-    "factual_freshness_proxy": 0.7333333333333333,
-    "longitudinal_consistency_proxy": 0.05382450875844806,
-    "chronic_fact_recall_proxy": 0.7666666666666667,
+    "factual_freshness_proxy": 0.6333333333333333,
+    "longitudinal_consistency_proxy": -0.012663564878994863,
+    "chronic_fact_recall_proxy": 0.6916666666666667,
     "allergy_fact_recall_proxy": null,
     "conflict_detection_recall": 1.0,
     "coverage": {
